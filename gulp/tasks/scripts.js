@@ -8,9 +8,9 @@ let uglify = require('gulp-uglifyes'),
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
         return $.gulp.src([
-            'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
+            //'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
-            'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
+            //'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
             //тут указывать пути src/assets/js/libs/*.js для сбора в единый файл
         ])
             .pipe(concat('libs.min.js'))
@@ -20,9 +20,9 @@ module.exports = function () {
 
     $.gulp.task('libsJS:build', () => {
         return $.gulp.src([
-            'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
-            'node_modules/svg4everybody/dist/svg4everybody.min.js',
-            'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
+            //'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
+            //'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            //'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
             //тут указывать пути src/assets/js/libs/*.js для сбора в единый файл
         ])
             .pipe(concat('libs.min.js'))
