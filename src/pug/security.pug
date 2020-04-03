@@ -1,0 +1,58 @@
+extends template/main
+
+block variables
+    - var title = 'Security'
+    - var pageClass = 'security white-page'
+
+block content
+    .banner__security(style="background-image: url(images/general/security.png);")
+        .title__security.color-white Security is our primary care
+        .title__security-sub.color-white Every day we focus on <b>all</b> aspects of user safety
+    .container__security
+        .container__security-img
+            +icon('sec-1', '')
+            +icon('sec-2', '')
+            +icon('sec-3', '')
+            +icon('sec-4', '')
+        +icon('sec-line', '')
+        .container__security-text
+            .container__security-text_title Funds protection
+            .container__security-text_sub All fiat funds are placed in regulated bank, up to 95% of crypto is
+                |placed in a cold storage
+
+            .container__security-text_title.padding__content-1 Protection against unauthorized access
+            .container__security-text_sub Two-factor authentication. We use SMS and Google Authenticator
+            .container__security-text_sub Activities notifications. Our users receive email notifications on every
+                |activity like sign in or withdrawal request in ordrer to avoid fraud
+            .container__security-text_sub Anti-fraud system. You are safe even if the intruders took over your
+                |account. We will freeze your funds as soon as we notice something amiss.
+
+            .container__security-text_title.padding__content-2 Malfunction protection
+            .container__security-text_sub We back up every event and use serious protection against DDoS attacks
+                |to provide stable access to the exchange capabilities
+
+            .container__security-text_title.padding__content-1 Information security
+            .container__security-text_sub Transport Layer Security (TLS/SSL) to make your website session safe.
+                |All sensetive data is encrypted
+    .container__security-mobile
+        .container__security-block
+            +icon('sec-1', '')
+            .container__security-text_title Funds protection
+            .container__security-text_sub All fiat funds are placed in regulated bank, up to 95% of crypto is
+                | placed in a cold storage
+            +icon('sec-2', '')
+            .container__security-text_title Protection against unauthorized access
+            .container__security-text_sub.mobile__padding Two-factor authentication. We use SMS and Google Authenticator
+            .container__security-text_sub.mobile__padding Activities notifications. Our users receive email
+                |notifications on every
+                | activity like sign in or withdrawal request in ordrer to avoid fraud
+            .container__security-text_sub Anti-fraud system. You are safe even if the intruders took over your
+                | account. We will freeze your funds as soon as we notice something amiss.
+            +icon('sec-3', '')
+            .container__security-text_title Malfunction protection
+            .container__security-text_sub We back up every event and use serious protection against DDoS attacks
+                | to provide stable access to the exchange capabilities
+            +icon('sec-4', '')
+            .container__security-text_title Information security
+            .container__security-text_sub Transport Layer Security (TLS/SSL) to make your website session safe.
+                | All sensetive data is encrypted

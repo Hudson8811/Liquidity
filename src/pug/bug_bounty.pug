@@ -1,0 +1,49 @@
+extends template/main
+
+block variables
+    - var title = 'Bug Bounty'
+    - var pageClass = 'bug_bounty black-page'
+
+block content
+    .bug_bounty-banner(style="background-image: url(images/general/bug_bounty.png);")
+        .bug_bounty-container_head
+            .bug_bounty-container_head-title.color-white Bug Bounty
+            .bug_bounty-container_head-title_sub.color-white B2BX focuses on becoming one of the industry leaders,
+                |and we are in the process of continuous improvement to achieve this goal. We are open
+                |to all and any feedback. That is why we kindly ask you to inform us if you suddenly discover
+                |bugs or have some ideas on how to make our service more convenient and efficient for you.
+                |We highly appreciate your improvement
+                |suggestions on our services and reports on platform vulnerabilities and bugs. We pay for your help!
+    .bug_bounty-content
+        .bug_bounty-content_list
+            ol
+                li Please familiarize with the requirements by following this link
+                li Fill all blanks correctly and try to be specific as much as possible
+                li Attach the document with the full description of the issue especially if it contains a
+                    | private data or any other information regarding the vulnerability
+                li For the improvement suggestions, you can use a form on the page
+                li For rewards payments, you can choose any cryptocurrency which is traded on the b2bx exchange
+                li Note, that only registered users are allowed to rewards. Registration on the exchange is free,
+                    | fast and secure
+
+        form(method='POST').bug_bounty-content_form
+            .bug_bounty-content_form-column
+                input(placeholder="Code injection" type="text")
+                input(placeholder="Name" type="text")
+                input(placeholder="E-mail" type="email")
+                .bug_bounty-content_buttons
+                    label.bug_bounty-content_buttons-button.white__button-bounty.btn
+                        +icon('clip', '')
+                        p Select files
+                        |#[input(type="file")]
+                    button(type="submit").bug_bounty-content_buttons-button.green__button-bounty.color-white.btn
+                        p Send
+            .bug_bounty-content_form-column
+                textarea(placeholder="Message")
+            .bug_bounty-content_buttons-mob
+                label.bug_bounty-content_buttons-button.white__button-bounty.btn
+                    +icon('clip', '')
+                    p Select files
+                    | #[input(type="file")]
+                button(type="button").bug_bounty-content_buttons-button.green__button-bounty.color-white.btn
+                    p Send

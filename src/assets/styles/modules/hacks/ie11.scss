@@ -1,0 +1,23 @@
+@media all and (-ms-high-contrast:none)
+{
+    .news__item {
+        flex: 0 0 40%;
+    }
+
+    .sky-high {
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .open-acoount .container {
+        margin-left: 0;
+    }
+
+    .open-acoount .container {
+        padding-top: 400px;
+    }
+
+    .integrations__item {
+        flex: 0 0 40%;
+    }
+}

@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'News'
+	- var pageClass = 'news-page black-page'
+
+block content
+	.news(style="background-image:url(images/main/mountains.svg);").bckg-reverse
+		.container.bckg-reverse
+			.news__title.page-title News
+			include modules/news/_news
+			include modules/news/_news

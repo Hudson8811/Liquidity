@@ -1,0 +1,172 @@
+.banner__token {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 720px;
+    left: 0;
+    top: 0;
+
+    @include respond-to('tablet-wide') {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+
+    @include respond-to('phone-wide') {
+        padding: 0 25px;
+        height: 600px;
+    }
+}
+
+.container__token {
+    max-width: $content-size;
+    margin: 0 auto;
+
+    @include respond-to('tablet') {
+        width: 100%;
+    }
+
+    @include respond-to('phone-wide') {
+        width: 100%;
+    }
+
+    @include respond-to-min('desktop-max') {
+        max-width: $content-max-size;
+    }
+}
+
+
+.title__token-main {
+    padding-top: 250px;
+    font-size: $big-font;
+    line-height: 84px;
+    max-width: $content-size;
+    margin: 0 auto;
+    font-weight: 600;
+
+    @include respond-to('tablet') {
+        padding-top: 40%;
+        width: 100%;
+    }
+
+    @include respond-to('phone-wide') {
+        font-size: 40px;
+        padding-top: 171px;
+        width: 100%;
+    }
+
+    @include respond-to-min('desktop-max') {
+        max-width: $content-max-size;
+    }
+}
+
+.title__token-sub {
+    padding-top: 40px;
+    line-height: 19px;
+    font-size: 16px;
+    width: 66%;
+
+    @include respond-to('tablet') {
+        width: 72%;
+    }
+
+    @include respond-to('phone-wide') {
+        width: 100%;
+    }
+}
+
+.button__explorer{
+    background: $main;
+    margin-top: 56px;
+    max-width: 240px;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 16px;
+
+    @include respond-to('phone-wide') {
+        margin-top: 40px;
+        width: 200px;
+        height: 50px;
+        padding: 16px 45px;
+        font-size: 13px;
+    }
+}
+
+.token__block {
+    width: 100%;
+    padding-bottom: 10%;
+    background: $background_black;
+    margin-top: 580px;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        position: relative;
+        top: -85px;
+
+
+        @include respond-to('tablet') {
+            top: -22px;
+        }
+
+        @include respond-to('phone-wide') {
+            width: 100%;
+            top: -42px;
+        }
+    }
+
+    .b2bx-markets {
+        margin-top: -72px;
+        z-index: 2;
+        padding-top: 0;
+
+        @include respond-to('tablet') {
+            padding-top: 30px;
+        }
+    }
+
+    @include respond-to('tablet-wide') {
+        margin-top: 530px;
+    }
+
+
+    @include respond-to('phone-wide') {
+        margin-top: 480px;
+    }
+}
+
+.button__buy {
+    display: block;
+    margin: -200px auto 0 auto;
+    background: $main;
+    width: 240px;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 16px;
+
+    @include respond-to('tablet') {
+        margin: -80px auto 0 auto;
+    }
+
+    @include respond-to('phone-wide') {
+        width: 200px;
+        height: 50px;
+        padding: 16px 45px;
+        margin: -120px auto 0 auto;
+        font-size: 13px;
+    }
+
+
+    @include respond-to-min('desktop-max') {
+        margin: -400px auto 0 auto;
+    }
+}
+
+.token {
+
+    .b2bx-markets-col {
+        display: none;
+    }
+}

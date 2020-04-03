@@ -1,0 +1,175 @@
+.documents {
+    &__container {
+        max-width: $content-size;
+        margin: 0 auto;
+        padding-bottom: 5%;
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+
+            &_text {
+
+                &-title {
+                    font-size: $big-font;
+                    padding-top: 15.5%;
+                    padding-bottom: 8%;
+                    font-weight: 600;
+                    color: $text-black;
+
+                    @include respond-to('tablet') {
+                        color: $black;
+                    }
+
+                    @include respond-to('phone-wide') {
+                        width: 100%;
+                        font-size: $big-font-mobile;
+                        padding-top: 17%;
+                        padding-bottom: 10%;
+                    }
+                }
+
+                &-sub {
+                    margin-top: $normal-indent * 1.5;
+                    p {
+                        margin-bottom: 3%;
+                        color: $text-black;
+
+                        @include respond-to('phone-wide') {
+                            font-size: 16px;
+                            line-height: 19px;
+                            padding-bottom: 5%;
+                        }
+                    }
+
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &_img {
+                display: flex;
+                align-items: center;
+                padding-top: 5%;
+                flex: 0 0 42%;
+
+                img {
+                    width: 80%;
+                    margin-left: 20%;
+
+                    @include respond-to('tablet') {
+                        margin-left: 0;
+                        max-width: 236px;
+                    }
+
+
+                    @include respond-to('phone-wide') {
+                        max-width: 136px;
+                    }
+                }
+
+                &-mob {
+                    display: none;
+                    @include respond-to('phone-wide') {
+                        display: block;
+
+                        img {
+                            width: 60%;
+                            padding-bottom: 15%;
+
+                            @include respond-to('tablet') {
+                                max-width: 136px;
+                            }
+                        }
+                    }
+                }
+
+                @include respond-to('tablet') {
+                    order: -2;
+                    flex: 0 0 100%;
+                }
+            }
+
+            @include respond-to('tablet') {
+                flex-direction: column;
+            }
+        }
+
+        &-docs {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10%;
+
+            svg {
+                width: 15px;
+                min-width: 15px;
+                height: 40px;
+                margin-right: 5%;
+
+                @include respond-to('tablet') {
+                    width: 100%;
+                    flex: 0 0 6%;
+                    height: 22px;
+                    margin-top: 5px;
+                    margin-right: 5%;
+                }
+            }
+
+            &_col {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex: 1 0 10%;
+
+                @include respond-to('phone-wide') {
+                    padding-bottom: 10%;
+                }
+            }
+
+            &_item {
+                display: flex;
+                flex: 0 0 33%;
+                align-items: center;
+                margin-top: 2%;
+                padding-right: 2%;
+
+                @include respond-to('phone-wide') {
+                    flex: 0 0 100%;
+
+                    &:nth-child(4n) {
+                        margin-top: $normal-indent * 2;
+                    }
+                }
+
+                a {
+                    font-size: 18px;
+                    line-height: 25px;
+                    font-weight: 500;
+
+                    @include respond-to('tablet') {
+                        flex: 0 0 95%;
+                    }
+                }
+
+                a:hover {
+                    color: $black;
+                }
+            }
+
+            @include respond-to('phone-wide') {
+                flex-direction: column;
+            }
+        }
+
+        @include respond-to('tablet') {
+            width: 100%;
+            padding: 0 25px;
+            margin: 0;
+        }
+
+        @include respond-to-min('desktop-max') {
+            max-width: $content-max-size;
+        }
+    }
+}

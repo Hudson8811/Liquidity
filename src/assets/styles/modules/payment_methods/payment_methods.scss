@@ -1,0 +1,168 @@
+.payment {
+
+    &__imgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 40%;
+
+        @include respond-to('tablet') {
+            max-width: 100%;
+        }
+    }
+
+    &__img {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            border-radius: 50%;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            width: 100%;
+            max-width: 50px;
+        }
+    }
+
+    &__content {
+        max-width: $content-size;
+        margin: 0 auto;
+        padding-bottom: 5%;
+
+        &-title {
+            max-width: $content-size;
+            font-size: $big-font;
+            margin: 0 auto;
+            color: $text-black;
+            font-weight: 600;
+            padding-top: 9.5%;
+            padding-bottom: 5%;
+
+            @include respond-to('tablet') {
+                color: $black;
+                font-size: $big-font-mobile;
+                width: 100%;
+            }
+
+            @include respond-to('phone-wide') {
+                width: 100%;
+                font-size: $big-font-mobile;
+                padding-top: 17%;
+                padding-bottom: 10%;
+            }
+
+            @include respond-to-min('desktop-max') {
+                max-width: $content-max-size;
+            }
+        }
+
+        &-subtitle {
+            color: $text-black;
+            font-size: 47px;
+
+            @include respond-to('tablet') {
+                font-size: 27px;
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 7%;
+
+            &_logo {
+                display: flex;
+                flex: 0 0 19%;
+
+                img {
+                    width: 100%;
+                    max-height: 135px;
+                    max-width: 135px;
+
+                    @include respond-to('tablet') {
+                        width: 100%;
+                    }
+                }
+
+                @include respond-to('tablet') {
+                    flex: 0 0 100%;
+                    max-width: 200px;
+                }
+            }
+
+            &_text {
+                flex: 1;
+
+                &-title {
+                    font-weight: 600;
+                    padding-bottom: 3%;
+                    font-size: 32px;
+                    line-height: 37px;
+                    color: $text-black;
+
+                    @include respond-to('tablet') {
+                        padding-top: 3%;
+                    }
+
+                    @include respond-to('phone-wide') {
+                        font-size: 30px;
+                        line-height: 35px;
+                    }
+                }
+
+                &-sub {
+                    font-size: $small-font;
+                    line-height: 16px;
+                    padding-bottom: 0;
+                    color: $text-black;
+
+                    ol {
+                        padding-left: 3%;
+
+                        li {
+                            list-style-type: disc;
+                        }
+
+                        @include respond-to('phone-wide') {
+                            padding-left: 6%;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 2%;
+                    }
+
+                    @include respond-to('phone-wide') {
+                        font-size: $small-font;
+                        line-height: 16px;
+                        padding-bottom: 10%;
+                    }
+
+                    a:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            @include respond-to('phone-wide') {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 10%;
+            }
+        }
+
+        @include respond-to('tablet') {
+            width: 100%;
+            padding: 0 25px;
+            margin: 0;
+        }
+
+        @include respond-to-min('desktop-max') {
+            max-width: $content-max-size;
+        }
+    }
+}

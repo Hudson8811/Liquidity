@@ -1,0 +1,208 @@
+/*header*/
+header {
+    font-size: 0;
+
+    .header-block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #121212;
+        z-index: 10;
+
+        .progress-line {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 2px;
+            background: $main;
+            z-index: -1;
+        }
+    }
+
+    .content {
+        padding: 10px;
+        position: relative;
+    }
+
+    .logo {
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+    }
+
+    .mob-header {
+        display: none;
+    }
+
+    nav {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto 0;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+
+            span,
+            a {
+                color: $white;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: 'OpenSans-Bold';
+                display: block;
+                padding: 25px;
+                cursor: default;
+            }
+
+            a {
+                cursor: pointer;
+            }
+
+            ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 210px;
+                background: $background_black;
+                border-radius: 10px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+                opacity: 0;
+                transform: matrix(1.5, 0, -0.5, 0.1, 0, 0) translate(-100px, 100px);
+                visibility: hidden;
+                z-index: 1;
+                transition: 0.25s ease;
+
+                li {
+                    display: block;
+                }
+
+                a {
+                    padding: 0;
+                    margin: 0;
+                    position: relative;
+                    overflow: hidden;
+
+                    &:hover {
+                        color: $main;
+                        transition: 0.15s;
+                    }
+
+                    &:hover:before {
+                        left: -30px;
+                        width: 40px;
+                        height: 100%;
+                        transition: 0.25s cubic-bezier(0.46, -0.5, 0.29, 1.6);
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -20px;
+                        right: auto;
+                        bottom: 0;
+                        height: 300%;
+                        margin: auto 0;
+                        width: 0;
+                        border-radius: 100%;
+                        background: $main;
+                        transition: 0.5s ease;
+                    }
+
+                    &:active:before {
+                        left: -40px;
+                        width: 60px;
+                        height: 50%;
+                        transition: 0.15s;
+                    }
+                }
+            }
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                padding-right: 10px;
+            }
+
+            &:hover {
+
+                ul {
+                    padding: 10px 0;
+                    transform: none;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 0.15s;
+
+                    a {
+                        padding: 10px 25px;
+                        width: 100%;
+                        display: block;
+                        transition: 0.25s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .login {
+        color: $main;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'OpenSans-Bold';
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px;
+        transition: 0.25s ease;
+
+        img {
+            padding-right: 10px;
+            transition: 0.25s ease;
+        }
+
+        &:hover {
+            color: $white;
+            transition: 0.15s;
+
+            img {
+                padding-right: 10px;
+                transform: translateX(5px);
+                transition: 0.15s;
+            }
+        }
+    }
+
+    nav.rbox li ul {
+        left: auto;
+        right: 0;
+        width: 120px;
+    }
+
+    .rbox {
+        position: absolute;
+        left: auto;
+        right: 10px;
+    }
+}
+

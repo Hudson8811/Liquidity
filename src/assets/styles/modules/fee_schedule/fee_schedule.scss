@@ -1,0 +1,424 @@
+.title__fee {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $text-black;
+    margin: 24px auto 0 auto;
+
+    @include respond-to('phone-wide') {
+        max-width: 100%;
+        height: 300px;
+        padding: 0 25px;
+        margin: 0;
+    }
+
+    @include respond-to('tablet-wide') {
+        max-width: 100%;
+        padding: 0 25px;
+        margin: 0;
+    }
+
+    @include respond-to-min('desktop-max') {
+        height: 800px;
+    }
+}
+
+.title__text,
+.column__text,
+.column__number,
+.container__title-sub,
+.container__title,
+.container__column-title,
+.container__table th {
+    font-weight: 600;
+}
+
+.container__column-soon {
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: $white;
+}
+
+.title__text {
+    padding-top: 76px;
+    font-size: $big-font;
+    line-height: 84px;
+    max-width: $content-size;
+    margin: 0 auto;
+
+    @include respond-to('tablet-wide') {
+        padding: 41px 25px 0 25px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include respond-to('phone-wide') {
+        font-size: 40px;
+        line-height: 47px;
+        padding: 41px 0 0 0;
+    }
+
+    @include respond-to-min('desktop-max') {
+        max-width: $content-max-size;
+    }
+
+}
+
+.container__content {
+    max-width: $content-size;
+    margin: 0 auto;
+    color: $text-black;
+
+    @include respond-to('tablet-wide') {
+        max-width: 100%;
+        padding: 0 5%;
+    }
+
+    @include respond-to-min('desktop-max') {
+        max-width: $content-max-size;
+    }
+}
+
+.container__title {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 40px 0;
+    color: $text-black;
+
+    @include respond-to('phone-wide') {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.container__title-sub {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    color: $text-black;
+
+    @include respond-to('phone-wide') {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 10%;
+    }
+}
+
+.container__block {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('phone-wide') {
+        font-size: 90%;
+    }
+}
+
+.container__block-row {
+    @include respond-to('tablet') {
+        margin-top: 5%;
+    }
+}
+
+.container__row,
+.container__block-row {
+    display: flex;
+    flex-direction: row;
+
+    @include respond-to('tablet-small') {
+        flex-wrap: wrap;
+    }
+}
+
+.container__column,
+.container__block-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container__block-column {
+   max-height: 100px;
+}
+
+.container__column {
+    width: 100%;
+    max-height: 273px;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    max-width: 451px;
+
+    @include respond-to('phone-wide') {
+        height: 145px;
+    }
+}
+
+.container__column-grey,
+.container__column-main {
+    padding: 3%;
+
+    @include respond-to('phone-wide') {
+        padding: 7%;
+    }
+}
+
+.container__column-grey {
+    background: $grey;
+}
+
+.container__column-main {
+    background: $main;
+}
+
+.container__column-title {
+    font-size: $font-18;
+    line-height: 130%;
+    padding-bottom: 8%;
+
+    @include respond-to('phone-wide') {
+        font-size: 13px;
+        line-height: 15px;
+        padding-bottom: 5%;
+    }
+}
+
+.column__text {
+    text-transform: uppercase;
+    font-size: $small-font;
+
+    @include respond-to('phone-wide') {
+        font-size: 10px;
+    }
+}
+
+.text__main {
+    color: $main;
+}
+
+.text__black {
+    color: $text-black;
+}
+
+.text__white {
+    color: $white;
+}
+
+.column__number {
+    margin-top: 5%;
+    font-size: $huge-font-size;
+    letter-spacing: 1px;
+
+    @include respond-to('phone-wide') {
+        font-size: 25.2px;
+        line-height: 30px;
+    }
+}
+
+.container__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 100%;
+
+    @include respond-to('phone-wide') {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 5%;
+    }
+}
+
+.container__buttons button {
+    padding: 1%;
+    background: transparent;
+    border: none;
+    height: 100%;
+    margin-right: 20px;
+    font-size: $base-font-size;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover,
+    &:active {
+        color: $main;
+        background: $white;
+    }
+
+    @include respond-to('phone-wide') {
+        width: 50%;
+        padding: 4.5%;
+        margin-top: 0;
+        font-size: 81%;
+    }
+    @include respond-to('phone') {
+        width: 50%;
+        padding: 5%;
+        font-size: 74%;
+        margin-top: 0;
+    }
+}
+
+.button_active {
+    color: $main !important;
+    border-bottom: 2px solid $main !important;
+    font-weight: 600;
+
+    @include respond-to('phone-wide') {
+        border-radius: 0;
+    }
+}
+
+
+.container__table {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    display: none;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: $text-black;
+    }
+
+    th, td {
+        padding: 2%;
+        border: 1px solid #EBEBEB;
+    }
+
+    td {
+        font-size: $small-font;
+        line-height: 16px;
+        color: $text-black;
+
+        @include respond-to('phone-wide') {
+            width: 40%;
+            font-size: 12.6px;
+            line-height: 15px;
+        }
+    }
+
+    p {
+        margin-top: $normal-indent;
+        margin-bottom: $normal-indent;
+    }
+
+    th {
+        background-color: $grey;
+        font-size: 15px;
+        line-height: 18px;
+        color: $text-black;
+
+        @include respond-to('phone-wide') {
+            font-size: 13.5px;
+            line-height: 16px;
+        }
+    }
+
+    tr {
+        font-size: 90%;
+        line-height: 135%;
+    }
+
+    td svg {
+        width: 20%;
+        height: 20%;
+        margin-right: 5%;
+    }
+
+    td {
+        font-size: $small-font;
+
+        @include respond-to('phone-wide') {
+            font-size: 12px;
+        }
+    }
+
+    @include respond-to('phone-wide') {
+        font-size: 90%;
+        text-align: center;
+    }
+}
+
+.container__table.table-active {
+    display: block;
+}
+
+.container__table tbody tr:nth-child(odd) {
+    background: rgba(24, 28, 39, 0.01);
+}
+
+.container__text {
+    margin-top: 28px;
+    margin-bottom: 38px;
+    font-size: $font-18;
+
+    @include respond-to('phone-wide') {
+        font-size: 16px;
+        line-height: 120%;
+    }
+}
+
+
+.container__block-row svg {
+    width: 1px;
+    margin: 0 75px;
+    height: 50%;
+    max-height: 100px;
+
+    @include respond-to('tablet') {
+        margin: 0 10%;
+    }
+    @include respond-to('phone-wide') {
+        margin-top: -3%;
+        margin-left: 12%;
+        height: 35%;
+    }
+}
+
+.column_background {
+    @include respond-to('phone-wide') {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.container__button-left {
+
+    @include respond-to('phone-wide') {
+        margin: 0;
+    }
+}
+
+.c-tabs-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-tabs-nav__link {
+    flex: 1;
+    margin-right: 4px;
+    padding: 12px;
+    color: $white;
+    background-color: #b3b3b3;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.margin__left-10 {
+    margin-left: -10%;
+
+    @include respond-to('tablet-wide') {
+        margin-left: 0;
+    }
+}
