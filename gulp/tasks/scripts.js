@@ -11,8 +11,7 @@ module.exports = function () {
             'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
-            'src/assets/js/libs/polyfill.js',
-            'src/assets/js/libs/jquery.lazy.min.js',
+            //тут указывать пути src/assets/js/libs/*.js для сбора в единый файл
         ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
@@ -24,8 +23,7 @@ module.exports = function () {
             'src/assets/js/libs/jquery.mobile-1.5.0-alpha.1.min.js',
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/@microsoft/signalr/dist/webworker/signalr.js',
-            'src/assets/js/libs/polyfill.js',
-            'src/assets/js/libs/jquery.lazy.min.js',
+            //тут указывать пути src/assets/js/libs/*.js для сбора в единый файл
         ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
