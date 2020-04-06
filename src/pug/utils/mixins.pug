@@ -5,3 +5,9 @@ mixin icon(name,mod)
 	else
 		svg(class="svg-sprite-icon icon-" + name)
 			use(xlink:href="images/svg/symbol/sprite.svg#" + name)
+
+mixin menu([...title])
+	ul.menu
+		each val in title
+			li.menu-item
+				a(href="#")= val

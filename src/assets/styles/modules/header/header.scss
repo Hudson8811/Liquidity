@@ -1,1 +1,52 @@
 /*header*/
+
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        max-width: 122px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__top-row {
+        padding: 25px 0px;
+        .menu {
+            &-item {
+                margin-right: 35px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .language {
+        width: 30px;
+    }
+    &__bottom-row {
+        padding: 21px 0px;
+        background: rgba(251, 253, 253, 0.5);
+        .menu {
+            &-item {
+                margin-right: 30px;
+            }
+        }
+        .btn {
+            &--gray {
+                font-size: 13px;
+                line-height: 15px;
+                text-align: center;
+                letter-spacing: -0.5px;
+                padding: 8px 22px;
+            }
+        }
+    }
+}
