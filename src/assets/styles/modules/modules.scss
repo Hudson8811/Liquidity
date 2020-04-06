@@ -1,14 +1,13 @@
 //общие стили
 @import "template/template";
-
 //общие элементы
 @import "footer/footer";
 @import "header/header";
-
 //стили для главной целиком
 @import "main/main";
-
 //стили для секции страницы test_lp
 @import "test_lp/section-1";
 @import "test_lp/section-2";
 @import "test_lp/section-3";
+//стили для секции страницы black_page
+@import "black_page/section-1.scss";

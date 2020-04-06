@@ -1,10 +1,25 @@
 /*header*/
 
 .header {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
-    background: rgba(255, 255, 255, 0.5);
+    left: 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 99;
+    &--slicky {
+        .header__top-row {
+            background: #171717;
+        }
+        .header__bottom-row {
+            background: #222222;
+        }
+        .btn {
+            &--gray {
+                border-radius: 50px;
+            }
+        }
+    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -19,6 +34,9 @@
     }
     &__top-row {
         padding: 25px 0px;
+        background: rgba(27, 27, 27, 0.1);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+        transition-duration: .5s;
         .menu {
             &-item {
                 margin-right: 35px;
@@ -33,7 +51,9 @@
     }
     &__bottom-row {
         padding: 21px 0px;
-        background: rgba(251, 253, 253, 0.5);
+        background: rgba(251, 253, 253, 0.1);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+        transition-duration: .5s;
         .menu {
             &-item {
                 margin-right: 30px;
@@ -46,6 +66,7 @@
                 text-align: center;
                 letter-spacing: -0.5px;
                 padding: 8px 22px;
+                transition-duration: .5s;
             }
         }
     }

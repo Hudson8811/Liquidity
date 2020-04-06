@@ -1,6 +1,7 @@
 $roboto: 'Roboto',
 sans-serif;
 body {
+    position: relative;
     color: #63636E;
     font-family: $roboto;
     font-size: 14px;
@@ -28,6 +29,7 @@ select:visited {
 }
 
 .container {
+    display: flex;
     width: 98%;
     max-width: 980px;
     margin: 0 auto;
@@ -43,11 +45,21 @@ select:visited {
     }
 }
 
+.section__subtitle {
+    display: block;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+}
+
 .btn {
     text-decoration: none;
     font-family: $roboto;
     color: #fff;
     border-radius: 5px;
+    transition-duration: .5s;
     cursor: pointer;
     &--green {
         background: linear-gradient(180deg, #00D0A4 0%, #00B890 100%);
@@ -63,6 +75,9 @@ select:visited {
     }
     &--border {
         border: 1px solid #01C198;
+    }
+    &:hover {
+        opacity: .8;
     }
 }
 
@@ -179,5 +194,43 @@ select:visited {
     img {
         display: block;
         width: 100%;
+    }
+}
+
+.number_block {
+    display: flex;
+    &--text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.318182px;
+        text-transform: capitalize;
+        color: #F2F2F2;
+    }
+    &--number {
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 75px;
+        color: #FFFFFF;
+        &-text {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: #C4C4C4;
+    transition-duration: .5s;
+    &--dotted {
+        border-bottom: 2px dotted #C4C4C4;
+    }
+    &:hover {
+        opacity: .8;
     }
 }
