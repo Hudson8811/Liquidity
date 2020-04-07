@@ -1,1 +1,11 @@
 /*footer*/
+.footer{
+  background-color: #1e1e1e;
+  padding-top: 30px;
+  padding-bottom: 57px;
+
+  &-top-row{
+    display: flex;
+    justify-content: space-between;
+  }
+}
