@@ -1,0 +1,32 @@
+.footer-menu-section{
+  padding-top: 126px;
+  padding-bottom: 88px;
+  background: #161616;
+  &-flex{
+    display: flex;
+    &__item{
+      width: 33.33333%;
+      padding-right: 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      .menu{
+        margin-bottom: 53px;
+        display: block;
+        li{
+          margin-bottom: 20px;
+          font-size: 18px;
+          a{
+            color: #a0acb8;
+          }
+        }
+      }
+    }
+    &__title{
+      font-weight: 600;
+      color: #484848;
+      margin-bottom: 34px;
+    }
+  }
+}

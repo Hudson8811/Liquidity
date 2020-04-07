@@ -29,7 +29,6 @@ select:visited {
 }
 
 .container {
-    display: flex;
     width: 98%;
     max-width: 980px;
     margin: 0 auto;
@@ -187,6 +186,10 @@ select:visited {
                 font-weight: bold;
             }
         }
+        &.disabled{
+            opacity: 0.2;
+            pointer-events: none;
+        }
     }
 }
 
@@ -254,4 +257,19 @@ select:visited {
 
 .table {
     width: 100%;
+}
+
+* {
+    &.bold {
+        font-weight: 600;
+    }
+    &.red {
+        color: #EE0064;
+    }
+    &.green {
+        color: #01B68F;
+    }
+    &.upp {
+        text-transform: uppercase;
+    }
 }
