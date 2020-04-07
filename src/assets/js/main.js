@@ -7,4 +7,16 @@ $(document).ready(function() {
                 $('.header').removeClass('header--slicky');
         });
     });
+    $('.show_much').click(function(e) {
+        e.preventDefault()
+        $(this).toggleClass('hide');
+        $('.lizy').removeClass('hide');
+        $('.hide_much').removeClass('hide');
+    })
+    $('.hide_much').click(function(e) {
+        e.preventDefault()
+        $(this).toggleClass('hide');
+        $('.lizy').toggleClass('hide');
+        $('.show_much').removeClass('hide');
+    })
 });

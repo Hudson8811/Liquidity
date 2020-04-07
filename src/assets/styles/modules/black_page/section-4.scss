@@ -1,0 +1,29 @@
+.section-4 {
+    padding-top: 320px;
+    .section__title {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .main-text {
+        display: block;
+        font-size: 20px;
+        line-height: 29px;
+        margin-top: 40px;
+        padding-right: 10px;
+    }
+    .number_block {
+        margin-top: 88px;
+        width: 100%;
+        max-width: 830px;
+        justify-content: space-between;
+        &--text {
+            color: #383838;
+        }
+        &--number {
+            color: #383838;
+        }
+        &--number-text {
+            color: #383838;
+        }
+    }
+}

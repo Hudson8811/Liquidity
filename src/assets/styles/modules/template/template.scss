@@ -135,6 +135,7 @@ select:visited {
         justify-content: center;
         align-items: center;
         margin-right: 18px;
+        flex-shrink: 0;
         .icon-check {
             width: 18px;
             height: 12px;
@@ -179,9 +180,7 @@ select:visited {
             letter-spacing: -0.5px;
             text-decoration: none;
             color: #E3E3E3;
-        }
-        &:hover {
-            a {
+            &:hover {
                 color: #fff;
                 font-weight: bold;
             }
@@ -267,5 +266,174 @@ select:visited {
     }
     &.upp {
         text-transform: uppercase;
+    }
+}
+
+.more_button {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.318182px;
+    color: #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--arrow:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 12px;
+        background: center / cover url(../images/more_arrow.svg) no-repeat;
+        margin-left: 8px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.main-text {
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: #63636E;
+}
+
+.green--gradient {
+    background: linear-gradient(90deg, rgba(0, 232, 182, 0.8) 1.59%, rgba(1, 189, 149, 0.8) 93.04%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.flex_block {
+    display: flex;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    &_item {
+        background: #FFFFFF;
+        box-shadow: 0px 1.83691px 3.67383px rgba(0, 0, 0, 0.15);
+        border-radius: 3.67383px;
+        padding: 3px 14px;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        letter-spacing: -0.292236px;
+        color: #63636E;
+    }
+}
+
+.arrow_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-item {
+        width: 33.333%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon-gray_arrow {
+            width: 14px;
+            height: 9px;
+        }
+    }
+}
+
+.small_boxSh {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.extrabold {
+    font-weight: 900;
+}
+
+.trade_mark {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-item {
+        width: calc(100% / 3 - 14px);
+        box-sizing: border-box;
+        .mark {
+            text-align: center;
+        }
+        .main_image {
+            img {
+                display: block;
+            }
+        }
+        .description {
+            font-size: 14px;
+            line-height: 19px;
+            /* or 136% */
+            text-align: center;
+            color: #9DAFBD;
+        }
+    }
+}
+
+.db {
+    display: block;
+}
+
+.another_trades {
+    .description {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -0.318182px;
+        color: #999999;
+        margin-top: -14px;
+    }
+    .flex_block {
+        margin: 0;
+        margin-top: 33px;
+    }
+    &--right,
+    &--left {
+        box-sizing: border-box;
+        padding: 52px 27px 42px 50px;
+    }
+    &--right {
+        max-width: 317px;
+        margin-left: 14px;
+        flex-shrink: 0;
+    }
+    &--left {
+        display: flex;
+        &>div {
+            box-sizing: border-box;
+            width: 50%;
+            &:nth-child(1) {
+                padding-left: 10px;
+                padding-right: 20px;
+                .another_trades--title {
+                    margin-top: -10px;
+                }
+            }
+            &:nth-child(2) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    &--title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height, or 150% */
+        color: #383838;
+        margin-bottom: 15px;
+    }
+    &--text {
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        color: #9DAFBD;
     }
 }

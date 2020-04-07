@@ -58,15 +58,46 @@
             color: #01B68F;
         }
         &>div {
-            margin-top: 55px;
+            margin-top: 58px;
+            padding-bottom: 7px;
+        }
+        &__button_block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 54px;
+            .btn--box_shadow {
+                height: 33px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 177px;
+                width: 100%;
+            }
+            .more_button {
+                margin-left: 30px;
+            }
         }
     }
     &--table {
+        td {
+            box-sizing: border-box;
+            width: 150px;
+        }
         td:nth-child(n+2) {
             text-align: center;
         }
-        td:nth-child(1) {
-            width: 217px;
+        td:nth-child(2) {
+            padding-left: 50px;
+        }
+        td:nth-child(3) {
+            padding-left: 70px;
+        }
+        td:nth-child(4) {
+            padding-left: 90px;
+        }
+        td:nth-child(5) {
+            padding-left: 90px;
         }
         thead {
             td {
@@ -82,7 +113,7 @@
         }
         tbody {
             td {
-                padding-bottom: 16px;
+                padding-bottom: 15px;
             }
             span {
                 font-weight: 300;
