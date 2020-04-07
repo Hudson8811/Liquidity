@@ -1,0 +1,110 @@
+.section-2 {
+    padding-top: 140px;
+    .container {
+        display: block;
+    }
+    .section__subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 44px;
+        color: #999999;
+        text-align: center;
+    }
+    .section__title {
+        margin: 45px 0;
+        text-align: center;
+    }
+    .section__description {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #63636E;
+        max-width: 610px;
+        margin: 0 auto;
+    }
+    .tabs {
+        margin-top: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        padding: 10px;
+        &>label {
+            font-weight: bold;
+            font-size: 13.9611px;
+            line-height: 20px;
+            color: #999999;
+            padding: 0px 13px;
+            cursor: pointer;
+            &:nth-child(2) {
+                padding-left: 0;
+            }
+        }
+        &>input[type="radio"]:checked+label {
+            color: #01B68F;
+        }
+        &>div {
+            margin-top: 44px;
+        }
+    }
+    &--table {
+        thead {
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                display: flex;
+                align-items: center;
+                color: rgba(153, 153, 153, 0.6);
+            }
+        }
+        tbody {
+            span {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 36px;
+                text-align: center;
+                letter-spacing: -0.5px;
+                color: #383838;
+                &.bold {
+                    font-weight: 600;
+                }
+                &.red {
+                    color: #EE0064;
+                }
+                &.upp {
+                    text-transform: uppercase;
+                }
+            }
+            td:first-child {
+                span {
+                    font-size: 22px;
+                    line-height: 36px;
+                    letter-spacing: -0.5px;
+                }
+            }
+            label {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                cursor: pointer;
+                input[type="checkbox"] {
+                    display: none;
+                }
+                input[type="checkbox"]+b {
+                    position: relative;
+                    display: flex;
+                    border-radius: 50%;
+                    width: 13px;
+                    height: 13px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(153, 153, 153, 0.6);
+                    box-sizing: border-box;
+                    margin-left: 10px;
+                }
+                input[type="checkbox"]:checked+b {
+                    background: center / 90% auto url('../images/icons/select-arrow.png') no-repeat;
+                }
+            }
+        }
+    }
+}

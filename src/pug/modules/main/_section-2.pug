@@ -1,0 +1,60 @@
+.section-2
+  .container
+    .section__subtitle Liquidity tailored for run this market
+    h2.section__title Genuine #[span(class="section__title--bold") PoP Pricing]
+    p.section__description Get competitive DMA pricing for 75 Forex pairs as well as a further 725 trading instruments and 8 asset classes.
+  .container
+    .tabs
+      input(type="radio" name="tabs-btn" id="tabs-btn-1" value="" checked)
+      label(for="tabs-btn-1") Forex
+      input(type="radio" name="tabs-btn" id="tabs-btn-2" value="")
+      label(for="tabs-btn-2") Commodities
+      input(type="radio" name="tabs-btn" id="tabs-btn-3" value="")
+      label(for="tabs-btn-3") Shares CFD
+      input(type="radio" name="tabs-btn" id="tabs-btn-4" value="")
+      label(for="tabs-btn-4") Crypto
+      input(type="radio" name="tabs-btn" id="tabs-btn-5" value="")
+      label(for="tabs-btn-5") CFDs
+      input(type="radio" name="tabs-btn" id="tabs-btn-6" value="")
+      label(for="tabs-btn-6") ETFs
+      #tabs-content-1
+        table.table.section-2--table
+          thead
+            tr
+              td
+                span Instrument
+              td
+                span Bid
+              td
+                span Ask
+              td
+                span Spread
+              td
+                span Change
+          tbody
+            tr
+              td
+                label
+                  span.upp.bold EUR/USD
+                  input(type="checkbox")
+                  b
+              td
+                span 1.10#[span(class="bold") 01]
+              td
+                span.red 1.10#[span(class="bold red") 02]
+              td
+                span 0.0001
+              td
+                span.bold -0.19%
+
+
+      #tabs-content-2
+        span 2
+      #tabs-content-3
+        span 3
+      #tabs-content-4
+        span 4
+      #tabs-content-5
+        span 5
+      #tabs-content-6
+        span 6

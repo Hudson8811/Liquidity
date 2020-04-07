@@ -6,7 +6,7 @@ body {
     font-family: $roboto;
     font-size: 14px;
     line-height: 16px;
-    background: #000
+    background: #FBFBFB;
 }
 
 body,
@@ -233,4 +233,25 @@ select:visited {
     &:hover {
         opacity: .8;
     }
+}
+
+.tabs {
+    &>input[type="radio"] {
+        display: none;
+    }
+    &>div {
+        display: none;
+    }
+    #tabs-btn-1:checked~#tabs-content-1,
+    #tabs-btn-2:checked~#tabs-content-2,
+    #tabs-btn-3:checked~#tabs-content-3,
+    #tabs-btn-4:checked~#tabs-content-4,
+    #tabs-btn-5:checked~#tabs-content-5,
+    #tabs-btn-6:checked~#tabs-content-6 {
+        display: block;
+    }
+}
+
+.table {
+    width: 100%;
 }
