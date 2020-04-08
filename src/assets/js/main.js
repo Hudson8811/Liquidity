@@ -19,4 +19,38 @@ $(document).ready(function() {
         $('.lizy').toggleClass('hide');
         $('.show_much').removeClass('hide');
     })
+
+    $('.grafic_slider--slick').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        centerMode: true,
+        prevArrow: $('.slick--prev'),
+        nextArrow: $('.slick--next'),
+    });
+    $('.mac_slider--slick').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        centerMode: true,
+        prevArrow: $('.mac_slick--prev'),
+        nextArrow: $('.mac_slick--next'),
+    });
+    $('.business--slick_slider').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        centerMode: true,
+        adaptiveHeight: true,
+        prevArrow: $('.business_slick--prev'),
+        nextArrow: $('.business_slick--next'),
+    });
+    $('.video_block--preview').click(function() {
+        $(this).toggleClass('video_block--preview--hidden');
+        var src = $(this).siblings('iframe').attr('src');
+        $(this).siblings('iframe').attr('src', src + '&autoplay=1');
+    });
 });

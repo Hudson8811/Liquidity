@@ -1,0 +1,85 @@
+.section-9 {
+    padding-top: 119px;
+    padding-bottom: 120px;
+    .section__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .main-text {
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 638px;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .grafic_image {
+        margin: 0 -40px;
+        img {
+            width: block;
+            width: 100%;
+        }
+    }
+    .trade_catalog {
+        background: #fff;
+        margin: 0 -39px;
+        justify-content: center;
+        &-item {
+            margin: 0px 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 92px;
+            margin-bottom: 17px;
+            img {
+                display: block;
+                width: 100%;
+            }
+            &:nth-child(1) {
+                width: 176px;
+            }
+            &:nth-child(2) {
+                width: 142px;
+            }
+            &:nth-child(3) {
+                width: 195px;
+            }
+            &:nth-child(4) {
+                width: 170px;
+            }
+            &:nth-child(5) {
+                width: 206px;
+            }
+            &:nth-child(6) {
+                width: 180px;
+            }
+            &:nth-child(7) {
+                width: 180px;
+            }
+        }
+    }
+    .another_trades {
+        background: #fff;
+        margin: 0 -39px;
+        .description {
+            margin-top: 33px;
+        }
+        .flex_block {
+            margin-top: 60px;
+        }
+        &--left {
+            width: 100%;
+            &>div:nth-child(1) {
+                width: 100%;
+            }
+            &>div:nth-child(2) {
+                justify-content: flex-start;
+                padding-left: 0;
+            }
+        }
+        &--text {
+            max-width: 473px;
+            width: 100%;
+        }
+    }
+}

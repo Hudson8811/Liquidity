@@ -1,0 +1,25 @@
+.section-10 {
+    padding-top: 71px;
+    padding-bottom: 172px;
+    .section__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .main-text {
+        font-size: 18px;
+        line-height: 29px;
+        max-width: 748px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .slider_arrow {
+        width: 45px;
+        height: 45px;
+        .icon-slider-arrow {
+            transform: rotate(0deg);
+        }
+        .icon-slider-arrow-green {
+            transform: rotate(180deg);
+        }
+    }
+}

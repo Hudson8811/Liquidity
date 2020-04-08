@@ -1,15 +1,22 @@
-@import "template/template";
-@import "header/header";
-//стили для главной целиком
-@import "main/main";
-//стили для секции страницы test_lp
-//стили для секции страницы black_page
-@import "black_page/section-1";
-@import "black_page/section-2";
-@import "black_page/section-3";
-@import "black_page/section-4";
-@import "black_page/section-5";
-@import "black_page/section-6";
-@import "black_page/footer-menu-section";
-@import "black_page/form-block-section";
-@import "footer/footer";
+@import 'header/header.scss';
+@import 'footer/footer.scss';
+@import 'template/template.scss';
+@import 'template/slick.scss';
+@import 'black_page/footer-menu-section.scss';
+@import 'black_page/form-block-section.scss';
+@import 'black_page/section-1.scss';
+@import 'black_page/section-2.scss';
+@import 'black_page/section-3.scss';
+@import 'black_page/section-4.scss';
+@import 'black_page/section-5.scss';
+@import 'black_page/section-6.scss';
+@import 'black_page/section-7.scss';
+@import 'black_page/section-8.scss';
+@import 'black_page/section-9.scss';
+@import 'black_page/section-10.scss';
+@import 'black_page/section-11.scss';
+@import 'black_page/section-12.scss';
+@import 'black_page/section-13.scss';
+@import 'black_page/section-14.scss';
+@import 'black_page/section-15.scss';
+@import 'black_page/section-16.scss';
