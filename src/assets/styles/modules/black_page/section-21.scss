@@ -1,0 +1,34 @@
+.section-21 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    .section__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .main-text {
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 618px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .button_block {
+        max-width: 365px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: -85px;
+        .btn {
+            width: 111px;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 26px;
+        }
+        .text {
+            letter-spacing: -0.318182px;
+            color: #999999;
+        }
+    }
+}

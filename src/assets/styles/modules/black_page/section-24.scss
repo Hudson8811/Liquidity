@@ -1,0 +1,28 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .form {
+        &--heading {
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 44px;
+            /* or 110% */
+            text-align: center;
+            color: #383838;
+            margin-bottom: 40px;
+        }
+        &--description {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            /* or 139% */
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+    }
+    .form__input:not(select),
+    .btn {
+        width: 100%;
+    }
+}

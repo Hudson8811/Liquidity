@@ -53,4 +53,11 @@ $(document).ready(function() {
         var src = $(this).siblings('iframe').attr('src');
         $(this).siblings('iframe').attr('src', src + '&autoplay=1');
     });
+    $('.advanced_slider--slick').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        prevArrow: $('.advanced_slick--prev'),
+        nextArrow: $('.advanced_slick--next'),
+    });
 });
