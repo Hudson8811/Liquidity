@@ -60,4 +60,9 @@ $(document).ready(function() {
         prevArrow: $('.advanced_slick--prev'),
         nextArrow: $('.advanced_slick--next'),
     });
+    $('.burger').click(function() {
+        $(this).toggleClass('burger--active');
+        $('.header__top-row').toggleClass('menu--active');
+        $('.header__bottom-row').toggleClass('menu--active');
+    })
 });
