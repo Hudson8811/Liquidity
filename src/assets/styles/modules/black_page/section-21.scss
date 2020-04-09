@@ -13,10 +13,12 @@
         text-align: center;
     }
     .button_block {
+        position: relative;
         max-width: 365px;
         margin: 0 auto;
         text-align: center;
         margin-top: -85px;
+        z-index: 2;
         .btn {
             width: 111px;
             height: 33px;

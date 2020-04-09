@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
+    >div {
+        margin: 0px 49px;
+    }
     .form {
         &--heading {
             font-weight: 900;
@@ -25,4 +29,62 @@
     .btn {
         width: 100%;
     }
+    .form-content {
+        background: #FFFFFF;
+        /* Small_shadow */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        button {
+            height: 52px;
+            border: none;
+        }
+    }
+    .right-form {
+        width: 436px;
+        .form-content {
+            margin-top: 86px;
+            box-sizing: border-box;
+            padding: 31px 47px;
+            input {
+                margin-bottom: 18px;
+            }
+            .form__phone__select.form__input {
+                border-radius: 5px 0px 0px 5px;
+            }
+            &--description {
+                font-weight: normal;
+                font-size: 11px;
+                line-height: 13px;
+                /* or 118% */
+                color: #9DAFBD;
+                max-width: 290px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .left-form {
+        width: 438px;
+        .form-content {
+            margin-top: 41px;
+            box-sizing: border-box;
+            padding: 24px 20px 40px 20px;
+            input {
+                margin-bottom: 14px;
+                height: 60px;
+                font-weight: bold;
+                padding-left: 15px;
+                padding-top: 15px;
+            }
+            button {
+                max-width: 341px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+
+.section-24 {
+    padding-bottom: 161px;
+    padding-top: 126px;
 }
