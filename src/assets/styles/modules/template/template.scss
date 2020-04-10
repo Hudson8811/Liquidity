@@ -6,7 +6,7 @@ body {
     font-family: $roboto;
     font-size: 14px;
     line-height: 16px;
-    background: #FBFBFB;
+    background: #fff;
 }
 
 body,
@@ -896,6 +896,9 @@ select:visited {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-bottom: 2px;
+    &:hover {
+        opacity: .8;
+    }
     label {
         display: block;
         font-weight: bold;
@@ -903,6 +906,7 @@ select:visited {
         line-height: 30px;
         /* identical to box height, or 150% */
         color: #383838;
+        cursor: pointer;
     }
     input {
         display: none;
@@ -1049,5 +1053,26 @@ select:visited {
             text-align: center;
             margin: 20px 0;
         }
+    }
+}
+
+@media screen and( min-width:768px) {
+    .goanim.an.Tan,
+    .goanim .an.Tan {
+        transform: translateY(100px);
+    }
+    .goanim .an,
+    .goanim.an {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    .an {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        transition: 0.7s ease;
+        -webkit-transition: 0.7s ease;
+        -moz-transition: 0.7s ease;
+        -ms-transition: 0.7s ease;
+        -o-transition: 0.7s ease;
     }
 }

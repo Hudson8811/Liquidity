@@ -43,9 +43,10 @@
         }
     }
     .text_item {
-        max-width: 803px;
         margin: 0 auto;
-        margin-bottom: 119px;
+        padding: 52px 90px;
+        background: #fbfbfb;
+        margin-bottom: 15px;
         &--heading {
             font-weight: bold;
             font-size: 20px;

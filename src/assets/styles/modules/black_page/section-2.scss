@@ -1,5 +1,7 @@
 .section-2 {
     padding-top: 140px;
+    padding-bottom: 160px;
+    background: #fbfbfb;
     .container {
         display: block;
     }
@@ -38,24 +40,27 @@
             color: #999999;
             cursor: pointer;
             padding-left: 0;
+            background: #FBFBFB;
+            padding: 10px 13px;
             &:nth-child(2) {
-                padding-right: 45px;
+                margin-right: 19px;
             }
             &:nth-child(4) {
-                padding-right: 25px;
+                margin-right: 0px;
             }
             &:nth-child(6) {
-                padding-right: 36px;
+                margin-right: 10px;
             }
             &:nth-child(8) {
-                padding-right: 30px;
+                margin-right: 4px;
             }
             &:nth-child(10) {
-                padding-right: 27px;
+                margin-right: 1px;
             }
         }
         &>input[type="radio"]:checked+label {
             color: #01B68F;
+            background: #fff;
         }
         &>div {
             margin-top: 58px;
