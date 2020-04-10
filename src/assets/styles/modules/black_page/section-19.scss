@@ -28,3 +28,29 @@
         }
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-19 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .advanced_slider--arrow_block {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .check_catalog {
+            flex-wrap: wrap;
+            margin-top: 30px;
+            .check_block {
+                min-width: 170px;
+                margin: 10px;
+            }
+        }
+    }
+}

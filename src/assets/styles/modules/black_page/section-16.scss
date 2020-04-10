@@ -34,3 +34,36 @@
         }
     }
 }
+
+@media screen and (max-width:1110px) {
+    .section-16 {
+        .video_block {
+            margin-top: 20px;
+            height: 50vw;
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-16 {
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .you_button {
+            margin-top: 20px;
+        }
+        .video_block {
+            &--play {
+                width: 40px;
+                height: 40px;
+                .icon-play {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

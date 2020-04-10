@@ -46,3 +46,35 @@
         }
     }
 }
+
+@media screen and (max-width:1000px) {
+    .section-14 .catalog .check_block {
+        min-width: 305px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-14 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .catalog {
+            margin-top: 20px;
+            .check_block,
+            .check_block:nth-child(3n) {
+                width: 100%;
+                min-width: auto;
+                .check_block__text {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

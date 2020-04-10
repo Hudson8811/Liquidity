@@ -1003,3 +1003,52 @@ select:visited {
         top: 15px;
     }
 }
+
+@media screen and (max-width:970px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section__title {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .section__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .main-text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.another_trades {
+    &--left {
+        margin-bottom: 20px;
+        display: block;
+        padding: 20px;
+        &>div {
+            width: 100%;
+            &:nth-child(1),
+            &:nth-child(2) {
+                padding: 0;
+            }
+        }
+    }
+    &--right {
+        max-width: 317px;
+        width: 98%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .another_trades--title {
+        text-align: center;
+    }
+    .another_trades--text {
+        text-align: center;
+        margin: 20px 0;
+    }
+}

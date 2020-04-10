@@ -14,3 +14,17 @@
         color: #383838;
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-20 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .section_subtitle {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}

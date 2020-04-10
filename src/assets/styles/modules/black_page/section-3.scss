@@ -11,3 +11,15 @@
         margin-top: 40px;
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-3 {
+        padding-top: 50px;
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}

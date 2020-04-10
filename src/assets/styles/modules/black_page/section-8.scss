@@ -26,3 +26,20 @@
         }
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-8 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .get_your_prime_form {
+            display: block;
+        }
+        .get_your_prime_form--left,
+        .get_your_prime_form--right {
+            width: 100%;
+        }
+        .get_your_prime_form .description {
+            margin-bottom: 20px;
+        }
+    }
+}

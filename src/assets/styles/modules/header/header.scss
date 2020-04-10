@@ -182,6 +182,7 @@
                 padding: 20px;
                 z-index: -1;
                 opacity: 0;
+                visibility: hidden;
                 transition-duration: .5s;
                 height: 222px;
                 .menu {
@@ -195,6 +196,7 @@
                 nav {
                     z-index: 99;
                     opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -213,6 +215,7 @@
                 padding: 20px;
                 z-index: -1;
                 opacity: 0;
+                visibility: hidden;
                 transition-duration: .5s;
                 .menu {
                     display: block;
@@ -225,6 +228,7 @@
                 nav {
                     z-index: 99;
                     opacity: 1;
+                    visibility: visible;
                 }
             }
         }

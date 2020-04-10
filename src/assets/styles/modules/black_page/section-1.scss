@@ -78,3 +78,50 @@
         margin-top: 143px;
     }
 }
+
+@media screen and (max-width:920px) {
+    .forex_liquidity {
+        .section__title {
+            text-align: center;
+        }
+        .section__subtitle {
+            text-align: center;
+        }
+        .container:nth-child(2) {
+            display: block;
+        }
+        .forex_liquidity__form {
+            margin: 0 auto;
+        }
+        .number_block {
+            margin: 0 auto;
+        }
+        .forex_liquidity__content .section__subtitle {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .forex_liquidity {
+        padding-top: 115px;
+        .number_block {
+            width: 100%;
+            display: block;
+            margin-top: 40px;
+            &-content {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        .link_container {
+            margin-top: 40px;
+        }
+    }
+    .forex_liquidity__form {
+        max-width: 340px;
+        margin: 0 auto;
+        width: 98%;
+    }
+}

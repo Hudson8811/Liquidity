@@ -88,3 +88,40 @@
     padding-bottom: 161px;
     padding-top: 126px;
 }
+
+@media screen and (max-width:1090px) {
+    .form-wrapper {
+        .right-form,
+        .left-form {
+            margin-top: 20px;
+        }
+        .right-form .form-content {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-24 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .form-wrapper {
+            .form--heading {
+                margin-bottom: 20px;
+            }
+            .form--description {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            .left-form,
+            .right-form {
+                width: 100%;
+                margin: 20px;
+            }
+            .right-form .form-content {
+                margin-top: 20px;
+                padding: 20px;
+            }
+        }
+    }
+}

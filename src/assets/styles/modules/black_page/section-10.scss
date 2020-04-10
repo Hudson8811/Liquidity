@@ -23,3 +23,29 @@
         }
     }
 }
+
+@media screen and (max-width:1000px) {
+    .grafic_slider {
+        &--slick_item {
+            width: 300px;
+            margin-top: 58px;
+            &--image {
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-10 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

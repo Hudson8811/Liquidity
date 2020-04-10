@@ -42,3 +42,20 @@
     //     // }
     // }
 }
+
+@media screen and (max-width:580px) {
+    .section-7 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .aggregation_image {
+            margin-top: 20px;
+        }
+    }
+}

@@ -16,7 +16,7 @@
     .grafic_image {
         margin: 0 -40px;
         img {
-            width: block;
+            display: block;
             width: 100%;
         }
     }
@@ -80,6 +80,48 @@
         &--text {
             max-width: 473px;
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .section-9 {
+        .grafic_image {
+            margin: 0;
+        }
+        .trade_catalog {
+            margin: 0 auto;
+        }
+        .another_trades {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width:920px) {
+    .section-9 {
+        .trade_catalog {
+            &-item {
+                margin: 0 10px;
+                height: 50px;
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-9 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
         }
     }
 }

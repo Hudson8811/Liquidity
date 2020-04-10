@@ -85,3 +85,28 @@
         }
     }
 }
+
+@media screen and (max-width:1300px) {
+    .section-6 {
+        .table_wrapper {
+            overflow: auto;
+            .table {
+                width: 980px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:580px) {
+    .section-6 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

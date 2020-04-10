@@ -34,3 +34,22 @@
         }
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-21 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .map_block {
+            height: 400px;
+            .session {
+                margin-top: 0;
+            }
+        }
+        .button_block {
+            margin-top: -20px;
+        }
+    }
+}

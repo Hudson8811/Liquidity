@@ -56,3 +56,38 @@
         }
     }
 }
+
+@media screen and (max-width:580px) {
+    .section-15 {
+        padding-bottom: 50px;
+        .section__title {
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .business--slick_slider {
+            .item {
+                padding: 20px;
+                width: 290px;
+                margin: 0 50px;
+                &--heading {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+                &--description {
+                    font-size: 11px;
+                    line-height: 14px;
+                }
+                .check_block {
+                    margin-bottom: 10px;
+                    &__text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
