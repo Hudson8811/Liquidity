@@ -22,6 +22,12 @@
             transform: rotate(180deg);
         }
     }
+    .grafic_slider--arrow_block {
+        margin-bottom: 70px;
+    }
+    .grafic_slider--slick_item--description {
+        margin-bottom: 32px;
+    }
 }
 
 @media screen and (max-width:1000px) {

@@ -23,6 +23,7 @@
     .trade_catalog {
         background: #fff;
         margin: 0 -39px;
+        margin-top: 47px;
         justify-content: center;
         &-item {
             margin: 0px 39px;
@@ -30,7 +31,7 @@
             justify-content: center;
             align-items: center;
             height: 92px;
-            margin-bottom: 17px;
+            margin-bottom: 20px;
             img {
                 display: block;
                 width: 100%;
@@ -60,15 +61,16 @@
     }
     .another_trades {
         background: #fff;
-        margin: 0 -39px;
+        margin: 0 -34px;
         .description {
             margin-top: 33px;
         }
         .flex_block {
-            margin-top: 60px;
+            margin-top: 57px;
         }
         &--left {
             width: 100%;
+            padding: 42px 77px 50px 71px;
             &>div:nth-child(1) {
                 width: 100%;
             }

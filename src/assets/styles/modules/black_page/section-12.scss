@@ -2,8 +2,10 @@
     padding-top: 172px;
     padding-bottom: 190px;
     .section__title {
+        margin: 0 auto;
         text-align: center;
         margin-bottom: 50px;
+        max-width: 900px;
     }
     .main-text {
         font-size: 18px;
@@ -18,6 +20,9 @@
         margin-top: 125px;
         display: flex;
         margin-bottom: 103px;
+        @media screen and (min-width: 1600px) {
+            padding-left: 58px;
+        }
         &--left {
             width: 348px;
             flex-shrink: 0;
@@ -51,7 +56,11 @@
             color: #63636E;
         }
         .speed_block {
-            margin-bottom: 33px;
+            margin-bottom: 28px;
+            @media screen and (min-width: 1600px) {
+                padding-right: 16px;
+                box-sizing: border-box;
+            }
         }
         &--green_gr {
             background: linear-gradient(265.76deg, #16F1C2 22.33%, #00B68F 99.88%);
@@ -72,13 +81,20 @@
         }
     }
     .connectivity_block {
+        &--heading {
+            max-width: 764px;
+        }
         &--heading,
         &--description {
             margin-bottom: 55px;
         }
+        &--description {
+            max-width: 838px;
+            padding-right: 41px;
+        }
         &--image {
             margin: 0 auto;
-            margin-top: 45px;
+            margin-top: 90px;
             max-width: 934px;
             img {
                 display: block;
@@ -102,6 +118,7 @@
             &--title {
                 font-size: 24px;
                 line-height: 30px;
+                margin-bottom: 20px;
             }
             &--text {
                 font-size: 14px;

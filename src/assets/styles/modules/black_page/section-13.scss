@@ -7,26 +7,29 @@
         margin-bottom: 50px;
     }
     .main-text {
-        max-width: 503px;
+        font-size: 18px;
+        line-height: 23px;
+        max-width: 609px;
         margin: 0 auto;
         text-align: center;
     }
     .center_arrow-block {
         margin-top: 50px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
     .flex_block {
         justify-content: center;
         align-items: flex-start;
         flex-wrap: wrap;
         margin: 0 -25px;
-        margin-top: 109px;
+        margin-top: 140px;
         a {
             margin: 0px 25px;
             height: 87px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 40px;
         }
     }
     .big_text {
@@ -36,7 +39,7 @@
         /* identical to box height, or 175% */
         color: #5C5C5C;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 65px;
         margin-bottom: 11px;
     }
     .little_text {

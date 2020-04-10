@@ -793,7 +793,7 @@ select:visited {
             line-height: 20px;
             /* or 154% */
             color: #9DAFBD;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
         .check_block {
             margin-bottom: 24px;
@@ -1023,32 +1023,31 @@ select:visited {
         font-size: 14px;
         line-height: 17px;
     }
-}
-
-.another_trades {
-    &--left {
-        margin-bottom: 20px;
-        display: block;
-        padding: 20px;
-        &>div {
-            width: 100%;
-            &:nth-child(1),
-            &:nth-child(2) {
-                padding: 0;
+    .another_trades {
+        &--left {
+            margin-bottom: 20px;
+            display: block;
+            padding: 20px;
+            &>div {
+                width: 100%;
+                &:nth-child(1),
+                &:nth-child(2) {
+                    padding: 0;
+                }
             }
         }
-    }
-    &--right {
-        max-width: 317px;
-        width: 98%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    .another_trades--title {
-        text-align: center;
-    }
-    .another_trades--text {
-        text-align: center;
-        margin: 20px 0;
+        &--right {
+            max-width: 317px;
+            width: 98%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .another_trades--title {
+            text-align: center;
+        }
+        .another_trades--text {
+            text-align: center;
+            margin: 20px 0;
+        }
     }
 }

@@ -1,20 +1,19 @@
 .section-4 {
     padding-top: 320px;
     .section__title {
-        text-align: center;
-        padding-bottom: 10px;
+        padding-bottom: 26px;
     }
     .main-text {
         display: block;
         font-size: 20px;
         line-height: 29px;
-        margin-top: 40px;
+        margin-top: 28px;
         padding-right: 10px;
     }
     .number_block {
         margin-top: 88px;
         width: 100%;
-        max-width: 830px;
+        max-width: 842px;
         justify-content: space-between;
         &--text {
             color: #383838;
@@ -24,6 +23,7 @@
         }
         &--number-text {
             color: #383838;
+            margin-left: 12px;
         }
     }
 }
