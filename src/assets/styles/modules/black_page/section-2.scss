@@ -42,21 +42,7 @@
             padding-left: 0;
             background: #FBFBFB;
             padding: 10px 13px;
-            &:nth-child(2) {
-                margin-right: 19px;
-            }
-            &:nth-child(4) {
-                margin-right: 0px;
-            }
-            &:nth-child(6) {
-                margin-right: 10px;
-            }
-            &:nth-child(8) {
-                margin-right: 4px;
-            }
-            &:nth-child(10) {
-                margin-right: 1px;
-            }
+            margin-right: 3px;
         }
         &>input[type="radio"]:checked+label {
             color: #01B68F;

@@ -120,3 +120,9 @@ $(document).ready(function() {
         }
     });
 });
+
+// $('.grafic_slider--slick').flickity({
+//     wrapAround: true,
+//     adaptiveHeight: true,
+//     pageDots: false
+// });
