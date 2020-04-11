@@ -1,18 +1,24 @@
-.section-8.white
-  .container.goanim.an
+.section-8.white.goanim.an
+  .container
     .section__title Get your #[span(class="section__title--bold") Prime Liquidity]
     .main-text We are here to provide you with the best liquidity to match your exact requirements. Get in touch now.
-    form.get_your_prime_form.goanim.an
+    form.get_your_prime_form
       .get_your_prime_form--left
-        input(type="text" placeholder="Your Name").form__input 
+        label.form_label
+          span Your Name
+          input(type="text" placeholder="").form__input 
         .form__phone
           select(name="number").form__phone__select.form__input
             option(value="+7") +7
             option(value="8") 8
-          input(type="text" placeholder="Phone").form__input
+          label.form_label
+            span Phone
+            input(type="text" placeholder="").form__input
         span.description Based on your IP, you are in Russian Federation.#[a(href="#") Change] Your data will be in US data center.
       .get_your_prime_form--right
-        input(type="text" placeholder="Your Name").form__input 
+        label.form_label
+          span Your Name
+          input(type="text" placeholder="").form__input 
         button.btn.btn--green.btn--box_shadow.upp Get Started!
 
 

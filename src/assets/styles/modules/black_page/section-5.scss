@@ -122,6 +122,14 @@
                     margin-bottom: 10px;
                 }
             }
+            &:nth-child(5) {
+                .mark {
+                    img {
+                        display: block;
+                        max-width: 115px;
+                    }
+                }
+            }
             padding-top: 30px;
             margin: 0px 7px;
             display: flex;

@@ -17,16 +17,22 @@
       
     form.forex_liquidity__form
       h3.forex_liquidity__form-title Get access to our liquidity
-      input(type="text" placeholder="Your Name").form__input
-      input(type="text" placeholder="Your Email").form__input
+      label.form_label
+        span Your Name
+        input(type="text").form__input
+      label.form_label
+        span Your Email
+        input(type="text").form__input
       .form__phone
         select(name="number").form__phone__select.form__input
           option(value="+7") +7
           option(value="8") 8
-        input(type="text" placeholder="Phone").form__input
+        label.form_label
+          span Phone
+          input(type="text").form__input
       p.forex_liquidity__form-description Based on your IP, you are in Russian Federation. #[a(href="#") Change] Your data will be in US data center.
       button(type="bytton").btn.btn--green.btn--box_shadow Get Started!
   .container.link_container
-    a(href="#").link.link--dotted What is prime of prime?
+    a(href=".section-4").link.link--dotted.js-anchor What is prime of prime?
 
       

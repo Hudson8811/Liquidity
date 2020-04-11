@@ -21,8 +21,9 @@ $(document).ready(function() {
     })
     $('.grafic_slider--slick').slick({
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 1,
+        sliderToScroll: 1,
         variableWidth: true,
         centerMode: true,
         prevArrow: $('.slick--prev'),
@@ -63,7 +64,17 @@ $(document).ready(function() {
         $(this).toggleClass('burger--active');
         $('.header__top-row').toggleClass('menu--active');
         $('.header__bottom-row').toggleClass('menu--active');
-    })
+    });
+    // anchor
+    $(document).on("click", ".js-anchor > a, a.js-anchor", function(e) {
+        e.preventDefault();
+        var hrf = $(this).attr("href");
+        var top = $(hrf).offset().top;
+        if (window.innerWidth > 768) {
+            top -= 77;
+        }
+        $("html,body").animate({ scrollTop: top }, 300);
+    });
     $(window).on("scroll", function() {
         goanim();
     });
@@ -89,4 +100,23 @@ $(document).ready(function() {
             });
         }
     };
+
+    $(document).on("focus", ".form_label input", function() {
+        $(this).parent().addClass('active');
+        $(this).parent().removeClass('error');
+    });
+    $(document).on("blur", ".form_label input", function() {
+        if ($(this).val() == "") {
+            $(this).parent().removeClass('active');
+            $(this).parent().addClass('error');
+        } else {
+            $(this).parent().removeClass("error");
+            if (
+                $(this).attr("type") == "email" &&
+                !isValidEmailAddress($(this).val())
+            ) {
+                $(this).parent().addClass("error");
+            }
+        }
+    });
 });
