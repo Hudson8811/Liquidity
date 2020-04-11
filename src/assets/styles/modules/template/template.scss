@@ -1019,7 +1019,10 @@ select:visited {
 }
 
 .another_question {
-    margin-top: 122px;
+    background: #FBFBFB;
+    margin-top: 70px;
+    padding-top: 52px;
+    padding-bottom: 52px;
     padding-left: 90px;
     padding-right: 80px;
     &--heading {
@@ -1054,6 +1057,7 @@ select:visited {
     }
     &--right {
         margin-bottom: 28px;
+        max-width: 249px;
     }
     &--img {
         box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2);
@@ -1165,5 +1169,82 @@ select:visited {
         -moz-transition: 0.7s ease;
         -ms-transition: 0.7s ease;
         -o-transition: 0.7s ease;
+    }
+}
+
+.capcha_block {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+    align-items: center;
+    &.gray {
+        p,
+        a {
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 15px;
+            /* or 136% */
+            color: #9DAFBD;
+        }
+        b {
+            border: 1px solid #9DAFBD;
+        }
+    }
+    .capcha {
+        flex-shrink: 0;
+        width: 170px;
+        height: 42px;
+        overflow: hidden;
+    }
+    .g-recaptcha,
+    .g-recaptcha div {
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .g-recaptcha iframe,
+    body>div[style]:last-of-type {
+        transform: scale(0.75);
+        transform-origin: left top;
+    }
+}
+
+.consent_block {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+    input {
+        opacity: 0;
+        display: none;
+    }
+    p,
+    a {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 15px;
+        /* or 136% */
+        color: #FFFFFF;
+    }
+    input+b {
+        width: 16px;
+        height: 15px;
+        background: transparent;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked+b {
+        background: center/contain url(../images/bold_check.svg) no-repeat;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .capcha_block {
+        display: block;
+        .consent_block {
+            margin-top: 10px;
+            margin-left: 0;
+        }
     }
 }

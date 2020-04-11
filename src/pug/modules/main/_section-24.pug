@@ -29,3 +29,11 @@
             span Email
             input(type="text" placeholder="").form__input
           button.btn.btn--green.btn--box_shadow.upp Give me a call
+          .capcha_block.gray
+            .capcha
+              .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+              script(src='https://www.google.com/recaptcha/api.js')
+            label.consent_block
+              input(type="checkbox")
+              b
+              p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

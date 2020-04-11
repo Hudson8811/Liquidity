@@ -31,7 +31,17 @@
           span Phone
           input(type="text").form__input
       p.forex_liquidity__form-description Based on your IP, you are in Russian Federation. #[a(href="#") Change] Your data will be in US data center.
-      button(type="bytton").btn.btn--green.btn--box_shadow Get Started!
+      button(type="button").btn.btn--green.btn--box_shadow Get Started!
+      .capcha_block
+        .capcha
+          .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+          script(src='https://www.google.com/recaptcha/api.js')
+        label.consent_block
+          input(type="checkbox")
+          b
+          p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+        
+
   .container.link_container
     a(href=".section-4").link.link--dotted.js-anchor What is prime of prime?
 
