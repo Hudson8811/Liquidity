@@ -14,21 +14,21 @@ $(document).ready(function() {
         $('.js-hide_much').removeClass('hide');
     })
     $('.js-hide_much').click(function(e) {
-        e.preventDefault()
-        $(this).toggleClass('hide');
-        $('.lizy').toggleClass('hide');
-        $('.js-show_much').removeClass('hide');
-    })
-    $('.grafic_slider--slick').slick({
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        sliderToScroll: 1,
-        variableWidth: true,
-        centerMode: true,
-        prevArrow: $('.slick--prev'),
-        nextArrow: $('.slick--next'),
-    });
+            e.preventDefault()
+            $(this).toggleClass('hide');
+            $('.lizy').toggleClass('hide');
+            $('.js-show_much').removeClass('hide');
+        })
+        // $('.grafic_slider--slick').slick({
+        //     infinite: true,
+        //     speed: 500,
+        //     slidesToShow: 1,
+        //     sliderToScroll: 1,
+        //     variableWidth: true,
+        //     centerMode: true,
+        //     prevArrow: $('.slick--prev'),
+        //     nextArrow: $('.slick--next'),
+        // });
     $('.mac_slider--slick').slick({
         infinite: true,
         speed: 300,
@@ -121,8 +121,8 @@ $(document).ready(function() {
     });
 });
 
-// $('.grafic_slider--slick').flickity({
-//     wrapAround: true,
-//     adaptiveHeight: true,
-//     pageDots: false
-// });
+$('.grafic_slider--slick').flickity({
+    wrapAround: true,
+    adaptiveHeight: true,
+    pageDots: false
+});
