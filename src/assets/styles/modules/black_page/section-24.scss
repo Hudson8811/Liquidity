@@ -11,7 +11,7 @@
         height: 100%;
         box-sizing: border-box;
         &:nth-child(1) {
-            padding-bottom: 349px;
+            padding-bottom: 412px;
         }
     }
     .form-wrapper-left {
@@ -114,10 +114,10 @@
         .form-wrapper>div.form-wrapper-left,
         .form-wrapper>div.form-wrapper-right {
             width: 100%;
-            padding: 0;
+            padding: 20px 0;
         }
         .form-wrapper>div:nth-child(1) {
-            padding-bottom: 0!important;
+            padding-bottom: 20px!important;
         }
         .form-wrapper {
             .left-form {
