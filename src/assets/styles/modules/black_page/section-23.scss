@@ -16,6 +16,26 @@
     .best_with {
         margin-top: 80px;
     }
+    .best_with {
+        &:nth-child(4) {
+            .best_with--right {
+                .check_block {
+                    &:nth-child(1) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+        &:nth-child(5) {
+            .best_with--right {
+                .check_block {
+                    &:nth-child(2) {
+                        padding-right: 50px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:690px) {
