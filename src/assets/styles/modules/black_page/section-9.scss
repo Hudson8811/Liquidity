@@ -61,17 +61,17 @@
         }
     }
     .another_trades {
-        background: #fff;
         margin: 0 -34px;
         .description {
             margin-top: 33px;
         }
         .flex_block {
-            margin-top: 57px;
+            margin-top: 33px;
+            background: #fff;
         }
         &--left {
             width: 100%;
-            padding: 42px 77px 50px 71px;
+            padding: 64px 77px 50px 71px;
             &>div:nth-child(1) {
                 width: 100%;
             }

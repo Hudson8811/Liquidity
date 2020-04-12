@@ -38,6 +38,20 @@ $(document).ready(function() {
         //     prevArrow: $('.mac_slick--prev'),
         //     nextArrow: $('.mac_slick--next'),
         // });
+
+    $('.grafic_slider--slick').flickity({
+        wrapAround: true,
+        adaptiveHeight: true,
+        pageDots: false
+    });
+
+
+    $('.mac_slider--slick').flickity({
+        wrapAround: true,
+        adaptiveHeight: true,
+        pageDots: false,
+        percentPosition: false
+    });
     $('.business--slick_slider').slick({
         infinite: true,
         speed: 300,
@@ -87,8 +101,8 @@ $(document).ready(function() {
         if ($(".goanim").length > 0) {
             $(".goanim").each(function() {
                 if (
-                    $(window).scrollTop() + (window.innerHeight / 1.5) > $(this).offset().top &&
-                    $(window).scrollTop() - (window.innerHeight / 3) < $(this).offset().top
+                    $(window).scrollTop() + (window.innerHeight / 1.2) > $(this).offset().top &&
+                    $(window).scrollTop() - (window.innerHeight) < $(this).offset().top
                 ) {
                     $(this).removeClass("goanim");
                 } else if (
@@ -119,18 +133,4 @@ $(document).ready(function() {
             }
         }
     });
-});
-
-$('.grafic_slider--slick').flickity({
-    wrapAround: true,
-    adaptiveHeight: true,
-    pageDots: false
-});
-
-
-$('.mac_slider--slick').flickity({
-    wrapAround: true,
-    adaptiveHeight: true,
-    pageDots: false,
-    percentPosition: false
 });
