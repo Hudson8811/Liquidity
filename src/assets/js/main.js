@@ -29,15 +29,15 @@ $(document).ready(function() {
         //     prevArrow: $('.slick--prev'),
         //     nextArrow: $('.slick--next'),
         // });
-    $('.mac_slider--slick').slick({
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        variableWidth: true,
-        centerMode: true,
-        prevArrow: $('.mac_slick--prev'),
-        nextArrow: $('.mac_slick--next'),
-    });
+        // $('.mac_slider--slick').slick({
+        //     infinite: true,
+        //     speed: 300,
+        //     slidesToShow: 1,
+        //     variableWidth: true,
+        //     centerMode: true,
+        //     prevArrow: $('.mac_slick--prev'),
+        //     nextArrow: $('.mac_slick--next'),
+        // });
     $('.business--slick_slider').slick({
         infinite: true,
         speed: 300,
@@ -125,4 +125,12 @@ $('.grafic_slider--slick').flickity({
     wrapAround: true,
     adaptiveHeight: true,
     pageDots: false
+});
+
+
+$('.mac_slider--slick').flickity({
+    wrapAround: true,
+    adaptiveHeight: true,
+    pageDots: false,
+    percentPosition: false
 });
