@@ -13,12 +13,22 @@
         padding-right: 10px;
     }
     .number_block {
-        margin-top: 88px;
+        margin-top: 91px;
         width: 100%;
         max-width: 842px;
         justify-content: space-between;
         &--text {
             color: #383838;
+        }
+        &-content {
+            @media screen and (min-width: 1600px) {
+                &:nth-child(2) {
+                    padding-left: 42px;
+                }
+                &:nth-child(3) {
+                    padding-right: 25px;
+                }
+            }
         }
         &--number {
             color: #383838;

@@ -40,6 +40,34 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 25px;
+            img {
+                display: block;
+                width: 100%;
+            }
+            &:nth-child(1) {
+                width: 110px;
+            }
+            &:nth-child(2) {
+                width: 163px;
+            }
+            &:nth-child(3) {
+                width: 147px;
+            }
+            &:nth-child(4) {
+                width: 165px;
+            }
+            &:nth-child(5) {
+                width: 162px;
+            }
+            &:nth-child(6) {
+                width: 135px;
+            }
+            &:nth-child(7) {
+                width: 141px;
+            }
+            &:nth-child(8) {
+                width: 142px;
+            }
         }
     }
     .text_item {

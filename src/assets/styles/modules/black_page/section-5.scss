@@ -131,6 +131,38 @@
                     }
                 }
             }
+            &:nth-child(1) {
+                .mark {
+                    img {
+                        display: block;
+                        max-width: 156px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .mark {
+                    img {
+                        display: block;
+                        max-width: 97px;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                .mark {
+                    img {
+                        display: block;
+                        max-width: 124px;
+                    }
+                }
+            }
+            &:nth-child(6) {
+                .mark {
+                    img {
+                        display: block;
+                        max-width: 89px;
+                    }
+                }
+            }
             padding-top: 30px;
             margin: 0px 7px;
             display: flex;
