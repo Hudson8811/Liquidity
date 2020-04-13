@@ -61,31 +61,14 @@
                 <li class="menu-item"><a href="#">Turnkey Exchange</a></li>
                 <li class="menu-item"><a href="#">Turnkey Broker</a></li>
                 <li class="menu-item"><a href="#">Money Management</a></li>
-                <li class="menu-item"><a href="#">About us</a></li>
               </ul>
-            </nav>
+            </nav><a class="btn btn--gray btn--box-shadow btn--border" href="#">Call me back</a>
             <div class="language"><a href="#"><img src="images/en.png" alt="language"></a></div>
             <div class="burger hide js-burger">
               <div class="burger--content"></div>
               <div class="burger--content"></div>
               <div class="burger--content"></div>
             </div>
-          </div>
-        </div>
-        <div class="header__bottom-row">
-          <div class="container">
-            <nav>
-              <ul class="menu">
-                <li class="menu-item"><a href="#">Crypto Derivatives/CFD</a></li>
-                <li class="menu-item"><a href="#">Forex</a></li>
-                <li class="menu-item"><a href="#">Metals</a></li>
-                <li class="menu-item"><a href="#">Indices</a></li>
-                <li class="menu-item"><a href="#">Commodities</a></li>
-                <li class="menu-item"><a href="#">Shares CFD</a></li>
-                <li class="menu-item"><a href="#">ETF CFD</a></li>
-                <li class="menu-item"><a href="#">Crypto Spot</a></li>
-              </ul>
-            </nav><a class="btn btn--gray btn--box-shadow btn--border" href="#">Call me back</a>
           </div>
         </div>
       </header>
@@ -97,6 +80,7 @@
         </div>
       </div>
       <footer class="footer">
+        <div class="top-line line"></div>
         <div class="container">
           <div class="footer-top-row goanim an">
             <div class="footer-top-row__copy">B2Broker© 2014-2020</div>
@@ -106,6 +90,9 @@
               <button class="footer-top-row-search__button"><img src="images/icons/search.svg" alt="search"></button>
             </div>
           </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container">
           <div class="footer-menu goanim an">
             <ul class="menu">
               <li class="menu-item"><a href="#">Media</a></li>
@@ -122,6 +109,9 @@
               <li class="menu-item"><a href="#">B2Capital</a></li>
             </ul>
           </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container">
           <div class="footer-text">
             <p>The ownership for word and logo trademarks “B2Broker” belongs to B2Broker LTD, a company incorporated in the United Kingdom of Great Britain and Ireland, company number 10562809; Word and logo trademarks B2Broker are used as a trading name of group of companies that have presence in different countries.</p>
             <p>Please pay attention that we don’t provide financial services on behalf of B2Broker LTD. We provide financial services on behalf of companies that have relevant licenses. Please carefully study our documents posted at this website: Legal information and Disclaimers, Privacy Policy and Cookie Policy. These documents are available only in English. You acknowledge that you know the English language at a sufficient level to understand the text of these documents, and you fully understand the legal consequences of these documents. In case you do not understand or understand the English language poorly, you acknowledge that you have used the services of a professional interpreter. If you don’t agree with this statement or information provided in our documents, please leave this website immediately. <span class="db"></span>Continuation of your use of our website confirms your agreement with the above statements and documents.</p>
@@ -136,9 +126,42 @@
           </div>
         </div>
       </footer>
+      <div class="modal-fancy modal-form-1" id="modal" style="display:none">
+        <form class="forex_liquidity__form">
+          <h3 class="forex_liquidity__form-title">Get access to our liquidity</h3>
+          <label class="form_label"><span>Your Name</span>
+            <input class="form__input" type="text">
+          </label>
+          <label class="form_label"><span>Your Email</span>
+            <input class="form__input" type="text">
+          </label>
+          <div class="form__phone">
+            <select class="form__phone__select form__input" name="number">
+              <option value="+7">+7</option>
+              <option value="8">8</option>
+            </select>
+            <label class="form_label"><span>Phone</span>
+              <input class="form__input" type="text">
+            </label>
+          </div>
+          <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+          <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+          <div class="capcha_block">
+            <div class="capcha">
+              <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
+            <label class="consent_block">
+              <input type="checkbox"><b></b>
+              <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/flickity.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>

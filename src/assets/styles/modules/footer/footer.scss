@@ -2,11 +2,12 @@
 
 .footer {
     background-color: #1e1e1e;
-    padding-top: 35px;
     padding-bottom: 57px;
     &-top-row {
         display: flex;
         justify-content: space-between;
+        padding-top: 35px;
+        padding-bottom: 35px;
         &>div {
             width: 33.3333%;
         }
@@ -28,7 +29,7 @@
                 background: transparent;
                 color: #bbbbbb;
                 border: 0;
-                width: 60px;
+                width: 120px;
                 display: inline-block;
                 vertical-align: middle;
             }
@@ -46,8 +47,8 @@
         }
     }
     &-menu {
-        margin-top: 75px;
-        margin-bottom: 75px;
+        margin-top: 40px;
+        padding-bottom: 40px;
         .menu {
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -64,13 +65,16 @@
             }
         }
     }
-    &-text p {
-        margin-bottom: 15px;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 15px;
-        letter-spacing: -0.318182px;
-        color: rgba(157, 175, 189, 0.5);
+    &-text {
+        margin-top: 35px;
+        p {
+            margin-bottom: 15px;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 15px;
+            letter-spacing: -0.318182px;
+            color: rgba(157, 175, 189, 0.5);
+        }
     }
     &-bottom-menu {
         margin-top: 78px;

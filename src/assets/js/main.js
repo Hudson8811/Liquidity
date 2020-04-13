@@ -45,6 +45,10 @@ $(document).ready(function() {
         pageDots: false
     });
 
+    $('.grafic_slider--slick_item').on('click', function() {
+        let index = $(this).index();
+        $(".grafic_slider--slick").flickity('select', index);
+    });
 
     $('.mac_slider--slick').flickity({
         wrapAround: true,
@@ -52,16 +56,43 @@ $(document).ready(function() {
         pageDots: false,
         percentPosition: false
     });
-    $('.business--slick_slider').slick({
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        variableWidth: true,
-        centerMode: true,
-        adaptiveHeight: true,
-        prevArrow: $('.business_slick--prev'),
-        nextArrow: $('.business_slick--next'),
+
+    $('.mac_slider--slick-item').on('click', function() {
+        let index = $(this).index();
+        $(".mac_slider--slick").flickity('select', index);
     });
+
+    // $('.business--slick_slider').slick({
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     variableWidth: true,
+    //     centerMode: true,
+    //     adaptiveHeight: true,
+    //     prevArrow: $('.business_slick--prev'),
+    //     nextArrow: $('.business_slick--next'),
+    // });
+
+    // $('.slick-slide').on('click', function() {
+    //     let index = $(this).index();
+    //     console.log(index)
+    //     $(".business--slick_slider").slick('slickGoTo', (index));
+
+    // });
+
+    $('.business--slick_slider').flickity({
+        wrapAround: true,
+        adaptiveHeight: true,
+        pageDots: false,
+        percentPosition: false
+    });
+
+    $('.business--slick_slider .item').on('click', function() {
+        let index = $(this).index();
+        $(".business--slick_slider").flickity('select', index);
+    });
+
     $('.video_block--preview').click(function() {
         $(this).toggleClass('video_block--preview--hidden');
         var src = $(this).siblings('iframe').attr('src');
@@ -133,4 +164,15 @@ $(document).ready(function() {
             }
         }
     });
+
+    function modal() {
+        event.preventDefault();
+        $.fancybox.open({
+            src: '#modal',
+            type: 'inline'
+        });
+    }
+    $('.js-action-btn').click(function() {
+        modal();
+    })
 });

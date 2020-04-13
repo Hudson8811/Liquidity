@@ -9,9 +9,6 @@
     z-index: 99;
     &--slicky {
         .header__top-row {
-            background: #171717;
-        }
-        .header__bottom-row {
             background: #222222;
         }
         .btn {
@@ -34,7 +31,7 @@
     }
     &__top-row {
         padding: 23px 0px;
-        background: rgba(27, 27, 27, 0.1);
+        background: rgba(251, 253, 253, 0.1);
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
         transition-duration: .5s;
         .menu {
@@ -43,20 +40,6 @@
                 &:last-child {
                     margin-right: 0;
                 }
-            }
-        }
-    }
-    .language {
-        width: 30px;
-    }
-    &__bottom-row {
-        padding: 11px 0px;
-        background: rgba(251, 253, 253, 0.1);
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-        transition-duration: .5s;
-        .menu {
-            &-item {
-                margin-right: 30px;
             }
         }
         .btn {
@@ -69,6 +52,29 @@
                 transition-duration: .5s;
             }
         }
+    }
+    .language {
+        width: 30px;
+    }
+    &__bottom-row {
+        padding: 11px 0px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+        transition-duration: .5s;
+        .menu {
+            &-item {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:970px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+    .header__top-row .btn--gray {
+        order: 1;
+        margin-top: 10px;
     }
 }
 
@@ -129,6 +135,12 @@
 }
 
 @media screen and (max-width:650px) {
+    .header__top-row .btn--gray {
+        position: absolute;
+        left: 150px;
+        top: 6px;
+        margin-top: 0;
+    }
     .header {
         .language {
             margin-left: auto;
@@ -184,7 +196,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transition-duration: .5s;
-                height: 222px;
+                height: 190px;
                 .menu {
                     display: block;
                     &-item {
@@ -232,5 +244,14 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:370px) {
+    .header__top-row .btn--gray {
+        position: absolute;
+        left: 9px;
+        top: auto;
+        bottom: -45px;
     }
 }

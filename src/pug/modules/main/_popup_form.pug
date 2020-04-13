@@ -1,0 +1,26 @@
+div(class="modal-fancy modal-form-1" id="modal" style="display:none")
+  form.forex_liquidity__form
+      h3.forex_liquidity__form-title Get access to our liquidity
+      label.form_label
+        span Your Name
+        input(type="text").form__input
+      label.form_label
+        span Your Email
+        input(type="text").form__input
+      .form__phone
+        select(name="number").form__phone__select.form__input
+          option(value="+7") +7
+          option(value="8") 8
+        label.form_label
+          span Phone
+          input(type="text").form__input
+      p.forex_liquidity__form-description Based on your IP, you are in Russian Federation. #[a(href="#") Change] Your data will be in US data center.
+      button(type="button").btn.btn--green.btn--box_shadow Get Started!
+      .capcha_block
+        .capcha
+          .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+          script(src='https://www.google.com/recaptcha/api.js')
+        label.consent_block
+          input(type="checkbox")
+          b
+          p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
