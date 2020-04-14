@@ -624,7 +624,9 @@ select:visited {
     max-width: 1600px;
     margin: 0 auto;
     margin-top: 70px;
-    margin-bottom: 51px;
+    @media screen and (min-width: 581px) {
+        margin-bottom: 51px;
+    }
     &--arrow_block {
         width: 125px;
         margin: 0 auto;
@@ -663,7 +665,9 @@ select:visited {
                 img {
                     display: block;
                     width: 100%;
-                    height: 284px;
+                    @media screen and (min-width: 581px) {
+                        height: 284px;
+                    }
                 }
             }
             &.is-selected {
@@ -671,7 +675,7 @@ select:visited {
                 margin-top: 0;
                 .grafic_slider--slick_item--image {
                     width: 100%;
-                    img {
+                    @media screen and (min-width: 581px) {
                         height: 373px;
                     }
                 }
@@ -684,6 +688,9 @@ select:visited {
         border: 1px solid #01b68f;
         margin-left: -63px;
         margin-top: 291px;
+        @media screen and (max-width: 581px) {
+            margin-top: 234px;
+        }
         svg {
             position: absolute;
             left: 31%;
@@ -701,6 +708,9 @@ select:visited {
         background-color: #01b68f;
         margin-right: -63px;
         margin-top: 291px;
+        @media screen and (max-width: 581px) {
+            margin-top: 234px;
+        }
         svg {
             position: absolute;
             left: 31%;
@@ -819,6 +829,9 @@ select:visited {
         border: 1px solid #01b68f;
         margin-left: -63px;
         margin-top: 280px;
+        @media screen and (max-width: 580px) {
+            margin-top: 193px;
+        }
         svg {
             position: absolute;
             left: 31%;
@@ -836,6 +849,9 @@ select:visited {
         background-color: #01b68f;
         margin-right: -63px;
         margin-top: 280px;
+        @media screen and (max-width: 580px) {
+            margin-top: 193px;
+        }
         svg {
             position: absolute;
             left: 31%;
@@ -906,10 +922,12 @@ select:visited {
                             margin-left: -10px;
                             max-width: 250px;
                         }
-                        span {
-                            padding-left: 66px;
-                            padding-right: 38px;
-                            margin-top: -16px;
+                        @media screen and(min-width:580px) {
+                            span {
+                                padding-left: 66px;
+                                padding-right: 38px;
+                                margin-top: -16px;
+                            }
                         }
                     }
                 }
@@ -988,6 +1006,9 @@ select:visited {
         border: 1px solid #01b68f;
         margin-left: -63px;
         margin-top: 315px;
+        @media screen and (max-width: 580px) {
+            margin-top: 230px;
+        }
         svg {
             position: absolute;
             left: 31%;
@@ -1005,6 +1026,9 @@ select:visited {
         background-color: #01b68f;
         margin-right: -63px;
         margin-top: 315px;
+        @media screen and (max-width: 580px) {
+            margin-top: 230px;
+        }
         svg {
             position: absolute;
             left: 31%;
