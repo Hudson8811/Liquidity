@@ -24,6 +24,7 @@
     }
     &__logo {
         max-width: 122px;
+        margin-right: 35px;
         img {
             display: block;
             width: 100%;
@@ -35,6 +36,7 @@
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
         transition-duration: .5s;
         .menu {
+            margin-right: 20px;
             &-item {
                 margin-right: 35px;
                 &:last-child {
@@ -65,6 +67,9 @@
                 letter-spacing: -0.5px;
                 padding: 8px 22px;
                 transition-duration: .5s;
+                margin-right: 33px;
+                margin-left: auto;
+                flex-shrink: 0;
             }
         }
     }
@@ -83,13 +88,16 @@
     }
 }
 
-@media screen and (max-width:970px) {
+@media screen and (max-width:920px) {
     .header .container {
         flex-wrap: wrap;
     }
     .header__top-row .btn--gray {
+        position: absolute;
         order: 1;
-        margin-top: 10px;
+        margin: 0;
+        right: 70px;
+        top: 20px;
     }
 }
 
@@ -154,6 +162,8 @@
         position: absolute;
         left: 150px;
         top: 6px;
+        bottom: auto;
+        right: auto;
         margin-top: 0;
     }
     .header {
