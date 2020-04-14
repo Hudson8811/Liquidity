@@ -1,7 +1,10 @@
 .footer-menu-section {
-    padding-top: 126px;
-    padding-bottom: 88px;
+    padding-top: 125px;
+    padding-bottom: 72px;
     background: #161616;
+    &.castomPadding {
+        padding: 0;
+    }
     &-flex {
         display: flex;
         &__item {

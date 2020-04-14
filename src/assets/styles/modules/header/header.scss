@@ -8,9 +8,9 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     z-index: 99;
     &--slicky {
-        .header__top-row {
-            background: #222222;
-        }
+        // .header__top-row {
+        //     background: #222222;
+        // }
         .btn {
             &--gray {
                 border-radius: 50px;
@@ -32,7 +32,7 @@
     }
     &__top-row {
         padding: 23px 0px;
-        background: rgba(251, 253, 253, 0.1);
+        background: rgba(0, 0, 0, 0.85);
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
         transition-duration: .5s;
         .menu {

@@ -623,7 +623,8 @@ select:visited {
 .grafic_slider {
     max-width: 1600px;
     margin: 0 auto;
-    margin-top: 165px;
+    margin-top: 70px;
+    margin-bottom: 51px;
     &--arrow_block {
         width: 125px;
         margin: 0 auto;
@@ -679,10 +680,10 @@ select:visited {
     }
     .flickity-prev-next-button.previous {
         left: 50%;
-        top: 0;
+        bottom: 0;
         border: 1px solid #01b68f;
         margin-left: -63px;
-        margin-top: -93px;
+        margin-top: 291px;
         svg {
             position: absolute;
             left: 31%;
@@ -696,10 +697,10 @@ select:visited {
     }
     .flickity-prev-next-button.next {
         right: 50%;
-        top: 0;
+        bottom: 0;
         background-color: #01b68f;
         margin-right: -63px;
-        margin-top: -93px;
+        margin-top: 291px;
         svg {
             position: absolute;
             left: 31%;
@@ -814,10 +815,10 @@ select:visited {
     margin-top: 159px;
     .flickity-prev-next-button.previous {
         left: 50%;
-        top: 0;
+        bottom: 0;
         border: 1px solid #01b68f;
         margin-left: -63px;
-        margin-top: -87px;
+        margin-top: 280px;
         svg {
             position: absolute;
             left: 31%;
@@ -831,10 +832,10 @@ select:visited {
     }
     .flickity-prev-next-button.next {
         right: 50%;
-        top: 0;
+        bottom: 0;
         background-color: #01b68f;
         margin-right: -63px;
-        margin-top: -87px;
+        margin-top: 280px;
         svg {
             position: absolute;
             left: 31%;
@@ -983,10 +984,10 @@ select:visited {
     }
     .flickity-prev-next-button.previous {
         left: 50%;
-        top: 0;
+        bottom: 0;
         border: 1px solid #01b68f;
         margin-left: -63px;
-        margin-top: -80px;
+        margin-top: 315px;
         svg {
             position: absolute;
             left: 31%;
@@ -1000,10 +1001,10 @@ select:visited {
     }
     .flickity-prev-next-button.next {
         right: 50%;
-        top: 0;
+        bottom: 0;
         background-color: #01b68f;
         margin-right: -63px;
-        margin-top: -80px;
+        margin-top: 315px;
         svg {
             position: absolute;
             left: 31%;
