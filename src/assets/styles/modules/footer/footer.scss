@@ -16,6 +16,7 @@
         }
         &-social {
             display: flex;
+            max-width: 200px;
             a {
                 width: 21px;
                 height: 21px;
@@ -28,11 +29,12 @@
             }
         }
         &-search {
+            margin-right: auto;
             &__input {
                 background: transparent;
                 color: #bbbbbb;
                 border: 0;
-                width: 120px;
+                width: 240px;
                 display: inline-block;
                 vertical-align: middle;
             }
