@@ -10,6 +10,13 @@ body {
     overflow-x: hidden;
 }
 
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .wrapper {
     margin: 0 auto;
 }
@@ -96,6 +103,30 @@ select:visited {
     }
     &.bottom-line {
         border-bottom: 1px solid #E5E5E5;
+    }
+}
+
+.and_item {
+    background: #FFFFFF;
+    /* Small_shadow */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+    /* identical to box height, or 214% */
+    color: #A8A8A8;
+    padding: 1px 28px;
+    width: 79px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: -37px;
+    margin-top: 132px;
+    @media screen and(max-width: 1080px) {
+        position: relative;
+        margin: 20px auto;
     }
 }
 
@@ -639,15 +670,20 @@ select:visited {
     &--slick {
         &_item {
             width: 638px;
-            margin-top: 90px;
             opacity: .3;
+            transition: margin .2s;
+            height: 508px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             &--heading {
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 30px;
                 text-align: center;
                 color: #383838;
-                margin-bottom: 33px;
+                margin-top: auto;
+                margin-bottom: 15px;
             }
             &--description {
                 font-size: 14px;
@@ -657,14 +693,15 @@ select:visited {
                 color: #383838;
                 max-width: 342px;
                 margin: 0 auto;
-                margin-bottom: 13px;
             }
             &--image {
                 width: 432px;
                 margin: 0 auto;
+                transition: all .5s;
                 img {
                     display: block;
                     width: 100%;
+                    transition: all .5s;
                     @media screen and (min-width: 581px) {
                         height: 284px;
                     }
@@ -675,8 +712,10 @@ select:visited {
                 margin-top: 0;
                 .grafic_slider--slick_item--image {
                     width: 100%;
-                    @media screen and (min-width: 581px) {
-                        height: 373px;
+                    img {
+                        @media screen and (min-width: 581px) {
+                            height: 373px;
+                        }
                     }
                 }
             }
@@ -817,6 +856,10 @@ select:visited {
     width: 98%;
 }
 
+.flickity-viewport {
+    transition: height 0.2s;
+}
+
 .flickity-enabled.is-draggable .flickity-viewport {
     padding-bottom: 90px;
 }
@@ -872,8 +915,10 @@ select:visited {
                 margin: 0 auto;
                 margin-bottom: 44px;
                 margin-top: 40px;
+                transition: all .5s;
                 img {
                     width: 100%;
+                    transition: all .5s;
                 }
             }
             &--sup {

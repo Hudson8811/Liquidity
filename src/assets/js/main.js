@@ -42,7 +42,9 @@ $(document).ready(function() {
     $('.grafic_slider--slick').flickity({
         wrapAround: true,
         adaptiveHeight: true,
-        pageDots: false
+        pageDots: false,
+        selectedAttraction: 0.1,
+        friction: .8
     });
 
     $('.grafic_slider--slick_item').on('click', function() {
@@ -54,7 +56,9 @@ $(document).ready(function() {
         wrapAround: true,
         adaptiveHeight: true,
         pageDots: false,
-        percentPosition: false
+        percentPosition: false,
+        selectedAttraction: 0.1,
+        friction: .8
     });
 
     $('.mac_slider--slick-item').on('click', function() {
