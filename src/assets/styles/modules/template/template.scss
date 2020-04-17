@@ -870,12 +870,11 @@ select:visited {
     transition: height 0.2s;
 }
 
-.flickity-enabled.is-draggable .flickity-viewport {
-    padding-bottom: 110px;
-}
-
 .mac_slider {
     margin-top: 159px;
+    .flickity-viewport {
+        padding-bottom: 0px;
+    }
     .flickity-prev-next-button.previous {
         left: 50%;
         bottom: 0;
@@ -883,7 +882,7 @@ select:visited {
         margin-left: -63px;
         margin-top: 280px;
         @media screen and (max-width: 580px) {
-            margin-top: 193px;
+            margin-top: 217px;
         }
         svg {
             position: absolute;
@@ -903,7 +902,7 @@ select:visited {
         margin-right: -63px;
         margin-top: 280px;
         @media screen and (max-width: 580px) {
-            margin-top: 193px;
+            margin-top: 217px;
         }
         svg {
             position: absolute;
@@ -920,6 +919,7 @@ select:visited {
         &-item {
             width: 440px;
             opacity: 0.3;
+            height: 480px;
             &--main_img {
                 max-width: 252px;
                 margin: 0 auto;

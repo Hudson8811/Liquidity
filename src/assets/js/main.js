@@ -54,7 +54,7 @@ $(document).ready(function() {
 
     $('.mac_slider--slick').flickity({
         wrapAround: true,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         pageDots: false,
         percentPosition: false,
         selectedAttraction: 0.1,
