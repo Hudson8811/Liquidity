@@ -179,4 +179,13 @@ $(document).ready(function() {
     $('.js-action-btn').click(function() {
         modal();
     })
+
+    $('.question-item-js').click(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $('.question-item-js').removeClass('active');
+            $(this).addClass('active');
+        }
+    })
 });

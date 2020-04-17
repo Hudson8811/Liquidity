@@ -28,6 +28,10 @@
             align-items: center;
             margin: 0 auto;
             margin-bottom: 26px;
+            cursor: default;
+            &:hover {
+                opacity: 1;
+            }
         }
         .text {
             letter-spacing: -0.318182px;

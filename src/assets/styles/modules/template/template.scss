@@ -1215,7 +1215,7 @@ select:visited {
     &:hover {
         opacity: .8;
     }
-    label {
+    span {
         display: block;
         font-weight: bold;
         font-size: 20px;
@@ -1224,9 +1224,6 @@ select:visited {
         color: #383838;
         cursor: pointer;
         overflow: hidden;
-    }
-    input {
-        display: none;
     }
     &_content {
         font-weight: normal;
@@ -1239,9 +1236,9 @@ select:visited {
         margin-bottom: 30px;
         position: absolute;
         opacity: 0;
-        transition-duration: .3s;
+        transition: all .3s;
     }
-    input[type="checkbox"]:checked+.question-item_content {
+    &.active .question-item_content {
         position: relative;
         opacity: 1;
     }
