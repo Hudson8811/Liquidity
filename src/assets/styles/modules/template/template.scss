@@ -682,7 +682,6 @@ select:visited {
                 line-height: 30px;
                 text-align: center;
                 color: #383838;
-                margin-top: auto;
                 margin-bottom: 15px;
             }
             &--description {
@@ -714,9 +713,20 @@ select:visited {
                     width: 100%;
                     img {
                         @media screen and (min-width: 581px) {
-                            height: 373px;
+                            height: auto;
+                            max-height: 373px;
                         }
                     }
+                }
+            }
+            &:nth-child(3) {
+                .grafic_slider--slick_item--description {
+                    max-width: 377px;
+                }
+            }
+            &:nth-child(6) {
+                .grafic_slider--slick_item--description {
+                    max-width: 320px;
                 }
             }
         }
@@ -1174,6 +1184,7 @@ select:visited {
 }
 
 .map_block {
+    position: relative;
     max-width: 945px;
     margin: 0 auto;
     width: 98%;
