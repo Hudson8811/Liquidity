@@ -13,6 +13,17 @@
         text-align: center;
         color: #383838;
     }
+    .main-text {
+        font-size: 18px;
+        line-height: 25px;
+        /* or 139% */
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #63636E;
+        max-width: 574px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
 }
 
 @media screen and (max-width:580px) {

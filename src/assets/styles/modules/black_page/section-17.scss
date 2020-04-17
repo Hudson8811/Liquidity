@@ -27,6 +27,18 @@
             line-height: 16px;
             color: #9DAFBD;
         }
+        &:nth-child(4) {
+            .box_block--text {
+                box-sizing: border-box;
+                padding-right: 12px;
+            }
+        }
+        &:nth-child(7) {
+            .box_block--text {
+                box-sizing: border-box;
+                padding-right: 17px;
+            }
+        }
     }
     .box_catalog {
         display: flex;
