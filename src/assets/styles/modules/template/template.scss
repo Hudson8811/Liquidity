@@ -702,7 +702,8 @@ select:visited {
                     width: 100%;
                     transition: all .5s;
                     @media screen and (min-width: 581px) {
-                        height: 284px;
+                        height: auto;
+                        max-height: 284px;
                     }
                 }
             }
@@ -736,7 +737,7 @@ select:visited {
         bottom: 0;
         border: 1px solid #01b68f;
         margin-left: -63px;
-        margin-top: 291px;
+        margin-top: 312px;
         @media screen and (max-width: 581px) {
             margin-top: 234px;
         }
@@ -756,7 +757,7 @@ select:visited {
         bottom: 0;
         background-color: #01b68f;
         margin-right: -63px;
-        margin-top: 291px;
+        margin-top: 312px;
         @media screen and (max-width: 581px) {
             margin-top: 234px;
         }
@@ -1018,6 +1019,9 @@ select:visited {
 }
 
 .business--slick_slider {
+    .flickity-viewport {
+        padding-bottom: 110px;
+    }
     margin-bottom: 57px;
     .slick-list {
         padding-bottom: 57px!important;
