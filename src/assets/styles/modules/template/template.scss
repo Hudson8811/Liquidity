@@ -713,12 +713,6 @@ select:visited {
                         max-height: 284px;
                     }
                 }
-                &.castom-width-2{
-                    img{
-                        object-fit: cover;
-                        max-height:none ;
-                    }
-                }
             }
             &.is-selected {
                 opacity: 1;
@@ -732,11 +726,16 @@ select:visited {
                         }
                     }
                     &.castom-width-2{
+                        display: flex;
+                        justify-content: center;
                         img{
-                            object-fit: cover;
-                            height: 500px;
-                            margin-top: -150px;
-                            max-height:none ;
+                            
+                            @media screen and (min-width:581px) {
+                                height: 372px;
+                                width: 117%;
+                                margin-top: -25px;
+                                max-height: none;
+                            }
                         }
                     }
                     &.castom-width{

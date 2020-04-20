@@ -13,6 +13,11 @@
             color: #fff;
         }
     }
+    .form__phone {
+        &__select{
+            background: #28323E 60px center / 6.11px 3.81px url(../images/icons/Triangle.png) no-repeat;
+        }
+    }
         .consent_block{
             p,a{
                 color: #6E8198;
