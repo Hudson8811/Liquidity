@@ -697,6 +697,13 @@ select:visited {
                 width: 432px;
                 margin: 0 auto;
                 transition: all .5s;
+                &.castom-width{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 140%;
+                    }
+                }
                 img {
                     display: block;
                     width: 100%;
@@ -957,7 +964,7 @@ select:visited {
                     max-width: 100%;
                 }
                 .mac_slider--slick-item--sup {
-                    width: 60%;
+                    width: 70%;
                     max-width: none;
                     box-sizing: border-box;
                     margin: 0 auto;
@@ -981,7 +988,7 @@ select:visited {
                         @media screen and(min-width:580px) {
                             span {
                                 padding-left: 66px;
-                                padding-right: 38px;
+                                padding-right: 0px;
                                 margin-top: -16px;
                             }
                         }
