@@ -1,0 +1,23 @@
+.what_is{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #EFF4F6;
+  .main__text{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    /* or 145% */
+    letter-spacing: -0.5px;
+    color: #63636E;
+    margin-top: 52px;
+  }
+  .container.flex{
+    margin-top: 94px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .segment{
+    max-width: 293px;
+  }
+}

@@ -1,0 +1,37 @@
+.actions{
+  padding-top: 122px;
+  padding-bottom: 122px;
+  .container.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      max-width: 540px;
+    }
+    .left{
+      p{
+        margin-right: 120px;
+      }
+    }
+  }
+  .title{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    letter-spacing: -0.5px;
+    color: #383838;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  p{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    color: #383838;
+    &.margin{
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.section-8
+  .container
+    .section__title Launch #[span(class="section__title--bold") MAM Accounts] in 1 week 
+    .main-text We offer a large range of products and services to enhance your business operations. Check them out here...
+    form.get_your_prime_form
+      .get_your_prime_form--left
+        label.form_label
+          span Your Name
+          input(type="text" placeholder="").form__input 
+        .form__phone
+          select(name="number").form__phone__select.form__input
+            option(value="+7") +7
+            option(value="8") 8
+          label.form_label
+            span.castom-left Phone
+            input(type="text" placeholder="").form__input
+        span.description Based on your IP, you are in Russian Federation.#[a(href="#") Change] Your data will be in US data center.
+      .get_your_prime_form--right
+        label.form_label
+          span Your Email
+          input(type="text" placeholder="").form__input 
+        button.btn.btn--green.btn--box_shadow.upp Get Started!
+        .capcha_block.gray
+          .capcha
+            .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+            script(src='https://www.google.com/recaptcha/api.js')
+          label.consent_block
+            input(type="checkbox")
+            b
+            p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

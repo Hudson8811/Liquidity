@@ -1,0 +1,26 @@
+.section-8{
+  padding-top: 125px;
+  padding-bottom: 125px;
+  .section__title{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 46px;
+  }
+  .get_your_prime_form{
+    margin-top: 68px;
+    .description{
+      margin-left: 6px;
+    }
+    .form__phone{
+      margin-bottom: 0;
+      .castom-left{
+        left: 27px;
+      }
+    }
+    &--right{
+      .btn{
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

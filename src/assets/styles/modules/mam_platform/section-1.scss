@@ -1,0 +1,22 @@
+.MAM_platform{
+  .forex_liquidity {
+    padding-top: 222px;
+    padding-bottom: 254px;
+    &__content {
+      .section__subtitle{
+        margin-top: 47px;
+        margin-bottom: 87px;
+        padding-right: 20%;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        /* or 139% */
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+      }
+    }
+    .castom-abs{
+      left: 30px;
+    }
+  }
+}
