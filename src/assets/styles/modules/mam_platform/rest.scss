@@ -1,0 +1,35 @@
+.rest{
+  background: #1F2832;
+  padding-top: 125px;
+  padding-bottom: 125px;
+  .section__title{
+    letter-spacing: -1px;
+    color: #F5F5F5;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+  }
+  .subtitle{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    text-align: center;
+    color: #F5F5F5;
+    opacity: 0.8;
+    max-width: 602px;
+    margin: 0 auto;
+  }
+  .shadow_wrapper{
+    margin-top: 80px;
+    position: relative;
+    .abs_shadow{
+      box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2);
+      height: 558px;
+      width: 583px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}

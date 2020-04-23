@@ -1,0 +1,40 @@
+.section-24.subscribe_form
+  .form-wrapper
+    .form-wrapper-left
+      .left-form
+        .form--heading Subscribe to our newsletter
+        .form--description Join our email list and stay updated on all our latest developments and special offers.  
+        form.form-content
+          label.form_label
+            span Email
+            input(type="text").form__input
+          button.btn.btn--green.btn--box_shadow.upp Subscribe
+      //- .and_item and
+    .form-wrapper-right
+      .right-form
+        .form--heading Submit a request
+        .form--description We are here to assist you with any queries about our products and services.   
+        form.form-content
+          label.form_label
+            span Email
+            input(type="text" placeholder="").form__input
+          .form__phone
+            select(name="number").form__phone__select.form__input
+              option(value="+7") +7
+              option(value="8") 8
+            label.form_label
+              span Phone
+              input(type="text" placeholder="").form__input
+          .form-content--description Based on your IP, you are in Russian Federation.Change Your data will be in US data center.
+          label.form_label
+            span Email
+            input(type="text" placeholder="").form__input
+          button.btn.btn--green.btn--box_shadow.upp Give me a call
+          .capcha_block.gray
+            .capcha
+              .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+              script(src='https://www.google.com/recaptcha/api.js')
+            label.consent_block
+              input(type="checkbox")
+              b
+              p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

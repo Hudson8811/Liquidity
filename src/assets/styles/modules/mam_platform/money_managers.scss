@@ -1,0 +1,60 @@
+.money_managers{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #EFF4F6;
+  .section__title{
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .subtitle{
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 161% */
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #63636E;
+  }
+  .tabs{
+    margin-top: 80px;
+    input[type=radio]:checked+label.mam_tabs-btn{
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 30px;
+      /* identical to box height, or 143% */
+      color: #383838;
+    }
+    label{
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 30px;
+      /* identical to box height, or 143% */
+      color: #383838;
+      width: 350px;
+      height: 144px;
+      box-sizing: border-box;
+      padding: 30px 42px;
+      &.margin{
+        margin-right: auto;
+        margin-left: 17px;
+      }
+      span{
+        margin-top: 10px;
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        color: #4A4B4B;
+      }
+    }
+  }
+  #mam_tabs-content--manage-1,
+  #mam_tabs-content--manage-2{
+    width: 100%;
+    margin-top: 29px;
+  }
+}

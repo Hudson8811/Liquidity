@@ -1,0 +1,113 @@
+.state_of_art{
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: #FFFFFF;
+  .section__title{
+    letter-spacing: -.5px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  }
+  .main-text{
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 812px;
+    margin: 0 auto;
+  }
+  .banner{
+    margin-top: 80px;
+    &.mt0{margin-top: 0;}
+  }
+  .head__item{
+    margin-top: 30px;
+    &.castom{
+      padding-top: 54px;
+      padding-left: 60px;
+      a{
+        margin-top: 0px;
+        box-sizing: border-box;
+        padding-left: 11px;
+        svg{
+          margin-left: 15px;
+        }
+      }
+    }
+    &.castom-2{
+      padding-top: 58px;
+      .head__item--text{
+        margin-bottom: 8px;
+      }
+      .check_block--mam_platform-item--text{
+        margin-left: 3px;
+        letter-spacing: 0px;
+        line-height: 24px;
+      }
+      .icon-new_land-green_check{
+        height: 12px;
+      }
+    }
+  }
+  .check_block--mam_platform-item--text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    /* or 214% */
+    color: #383838;
+  }
+  .check_block--mam_platform-item{
+    display: block;
+  }
+  #tabs-content_mam-1, #tabs-content_mam-2{
+    .banner{
+      margin-top: 34px;
+    }
+  }
+  .mam_tabs-2{
+    #tabs-content_mam-2-1, #tabs-content_mam-2-2,#tabs-content_mam-2-3{
+      padding-top: 32px;
+    }
+    .banner{
+      border-radius: 20px;
+      box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .tabs{
+    .texts{
+      margin-top: 64px;
+      &--heading{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 23px;
+        /* identical to box height, or 146% */
+        color: #383838;
+        margin-bottom: 18px;
+      }
+      p{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 23px;
+        /* or 167% */
+        color: #383838;
+        &.m24{
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+  .check_block--mam_platform--catalog{
+    margin-top: 93px;
+    .check_block--mam_platform-item{
+      display: flex;
+      align-items: flex-start;
+      svg{margin-top: 14px;}
+      &--text{
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+        letter-spacing: -0.5px;
+        color: #555555;
+        margin-left: 29px;
+      }
+    }
+  }
+}

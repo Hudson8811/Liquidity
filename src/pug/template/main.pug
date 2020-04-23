@@ -56,11 +56,17 @@ html(lang="ru-RU")
 				frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
 			};
 		.wrapper
-			include ../modules/header/header
+			if newHeader
+				include ../modules/header/header_mam
+			else
+				include ../modules/header/header
 			#content.site-content
 				.content
 					block content
-			include ../modules/footer/footer
+			if newFooter 
+				include ../modules/footer/newFooter
+			else
+				include ../modules/footer/footer
 			include ../modules/main/_popup_form
 		script(src="js/jquery-3.3.1.min.js")
 		script(src="js/slick.min.js")

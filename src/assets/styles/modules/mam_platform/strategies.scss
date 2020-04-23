@@ -1,0 +1,119 @@
+.strategies{
+  padding-top: 125px;
+  padding-bottom: 125px;
+  background: #1F2832;
+  .green__title{
+    &.big{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 44px;
+      letter-spacing: 0;
+      margin-bottom: 13px;
+    }
+  }
+  .section__title{
+    color: #FFFFFF;
+  }
+  .subtitle{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height, or 139% */
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-top: 50px;
+  }
+  .grafic{
+    margin-top: 113px;
+    .green__title{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 44px;
+      letter-spacing: 0;
+    }
+    .title{
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 44px;
+      /* identical to box height, or 122% */
+      color: #FFFFFF;
+      margin-top: 10px;
+      margin-bottom: 35px;
+    }
+    .subtitle{
+      max-width: 622px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+      font-weight: normal;
+      text-align: center;
+      color: #FFFFFF;
+      opacity: 0.8;
+      letter-spacing: 0;
+      margin-bottom: 36px;
+    }
+    .macbook{
+      margin-top: 190px;
+      margin-bottom: 65px;
+    }
+    .subtitle-2{
+      margin: 0;
+      text-align: left;
+      max-width: 650px;
+    }
+    .title-2{
+      margin-bottom: 30px;
+    }
+  }
+  .opportunities{
+    padding: 0;
+    background: transparent;
+    margin-top: 190px;
+    .container{
+      .shadow_wrapper{
+        flex-shrink: 0;
+        position: relative;
+        .shadow{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 441px;
+          height: 254px;
+          box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      margin-bottom: 0;
+      p{
+        padding-right: 37px;
+        margin-bottom: 40px;
+        color: #FFFFFF;
+        opacity: 0.8;
+      }
+      .title{
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+        /* identical to box height, or 122% */
+        color: #FFFFFF;
+      }
+      .check_block--mam_platform-item:last-child{
+        margin-bottom: 0;
+      }
+      .check_block--mam_platform-item{
+        margin-bottom: 25px;
+      }
+      .check_block--mam_platform-item--text{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

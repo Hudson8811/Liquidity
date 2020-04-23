@@ -1,0 +1,12 @@
+.faq{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #EFF4F6;
+  .question-item{
+    transition: padding .5s;
+    &.active{
+      padding-top: 46px;
+    }
+  }
+  .another_question{padding-right: 140px;}
+}

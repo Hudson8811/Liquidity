@@ -1,0 +1,24 @@
+.color_scheme{
+  background: #fff;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  .subtitle{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    letter-spacing: -0.5px;
+    color: #63636E;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &-2{
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      /* identical to box height, or 139% */
+      letter-spacing: -0.5px;
+      color: #63636E;
+      margin-top: 50px;
+    }
+  }
+}

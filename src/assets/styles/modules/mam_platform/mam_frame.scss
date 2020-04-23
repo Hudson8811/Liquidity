@@ -1,0 +1,16 @@
+.mam_frame{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #EFF4F6;
+  .section__title{
+    max-width: 870px;
+    margin-bottom: 80px;
+  }
+  .video_block{
+    height: 483px;
+    margin-top: 0;
+    .video_block--play{
+      margin-left: 39px;
+    }
+  }
+}

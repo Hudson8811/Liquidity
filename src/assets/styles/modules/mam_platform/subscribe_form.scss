@@ -1,0 +1,23 @@
+.subscribe_form{
+  background: transparent;
+  margin-top: -1px;
+  .form-wrapper{
+    .form-wrapper-left{
+      background: #EEF3F5;
+      padding-bottom: 438px;
+    }
+    .form-wrapper-right{
+      background: rgba(238, 243, 245, 0.6);
+      padding-bottom: 175px;
+    }
+    .form--heading{
+      margin-bottom: 34px;
+    }
+    .right-form .form-content--description{
+      margin-bottom: 35px;
+    }
+    .capcha_block{
+      margin-top: 28px;
+    }
+  }
+}

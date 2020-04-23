@@ -344,6 +344,21 @@ select:visited {
     #tabs-btn-6:checked~#tabs-content-6 {
         display: block;
     }
+
+    #tabs_mam-1:checked~#tabs-content_mam-1,
+    #tabs_mam-2:checked~#tabs-content_mam-2{
+        display: block;
+    }
+
+    #tabs_mam-2-1:checked~#tabs-content_mam-2-1,
+    #tabs_mam-2-2:checked~#tabs-content_mam-2-2,
+    #tabs_mam-2-3:checked~#tabs-content_mam-2-3{
+        display: block;
+    }
+    #tabs_mam-big-1:checked~#mam_tabs-content--manage-1,
+    #tabs_mam-big-2:checked~#mam_tabs-content--manage-2{
+        display: block;
+    }
 }
 
 .table {
@@ -1526,6 +1541,7 @@ select:visited {
       svg{
         height: 15px;
         width: 15px;
+        flex-shrink: 0;
       }
       &--text{
         font-weight: 900;
@@ -1602,4 +1618,234 @@ select:visited {
 .banner{
     display: block;
     width: 100%;
+}
+
+.head__item{
+    background: #EFF4F6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 47px 56px 43px 64px;
+    flex-wrap: wrap;
+    &--texts{
+        max-width: 553px;
+    }
+    &--title{
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.292236px;
+        text-transform: capitalize;
+        color: #000000;
+        margin-bottom: 22px;
+    }
+    &--text{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 23px;
+        /* identical to box height, or 167% */
+        color: #383838;
+    }
+    &--show-btn{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        /* identical to box height, or 146% */
+        text-align: center;
+        color: #FFFFFF;
+        background: #01BD95;
+        border-radius: 9px;
+        display: block;
+        text-decoration: none;
+        width: 204.5px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 6px;
+    }
+    &--hide-btn{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        /* identical to box height, or 146% */
+        text-align: center;
+        color: #FFFFFF;
+        background: #9DAFBD;
+        border-radius: 9px;
+        width: 204.5px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 6px;
+        text-decoration: none;
+    }
+    .icon-white_arrow{
+        width: 12px;
+        height: 12px;
+        margin-left: 12px;
+    }
+    .hide{
+        display: none;
+    }
+    &--content{
+        width: 100%;
+        padding-top: 65px;
+    }
+}
+.mam_tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.mam_tabs-btn{
+    background: #EAEDF2;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 136% */
+    color: #637786;
+    height: 83px;
+    &.w50{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 49%;
+        
+    }
+    &.w33{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32%;
+    }
+}
+input[type="radio"]:checked+label.mam_tabs-btn{
+    background: #FFFFFF;
+    opacity: 0.9;
+    border: 1px solid #DAE4E8;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 136% */
+    color: #000000;
+}
+
+.overflow_hidden{
+    overflow: hidden;
+}
+.mw100{
+    max-width: 100%;
+}
+
+.check_block--mam_platform--catalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 18px;
+    .check_block--mam_platform-item{
+        width: 33%;
+        box-sizing: border-box;
+        margin-bottom: 38px;
+        &:nth-child(2){
+            padding-left: 25px;
+        }
+        &:nth-child(3){
+            padding-left: 47px;
+        }
+        &:nth-child(5){
+            padding-left: 28px;
+            width: 35%;
+        }
+        &:nth-child(6){
+            padding-left: 36px;
+            width: 32%;
+        }
+        &:nth-child(7){
+            margin-bottom: 0;
+        }
+        &:nth-child(8){
+            padding-left: 23px;
+            margin-bottom: 0;
+        }
+        &:nth-child(9){
+            padding-left: 46px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.num-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 42px;
+    .num{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 74px;
+        line-height: 87px;
+        /* identical to box height */
+        color: #01BD95;
+        flex-shrink: 0;
+    }
+    .num-text{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        /* or 144% */
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        margin-left: 18px;
+        max-width: 244px;
+    }
+}
+
+.gray__block{
+    background: #EFF4F6;
+    /* small shadow */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 48px 0;
+    box-sizing: border-box;
+    &--title{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height, or 119% */
+        text-align: center;
+        color: #383838;
+        margin-bottom: 23px;
+    }
+    &--subtitle{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 23px;
+        color: #383838;
+    }
+    &--description{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        text-align: center;
+        color: #637786;
+    }
 }
