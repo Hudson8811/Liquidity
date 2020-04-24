@@ -10,3 +10,10 @@
   }
   .another_question{padding-right: 140px;}
 }
+
+@media screen and (max-width:580px){
+  .faq{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

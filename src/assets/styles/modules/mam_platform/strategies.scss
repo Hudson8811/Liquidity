@@ -117,3 +117,44 @@
     }
   }
 }
+@media screen and(max-width:1600px){
+  .strategies .opportunities .container .shadow_wrapper .shadow{
+    display: none;
+  }
+}
+@media screen and(max-width:580px){
+  .strategies {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .grafic {
+      margin-top: 50px;
+      .macbook{
+        margin-top: 50px;
+      }
+      .green__title{
+        font-size: 16px;
+      }
+      .title{
+        font-size: 24px;
+        line-height: 27px;
+      }
+    }
+    .opportunities{
+      margin-top: 50px;
+      .container{
+        .title{
+          font-size: 24px;
+          line-height: 27px;
+        }
+        .check_block--mam_platform-item--text{
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    .num-wrapper .num-text{
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

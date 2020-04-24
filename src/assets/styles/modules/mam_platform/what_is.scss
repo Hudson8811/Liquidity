@@ -21,3 +21,16 @@
     max-width: 293px;
   }
 }
+
+@media screen and (max-width:880px){
+  .what_is {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container.flex{
+      flex-direction: column;
+      .segment{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

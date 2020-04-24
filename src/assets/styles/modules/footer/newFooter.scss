@@ -120,3 +120,34 @@
     }
   }
 }
+
+
+@media screen and (max-width: 720px){
+  .newFooter{
+    .footer-menu{
+      flex-direction: column;
+      &_left-block{
+        margin-right: 0;
+        width: auto;
+        border-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .footer-menu-row-1,.footer-menu-row-2,.footer-menu-row-3,.footer-menu-row{
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 696px){
+  .newFooter .footer-top-row-social{
+    margin-left:auto;
+  }
+  .newFooter .footer-top-row-search{
+    margin-right: auto;
+  }
+}

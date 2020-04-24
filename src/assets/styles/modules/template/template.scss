@@ -359,6 +359,9 @@ select:visited {
     #tabs_mam-big-2:checked~#mam_tabs-content--manage-2{
         display: block;
     }
+    label{
+        cursor: pointer;
+    }
 }
 
 .table {
@@ -1849,3 +1852,51 @@ input[type="radio"]:checked+label.mam_tabs-btn{
         color: #637786;
     }
 }
+
+.MAM_platform .forex_liquidity{
+    .forex_liquidity__content {
+        .section__subtitle{
+        padding-right: 0;
+        }
+    }
+    .check_block--mam_platform{
+        max-width: 365px;
+        margin: 0 auto;
+    }
+    .supported_platforms{
+        max-width: 365px;
+        margin: 30px auto;
+    }
+}
+@media screen and (min-width:580px) and (max-width:830px){
+    .MAM_platform{
+        .section-8{
+            .capcha_block{
+                flex-direction: column;
+                .consent_block{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:580px){
+    input[type=radio]:checked+label.mam_tabs-btn{
+        font-size: 14px;
+    }
+    .mam_tabs-btn{
+        font-size: 14px;
+        height: 50px;
+        &.w33,&.w50{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .MAM_platform{
+        .section-8{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
+

@@ -5,7 +5,18 @@
   .container{
     max-width: 988px;
   }
+  .banner_wrapper{
+    overflow-x: auto;
+  }
   .banner{
     margin-top: 80px;
+    min-width: 988px;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .comparison{
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

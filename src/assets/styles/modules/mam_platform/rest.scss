@@ -33,3 +33,16 @@
     }
   }
 }
+@media screen and (max-width:1600px){
+  .rest{
+    .abs_shadow{
+      display: none;
+    }
+  }
+}
+@media screen and (max-width:580px){
+  .rest{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

@@ -53,3 +53,24 @@
     }
   }
 }
+
+@media screen and (max-width:1030px){
+  .four_types {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container.flex{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width:580px){
+  .four_types .container.flex .gray__block{
+    min-width: auto;
+    width: 100%;
+    &:nth-child(1) .gray__block--subtitle,&:nth-child(2) .gray__block--subtitle,&:nth-child(3) .gray__block--subtitle,&:nth-child(3) .gray__block--description, &:nth-child(4) .gray__block--subtitle{
+      padding: 0 10px;
+    }
+  }
+}

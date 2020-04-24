@@ -47,3 +47,42 @@
     }
   }
 }
+
+@media screen and(max-width:970px){
+  .features{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container.flex {
+      justify-content: center;
+      align-items: center;
+      img{
+        max-width: 300px;
+        width: 100%;
+      }
+      .right{
+        margin: 0;
+        margin-left: 20px;
+      }
+      .check_block--mam_platform-item{
+        margin-bottom: 10px;
+        &--text{
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:640px){
+  .features{
+    .container.flex {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      img{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

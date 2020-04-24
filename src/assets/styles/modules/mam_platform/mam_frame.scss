@@ -14,3 +14,23 @@
     }
   }
 }
+@media screen and (max-width:1600px){
+  .mam_frame .video_block .video_block--play{
+      margin-left: 0;
+  }
+}
+@media screen and (max-width:580px){
+  .mam_frame {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .section__title{
+      margin-bottom: 30px;
+    }
+    .video_block{
+      height: 50vw;
+      .video_block--play{
+        margin-left: 0;
+      }
+    }
+  }
+}

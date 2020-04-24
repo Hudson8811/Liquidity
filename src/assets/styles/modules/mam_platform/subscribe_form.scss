@@ -21,3 +21,13 @@
     }
   }
 }
+
+@media screen and (max-width:580px){
+  .subscribe_form{
+    padding-top: 0;
+    padding-bottom: 0;
+    .form-wrapper .form-wrapper-right{
+      padding-bottom: 0px;
+    }
+  }
+}

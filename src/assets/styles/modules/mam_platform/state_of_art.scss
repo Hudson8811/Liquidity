@@ -19,6 +19,16 @@
     &.mt0{margin-top: 0;}
   }
   .head__item{
+    &--content{
+      &.mobile_overflow{
+        overflow-x: auto;
+        .banner{
+          width: 860px;
+        }
+      }
+    }
+  }
+  .head__item{
     margin-top: 30px;
     &.castom{
       padding-top: 54px;
@@ -111,3 +121,63 @@
     }
   }
 }
+@media screen and(max-width:1030px){
+  .state_of_art{
+    .check_block--mam_platform--catalog{
+      padding-left: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      .check_block--mam_platform-item{
+        padding-left: 0;
+        width: 30%;
+        min-width: 290px;
+        margin: 5px;
+        margin-bottom: 20px;
+        &--text{
+          font-size: 14px;
+          line-height: 17px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:970px){
+  .state_of_art{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .head__item{
+      padding: 20px;
+      flex-direction: column;
+      &--buttons{
+        margin-top: 20px;
+      }
+      &--title{
+        text-align: left;
+      }
+      &--content{
+        padding-top: 30px;
+      }
+      &.castom{
+          padding-top: 20px;
+          padding-left: 20px;
+      }
+      &--show-btn,&--hide-btn{
+          font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and(max-width:580px){
+  .state_of_art {
+    .mam_tabs-2 .banner{
+      border-radius: 5px;
+    }
+    .main-text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+

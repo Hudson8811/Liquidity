@@ -20,3 +20,16 @@
     }
   }
 }
+
+@media screen and (max-width:580px){
+  .MAM_platform .forex_liquidity{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .supported_platforms-items{
+      flex-direction: column;
+      .supported_platforms-item{
+        margin-right: 0 ;
+      }
+    }
+  }
+}

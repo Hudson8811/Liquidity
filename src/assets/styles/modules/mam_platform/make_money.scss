@@ -2,6 +2,7 @@
   background: #fff;
   padding-top: 150px;
   padding-bottom: 133px;
+  overflow: hidden;
   .opportunities{
     background: #fff;
     padding: 0;
@@ -124,6 +125,88 @@
     }
     img{
       max-width: 329px;
+    }
+  }
+}
+
+@media screen and (min-width:1920px){
+  .make_money .container.flex.macbook_container .abs_macbook{
+      margin-right: -220px;
+  }
+}
+@media screen and (max-width:1360px){
+  .make_money .container.flex{
+    &.macbook_container{
+      justify-content: space-between;
+      img.abs_macbook{
+        width: 50%;
+        position: relative;
+        margin-right: 0;
+      }
+      .text.left{
+        margin-left: 0;
+        .title{
+          padding-right: 0;
+        }
+        p{padding-right: 0;}
+      }
+    }
+  }
+}
+@media screen and (max-width:970px){
+  .make_money{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container.flex {
+      align-items: center;
+      margin-bottom: 40px;
+      &.macbook_container {
+        margin-bottom: 40px;}
+      .check_block--mam_platform-item--text{
+        line-height: 17px;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+      &.reverse{
+        margin-bottom: 40px;
+      }
+      .text.right{
+        margin-right: 40px;
+      }
+      &.iphone_container{
+        margin-bottom: 0;
+        .text.left{
+          margin-left: 0;
+        }
+        .padding{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:640px){
+  .make_money{
+    .container.flex {
+      align-items: flex-start;
+      &.macbook_container {
+        img.abs_macbook{
+          max-width: 300px;
+          width: 100%;
+        }
+      }
+      .text.right{
+        margin-right: 0px;
+        .padding{
+          padding-right: 0;
+        }
+      }
+      &.reverse .left .margin-2{
+        padding-right: 0;
+      }
+      &.reverse .left .padding-2{
+        padding-right: 0;
+      }
     }
   }
 }
