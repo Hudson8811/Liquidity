@@ -1853,19 +1853,21 @@ input[type="radio"]:checked+label.mam_tabs-btn{
     }
 }
 
-.MAM_platform .forex_liquidity{
-    .forex_liquidity__content {
-        .section__subtitle{
-        padding-right: 0;
+@media screen and (max-width:920px){
+    .MAM_platform .forex_liquidity{
+        .forex_liquidity__content {
+            .section__subtitle{
+            padding-right: 0;
+            }
         }
-    }
-    .check_block--mam_platform{
-        max-width: 365px;
-        margin: 0 auto;
-    }
-    .supported_platforms{
-        max-width: 365px;
-        margin: 30px auto;
+        .check_block--mam_platform{
+            max-width: 365px;
+            margin: 0 auto;
+        }
+        .supported_platforms{
+            max-width: 365px;
+            margin: 30px auto;
+        }
     }
 }
 @media screen and (min-width:580px) and (max-width:830px){

@@ -1,0 +1,43 @@
+.forex_liquidity
+  .forex_liquidity--overlay
+  .container
+    .forex_liquidity__content
+      h2.section__title #[span(class="section__title--bold") Copy Trading] Platform 
+      span.section__subtitle A platform that gives the oppotrunity to beginner traders to copy positions from professionals. We produce all the matetials to help you to launch this platform in just 7 days.
+      .check_block--mam_platform
+        .check_block--mam_platform-item
+          +icon('new_land-green_check')
+          span.check_block--mam_platform-item--text Fully compliant for regulated brokers
+      .supported_platforms
+        .supported_platforms-title Supported platforms
+        .supported_platforms-items
+          img(src="images/MAM_platform/sup_pl-1.png", alt="sup_pl-1" class="supported_platforms-item")
+          img(src="images/MAM_platform/sup_pl-2.png", alt="sup_pl-2" class="supported_platforms-item")
+    form.forex_liquidity__form
+      h3.forex_liquidity__form-title Launch Copy Trading Platform
+      label.form_label
+        span Your Name
+        input(type="text").form__input
+      label.form_label
+        span Your Email
+        input(type="text").form__input
+      .form__phone
+        select(name="number").form__phone__select.form__input
+          option(value="+7") +7
+          option(value="8") 8
+        label.form_label
+          span.castom-abs Phone
+          input(type="text").form__input
+      p.forex_liquidity__form-description Based on your IP, you are in Russian Federation. #[a(href="#") Change] Your data will be in US data center.
+      button(type="button").btn.btn--green.btn--box_shadow Get Started!
+      .capcha_block
+        .capcha
+          .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
+          script(src='https://www.google.com/recaptcha/api.js')
+        label.consent_block
+          input(type="checkbox")
+          b
+          p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+
+
+      

@@ -1,0 +1,78 @@
+.make_traders{
+  position: relative;
+  background: #EFF4F6;
+  padding-top: 125px;
+  padding-bottom: 0;
+  &-2{
+    padding-top:125px;
+    padding-bottom: 125px;
+  }
+  .section__title{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .main-text{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #63636E;
+    max-width: 651px;
+    margin: 0 auto;
+    margin-top: 46px;
+    margin-bottom: 132px;
+  }
+  .green__title.big.center{
+    letter-spacing: 0;
+  }
+  .container.flex.Career{
+    margin-bottom: 0px;
+    .title{
+      margin-top: -2px;
+    }
+  }
+  .container.flex.iphone_hand{
+    background: #fff;
+    max-width: 1118px;
+    box-sizing: border-box;
+    padding-left: 68px;
+    justify-content: space-between;
+    margin-bottom: 125px;
+    .text{
+      max-width: 350px;
+      margin-top: 16px;
+      .title{
+        margin-top: 0;
+        margin-bottom: 35px;
+        padding-right: 29px;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+    }
+    img{
+      max-width: 574px;
+      margin-top: -53px;
+    }
+  }
+  .container.flex.mac_and_iphone{
+    justify-content: flex-start;
+    align-items: flex-start;
+    .text{
+      max-width: 342px;
+      margin-left: 5px;
+      margin-top: 81px;
+      .title{
+        margin-top: 16px;
+      }
+    }
+    img{
+      position: absolute;
+      top: 123px;
+      right: 0;
+      max-width: 1028px;
+    }
+  }
+}
