@@ -23,3 +23,13 @@
     }    
   }
 }
+
+@media screen and (max-width:1350px){
+  .what_is_trading {
+    .container.flex{
+      margin-top: 30px;
+      flex-wrap: wrap;
+      .segment{margin-top: 20px;}
+    }
+  }
+}

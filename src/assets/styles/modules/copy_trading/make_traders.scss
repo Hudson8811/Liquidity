@@ -28,10 +28,12 @@
     letter-spacing: 0;
   }
   .container.flex.Career{
-    margin-bottom: 0px;
     .title{
       margin-top: -2px;
     }
+  }
+  .container.flex.Career-2{
+    margin-bottom: 0;
   }
   .container.flex.iphone_hand{
     background: #fff;
@@ -60,6 +62,7 @@
   .container.flex.mac_and_iphone{
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 0;
     .text{
       max-width: 342px;
       margin-left: 5px;
@@ -74,5 +77,69 @@
       right: 0;
       max-width: 1028px;
     }
+  }
+}
+
+@media screen and (min-width:1920px){
+  .make_traders .container.flex.mac_and_iphone {
+    img{
+      position: relative;
+      top: auto;
+      right: auto;
+      max-width: 540px;
+    }
+    .text.left{
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (max-width:1400px){
+  .make_traders {
+    .container.flex.mac_and_iphone {
+      img{
+        position: relative;
+        top: auto;
+        right: auto;
+        max-width: 540px;
+      }
+      .text.left{
+        margin-top: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width:970px){
+  .make_traders {
+    .container.flex.iphone_hand {
+      img{
+        max-width: 300px;
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    .container.flex.mac_and_iphone {
+      img{
+        max-width: 300px;
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:640px){
+  .make_traders {
+    .container.flex.iphone_hand {
+      padding-left: 20px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width:580px){
+  .make_traders-2{
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

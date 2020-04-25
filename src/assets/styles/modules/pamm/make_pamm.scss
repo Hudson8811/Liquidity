@@ -1,0 +1,31 @@
+.make_pamm{
+  .banner{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    &-heading{
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 44px;
+      /* or 122% */
+      color: #383838;
+      margin-bottom: 35px;
+      margin-top: 60px;
+      max-width: 530px;
+    }
+    &-text{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+      color: #383838;
+      max-width: 682px;
+    }
+  }
+  .make_pamm-banner{
+    padding-top: 180px;
+    padding-bottom: 125px;
+    @media screen and (max-width:580px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.pamm_chance{
+  .main-text{
+    max-width: 631px;
+  }
+  .container.flex.castom_margin{
+    margin-bottom: 166px;
+    &-2{
+      margin-bottom: 188px;
+    }
+  }
+  .container.flex.diversified {
+    margin-bottom: 191px;
+    .text.left p{
+      padding-right: 48px;
+    }
+  }
+  .container.flex.margin-bottom-0{
+    .margin-2{
+      padding-right: 17px;
+      margin-bottom: 42px;
+    }
+    .title{
+      letter-spacing: -.9px;
+    }
+    .check_block--mam_platform-item--text{
+      margin-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width:580px){
+  .pamm_chance {
+    .opportunities{
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .container.flex.diversified,.container.flex.castom_margin-2, .container.flex.castom_margin{
+      margin-bottom: 30px;
+    }
+  }
+}

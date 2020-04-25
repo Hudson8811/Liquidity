@@ -1,0 +1,109 @@
+.pamm_platform_works.goanim.an
+  .container
+    .section__title.center How a #[span(class="section__title--bold") PAMM-platform works]
+    .main-text A PAMM platform combines slave accounts into one big master account. All investors receive P&L for master’s positions in proportion to their investments. At the end of the period they pay fees.
+  .tabs
+    input(type="radio" name="works" id="works-1" value="" checked)
+    label(for="works-1")
+      span.icon
+        span.icon-text 1
+      span Money manager opens PAMM account, starts trading with his own money and statistics are collected for his account.
+    input(type="radio" name="works" id="works-2" value="")
+    label(for="works-2")
+      span.icon
+        span.icon-text 2
+      span Investor deposits $1000 into PAMM
+    input(type="radio" name="works" id="works-3" value="")
+    label(for="works-3")
+      span.icon
+        span.icon-text 3
+      span Money manager continues trading and earns $2,000
+    input(type="radio" name="works" id="works-4" value="")
+    label.abs_tab(for="works-4")
+      span.icon
+        span.icon-text 4
+      span Investor pay fees from profits made on his account
+    .container#tabs_container-1
+      .flex
+        img(src="images/pamm/tabs1.png", alt="img", class="left_img")
+        .money_assets
+          .money_assets-heading Money Manager’s Assets
+          .money_assets-items
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+    .container#tabs_container-2
+      .flex
+        img(src="images/pamm/tabs2.png", alt="img", class="left_img")
+        .money_assets
+          .money_assets-heading Money Manager’s Assets
+          .money_assets-items
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+        .money_assets.bold
+          .money_assets-heading Assets of investor
+          .money_assets-items
+            .money_assets-item $500
+            .money_assets-item $500
+    .container#tabs_container-3
+      .flex
+        img(src="images/pamm/tabs3.png", alt="img", class="left_img")
+        .profit_wrapper
+          .money_assets
+            .money_assets-heading Money Manager’s Assets
+            .money_assets-items
+              .money_assets-item $500
+              .money_assets-item $500
+              .money_assets-item $500
+              .money_assets-item $500
+              .money_assets-item $500
+              .money_assets-item $500
+          .money_assets.bold
+            .money_assets-heading Assets of investor
+            .money_assets-items
+              .money_assets-item $500
+              .money_assets-item $500
+          .profit_row
+            .profit_abs Profit
+            .money_assets
+              .money_assets-items
+                .money_assets-item.profit $500
+                .money_assets-item.profit $500
+                .money_assets-item.profit $500
+            .money_assets.bold
+              .money_assets-items
+                .money_assets-item.profit.m0 $500
+    .container#tabs_container-4
+      .flex
+        img(src="images/pamm/tabs4.png", alt="img", class="left_img")
+        .money_assets
+          .money_assets-heading Money Manager’s Assets
+          .money_assets-items
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item.profit $500
+            .money_assets-item.profit $500
+            .money_assets-item.profit $500
+        .money_assets.bold
+          .money_assets-heading Assets of investor
+          .money_assets-items
+            .money_assets-item $500
+            .money_assets-item $500
+            .money_assets-item-profit_wrapper
+              .money_assets-item.profit $400
+              .profit_abs Investor’s profit
+              img.abs_arrow(src="images/pamm/arrow.svg", alt="img")
+              .money_assets-item-profit_wrapper.money_assets-item-profit_wrapper--abs
+                .money_assets-item.profit $100
+                .profit_abs.profit_abs-2 Fees payment to Money manager

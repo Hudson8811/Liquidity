@@ -122,3 +122,44 @@
     }
   }
 }
+
+@media screen and (max-width:970px){
+  .investment .opportunities {
+    .container.flex.invest-1 {
+      img{
+        max-width: 300px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+    .container.flex.limitations img{
+        max-width: 300px;
+        width: 100%;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width:640px){
+  .investment .opportunities {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .section__title{
+      margin-bottom: 30px;
+    }
+    .container.flex.invest-1 {
+      margin-bottom: 30px;
+      img{
+        margin-left: 0px;
+      }
+    }
+    .container.flex.limitations{
+      margin-bottom: 30px;
+    }
+    .container.flex.followers{
+      margin-bottom: 30px;
+    }
+  }
+}
