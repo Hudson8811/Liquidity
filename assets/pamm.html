@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>PAMM</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="MAM_platform">
+    <script>
+      let marketsConfig = {
+      	defaults: {
+      		market: "USD",
+      		// Market table field by which data will be sorted by default
+      		sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+      		tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+      		mode: "widget", // widget, page
+      		exchange: "https://www.b2bx.exchange/advanced/",
+      	},
+      	//table columns names, phrases and etc
+      	lang: {
+      		markets: "Markets",
+      		alts: "ALTS",
+      		stable: "USDⓈ",
+      		percent: "%",
+      		symbol: "$",
+      		item: "item",
+      		favorites: "Favorites",
+      		pair: "Pair",
+      		coin: "Coin",
+      		price: "Last price",
+      		spread: "Spread",
+      		change: "Change, 24h",
+      		high: "High, 24h",
+      		low: "Low, 24h",
+      		volume: "Volume, 24h",
+      		result: "No result",
+      		loading: "Loading...",
+      		search: "Search",// "Search",
+      		all: "All",// "All",
+      	},
+      	//SignalR link
+      	stagingUrl: "https://b2bx.cloud",
+      	infoUrl: "/marketdata/info/",
+      	frontOfficeUrl: "/frontoffice/api/info",
+      	frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+      };
+    </script>
+    <div class="wrapper">
+      <header class="big_header">
+        <div class="big_header__bg">
+          <div class="container">
+            <div class="big_header__top_row">
+              <div class="text_flicky--js">
+                <div class="item">Leading Liquidity & Technology Provider</div>
+                <div class="item">Leading Liquidity & Technology Provider</div>
+              </div>
+              <div class="big_header__top_row__right_row">
+                <ul class="menu">
+                  <li class="margin_right"><a class="signal_button" href="#">Webinars
+                      <div class="signal"></div></a></li>
+                  <li class="margin_right"><a href="#">Events</a></li>
+                  <li class="margin_right" id="About_wrapper"><a class="big_menu_btn--js" id="About--js" href="#">About us</a></li>
+                  <li><a class="Schedule_button" href="#">Schedule a call</a></li>
+                  <li><a class="client_button" href="#">Our client?</a></li>
+                  <li><a class="language_button" href="#">English<img src="images/en.png" alt="english"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big_header__bg--2">
+          <div class="container">
+            <div class="big_header__center_row"><a class="header__logo" href="#"><img src="images/icons/broker_logo.png" alt="broker_logo"></a>
+              <nav>
+                <ul class="menu">
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Core_Products--js" href="#">Core Products </a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Liquidity--js" href="#">Liquidity</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Turnkey_Solutions--js" href="#">Turnkey Solutions</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Crypto_Processing--js" href="#">Crypto Processing</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Money_Management--js" href="#">Money Management</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="big_header__bg--3">
+          <div class="container">
+            <div class="big_header__bottom_row big_menu_content--js" id="Turnkey_Solutions__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Turnkey Solutions</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-3.svg" alt="icon"><span>Turnkey Brokerage </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Forex Broker</a></li>
+                    <li class="menu-item"><a href="#">Crypto CFD Margin Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Spot Broker </a></li>
+                    <li class="menu-item disabled"><a href="#">Multi Asset Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Hedge Fund/PAMM Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Copy/Social Trading Broker</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon6.svg" alt="icon"><span>Turnkey Exchange</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Crypto Spot Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Exchange </a></li>
+                    <li class="menu-item disabled"><a href="#">FX Spot/Deliverable Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Converter</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon8.svg" alt="icon"><span>Turnkey Wallets</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Crypto Wallets </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Core_Products__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Core products</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon13.svg" alt="icon"><span>Trading Platforms </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">MetaTrader 4 White Label</a></li>
+                    <li class="menu-item"><a href="#">MetaTrader 5 White Label</a></li>
+                    <li class="menu-item"><a href="#">B2Trader (Matching Engine)</a></li>
+                    <li class="menu-item"><a href="#">B2Margin (Margin Exchange)</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon11.svg" alt="icon"><span>Core </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">B2Core (Trader's Room)</a></li>
+                    <li class="menu-item disabled"><a href="#">MarksMan Hub </a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-4.svg" alt="icon"><span>Extras</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Data Distribution Feed </a></li>
+                    <li class="menu-item disabled"><a href="#">IB/Affiliate Module </a></li>
+                    <li class="menu-item disabled"><a href="#">Widgets for the Quotes </a></li>
+                    <li class="menu-item disabled"><a href="#">WEB API MT4/MT5</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Liquidity__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Liquidity</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon14.svg" alt="icon"><span>Margin</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Forex</a></li>
+                    <li class="menu-item"><a href="#">Metals</a></li>
+                    <li class="menu-item"><a href="#">Indices</a></li>
+                    <li class="menu-item"><a href="#">Energy</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon15.svg" alt="icon"><span>CFDs</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Crypto Derivatives</a></li>
+                    <li class="menu-item"><a href="#">Equities</a></li>
+                    <li class="menu-item"><a href="#">ETFs</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon16.svg" alt="icon"><span>Spot</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Crypto Spot</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Crypto_Processing__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Crypto Processing</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row big_row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon17.svg" alt="icon"><span>Blockchain Payments Solutions</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Merchants </a></li>
+                    <li class="menu-item"><a href="#">Enterprise Wallets </a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon18.svg" alt="icon"><span>White Label</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">WhiteLabel Crypto Processing</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Money_Management__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Money Management</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row big_row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-19.svg" alt="icon"><span>Investment Platforms</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Copy/Social Trading  </a></li>
+                    <li class="menu-item"><a href="#">PAMM </a></li>
+                    <li class="menu-item"><a href="#">MAM</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="About__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">About B2Broker</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon10.svg" alt="icon"><span>Investment Platforms</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">News</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon11.svg" alt="icon"><span>Fellowship</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Partners</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon12.svg" alt="icon"><span>Company</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">About us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="site-content" id="content">
+        <div class="content">
+          <div class="forex_liquidity pamm">
+            <div class="forex_liquidity--overlay"></div>
+            <div class="container">
+              <div class="forex_liquidity__content">
+                <h2 class="section__title"><span class="section__title--bold">PAMM </span>account Platform</h2><span class="section__subtitle">A PAMM platform will allow your traders to leverage their success by creating their own investment fund with investors' money within your brokerage and get paid for volumes or profit made on investors' accounts. </span>
+                <div class="check_block--mam_platform">
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Fully compliant for regulated brokers</span>
+                  </div>
+                </div>
+                <div class="supported_platforms">
+                  <div class="supported_platforms-title">Supported platforms</div>
+                  <div class="supported_platforms-items"><img class="supported_platforms-item" src="images/MAM_platform/sup_pl-1.png" alt="sup_pl-1"><img class="supported_platforms-item" src="images/MAM_platform/sup_pl-2.png" alt="sup_pl-2"></div>
+                </div>
+              </div>
+              <form class="forex_liquidity__form">
+                <h3 class="forex_liquidity__form-title">Launch PAMM Platform</h3>
+                <label class="form_label"><span>Your Name</span>
+                  <input class="form__input" type="text">
+                </label>
+                <label class="form_label"><span>Your Email</span>
+                  <input class="form__input" type="text">
+                </label>
+                <div class="form__phone">
+                  <select class="form__phone__select form__input" name="number">
+                    <option value="+7">+7</option>
+                    <option value="8">8</option>
+                  </select>
+                  <label class="form_label"><span class="castom-abs">Phone</span>
+                    <input class="form__input" type="text">
+                  </label>
+                </div>
+                <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+                <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+                <div class="capcha_block">
+                  <div class="capcha">
+                    <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                  </div>
+                  <label class="consent_block">
+                    <input type="checkbox"><b></b>
+                    <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="container"><a class="learn_more" href="#">Learn more</a></div>
+          </div>
+          <div class="what_is what_is_trading what_is_pamm goanim an">
+            <div class="container">
+              <div class="section__title"><span class="section__title--bold">What is </span> a PAMM Platform?</div>
+              <div class="main__text">A PAMM platform allows clients/traders to create their own investment fund and scale their success with fee payments from investors for profits made on their accounts or volumes. All investors' accounts are combined into one big trading account where the money manager opens positions. Investors cannot trade - they simply receive profits & losses in proportion to their investments. </div>
+              <div class="main__text">The platform can be used with a leaderboard of strategies for retail clients as well as privately with custom allocation settings. </div>
+              <div class="main__text">PAMM is widely used by licensed money managers using strategies that can be traded only on big accounts.</div>
+            </div>
+            <div class="container flex">
+              <div class="segment">
+                <div class="segment-text">
+                  <div class="segment-text--title">New client segment</div>
+                  <div class="segment-text--subtitle">Attract money managers with <span class="db"></span> a feature-rich MAM platform.</div>
+                </div>
+              </div>
+              <div class="segment">
+                <div class="segment-text">
+                  <div class="segment-text--title">No plugins</div>
+                  <div class="segment-text--subtitle">Hassle-free integration. We <span class="db"></span> handle all the technical aspects.</div>
+                </div>
+              </div>
+              <div class="segment">
+                <div class="segment-text">
+                  <div class="segment-text--title">Improves life-time value</div>
+                  <div class="segment-text--subtitle">Traders are more motivated to trade. <span class="db"></span> Others have an alternative to trading</div>
+                </div>
+              </div>
+              <div class="segment">
+                <div class="segment-text">
+                  <div class="segment-text--title">Setup in 7 days</div>
+                  <div class="segment-text--subtitle">Launch the platform <span class="db"></span> within a week.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="opportunities pamm-opportunities">
+            <div class="container">
+              <div class="section__title center goanim an">Fully-Featured  <span class="section__title--bold">PAMM Accounts</span></div>
+              <div class="main_text center goanim an">Our platform provides all the basic and advanced functions for these type of products:</div>
+            </div>
+            <div class="container catalog goanim an">
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Manual and scheduled execution of deposit & withdrawal requests</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">No need to close masters’ positions during deposits and withdrawals</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Fees for investors can be set individually</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Automated subscription and unsubscription of investors via the leaderboard</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Several execution options including autocorrection on withdrawals or without realloation on deposits</span>
+              </div>
+            </div>
+            <div class="container flex allocation"><img src="images/pamm/pamm1.png" alt="image">
+              <div class="text left">
+                <div class="title">Allocation with maximum precision</div>
+                <p class="margin">All your clients can become investors in PAMM accounts regardless of how much money they have.</p>
+                <p>It works in the same way with as little at $30 or as much as $300,000. Either way, the platform will calculate their share in positions and distribute the PnL to their accounts.</p>
+                <div class="flow_block">
+                  <div class="flow_block--heading">For positions up to</div>
+                  <div class="flow_block--text"><span class="flow_block--big">0.00000001</span><span class="flow_block--little">lot</span></div>
+                </div>
+                <div class="flow_block margin">
+                  <div class="flow_block--heading">For PnL allocation of fiat currencies up to</div>
+                  <div class="flow_block--text"><span class="flow_block--big">0.01</span><span class="flow_block--little">USD</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="container flex positions">
+              <div class="text right">
+                <div class="green__title">no need to close positions</div>
+                <div class="title">Manual and scheduled execution of deposit & withdrawal requests</div>
+                <p class="margin">A PAMM Master account is combined from the balances of all slave accounts. All deposits and withdrawals by investors affect the balance of the master account as well as the free margin. </p>
+                <p class="margin">In our PAMM platform, when an investor makes a deposit or withdrawal it is not executed immediately - he makes a deposit/withdrawal request that will be executed manually or by scheduling it. </p>
+                <p class="margin">So the money manager always has full control over the time of execution of deposit/withdrawal requests and can prepare his account for this event while adjusting the position sizes without any danger of accidental stop outs.</p>
+              </div><img src="images/pamm/pamm2.png" alt="image">
+            </div>
+            <div class="container flex supported"><img src="images/pamm/pamm3.png" alt="image">
+              <div class="text left">
+                <div class="title">All Fiat and Crypto currencies are supported</div>
+                <p class="margin">Your clients can use an account nominated in any currency. The platform supports any combination imaginable. All fees will be calculated and paid respectively. </p>
+                <p class="margin-2">Accounts can be opened in fiat and cryptos: USD, JPY, BTC, USDT, EUR, etc.</p>
+                <div class="check_block--mam_platform-item">
+                  <svg class="svg-sprite-icon icon-new_land-green_check">
+                    <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                  </svg><span class="check_block--mam_platform-item--text">Master and Slave must have the same currency</span>
+                </div>
+                <div class="check_block--mam_platform-item">
+                  <svg class="svg-sprite-icon icon-new_land-green_check">
+                    <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                  </svg><span class="check_block--mam_platform-item--text">Master in USD and Slave in USD</span>
+                </div>
+                <div class="check_block--mam_platform-item">
+                  <svg class="svg-sprite-icon icon-new_land-green_check">
+                    <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                  </svg><span class="check_block--mam_platform-item--text">Master in BTC and Slave in BTC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Launch a <span class="section__title--bold">PAMM Account</span> </div>
+              <div class="main-text">Request a presentation or try a demo and offer investment products in your company.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span class="castom-left">Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="state_of_art">
+            <div class="container">
+              <div class="section__title center goanim an"><span class="section__title--bold">State-of-art architecture</span> of the platform</div>
+              <div class="main-text center goanim an">The investment platform is stand-alone from MT4/5 server software and installed on a separate server connected via manager’s API. No plugins need be installed. No calculations are made on the MetaTrader server. No additional load to MT or risk of a crash.</div>
+            </div>
+            <div class="container goanim an"><img class="banner" src="images/MAM_platform/banner-2.png" alt="image"></div>
+            <div class="container">
+              <div class="head__item">
+                <div class="head__item--texts">
+                  <div class="head__item--title">Hosting options</div>
+                  <div class="head__item--text">The platform can be hosted both on a server provided by a client or B2Broker. </div>
+                </div>
+                <div class="head__item--buttons"><a class="head__item--show-btn head__item--show-btn--js" href="#">Show Pros & Cons
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a><a class="head__item--hide-btn hide head__item--hide-btn--js" href="#">Hide Pros & Cons
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a></div>
+                <div class="head__item--content hide mobile_overflow"><img class="banner mt0" src="images/MAM_platform/banner-table.png" alt="image"></div>
+              </div>
+              <div class="head__item castom">
+                <div class="head__item--texts">
+                  <div class="head__item--title">Can work with any client’s Cabinet. No integration required</div>
+                  <div class="head__item--text">PAMM Platform is a standalone software and supports several ways of integration with broker’s infrastructure with different levels of time and development costs - no integration, seamless sign-on and deep integration.</div>
+                </div>
+                <div class="head__item--buttons"><a class="head__item--show-btn head__item--show-btn--js" href="#">Show the details
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a><a class="head__item--hide-btn hide head__item--hide-btn--js" href="#">Hide the details
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a></div>
+                <div class="head__item--content hide">
+                  <div class="tabs mam_tabs mam_tabs-2">
+                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-1" value="" checked>
+                    <label class="mam_tabs-btn w33" for="tabs_mam-2-1">No integration</label>
+                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-2" value="">
+                    <label class="mam_tabs-btn w33" for="tabs_mam-2-2">Fast integration</label>
+                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-3" value="">
+                    <label class="mam_tabs-btn w33" for="tabs_mam-2-3">Deep integration</label>
+                    <div class="overflow_hidden" id="tabs-content_mam-2-1"> <img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                      <div class="texts">
+                        <div class="texts--heading">Fast launch with no integration</div>
+                        <p>The basic setup can be done without integration with client area at all:</p>
+                        <p>1) Users will login in web interfaces with login and password to their MT4/5 account that is opened</p>
+                        <p>in Client area of broker or in MetaTrader Manager.</p>
+                        <p>2) Broker can use the platform via admin panel even without web interfaces.</p>
+                      </div>
+                    </div>
+                    <div class="overflow_hidden" id="tabs-content_mam-2-2"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                      <div class="texts">
+                        <div class="texts--heading">Seamless Sign-On (approx. 2 days of development)</div>
+                        <p>With JSON REST API you can make a seamless authorization from the client area to web </p>
+                        <p>interfaces, so investors and money managers will not need to authorize them separately.</p>
+                      </div>
+                    </div>
+                    <div class="overflow_hidden" id="tabs-content_mam-2-3"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                      <div class="texts">
+                        <div class="texts--heading">Deep integration (from 1 week up to 6 months)</div>
+                        <p>Suitable for companies which have resources and time for development. With API you can </p>
+                        <p>integrate every single function inside of your client area and allow users create accounts,</p>
+                        <p>subscribe and see statistics without going to any other interface or app.</p>
+                        <p>As API is not going to be changed deep integration can be made after launch with SSO or even no </p>
+                        <p>integration and release new functions step-by-step to clients.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="head__item castom castom-2">
+                <div class="head__item--texts">
+                  <div class="head__item--title">Full White label support</div>
+                  <div class="head__item--text">The investment platform supports a white label in two ways: </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text"><span class="bold">A main label owner</span> can use one server to provide the investment platform to his own white labels.</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text"><span class="bold">A white label owner</span> of any main white label MetaTrader server provider can also use it as it does not require plugin installations, just MT manager credentials without administrator rights.</span>
+                  </div>
+                </div>
+                <div class="head__item--buttons"><a class="head__item--show-btn head__item--show-btn--js" href="#">Show the details
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a><a class="head__item--hide-btn hide head__item--hide-btn--js" href="#">Hide the details
+                    <svg class="svg-sprite-icon icon-white_arrow">
+                      <use xlink:href="images/svg/symbol/sprite.svg#white_arrow"></use>
+                    </svg></a></div>
+                <div class="head__item--content hide">
+                  <div class="tabs mam_tabs">
+                    <input type="radio" name="tabs_mam-art" id="tabs_mam-1" value="" checked>
+                    <label class="mam_tabs-btn w50" for="tabs_mam-1">For Whitelabel owners</label>
+                    <input type="radio" name="tabs_mam-art" id="tabs_mam-2" value="">
+                    <label class="mam_tabs-btn w50" for="tabs_mam-2">For Mainlabel owners</label>
+                    <div id="tabs-content_mam-1"> <img class="banner" src="images/MAM_platform/mam_tabs_1banner.png" alt="image"></div>
+                    <div id="tabs-content_mam-2"><img class="banner" src="images/MAM_platform/mam_tabs_1banner-2.png" alt="image">
+                      <div class="texts">
+                        <p class="m24">The investment platform supports white labels. If you have clients that are using a white label based on your MT server, you can create one for them in your admin panel with a separate web-UI and give them a manager's application with access to their accounts only. </p>
+                        <p class="m24">White label architecture is the same as for WLs in the MetaTrader server. Each white label will have access to their account only from manager's applications, and leaderboards and will also be separated. This means that there will be no interference between accounts.</p>
+                        <p class="m24">Hence, the logic of the back-office infrastructure is the same as for MetaTrader server in that there is only one admin panel, but several manager's accounts for each white label.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="head__item">
+                <div class="head__item--texts mw100">
+                  <div class="head__item--title">No need to create a new group for each new money manager</div>
+                  <div class="head__item--text">The platform is connected to the MT server with a Manager’s API. All master and invesment accounts can be placed in either one or few groups. Your existing groups can be used for placing master and slaves there. No need to create a separate group for every money manager and his investors.</div>
+                </div>
+              </div>
+            </div>
+            <div class="container check_block--mam_platform--catalog">
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Connected via manager's API without administrator rights</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Automated monitoring system and auto-recovery scrypts</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">All data is stored in MySQL database with backups</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">No calculations are made on the MetaTrader server. <span class="db"></span> No additional load to MT</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">MetaTrader server will work at the same speed as without PAMM<span class="db"></span>/MAM</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Admin rights are not required.<span class="db"></span> Can be used by white labels of any main label MT provider</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">All functions of the platform are available via JSON REST API. No limit in further integration in website or client area</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">Manager's apps are available for backoffice staff. Rights can be customized for each user.</span>
+              </div>
+              <div class="check_block--mam_platform-item">
+                <svg class="svg-sprite-icon icon-new_land-green_check">
+                  <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                </svg><span class="check_block--mam_platform-item--text">No risk of conflict of PAMM server with plugins</span>
+              </div>
+            </div>
+          </div>
+          <div class="strategies">
+            <div class="container">
+              <div class="green__title big center goanim an">Charts & statistics</div>
+              <div class="section__title center goanim an"><span class="section__title--bold">Successful strategies</span> deserve to be presented in the best possible way</div>
+              <div class="subtitle center goanim an">Collect, share and present your trading history with minimal effort.</div>
+            </div>
+            <div class="container grafic">
+              <div class="green__title center">Showcase of traders</div>
+              <div class="title center">All the best traders in one place</div>
+              <div class="subtitle center">All master accounts opened in your company are visible in the leaderboard and sorted by return. Investors use filters and compare them all on one page and choosing several for deeper analysis.</div><img class="banner" src="images/MAM_platform/grafic.png" alt="image"><img class="banner macbook" src="images/MAM_platform/macbook.png" alt="macbook">
+              <div class="title title-2">A statistics page for every account</div>
+              <div class="subtitle subtitle-2">Each account in copy trading has its own statistics page featuring a big chart and a multitude of other parameters to help investors better analyze the strategy of a trader before investing.</div>
+              <div class="num-wrapper">
+                <div class="num">17</div>
+                <div class="num-text">Statistical parameters for each account and counting...</div>
+              </div>
+            </div>
+            <div class="opportunities">
+              <div class="container flex">
+                <div class="shadow_wrapper">
+                  <div class="shadow"></div><img class="banner" src="images/MAM_platform/opportunities-8.png" alt="img">
+                </div>
+                <div class="text left">
+                  <div class="green__title">create charts in seconds</div>
+                  <div class="title">History uploader</div>
+                  <p>History uploader allows you to create, save and edit public statistics performance. With this tool you have full control over your leaderboard and can launch sales and marketing  to investors straight after launch.</p>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Create your own  statistics</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Upload history from exising accounts</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Onboard experienced money managers</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="opportunities make_traders make_pamm goanim an">
+            <div class="container">
+              <div class="green__title big center">A great offer for money managers</div>
+              <div class="section__title center"><span class="section__title--bold">Make traders an offer </span> they can't refuse</div>
+              <div class="main-text">Differentiate yourself from your competitors by offering your clients more money and a vision of a better future. Tight spreads, low commissions, MT5 trading platform, 200 trading instruments and more.</div>
+            </div>
+            <div class="container flex Career"><img src="images/copy_trading/commissions.png" alt="image">
+              <div class="text left">
+                <div class="title">Career opportunities for traders</div>
+                <p class="margin">Offer your clients the chance to earn money by making <span class="db"></span> a career as a professional, self-employed full-time trader.</p>
+                <p>Earning money with personal savings is not easy but as <span class="db"></span> part of an investment pool, income potential is unlimited.</p>
+              </div>
+            </div>
+            <div class="container flex iphone_hand">
+              <div class="text right">
+                <div class="title">No marketing effort required</div>
+                <p>The best part of the offer for traders is that no marketing is required as the broker does it for them.</p>
+                <p>If a trader continues to make a profit, he will move up in the leaderboard and become visible to every single client within the brokerage.</p>
+              </div><img src="images/copy_trading/iphone_hand.png" alt="image">
+            </div>
+            <div class="container flex Career Career-2"><img src="images/copy_trading/risk.png" alt="image">
+              <div class="text left">
+                <div class="title">A personal risk manager for every trader</div>
+                <p class="margin">Bad days can happen with every trader. The aim is to avoid leaving all money on the table due to a single mistake. Offer your clients a daily risk limit - a tool widely used by all investment funds.</p>
+                <p>It's simple - all the trader needs to do is set the percentage to equity at the beginning of the day. If the trader reaches it, the platform blocks all trading until the next day.</p>
+              </div>
+            </div>
+            <div class="container make_pamm-banner"><img class="banner" src="images/pamm/grafic.png" alt="image">
+              <div class="banner-heading">Explore new opportunities with a bigger account size</div>
+              <div class="banner-text">Some strategies cannot be traded on smaller accounts nor with even the briefest of delays. This is what makes PAMM accounts an ideal instrument for professionals to trade news or create a portfolio of EAs using different strategies that are tradable on one single account.</div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Launch a <span class="section__title--bold">PAMM Account</span> </div>
+              <div class="main-text">Request a presentation or try a demo and offer investment products in your company.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span class="castom-left">Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="chance pamm_chance">
+            <div class="opportunities">
+              <div class="container">
+                <div class="section__title center goanim an">The <span class="section__title--bold">chance of a lifetime</span> for investors and amateur traders</div>
+                <div class="main-text goanim an">Under a quarter of traders earn money on the markets and even less than this do so regularly. PAMM Accounts help everyone invest in successful strategies and create a diversified investment portfolio.</div>
+              </div>
+              <div class="container flex castom_margin goanim an"><img class="castom-width" src="images/MAM_platform/opportunities-4.png" alt="image">
+                <div class="text left-2">
+                  <div class="green__title">А new marketing opportunity</div>
+                  <div class="title">Private and public accounts</div>
+                  <p class="padding-2">Our platform by default has a leaderboard of master accounts. However, your money managers have the option to show or hide accounts from the leaderboard,</p>
+                </div>
+              </div>
+              <div class="container flex castom_margin-2">
+                <div class="text right">
+                  <div class="green__title">option For the biggest clients</div>
+                  <div class="title">Separate web interfaces for IBs</div>
+                  <p>Let your biggest IBs run their pool of clients in a separate web-interface. In this way they will be able to have multiple master accounts and promote them without interfering with other clients' accounts which are not under their IB schema.</p>
+                </div><img src="images/MAM_platform/opportunities-5.png" alt="image">
+              </div>
+              <div class="container flex diversified"><img src="images/copy_trading/chance-1.png" alt="image">
+                <div class="text left">
+                  <div class="green__title">Diversified investments</div>
+                  <div class="title">Create an investment portfolio with several traders</div>
+                  <p class="margin">Why copy positions from one trader when you can copy five, ten or even 15 traders and diversify your risk? </p>
+                  <p>One or more may lose money, whereas successful ones will profit and compensate for the losses. It's the same risk control approach that applies in stock trading.</p>
+                </div>
+              </div>
+              <div class="container flex margin-bottom-0">
+                <div class="text right">
+                  <div class="title">Offer your clients investments, not a hobby</div>
+                  <p class="margin">Risk control is what makes the difference between active and passive investments.</p>
+                  <p class="margin-2">With our platform, your clients can set a risk limit for their investments and feels safe and calm. A less stressful experience will earn the trust of your clients.</p>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Less stress, more trust</span>
+                  </div>
+                </div><img class="shadow-2" src="images/MAM_platform/opportunities-7.png" alt="image">
+              </div>
+            </div>
+          </div>
+          <div class="pamm_platform_works goanim an">
+            <div class="container">
+              <div class="section__title center">How a <span class="section__title--bold">PAMM-platform works</span></div>
+              <div class="main-text">A PAMM platform combines slave accounts into one big master account. All investors receive P&L for master’s positions in proportion to their investments. At the end of the period they pay fees.</div>
+            </div>
+            <div class="tabs">
+              <input type="radio" name="works" id="works-1" value="" checked>
+              <label for="works-1"><span class="icon"><span class="icon-text">1</span></span><span>Money manager opens PAMM account, starts trading with his own money and statistics are collected for his account.</span></label>
+              <input type="radio" name="works" id="works-2" value="">
+              <label for="works-2"><span class="icon"><span class="icon-text">2</span></span><span>Investor deposits $1000 into PAMM</span></label>
+              <input type="radio" name="works" id="works-3" value="">
+              <label for="works-3"><span class="icon"><span class="icon-text">3</span></span><span>Money manager continues trading and earns $2,000</span></label>
+              <input type="radio" name="works" id="works-4" value="">
+              <label class="abs_tab" for="works-4"><span class="icon"><span class="icon-text">4</span></span><span>Investor pay fees from profits made on his account</span></label>
+              <div class="container" id="tabs_container-1">
+                <div class="flex"><img class="left_img" src="images/pamm/tabs1.png" alt="img">
+                  <div class="money_assets">
+                    <div class="money_assets-heading">Money Manager’s Assets</div>
+                    <div class="money_assets-items">
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="tabs_container-2">
+                <div class="flex"><img class="left_img" src="images/pamm/tabs2.png" alt="img">
+                  <div class="money_assets">
+                    <div class="money_assets-heading">Money Manager’s Assets</div>
+                    <div class="money_assets-items">
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                    </div>
+                  </div>
+                  <div class="money_assets bold">
+                    <div class="money_assets-heading">Assets of investor</div>
+                    <div class="money_assets-items">
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="tabs_container-3">
+                <div class="flex"><img class="left_img" src="images/pamm/tabs3.png" alt="img">
+                  <div class="profit_wrapper">
+                    <div class="money_assets">
+                      <div class="money_assets-heading">Money Manager’s Assets</div>
+                      <div class="money_assets-items">
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                      </div>
+                    </div>
+                    <div class="money_assets bold">
+                      <div class="money_assets-heading">Assets of investor</div>
+                      <div class="money_assets-items">
+                        <div class="money_assets-item">$500</div>
+                        <div class="money_assets-item">$500</div>
+                      </div>
+                    </div>
+                    <div class="profit_row">
+                      <div class="profit_abs">Profit</div>
+                      <div class="money_assets">
+                        <div class="money_assets-items">
+                          <div class="money_assets-item profit">$500</div>
+                          <div class="money_assets-item profit">$500</div>
+                          <div class="money_assets-item profit">$500</div>
+                        </div>
+                      </div>
+                      <div class="money_assets bold">
+                        <div class="money_assets-items">
+                          <div class="money_assets-item profit m0">$500</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="tabs_container-4">
+                <div class="flex"><img class="left_img" src="images/pamm/tabs4.png" alt="img">
+                  <div class="money_assets">
+                    <div class="money_assets-heading">Money Manager’s Assets</div>
+                    <div class="money_assets-items">
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item profit">$500</div>
+                      <div class="money_assets-item profit">$500</div>
+                      <div class="money_assets-item profit">$500</div>
+                    </div>
+                  </div>
+                  <div class="money_assets bold">
+                    <div class="money_assets-heading">Assets of investor</div>
+                    <div class="money_assets-items">
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item">$500</div>
+                      <div class="money_assets-item-profit_wrapper">
+                        <div class="money_assets-item profit">$400</div>
+                        <div class="profit_abs">Investor’s profit</div><img class="abs_arrow" src="images/pamm/arrow.svg" alt="img">
+                        <div class="money_assets-item-profit_wrapper money_assets-item-profit_wrapper--abs">
+                          <div class="money_assets-item profit">$100</div>
+                          <div class="profit_abs profit_abs-2">Fees payment to Money manager</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-16 mam_frame pamm_video goanim an">
+            <div class="container">
+              <div class="section__title"><span class="section__title--bold">Check out a video</span> about product</div>
+              <div class="video_block">
+                <div class="video_block--preview"><img class="image_preview" src="images/video_previw.jpg" alt="video_previw">
+                  <div class="video_block--play">
+                    <svg class="svg-sprite-icon icon-play">
+                      <use xlink:href="images/svg/symbol/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+                </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Launch a <span class="section__title--bold">PAMM Account</span> </div>
+              <div class="main-text">Request a presentation or try a demo and offer investment products in your company.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span class="castom-left">Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="four_types pamm_types goanim an">
+            <div class="container">
+              <div class="section__title center">Four types of fees <span class="section__title--bold db">all paid automatically</span></div>
+              <div class="subtitle">Four types of fees are available within the investment platform. Each are designed to pay money managers for their efforts and are transferred from the investment account to a trader's wallet.</div>
+            </div>
+            <div class="container flex">
+              <div class="gray__block">
+                <div class="gray__block--title">Subscription fee</div>
+                <div class="gray__block--subtitle">The simplest type of fee. Just one flat fee regardless of account size, trading frequency or profit. USD only</div>
+                <div class="gray__block--description">Can be paid daily / weekly / monthly</div>
+              </div>
+              <div class="gray__block">
+                <div class="gray__block--title">Performance fee</div>
+                <div class="gray__block--subtitle">Industry-standard fee type. Calculated as X percent of net profit. Based on high watermark.</div>
+                <div class="gray__block--description">Can be paid daily / weekly / monthly</div>
+              </div>
+              <div class="gray__block">
+                <div class="gray__block--title">Management fee</div>
+                <div class="gray__block--subtitle">Type of fee that is paid independently from trading activity or profit made. Set in a percentage per year of assets.</div>
+                <div class="gray__block--description">Can be paid as a percentage of equity or as a percentage of balance.</div>
+              </div>
+              <div class="gray__block">
+                <div class="gray__block--title">Volume fee</div>
+                <div class="gray__block--subtitle">Second mostly popular fee type. Calculated as a USD/lot. </div>
+                <div class="gray__block--description">Paid immediately after closing a position.</div>
+              </div>
+            </div>
+          </div>
+          <div class="money_managers goanim an">
+            <div class="container">
+              <div class="section__title center">Your money <span class="section__title--bold">managers</span> can <span class="section__title--bold">work with IBs</span> and gather in teams</div>
+              <div class="subtitle center">All fees paid by our investment platform can be shared between a money manager and his partners.</div>
+              <div class="tabs mam_tabs">
+                <input type="radio" name="tabs_mam_pamm" id="tabs_mam-big-1" value="" checked>
+                <label class="mam_tabs-btn" for="tabs_mam-big-1">IBs<span>Fees from one investor are shared between the money manager and IB.</span></label>
+                <input type="radio" name="tabs_mam_pamm" id="tabs_mam-big-2" value="">
+                <label class="mam_tabs-btn margin" for="tabs_mam-big-2">Teams<span>Fees from all clients are shared between the trader and his team.</span></label>
+                <div id="mam_tabs-content--manage-1"><img class="banner" src="images/MAM_platform/manage_banner-1.png" alt="images"></div>
+                <div id="mam_tabs-content--manage-2"><img class="banner" src="images/MAM_platform/manage_banner-2.png" alt="images"></div>
+              </div>
+            </div>
+          </div>
+          <div class="make_money">
+            <div class="opportunities">
+              <div class="container">
+                <div class="green__title big center goanim an">growth hacking tools</div>
+                <div class="section__title center goanim an"><span class="section__title--bold">Make money</span> from the <span class="section__title--bold db">first month</span></div>
+                <div class="subtitle">Tools that will allow you to onboard new clients on an investment product immediately after launch without having to wait several months, including website content for and knowledge base.</div>
+              </div>
+              <div class="container flex">
+                <div class="text right">
+                  <div class="green__title">2 roles at THE same time</div>
+                  <div class="title">Automate master accounts with trades from retail clients</div>
+                  <p class="margin">It is always hard to attract good traders and managers until you have large number of investors and vice versa.</p>
+                  <p class="margin">However,  in our investment platform you can create a master account for the leaderboard and make it a slave to any other client privately in the admin panel.</p>
+                  <p class="margin margin-2">You can copy signals from all your retail clients without them knowing their accounts are being used somewhere.</p>
+                  <div class="check_block--mam_platform-item padding">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Each master can be a signal receiver to other accounts</span>
+                  </div>
+                  <div class="check_block--mam_platform-item padding">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Unlimited source of signals from client base</span>
+                  </div>
+                </div><img src="images/MAM_platform/make-1.png" alt="image">
+              </div>
+              <div class="container flex reverse"><img src="images/MAM_platform/make-2.png" alt="image">
+                <div class="text left">
+                  <div class="green__title">Copy good traders as well as losers</div>
+                  <div class="title">Reverse-copy masters</div>
+                  <p class="margin-2 padding">You can copy on master accounts positions from good traders as well as those from losing clients, but in reverse mode. Copy sell position when they trade, buy and vice versa.</p>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Copy positions from good traders</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Reverese copy from losing traders</span>
+                  </div>
+                  <div class="check_block--mam_platform-item padding padding-2">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Combine signals from many private-masters on one public master account</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container flex macbook_container">
+                <div class="text left">
+                  <div class="green__title">Free giveaway #1 for new clients</div>
+                  <div class="title">Free ready-to-use website content</div>
+                  <p class="margin padding-2">We have created not only the technology but all the basic website content that is required for the launch of a product for retail clients.</p>
+                  <p class="margin-2 padding-2">It consists of several website pages and content for a support center. All you need to do is replace the screenshots and copy all the text as is.</p>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Content for main page</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Content for page for investors</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Content for page for money managers</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">Content for support center</span>
+                  </div>
+                </div><img class="abs_macbook" src="images/MAM_platform/make-3.png" alt="image">
+              </div>
+              <div class="container flex iphone_container"><img src="images/MAM_platform/make-4.png" alt="image">
+                <div class="text left">
+                  <div class="green__title">Free giveaway #2 for new clients</div>
+                  <div class="title">Free content for promo emails</div>
+                  <p class="margin padding">Almost nothing can beat email marketing in terms of efficiency. It is the cheapest way to promote services and offers to your clients with instant impact.</p>
+                  <p class="margin padding">We have created a set of emails which you can copy and send to your client base. </p>
+                  <p class="margin-2 padding">Available in 3 languages: EN, RU and CN.</p>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">E-mail about launch of Service</span>
+                  </div>
+                  <div class="check_block--mam_platform-item">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">E-mail for investors and losing traders</span>
+                  </div>
+                  <div class="check_block--mam_platform-item top_margin">
+                    <svg class="svg-sprite-icon icon-new_land-green_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                    </svg><span class="check_block--mam_platform-item--text">E-mail for hunting money managers</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Launch a <span class="section__title--bold">PAMM Account</span> </div>
+              <div class="main-text">Request a presentation or try a demo and offer investment products in your company.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span class="castom-left">Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="comparison goanim an">
+            <div class="container">
+              <div class="section__title center">General <span class="section__title--bold">comparison</span> of account types</div>
+              <div class="banner_wrapper"><img class="banner" src="images/MAM_platform/table.png" alt="table"></div>
+            </div>
+          </div>
+          <div class="rest goanim an">
+            <div class="container">
+              <div class="section__title center"><span class="section__title--bold">JSON REST API</span> for further development</div>
+              <div class="subtitle center">With built-in JSON REST API, our platform offers you many opportunities for further development of widgets for your website's web interface that can be integrated into your client area. You also have the opportunity to create investment mobile apps.</div>
+              <div class="shadow_wrapper"><img class="banner" src="images/MAM_platform/rest.png" alt="image">
+                <div class="abs_shadow"></div>
+              </div>
+            </div>
+          </div>
+          <div class="or_features goanim an">
+            <div class="container">
+              <div class="section__title center">Other <span class="section__title--bold">features</span></div>
+              <div class="subtitle center">Our platform capabilities reach way beyond simple copy trading. Most functionality is customizable for a broker's specific needs.</div>
+            </div>
+            <div class="container text_catalog">
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Support all types of trading instruments</div>
+                <div class="text_catalog-item--description">Your clients can trade Forex, Metals, Indices, Stocks, Cryptos and all other groups of instruments on offer.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Sharing fees between master and partners</div>
+                <div class="text_catalog-item--description">The money manager can share fees between himself and his agents for a specific investor, or all of them.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Over 100 customizable functions</div>
+                <div class="text_catalog-item--description">Almost all functions are customizable in a few clicks from the admin panel.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Email for new accounts</div>
+                <div class="text_catalog-item--description">Your clients will receive an email with login details and a password every time a new account is created.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">White label support</div>
+                <div class="text_catalog-item--description">White label architecture is the same as for WLs in the MetaTrader server. Each WL has access to their account via the manager's applications.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Support EA trading</div>
+                <div class="text_catalog-item--description">Your clients can trade manually or with EAs with no limitations regarding trading style or instruments.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Different currencies for investor and master</div>
+                <div class="text_catalog-item--description">A signal provider and his followers are able to have different account currencies, including cryptos.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Range for logins of new accounts</div>
+                <div class="text_catalog-item--description">You can specify a range for new master and slave accounts which are opened by a platform individually, e.g. new slaves will be opened in 100000-200000 and new masters in 400000-500000 ranges.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Logging of all events and actions</div>
+                <div class="text_catalog-item--description">Each client action, data from the MT server or calculation is logged by a platform. When you have a query about why something may have happened, it can be found in the log files.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Full support of <span class="db"></span> Crypto-Currencies</div>
+                <div class="text_catalog-item--description">Trading Accounts can be nominated in any fiat or crypto-currency such as BTC, ETH, Ripple and others.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Limit for maximum amount of accounts</div>
+                <div class="text_catalog-item--description">You can allow clients to open as many accounts as they want or just 5-7, for example.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Maximum number of subscriptions for slave</div>
+                <div class="text_catalog-item--description">It is hard to manage risks between A- and B-books if the slave is subscribed to 3 or 5 masters. You can limit the number of active subscriptions for 1 slave.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Setting default groups for new accounts</div>
+                <div class="text_catalog-item--description">There is a table in setttigs where you can specify in which group the account type that should be opened by default. Also, the platform can copy a group from a payment account.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Maximum number of active subscriptions for one master</div>
+                <div class="text_catalog-item--description">You can limit the number of active subscriptions for 1 master and make his offer limited for new investors.</div>
+              </div>
+              <div class="text_catalog-item">
+                <div class="text_catalog-item--heading">Auto-archiving of inactive accounts</div>
+                <div class="text_catalog-item--description">The system can automatically archive  inactive accounts after they are deleted or archived in the MT4/5 server.</div>
+              </div>
+            </div>
+          </div>
+          <div class="color_scheme goanim an">
+            <div class="container">
+              <div class="section__title center"><span class="section__title--bold">Color scheme, text and logo</span> customization</div>
+              <div class="subtitle">Two default color schemes are available by default: white and dark. You can add your logo, choose a main color and replace all text free of charge. Most functions and buttons are also customizable from the admin panel. Request a demo for more details.</div><img class="banner" src="images/MAM_platform/scheme.png" alt="image">
+              <div class="subtitle-2">A complete change of all colors is available on request subject to an additional charge.</div>
+            </div>
+          </div>
+          <div class="section-22 faq goanim an">
+            <div class="container">
+              <div class="section__title section__title--bold">FAQs</div>
+              <div class="main-text">Have a question? A source of useful information about our products and services.</div>
+              <div class="question">
+                <div class="question-item question-item-js"><span>What if i want to migrate? 
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Quis est occaecat officia ex id cillum commodo sint esse in.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Aute officia dolore voluptate esse eiusmod laborum eiusmod proident.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Laborum id cupidatat qui elit.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Aute aliquip reprehenderit aliquip velit dolore.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Pariatur eiusmod mollit sunt consequat adipisicing eu fugiat do.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Exercitation velit anim officia labore aute qui ea aute Lorem velit ut. 
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Sunt sint cupidatat nostrud deserunt.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="another_question">
+                  <div class="another_question--heading">Have another question?</div>
+                  <div class="another_question--link">Standard protocol, using to allow communication between a client, trader, investment fund, or broker and our platforms. FIX API is used by numerous banks, prime brokers, and hedge funds to operate in real-time mode.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Launch <span class="section__title--bold">MAM Accounts</span> in 1 week </div>
+              <div class="main-text">We offer a large range of products and services to enhance your business operations. Check them out here...</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span class="castom-left">Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section-23 best">
+            <div class="container">
+              <div class="section__title goanim an">It comes <span class="section__title--bold">best with</span></div>
+              <div class="main-text goanim an">Our liquidity is best combined with the leading industry trading platforms to provide the ultimate in performance and user satisfaction.</div>
+              <div class="best_with goanim an">
+                <div class="best_with--left">
+                  <div class="best_with--heading">Forex Liquidity</div>
+                  <div class="best_with--text">The best and most professional MT4/5 Forex White Label solution tailored specifically to your brand.</div>
+                  <div class="best_with--img"><img src="images/best/item1.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Cutting-edge MT4/5 platforms</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fully-customised solutions</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Professional 24/7/365 support</span>
+                  </div>
+                  <div class="check_block castom">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Mobile, web and desktop version</span>
+                  </div>
+                </div>
+              </div>
+              <div class="best_with">
+                <div class="best_with--left">
+                  <div class="best_with--heading">Crypto CFD Liquidity</div>
+                  <div class="best_with--text">A platform combining the features of margin and spot trading in one system. Powered by B2Broker.</div>
+                  <div class="best_with--img"><img src="images/best/item2.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Choose the leverage for each order</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Market depth 40 levels availible</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Supports FIX API connection</span>
+                  </div>
+                  <div class="check_block castom castom-2">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Favourite markets, grouping, watchlist, trading activity and history modules</span>
+                  </div>
+                </div>
+              </div>
+              <div class="best_with">
+                <div class="best_with--left">
+                  <div class="best_with--heading">B2Core</div>
+                  <div class="best_with--text">A matching engine platform for exchanges developed by B2Broker that powers up the world's best known exchanges.</div>
+                  <div class="best_with--img"><img src="images/MAM_platform/best.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Cutting-edge technology</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">List unlimited tradable assets </span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Include 3 level security system</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-new_land-green_check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#new_land-green_check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Used by the world's best-known exchanges</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-24 subscribe_form goanim an">
+            <div class="form-wrapper">
+              <div class="form-wrapper-left">
+                <div class="left-form">
+                  <div class="form--heading">Subscribe to our newsletter</div>
+                  <div class="form--description">Join our email list and stay updated on all our latest developments and special offers.  </div>
+                  <form class="form-content">
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text">
+                    </label>
+                    <button class="btn btn--green btn--box_shadow upp">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+              <div class="form-wrapper-right">
+                <div class="right-form">
+                  <div class="form--heading">Submit a request</div>
+                  <div class="form--description">We are here to assist you with any queries about our products and services.   </div>
+                  <form class="form-content">
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                    <div class="form__phone">
+                      <select class="form__phone__select form__input" name="number">
+                        <option value="+7">+7</option>
+                        <option value="8">8</option>
+                      </select>
+                      <label class="form_label"><span>Phone</span>
+                        <input class="form__input" type="text" placeholder="">
+                      </label>
+                    </div>
+                    <div class="form-content--description">Based on your IP, you are in Russian Federation.Change Your data will be in US data center.</div>
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                    <button class="btn btn--green btn--box_shadow upp">Give me a call</button>
+                    <div class="capcha_block gray">
+                      <div class="capcha">
+                        <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                        <script src="https://www.google.com/recaptcha/api.js"></script>
+                      </div>
+                      <label class="consent_block">
+                        <input type="checkbox"><b></b>
+                        <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-menu-section footer-menu-section-2 goanim an">
+            <div class="container">
+              <div class="footer-menu-section-flex">
+                <div class="footer-menu-section-flex__item">
+                  <div class="footer-menu-section-flex__title"><img class="icon-title" src="images/MAM_platform/icon1.svg" alt="icon"><span>Core products</span></div>
+                  <ul class="menu menu-castom-height-1">
+                    <li class="menu-item"><a href="#">MetaTrader 4 White Label</a></li>
+                    <li class="menu-item"><a href="#">MetaTrader 5 White Label</a></li>
+                    <li class="menu-item"><a href="#">B2Trader (Matching Engine)</a></li>
+                    <li class="menu-item"><a href="#">B2Margin (Margin Exchange)</a></li>
+                    <li class="menu-item"><a href="#">B2Core (Trader's Room)</a></li>
+                    <li class="menu-item disabled"><a href="#">MarksMan Hub</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"><img class="icon-title" src="images/MAM_platform/icon7.svg" alt="icon"><span>Money Management</span></div>
+                  <ul class="menu menu-castom-height-2">
+                    <li class="menu-item"> <a href="#">Social Trading platform</a></li>
+                    <li class="menu-item"> <a href="#">MAM platform </a></li>
+                    <li class="menu-item"> <a href="#">PAMM platform</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"><img class="icon-title" src="images/MAM_platform/icon-4.svg" alt="icon"><span>Extras</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Data Distribution Feed</a></li>
+                    <li class="menu-item disabled"><a href="#">IB/Affiliate Module</a></li>
+                    <li class="menu-item disabled"><a href="#">Widgets for the Quotes</a></li>
+                    <li class="menu-item disabled"><a href="#">WEB API MT4/MT5</a></li>
+                  </ul>
+                </div>
+                <div class="footer-menu-section-flex__item">
+                  <div class="footer-menu-section-flex__title"><img class="icon-title" src="images/MAM_platform/icon2.svg" alt="icon"><span>Liquidity</span></div>
+                  <ul class="menu menu-castom-height-1">
+                    <li class="menu-item"> <a href="#">Crypto Derivatives/CFD</a></li>
+                    <li class="menu-item"> <a href="#">FOREX</a></li>
+                    <li class="menu-item"> <a href="#">Metals</a></li>
+                    <li class="menu-item"> <a href="#">Indices</a></li>
+                    <li class="menu-item"> <a href="#">Energy </a></li>
+                    <li class="menu-item"> <a href="#">Equities CFD</a></li>
+                    <li class="menu-item"> <a href="#">ETFs CFD</a></li>
+                    <li class="menu-item disabled"> <a href="#">Crypto Spot</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"> <img class="icon-title" src="images/MAM_platform/icon-5.svg" alt="icon"><span>Crypto Processing</span></div>
+                  <ul class="menu menu-castom-height-2">
+                    <li class="menu-item"> <a href="#">Merchant Solutions</a></li>
+                    <li class="menu-item"> <a href="#">Enterprise Wallets Solutions</a></li>
+                    <li class="menu-item disabled"> <a href="#">WhiteLabel Crypto Processing</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"> <img class="icon-title" src="images/MAM_platform/icon20.svg" alt="icon"><span>Corporate Services </span></div>
+                  <ul class="menu menu-castom-height-2">
+                    <li class="menu-item disabled"><a href="#">Licenses</a></li>
+                    <li class="menu-item disabled"><a href="#">Companies </a></li>
+                    <li class="menu-item disabled"><a href="#">Banking Solutions</a></li>
+                  </ul>
+                </div>
+                <div class="footer-menu-section-flex__item">
+                  <div class="footer-menu-section-flex__title"> <img class="icon-title" src="images/MAM_platform/icon-3.svg" alt="icon"><span>Turnkey Brokerage</span></div>
+                  <ul class="menu menu-castom-height-1">
+                    <li class="menu-item"><a href="#">Forex Broker</a></li>
+                    <li class="menu-item"><a href="#">Crypto CFD Margin Broker </a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Spot Broker </a></li>
+                    <li class="menu-item disabled"><a href="#">Multi Asset Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Hedge Fund/PAMM Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Copy/Social Trading Broker</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"> <img class="icon-title" src="images/MAM_platform/icon6.svg" alt="icon"><span>Turnkey Exchange</span></div>
+                  <ul class="menu menu-castom-height-2">
+                    <li class="menu-item"><a href="#">Crypto Spot Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">FX Spot/Deliverable Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Converter</a></li>
+                  </ul>
+                  <div class="footer-menu-section-flex__title"> <img class="icon-title" src="images/MAM_platform/icon8.svg" alt="icon"><span>Turnkey Wallets</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"> <a href="#">Crypto Wallets</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer newFooter">
+        <div class="top-line line"></div>
+        <div class="container_wrapper">
+          <div class="container">
+            <div class="footer-top-row">
+              <div class="footer-top-row__copy">B2Broker © 2014 - 2020</div>
+              <div class="footer-top-row-social"><a class="vk" href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a class="vk" href="#"><img src="images/web_icon/p.svg" alt="p"></a><a class="vk" href="#"><img src="images/web_icon/insta.svg" alt="instagram"></a><a class="vk" href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a class="vk" href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              <div class="footer-top-row-search">
+                <input class="footer-top-row-search__input" placeholder="Search">
+                <button class="footer-top-row-search__button"><img src="images/icons/search.svg" alt="search"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container-wrapper-2">
+          <div class="container">
+            <div class="footer-menu">
+              <div class="footer-menu_left-block">
+                <div class="footer-menu_left-block--heading">About B2Broker</div>
+                <div class="footer-menu_left-block--description">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+              </div>
+              <div class="footer-menu-row footer-menu-row-1">
+                <div class="footer-menu-row--heading"><img class="icon" src="images/MAM_platform/icon10.svg" alt="icon"><span>Publications</span></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">News</a></li>
+                  <li class="menu-item"><a href="#">Media</a></li>
+                  <li class="menu-item"><a href="#">Events</a></li>
+                  <li class="menu-item"><a href="#">Blog</a></li>
+                  <li class="menu-item"><a href="#">Articles</a></li>
+                </ul>
+              </div>
+              <div class="footer-menu-row footer-menu-row-2">
+                <div class="footer-menu-row--heading"><img class="icon" src="images/MAM_platform/icon11.svg" alt="icon"><span>Community</span></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">Partners</a></li>
+                  <li class="menu-item disabled"><a href="#">Partnership</a></li>
+                  <li class="menu-item disabled"><a href="#">Case-study</a></li>
+                </ul>
+              </div>
+              <div class="footer-menu-row">
+                <div class="footer-menu-row--heading"><img class="icon" src="images/MAM_platform/icon12.svg" alt="icon"><span>Company</span></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">About us</a></li>
+                  <li class="menu-item"><a href="#">Contacts</a></li>
+                  <li class="menu-item"><a href="#">Careers</a></li>
+                  <li class="menu-item"><a href="#">Legal</a></li>
+                  <li class="menu-item disabled"><a href="#">B2Capital</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container-wrapper-3">
+          <div class="container">
+            <div class="footer-bottom--logo"><img src="images/chblogo.png" alt="logo"></div>
+            <div class="footer-text">
+              <p>B2broker is not a legal entity, and this website serves as a common showcase for marketing services of different companies that work in the frames of their local legislations and have respective licenses and permissions for provided services. If you are interested in particular services please contact sales team for more information about servicing company; </p>
+              <p>“B2Broker” is a trademark, that is registered in different European countries according to Madrid protocol.</p>
+              <p>The ownership for word and logo trademarks “B2Broker” (international registration numbers are 1383640 and 1388708) belongs to B2broker ltd., a company registered in the United Kingdom of Great Britain and Ireland with company number 10562809. B2Broker LTD does not provide any financial or other services advertised on this website.</p>
+              <p>Please carefully study documents posted at this website: Legal information and Disclaimers, Privacy Policy and Cookie Policy. These documents are available only in English. You acknowledge that you know the English language at a sufficient level to understand the text of these documents, and you fully understand the legal consequences of these documents. In case you do not understand or understand the English language poorly, you acknowledge that you have used the services of a professional interpreter. If you don’t agree with this statement or information provided within documents, please leave this website immediately.</p>
+              <p>By continuing using the website, you confirm your agreement with the above-mentioned statements and documents.agreement with the above statements and documents.</p>
+            </div>
+            <div class="footer-bottom-menu">
+              <ul class="menu">
+                <li class="menu-item"><a href="#">Client's area</a></li>
+                <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                <li class="menu-item"><a href="#">Cokie Policy</a></li>
+                <li class="menu-item"><a href="#">Legal Information and Disclaimers</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal-fancy modal-form-1" id="modal" style="display:none">
+        <form class="forex_liquidity__form">
+          <h3 class="forex_liquidity__form-title">Get access to our liquidity</h3>
+          <label class="form_label"><span>Your Name</span>
+            <input class="form__input" type="text">
+          </label>
+          <label class="form_label"><span>Your Email</span>
+            <input class="form__input" type="text">
+          </label>
+          <div class="form__phone">
+            <select class="form__phone__select form__input" name="number">
+              <option value="+7">+7</option>
+              <option value="8">8</option>
+            </select>
+            <label class="form_label"><span>Phone</span>
+              <input class="form__input" type="text">
+            </label>
+          </div>
+          <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+          <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+          <div class="capcha_block">
+            <div class="capcha">
+              <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
+            <label class="consent_block">
+              <input type="checkbox"><b></b>
+              <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/flickity.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

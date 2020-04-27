@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="black-page">
+    <script>
+      let marketsConfig = {
+      	defaults: {
+      		market: "USD",
+      		// Market table field by which data will be sorted by default
+      		sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+      		tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+      		mode: "widget", // widget, page
+      		exchange: "https://www.b2bx.exchange/advanced/",
+      	},
+      	//table columns names, phrases and etc
+      	lang: {
+      		markets: "Markets",
+      		alts: "ALTS",
+      		stable: "USDⓈ",
+      		percent: "%",
+      		symbol: "$",
+      		item: "item",
+      		favorites: "Favorites",
+      		pair: "Pair",
+      		coin: "Coin",
+      		price: "Last price",
+      		spread: "Spread",
+      		change: "Change, 24h",
+      		high: "High, 24h",
+      		low: "Low, 24h",
+      		volume: "Volume, 24h",
+      		result: "No result",
+      		loading: "Loading...",
+      		search: "Search",// "Search",
+      		all: "All",// "All",
+      	},
+      	//SignalR link
+      	stagingUrl: "https://b2bx.cloud",
+      	infoUrl: "/marketdata/info/",
+      	frontOfficeUrl: "/frontoffice/api/info",
+      	frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+      };
+    </script>
+    <div class="wrapper">
+      <header class="big_header">
+        <div class="big_header__bg">
+          <div class="container">
+            <div class="big_header__top_row">
+              <div class="text_flicky--js">
+                <div class="item">Leading Liquidity & Technology Provider</div>
+                <div class="item">Leading Liquidity & Technology Provider</div>
+              </div>
+              <div class="big_header__top_row__right_row">
+                <ul class="menu">
+                  <li class="margin_right"><a class="signal_button" href="#">Webinars
+                      <div class="signal"></div></a></li>
+                  <li class="margin_right"><a href="#">Events</a></li>
+                  <li class="margin_right" id="About_wrapper"><a class="big_menu_btn--js" id="About--js" href="#">About us</a></li>
+                  <li><a class="Schedule_button" href="#">Schedule a call</a></li>
+                  <li><a class="client_button" href="#">Our client?</a></li>
+                  <li><a class="language_button" href="#">English<img src="images/en.png" alt="english"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big_header__bg--2">
+          <div class="container">
+            <div class="big_header__center_row"><a class="header__logo" href="#"><img src="images/icons/broker_logo.png" alt="broker_logo"></a>
+              <nav>
+                <ul class="menu">
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Core_Products--js" href="#">Core Products </a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Liquidity--js" href="#">Liquidity</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Turnkey_Solutions--js" href="#">Turnkey Solutions</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Crypto_Processing--js" href="#">Crypto Processing</a></li>
+                  <li class="menu-item"><a class="big_menu_btn--js" id="Money_Management--js" href="#">Money Management</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="big_header__bg--3">
+          <div class="container">
+            <div class="big_header__bottom_row big_menu_content--js" id="Turnkey_Solutions__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Turnkey Solutions</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-3.svg" alt="icon"><span>Turnkey Brokerage </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Forex Broker</a></li>
+                    <li class="menu-item"><a href="#">Crypto CFD Margin Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Spot Broker </a></li>
+                    <li class="menu-item disabled"><a href="#">Multi Asset Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Hedge Fund/PAMM Broker</a></li>
+                    <li class="menu-item disabled"><a href="#">Copy/Social Trading Broker</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon6.svg" alt="icon"><span>Turnkey Exchange</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Crypto Spot Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Exchange </a></li>
+                    <li class="menu-item disabled"><a href="#">FX Spot/Deliverable Exchange</a></li>
+                    <li class="menu-item disabled"><a href="#">Crypto Converter</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon8.svg" alt="icon"><span>Turnkey Wallets</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Crypto Wallets </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Core_Products__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Core products</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon13.svg" alt="icon"><span>Trading Platforms </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">MetaTrader 4 White Label</a></li>
+                    <li class="menu-item"><a href="#">MetaTrader 5 White Label</a></li>
+                    <li class="menu-item"><a href="#">B2Trader (Matching Engine)</a></li>
+                    <li class="menu-item"><a href="#">B2Margin (Margin Exchange)</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon11.svg" alt="icon"><span>Core </span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">B2Core (Trader's Room)</a></li>
+                    <li class="menu-item disabled"><a href="#">MarksMan Hub </a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-4.svg" alt="icon"><span>Extras</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Data Distribution Feed </a></li>
+                    <li class="menu-item disabled"><a href="#">IB/Affiliate Module </a></li>
+                    <li class="menu-item disabled"><a href="#">Widgets for the Quotes </a></li>
+                    <li class="menu-item disabled"><a href="#">WEB API MT4/MT5</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Liquidity__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Liquidity</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon14.svg" alt="icon"><span>Margin</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Forex</a></li>
+                    <li class="menu-item"><a href="#">Metals</a></li>
+                    <li class="menu-item"><a href="#">Indices</a></li>
+                    <li class="menu-item"><a href="#">Energy</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon15.svg" alt="icon"><span>CFDs</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Crypto Derivatives</a></li>
+                    <li class="menu-item"><a href="#">Equities</a></li>
+                    <li class="menu-item"><a href="#">ETFs</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon16.svg" alt="icon"><span>Spot</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">Crypto Spot</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Crypto_Processing__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Crypto Processing</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row big_row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon17.svg" alt="icon"><span>Blockchain Payments Solutions</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Merchants </a></li>
+                    <li class="menu-item"><a href="#">Enterprise Wallets </a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon18.svg" alt="icon"><span>White Label</span></div>
+                  <ul class="menu">
+                    <li class="menu-item disabled"><a href="#">WhiteLabel Crypto Processing</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="Money_Management__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">Money Management</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row big_row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon-19.svg" alt="icon"><span>Investment Platforms</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Copy/Social Trading  </a></li>
+                    <li class="menu-item"><a href="#">PAMM </a></li>
+                    <li class="menu-item"><a href="#">MAM</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="big_header__bottom_row big_menu_content--js" id="About__content--js">
+              <div class="big_header__bottom_row__left_row">
+                <div class="big_header__bottom_row__heading">About B2Broker</div>
+                <div class="big_header__bottom_row__text">Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.</div>
+                <div class="social_block"><a href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a href="#"><img src="images/web_icon/p.svg" alt="p"></a><a href="#"><img src="images/web_icon/insta.svg" alt="insta"></a><a href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+              </div>
+              <div class="big_header__bottom_row__right_row">
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon10.svg" alt="icon"><span>Investment Platforms</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">News</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon11.svg" alt="icon"><span>Fellowship</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Partners</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="menu__heading"><img src="images/MAM_platform/icon12.svg" alt="icon"><span>Company</span></div>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">About us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="site-content" id="content">
+        <div class="content">
+          <div class="forex_liquidity">
+            <div class="forex_liquidity--overlay"></div>
+            <div class="container">
+              <div class="forex_liquidity__content">
+                <h2 class="section__title">Prime of Prime <span class="section__title--bold">Forex</span> Liquidity</h2><span class="section__subtitle">The deepest liquidity pool for Forex market</span>
+                <div class="number_block">
+                  <div class="number_block-content">
+                    <div class="number_block--text">Trading Pairs</div>
+                    <div class="number_block--number">78</div>
+                  </div>
+                  <div class="number_block-content">
+                    <div class="number_block--text">Execution from</div>
+                    <div class="number_block--number">49<span class="number_block--number-text">ms</span></div>
+                  </div>
+                  <div class="number_block-content">
+                    <div class="number_block--text">Technical Support</div>
+                    <div class="number_block--number">24/7</div>
+                  </div>
+                </div>
+              </div>
+              <form class="forex_liquidity__form">
+                <h3 class="forex_liquidity__form-title">Get access to our liquidity</h3>
+                <label class="form_label"><span>Your Name</span>
+                  <input class="form__input" type="text">
+                </label>
+                <label class="form_label"><span>Your Email</span>
+                  <input class="form__input" type="text">
+                </label>
+                <div class="form__phone">
+                  <select class="form__phone__select form__input" name="number">
+                    <option value="+7">+7</option>
+                    <option value="8">8</option>
+                  </select>
+                  <label class="form_label"><span>Phone</span>
+                    <input class="form__input" type="text">
+                  </label>
+                </div>
+                <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+                <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+                <div class="capcha_block">
+                  <div class="capcha">
+                    <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                  </div>
+                  <label class="consent_block">
+                    <input type="checkbox"><b></b>
+                    <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="container link_container"><a class="link link--dotted js-anchor" href=".section-4">What is prime of prime?</a></div>
+          </div>
+          <div class="section-2 goanim an">
+            <div class="container">
+              <div class="section__subtitle">Liquidity tailored for run this market</div>
+              <h2 class="section__title">Genuine <span class="section__title--bold">PoP Pricing</span></h2>
+              <p class="section__description">Get competitive DMA pricing for 78 Forex pairs as well as a further 725 trading instruments and 8 asset classes.</p>
+            </div>
+            <div class="container">
+              <div class="tabs">
+                <input type="radio" name="tabs-btn" id="tabs-btn-1" value="" checked>
+                <label for="tabs-btn-1">Forex</label>
+                <input type="radio" name="tabs-btn" id="tabs-btn-2" value="">
+                <label for="tabs-btn-2">Commodities</label>
+                <input type="radio" name="tabs-btn" id="tabs-btn-3" value="">
+                <label for="tabs-btn-3">Shares CFD</label>
+                <input type="radio" name="tabs-btn" id="tabs-btn-4" value="">
+                <label for="tabs-btn-4">Crypto</label>
+                <input type="radio" name="tabs-btn" id="tabs-btn-5" value="">
+                <label for="tabs-btn-5">CFDs</label>
+                <input type="radio" name="tabs-btn" id="tabs-btn-6" value="">
+                <label for="tabs-btn-6">ETFs</label>
+                <div id="tabs-content-1">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="tabs-content-2">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="tabs-content-3">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="tabs-content-4">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="tabs-content-5">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="tabs-content-6">
+                  <table class="table section-2--table">
+                    <thead>
+                      <tr>
+                        <td><span>Instrument</span></td>
+                        <td><span>Bid</span></td>
+                        <td><span>Ask</span></td>
+                        <td><span>Spread</span></td>
+                        <td><span>Change</span></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold green">-0.19%</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold red">-0.19%</span></td>
+                      </tr>
+                      <tr class="lizy hide">
+                        <td>
+                          <label><span class="upp bold">EUR/USD</span>
+                            <input type="checkbox"><b></b>
+                          </label>
+                        </td>
+                        <td><span>1.10<span class="bold">01</span></span></td>
+                        <td><span class="red">1.10<span class="bold red">02</span></span></td>
+                        <td><span>0.0001</span></td>
+                        <td><span class="bold">-0.19%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__button_block"><a class="btn btn--dark_green btn--box_shadow fancybox js-action-btn" href="javascript:;">Check specifications</a><a class="btn more_button more_button--arrow js-show_much" href="#">Load more</a><a class="btn more_button more_button--arrow js-hide_much hide" href="#">Hide too much</a></div>
+          </div>
+          <div class="section-3 goanim an">
+            <div class="container">
+              <div class="section__title"><span class="section__title--bold">Forex</span> Liquidity</div><span class="main-text"> B2Broker offers single and direct market access to all Tier-1 FX liquidity venues, empowering your business with incomparable levels of technology, the deepest liquidity, speed of execution and professional support with full transparency and trading anonymity at ultra-competitive trading costs. </span><span class="main-text">With our liquidity solutions, we are able to provide financial institutions with the highly developed liquidity access infrastructure and connectivity choices necessary to handle even the most complicated HFT systems. Using our expertise and technology, we deliver customized liquidity solutions tailored to our clients’ exact execution needs.</span>
+            </div>
+          </div>
+          <div class="section-4 goanim an">
+            <div class="container">
+              <div class="section__title"><span class="section__title--bold">What is</span> Prime of Prime?</div><span class="main-text"> Prime of Prime (PoP) refers to a firm that has an account with a leading global Prime Brokers who offers their services to other market participants such as Forex Brokers, LPs, ECNs, etc. PoPs bridge the gap between the institutional and retail Forex markets and through a variety of mechanisms, enable brokerages to finance their trades with the backing necessary to support trading at big volumes.</span><span class="main-text">We have been providing our PoP services to brokerages, hedge and crypto funds, investment managers, professional traders and other financial institutions since 2014. We deliver our renowned PoP solutions using cutting edge technology coupled with outstanding customer service from our team of experts. </span>
+              <div class="number_block">
+                <div class="number_block-content">
+                  <div class="number_block--text">Spreads from</div>
+                  <div class="number_block--number">0<span class="number_block--number-text">pips</span></div>
+                </div>
+                <div class="number_block-content">
+                  <div class="number_block--text">More than</div>
+                  <div class="number_block--number">78<span class="number_block--number-text">pairs</span></div>
+                </div>
+                <div class="number_block-content">
+                  <div class="number_block--text">Execution from</div>
+                  <div class="number_block--number">49<span class="number_block--number-text">ms</span></div>
+                </div>
+                <div class="number_block-content">
+                  <div class="number_block--text">Support</div>
+                  <div class="number_block--number">24/7</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-5">
+            <div class="container">
+              <div class="section__description goanim an">How it works</div>
+              <div class="section__title goanim an">Prime of Prime <span class="section__title--bold">Flow</span> </div>
+              <div class="main-text goanim an">Our team is in regular contact with major banks and non-bank liquidity providers to discuss all elements of the flow directed towards us. This ensures we receive the best aggregated pricing available for our clients that is uniquely tailored for their business.</div>
+              <div class="flex_block goanim an">
+                <div class="flex_block-item">
+                  <div class="flex_block-item--heading"><span class="bold">Forex Liquidity</span> Providers</div>
+                  <div class="catalog"><span class="catalog_item">Tier 1 Banks</span><span class="catalog_item">Forex PBs</span><span class="catalog_item">ECNs</span><span class="catalog_item">MTFs</span><span class="catalog_item">Market Makers</span><span class="catalog_item">Non-banks LPs</span></div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="flex_block-item">
+                  <div class="flex_block-item--heading"><span class="bold">Equity Liquidity</span>  Providers</div>
+                  <div class="catalog"><span class="catalog_item">Brokers</span><span class="catalog_item">Exchanges</span><span class="catalog_item">LPs</span><span class="catalog_item">Derivatives</span></div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="flex_block-item">
+                  <div class="flex_block-item--heading"><span class="bold">Crypto</span> Prime</div>
+                  <div class="catalog"><span class="catalog_item">Exchange 1 </span><span class="catalog_item">Exchange 2</span><span class="catalog_item">Market Makers</span><span class="catalog_item">LPs</span><span class="catalog_item">Dark Pools</span></div>
+                  <div class="green--gradient"></div>
+                </div>
+              </div>
+              <div class="arrow_block">
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="heading">Execution & Collateralization</div>
+              <div class="arrow_block arrow_block--1">
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="heading green--gradient--1"><span class="extrabold">Prime of Prime</span> Liquidity Provider</div>
+              <div class="arrow_block arrow_block--2">
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="heading castom_padding">Aggregation & Routing </div>
+              <div class="arrow_block arrow_block--3">
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="heading green--gradient--2"><span class="extrabold">Single Margin</span> Account</div>
+              <div class="arrow_block arrow_block--4">
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+                <div class="arrow_block-item">
+                  <svg class="svg-sprite-icon icon-gray_arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#gray_arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="trade_mark goanim an">
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-1.png" alt="icon-1"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-1.png" alt="mac-1"></div>
+                  <div class="description">An electronic trading platform widely used by online retail Forex industry developed by MetaQuotes Software.</div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-2.svg" alt="icon-2"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-2.png" alt="mac-2"></div>
+                  <div class="description">A multi-asset trading platform developed by DevExperts supporting trading equities, ETFs, futures, options, Forex, Commoditiies, CFDs and cryptocurrencies.</div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-3.svg" alt="icon-3"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-3.png" alt="mac-3"></div>
+                  <div class="description">A matching engine platform for exchanges developed by B2Broker that powers up the world's best-known exchanges.</div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-4.png" alt="icon-4"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-4.png" alt="mac-4"></div>
+                  <div class="description">A platform combining the features of margin and spot trading in one system powered by B2Broker.</div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-5.svg" alt="icon-5"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-5.png" alt="mac-5"></div>
+                  <div class="description">A provider of technology for multi-asset class execution, connectivity, aggregation, distribution and hub.</div>
+                  <div class="green--gradient"></div>
+                </div>
+                <div class="trade_mark-item small_boxSh">
+                  <div class="mark"><img src="images/trade_mark/trade-6.png" alt="icon-6"></div>
+                  <div class="main_image"><img src="images/trade_mark/main-6.png" alt="mac-6"></div>
+                  <div class="description">A financial technology provider with cutting-edge aggregation software, ultra-low-latency connectivity, institutional grade hosting solutions.</div>
+                  <div class="green--gradient"></div>
+                </div>
+              </div>
+              <div class="another_trades goanim an">
+                <div class="description">or use another type of delivery</div>
+                <div class="flex_block">
+                  <div class="another_trades--left small_boxSh">
+                    <div>
+                      <div class="another_trades--title">FIX API</div>
+                      <div class="another_trades--text">Receive tailored multi-asset liquidity <span class="db"></span> via an industry-standard API. It allows you to integrate any proprietary trading platform to our liquidity.</div>
+                    </div>
+                    <div><img src="images/trade_mark/trade-7.png" alt="icon-7"></div>
+                  </div>
+                  <div class="another_trades--right small_boxSh">
+                    <div class="another_trades--title">White Labels</div>
+                    <div class="another_trades--text">Receive tailored multi-asset liquidity via an industry-standard API. It allows you to integrate any proprietary.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="check_catalog goanim an">
+                <div class="flex_block">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Single Margin Account</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Low Spreads & Commissions</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fast DMA Execution</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Big range of instruments</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">24/7 Technical Support</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Custom Report Solutions</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Mulitiplies venue distribution</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Pure A-book  (riskless trading) model</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Multiplie API and institu-tional GUIs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-6 goanim an">
+            <div class="container">
+              <div class="section__title"><span class="section__title--bold">Compare</span> PoP Liquidity with others</div>
+              <div class="main-text">We have solid experience of working with the best liquidity providers and our effectiveness has stood the test of time, proven by multi-billion dollar turnovers. </div>
+              <div class="table_wrapper">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <td><span></span></td>
+                      <td class="dark_gray"><span>Single LP</span></td>
+                      <td class="gray"><span>Several LPs</span></td>
+                      <td class="dark_gray"><span>Prime of Prime </span></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span>Single Margin Account Model</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Simple Risk Management System</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Multiple types of liquidity</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Agregated liquidity in one stream</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Full Netting System</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Single Margin Requirements</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Single comission Structure payments</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Competitve Spreads and volumes</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Realible liquidity stream with multiple backups</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Protection against changes in trading conditions</span></td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-close">
+                          <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                      <td>
+                        <svg class="svg-sprite-icon icon-bold_check">
+                          <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>Risk counterparty</span></td>
+                      <td><span class="upp">HIGH</span></td>
+                      <td><span class="upp">MEDIUM</span></td>
+                      <td><span class="upp">LOW</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 white goanim an">
+            <div class="container">
+              <div class="section__title">Get your <span class="section__title--bold">Prime Liquidity</span></div>
+              <div class="main-text">We are here to provide you with the best liquidity to match your exact requirements. Get in touch now.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span>Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section-7">
+            <div class="container">
+              <div class="section__title goanim an">Aggregation & <span class="section__title--bold">Distribution</span></div>
+              <div class="main-text goanim an">Access the best technology from aggregated liquidity and multiple distribution venues to cater for your traders needs. B2Broker continues to expand its liquidity distribution, aggregating liquidity via several distribution systems. Brokers and white label partners can be connected to our liquidity pool via FIX API in just 5 minutes and gain access to the deepest institutional liquidity pools in the industry, super-tight spreads and more.</div>
+              <div class="aggregation_image goanim an"><img src="images/aggregation.png" alt="aggregation"></div>
+            </div>
+          </div>
+          <div class="section-9 goanim an">
+            <div class="container">
+              <div class="section__title">Wide <span class="section__title--bold">connectivity</span></div>
+              <div class="main-text">We offer multi-connectivity cross connection to 7 different trading platforms and can connect via Fix API to any system. Liquidity can be delivered to any trading system and any trader including cash liquidity, cash trading and OTC deals. </div>
+              <div class="grafic_image"><img src="images/content/grafic.png" alt="grafic"></div>
+              <div class="trade_catalog small_boxSh">
+                <div class="trade_catalog-item"><img src="images/trade_mark/trade-5.svg" alt="icon1"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/trade-8.png" alt="icon2"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/venues/icon2.png" alt="icon3"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/venues/icon9.png" alt="icon3"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/venues/icon1.png" alt="icon4"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/venues/icon8.svg " alt="icon5"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark/trade-3.svg" alt="icon6"></div>
+              </div>
+              <div class="another_trades">
+                <div class="description">use another trading platform?</div>
+                <div class="flex_block">
+                  <div class="another_trades--left small_boxSh">
+                    <div>
+                      <div class="another_trades--title">FIX API for trading and integrations</div>
+                      <div class="another_trades--text">Receive tailored multi-asset liquidity via an industry-standard API. It allows you to integrate any proprietary trading platform to our liquidity.</div>
+                    </div>
+                    <div><img src="images/trade_mark/trade-7.png" alt="icon-7"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-10 goanim an">
+            <div class="container">
+              <div class="section__title">Execution <span class="section__title--bold">with ease</span></div>
+              <div class="main-text">B2Broker offers incomparable levels of technology and speed of execution facilitated by a single liquidity contract and single margin account. No need to enter into a separate agreement with an exchange, bank, prime broker or liquidity provider.</div>
+            </div>
+            <div class="grafic_slider">
+              <div class="grafic_slider--arrow_block">
+                <div class="slider_arrow slick--prev">
+                  <svg class="svg-sprite-icon icon-slider-arrow-green">
+                    <use xlink:href="images/svg/symbol/sprite.svg#slider-arrow-green"></use>
+                  </svg>
+                </div>
+                <div class="slider_arrow slider_arrow--prev slider_arrow--green slick--next">
+                  <svg class="svg-sprite-icon icon-slider-arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#slider-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="grafic_slider--slick">
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">NET open positions </div>
+                  <div class="grafic_slider--slick_item--description">Netting is a method of reducing risks in financial contracts by combining or aggregating multiple financial obligations to arrive at a net obligation amount</div>
+                  <div class="grafic_slider--slick_item--image"><img src="images/slick_grafic/grafic-1.png" alt="grafic"></div>
+                </div>
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">Advanced Reports  </div>
+                  <div class="grafic_slider--slick_item--description">Take control of your business with our advanced reporting capabilities. Create numerous comprehensive reports such as detailed account statements and scheduled reports by email with parameters configured to your own personal specifications. Utilise real-time and historical data to plan ahead and maximise your business potential.</div>
+                  <div class="grafic_slider--slick_item--image castom-width"><img src="images/slick_grafic/grafic-2.png" alt="grafic"></div>
+                </div>
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">700 instruments</div>
+                  <div class="grafic_slider--slick_item--description">Trade the Forex markets with 75 Forex pairs, 700+ financial instruments and 8 asset classes including indices, shares, precious metals, commodities and cryptocurrencies. With a strong reputation, solid financial markets expertise and access to the best lsolutions, B2Broker is one of the most sought-after liquidity providers in the industry.</div>
+                  <div class="grafic_slider--slick_item--image"><img src="images/slick_grafic/grafic-3.png" alt="grafic"></div>
+                </div>
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">Single Margin Account </div>
+                  <div class="grafic_slider--slick_item--description">Simply sign a single agreement with B2Brоkеr who will take care of all your needs by acting as both your liquiditу and technology provider. </div>
+                  <div class="grafic_slider--slick_item--image"><img src="images/slick_grafic/grafic-4.png" alt="grafic"></div>
+                </div>
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">Range of order of types </div>
+                  <div class="grafic_slider--slick_item--description">The value of physical shareholdings can be used as security for any leveraged trades executed through with our collateralized leverage service.</div>
+                  <div class="grafic_slider--slick_item--image castom-width-2"><img src="images/slick_grafic/grafic-5.png" alt="grafic"></div>
+                </div>
+                <div class="grafic_slider--slick_item">
+                  <div class="grafic_slider--slick_item--heading">Professional Institutional GUI</div>
+                  <div class="grafic_slider--slick_item--description">Cutting-edge trading UIs that allow to take full control of the market</div>
+                  <div class="grafic_slider--slick_item--image"><img src="images/slick_grafic/grafic-6.png" alt="grafic"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-11 goanim an">
+            <div class="box_block">
+              <div class="box_block--title"><span class="extrabold">Free bridges</span> for MT4/5</div>
+              <div class="box_block--text">We offer the most competitive aggregated liquidity and provide full flexibility in connecting to liquidity pools. We guarantee seamless connectivity to multiple liquidity providers with the use of our MT4/MT5 Bridges absolutely free of charge. <span class="db"></span>No set-up fee. No volume fee.</div>
+            </div>
+            <div class="box_block">
+              <div class="box_block--title"><span class="extrabold">Customized</span> Streams</div>
+              <div class="box_block--text">We work closely with its clients offering ready-made or customised streams of liquidity to facilitate trading. This enables brokers to benefit from best execution and competitive spreads, together with raw, small, medium and big mark-ups and get rebates.</div>
+            </div>
+          </div>
+          <div class="section-12">
+            <div class="container">
+              <div class="section__title goanim an">Cutting-edge <span class="section__title--bold">infrastructure</span></div>
+              <div class="main-text goanim an">The infrastructure upon which trades are executed is crucially important in getting the fastest trade execution possible. Gain access to our global network coverage from the world's largest finаnciаl ecosystem within all Equinix centers worldwide. Physical proximity to all central trаde servers of major ехchаngеs, liquiditу providers, bаnks and other finаnciаl institutions, allows us to minimize trаde requests up to a hundredth of a millisecond.</div>
+              <div class="speed_form goanim an">
+                <div class="speed_form--left">
+                  <div class="speed_block">
+                    <div class="speed_block--heading">Execution Speed from </div>
+                    <div class="speed_block--main"><img src="images/speed.svg" alt="speed"><span class="big">49<span class="little">ms</span></span></div>
+                  </div>
+                  <div class="speed_form--green_gr"></div>
+                  <div class="speed_form--gray_gr"></div>
+                  <div class="speed_form--left-text">up to 2 times faster than other LPs</div>
+                </div>
+                <div class="speed_form--right">
+                  <div class="speed_form--heading">Presence in major financial centers for low latency execution</div>
+                  <div class="speed_form--description">Physical proximity to all central trade servers of major exchanges, liquidity providers, banks and other financial institutions, allows us to minimize trade request up to a hundredth of a millisecond.</div>
+                </div>
+              </div>
+              <div class="connectivity_block goanim an">
+                <div class="connectivity_block--heading">Connectivity to major technology, bridge and platform providers</div>
+                <div class="connectivity_block--description">Our operational setup ensures swift API implementation. We offer FX prime of prime brokerage and liquidity services via FIX API and multiple technology providers. T-1 hosting in LD4.</div>
+                <div class="connectivity_block--image"><img src="images/connectivity.png" alt="connectivity"></div>
+              </div>
+            </div>
+            <div class="container-2 goanim an">
+              <div class="box-catalog">
+                <div class="box_block">
+                  <div class="box_block--title">Anti-DDOS</div>
+                  <div class="box_block--text">For large brokers, it is recommended to deploy anti-DDOS high-defense servers to effectively target targeted DDOS attacks.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Security</div>
+                  <div class="box_block--text">All servers use strict security policies to protect against malicious attacks, intrusions, and cyber attacks.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Hot backups</div>
+                  <div class="box_block--text">A backup solution for multi-user systems with no downtime required to perform the backup. </div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Collacation</div>
+                  <div class="box_block--text">Data centre facilities providing housing for servers with managed services to support our clients.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Failover system</div>
+                  <div class="box_block--text">A standby mode is ready to take over the load from a failing system or scheduled down time. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-13 goanim an">
+            <div class="section__title">Get connected in <span class="section__title--bold">5 minutes</span></div>
+            <div class="main-text">Gain access to the deepest institutional liquidity pools in the industry in just a few minutes! We're already integrated with multiple trading platforms and bridge providers.</div>
+            <div class="mac_slider">
+              <div class="mac_slider--slick">
+                <div class="mac_slider--slick-item castom">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-1.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img src="images/trade_mark/trade-1.png" alt="icon"><span>An electronic trading platform widely used by online retail Forex industry developed by MetaQuotes Software.</span></div>
+                </div>
+                <div class="mac_slider--slick-item">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-2.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img src="images/trade_mark/trade-2.svg" alt="icon"><span>A multi-asset trading platform developed by DevExperts supporting trading equities, ETFs, futures, options, Forex, Commoditiies, CFDs and cryptocurrencies. </span></div>
+                </div>
+                <div class="mac_slider--slick-item">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-3.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img class="castom" src="images/trade_mark/trade-3.svg" alt="icon"><span>A matching engine platform for exchanges developed by B2Broker that powers up the world's best-known exchanges.</span></div>
+                </div>
+                <div class="mac_slider--slick-item">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-4.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img src="images/trade_mark/trade-4.png" alt="icon"><span>A platform combining the features of margin and spot trading in one system powered by B2Broker.</span></div>
+                </div>
+                <div class="mac_slider--slick-item">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-5.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img src="images/trade_mark/trade-5.svg" alt="icon"><span>A provider of technology for multi-asset class execution, connectivity, aggregation, distribution and hub.  </span></div>
+                </div>
+                <div class="mac_slider--slick-item">
+                  <div class="mac_slider--slick-item--main_img"><img src="images/trade_mark/main-6.png" alt="mac"></div>
+                  <div class="mac_slider--slick-item--sup"><img src="images/trade_mark/trade-6.png" alt="icon"><span>A financial technology provider with cutting-edge aggregation software, ultra-low-latency connectivity, institutional grade hosting solutions.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="flex_block">
+                <div><img src="images/mark/icon-1.png" alt="icon"></div>
+                <div><img src="images/mark/icon-2.png" alt="icon"></div>
+                <div><img src="images/mark/icon-3.png" alt="icon"></div>
+                <div><img src="images/mark/icon-4.png" alt="icon"></div>
+                <div><img src="images/mark/icon-5.png" alt="icon"></div>
+                <div><img src="images/mark/icon-6.png" alt="icon"></div>
+                <div><img src="images/mark/icon-7.png" alt="icon"></div>
+                <div><img src="images/mark/icon-8.png" alt="icon"></div>
+                <div><img src="images/mark/icon-9.png" alt="icon"></div>
+                <div><img src="images/mark/icon-10.png" alt="icon"></div>
+                <div><img src="images/mark/icon-11.png" alt="icon"></div>
+                <div><img src="images/mark/icon-12.png" alt="icon"></div>
+                <div><img src="images/mark/icon-13.png" alt="icon"></div>
+                <div><img src="images/mark/icon-14.png" alt="icon"></div>
+              </div>
+              <div class="big_text">and <span class="extrabold">any other trading platforms</span></div>
+              <div class="little_text">integration in just 14 days</div>
+            </div>
+          </div>
+          <div class="section-8 white goanim an">
+            <div class="container">
+              <div class="section__title">Get your <span class="section__title--bold">Prime Liquidity</span></div>
+              <div class="main-text">We are here to provide you with the best liquidity to match your exact requirements. Get in touch now.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span>Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section-14 goanim an">
+            <div class="container">
+              <div class="section__title">Market <span class="section__title--bold">Depth</span> <span class="db"></span> and <span class="section__title--bold">Liquidity</span> pool</div>
+              <div class="main-text">Market liquidity impacts everything from the bid-offer spread to trade execution and is important since it affects how quickly you can open and close positions. As a broker, you need to have access to the deepest liquidity pool available to handle all the needs of your traders.</div>
+              <div class="image_block"><img src="images/table.png" alt="table"></div>
+              <div class="catalog">
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Direct access to both exchanges and OTC liquidity pools</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Advanced bridge technologies – fastest execution even during high activity on the market</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Get benefits from deep depth and avoid big slippage</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Co-location DCs across the world to ensure the lowest latency</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Benefit from competitive spreads and margin requirements</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text">Agregated volume into order book</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-15 goanim an">
+            <div class="container">
+              <div class="section__title">Liquidity tailored for all <span class="section__title--bold">business models</span></div>
+              <div class="main-text">Our liquidity solutions provide you with access and connectivity to the deepest liquidity pool customized to your exact needs. Whatever your business model, B2Broker provides highly developed liquidity access  to take care of all your clients’ requirements, including those working with HFT, automated,algorithmic and API trading systems.</div>
+            </div>
+            <div class="business--slick_slider">
+              <div class="item">
+                <div class="item--heading">Brokerages</div>
+                <div class="item--description">Brokerages provide traders with access to platforms enabling them to trade the Forex markets. We support numerous brokers who approach us for our technology and liquidity know-how so they can service their clients in the most professional way.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">The best prices from multiple global liquidity venues</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">World leader in online trading</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fast data and execution through FIX API</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Index, commodity, forex and <span class="db"></span> equity CFDs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">Family Offices </div>
+                <div class="item--description">Wealthy individuals often take control of their finances through family offices. We provide access to cutting-edge trading and investment technology so your clients can trade and manage their portfolios with greater efficiency.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">A personal account manager</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">DMA on equities and FX, with for one-to<span class="db"></span>-one service access to deep liquidity</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fast data feeds and execution</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Powerful range of platforms<span class="db"></span> and reporting tools </span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">Financial Institutions</div>
+                <div class="item--description">Small to medium-sized banks need access to deep pools of liquidity and efficient global market access. An individual approach is required to provide a highly specialized solution that meets the needs of their many different clients.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Customized approach</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">B2Core back office solution</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Anonymous and fully transparent liquidity </span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">24/7365 professional<span class="db"></span> customer support </span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">Market Makers</div>
+                <div class="item--description">Market makers are required to continually quote prices and volumes they are willing to buy and sell at every second of the trading day at the market price to provide traders with the most professional service.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Allow your traders to execute trades whenever they want</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fulfill orders and execute transactions within seconds</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Powerful range of platforms and<span class="db"></span> market depth</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Partner with a leading global<span class="db"></span> prime of prime broker </span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">Hedge Funds</div>
+                <div class="item--description">Hedge funds invest in a variety of financial markets using pooled funds collected from investors and applying various trading strategies to boost their performance and returns for their investors. </div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Invest in a variety of financial markets<span class="db"></span>  using pooled funds</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Choose from 7 asset classes and over 800 trading instruments </span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Suitable for high-net-worth<span class="db"></span>  individuals and professional<span class="db"></span>  investors</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Personalised service with <span class="db"></span> individual account manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">HFT & Qantum Teams</div>
+                <div class="item--description">Quantum computing is the future of electronic trading, bringing about high-frequency trading (HFT) via the use of algorithms. To this end, our specialised HFT and Quantum teams continually work on the development of algorithms to automatically initiate trades according to predefined strategies.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Expert technology-led solutions<span class="db"></span> developed by our specialists</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Algorithmic trading for executing orders<span class="db"></span> using automated trading instructions </span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">High speeds, high turnover rates<span class="db"></span> and high order-to-trade ratios</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Analyze multiple markets and execute<span class="db"></span> orders based on market conditions</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item--heading">Introducing Brokers</div>
+                <div class="item--description">Introducing Brokers (IBs) introduce new customers to a Forex brokerage and receive a commission in return for sending clients their way. IB programs can greatly reduce the costs involved in acquiring new customers for a brokerage.</div>
+                <div class="item--box">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Multiple account management</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Full range of platforms and products</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Customisable reporting technology</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Revenue generation through introductions </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_block">
+              <div class="bottom_block--text">Whatever type of financial business you're in, we're here to help.</div><a class="btn btn--dark_green btn--box_shadow" href="#">Call me back</a>
+            </div>
+          </div>
+          <div class="section-16 goanim an">
+            <div class="section__title">Where vision becomes <span class="section__title--bold">reality</span></div>
+            <div class="main-text">See how our liquidity and technolgy solutions are trusted throughout the industry.</div>
+            <div class="video_block">
+              <div class="video_block--preview"><img class="image_preview" src="images/video_previw.jpg" alt="video_previw">
+                <div class="video_block--play">
+                  <svg class="svg-sprite-icon icon-play">
+                    <use xlink:href="images/svg/symbol/sprite.svg#play"></use>
+                  </svg>
+                </div>
+              </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="you_button"><a class="btn more_button more_button--arrow" href="#"><img class="youtube" src="images/youtube.png" alt="youtube">Watch more on YouTube</a></div>
+          </div>
+          <div class="section-17 goanim an">
+            <div class="container">
+              <div class="section__title">Your <span class="section__title--bold">benefits</span></div>
+              <div class="box_catalog">
+                <div class="box_block">
+                  <div class="box_block--title">24/7 Technical support</div>
+                  <div class="box_block--text">Our professional and helpful technical support team is on hand 24/7 to deal with customer enquiries whenever the need arises.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Tutorials and materials</div>
+                  <div class="box_block--text">B2Broker is committed to working alongside its clients to ensure ultimate user satisfaction. An extensive range of tutorials and materials is available to assist with all technical aspects.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">7 languages</div>
+                  <div class="box_block--text">Our knowledgeable and friendly customer service can assist you in 7 languages including English, Russian, Chinese, Japanese, Spanish, Arabic and Urdu.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Deposits & Withdrawals</div>
+                  <div class="box_block--text">A wide variety of deposit and withdrawal methods are available including bank wire transfer, a range of popular credit/debit cards, crypto payments and EMIs.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Education </div>
+                  <div class="box_block--text">Education is an all-important part of our service. We offer a variety of training materials including videos and demos to help our clients understand the business.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Product manager</div>
+                  <div class="box_block--text">Our product managers are deeply knowledgeable about our technical solutions and are there to assist our clients with any specific enquiries.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Multiple jurisdictions</div>
+                  <div class="box_block--text">B2Broker (B2Prime) is multi-regulated. As a global liquidity provider, B2Broker is making steps towards having a presence in all significant jurisdications.</div>
+                </div>
+                <div class="box_block">
+                  <div class="box_block--title">Account Manager</div>
+                  <div class="box_block--text">All our clients are assigned a personal account manager who is always on hand to answer questions and take care of all their requirements.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-18">
+            <div class="container">
+              <div class="section__title goanim an">Execution via <span class="section__title--bold">advanced trading platforms</span> and <span class="section__title--bold">APIs</span></div>
+              <div class="main-text goanim an">Our access to liquidity allows us to ensure that trades can be executed quickly and efficiently. Connect to the markets via our trading platforms and APIs for web, mobile and tablet trading.</div>
+            </div>
+            <div class="image_block"><img src="images/content/grafic-2.png" alt="grafic"></div>
+            <div class="container">
+              <div class="trade_catalog">
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i1.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i2.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i3.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i4.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i5.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i6.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i7.png" alt="icon"></div>
+                <div class="trade_catalog-item"><img src="images/trade_mark-2/i8.png" alt="icon"></div>
+              </div>
+              <div class="text_item">
+                <div class="text_item--heading">FIX API</div>
+                <div class="text_item--description">Standard protocol that allows communication between a client, trader, investment fund, or broker and our platforms.<span class="db"></span> FIX API is used by numerous banks, prime brokers, and hedge funds to operate in real-time mode.</div>
+              </div>
+              <div class="text_item">
+                <div class="text_item--heading">REST API</div>
+                <div class="text_item--description">Traders, investors and brokers can create custom trading applications, integrate into our platforms and build algo trading systems. Calls can be made in any language that supports a standard HTTP REST API on request.</div>
+              </div>
+              <div class="text_item">
+                <div class="text_item--heading">WebSocket API</div>
+                <div class="text_item--description">Includes live streaming and historical prices for live trade operations. It is scalable, light and robust and is compatible with any Java-compliant operating system.</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 white goanim an">
+            <div class="container">
+              <div class="section__title">Get your <span class="section__title--bold">Prime Liquidity</span></div>
+              <div class="main-text">We are here to provide you with the best liquidity to match your exact requirements. Get in touch now.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span>Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section-19 goanim an">
+            <div class="container">
+              <div class="section__title">Advanced <span class="section__title--bold">reporting</span></div>
+              <div class="main-text">Create a multitude of comprehensive, highly detailed reports with parameters configured to personal specifications. From detailed account statements to volume trade reports, get complete control over your operations and maximise your business potential.</div>
+              <div class="advanced_slider">
+                <div class="advanced_slider--wrapper">
+                  <div class="advanced_slider--slick">
+                    <div class="item"><img src="images/advanced-items/item1.png" alt="item"></div>
+                    <div class="item"><img src="images/advanced-items/item2.png" alt="item"></div>
+                    <div class="item"><img src="images/advanced-items/item3.png" alt="item"></div>
+                    <div class="item"><img src="images/advanced-items/item4.png" alt="item"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced_slider--arrow_block center_arrow-block">
+                <div class="slider_arrow advanced_slick--prev">
+                  <svg class="svg-sprite-icon icon-slider-arrow-green">
+                    <use xlink:href="images/svg/symbol/sprite.svg#slider-arrow-green"></use>
+                  </svg>
+                </div>
+                <div class="slider_arrow slider_arrow--prev slider_arrow--green advanced_slick--next">
+                  <svg class="svg-sprite-icon icon-slider-arrow">
+                    <use xlink:href="images/svg/symbol/sprite.svg#slider-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="check_catalog">
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Detailed Account Statements</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Positions State Report</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Account State Report</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Detailed Trades Report</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Scheduled Reports by email</span>
+                </div>
+                <div class="check_block">
+                  <div class="check_block__icon">
+                    <svg class="svg-sprite-icon icon-check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </div><span class="check_block__text unselectable">Volume Trader Report</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-20 goanim an">
+            <div class="section__title">Customer <span class="section__title--bold">support</span>  </div>
+            <div class="section_subtitle">24/7/365</div>
+            <div class="main-text">Our professional Customer Service team is available round the clock to assist you with any queries. Please do not hesitate to get in touch.</div>
+          </div>
+          <div class="section-21 goanim an">
+            <div class="container"> 
+              <div class="section__title">Trading <span class="section__title--bold">hours</span></div>
+              <div class="main-text">Availability of 4 trading sessions: Sydney, Tokyo, London and New York provides 24 hour access to trade 5 days a week.</div>
+              <div class="main_block map_block"><img class="map" src="images/Map.png" alt="map"><img class="session" src="images/trade_session.png" alt="trade_session"></div>
+              <div class="button_block"><span class="btn btn-gray-2">GMT Time</span>
+                <div class="text">Please note that trading hours are subject to change. Liquidity providers may adjust trading schedule as necessary according to market conditions.</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-22 goanim an">
+            <div class="container">
+              <div class="section__title section__title--bold">FAQ</div>
+              <div class="main-text">Have a question? A source of useful information about our products and services.</div>
+              <div class="question">
+                <div class="question-item question-item-js"><span>What if i want to migrate? 
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Quis est occaecat officia ex id cillum commodo sint esse in.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Aute officia dolore voluptate esse eiusmod laborum eiusmod proident.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Laborum id cupidatat qui elit.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Aute aliquip reprehenderit aliquip velit dolore.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Pariatur eiusmod mollit sunt consequat adipisicing eu fugiat do.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Exercitation velit anim officia labore aute qui ea aute Lorem velit ut. 
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="question-item question-item-js"><span>Sunt sint cupidatat nostrud deserunt.
+                    <div class="question-item_content">Home is behind, the world ahead and there are many paths to tread through shadows to the edge.</div></span></div>
+                <div class="another_question">
+                  <div class="another_question--heading">Have another question?</div>
+                  <div class="another_question--link">We hope we have resolved any issues you may have. In the event you have any outstanding queries, please don’t hesitate to reach out. <a href="#">Ask a question here.</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-8 goanim an">
+            <div class="container">
+              <div class="section__title">Get your <span class="section__title--bold">Prime Liquidity</span></div>
+              <div class="main-text">We are here to provide you with the best liquidity solutions tailored to your exact requirements. Contact us now.</div>
+              <form class="get_your_prime_form">
+                <div class="get_your_prime_form--left">
+                  <label class="form_label"><span>Your Name</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <div class="form__phone">
+                    <select class="form__phone__select form__input" name="number">
+                      <option value="+7">+7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <label class="form_label"><span>Phone</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                  </div><span class="description">Based on your IP, you are in Russian Federation.<a href="#">Change</a> Your data will be in US data center.</span>
+                </div>
+                <div class="get_your_prime_form--right">
+                  <label class="form_label"><span>Your Email</span>
+                    <input class="form__input" type="text" placeholder="">
+                  </label>
+                  <button class="btn btn--green btn--box_shadow upp">Get Started!</button>
+                  <div class="capcha_block gray">
+                    <div class="capcha">
+                      <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
+                    <label class="consent_block">
+                      <input type="checkbox"><b></b>
+                      <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section-23">
+            <div class="container">
+              <div class="section__title goanim an">It comes <span class="section__title--bold">best with</span></div>
+              <div class="main-text goanim an">Our liquidity is best combined with the leading industry trading platforms to provide the ultimate in performance and user satisfaction.</div>
+              <div class="best_with">
+                <div class="best_with--left">
+                  <div class="best_with--heading">White Label MT5 </div>
+                  <div class="best_with--text">The best and most professional MT4/5 Forex White Label solution tailored specifically to your brand.</div>
+                  <div class="best_with--img"><img src="images/best/item1.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Cutting-edge MT4/5 platforms</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Fully-customised solutions</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Mobile, web and desktop version</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Professional 24/7/365 support</span>
+                  </div>
+                </div>
+              </div>
+              <div class="best_with">
+                <div class="best_with--left">
+                  <div class="best_with--heading">B2Margin (Margin Exchange)</div>
+                  <div class="best_with--text">A platform combining the features of margin and spot trading in one system. Powered by B2Broker.</div>
+                  <div class="best_with--img"><img src="images/best/item2.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Choose the leverage for each order</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Supports FIX API connection</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Market depth 40 levels availible</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Favourite markets, grouping, watchlist, trading activity and history modules</span>
+                  </div>
+                </div>
+              </div>
+              <div class="best_with">
+                <div class="best_with--left">
+                  <div class="best_with--heading">White Label MT4</div>
+                  <div class="best_with--text">A matching engine platform for exchanges developed by B2Broker that powers up the world's best known exchanges.</div>
+                  <div class="best_with--img"><img src="images/best/item3.png" alt="img"></div>
+                </div>
+                <div class="best_with--right">
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Cutting-edge technology</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Used by the world's best-known exchanges</span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">List unlimited tradable assets </span>
+                  </div>
+                  <div class="check_block">
+                    <div class="check_block__icon">
+                      <svg class="svg-sprite-icon icon-check">
+                        <use xlink:href="images/svg/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </div><span class="check_block__text">Include 3 level security system</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-24 goanim an">
+            <div class="form-wrapper">
+              <div class="form-wrapper-left">
+                <div class="left-form">
+                  <div class="form--heading">Subscribe to our newsletter</div>
+                  <div class="form--description">Join our email list and stay updated on all our latest developments and special offers.  </div>
+                  <form class="form-content">
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text">
+                    </label>
+                    <button class="btn btn--green btn--box_shadow upp">Subscribe</button>
+                  </form>
+                </div>
+                <div class="and_item">and</div>
+              </div>
+              <div class="form-wrapper-right">
+                <div class="right-form">
+                  <div class="form--heading">Submit a request</div>
+                  <div class="form--description">We are here to assist you with any queries about our products and services.   </div>
+                  <form class="form-content">
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                    <div class="form__phone">
+                      <select class="form__phone__select form__input" name="number">
+                        <option value="+7">+7</option>
+                        <option value="8">8</option>
+                      </select>
+                      <label class="form_label"><span>Phone</span>
+                        <input class="form__input" type="text" placeholder="">
+                      </label>
+                    </div>
+                    <div class="form-content--description">Based on your IP, you are in Russian Federation.Change Your data will be in US data center.</div>
+                    <label class="form_label"><span>Email</span>
+                      <input class="form__input" type="text" placeholder="">
+                    </label>
+                    <button class="btn btn--green btn--box_shadow upp">Give me a call</button>
+                    <div class="capcha_block gray">
+                      <div class="capcha">
+                        <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+                        <script src="https://www.google.com/recaptcha/api.js"></script>
+                      </div>
+                      <label class="consent_block">
+                        <input type="checkbox"><b></b>
+                        <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-menu-section">
+            <div class="container">
+              <div class="footer-menu-section castomPadding">
+                <div class="container">
+                  <div class="footer-menu-section-flex">
+                    <div class="footer-menu-section-flex__item goanim an">
+                      <div class="footer-menu-section-flex__title">Core products</div>
+                      <ul class="menu menu-castom-height-1">
+                        <li class="menu-item"><a href="#">MetaTrader 4 WhiteLabel</a></li>
+                        <li class="menu-item"><a href="#">MetaTrader 5 WhiteLabel</a></li>
+                        <li class="menu-item"><a href="#">B2Trader (Matching Engine)</a></li>
+                        <li class="menu-item"><a href="#">B2Margin (Margin Exchange)</a></li>
+                        <li class="menu-item"><a href="#">B2Core (Traders room)</a></li>
+                        <li class="menu-item disabled"><a href="#">MarksMan Hub</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Extras</div>
+                      <ul class="menu menu-castom-height-2">
+                        <li class="menu-item disabled"><a href="#">Data Distribution Feed</a></li>
+                        <li class="menu-item disabled"><a href="#">IB/Affiliate Module</a></li>
+                        <li class="menu-item disabled"><a href="#">Widgets for the Quotes</a></li>
+                        <li class="menu-item disabled"><a href="#">WEB API MT4/MT5</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Money Management</div>
+                      <ul class="menu">
+                        <li class="menu-item"> <a href="#">Copy/Social Trading platform</a></li>
+                        <li class="menu-item"> <a href="#">MAM platform </a></li>
+                        <li class="menu-item"> <a href="#">PAMM platform</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-menu-section-flex__item goanim an">
+                      <div class="footer-menu-section-flex__title">Liquidity</div>
+                      <ul class="menu menu-castom-height-1">
+                        <li class="menu-item"> <a href="#">Crypto Derivatives/CFD</a></li>
+                        <li class="menu-item"> <a href="#">Forex</a></li>
+                        <li class="menu-item"> <a href="#">Metals</a></li>
+                        <li class="menu-item"> <a href="#">Indices</a></li>
+                        <li class="menu-item"> <a href="#">Energy </a></li>
+                        <li class="menu-item"> <a href="#">Equities CFD</a></li>
+                        <li class="menu-item"> <a href="#">ETFs CFD</a></li>
+                        <li class="menu-item disabled"> <a href="#">Crypto Spot</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Crypto Processing</div>
+                      <ul class="menu menu-castom-height-2">
+                        <li class="menu-item"> <a href="#">Merchant Solutions</a></li>
+                        <li class="menu-item"> <a href="#">Enterprise Wallets Solutions</a></li>
+                        <li class="menu-item disabled"> <a href="#">WhiteLabel Crypto Processing</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Turnkey Wallets</div>
+                      <ul class="menu menu-castom-height-2">
+                        <li class="menu-item disabled"><a href="#">Crypto Wallets</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-menu-section-flex__item goanim an">
+                      <div class="footer-menu-section-flex__title">Turnkey Brokerage</div>
+                      <ul class="menu menu-castom-height-1">
+                        <li class="menu-item"><a href="#">Forex Broker</a></li>
+                        <li class="menu-item"><a href="#">Crypto CFD Margin Broker </a></li>
+                        <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Broker</a></li>
+                        <li class="menu-item disabled"><a href="#">Crypto Spot Broker </a></li>
+                        <li class="menu-item disabled"><a href="#">Multi Asset Broker</a></li>
+                        <li class="menu-item disabled"><a href="#">Hedge Fund/PAMM Broker</a></li>
+                        <li class="menu-item disabled"><a href="#">Copy/Social Trading Broker</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Turnkey Exchange</div>
+                      <ul class="menu menu-castom-height-2">
+                        <li class="menu-item"><a href="#">Crypto Spot Exchange</a></li>
+                        <li class="menu-item disabled"><a href="#">Crypto Derivatives Margin Exchange</a></li>
+                        <li class="menu-item disabled"><a href="#">FX Spot/Deliverable Exchange</a></li>
+                        <li class="menu-item disabled"><a href="#">Crypto Converter</a></li>
+                      </ul>
+                      <div class="footer-menu-section-flex__title">Corporate Services</div>
+                      <ul class="menu">
+                        <li class="menu-item disabled"> <a href="#">Licenses</a></li>
+                        <li class="menu-item disabled"> <a href="#">Companies</a></li>
+                        <li class="menu-item disabled"> <a href="#">Banking Solutions</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="top-line line"></div>
+        <div class="container">
+          <div class="footer-top-row goanim an">
+            <div class="footer-top-row__copy">B2Broker© 2014-2020</div>
+            <div class="footer-top-row-social"><a class="vk" href="#"><img src="images/web_icon/vk.svg" alt="vk"></a><a class="vk" href="#"><img src="images/web_icon/p.svg" alt="p"></a><a class="vk" href="#"><img src="images/web_icon/insta.svg" alt="instagram"></a><a class="vk" href="#"><img src="images/web_icon/twitter.svg" alt="twitter"></a><a class="vk" href="#"><img src="images/web_icon/facebook.svg" alt="facebook"></a></div>
+            <div class="footer-top-row-search">
+              <input class="footer-top-row-search__input" placeholder="Search">
+              <button class="footer-top-row-search__button"><img src="images/icons/search.svg" alt="search"></button>
+            </div>
+          </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container">
+          <div class="footer-menu goanim an">
+            <ul class="menu">
+              <li class="menu-item"><a href="#">Media</a></li>
+              <li class="menu-item"><a href="#">Events</a></li>
+              <li class="menu-item"><a href="#">About us</a></li>
+              <li class="menu-item"><a href="#">Partners</a></li>
+              <li class="menu-item"><a href="#">News</a></li>
+              <li class="menu-item"><a href="#">Contacts</a></li>
+              <li class="menu-item"><a href="#">Legal</a></li>
+              <li class="menu-item"><a href="#">Blog</a></li>
+              <li class="menu-item"><a href="#">Articles</a></li>
+              <li class="menu-item"><a href="#">Careers</a></li>
+              <li class="menu-item disabled"><a href="#">Partnership</a></li>
+              <li class="menu-item disabled"><a href="#">B2Capital</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="top-line line"></div>
+        <div class="container">
+          <div class="footer-bottom--logo"><img src="images/chblogo.png" alt="logo"></div>
+          <div class="footer-text">
+            <p>The ownership for word and logo trademarks “B2Broker” belongs to B2Broker LTD, a company incorporated in the United Kingdom of Great Britain and Ireland, company number 10562809; Word and logo trademarks B2Broker are used as a trading name of group of companies that have presence in different countries.</p>
+            <p>Please pay attention that we don’t provide financial services on behalf of B2Broker LTD. We provide financial services on behalf of companies that have relevant licenses. Please carefully study our documents posted at this website: Legal information and Disclaimers, Privacy Policy and Cookie Policy. These documents are available only in English. You acknowledge that you know the English language at a sufficient level to understand the text of these documents, and you fully understand the legal consequences of these documents. In case you do not understand or understand the English language poorly, you acknowledge that you have used the services of a professional interpreter. If you don’t agree with this statement or information provided in our documents, please leave this website immediately. <span class="db"></span>Continuation of your use of our website confirms your agreement with the above statements and documents.</p>
+          </div>
+          <div class="footer-bottom-menu">
+            <ul class="menu">
+              <li class="menu-item"><a href="#">Client's area</a></li>
+              <li class="menu-item"><a href="#">Privacy Policy</a></li>
+              <li class="menu-item"><a href="#">Cokie Policy</a></li>
+              <li class="menu-item"><a href="#">Legal Information and Disclaimers</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="modal-fancy modal-form-1" id="modal" style="display:none">
+        <form class="forex_liquidity__form">
+          <h3 class="forex_liquidity__form-title">Get access to our liquidity</h3>
+          <label class="form_label"><span>Your Name</span>
+            <input class="form__input" type="text">
+          </label>
+          <label class="form_label"><span>Your Email</span>
+            <input class="form__input" type="text">
+          </label>
+          <div class="form__phone">
+            <select class="form__phone__select form__input" name="number">
+              <option value="+7">+7</option>
+              <option value="8">8</option>
+            </select>
+            <label class="form_label"><span>Phone</span>
+              <input class="form__input" type="text">
+            </label>
+          </div>
+          <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+          <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+          <div class="capcha_block">
+            <div class="capcha">
+              <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
+            <label class="consent_block">
+              <input type="checkbox"><b></b>
+              <p>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/flickity.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
