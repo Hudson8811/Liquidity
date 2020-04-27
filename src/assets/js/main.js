@@ -202,52 +202,74 @@ $(document).ready(function () {
         $(this).prev().removeClass('hide');
         $(this).parent().next('.head__item--content').addClass('hide');
     })
-    $('.text_flicky--js').flickity({
-        autoPlay: 5000,
-        wrapAround: true,
-        pageDots: false,
-        prevNextButtons: false,
+
+    // $('.text_flicky--js').flickity({
+    //     autoPlay: 7000,
+    //     wrapAround: true,
+    //     pageDots: false,
+    //     prevNextButtons: false,
+    // });
+
+    $('.text_flicky--js').slick({
+        infinite: true,
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
     });
-    $('.big_header').mouseleave(function () {
+
+
+    $('.big_header').mouseleave(function (e) {
+        e.preventDefault();
         $('.big_menu_content--js').removeClass('active');
         $('.big_menu_btn--js').removeClass('active');
     })
-    $('#Crypto_Processing--js').click(function () {
+    $('#Crypto_Processing--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#Crypto_Processing__content--js').addClass('active');
     })
 
-    $('#Core_Products--js').click(function () {
+    $('#Core_Products--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#Core_Products__content--js').addClass('active');
     })
 
-    $('#Liquidity--js').click(function () {
+    $('#Liquidity--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#Liquidity__content--js').addClass('active');
     })
 
-    $('#Turnkey_Solutions--js').click(function () {
+    $('#Turnkey_Solutions--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#Turnkey_Solutions__content--js').addClass('active');
     })
 
-    $('#Money_Management--js').click(function () {
+    $('#Money_Management--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#Money_Management__content--js').addClass('active');
     })
 
-    $('#About--js').click(function () {
+    $('#About--js').click(function (e) {
+        e.preventDefault();
         $('.big_menu_btn--js').removeClass('active');
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
@@ -296,6 +318,26 @@ $(document).ready(function () {
         $('.big_menu_content--js').removeClass('active');
         $(this).addClass('active');
         $('#About__content--js').addClass('active');
+    })
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 67) {
+            if ($('.big_menu_content--js').hasClass('active')) {
+                return
+            }
+            else {
+                $('.big_header__bg--2').addClass('scroll');
+            }
+        }
+        else {
+            $('.big_header__bg--2').removeClass('scroll');
+        }
+
+    });
+
+    $('.big_header__bg').hover(function () {
+        $('.big_header__bg--2').removeClass('scroll');
     })
 });
 
