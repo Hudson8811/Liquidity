@@ -202,11 +202,100 @@ $(document).ready(function () {
         $(this).prev().removeClass('hide');
         $(this).parent().next('.head__item--content').addClass('hide');
     })
+    $('.text_flicky--js').flickity({
+        autoPlay: 5000,
+        wrapAround: true,
+        pageDots: false,
+        prevNextButtons: false,
+    });
+    $('.big_header').mouseleave(function () {
+        $('.big_menu_content--js').removeClass('active');
+        $('.big_menu_btn--js').removeClass('active');
+    })
+    $('#Crypto_Processing--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Crypto_Processing__content--js').addClass('active');
+    })
+
+    $('#Core_Products--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Core_Products__content--js').addClass('active');
+    })
+
+    $('#Liquidity--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Liquidity__content--js').addClass('active');
+    })
+
+    $('#Turnkey_Solutions--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Turnkey_Solutions__content--js').addClass('active');
+    })
+
+    $('#Money_Management--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Money_Management__content--js').addClass('active');
+    })
+
+    $('#About--js').click(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#About__content--js').addClass('active');
+    })
+
+    // HOVER/////////////////////////////////////////////////////
+
+    $('#Crypto_Processing--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Crypto_Processing__content--js').addClass('active');
+    })
+
+    $('#Core_Products--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Core_Products__content--js').addClass('active');
+    })
+
+    $('#Liquidity--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Liquidity__content--js').addClass('active');
+    })
+
+    $('#Turnkey_Solutions--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Turnkey_Solutions__content--js').addClass('active');
+    })
+
+    $('#Money_Management--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#Money_Management__content--js').addClass('active');
+    })
+
+    $('#About--js.hover').hover(function () {
+        $('.big_menu_btn--js').removeClass('active');
+        $('.big_menu_content--js').removeClass('active');
+        $(this).addClass('active');
+        $('#About__content--js').addClass('active');
+    })
 });
 
-$('.text_flicky--js').flickity({
-    autoPlay: 5000,
-    wrapAround: true,
-    pageDots: false,
-    prevNextButtons: false,
-});
