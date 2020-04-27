@@ -203,3 +203,10 @@ $(document).ready(function () {
         $(this).parent().next('.head__item--content').addClass('hide');
     })
 });
+
+$('.text_flicky--js').flickity({
+    autoPlay: 5000,
+    wrapAround: true,
+    pageDots: false,
+    prevNextButtons: false,
+});
