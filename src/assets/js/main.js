@@ -202,7 +202,7 @@ $(document).ready(function () {
         $(this).prev().removeClass('hide');
         $(this).parent().next('.head__item--content').addClass('hide');
     })
-
+    ////////////////////////////////
     // $('.text_flicky--js').flickity({
     //     autoPlay: 7000,
     //     wrapAround: true,
