@@ -1576,6 +1576,8 @@ select:visited {
     }
     &-items{
         display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin-top: 9px;
     }
     &-item{
