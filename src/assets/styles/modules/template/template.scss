@@ -1581,6 +1581,9 @@ select:visited {
     &-item{
         max-width: 170px;
         margin-right: 19px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 
