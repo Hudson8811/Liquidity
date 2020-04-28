@@ -10,7 +10,12 @@
     }
     .big_header__bg--2{
       border-bottom: 0;
+      &.scroll{
+        opacity: 1;
+        pointer-events: visible;
+      }
     }
+
   }
   #Crypto_Processing--js, #Core_Products--js, #Liquidity--js, #Turnkey_Solutions--js, #Money_Management--js, #About--js{
     &.active{
