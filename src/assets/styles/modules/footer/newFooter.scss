@@ -52,7 +52,7 @@
     padding-top: 50px;
     padding-bottom: 62px;
     &_left-block{
-      width: 172px;
+      width: 223px;
       padding-right: 54px;
       border-right: 1px solid rgba(255, 255, 255, 0.15);
       margin-right: 53px;
@@ -73,6 +73,10 @@
         line-height: 18px;
         /* or 150% */
         color: rgba(255, 255, 255, 0.5);
+        span:not(.bold){
+          display: block;
+          margin-bottom: 20px;
+        }
       }
     }
   }

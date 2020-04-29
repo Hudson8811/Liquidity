@@ -4,6 +4,19 @@
   top: 0;
   z-index: 100;
   width: 100%;
+  #About__content--js{
+    .big_header__bottom_row__left_row{
+      padding-right: 30px;
+      
+      span:not(.bold){
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    .big_header__bottom_row__right_row .row:nth-child(3){
+      width: 36%;
+    }
+  }
   #Crypto_Processing--js, #Core_Products--js, #Liquidity--js, #Turnkey_Solutions--js, #Money_Management--js, #About--js{
     &.active{
       font-weight: 700;
@@ -72,7 +85,7 @@
         font-size: 13px;
         line-height: 15px;
         letter-spacing: -0.5px;
-        color: rgba(227, 227, 227, 0.5);
+        color:#fff;
       }
     }
     &__right_row{
