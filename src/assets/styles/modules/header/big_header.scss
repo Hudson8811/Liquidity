@@ -4,19 +4,6 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  &.hover{
-    .big_header__bg{
-      border-bottom: 0;
-    }
-    .big_header__bg--2{
-      border-bottom: 0;
-      &.scroll{
-        opacity: 1;
-        pointer-events: visible;
-      }
-    }
-
-  }
   #Crypto_Processing--js, #Core_Products--js, #Liquidity--js, #Turnkey_Solutions--js, #Money_Management--js, #About--js{
     &.active{
       font-weight: 700;
@@ -30,12 +17,12 @@
     padding: 18px 0;
     background: #202020;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #464646;
     &--2{
       padding: 20px 0;
       background: #101010;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #464646;
       transition: all .5s;
       &.scroll{
         opacity: 0;
@@ -255,7 +242,10 @@
       width: 100%;
       padding-left: 62px;
       .row{
-        width: 33%;
+        width: 36%;
+        &:nth-child(3){
+          width: 25%;
+        }
         &.big_row{
           width: 45%;
         }

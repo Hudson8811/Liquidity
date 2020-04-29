@@ -56,17 +56,12 @@ html(lang="ru-RU")
 				frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
 			};
 		.wrapper
-			if hover
-				include ../modules/header/big_header_hover
-			else
-				include ../modules/header/big_header
+			include ../modules/header/big_header
 			#content.site-content
 				.content
 					block content
 			if newFooter 
 				include ../modules/footer/newFooter
-			else if newFooterNotBorder
-				include ../modules/footer/newFooterNotBorder
 			else
 				include ../modules/footer/footer
 			include ../modules/main/_popup_form

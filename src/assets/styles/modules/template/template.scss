@@ -98,12 +98,7 @@ select:visited {
 .line {
     width: 100%;
     height: 1px;
-    &.top-line {
-        border-top: 1px solid #E5E5E5;
-    }
-    &.bottom-line {
-        border-bottom: 1px solid #E5E5E5;
-    }
+    background: #464646;
 }
 
 .and_item {
