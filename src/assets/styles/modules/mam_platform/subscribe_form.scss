@@ -4,7 +4,7 @@
   .form-wrapper{
     .form-wrapper-left{
       background: #EEF3F5;
-      padding-bottom: 438px;
+      padding-bottom: 424px;
     }
     .form-wrapper-right{
       background: rgba(238, 243, 245, 0.6);
@@ -18,6 +18,13 @@
     }
     .capcha_block{
       margin-top: 28px;
+    }
+  }
+  .form-wrapper .left-form .form-content{
+    padding: 31px 47px 47px 47px;
+    input{
+      height: 51px;
+      margin-bottom: 18px;
     }
   }
 }

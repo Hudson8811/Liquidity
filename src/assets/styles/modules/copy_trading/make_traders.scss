@@ -6,6 +6,9 @@
   &-2{
     padding-top:125px;
     padding-bottom: 125px;
+    @media screen and (min-width:1401px) and (max-width:1919px){
+      padding-bottom: 300px;
+    }
   }
   .section__title{
     max-width: 900px;
@@ -21,7 +24,7 @@
     color: #63636E;
     max-width: 651px;
     margin: 0 auto;
-    margin-top: 46px;
+    margin-top: 50px;
     margin-bottom: 132px;
   }
   .green__title.big.center{
