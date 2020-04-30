@@ -343,6 +343,18 @@ $(document).ready(function () {
 
     $('.big_header__bg').hover(function () {
         $('.big_header__bg--2').removeClass('scroll');
-    })
+    });
+
+    $('.mam_tabs-btn').click(function () {
+        event.preventDefault();
+        if (!$(this).hasClass('active')){
+            var id = $(this).data('id');
+            $('.mam_tabs-btn').removeClass('active');
+            $(this).addClass('active');
+            $('.mam_tabs-content').fadeOut(300).promise().done(function(){
+                $('.mam_tabs-content[data-id="'+id+'"]').fadeIn(300);
+            });
+        }
+    });
 });
 
