@@ -357,11 +357,14 @@ select:visited {
     label{
         cursor: pointer;
     }
-    #works-1:checked~#tabs_container-1,
-    #works-2:checked~#tabs_container-2,
-    #works-3:checked~#tabs_container-3,
-    #works-4:checked~#tabs_container-4{
-        display: block;
+    #tabs_container-1,
+    #tabs_container-2,
+    #tabs_container-3,
+    #tabs_container-4{
+        display: none;
+        &.active{
+            display: block;
+        }
     }
 }
 
@@ -1713,7 +1716,7 @@ select:visited {
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.mam_tabs-btn{
+.mam_tabs-btn,.mam_tabs-btn-2{
     background: #EAEDF2;
     border: 3px solid #FFFFFF;
     box-sizing: border-box;
@@ -1738,7 +1741,7 @@ select:visited {
         width: 32%;
     }
 }
-input[type="radio"]:checked+label.mam_tabs-btn{
+.mam_tabs-btn.active, .mam_tabs-btn-2.active{
     background: #FFFFFF;
     opacity: 0.9;
     border: 1px solid #DAE4E8;

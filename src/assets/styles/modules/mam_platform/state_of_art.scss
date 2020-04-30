@@ -68,13 +68,21 @@
     display: block;
   }
   #tabs-content_mam-1, #tabs-content_mam-2{
+    display: none;
+    &.active{
+      display: block;
+    }
     .banner{
       margin-top: 34px;
     }
   }
   .mam_tabs-2{
-    #tabs-content_mam-2-1, #tabs-content_mam-2-2,#tabs-content_mam-2-3{
+    .mam_tabs-content-2{
+      display: none;
       padding-top: 32px;
+      &.active{
+        display: block;
+      }
     }
     .banner{
       border-radius: 20px;

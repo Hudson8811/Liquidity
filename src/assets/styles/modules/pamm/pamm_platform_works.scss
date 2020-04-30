@@ -59,7 +59,7 @@
       }
     }
   }
-  input:checked + label{
+  label.active{
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;

@@ -608,13 +608,10 @@
                     </svg></a></div>
                 <div class="head__item--content hide">
                   <div class="tabs mam_tabs mam_tabs-2">
-                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-1" value="" checked>
-                    <label class="mam_tabs-btn w33" for="tabs_mam-2-1">No integration</label>
-                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-2" value="">
-                    <label class="mam_tabs-btn w33" for="tabs_mam-2-2">Fast integration</label>
-                    <input type="radio" name="tabs_mam-2" id="tabs_mam-2-3" value="">
-                    <label class="mam_tabs-btn w33" for="tabs_mam-2-3">Deep integration</label>
-                    <div class="overflow_hidden" id="tabs-content_mam-2-1"> <img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                    <div class="mam_tabs-btn mam_tabs-btn-2 w33 active" data-id="1">No integration</div>
+                    <div class="mam_tabs-btn mam_tabs-btn-2 w33" data-id="2">Fast integration</div>
+                    <div class="mam_tabs-btn mam_tabs-btn-2 w33" data-id="3">Deep integration</div>
+                    <div class="mam_tabs-content-2 overflow_hidden active" data-id="1"> <img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
                       <div class="texts">
                         <div class="texts--heading">Fast launch with no integration</div>
                         <p>The basic setup can be done without integration with client area at all:</p>
@@ -623,14 +620,14 @@
                         <p>2) Broker can use the platform via admin panel even without web interfaces.</p>
                       </div>
                     </div>
-                    <div class="overflow_hidden" id="tabs-content_mam-2-2"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                    <div class="mam_tabs-content-2 overflow_hidden" data-id="2"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
                       <div class="texts">
                         <div class="texts--heading">Seamless Sign-On (approx. 2 days of development)</div>
                         <p>With JSON REST API you can make a seamless authorization from the client area to web </p>
                         <p>interfaces, so investors and money managers will not need to authorize them separately.</p>
                       </div>
                     </div>
-                    <div class="overflow_hidden" id="tabs-content_mam-2-3"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
+                    <div class="mam_tabs-content-2 overflow_hidden" data-id="3"><img class="banner mt0" src="images/MAM_platform/ipad.png" alt="image">
                       <div class="texts">
                         <div class="texts--heading">Deep integration (from 1 week up to 6 months)</div>
                         <p>Suitable for companies which have resources and time for development. With API you can </p>
@@ -667,12 +664,10 @@
                     </svg></a></div>
                 <div class="head__item--content hide">
                   <div class="tabs mam_tabs">
-                    <input type="radio" name="tabs_mam-art" id="tabs_mam-1" value="" checked>
-                    <label class="mam_tabs-btn w50" for="tabs_mam-1">For Whitelabel owners</label>
-                    <input type="radio" name="tabs_mam-art" id="tabs_mam-2" value="">
-                    <label class="mam_tabs-btn w50" for="tabs_mam-2">For Mainlabel owners</label>
-                    <div id="tabs-content_mam-1"> <img class="banner" src="images/MAM_platform/mam_tabs_1banner.png" alt="image"></div>
-                    <div id="tabs-content_mam-2"><img class="banner" src="images/MAM_platform/mam_tabs_1banner-2.png" alt="image">
+                    <div class="mam_tabs-btn mam_tabs-btn-3 w50 active" data-id="1">For Whitelabel owners</div>
+                    <div class="mam_tabs-btn mam_tabs-btn-3 w50" data-id="2">For Mainlabel owners</div>
+                    <div class="mam_tabs-content-3 active" id="tabs-content_mam-1" data-id="1"> <img class="banner" src="images/MAM_platform/mam_tabs_1banner.png" alt="image"></div>
+                    <div class="mam_tabs-content-3" id="tabs-content_mam-2" data-id="2"><img class="banner" src="images/MAM_platform/mam_tabs_1banner-2.png" alt="image">
                       <div class="texts">
                         <p class="m24">The investment platform supports white labels. If you have clients that are using a white label based on your MT server, you can create one for them in your admin panel with a separate web-UI and give them a manager's application with access to their accounts only. </p>
                         <p class="m24">White label architecture is the same as for WLs in the MetaTrader server. Each white label will have access to their account only from manager's applications, and leaderboards and will also be separated. This means that there will be no interference between accounts.</p>
@@ -867,10 +862,10 @@
               <div class="section__title center">Your money <span class="section__title--bold">managers</span> can <span class="section__title--bold">work with IBs</span> and gather in teams</div>
               <div class="subtitle center">All fees paid by our investment platform can be shared between a money manager and his partners.</div>
               <div class="tabs mam_tabs">
-                <div class="mam_tabs-btn active" data-id="1">IBs<span>Fees from one investor are shared between the money manager and IB.</span></div>
-                <div class="mam_tabs-btn margin" data-id="2">Teams<span>Fees from all clients are shared between the trader and his team.</span></div>
-                <div class="mam_tabs-content active" data-id="1"><img class="banner" src="images/MAM_platform/manage_banner-1.png" alt="images"></div>
-                <div class="mam_tabs-content" data-id="2"><img class="banner" src="images/MAM_platform/manage_banner-2.png" alt="images"></div>
+                <div class="mam_tabs-btn mam_tabs-btn-1 active" data-id="1">IBs<span>Fees from one investor are shared between the money manager and IB.</span></div>
+                <div class="mam_tabs-btn mam_tabs-btn-1 margin" data-id="2">Teams<span>Fees from all clients are shared between the trader and his team.</span></div>
+                <div class="mam_tabs-content mam_tabs-content-1 active" data-id="1"><img class="banner" src="images/MAM_platform/manage_banner-1.png" alt="images"></div>
+                <div class="mam_tabs-content mam_tabs-content-1" data-id="2"><img class="banner" src="images/MAM_platform/manage_banner-2.png" alt="images"></div>
               </div>
             </div>
           </div>
