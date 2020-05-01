@@ -364,6 +364,9 @@ $(document).ready(function () {
             $(this).addClass('active');
             $('.mam_tabs-content-2').fadeOut(300).promise().done(function () {
                 $('.mam_tabs-content-2[data-id="' + id + '"]').fadeIn(300);
+                if ($('.mam_tabs-content-2[data-id="2"]')) {
+                    $(this).children('video').attr('autoplay', 'autoplay');
+                }
             });
         }
     });
@@ -484,7 +487,7 @@ $(document).on('hover', '.big_menu_btn--js', function (event) {
     else return
 });
 
-$(document).on('click', 'big_menu_btn--js', function (e) {
+$(document).on('click', 'big_menu_btn--js', function (event) {
     event.preventDefault();
     if (!$(this).hasClass('active')) {
         $('body').addClass('hidden');
