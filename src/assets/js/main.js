@@ -364,9 +364,6 @@ $(document).ready(function () {
             $(this).addClass('active');
             $('.mam_tabs-content-2').fadeOut(300).promise().done(function () {
                 $('.mam_tabs-content-2[data-id="' + id + '"]').fadeIn(300);
-                if ($('.mam_tabs-content-2[data-id="2"]')) {
-                    $(this).children('video').attr('autoplay', 'autoplay');
-                }
             });
         }
     });
