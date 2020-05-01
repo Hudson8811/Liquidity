@@ -39,7 +39,8 @@
     margin-left: auto;
     margin-top: 6px;
     &__input{
-      width: 58px;
+      width: 167px;
+      border-bottom: 1px solid #bbb;
     }
   }
   .footer-top-row-social{
@@ -126,7 +127,11 @@
   }
 }
 
-
+@media screen and (max-width: 1080px){
+  .newFooter .footer-top-row-social{
+    margin: 0;
+  }
+}
 @media screen and (max-width: 720px){
   .newFooter{
     .footer-menu{
@@ -150,7 +155,8 @@
 
 @media screen and (max-width: 696px){
   .newFooter .footer-top-row-social{
-    margin-left:auto;
+    margin:0 auto;
+    align-items: center;
   }
   .newFooter .footer-top-row-search{
     margin-right: auto;

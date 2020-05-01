@@ -223,11 +223,11 @@ $(document).ready(function () {
     });
 
 
-    $('.big_header').mouseleave(function (e) {
-        e.preventDefault();
-        $('.big_menu_content--js').removeClass('active');
-        $('.big_menu_btn--js').removeClass('active');
-    })
+    // $('.big_header').mouseleave(function (e) {
+    //     e.preventDefault();
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $('.big_menu_btn--js').removeClass('active');
+    // })
     // $('#Crypto_Processing--js').click(function (e) {
     //     e.preventDefault();
     //     $('.big_menu_btn--js').removeClass('active');
@@ -278,47 +278,47 @@ $(document).ready(function () {
 
     // HOVER/////////////////////////////////////////////////////
 
-    $('#Crypto_Processing--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#Crypto_Processing__content--js').addClass('active');
-    })
+    // $('#Crypto_Processing--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#Crypto_Processing__content--js').addClass('active');
+    // })
 
-    $('#Core_Products--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#Core_Products__content--js').addClass('active');
-    })
+    // $('#Core_Products--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#Core_Products__content--js').addClass('active');
+    // })
 
-    $('#Liquidity--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#Liquidity__content--js').addClass('active');
-    })
+    // $('#Liquidity--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#Liquidity__content--js').addClass('active');
+    // })
 
-    $('#Turnkey_Solutions--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#Turnkey_Solutions__content--js').addClass('active');
-    })
+    // $('#Turnkey_Solutions--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#Turnkey_Solutions__content--js').addClass('active');
+    // })
 
-    $('#Money_Management--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#Money_Management__content--js').addClass('active');
-    })
+    // $('#Money_Management--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#Money_Management__content--js').addClass('active');
+    // })
 
-    $('#About--js').hover(function () {
-        $('.big_menu_btn--js').removeClass('active');
-        $('.big_menu_content--js').removeClass('active');
-        $(this).addClass('active');
-        $('#About__content--js').addClass('active');
-    })
+    // $('#About--js').hover(function () {
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#About__content--js').addClass('active');
+    // })
 
     var scrollPos = 0;
     $(window).scroll(function () {
@@ -389,5 +389,114 @@ $(document).ready(function () {
             });
         }
     });
+
+    $('.big_menu_btn--js').hover(function () {
+        if ($(window).width() > 900) {
+            event.preventDefault();
+            if (!$(this).hasClass('active')) {
+                var id = $(this).data('id');
+                $('.big_menu_btn--js').removeClass('active');
+                $(this).addClass('active');
+                $('.big_menu_content--js[data-id="' + id + '"]')
+                $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+                    $('.big_menu_content--js[data-id="' + id + '"]').addClass('active').promise().done(function () {
+                        $(this).fadeIn(300);
+                    })
+                });
+            }
+        }
+        else {
+            $('.big_menu_btn--js').click(function () {
+                event.preventDefault();
+                if (!$(this).hasClass('active')) {
+                    $('body').addClass('hidden');
+                    $('.big_header').addClass('active');
+                    var id = $(this).data('id');
+                    $('.big_menu_btn--js').removeClass('active');
+                    $(this).addClass('active');
+                    $('.burger--js').addClass('active');
+                    $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+                        $('.big_menu_content--js[data-id="' + id + '"]').addClass('active').promise().done(function () {
+                            $(this).fadeIn(300);
+                        });
+                    });
+                }
+            });
+        }
+    });
+
+    // $('.burger--js').click(function () {
+    //     $(this).removeClass('active');
+    //     $('body').removeClass('hidden');
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+    //         $(this).removeClass('active');
+    //     });
+    // });
+
+    // $('.big_header').mouseleave(function () {
+    //     event.preventDefault();
+    //     $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+    //         $(this).removeClass('active');
+    //     });
+    //     $('.big_menu_btn--js').removeClass('active');
+    //     $('.burger--js').removeClass('active');
+    // });
 });
 
+// $(document).on('click', '.head__item--show-btn--js', function (e) {
+
+// });
+
+$(document).on('click', '.burger--js', function () {
+    $(this).removeClass('active');
+    $('body').removeClass('hidden');
+    $('.big_menu_btn--js').removeClass('active');
+    $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+        $(this).removeClass('active');
+    });
+});
+
+$(document).on('mouseleave', '.big_header', function (event) {
+    event.preventDefault();
+    $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+        $(this).removeClass('active');
+    });
+    $('.big_menu_btn--js').removeClass('active');
+    $('.burger--js').removeClass('active');
+});
+
+$(document).on('hover', '.big_menu_btn--js', function (event) {
+    if ($(window).width() > 900) {
+        event.preventDefault();
+        if (!$(this).hasClass('active')) {
+            var id = $(this).data('id');
+            $('.big_menu_btn--js').removeClass('active');
+            $(this).addClass('active');
+            $('.big_menu_content--js[data-id="' + id + '"]')
+            $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+                $('.big_menu_content--js[data-id="' + id + '"]').addClass('active').promise().done(function () {
+                    $(this).fadeIn(300);
+                })
+            });
+        }
+    }
+    else return
+});
+
+$(document).on('click', 'big_menu_btn--js', function (e) {
+    event.preventDefault();
+    if (!$(this).hasClass('active')) {
+        $('body').addClass('hidden');
+        $('.big_header').addClass('active');
+        var id = $(this).data('id');
+        $('.big_menu_btn--js').removeClass('active');
+        $(this).addClass('active');
+        $('.burger--js').addClass('active');
+        $('.big_menu_content--js').fadeOut(300).promise().done(function () {
+            $('.big_menu_content--js[data-id="' + id + '"]').addClass('active').promise().done(function () {
+                $(this).fadeIn(300);
+            });
+        });
+    }
+});

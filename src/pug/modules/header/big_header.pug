@@ -13,7 +13,7 @@ header.big_header
             li.margin_right
               a(href="#") Events
             li.margin_right#About_wrapper
-              a#About--js.big_menu_btn--js(href="#") About us
+              a#About--js.big_menu_btn--js(href="#",data-id="6") About us
             li
               a.Schedule_button(href="#") Schedule a call
             li
@@ -29,18 +29,19 @@ header.big_header
         nav
           ul.menu
             li.menu-item
-              a#Core_Products--js.big_menu_btn--js(href="#") Core Products 
+              a#Core_Products--js.big_menu_btn--js(href="#",data-id="1") Core Products 
             li.menu-item
-              a#Liquidity--js.big_menu_btn--js(href="#") Liquidity
+              a#Liquidity--js.big_menu_btn--js(href="#",data-id="2") Liquidity
             li.menu-item
-              a#Turnkey_Solutions--js.big_menu_btn--js(href="#") Turnkey Solutions
+              a#Turnkey_Solutions--js.big_menu_btn--js(href="#",data-id="3") Turnkey Solutions
             li.menu-item
-              a#Crypto_Processing--js.big_menu_btn--js(href="#") Crypto Processing
+              a#Crypto_Processing--js.big_menu_btn--js(href="#",data-id="4") Crypto Processing
             li.menu-item
-              a#Money_Management--js.big_menu_btn--js(href="#") Money Management
+              a#Money_Management--js.big_menu_btn--js(href="#",data-id="5") Money Management
+        .burger--js
   .big_header__bg--3
     .container
-      .big_header__bottom_row#Turnkey_Solutions__content--js.big_menu_content--js
+      .big_header__bottom_row#Turnkey_Solutions__content--js.big_menu_content--js(data-id="1")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading Turnkey Solutions
           .big_header__bottom_row__text Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.
@@ -95,7 +96,7 @@ header.big_header
             ul.menu
               li.menu-item.disabled
                 a(href="#") Crypto Wallets 
-      .big_header__bottom_row#Core_Products__content--js.big_menu_content--js
+      .big_header__bottom_row#Core_Products__content--js.big_menu_content--js(data-id="2")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading Core products
           .big_header__bottom_row__text Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.
@@ -146,7 +147,7 @@ header.big_header
                 a(href="#") Widgets for the Quotes 
               li.menu-item.disabled
                 a(href="#") WEB API MT4/MT5
-      .big_header__bottom_row#Liquidity__content--js.big_menu_content--js
+      .big_header__bottom_row#Liquidity__content--js.big_menu_content--js(data-id="3")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading Liquidity
           .big_header__bottom_row__text Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.
@@ -193,7 +194,7 @@ header.big_header
             ul.menu
               li.menu-item.disabled
                 a(href="#") Crypto Spot
-      .big_header__bottom_row#Crypto_Processing__content--js.big_menu_content--js
+      .big_header__bottom_row#Crypto_Processing__content--js.big_menu_content--js(data-id="4")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading Crypto Processing
           .big_header__bottom_row__text Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.
@@ -225,7 +226,7 @@ header.big_header
             ul.menu
               li.menu-item.disabled
                 a(href="#") WhiteLabel Crypto Processing
-      .big_header__bottom_row#Money_Management__content--js.big_menu_content--js
+      .big_header__bottom_row#Money_Management__content--js.big_menu_content--js(data-id="5")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading Money Management
           .big_header__bottom_row__text Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.Incididunt aute ullamco ea non laboris occaecat id dolore eu pariatur.
@@ -252,7 +253,7 @@ header.big_header
                 a(href="#") PAMM 
               li.menu-item
                 a(href="#") MAM
-      .big_header__bottom_row#About__content--js.big_menu_content--js
+      .big_header__bottom_row#About__content--js.big_menu_content--js(data-id="6")
         .big_header__bottom_row__left_row
           .big_header__bottom_row__heading About B2Broker
           .big_header__bottom_row__text

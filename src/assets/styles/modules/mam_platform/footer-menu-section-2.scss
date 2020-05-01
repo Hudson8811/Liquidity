@@ -5,11 +5,11 @@
   .footer-menu-section-flex__item .menu{
     margin-bottom: 52px;
   }
-  .footer-menu-section-flex__item .menu.menu-castom-height-1{
-    height: 225px;
-  }
-  .footer-menu-section-flex__item .menu.menu-castom-height-2{
-    height: 115px;
+  .footer-menu-section-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: stretch;
   }
   .footer-menu-section-flex__item .menu li{
     margin-bottom: 0;
@@ -42,11 +42,13 @@
     }
   }
   .footer-menu-section-flex__item{
-    &:nth-child(2){
-      padding-left: 60px;
+    padding-right: 0;
+    &.center_block{
+      padding-left: 90px;
     }
-    &:nth-child(3){
-      padding-left: 86px;
+    &.right_block{
+      // padding-left: 86px;
+      padding-left: 139px;
     }
   }
 }
@@ -65,7 +67,7 @@
     .footer-menu-section-flex__item{
       box-sizing: border-box;
     }
-    .footer-menu-section-flex__item:nth-child(2),.footer-menu-section-flex__item:nth-child(3){
+    .footer-menu-section-flex__item.center_block, .footer-menu-section-flex__item.right_block{
       padding-left: 0;
     }
   }
