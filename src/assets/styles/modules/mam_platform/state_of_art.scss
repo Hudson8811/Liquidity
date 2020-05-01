@@ -83,6 +83,9 @@
       background: linear-gradient(113.13deg, #1A2127 1.07%, #131415 76.81%, #121A22 100%);
       box-shadow: 0px 0px 1.02629px #000000;
       border-radius: 23.0915px;
+      &:focus, &:visited, &:active, &:focus-within{
+        outline: 0px;
+      }
     }
     .mam_tabs-content-2{
       display: none;
