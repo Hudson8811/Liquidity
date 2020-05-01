@@ -31,7 +31,7 @@
   }
   .container.flex{
     align-items: flex-start;
-    margin-bottom: 170px;
+    margin-bottom: 125px;
     .text.right{
       margin-right: 95px;
       .green__title{
@@ -57,7 +57,7 @@
       }
     }
     &.reverse{
-      margin-bottom: 225px;
+      margin-bottom: 125px;
       .left{
         margin-top: 41px;
         .green__title{
@@ -75,7 +75,7 @@
   .container.flex.macbook_container{
     position: relative;
     justify-content: flex-start;
-    margin-bottom: 232px;
+    margin-bottom: 125px;
     .text.left{
       max-width: 430px;
       margin-left: 7px;
@@ -108,7 +108,7 @@
   }
   .container.flex.iphone_container{
     justify-content: flex-start;
-    margin-bottom: 92px;
+    margin-bottom: 0px;
     .text.left{
       margin-left: 100px;
       max-width: 377px;

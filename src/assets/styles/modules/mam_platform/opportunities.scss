@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 125px;
     &.margin-bottom-0{
       margin-bottom: 0;
     }
@@ -49,13 +49,12 @@
       }
     }
     &.castom_margin{
-      margin-bottom: 128px;
+      margin-bottom: 125px;
     }
     img{
       max-width: 540px;
       &.castom-width{
         max-width: 560px;
-        margin-top: 5px;
       }
       &.shadow{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -125,7 +124,7 @@
   }
   .banner_text{
     margin-top: 67px;
-    margin-bottom: 150px;
+    margin-bottom: 125px;
     .title{
       margin-top: 15px;
       padding-right: 40%;
@@ -141,6 +140,9 @@
       .check_block--mam_platform-item{
         margin-bottom: 0;
         margin-right: 75px;
+        &:nth-child(2){
+          margin-right: 0;
+        }
       }
     }
   }
