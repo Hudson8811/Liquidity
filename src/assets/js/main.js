@@ -442,6 +442,19 @@ $(document).ready(function () {
     //     $('.big_menu_btn--js').removeClass('active');
     //     $('.burger--js').removeClass('active');
     // });
+
+    $('.tabs_slider').flickity({
+        freeScroll: true,
+        prevNextButtons: false,
+        pageDots: false,
+        asNavFor: '.main_tabs_slider',
+        cellAlign: 'left'
+    });
+    $('.main_tabs_slider').flickity({
+        prevNextButtons: false,
+        pageDots: false,
+        contain: true,
+    });
 });
 
 // $(document).on('click', '.head__item--show-btn--js', function (e) {

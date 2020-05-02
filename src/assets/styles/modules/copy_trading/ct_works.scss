@@ -1,0 +1,125 @@
+.ct_works{
+  overflow: hidden;
+  background: #EFF4F6;
+  padding-top: 125px;
+  padding-bottom: 125px;
+  .main-text{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #63636E;
+    max-width: 577px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+.main_tabs_slider{
+  .item{
+    width: 100%;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.tabs_slider_container{
+  margin-top: 116px;
+  margin-bottom: 66px;
+  width: 1632px;
+  max-width: none;
+  @media screen and (max-width:1000px){
+    width: 98%;
+  }
+}
+.tabs_slider{
+      padding-left: 17%;
+      @media screen and (max-width:1000px){
+        padding-left: 0;
+      }
+  .flickity-viewport{
+    padding-top: 7px;
+    overflow: visible;
+    @media screen and (max-width:1000px){
+     overflow: hidden;
+    }
+  }
+  .item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #EAEDF2;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 122px;
+    max-width: 350px;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    color: #637786;
+    margin-right: 10px;
+    padding-left: 43px;
+    padding-right: 38px;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    @media screen and (max-width:1000px){
+      max-width: 290px;
+      padding: 10px;
+    }
+    .icon{
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border: 2.92623px solid #7C8C9F;
+      margin-right: 20px;
+      &-text{
+        font-weight: normal;
+        font-size: 27.8577px;
+        line-height: 41px;
+      }
+    }
+    &.is-selected{
+        margin-top: -7px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        color: #272F41;
+        background: #FFFFFF;
+        opacity: 0.9;
+        border: 1px solid #DAE4E8;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        height: 132px;
+      .icon{
+        border: 2.92623px solid #01BD95;
+        &-text{
+          color: #01BD95;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:580px){
+  .ct_works{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .tabs_slider_container{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
