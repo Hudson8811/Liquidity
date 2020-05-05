@@ -1,0 +1,47 @@
+.forex_liquidity.b2_core
+  .forex_liquidity--overlay
+  .container
+    .forex_liquidity__content
+      h2.section__title #[span(class="section__title--bold") B2Core]
+      span.section__subtitle Trader’s Room, Client's Сabinet, Back Office CRM, Client’s Portal
+      span.section__description A new generation of professional software that helps brokers and exchanges manage their customers, admins and #[span(class="db")] IB-partners in one place.
+    form.new_form.new_form__flex.b2_form.light_theme
+      label.new_form__label
+        span.new_form__placeholder Your Name
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label
+        span.new_form__placeholder Your Email
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__phone_select
+        span.new_form__placeholder Phone
+        span.new_form__star *
+        select.new_form__select.new_form__select_phone
+            option(value="+7") +7
+            option(value="+7") +7
+            option(value="+7") +7
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label_capch
+        span.new_form__placeholder Enter symbols
+        span.new_form__star *
+        img.new_form__capch(src="images/capch_text.png")
+        input.new_form__input(type="text")
+
+      label.new_form__label.new_form__label__lang_select
+        span.new_form__placeholder Preffered language
+        span.new_form__star *
+        input.new_form__input(type="text")
+        .new_form__label__lang_select_wrapper
+          img(src="images/en.png",class="new_form__label__lang_select_icon")
+          select.new_form__select
+            option(value="English") English
+            option(value="English") English
+            option(value="English") English
+      button.new_form__sabmit Request a Callback
+      label.consent_block
+        input(type="checkbox")
+        b
+        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+  .container.link_container
+    a(href=".section-4").link.link--dotted.js-anchor What is prime of prime?

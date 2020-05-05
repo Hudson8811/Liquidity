@@ -416,6 +416,7 @@ $(document).ready(function () {
       event.preventDefault();
       if (!$(this).hasClass("active")) {
         var id = $(this).data("id");
+        $(".big_menu_btn--js").addClass("disabled");
         $(".big_menu_btn--js").removeClass("active");
         $(this).addClass("active");
         $('.big_menu_content--js[data-id="' + id + '"]');
@@ -428,6 +429,7 @@ $(document).ready(function () {
               .promise()
               .done(function () {
                 $(this).fadeIn(300);
+                $(".big_menu_btn--js").removeClass("disabled");
               });
           });
       }
@@ -519,48 +521,86 @@ $(document).on("mouseleave", ".big_header", function (event) {
   $(".burger--js").removeClass("active");
 });
 
-$(document).on("hover", ".big_menu_btn--js", function (event) {
-  if ($(window).width() > 900) {
-    event.preventDefault();
-    if (!$(this).hasClass("active")) {
-      var id = $(this).data("id");
-      $(".big_menu_btn--js").removeClass("active");
-      $(this).addClass("active");
-      $('.big_menu_content--js[data-id="' + id + '"]');
-      $(".big_menu_content--js")
-        .fadeOut(300)
-        .promise()
-        .done(function () {
-          $('.big_menu_content--js[data-id="' + id + '"]')
-            .addClass("active")
-            .promise()
-            .done(function () {
-              $(this).fadeIn(300);
-            });
-        });
-    }
-  } else return;
-});
+// $(document).on("hover", ".big_menu_btn--js", function (event) {
+//   if ($(window).width() > 900) {
+//     event.preventDefault();
+//     if (!$(this).hasClass("active")) {
+//       var id = $(this).data("id");
+//       $(".big_menu_btn--js").removeClass("active");
+//       $(this).addClass("active");
+//       $('.big_menu_content--js[data-id="' + id + '"]');
+//       $(".big_menu_content--js")
+//         .fadeOut(300)
+//         .promise()
+//         .done(function () {
+//           $('.big_menu_content--js[data-id="' + id + '"]')
+//             .addClass("active")
+//             .promise()
+//             .done(function () {
+//               $(this).fadeIn(300);
+//             });
+//         });
+//     }
+//   } else return;
+// });
 
-$(document).on("click", "big_menu_btn--js", function (event) {
+// $(document).on("click", ".big_menu_btn--js", function (event) {
+//   event.preventDefault();
+//   if (!$(this).hasClass("active")) {
+//     $("body").addClass("hidden");
+//     $(".big_header").addClass("active");
+//     var id = $(this).data("id");
+//     $(".big_menu_btn--js").removeClass("active");
+//     $(this).addClass("active");
+//     $(".burger--js").addClass("active");
+//     $(".big_menu_content--js")
+//       .fadeOut(300)
+//       .promise()
+//       .done(function () {
+//         $('.big_menu_content--js[data-id="' + id + '"]')
+//           .addClass("active")
+//           .promise()
+//           .done(function () {
+//             $(this).fadeIn(300);
+//           });
+//       });
+//   }
+// });
+
+$(document).on("click", ".faq_btn_js", function (event) {
   event.preventDefault();
+
   if (!$(this).hasClass("active")) {
-    $("body").addClass("hidden");
-    $(".big_header").addClass("active");
     var id = $(this).data("id");
-    $(".big_menu_btn--js").removeClass("active");
+    $(".faq_btn_js").removeClass("active");
     $(this).addClass("active");
-    $(".burger--js").addClass("active");
-    $(".big_menu_content--js")
-      .fadeOut(300)
+    $(".question-item_content")
+      .slideUp(300)
       .promise()
       .done(function () {
-        $('.big_menu_content--js[data-id="' + id + '"]')
-          .addClass("active")
-          .promise()
-          .done(function () {
-            $(this).fadeIn(300);
-          });
+        $('.question-item_content[data-id="' + id + '"]').slideDown(300);
       });
+  } else {
+    $(".faq_btn_js").removeClass("active");
+    $(".question-item_content").slideUp(300);
+  }
+});
+
+$(document).on("focus", ".new_form__label input", function () {
+  $(this).parent().addClass("active");
+  $(this).parent().removeClass("error");
+});
+$(document).on("blur", ".new_form__label input", function () {
+  if ($(this).val() == "") {
+    $(this).parent().removeClass("active");
+    $(this).parent().addClass("error");
+  } else {
+    $(this).parent().removeClass("error");
+    if (
+      $(this).attr("type") == "email" &&
+      !isValidEmailAddress($(this).val())
+    ) {
+      $(this).parent().addClass("error");
+    }
   }
 });

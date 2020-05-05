@@ -57,6 +57,9 @@ body.hidden {
       font-weight: 700;
       color: #fff;
     }
+    &.disabled {
+      pointer-events: none;
+    }
   }
   #About_wrapper {
     min-width: 50px;
@@ -131,32 +134,58 @@ body.hidden {
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid #01c198;
+            background: #0aab88;
+            border: 1px solid #00c49a;
             box-sizing: border-box;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             width: 117px;
             height: 31px;
             margin-right: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 15px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #ffffff;
           }
           .client_button {
+            background: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
             width: 96px;
             height: 31px;
-            background: #00b68f;
             border: 1px solid #01c198;
             box-sizing: border-box;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
-            color: #292929;
             font-weight: bold;
             margin-right: 17px;
           }
+          &.language_button_wrapper {
+            width: 90px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: 100% 50% / auto url(../images/icons/new_form_select.svg)
+              no-repeat;
+          }
           .language_button {
+            margin-right: 5px;
+            border: none;
+            appearance: none;
+            background: transparent;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 15px;
+
+            color: #e3e3e3;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -282,7 +311,7 @@ body.hidden {
           }
           &:nth-child(7) {
             margin-right: 0;
-            @media screen and (max-width: 880px) {
+            @media screen and (max-width: 900px) {
               margin-right: 9px;
             }
           }
@@ -486,6 +515,216 @@ body.hidden {
       &__right_row {
         padding-left: 0;
       }
+    }
+  }
+}
+
+.youtube {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      &:nth-child(2) {
+        fill: white;
+      }
+      &:nth-child(3) {
+        fill: #454545;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      circle {
+        fill: white;
+      }
+      path {
+        &:nth-child(2) {
+          fill: #ff0000;
+        }
+        &:nth-child(3) {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+.linkedin {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      &:nth-child(2) {
+        fill: white;
+      }
+      &:nth-child(3) {
+        fill: #454545;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      circle {
+        fill: #006699;
+      }
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+.twitter {
+  transition: all 0.5s;
+  svg {
+    path {
+      &:nth-child(1) {
+        fill: #454545;
+      }
+      &:nth-child(2) {
+        fill: white;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        &:nth-child(1) {
+          fill: white;
+        }
+        &:nth-child(2) {
+          fill: #1da1f2;
+        }
+      }
+    }
+  }
+}
+.telegram {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
+    }
+  }
+  &:hover {
+    svg {
+      circle {
+        fill: #2ba4e0;
+      }
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.wechat {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
+    }
+  }
+  &:hover {
+    svg {
+      circle {
+        fill: #00d863;
+      }
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.facebook {
+  transition: all 0.5s;
+  svg {
+    path {
+      &:nth-child(1) {
+        fill: #454545;
+      }
+      &:nth-child(2) {
+        fill: white;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        &:nth-child(1) {
+          fill: #3a589e;
+        }
+        &:nth-child(2) {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+.tiktok {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
+    }
+  }
+  &:hover {
+    svg {
+      circle {
+        fill: white;
+      }
+      path {
+        fill: #1c1c1c;
+      }
+    }
+  }
+}
+
+.instagram:not(:hover) {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
+    }
+  }
+}
+
+.weibo:not(:hover) {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
+    }
+  }
+}
+
+.youku:not(:hover) {
+  transition: all 0.5s;
+  svg {
+    circle {
+      fill: #454545;
+    }
+    path {
+      fill: white;
     }
   }
 }

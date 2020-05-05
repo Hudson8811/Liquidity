@@ -1,6 +1,7 @@
 .newFooter {
   padding-bottom: 0;
   background: transparent;
+
   .new_line {
     padding: 33px 0;
     background: #1e2226;
@@ -160,7 +161,7 @@
     padding-top: 50px;
     padding-bottom: 62px;
     &_left-block {
-      width: 223px;
+      width: 247px;
       padding-right: 54px;
       border-right: 1px solid #3a3b3b;
       margin-right: 53px;
@@ -247,6 +248,20 @@
       letter-spacing: -0.318182px;
 
       color: #656b70;
+    }
+  }
+  .social_block {
+    a {
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      &:nth-child(7) {
+        margin-right: 0;
+        @media screen and (max-width: 1080px) {
+          margin-right: 10px;
+        }
+      }
     }
   }
 }
