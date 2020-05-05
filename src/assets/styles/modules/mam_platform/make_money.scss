@@ -1,104 +1,109 @@
-.make_money{
+.make_money {
   background: #fff;
   padding-top: 125px;
   padding-bottom: 125px;
   overflow: hidden;
-  .opportunities{
+  .opportunities {
     background: #fff;
     padding: 0;
-    .green__title{
+    .green__title {
       letter-spacing: 1px;
       margin-bottom: 6px;
     }
-    .section__title{
+    .section__title {
       margin-bottom: 50px;
     }
-    .title{
+    .title {
       margin-top: 16px;
     }
   }
-  .subtitle{
+  .subtitle {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     /* or 139% */
     text-align: center;
     letter-spacing: -0.5px;
-    color: #63636E;
+    color: #63636e;
     max-width: 651px;
     margin: 0 auto;
     margin-bottom: 111px;
   }
-  .container.flex{
+  .container.flex {
     align-items: flex-start;
     margin-bottom: 125px;
-    .text.right{
+    .text.right {
       margin-right: 95px;
-      .green__title{
+      .green__title {
         margin-left: 3px;
         letter-spacing: 0px;
       }
-      .title,p,.check_block--mam_platform-item{
+      .title,
+      p,
+      .check_block--mam_platform-item {
         margin-left: 3px;
+        &.m0 {
+          margin-bottom: 0;
+        }
       }
     }
-    .margin-2{
+    .margin-2 {
       margin-bottom: 40px;
     }
-    .padding{
+    .padding {
       padding-right: 41px;
-      svg{
+      svg {
         margin-top: -10px;
       }
     }
-    .check_block--mam_platform-item{
-      &--text{
+    .check_block--mam_platform-item {
+      &--text {
         line-height: 24px;
       }
     }
-    &.reverse{
+    &.reverse {
       margin-bottom: 125px;
-      .left{
+      .left {
         margin-top: 41px;
-        .green__title{
+        .green__title {
           letter-spacing: 0px;
         }
-        .margin-2{
+        .margin-2 {
           margin-bottom: 40px;
         }
-        .padding-2{
+        .padding-2 {
           padding-right: 27px;
         }
       }
     }
   }
-  .container.flex.macbook_container{
+  .container.flex.macbook_container {
     position: relative;
     justify-content: flex-start;
     margin-bottom: 125px;
-    .text.left{
+    .text.left {
       max-width: 430px;
       margin-left: 7px;
-      .green__title{
+      .green__title {
         letter-spacing: 0px;
       }
-      .title{
+      .title {
         padding-right: 20px;
       }
-      p{
+      p {
         padding-right: 85px;
       }
-      .margin{
+      .margin {
         margin-bottom: 20px;
       }
-      .margin-2{
+      .margin-2 {
         margin-bottom: 40px;
       }
-      .check_block--mam_platform-item--text{
+      .check_block--mam_platform-item--text {
         line-height: 26px;
       }
     }
-    .abs_macbook{
+    .abs_macbook {
       position: absolute;
       right: 0;
       bottom: 10px;
@@ -106,105 +111,108 @@
       max-width: 832px;
     }
   }
-  .container.flex.iphone_container{
+  .container.flex.iphone_container {
     justify-content: flex-start;
     margin-bottom: 0px;
-    .text.left{
+    .text.left {
       margin-left: 100px;
       max-width: 377px;
       margin-top: 65px;
-      .green__title{
+      .green__title {
         letter-spacing: 0px;
       }
-      .margin-2{
+      .margin-2 {
         margin-bottom: 40px;
       }
-      .top_margin{
+      .top_margin {
         margin-top: 24px;
       }
     }
-    img{
+    img {
       max-width: 329px;
     }
   }
 }
 
-@media screen and (min-width:1920px){
-  .make_money .container.flex.macbook_container .abs_macbook{
-      margin-right: -220px;
+@media screen and (min-width: 1920px) {
+  .make_money .container.flex.macbook_container .abs_macbook {
+    margin-right: -220px;
   }
 }
-@media screen and (max-width:1360px){
-  .make_money .container.flex{
-    &.macbook_container{
+@media screen and (max-width: 1360px) {
+  .make_money .container.flex {
+    &.macbook_container {
       justify-content: space-between;
-      img.abs_macbook{
+      img.abs_macbook {
         width: 50%;
         position: relative;
         margin-right: 0;
       }
-      .text.left{
+      .text.left {
         margin-left: 0;
-        .title{
+        .title {
           padding-right: 0;
         }
-        p{padding-right: 0;}
+        p {
+          padding-right: 0;
+        }
       }
     }
   }
 }
-@media screen and (max-width:970px){
-  .make_money{
+@media screen and (max-width: 970px) {
+  .make_money {
     padding-top: 50px;
     padding-bottom: 50px;
     .container.flex {
       align-items: center;
       margin-bottom: 40px;
       &.macbook_container {
-        margin-bottom: 40px;}
-      .check_block--mam_platform-item--text{
+        margin-bottom: 40px;
+      }
+      .check_block--mam_platform-item--text {
         line-height: 17px;
         font-size: 14px;
         margin-left: 10px;
       }
-      &.reverse{
+      &.reverse {
         margin-bottom: 40px;
       }
-      .text.right{
+      .text.right {
         margin-right: 40px;
       }
-      &.iphone_container{
+      &.iphone_container {
         margin-bottom: 0;
-        .text.left{
+        .text.left {
           margin-left: 0;
         }
-        .padding{
+        .padding {
           padding-right: 0;
         }
       }
     }
   }
 }
-@media screen and (max-width:640px){
-  .make_money{
+@media screen and (max-width: 640px) {
+  .make_money {
     .container.flex {
       align-items: flex-start;
       &.macbook_container {
-        img.abs_macbook{
+        img.abs_macbook {
           max-width: 300px;
           width: 100%;
         }
       }
-      .text.right{
+      .text.right {
         margin-right: 0px;
-        .padding{
+        .padding {
           padding-right: 0;
         }
       }
-      &.reverse .left .margin-2{
+      &.reverse .left .margin-2 {
         padding-right: 0;
       }
-      &.reverse .left .padding-2{
+      &.reverse .left .padding-2 {
         padding-right: 0;
       }
     }
