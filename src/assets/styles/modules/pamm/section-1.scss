@@ -1,22 +1,22 @@
-.MAM_platform .forex_liquidity.pamm{
+.MAM_platform .forex_liquidity.pamm {
   padding-bottom: 63px;
-   .section__subtitle{
-    padding-right: 22%;
+  .section__subtitle {
+    padding-right: 24%;
     margin-bottom: 50px;
-    @media screen and (max-width:920px){
+    @media screen and (max-width: 920px) {
       padding-right: 0;
     }
   }
-  .learn_more{
+  .learn_more {
     font-weight: 500;
     font-size: 18px;
     line-height: 34px;
     /* identical to box height, or 189% */
-    color: #C4C4C4;
+    color: #c4c4c4;
     text-decoration: none;
     margin: 0px auto;
     margin-top: 157px;
-    @media screen and (max-width:580px){
+    @media screen and (max-width: 580px) {
       margin-top: 50px;
     }
   }

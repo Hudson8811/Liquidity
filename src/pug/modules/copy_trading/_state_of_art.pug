@@ -1,0 +1,117 @@
+.state_of_art
+  .container
+    .section__title.center.goanim.an #[span(class="section__title--bold") State-of-art architecture] of the platform
+    .main-text.center.goanim.an The investment platform is stand-alone from MT4/5 server software and installed on a separate server connected via manager’s API. No plugins need be installed. No calculations are made on the MetaTrader server. No additional load to MT or risk of a crash.
+  .container.goanim.an
+    img.banner(src="images/MAM_platform/banner-2.png", alt="image")
+  .container
+    .head__item
+      .head__item--texts
+        .head__item--title Hosting options
+        .head__item--text The platform can be hosted both on a server provided by a client or B2Broker. 
+      .head__item--buttons
+        a.head__item--show-btn.head__item--show-btn--js(href="#") Show Pros & Cons
+          +icon('white_arrow')
+        a.head__item--hide-btn.hide.head__item--hide-btn--js(href="#") Hide Pros & Cons
+          +icon('white_arrow')
+      .head__item--content.hide.mobile_overflow
+        img.banner.mt0(src="images/MAM_platform/banner-table.png", alt="image")
+    .head__item.castom
+      .head__item--texts
+        .head__item--title Can work with any client Cabinet. No integration required.
+        .head__item--text Copy Trading Platform is a standalone software and supports several ways of integration with a broker’s infrastructure with different levels of time and development costs - no integration, seamless sign-on and deep integration.
+      .head__item--buttons
+        a.head__item--show-btn.head__item--show-btn--js(href="#") Show details
+          +icon('white_arrow')
+        a.head__item--hide-btn.hide.head__item--hide-btn--js(href="#") Hide details
+          +icon('white_arrow')
+      .head__item--content.hide
+        .tabs.mam_tabs.mam_tabs-2
+          .mam_tabs-btn.mam_tabs-btn-2.w33.active(data-id="1") No integration
+          .mam_tabs-btn.mam_tabs-btn-2.w33(data-id="2") Fast integration
+          .mam_tabs-btn.mam_tabs-btn-2.w33(data-id="3") Deep integration
+          .mam_tabs-content-2.overflow_hidden.active(data-id="1") 
+            img.banner.mt0(src="images/MAM_platform/ipad.png", alt="image")
+            .texts
+              .texts--heading Fast launch with no integration
+              p The basic setup can be done without integration with client area at all:
+              p 1) Users will login in web interfaces with login and password to their MT4/5 account that is opened
+              p in Client area of broker or in MetaTrader Manager.
+              p 2) Broker can use the platform via admin panel even without web interfaces.
+          .mam_tabs-content-2.overflow_hidden(data-id="2")
+            .video_wrapper
+              .video_wrapper-abs
+                video.banner_video(src="images/website.mp4", muted, controls)
+            .texts
+              .texts--heading Seamless Sign-On (approx. 2 days of development)
+              p With JSON REST API you can make a seamless authorization from the client area to web 
+              p interfaces, so investors and money managers will not need to authorize them separately.
+          .mam_tabs-content-2.overflow_hidden(data-id="3")
+            img.banner.mt0(src="images/MAM_platform/ipad_new.png", alt="image")
+            .texts
+              .texts--heading Deep integration (from 1 week up to 6 months)
+              p Suitable for companies which have resources and time for development. With API you can 
+              p integrate every single function inside of your client area and allow users create accounts,
+              p subscribe and see statistics without going to any other interface or app.
+              p As API is not going to be changed deep integration can be made after launch with SSO or even no 
+              p integration and release new functions step-by-step to clients.
+    .head__item.castom.castom-2
+      .head__item--texts
+        .head__item--title Full White label support
+        .head__item--text The investment platform supports a white label in two ways: 
+        .check_block--mam_platform-item
+          +icon('new_land-green_check')
+          span.check_block--mam_platform-item--text #[span(class="bold") A main label owner] can use one server to provide the investment platform to his own white labels.
+        .check_block--mam_platform-item
+          +icon('new_land-green_check')
+          span.check_block--mam_platform-item--text #[span(class="bold") A white label owner] of any main white label MetaTrader server provider can also use it as it does not require plugin installations, just MT manager credentials without administrator rights.
+      .head__item--buttons
+        a.head__item--show-btn.head__item--show-btn--js(href="#") Show details
+          +icon('white_arrow')
+        a.head__item--hide-btn.hide.head__item--hide-btn--js(href="#") Hide details
+          +icon('white_arrow')
+      .head__item--content.hide
+        .tabs.mam_tabs
+          .mam_tabs-btn.mam_tabs-btn-3.w50.active(data-id="1") For Whitelabel owners
+          .mam_tabs-btn.mam_tabs-btn-3.w50(data-id="2") For Mainlabel owners
+          #tabs-content_mam-1.mam_tabs-content-3.active(data-id="1") 
+            img.banner(src="images/MAM_platform/mam_tabs_1banner.png", alt="image")
+          #tabs-content_mam-2.mam_tabs-content-3(data-id="2")
+            img.banner(src="images/MAM_platform/mam_tabs_1banner-2.png", alt="image")
+            .texts
+              p.m24 The investment platform supports white labels. If you have clients that are using a white label based on your MT server, you can create one for them in your admin panel with a separate web-UI and give them a manager's application with access to their accounts only. 
+              p.m24 White label architecture is the same as for WLs in the MetaTrader server. Each white label will have access to their account only from manager's applications, and leaderboards and will also be separated. This means that there will be no interference between accounts.
+              p.m24 Hence, the logic of the back-office infrastructure is the same as for MetaTrader server in that there is only one admin panel, but several manager's accounts for each white label.
+    .head__item
+      .head__item--texts.mw100
+        .head__item--title No need to create a new group for each new money manager
+        .head__item--text The platform is connected to the MT server with a Manager’s API. All master and invesment accounts can be placed in either one or a few groups. Your existing groups can be used for placing master and slaves there. No need to create a separate group for every money manager and his investors.
+  .container.check_block--mam_platform--catalog
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text Connected via manager's API without administrator rights
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text Automated monitoring system and auto-recovery scrypts
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text All data is stored in MySQL database with backups
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text No calculations are made on the MetaTrader server. No additional load to MT
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text MetaTrader server will work at the same speed as without PAMM#[span(class="db")]/MAM
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text Admin rights are not required.#[span(class="db")] Can be used by white labels of any main label MT provider
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text All functions of the platform are available via JSON REST API. No limit in further integration in website or client area
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text Manager's apps are available for back office staff. Rights can be customized for each user.
+    .check_block--mam_platform-item.circle
+      +icon('circle')
+      span.check_block--mam_platform-item--text No risk of conflict of PAMM server with plugins
+

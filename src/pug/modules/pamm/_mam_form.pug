@@ -2,29 +2,50 @@
   .container
     .section__title Launch a #[span(class="section__title--bold") PAMM Account] 
     .main-text Request a presentation or try a demo and offer investment products in your company.
-    form.get_your_prime_form
-      .get_your_prime_form--left
-        label.form_label
-          span Your Name
-          input(type="text" placeholder="").form__input 
-        .form__phone
-          select(name="number").form__phone__select.form__input
+    form.new_form.new_form__flex
+      label.new_form__label.new_form__label__50
+        span.new_form__placeholder Your Name
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__50.new_form__label__lang_select
+        span.new_form__placeholder Preffered language
+        input.new_form__input(type="text")
+        .new_form__label__lang_select_wrapper
+          img(src="images/new_en.png",class="new_form__label__lang_select_icon")
+          select.new_form__select
+            option(value="English") English
+            option(value="English") English
+            option(value="English") English
+      label.new_form__label.new_form__label__50
+        span.new_form__placeholder Your Email
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__50
+        span.new_form__placeholder Comment
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__50.new_form__label__phone_select
+        span.new_form__placeholder Phone
+        span.new_form__star *
+        select.new_form__select.new_form__select_phone
             option(value="+7") +7
-            option(value="8") 8
-          label.form_label
-            span.castom-left Phone
-            input(type="text" placeholder="").form__input
-        span.description Based on your IP, you are in Russian Federation.#[a(href="#") Change] Your data will be in US data center.
-      .get_your_prime_form--right
-        label.form_label
-          span Your Email
-          input(type="text" placeholder="").form__input 
-        button.btn.btn--green.btn--box_shadow.upp Get Started!
-        .capcha_block.gray
-          .capcha
-            .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
-            script(src='https://www.google.com/recaptcha/api.js')
-          label.consent_block
-            input(type="checkbox")
-            b
-            p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+            option(value="+7") +7
+            option(value="+7") +7
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__50.new_form__label_capch
+        span.new_form__placeholder Enter symbols
+        span.new_form__star *
+        img.new_form__capch(src="images/capch_text.png")
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__50.new_form__label__web_select
+        span.new_form__placeholder Nickname
+        select.new_form__select.new_form__select_web
+            option(value="Telegram") Telegram
+            option(value="Telegram") Telegram
+            option(value="Telegram") Telegram
+        input.new_form__input(type="text")
+      button.new_form__sabmit.new_form__sabmit__50 Request a Callback
+      .new_form__description.new_form__description__50 Based on your IP, you are in the Russian Federation. #[a(href="#") Change] Your data will be in US data center.
+      label.consent_block
+        input(type="checkbox")
+        b
+        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

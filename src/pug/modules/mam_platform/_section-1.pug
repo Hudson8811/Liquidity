@@ -1,4 +1,4 @@
-.forex_liquidity
+.forex_liquidity.forex_liquidity__new.forex_liquidity__new__mam_platform
   .forex_liquidity--overlay
   .container
     .forex_liquidity__content
@@ -13,31 +13,44 @@
         .supported_platforms-items
           img(src="images/MAM_platform/sup_pl-1.png", alt="sup_pl-1" class="supported_platforms-item")
           img(src="images/MAM_platform/sup_pl-2.png", alt="sup_pl-2" class="supported_platforms-item")
-    form.forex_liquidity__form
-      h3.forex_liquidity__form-title Launch MAM Platform
-      label.form_label
-        span Your Name
-        input(type="text").form__input
-      label.form_label
-        span Your Email
-        input(type="text").form__input
-      .form__phone
-        select(name="number").form__phone__select.form__input
-          option(value="+7") +7
-          option(value="8") 8
-        label.form_label
-          span.castom-abs Phone
-          input(type="text").form__input
-      p.forex_liquidity__form-description Based on your IP, you are in Russian Federation. #[a(href="#") Change] Your data will be in US data center.
-      button(type="button").btn.btn--green.btn--box_shadow Get Started!
-      .capcha_block
-        .capcha
-          .g-recaptcha(data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX")
-          script(src='https://www.google.com/recaptcha/api.js')
-        label.consent_block
-          input(type="checkbox")
-          b
-          p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+    form.new_form.new_form__flex.b2_form.light_theme
+      h2.new_form__title Launch MAM Platform
+      label.new_form__label
+        span.new_form__placeholder Your Name
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label
+        span.new_form__placeholder Your Email
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__phone_select
+        span.new_form__placeholder Phone
+        span.new_form__star *
+        select.new_form__select.new_form__select_phone
+            option(value="+7") +7
+            option(value="+7") +7
+            option(value="+7") +7
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label_capch
+        span.new_form__placeholder Enter symbols
+        span.new_form__star *
+        img.new_form__capch(src="images/capch_text.png")
+        input.new_form__input(type="text")
+
+      label.new_form__label.new_form__label__lang_select
+        span.new_form__placeholder Preffered language
+        input.new_form__input(type="text")
+        .new_form__label__lang_select_wrapper
+          img(src="images/new_en.png",class="new_form__label__lang_select_icon")
+          select.new_form__select
+            option(value="English") English
+            option(value="English") English
+            option(value="English") English
+      button.new_form__sabmit Request a Callback
+      label.consent_block
+        input(type="checkbox")
+        b
+        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
 
 
       

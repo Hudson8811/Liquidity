@@ -1,40 +1,42 @@
-.pamm_chance{
-  .main-text{
+.pamm_chance {
+  .main-text {
     max-width: 631px;
   }
-  .container.flex.castom_margin{
+  .container.flex.castom_margin {
     margin-bottom: 125px;
-    &-2{
+    &-2 {
       margin-bottom: 125px;
     }
   }
   .container.flex.diversified {
     margin-bottom: 125px;
-    .text.left p{
-      padding-right: 48px;
+    .text.left p {
+      padding-right: 47px;
     }
   }
-  .container.flex.margin-bottom-0{
-    .margin-2{
+  .container.flex.margin-bottom-0 {
+    .margin-2 {
       padding-right: 17px;
       margin-bottom: 40px;
     }
-    .title{
-      letter-spacing: -.9px;
+    .title {
+      letter-spacing: -0.9px;
     }
-    .check_block--mam_platform-item--text{
+    .check_block--mam_platform-item--text {
       margin-left: 15px;
     }
   }
 }
 
-@media screen and (max-width:580px){
+@media screen and (max-width: 580px) {
   .pamm_chance {
-    .opportunities{
+    .opportunities {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-    .container.flex.diversified,.container.flex.castom_margin-2, .container.flex.castom_margin{
+    .container.flex.diversified,
+    .container.flex.castom_margin-2,
+    .container.flex.castom_margin {
       margin-bottom: 30px;
     }
   }

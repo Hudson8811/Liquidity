@@ -1,34 +1,47 @@
-.MAM_platform{
+.MAM_platform {
   .forex_liquidity {
     padding-top: 222px;
-    padding-bottom: 254px;
+    padding-bottom: 150px;
     &__content {
-      .section__subtitle{
-        margin-top: 47px;
+      .section__subtitle {
+        margin-top: 50px;
         margin-bottom: 50px;
-        padding-right: 20%;
         font-weight: 300;
         font-size: 18px;
         line-height: 25px;
         /* or 139% */
         letter-spacing: -0.5px;
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
-    .castom-abs{
+    .castom-abs {
       left: 30px;
     }
   }
 }
-
-@media screen and (max-width:580px){
-  .MAM_platform .forex_liquidity{
+.forex_liquidity__new__mam_platform {
+  .forex_liquidity__content {
+    max-width: 525px;
+    .section__subtitle {
+      padding-right: 10px;
+    }
+  }
+}
+.forex_liquidity__new__copy {
+  .forex_liquidity__content {
+    .section__subtitle {
+      padding-right: 150px;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .MAM_platform .forex_liquidity {
     padding-top: 100px;
     padding-bottom: 50px;
-    .supported_platforms-items{
+    .supported_platforms-items {
       flex-direction: column;
-      .supported_platforms-item{
-        margin-right: 0 ;
+      .supported_platforms-item {
+        margin-right: 0;
       }
     }
   }
