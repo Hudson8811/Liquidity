@@ -1,59 +1,61 @@
-.chance{
-  .opportunities{
+.chance {
+  .opportunities {
     padding-top: 125px;
     padding-bottom: 125px;
-    background: #FFFFFF;
+    background: #ffffff;
   }
-  .main-text{
+  .main-text {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     /* or 139% */
     text-align: center;
-    letter-spacing: -0.5px;
-    color: #63636E;
+    letter-spacing: 0px;
+    color: #63636e;
     max-width: 651px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 109px;
   }
-  .section__title{
+  .section__title {
     letter-spacing: 0;
     margin-bottom: 0;
   }
-  .container.flex.diversified{
-    .text.left{
-      p{padding-right: 40px;}
+  .container.flex.diversified {
+    .text.left {
+      p {
+        padding-right: 40px;
+      }
     }
   }
-  .container.flex.traders{
+  .container.flex.traders {
     margin-bottom: 125px;
-    .text.left{
+    .text.left {
       margin-top: -23px;
     }
-    .title{
+    .title {
       padding-right: 25px;
       margin-top: 16px;
     }
-    p{
+    p {
       padding-right: 40px;
     }
   }
-  .container.flex.clients{
+  .container.flex.clients {
     margin-bottom: 125px;
-    .text.right{
+    .text.right {
       margin-left: 3px;
-      .title{
+      .title {
         padding-right: 70px;
-        letter-spacing: -.8px;
+        letter-spacing: -0.8px;
         margin-top: 16px;
       }
-      .check_block--mam_platform-item--text{
+      .check_block--mam_platform-item--text {
         margin-left: 16px;
       }
     }
   }
-  .container.flex.marketing{
+  .container.flex.marketing {
     margin-bottom: 0;
   }
 }

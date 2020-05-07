@@ -33,7 +33,7 @@
     }
   }
   .section__title {
-    letter-spacing: -0.5px;
+    letter-spacing: 0px;
     max-width: 900px;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -179,7 +179,7 @@
         line-height: 24px;
         /* or 150% */
 
-        letter-spacing: -0.5px;
+        letter-spacing: 0px;
 
         color: #555555;
         margin-left: 18px;
@@ -187,15 +187,20 @@
     }
   }
 }
-@media screen and(max-width:1920px) {
+@media screen and(max-width:950px) {
   .state_of_art {
     .video_wrapper {
-      height: 26.5vw;
-      width: 45vw;
+      height: auto;
+      width: 100%;
       margin: 0 auto;
+      padding: 3vw 3vw;
+      box-sizing: border-box;
       &-abs {
-        left: 1.55vw;
-        top: 1.55vw;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }

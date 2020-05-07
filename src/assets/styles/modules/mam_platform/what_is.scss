@@ -1,34 +1,34 @@
-.what_is{
+.what_is {
   padding-top: 125px;
   padding-bottom: 125px;
-  background: #EFF4F6;
-  .main__text{
+  background: #eff4f6;
+  .main__text {
     font-weight: normal;
     font-size: 20px;
     line-height: 29px;
     /* or 145% */
-    letter-spacing: -0.5px;
-    color: #63636E;
+    letter-spacing: 0px;
+    color: #63636e;
     margin-top: 50px;
   }
-  .container.flex{
+  .container.flex {
     margin-top: 94px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
-  .segment{
+  .segment {
     max-width: 293px;
   }
 }
 
-@media screen and (max-width:880px){
+@media screen and (max-width: 880px) {
   .what_is {
     padding-top: 50px;
     padding-bottom: 50px;
-    .container.flex{
+    .container.flex {
       flex-direction: column;
-      .segment{
+      .segment {
         margin-bottom: 30px;
       }
     }

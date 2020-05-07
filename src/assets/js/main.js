@@ -485,21 +485,11 @@ $(document).ready(function () {
     cellAlign: "left",
     contain: true,
   });
-  // $(".main_tabs_slider").flickity({
-  //   prevNextButtons: false,
-  //   pageDots: false,
-  //   contain: true,
-  //   fade: true,
-  // });
 });
 $(".tabs_slider .item").on("click", function () {
   let index = $(this).index();
   $(".tabs_slider").flickity("select", index);
 });
-
-// $(document).on('click', '.head__item--show-btn--js', function (e) {
-
-// });
 
 $(document).on("click", ".burger--js", function () {
   $(this).removeClass("active");

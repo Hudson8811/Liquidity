@@ -1,52 +1,52 @@
-.four_types{
+.four_types {
   padding-top: 125px;
   padding-bottom: 125px;
-  background: #FFFFFF;
-  .subtitle{
+  background: #ffffff;
+  .subtitle {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     /* or 139% */
     text-align: center;
-    letter-spacing: -0.5px;
-    color: #63636E;
+    letter-spacing: 0px;
+    color: #63636e;
     max-width: 636px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 94px;
   }
-  .container.flex{
+  .container.flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    .gray__block{
+    .gray__block {
       width: calc(50% - 10px);
       min-width: 480px;
       min-height: 224px;
       margin-bottom: 20px;
-      &:nth-child(1){
-        .gray__block--subtitle{
+      &:nth-child(1) {
+        .gray__block--subtitle {
           padding: 0 70px;
         }
       }
-      &:nth-child(2){
-        .gray__block--subtitle{
+      &:nth-child(2) {
+        .gray__block--subtitle {
           padding: 0 75px;
         }
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         height: 244px;
-        .gray__block--subtitle{
+        .gray__block--subtitle {
           padding: 0 60px;
         }
-        .gray__block--description{
+        .gray__block--description {
           padding: 0 120px;
         }
       }
-      &:nth-child(4){
+      &:nth-child(4) {
         height: 244px;
-        .gray__block--subtitle{
+        .gray__block--subtitle {
           padding: 0 120px;
         }
       }
@@ -54,22 +54,26 @@
   }
 }
 
-@media screen and (max-width:1030px){
+@media screen and (max-width: 1030px) {
   .four_types {
     padding-top: 50px;
     padding-bottom: 50px;
-    .container.flex{
+    .container.flex {
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
 }
-@media screen and (max-width:580px){
-  .four_types .container.flex .gray__block{
+@media screen and (max-width: 580px) {
+  .four_types .container.flex .gray__block {
     min-width: auto;
     width: 100%;
-    &:nth-child(1) .gray__block--subtitle,&:nth-child(2) .gray__block--subtitle,&:nth-child(3) .gray__block--subtitle,&:nth-child(3) .gray__block--description, &:nth-child(4) .gray__block--subtitle{
+    &:nth-child(1) .gray__block--subtitle,
+    &:nth-child(2) .gray__block--subtitle,
+    &:nth-child(3) .gray__block--subtitle,
+    &:nth-child(3) .gray__block--description,
+    &:nth-child(4) .gray__block--subtitle {
       padding: 0 10px;
     }
   }

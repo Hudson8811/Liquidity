@@ -1,80 +1,80 @@
-.actions{
+.actions {
   padding-bottom: 125px;
-  .container.flex{
+  .container.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    img{
+    img {
       max-width: 540px;
     }
-    .left{
-      p{
+    .left {
+      p {
         margin-right: 120px;
       }
     }
   }
-  .title{
+  .title {
     font-weight: 900;
     font-size: 36px;
     line-height: 44px;
     /* identical to box height, or 122% */
-    letter-spacing: -0.5px;
+    letter-spacing: 0px;
     color: #383838;
     margin-top: 10px;
     margin-bottom: 30px;
   }
-  p{
+  p {
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
     color: #383838;
-    &.margin{
+    &.margin {
       margin-bottom: 20px;
     }
   }
 }
 
-@media screen and (max-width:970px){
-  .actions{
+@media screen and (max-width: 970px) {
+  .actions {
     padding-top: 50px;
     padding-bottom: 50px;
     .container.flex {
-      img{
+      img {
         max-width: 300px;
       }
-     .left {
-       margin-right: 20px;
-      p{
-        margin-right: 0;
+      .left {
+        margin-right: 20px;
+        p {
+          margin-right: 0;
+        }
       }
-     }
     }
   }
 }
 
-@media screen and (max-width:970px){
-.actions{
+@media screen and (max-width: 970px) {
+  .actions {
     .container.flex {
-      img{
+      img {
         max-width: 300px;
         width: 100%;
       }
-      .text.right{
+      .text.right {
         margin-right: 20px;
       }
-      .text.left{
+      .text.left {
         margin-left: 20px;
       }
-      .green__title{
+      .green__title {
         font-size: 14px;
         line-height: 17px;
       }
-      .title{
+      .title {
         font-size: 24px;
         line-height: 28px;
       }
-      p{
+      p {
         font-size: 12px;
         line-height: 15px;
       }
@@ -82,13 +82,13 @@
   }
 }
 
-@media screen and (max-width:640px){
-  .actions{
+@media screen and (max-width: 640px) {
+  .actions {
     .container.flex {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      .left{
+      .left {
         margin-bottom: 30px;
       }
     }

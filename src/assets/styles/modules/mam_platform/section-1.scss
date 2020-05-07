@@ -10,7 +10,7 @@
         font-size: 18px;
         line-height: 25px;
         /* or 139% */
-        letter-spacing: -0.5px;
+        letter-spacing: 0px;
         color: #ffffff;
       }
     }
@@ -44,5 +44,11 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .forex_liquidity__new .new_form {
+    margin-right: 0;
   }
 }

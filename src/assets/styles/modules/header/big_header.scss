@@ -1,7 +1,11 @@
 body.hidden {
   overflow: hidden;
 }
+
 .big_header {
+  .menu .menu-item a {
+    letter-spacing: 0;
+  }
   position: fixed;
   left: 0;
   top: 0;
@@ -62,7 +66,7 @@ body.hidden {
     }
   }
   #About_wrapper {
-    min-width: 50px;
+    min-width: 53px;
   }
   &__bg {
     padding: 18px 0;
@@ -110,7 +114,7 @@ body.hidden {
         font-weight: normal;
         font-size: 13px;
         line-height: 15px;
-        letter-spacing: -0.5px;
+        letter-spacing: 0px;
         color: #fff;
       }
     }
@@ -125,7 +129,7 @@ body.hidden {
             font-size: 13px;
             line-height: 15px;
             /* identical to box height */
-            letter-spacing: -0.5px;
+            letter-spacing: 0px;
             color: #e3e3e3;
             text-decoration: none;
           }
@@ -228,26 +232,26 @@ body.hidden {
           margin-right: 0;
         }
         &:nth-child(1) {
-          min-width: 32px;
+          min-width: 35px;
         }
         &:nth-child(2) {
-          min-width: 60px;
+          min-width: 65px;
         }
         &:nth-child(3) {
-          min-width: 125px;
+          min-width: 130px;
         }
         &:nth-child(4) {
-          min-width: 128px;
+          min-width: 133px;
         }
         &:nth-child(5) {
-          min-width: 140px;
+          min-width: 148px;
         }
         a {
           font-weight: 300;
           font-size: 16px;
           line-height: 19px;
           /* identical to box height */
-          letter-spacing: -0.5px;
+          letter-spacing: 0px;
           color: #e3e3e3;
         }
       }
@@ -263,7 +267,7 @@ body.hidden {
       line-height: 19px;
       /* identical to box height */
 
-      letter-spacing: -0.5px;
+      letter-spacing: 0px;
 
       color: #e3e3e3;
     }
@@ -352,7 +356,7 @@ body.hidden {
           font-size: 14px;
           line-height: 29px;
           /* or 207% */
-          letter-spacing: -0.5px;
+          letter-spacing: 0px;
           color: #e3e3e3;
           a {
             color: #e3e3e3;

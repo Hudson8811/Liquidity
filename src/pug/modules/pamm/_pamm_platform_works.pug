@@ -2,104 +2,32 @@
   .container
     .section__title.center How a #[span(class="section__title--bold") PAMM-platform works]
     .main-text A PAMM platform combines slave accounts into one big master account. All investors receive P&L for master’s positions in proportion to their investments. At the end of the period they pay fees.
-  .tabs
-    label.mam_tabs-btn-4.active(data-id="1")
-      span.icon
-        span.icon-text 1
-      span Money manager opens PAMM account, starts trading with his own money and statistics are collected for his account.
-    label.mam_tabs-btn-4(data-id="2")
-      span.icon
-        span.icon-text 2
-      span Investor deposits $1000 into PAMM
-    label.mam_tabs-btn-4(data-id="3")
-      span.icon
-        span.icon-text 3
-      span Money manager continues trading and earns $2,000
-    label.mam_tabs-btn-4(data-id="4")
-      span.icon
-        span.icon-text 4
-      span Investor pay fees from profits made on his account
-    .container#tabs_container-1.mam_tabs-content-4.active(data-id="1")
-      .flex
-        img(src="images/pamm/tabs1.png", alt="img", class="left_img")
-        .money_assets
-          .money_assets-heading Money Manager’s Assets
-          .money_assets-items
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-    .container#tabs_container-2.mam_tabs-content-4(data-id="2")
-      .flex
-        img(src="images/pamm/tabs2.png", alt="img", class="left_img")
-        .money_assets
-          .money_assets-heading Money Manager’s Assets
-          .money_assets-items
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-        .money_assets.bold
-          .money_assets-heading Assets of investor
-          .money_assets-items
-            .money_assets-item $500
-            .money_assets-item $500
-    .container#tabs_container-3.mam_tabs-content-4(data-id="3")
-      .flex
-        img(src="images/pamm/tabs3.png", alt="img", class="left_img")
-        .profit_wrapper
-          .money_assets
-            .money_assets-heading Money Manager’s Assets
-            .money_assets-items
-              .money_assets-item $500
-              .money_assets-item $500
-              .money_assets-item $500
-              .money_assets-item $500
-              .money_assets-item $500
-              .money_assets-item $500
-          .money_assets.bold
-            .money_assets-heading Assets of investor
-            .money_assets-items
-              .money_assets-item $500
-              .money_assets-item $500
-          .profit_row
-            .profit_abs Profit
-            .money_assets
-              .money_assets-items
-                .money_assets-item.profit $500
-                .money_assets-item.profit $500
-                .money_assets-item.profit $500
-            .money_assets.bold
-              .money_assets-items
-                .money_assets-item.profit.m0 $500
-    .container#tabs_container-4.mam_tabs-content-4(data-id="4")
-      .flex
-        img(src="images/pamm/tabs4.png", alt="img", class="left_img")
-        .money_assets
-          .money_assets-heading Money Manager’s Assets
-          .money_assets-items
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item.profit $500
-            .money_assets-item.profit $500
-            .money_assets-item.profit $500
-        .money_assets.bold
-          .money_assets-heading Assets of investor
-          .money_assets-items
-            .money_assets-item $500
-            .money_assets-item $500
-            .money_assets-item-profit_wrapper
-              .money_assets-item.profit $400
-              .profit_abs Investor’s profit
-              img.abs_arrow(src="images/pamm/arrow.svg", alt="img")
-              .money_assets-item-profit_wrapper.money_assets-item-profit_wrapper--abs
-                .money_assets-item.profit $100
-                .profit_abs.profit_abs-2 Fees payment to Money manager
+  .container.tabs_slider_container
+    .tabs_slider
+      .active.item(data-id="1")
+        span.icon
+          span.icon-text 1
+        span Money manager opens PAMM account, starts trading with his own money and statistics are collected for his account.
+      .item(data-id="2")
+        span.icon
+          span.icon-text 2
+        span Investor deposits $1000 into PAMM
+      .item(data-id="3")
+        span.icon
+          span.icon-text 3
+        span Money manager continues trading and earns $2,000
+      .item(data-id="4")
+        span.icon
+          span.icon-text 4
+        span Investor pay fees from profits made on his account
+  .container
+    .main_tabs_slider
+      .item.active(data-id="1")
+        img(src="images/pamm_slider1.png", alt="image")
+      .item(data-id="2")
+        img(src="images/pamm_slider2.png", alt="image")
+      .item(data-id="3")
+        img(src="images/pamm_slider3.png", alt="image")
+      .item(data-id="4")
+        img(src="images/pamm_slider4.png", alt="image")
+        
