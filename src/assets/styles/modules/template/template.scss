@@ -1815,7 +1815,7 @@ select:visited {
       padding-left: 8px;
       width: 35%;
       .check_block--mam_platform-item--text {
-        padding-right: 40px;
+        padding-right: 43px;
       }
     }
     &:nth-child(6) {
@@ -2069,4 +2069,9 @@ select:visited {
   &.white_section {
     background: #fff;
   }
+}
+
+.br {
+  display: block;
+  margin-top: 20px;
 }
