@@ -1,7 +1,9 @@
 .newFooter {
   padding-bottom: 0;
   background: transparent;
-
+  .menu .menu-item a{
+    letter-spacing: 0;
+  }
   .new_line {
     padding: 33px 0;
     background: #1e2226;
@@ -162,7 +164,7 @@
     padding-bottom: 62px;
     &_left-block {
       width: 247px;
-      padding-right: 54px;
+      padding-right: 53px;
       border-right: 1px solid #3a3b3b;
       margin-right: 53px;
       padding-top: 10px;

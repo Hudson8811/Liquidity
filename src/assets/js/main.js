@@ -137,7 +137,7 @@ $(document).ready(function () {
       $(".goanim").each(function () {
         if (
           $(window).scrollTop() + window.innerHeight / 1.2 >
-            $(this).offset().top &&
+          $(this).offset().top &&
           $(window).scrollTop() - window.innerHeight < $(this).offset().top
         ) {
           $(this).removeClass("goanim");
@@ -321,15 +321,23 @@ $(document).ready(function () {
   // })
 
   var scrollPos = 0;
+  var countDelay = 0
   $(window).scroll(function () {
+
+    console.log(countDelay)
     var newScrollPos = $(this).scrollTop();
     if ($(this).scrollTop() > 67) {
       if ($(".big_menu_content--js").hasClass("active")) {
         return;
       } else if (newScrollPos > scrollPos) {
         $(".big_header__bg--2").addClass("scroll");
-      } else {
-        $(".big_header__bg--2").removeClass("scroll");
+        countDelay = 0
+      } else if (newScrollPos < scrollPos) {
+        countDelay++
+        if (countDelay > 30) {
+          $(".big_header__bg--2").removeClass("scroll");
+          countDelay = 0
+        }
       }
       scrollPos = newScrollPos;
     } else {

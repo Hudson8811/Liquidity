@@ -1,4 +1,10 @@
 .footer-menu-section-2 {
+  .footer-menu-section-flex__item .menu li a{
+    letter-spacing: 0;
+  }
+  .footer-menu-section-flex__title span{
+    letter-spacing: 0;
+  }
   padding-top: 60px;
   padding-bottom: 10px;
   background: #16191c;
@@ -50,7 +56,7 @@
     }
     &.right_block {
       // padding-left: 86px;
-      padding-left: 136px;
+      padding-left: 119px;
     }
   }
 }
