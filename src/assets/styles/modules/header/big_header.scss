@@ -232,7 +232,7 @@ body.hidden {
           margin-right: 0;
         }
         &:nth-child(1) {
-          min-width: 35px;
+          min-width: 103.1px;
         }
         &:nth-child(2) {
           min-width: 65px;
@@ -387,16 +387,19 @@ body.hidden {
     .menu .menu-item {
       margin-right: 10px;
       &:nth-child(1) {
-        min-width: 84px;
+        min-width: 90.15px;
       }
       &:nth-child(2) {
-        min-width: 50px;
+        min-width: 54.12px;
       }
       &:nth-child(3) {
-        min-width: 106px;
+        min-width: 114px;
       }
       &:nth-child(4) {
-        min-width: 108px;
+        min-width: 116.14px;
+      }
+      &:nth-child(5) {
+        min-width: 129px;
       }
       a {
         font-size: 14px;

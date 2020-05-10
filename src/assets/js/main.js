@@ -614,3 +614,13 @@ $(document).on("click", ".castom_select .castom_select__heading", function (e) {
   $(this).toggleClass("active");
   $(".castom_select__content").slideToggle();
 });
+
+$(document).on("click", "body", function (e) {
+  var targetI = e.target
+  if (!targetI.classList.contains('castom_select__heading') && !targetI.classList.contains('castom_select__content') && !targetI.classList.contains('mCustomScrollBox') && !targetI.classList.contains('mCSB_container')) {
+    $(".castom_select__content").slideToggle();
+    $('.castom_select__heading').toggleClass('active');
+  }
+
+
+});
