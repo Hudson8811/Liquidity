@@ -1,24 +1,24 @@
-.forex_liquidity__new__b2_core{
+.forex_liquidity__new__b2_core {
   padding-bottom: 250px;
-  .forex_liquidity__content{
+  .forex_liquidity__content {
     max-width: 445px;
   }
 }
 
-.section{
+.section .section {
   padding-top: 125px;
   padding-bottom: 125px;
-  @media screen and (max-width:580px){
+  @media screen and (max-width: 580px) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  &__title{
+  &__title {
     margin-bottom: 50px;
-    @media screen and (max-width:580px){
+    @media screen and (max-width: 580px) {
       margin-bottom: 20px;
     }
   }
-  &__subtitle{
+  &__subtitle {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -27,24 +27,24 @@
     /* or 139% */
     text-align: center;
     letter-spacing: 0px;
-    color: #63636E;
+    color: #63636e;
   }
 }
 
-.section.dark_style{
-  background: #1F2832;
-  .section__title{
+.section.dark_style {
+  background: #1f2832;
+  .section__title {
     color: #fff;
   }
-  .section__subtitle{
+  .section__subtitle {
     color: #fff;
   }
 }
 
-.what_is_section{
-  .banner{
+.what_is_section {
+  .banner {
     margin-top: 80px;
-    @media screen and (max-width:580px){
+    @media screen and (max-width: 580px) {
       margin-top: 0px;
     }
   }

@@ -625,5 +625,5 @@ $(document).on("click", "body", function (e) {
 
 $(document).on("click", ".packages_more_table_btn--js", function (e) {
   e.preventDefault();
-  $(".packages_table__row:nth-child(n+19)").slideToggle('display:flex');
+  $(".packages_table__row_wrapper:nth-child(n+19)").slideToggle();
 });

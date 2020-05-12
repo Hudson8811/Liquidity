@@ -4,9 +4,13 @@
     max-width: 575px;
     margin: 0 auto;
   }
+  .packages_table{
+    margin-top: 80px;
+  }
 }
 
 .packages_table{
+  overflow-x: auto;
   width: 977px;
   max-width: 100%;
   margin: 0 auto;
@@ -22,8 +26,10 @@
     &--shadow{
       border-width: 2px;
     }
-    &:nth-child(n + 19) {
-      display: none;
+    &_wrapper{
+      &:nth-child(n + 19) {
+        display: none;
+      }
     }
     &:not(.packages_table__heading_row){
       .packages_table__col:not(:nth-child(1)){
