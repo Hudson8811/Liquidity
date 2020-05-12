@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    - var title = 'b2_core'
+    -var newFooter = true
+
+block content
+    include modules/b2_core/_b2_core
+    include modules/b2_core/_what_is_block
+    include modules/b2_core/_who_uses_block
+    include modules/b2_core/_b2_packages
+    include modules/mam_platform/_footer-menu-section-2

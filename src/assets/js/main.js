@@ -621,6 +621,9 @@ $(document).on("click", "body", function (e) {
     $(".castom_select__content").slideUp();
     $('.castom_select__heading').removeClass('active');
   }
+});
 
-
+$(document).on("click", ".packages_more_table_btn--js", function (e) {
+  e.preventDefault();
+  $(".packages_table__row:nth-child(n+19)").slideToggle('display:flex');
 });

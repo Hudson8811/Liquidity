@@ -35,7 +35,6 @@
 
 // MAM_platform
 @import "mam_platform/section-1.scss";
-@import "mam_platform/b2_core.scss";
 @import "mam_platform/b2_form.scss";
 @import "mam_platform/what_is.scss";
 @import "mam_platform/features.scss";
@@ -74,3 +73,8 @@
 @import "pamm/pamm_platform_works.scss";
 @import "pamm/pamm_video.scss";
 @import "pamm/pamm_types.scss";
+
+//b2_core
+@import "b2_core/b2_core.scss";
+@import "b2_core/who_uses_block.scss";
+@import "b2_core/b2_packages.scss";
