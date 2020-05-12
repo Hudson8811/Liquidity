@@ -1,8 +1,8 @@
 .footer-menu-section-2 {
-  .footer-menu-section-flex__item .menu li a{
+  .footer-menu-section-flex__item .menu li a {
     letter-spacing: 0;
   }
-  .footer-menu-section-flex__title span{
+  .footer-menu-section-flex__title span {
     letter-spacing: 0;
   }
   padding-top: 60px;
@@ -50,6 +50,12 @@
     }
   }
   .footer-menu-section-flex__item {
+    &:nth-child(3n-1) {
+      padding-left: 90px;
+    }
+    &:nth-child(3n) {
+      padding-left: 119px;
+    }
     padding-right: 0;
     &.center_block {
       padding-left: 90px;
@@ -75,8 +81,8 @@
     .footer-menu-section-flex__item {
       box-sizing: border-box;
     }
-    .footer-menu-section-flex__item.center_block,
-    .footer-menu-section-flex__item.right_block {
+    .footer-menu-section-flex__item:nth-child(3n),
+    .footer-menu-section-flex__item:nth-child(3n-1) {
       padding-left: 0;
     }
   }
