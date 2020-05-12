@@ -5,20 +5,20 @@
   }
 }
 
-.section .section {
+.section {
   padding-top: 125px;
   padding-bottom: 125px;
   @media screen and (max-width: 580px) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  &__title {
+  .section__title {
     margin-bottom: 50px;
     @media screen and (max-width: 580px) {
       margin-bottom: 20px;
     }
   }
-  &__subtitle {
+  .section__subtitle {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
