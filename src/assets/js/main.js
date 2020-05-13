@@ -349,62 +349,19 @@ $(document).ready(function () {
     $(".big_header__bg--2").removeClass("scroll");
   });
 
-  $(".mam_tabs-btn-1").click(function () {
-    event.preventDefault();
+
+  $(document).on('click', '.mam_tabs-btn', function (e) {
+    e.preventDefault();
     if (!$(this).hasClass("active")) {
       var id = $(this).data("id");
-      $(".mam_tabs-btn-1").removeClass("active");
-      $(this).addClass("active");
-      $(".mam_tabs-content-1")
-        .fadeOut(300)
-        .promise()
-        .done(function () {
-          $('.mam_tabs-content-1[data-id="' + id + '"]').fadeIn(300);
-        });
+      $(this).addClass("active").siblings('.mam_tabs-btn').removeClass("active");
+      $(this).siblings(".mam_tabs-content").fadeOut(300).promise().done(function () {
+        $(this).siblings('.mam_tabs-content[data-id="' + id + '"]').fadeIn(300);
+      });
     }
   });
-  $(".mam_tabs-btn-2").click(function () {
-    event.preventDefault();
-    if (!$(this).hasClass("active")) {
-      var id = $(this).data("id");
-      $(".mam_tabs-btn-2").removeClass("active");
-      $(this).addClass("active");
-      $(".mam_tabs-content-2")
-        .fadeOut(300)
-        .promise()
-        .done(function () {
-          $('.mam_tabs-content-2[data-id="' + id + '"]').fadeIn(300);
-        });
-    }
-  });
-  $(".mam_tabs-btn-3").click(function () {
-    event.preventDefault();
-    if (!$(this).hasClass("active")) {
-      var id = $(this).data("id");
-      $(".mam_tabs-btn-3").removeClass("active");
-      $(this).addClass("active");
-      $(".mam_tabs-content-3")
-        .fadeOut(300)
-        .promise()
-        .done(function () {
-          $('.mam_tabs-content-3[data-id="' + id + '"]').fadeIn(300);
-        });
-    }
-  });
-  $(".mam_tabs-btn-4").click(function () {
-    event.preventDefault();
-    if (!$(this).hasClass("active")) {
-      var id = $(this).data("id");
-      $(".mam_tabs-btn-4").removeClass("active");
-      $(this).addClass("active");
-      $(".mam_tabs-content-4")
-        .fadeOut(300)
-        .promise()
-        .done(function () {
-          $('.mam_tabs-content-4[data-id="' + id + '"]').fadeIn(300);
-        });
-    }
-  });
+
+
   $(".tabs_slider .item").click(function () {
     event.preventDefault();
     if (!$(this).hasClass("active")) {
