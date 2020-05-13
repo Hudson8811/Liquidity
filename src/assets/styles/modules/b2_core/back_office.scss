@@ -31,6 +31,9 @@
   }
   &__image {
     width: 514px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     img {
       display: block;
       width: 100%;
