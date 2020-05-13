@@ -1,0 +1,23 @@
+.gray_block__container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .gray__block {
+    margin-bottom: 20px;
+    width: calc(50% - 10px);
+    padding: 48px 55px;
+  }
+}
+.benefits_section {
+  .gray__block {
+    &--title {
+      text-align: left;
+    }
+    &--subtitle {
+      text-align: left;
+      color: #637786;
+    }
+  }
+}
