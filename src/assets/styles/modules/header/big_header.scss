@@ -261,6 +261,36 @@ body.hidden {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    &:nth-child(2) {
+      .big_header__bottom_row__right_row {
+        .row {
+          &:nth-child(1) {
+            min-width: 183.5px;
+          }
+          &:nth-child(2) {
+            min-width: 150.7px;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .big_header__bottom_row__right_row {
+        .row {
+          &:nth-child(2) {
+            min-width: 115.5px;
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      .big_header__bottom_row__right_row {
+        .row {
+          &:nth-child(1) {
+            min-width: 104px;
+          }
+        }
+      }
+    }
     &__heading {
       font-weight: 900;
       font-size: 16px;

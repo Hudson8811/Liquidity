@@ -1,0 +1,18 @@
+.demo_section {
+  .btn--green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    max-width: 341px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .section__subtitle {
+    max-width: 512px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 17px;
+  }
+}

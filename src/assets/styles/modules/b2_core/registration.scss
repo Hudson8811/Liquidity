@@ -1,0 +1,18 @@
+.section__registration {
+  .office_slider__item {
+    background: #eff4f6;
+    .office_slider__heading {
+      color: #000;
+    }
+    .check_block--mam_platform-item--text {
+      color: #555;
+    }
+  }
+  .flickity_castom_arrow .flickity-prev-next-button.next {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
