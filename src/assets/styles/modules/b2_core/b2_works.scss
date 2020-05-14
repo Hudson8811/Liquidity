@@ -1,0 +1,63 @@
+.b2_works {
+  background: #fff;
+  .tabs_slider .item {
+    height: 107px;
+    flex-wrap: wrap;
+
+    span:nth-child(2) {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      color: #637786;
+    }
+
+    &.active {
+      margin-top: 0;
+
+      span:nth-child(2) {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #383838;
+      }
+    }
+  }
+  .main_tabs_slider {
+    .item {
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 853px;
+      margin: 0 auto;
+    }
+
+    .tabs__title {
+      width: 100%;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 44px;
+      /* identical to box height, or 122% */
+      text-align: center;
+      color: #383838;
+      margin-top: 58px;
+      margin-bottom: 30px;
+    }
+
+    .tabs__subtitle {
+      width: 100%;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+      text-align: center;
+      color: #383838;
+    }
+  }
+}

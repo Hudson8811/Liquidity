@@ -605,3 +605,11 @@ $(".office_slider").flickity({
   pageDots: false,
   percentPosition: false,
 });
+
+$(".advanced_slider--slick-2").slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  prevArrow: $(".advanced_slick--prev-2"),
+  nextArrow: $(".advanced_slick--next-2"),
+});

@@ -1,0 +1,16 @@
+.section__anty_fraud {
+  .section__subtitle {
+    max-width: 680px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  .banner {
+    margin-bottom: 100px;
+  }
+  .gray__block {
+    &--title,
+    &--subtitle {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.section__catalog {
+  background: #eff4f6;
+  .cutting_catalog {
+    margin: 0 -25px;
+    margin-bottom: -60px;
+    &__item {
+      width: 33.333%;
+      padding: 0px 25px;
+      @media screen and (max-width: 740px) {
+        width: 100%;
+      }
+    }
+  }
+}

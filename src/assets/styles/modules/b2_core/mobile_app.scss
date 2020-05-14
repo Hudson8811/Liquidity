@@ -1,0 +1,47 @@
+.section__mobile_app {
+  .section__subtitle {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+}
+
+.check_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: -12px;
+  padding-left: 10%;
+  @media screen and (max-width: 840px) {
+    padding-left: 0;
+    flex-direction: column;
+  }
+  .check_block--mam_platform-item {
+    &:nth-child(3n + 1) {
+      width: 28%;
+      @media screen and (max-width: 840px) {
+        width: 100%;
+      }
+    }
+    &:nth-child(3n - 1) {
+      width: 35.333%;
+      @media screen and (max-width: 840px) {
+        width: 100%;
+      }
+    }
+    width: 33.333%;
+    @media screen and (max-width: 840px) {
+      width: 100%;
+    }
+    margin-bottom: 12px;
+    &--text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      /* identical to box height, or 162% */
+      color: #555555;
+    }
+  }
+}

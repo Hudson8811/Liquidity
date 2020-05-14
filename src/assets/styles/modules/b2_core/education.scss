@@ -1,0 +1,47 @@
+.language_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 580px) {
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 36px;
+    @media screen and (max-width: 580px) {
+      width: 25%;
+      margin: 10px;
+    }
+    & + .language_block__item {
+      margin-left: 36px;
+      @media screen and (max-width: 580px) {
+        margin-left: 0;
+      }
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.section__education {
+  .language_block {
+    padding-top: 30px;
+  }
+  .language_heading {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* or 119% */
+    text-align: center;
+    color: #ffffff;
+    max-width: 618px;
+    margin: 80px auto;
+  }
+  .section__subtitle {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+}

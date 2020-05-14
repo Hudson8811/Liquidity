@@ -11,6 +11,17 @@
     }
     .flickity-button {
       display: none;
+
+      @media screen and (max-width: 600px) {
+        display: flex;
+      }
+    }
+  }
+  .branding_block {
+    &__item {
+      img {
+        mix-blend-mode: multiply;
+      }
     }
   }
 }
@@ -41,6 +52,9 @@
     }
     @media screen and (max-width: 700px) {
       padding: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 50%;
     }
   }
 }

@@ -1,0 +1,20 @@
+.section__sacurity {
+  background: #eff4f6;
+  .section__subtitle {
+    max-width: 719px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  .banner {
+    margin-bottom: 50px;
+  }
+  .gray__block {
+    background: #ffffff;
+    /* Small_shadow */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    &--title,
+    &--subtitle {
+      text-align: left;
+    }
+  }
+}

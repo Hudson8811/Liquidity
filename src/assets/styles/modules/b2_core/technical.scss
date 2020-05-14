@@ -1,0 +1,25 @@
+.date_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 84px;
+  /* identical to box height, or 105% */
+  text-align: center;
+  color: #383838;
+  @media screen and (max-width: 400px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.section__technical {
+  background: #eff4f6;
+  .date_text {
+    margin: 80px auto;
+  }
+  .section__subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

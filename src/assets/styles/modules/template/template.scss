@@ -1210,7 +1210,8 @@ select:visited {
 .advanced_slider--wrapper {
   background: center / auto 100% url(../images/Advanced.png) no-repeat;
   height: 35vw;
-  .advanced_slider--slick {
+  .advanced_slider--slick,
+  .advanced_slider--slick-2 {
     width: 44.5vw;
     margin: 0 auto;
   }
@@ -1228,7 +1229,8 @@ select:visited {
 @media screen and (min-width: 1800px) {
   .advanced_slider--wrapper {
     height: 571px;
-    .advanced_slider--slick {
+    .advanced_slider--slick,
+    .advanced_slider--slick-2 {
       width: 735px;
     }
     .item {

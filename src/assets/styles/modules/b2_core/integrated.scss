@@ -9,9 +9,20 @@
     padding: 62px 69px;
     margin-top: 60px;
     margin-bottom: 60px;
+    @media screen and (max-width: 600px) {
+      padding: 20px;
+    }
     &__item {
       width: 33.333%;
       padding: 26px 69px;
+
+      @media screen and (max-width: 800px) {
+        padding: 10px 30px;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 50%;
+      }
     }
     &--litle {
       padding: 20px;
@@ -19,6 +30,12 @@
       margin-bottom: 0;
       .branding_block__item {
         padding: 10px 57px;
+        @media screen and (max-width: 800px) {
+          padding: 10px 30px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 50%;
+        }
       }
     }
   }

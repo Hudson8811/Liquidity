@@ -54,3 +54,41 @@
 .b2_frame {
   background: #fff;
 }
+
+.b2_form_5 {
+  .section__subtitle {
+    max-width: 500px;
+  }
+}
+
+.b2_form_7 {
+  .section__subtitle {
+    max-width: 550px;
+  }
+}
+
+.section__b2_best {
+  .best_with {
+    align-items: stretch;
+    &--right {
+      padding-top: 90px;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .check_block.castom {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .check_block__text {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .section__subtitle {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}

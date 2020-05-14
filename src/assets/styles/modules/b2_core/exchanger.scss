@@ -5,4 +5,11 @@
     margin: 0 auto;
     margin-bottom: 54px;
   }
+  @media screen and (max-width: 840px) {
+    .section__title {
+      &--bold {
+        display: block;
+      }
+    }
+  }
 }
