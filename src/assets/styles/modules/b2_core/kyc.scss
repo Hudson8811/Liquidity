@@ -9,8 +9,10 @@
     margin-bottom: 60px;
   }
   .advanced_slider--wrapper .advanced_slider--slick {
-    width: 44.55vw;
-
+    width: 44.6vw;
+    .item {
+      height: 28vw;
+    }
     @media screen and (min-width: 1800px) {
       width: 726px;
       .item {

@@ -613,6 +613,7 @@ $(".office_slider").flickity({
   adaptiveHeight: false,
   pageDots: false,
   percentPosition: false,
+  selectedAttraction: 0.01,
 });
 
 $(".advanced_slider--slick-2").slick({
