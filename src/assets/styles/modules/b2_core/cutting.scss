@@ -1,5 +1,9 @@
 .cutting_section {
   background: #eff4f6;
+  padding: 164px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
   .section__subtitle {
     max-width: 870px;
     width: 100%;
@@ -16,9 +20,6 @@
     /* identical to box height, or 175% */
     color: #5c5c5c;
     margin-bottom: 100px;
-  }
-  .branding_block {
-    background: #ffffff;
   }
   .branding_heading {
     font-family: Roboto;
@@ -62,18 +63,18 @@
   &__item {
     width: 25%;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 13px;
     margin-bottom: 60px;
   }
   &__heading {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 28px;
     /* identical to box height, or 119% */
     color: #383838;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
   &__subheading {
     font-family: Roboto;

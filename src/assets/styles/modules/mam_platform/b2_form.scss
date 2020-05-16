@@ -1,4 +1,18 @@
 .b2_form {
+  .new_form__select__language {
+    position: relative;
+    margin-left: 10px;
+    padding: 0 12px;
+    padding-top: 20px;
+    z-index: 10;
+    background: #28323e;
+    display: none;
+  }
+  .new_form__label__lang_select.active {
+    .new_form__select__language {
+      display: flex;
+    }
+  }
   &.light_theme {
     background: #eff4f6;
     .new_form__label {
@@ -176,15 +190,21 @@
       &_wrapper {
         position: absolute;
         height: 100%;
-        width: 111px;
+        width: 131px;
         right: 20px;
         top: 0;
         .new_form__select {
+          padding-left: 20px;
           background-color: #28323e;
           width: 100px;
           height: 100%;
           appearance: none;
           background-position: 100% 50%;
+          &--preview {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
         }
       }
     }

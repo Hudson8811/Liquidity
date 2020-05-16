@@ -25,6 +25,10 @@
 }
 
 .section__education {
+  padding: 200px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
   .language_block {
     padding-top: 30px;
   }

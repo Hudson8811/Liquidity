@@ -1,4 +1,8 @@
 .section__kyc {
+  padding: 150px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
   .section__subtitle {
     max-width: 740px;
     margin: 0 auto;
@@ -8,7 +12,15 @@
     width: 44.55vw;
 
     @media screen and (min-width: 1800px) {
-      width: 735px;
+      width: 726px;
+      .item {
+        padding-top: 40px;
+        height: 455px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
   .integrated_with__heading {
@@ -22,6 +34,16 @@
     line-height: 44px;
     /* identical to box height, or 122% */
     color: #ffffff;
+  }
+  .advanced_slick--prev {
+    svg {
+      margin-left: -3px;
+    }
+  }
+  .advanced_slick--next {
+    svg {
+      margin-right: -3px;
+    }
   }
 }
 

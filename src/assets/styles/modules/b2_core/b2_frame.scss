@@ -1,0 +1,51 @@
+.b2_frame {
+  padding: 150px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
+  .video_description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 27px;
+    color: #3c3c3c;
+    margin: 25px 0px 16px;
+  }
+  .video_subdescription {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+    color: #827c7c;
+  }
+}
+
+.video_block--youtube_btn {
+  width: 72px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+.video--time {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 50px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(27, 27, 27, 0.5);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 3.37677px;
+}

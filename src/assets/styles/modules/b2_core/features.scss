@@ -1,9 +1,16 @@
 .feature {
+  padding: 176px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
+  .section__title {
+    margin-bottom: 125px;
+  }
   &__block {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    margin-bottom: 260px;
+    margin-bottom: 150px;
     &:last-child {
       margin-bottom: 0;
     }

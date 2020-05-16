@@ -16,12 +16,11 @@
       color: #555;
     }
   }
-  .flickity_castom_arrow .flickity-prev-next-button.next {
-    svg {
-      path {
-        fill: #fff;
-      }
-    }
+  .types {
+    margin-top: 110px;
+  }
+  .flickity_castom_arrow .flickity-prev-next-button {
+    bottom: -20px;
   }
 }
 

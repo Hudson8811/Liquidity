@@ -1,12 +1,28 @@
 .section__integrated {
+  padding: 130px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
   background: linear-gradient(180deg, #eff4f6 0%, #eff4f6 100%);
   .section__subtitle {
     max-width: 636px;
     margin: 0 auto;
   }
+  .casher__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 42px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -1.0135px;
+
+    color: #383838;
+  }
   .branding_block {
-    background: #fff;
-    padding: 62px 69px;
+    width: 100%;
+    padding: 62px 0;
     margin-top: 60px;
     margin-bottom: 60px;
     @media screen and (max-width: 600px) {
@@ -14,7 +30,7 @@
     }
     &__item {
       width: 33.333%;
-      padding: 26px 69px;
+      padding: 26px 70px;
 
       @media screen and (max-width: 800px) {
         padding: 10px 30px;

@@ -1,7 +1,11 @@
 .b2_works {
   background: #fff;
   .tabs_slider .item {
-    height: 107px;
+    margin: 0px 5px 20px 5px;
+    height: 97px;
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 0;
     flex-wrap: wrap;
 
     span:nth-child(2) {
@@ -32,6 +36,11 @@
       justify-content: center;
       max-width: 853px;
       margin: 0 auto;
+      img {
+        width: auto;
+        height: 500px;
+        margin: 0 auto;
+      }
     }
 
     .tabs__title {
@@ -44,7 +53,7 @@
       /* identical to box height, or 122% */
       text-align: center;
       color: #383838;
-      margin-top: 58px;
+      margin-top: 60px;
       margin-bottom: 30px;
     }
 

@@ -57,7 +57,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    line-height: 34px;
+    line-height: 40px;
     color: #ffffff;
     margin-bottom: 40px;
   }
@@ -96,16 +96,40 @@
     &.next {
       right: 50%;
       margin-right: -63px;
-      background-color: #01b68f;
+      background: transparent;
+      border: 1px solid #01b68f;
+      transition: all 0.2s;
+      .flickity-button-icon {
+        path {
+          fill: #01b68f;
+        }
+      }
+      &:hover {
+        background: #01b68f;
+        .flickity-button-icon {
+          path {
+            fill: white;
+          }
+        }
+      }
     }
     &.previous {
       left: 50%;
       margin-left: -63px;
       border: 1px solid #01b68f;
       background: transparent;
+      transition: all 0.2s;
       .flickity-button-icon {
         path {
           fill: #01b68f;
+        }
+      }
+      &:hover {
+        background: #01b68f;
+        .flickity-button-icon {
+          path {
+            fill: white;
+          }
         }
       }
     }

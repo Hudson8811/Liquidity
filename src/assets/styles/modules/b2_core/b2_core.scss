@@ -1,17 +1,19 @@
 .forex_liquidity__new__b2_core {
   padding-top: 280px;
   padding-bottom: 267px;
-
+  .new_form__label_capch .new_form__capch {
+    background: #e0e0e0;
+  }
   .forex_liquidity__content {
     margin-top: auto;
     max-width: 445px;
-    margin-bottom: 28px;
+    margin-bottom: auto;
   }
 }
 
 .section {
-  padding-top: 125px;
-  padding-bottom: 125px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   @media screen and (max-width: 580px) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -94,5 +96,18 @@
   .section__subtitle {
     max-width: 630px;
     margin: 0 auto;
+  }
+}
+
+.what_is_section {
+  padding: 150px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
+}
+
+.section__many {
+  .section__title {
+    margin-bottom: 80px;
   }
 }

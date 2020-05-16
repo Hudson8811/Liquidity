@@ -1,10 +1,12 @@
 .section__external {
   background: #eff4f6;
+  .section__title {
+    margin-bottom: 80px;
+  }
   .branding_block {
-    background: #fff;
     &__item {
       width: 33.333%;
-      padding: 35px 83px;
+      padding: 35px 60px;
       @media screen and (max-width: 740px) {
         padding: 10px 30px;
       }
