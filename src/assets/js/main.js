@@ -628,3 +628,18 @@ $(document).on("click", ".office_slider__item", function (e) {
   let index = $(this).index();
   $(".office_slider").flickity("select", index);
 });
+
+var machine = new Typed("#machine", {
+  strings: [
+    '<span style="font-weight: 900;">Liquidity</span> &amp; <b style="font-weight: 900;">Technology</b>',
+    ' <b style="font-weight: 900;">Liquidity</b> &amp; <b style="font-weight: 900;">Technology</b> <br> Provider ',
+  ],
+  typeSpeed: 70,
+  backSpeed: 70,
+  backDelay: 1000,
+  startDelay: 1000,
+  loop: true,
+  loopCount: 1,
+  showCursor: false,
+  contentType: "html",
+});
