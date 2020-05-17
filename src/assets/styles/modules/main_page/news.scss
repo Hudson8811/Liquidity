@@ -1,0 +1,152 @@
+.section {
+  &--gray {
+    background: #eff4f6;
+  }
+}
+
+.section__news {
+  padding: 125px 0;
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
+
+  .section__title {
+    margin-bottom: 80px;
+  }
+  .new_more_btn {
+    margin: 80px auto 0;
+  }
+}
+
+.news {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-child(2n) {
+    .news__preview {
+      align-items: flex-start;
+      &:hover {
+        .news__btn_block {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .news__btn_block {
+      transform: translateX(-99px);
+    }
+  }
+
+  &__preview {
+    position: relative;
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &:hover {
+      .news__btn_block {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__content {
+    background: #16191c;
+    width: calc(100% - 445px);
+    box-sizing: border-box;
+    padding: 56px 58px 39px 56px;
+  }
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 27px;
+    color: #eff4f6;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+    color: #eff4f6;
+    margin-bottom: 32px;
+  }
+
+  &__date {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #515151;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__btn_block {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.7s;
+    transform: translateX(99px);
+  }
+
+  &__btn_preview {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #eff4f6;
+    margin: 0 10px;
+  }
+
+  &__btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eff4f6;
+    background: #42aeea;
+    width: 108px;
+    height: 37px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

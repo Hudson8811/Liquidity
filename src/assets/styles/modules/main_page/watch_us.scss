@@ -51,3 +51,21 @@
   width: 141px;
   height: 39px;
 }
+
+.watch_us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  &__icon {
+    margin-right: 8px;
+  }
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 36px;
+    color: #2f3438;
+  }
+}

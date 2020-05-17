@@ -1,0 +1,31 @@
+.hear_flickity--js {
+  .item {
+    width: 100%;
+  }
+}
+
+.hear_flickity_small--js {
+  margin-top: 13px;
+  transition: opacity 0.5s;
+  .item {
+    width: calc(100% / 10 - 8px * 9 / 10);
+    margin: 0 4px;
+    opacity: 0.3;
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+}
+
+.section__hear {
+  .section__title {
+    margin-bottom: 30px;
+  }
+  .section__subtitle {
+    margin-bottom: 50px;
+  }
+
+  .new_more_btn {
+    margin: 80px auto 0;
+  }
+}
