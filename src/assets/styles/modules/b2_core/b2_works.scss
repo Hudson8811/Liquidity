@@ -1,5 +1,8 @@
 .b2_works {
   background: #fff;
+  .tabs_slider .flickity-viewport {
+    overflow: hidden;
+  }
   .tabs_slider .item {
     margin: 0px 5px 20px 5px;
     height: 97px;
