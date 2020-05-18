@@ -1,7 +1,11 @@
-.another_question__for_btn {
+.another_question__for_btn.another_question {
+  padding-right: 90px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  & > div {
+    max-width: 400px;
+  }
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: flex-start;

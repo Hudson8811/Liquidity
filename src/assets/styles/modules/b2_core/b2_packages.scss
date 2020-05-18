@@ -31,9 +31,6 @@
       border-width: 2px;
     }
     &_wrapper {
-      &:nth-child(n + 19) {
-        display: none;
-      }
     }
     &:not(.packages_table__heading_row) {
       .packages_table__col:not(:nth-child(1)) {
@@ -184,5 +181,19 @@
   display: none;
   &.active {
     display: flex;
+  }
+}
+.packages_table__wrapper-js-1 {
+  display: block;
+
+  &.active {
+    display: none;
+  }
+}
+.packages_table__wrapper-js-2 {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }

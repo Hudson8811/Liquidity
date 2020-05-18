@@ -1,4 +1,22 @@
 $(document).ready(function () {
+  $(document).on("click", "body", function (e) {
+    var targetI = e.target;
+    if (
+      !targetI.classList.contains("packages_table__wrapper") &&
+      !targetI.classList.contains("packages_hide_table_btn") &&
+      !targetI.classList.contains("packages_more_table_btn") &&
+      !targetI.classList.contains("packages_table__row") &&
+      !targetI.classList.contains("packages_table__col") &&
+      !targetI.classList.contains("svg-sprite-icon") &&
+      !targetI.tagName == "use"
+    ) {
+      $(".packages_table__wrapper-js-1").removeClass("active");
+      $(".packages_table__wrapper-js-2").removeClass("active");
+      $(".packages_more_table_btn").removeClass("active");
+      $(".packages_hide_table_btn").removeClass("active");
+    }
+  });
+
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 10) $(".header").addClass("header--slicky");
@@ -195,6 +213,16 @@ $(document).ready(function () {
     modal();
   });
 
+  function modal2() {
+    event.preventDefault();
+    $.fancybox.open({
+      src: "#modal2",
+      type: "inline",
+    });
+  }
+  $(".js-modal2-btn").click(function () {
+    modal2();
+  });
   $(".question-item-js").click(function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
@@ -612,14 +640,16 @@ $(document).on("click", ".packages_more_table_btn--js", function (e) {
   e.preventDefault();
   $(this).addClass("active");
   $(".packages_hide_table_btn--js").addClass("active");
-  $(".packages_table__row_wrapper:nth-child(n+19)").slideDown();
+  $(".packages_table__wrapper-js-1").addClass("active");
+  $(".packages_table__wrapper-js-2").addClass("active");
 });
 
 $(document).on("click", ".packages_hide_table_btn--js", function (e) {
   e.preventDefault();
   $(this).removeClass("active");
   $(".packages_more_table_btn--js").removeClass("active");
-  $(".packages_table__row_wrapper:nth-child(n+19)").slideUp();
+  $(".packages_table__wrapper-js-1").removeClass("active");
+  $(".packages_table__wrapper-js-2").removeClass("active");
 });
 
 $(".office_slider").flickity({
@@ -627,7 +657,8 @@ $(".office_slider").flickity({
   adaptiveHeight: false,
   pageDots: false,
   percentPosition: false,
-  selectedAttraction: 0.01,
+  selectedAttraction: 0.08,
+  friction: 0.7,
 });
 
 $(".advanced_slider--slick-2").slick({
