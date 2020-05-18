@@ -43,6 +43,14 @@
     align-items: flex-start;
     height: 156px;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 882px) {
+      height: 210px;
+    }
+
+    @media screen and (max-width: 580px) {
+      height: 132px;
+    }
   }
 
   .date_description {

@@ -2,6 +2,11 @@
   padding-top: 0;
   padding-bottom: 207px;
 
+  @media screen and (max-width: 580px) {
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
   .new_green_bord_btn {
     width: 159px;
     height: 45px;
@@ -33,6 +38,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (max-width: 580px) {
+    padding: 50px 0;
+  }
 }
 
 .new_green_bord_btn {
@@ -64,6 +73,10 @@
     img {
       display: block;
       margin-right: 20px;
+
+      @media screen and (max-width: 770px) {
+        width: 20px;
+      }
     }
 
     span {
@@ -73,6 +86,11 @@
       font-size: 55.5556px;
       line-height: 62px;
       color: #323232;
+
+      @media screen and (max-width: 770px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
   }
 
@@ -87,6 +105,15 @@
     text-align: center;
 
     color: #323232;
+
+    @media screen and (max-width: 770px) {
+      font-size: 16px;
+      line-height: 19px;
+
+      .db {
+        display: none;
+      }
+    }
   }
 }
 
@@ -94,6 +121,10 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+
+  @media screen and (max-width: 770px) {
+    flex-wrap: wrap;
+  }
 
   &__logo {
     display: block;
@@ -117,6 +148,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 770px) {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
+    }
 
     &:hover {
       .family__line {
