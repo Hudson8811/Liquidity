@@ -1,5 +1,6 @@
 .forex_liquidity__new__b2_core {
   padding-top: 280px;
+  position: relative;
   padding-bottom: 267px;
   .new_form__label_capch .new_form__capch {
     background: #e0e0e0;
@@ -8,6 +9,12 @@
     margin-top: auto;
     max-width: 445px;
     margin-bottom: auto;
+  }
+
+  @media screen and (max-width: 920px) {
+    .container {
+      display: block;
+    }
   }
 }
 
@@ -110,4 +117,14 @@
   .section__title {
     margin-bottom: 80px;
   }
+}
+
+.b2_core__title_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
