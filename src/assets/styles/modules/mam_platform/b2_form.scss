@@ -177,6 +177,9 @@
       width: calc(50% - 9px);
     }
     &__lang_select {
+      .new_form__star {
+        z-index: 10;
+      }
       .new_form__input {
         padding-right: 132px;
       }
@@ -190,16 +193,24 @@
       &_wrapper {
         position: absolute;
         height: 100%;
-        width: 131px;
-        right: 20px;
+        width: calc(100%);
+        right: 0;
         top: 0;
+        background-color: #28323e;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .new_form__label__lang_select_icon {
+          right: 48px;
+        }
+
         .new_form__select {
           padding-left: 20px;
-          background-color: #28323e;
-          width: 100px;
+          width: 100%;
           height: 100%;
           appearance: none;
-          background-position: 100% 50%;
+          background-position: 90% 50%;
+          background-color: #28323e;
           &--preview {
             display: flex;
             justify-content: flex-start;
