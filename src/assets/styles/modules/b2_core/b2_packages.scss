@@ -124,11 +124,15 @@
       width: 15px;
       height: 15px;
       margin: 0 auto;
+      pointer-events: none;
+      user-select: none;
     }
     .icon-close {
       width: 11px;
       height: 11px;
       margin: 0 auto;
+      pointer-events: none;
+      user-select: none;
     }
   }
 }

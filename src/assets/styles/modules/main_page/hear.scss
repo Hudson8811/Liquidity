@@ -1,6 +1,12 @@
 .hear_flickity--js {
   .item {
     width: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
@@ -11,6 +17,9 @@
     width: calc(100% / 10 - 8px * 9 / 10);
     margin: 0 4px;
     opacity: 0.3;
+
+    max-height: 60px;
+    overflow: hidden;
     &.is-selected {
       opacity: 1;
     }

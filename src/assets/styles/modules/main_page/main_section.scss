@@ -26,6 +26,10 @@
     display: block;
     color: #ffffff;
     margin-bottom: 0;
+
+    &:not(#machine) {
+      margin-top: 85px;
+    }
   }
   .section__subtitle {
     position: relative;
@@ -45,11 +49,19 @@
     margin-bottom: 50px;
 
     @media screen and (max-width: 882px) {
-      height: 210px;
+      height: 236px;
+
+      .section__title:not(#machine) {
+        margin-top: 165px;
+      }
     }
 
     @media screen and (max-width: 580px) {
       height: 132px;
+
+      .section__title:not(#machine) {
+        margin-top: 65px;
+      }
     }
   }
 

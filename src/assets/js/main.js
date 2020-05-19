@@ -1,22 +1,4 @@
 $(document).ready(function () {
-  $(document).on("click", "body", function (e) {
-    var targetI = e.target;
-    if (
-      !targetI.classList.contains("packages_table__wrapper") &&
-      !targetI.classList.contains("packages_hide_table_btn") &&
-      !targetI.classList.contains("packages_more_table_btn") &&
-      !targetI.classList.contains("packages_table__row") &&
-      !targetI.classList.contains("packages_table__col") &&
-      !targetI.classList.contains("svg-sprite-icon") &&
-      !targetI.tagName == "use"
-    ) {
-      $(".packages_table__wrapper-js-1").removeClass("active");
-      $(".packages_table__wrapper-js-2").removeClass("active");
-      $(".packages_more_table_btn").removeClass("active");
-      $(".packages_hide_table_btn").removeClass("active");
-    }
-  });
-
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 10) $(".header").addClass("header--slicky");
@@ -56,9 +38,9 @@ $(document).ready(function () {
   // });
 
   $(".hear_flickity--js").flickity({
-    adaptiveHeight: false,
     pageDots: false,
     prevNextButtons: false,
+    adaptiveHeight: true,
   });
 
   $(".hear_flickity_small--js").flickity({
@@ -67,6 +49,15 @@ $(document).ready(function () {
     prevNextButtons: false,
     contain: true,
     asNavFor: ".hear_flickity--js",
+  });
+
+  $(".says__flickity--js").flickity({
+    adaptiveHeight: false,
+    pageDots: false,
+    prevNextButtons: false,
+    adaptiveHeight: true,
+    wrapAround: true,
+    autoPlay: true,
   });
 
   $(".grafic_slider--slick").flickity({
@@ -498,6 +489,23 @@ $(document).ready(function () {
     cellAlign: "left",
     contain: true,
   });
+
+  $(document).on("click", "body", function (e) {
+    var targetI = e.target;
+    if (
+      !targetI.classList.contains("packages_table__wrapper") &&
+      !targetI.classList.contains("packages_hide_table_btn") &&
+      !targetI.classList.contains("packages_more_table_btn") &&
+      !targetI.classList.contains("packages_table__row") &&
+      !targetI.classList.contains("packages_table__col") &&
+      !targetI.classList.contains("svg-sprite-icon")
+    ) {
+      $(".packages_table__wrapper-js-1").removeClass("active");
+      $(".packages_table__wrapper-js-2").removeClass("active");
+      $(".packages_more_table_btn").removeClass("active");
+      $(".packages_hide_table_btn").removeClass("active");
+    }
+  });
 });
 $(".tabs_slider .item").on("click", function () {
   let index = $(this).index();
@@ -676,8 +684,8 @@ $(document).on("click", ".office_slider__item", function (e) {
 
 var machine = new Typed("#machine", {
   strings: [
-    '<span style="font-weight: 900;">Liquidity</span> &amp; <b style="font-weight: 900;">Technology</b>',
-    ' <b style="font-weight: 900;">Liquidity</b> &amp; <b style="font-weight: 900;">Technology</b> <br> Provider ',
+    '<span style="font-weight: 900;">L^100i^120q^90u^150i^300d^130i^380t^200y</span> &amp; <b style="font-weight: 900;">T^180e^210c^300h^50n^230o^150logy</b>',
+    '<b style="font-weight: 900;">Liquidity</b> &amp; <b style="font-weight: 900;">Technology</b>',
   ],
   typeSpeed: 70,
   backSpeed: 70,

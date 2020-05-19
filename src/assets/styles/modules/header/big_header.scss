@@ -177,6 +177,12 @@ body.hidden {
             align-items: center;
             background: 100% 50% / auto url(../images/icons/new_form_select.svg)
               no-repeat;
+            img {
+              display: block;
+              width: 30px;
+              flex-shrink: 0;
+              margin-left: 10px;
+            }
           }
           .language_button {
             margin-right: 5px;
@@ -193,11 +199,6 @@ body.hidden {
             display: flex;
             justify-content: center;
             align-items: center;
-            img {
-              width: 30px;
-              flex-shrink: 0;
-              margin-left: 10px;
-            }
           }
           .signal_button {
             display: flex;
