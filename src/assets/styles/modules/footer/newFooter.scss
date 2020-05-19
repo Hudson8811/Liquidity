@@ -1,7 +1,7 @@
 .newFooter {
   padding-bottom: 0;
   background: transparent;
-  .menu .menu-item a{
+  .menu .menu-item a {
     letter-spacing: 0;
   }
   .new_line {
@@ -163,7 +163,7 @@
     padding-top: 50px;
     padding-bottom: 62px;
     &_left-block {
-      width: 247px;
+      width: 289px;
       padding-right: 53px;
       border-right: 1px solid #3a3b3b;
       margin-right: 53px;
@@ -257,12 +257,6 @@
       &.disabled {
         opacity: 0.5;
         pointer-events: none;
-      }
-      &:nth-child(7) {
-        margin-right: 0;
-        @media screen and (max-width: 1080px) {
-          margin-right: 10px;
-        }
       }
     }
   }

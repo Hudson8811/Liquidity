@@ -2,9 +2,15 @@
   padding-top: 280px;
   position: relative;
   padding-bottom: 267px;
+
+  .forex_liquidity--overlay {
+    background: rgba(27, 27, 27, 0.6);
+  }
+
   .new_form__label_capch .new_form__capch {
     background: #e0e0e0;
   }
+
   .forex_liquidity__content {
     margin-top: auto;
     max-width: 445px;
@@ -133,7 +139,11 @@
   .fancybox-button.fancybox-close-small {
     top: 32px;
     right: 35px;
-    background: transparent;
+    background: center / cover url(../images/close.svg) no-repeat;
+    opacity: 0.3;
+    svg {
+      display: none;
+    }
   }
   background: rgba(24, 32, 41, 0.9);
   box-shadow: 0px 0px 40px rgba(32, 41, 51, 0.2);

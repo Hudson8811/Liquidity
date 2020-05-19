@@ -1,4 +1,93 @@
 $(document).ready(function () {
+  function outNum(num, elem) {
+    const time = 2500; //ms
+    const step = 1;
+    let el = document.querySelector("#" + elem);
+    let n = 0;
+    let t = Math.round(time / (num / step));
+    let interval = setInterval(function () {
+      n = n + step;
+      if (n == num) {
+        clearInterval(interval);
+      }
+      el.innerHTML = n;
+    }, t);
+  }
+
+  function checkPosition() {
+    // координаты дива
+    var div_position = $(
+      ".who_uses_section .container .who_uses_block__item"
+    ).offset();
+    // отступ сверху
+    var div_top = div_position.top;
+    // отступ слева
+    var div_left = div_position.left;
+    // ширина
+    var div_width = $(
+      ".who_uses_section .container .who_uses_block__item"
+    ).width();
+    // высота
+    var div_height = $(
+      ".who_uses_section .container .who_uses_block__item"
+    ).height();
+
+    // проскроллено сверху
+    var top_scroll = $(document).scrollTop();
+    // проскроллено слева
+    var left_scroll = $(document).scrollLeft();
+    // ширина видимой страницы
+    var screen_width = $(window).width();
+    // высота видимой страницы
+    var screen_height = $(window).height();
+
+    // координаты углов видимой области
+    var see_x1 = left_scroll;
+    var see_x2 = screen_width + left_scroll;
+    var see_y1 = top_scroll;
+    var see_y2 = screen_height + top_scroll;
+
+    // координаты углов искомого элемента
+    var div_x1 = div_left;
+    var div_x2 = div_left + div_height;
+    var div_y1 = div_top;
+    var div_y2 = div_top + div_width;
+
+    // проверка - виден див полностью или нет
+    if (
+      div_x1 >= see_x1 &&
+      div_x2 <= see_x2 &&
+      div_y1 >= see_y1 &&
+      div_y2 <= see_y2
+    ) {
+      // если виден
+      outNum(51, "wub1--js");
+      outNum(27, "wub2--js");
+      outNum(15, "wub3--js");
+      outNum(5, "wub4--js");
+      outNum(18, "wub5--js");
+      outNum(5, "wub6--js");
+      outNum(1, "wub7--js");
+      $(document).off("scroll");
+    } else {
+    }
+  }
+
+  $(document).ready(function () {
+    $(document).scroll(function () {
+      // при скролле страницы делаем проверку
+      checkPosition();
+    });
+
+    // после загрузки страницы сразу проверяем
+    checkPosition();
+
+    // проверка при масштабировании и изменении размера страницы
+    $(window).resize(function () {
+      checkPosition();
+    });
+  });
+
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 10) $(".header").addClass("header--slicky");
@@ -498,13 +587,51 @@ $(document).ready(function () {
       !targetI.classList.contains("packages_more_table_btn") &&
       !targetI.classList.contains("packages_table__row") &&
       !targetI.classList.contains("packages_table__col") &&
-      !targetI.classList.contains("svg-sprite-icon")
+      !targetI.classList.contains("svg-sprite-icon") &&
+      targetI.classList.contains("section__packages")
     ) {
-      $(".packages_table__wrapper-js-1").removeClass("active");
-      $(".packages_table__wrapper-js-2").removeClass("active");
-      $(".packages_more_table_btn").removeClass("active");
-      $(".packages_hide_table_btn").removeClass("active");
+      $("html, body")
+        .animate({ scrollTop: $(".section__packages").offset().top }, 2000)
+        .promise()
+        .done(function () {
+          $(".packages_table__wrapper-js-2")
+            .slideUp()
+            .promise()
+            .done(function () {
+              $(".packages_table__wrapper-js-1").slideDown();
+              $(".packages_more_table_btn").removeClass("active");
+              $(".packages_hide_table_btn").removeClass("active");
+            });
+        });
     }
+  });
+
+  $(function () {
+    $(".packages_hide_table_btn").click(function (e) {
+      e.preventDefault();
+      var target = $(this).attr("href");
+      $("html, body")
+        .animate({ scrollTop: $(target).offset().top }, 2000)
+        .promise()
+        .done(function () {
+          $(".packages_table__wrapper-js-2")
+            .slideUp()
+            .promise()
+            .done(function () {
+              $(".packages_table__wrapper-js-1").slideDown();
+              $(".packages_more_table_btn").removeClass("active");
+              $(".packages_hide_table_btn").removeClass("active");
+            });
+        });
+    });
+  });
+
+  $(document).on("click", ".packages_more_table_btn--js", function (e) {
+    e.preventDefault();
+    $(this).addClass("active");
+    $(".packages_hide_table_btn--js").addClass("active");
+    $(".packages_table__wrapper-js-1").slideUp();
+    $(".packages_table__wrapper-js-2").slideDown();
   });
 });
 $(".tabs_slider .item").on("click", function () {
@@ -644,28 +771,12 @@ $(document).on("click", "body", function (e) {
   }
 });
 
-$(document).on("click", ".packages_more_table_btn--js", function (e) {
-  e.preventDefault();
-  $(this).addClass("active");
-  $(".packages_hide_table_btn--js").addClass("active");
-  $(".packages_table__wrapper-js-1").addClass("active");
-  $(".packages_table__wrapper-js-2").addClass("active");
-});
-
-$(document).on("click", ".packages_hide_table_btn--js", function (e) {
-  e.preventDefault();
-  $(this).removeClass("active");
-  $(".packages_more_table_btn--js").removeClass("active");
-  $(".packages_table__wrapper-js-1").removeClass("active");
-  $(".packages_table__wrapper-js-2").removeClass("active");
-});
-
 $(".office_slider").flickity({
   wrapAround: false,
   adaptiveHeight: false,
   pageDots: false,
   percentPosition: false,
-  selectedAttraction: 0.08,
+  selectedAttraction: 0.06,
   friction: 0.7,
 });
 

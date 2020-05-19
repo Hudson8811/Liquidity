@@ -36,9 +36,13 @@
       .packages_table__col:not(:nth-child(1)) {
         font-weight: 400;
       }
+      .packages_table__col {
+        border-right: 0;
+      }
     }
   }
   &__subheading_row {
+    border-bottom: 1px solid #efefef;
     .packages_table__col {
       font-family: Roboto;
       font-style: normal;
@@ -50,7 +54,6 @@
       text-transform: uppercase;
       color: #3f3f3f;
     }
-    border-bottom: none;
   }
   &__heading_row {
     height: 40px;
@@ -68,7 +71,7 @@
       color: #000000;
       &:nth-child(1) {
         justify-content: center;
-        width: 400px;
+        width: 416px;
         padding-left: 0;
         padding-right: 0;
       }
@@ -102,23 +105,23 @@
       }
     }
     &:last-child {
-      border: none;
+      border-right: none;
     }
     &:nth-child(1) {
       justify-content: flex-start;
-      width: 344px;
+      width: 360px;
       padding-left: 35px;
       padding-right: 21px;
     }
 
     &:nth-child(2) {
-      width: 190px;
+      width: 185px;
     }
     &:nth-child(3) {
-      width: 190px;
+      width: 185px;
     }
     &:nth-child(4) {
-      width: 190px;
+      width: 185px;
     }
     .icon-bold_check {
       width: 15px;
