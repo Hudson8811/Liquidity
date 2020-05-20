@@ -1,0 +1,32 @@
+.section__flow {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+  .check_container {
+    margin-top: 85px;
+    .check_block--mam_platform-item {
+      &--text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+
+        color: #ffffff;
+      }
+
+      &:nth-child(3n + 1) {
+        width: 36%;
+      }
+
+      &:nth-child(3n-1) {
+        width: 28%;
+      }
+
+      &:nth-child(3n) {
+        width: 28%;
+      }
+    }
+  }
+}

@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  $(document).on("click", ".genuine__row", function () {
+    var row = $(this).data("row_number");
+    $(this).toggleClass("active");
+    $(this)
+      .siblings('.genuine__row--slide[data-row_number="' + row + '"]')
+      .slideToggle();
+  });
+
   function outNum(num, elem) {
     const time = 2500; //ms
     const step = 1;
