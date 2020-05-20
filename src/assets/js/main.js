@@ -167,8 +167,8 @@ $(document).ready(function () {
     adaptiveHeight: false,
     pageDots: false,
     percentPosition: false,
-    selectedAttraction: 0.1,
-    friction: 0.8,
+    selectedAttraction: 0.04,
+    friction: 0.5,
   });
 
   $(".mac_slider--slick-item").on("click", function () {
@@ -577,6 +577,19 @@ $(document).ready(function () {
     // asNavFor: ".main_tabs_slider",
     cellAlign: "left",
     contain: true,
+    autoPlay: 4000,
+  });
+
+  $(".tabs_slider_b2_core--js").on("change.flickity", function (event, index) {
+    var id = index + 1;
+    $(".tabs_slider .item").removeClass("active");
+    $('.tabs_slider .item[data-id="' + id + '"]').addClass("active");
+    $(".main_tabs_slider .item")
+      .fadeOut(300)
+      .promise()
+      .done(function () {
+        $('.main_tabs_slider .item[data-id="' + id + '"]').fadeIn(300);
+      });
   });
 
   $(document).on("click", "body", function (e) {

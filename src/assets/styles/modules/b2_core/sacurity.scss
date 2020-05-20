@@ -9,6 +9,16 @@
     margin-bottom: 50px;
   }
   .gray__block {
+    padding: 38px 55px;
+    padding-right: 60px;
+    @media screen and (max-width: 580px) {
+      padding: 10px;
+    }
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #ffffff;
     /* Small_shadow */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
