@@ -33,6 +33,9 @@
     display: none;
     justify-content: flex-start;
     align-items: flex-start;
+    // &.active {
+    //   display: flex;
+    // }
     &.active {
       display: flex;
     }
@@ -105,7 +108,7 @@
         line-height: 41px;
       }
     }
-    &.active {
+    &.is-selected {
       margin-top: -7px;
       font-weight: normal;
       font-size: 14px;

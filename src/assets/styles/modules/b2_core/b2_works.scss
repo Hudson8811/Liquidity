@@ -32,9 +32,10 @@
   }
   .main_tabs_slider {
     .item {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 853px;
+      width: 100%;
       margin: 0 auto;
       img {
         width: auto;
