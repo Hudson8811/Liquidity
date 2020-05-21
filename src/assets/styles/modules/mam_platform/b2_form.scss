@@ -16,6 +16,7 @@
   &.light_theme {
     .new_form__label_capch .new_form__capch {
       background: #e0e0e0;
+      object-fit: cover;
     }
     background: #eff4f6;
     .new_form__label__lang_select_wrapper {
