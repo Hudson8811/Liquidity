@@ -432,24 +432,24 @@ $(document).ready(function () {
     }
   }
 
-  $(document).on("focus", ".form_label input", function () {
-    $(this).parent().addClass("active");
-    $(this).parent().removeClass("error");
-  });
-  $(document).on("blur", ".form_label input", function () {
-    if ($(this).val() == "") {
-      $(this).parent().removeClass("active");
-      $(this).parent().addClass("error");
-    } else {
-      $(this).parent().removeClass("error");
-      if (
-        $(this).attr("type") == "email" &&
-        !isValidEmailAddress($(this).val())
-      ) {
-        $(this).parent().addClass("error");
-      }
-    }
-  });
+  // $(document).on("focus", ".form_label input", function () {
+  //   $(this).parent().addClass("active");
+  //   $(this).parent().removeClass("error");
+  // });
+  // $(document).on("blur", ".form_label input", function () {
+  //   if ($(this).val() == "") {
+  //     $(this).parent().removeClass("active");
+  //     $(this).parent().addClass("error");
+  //   } else {
+  //     $(this).parent().removeClass("error");
+  //     if (
+  //       $(this).attr("type") == "email" &&
+  //       !isValidEmailAddress($(this).val())
+  //     ) {
+  //       $(this).parent().addClass("error");
+  //     }
+  //   }
+  // });
 
   function modal() {
     event.preventDefault();
