@@ -797,25 +797,33 @@ $(document).on("click", ".faq_btn_js", function (event) {
   }
 });
 
-$(document).on("focus", ".new_form__label .new_form__input", function () {
-  $(this).parent().addClass("active");
-  $(this).parent().removeClass("error");
-});
-
-$(document).on("blur", ".new_form__label .new_form__input", function () {
-  if ($(this).val() == "") {
-    $(this).parent().removeClass("active");
-    $(this).parent().addClass("error");
-  } else {
+$(document).on(
+  "focus",
+  ".new_form__label .new_form__input[type=text]",
+  function () {
+    $(this).parent().addClass("active");
     $(this).parent().removeClass("error");
-    if (
-      $(this).attr("type") == "email" &&
-      !isValidEmailAddress($(this).val())
-    ) {
+  }
+);
+
+$(document).on(
+  "blur",
+  ".new_form__label .new_form__input[type=text]",
+  function () {
+    if ($(this).val() == "") {
+      $(this).parent().removeClass("active");
       $(this).parent().addClass("error");
+    } else {
+      $(this).parent().removeClass("error");
+      if (
+        $(this).attr("type") == "email" &&
+        !isValidEmailAddress($(this).val())
+      ) {
+        $(this).parent().addClass("error");
+      }
     }
   }
-});
+);
 
 $(".castom_select__content").mCustomScrollbar();
 
