@@ -1,10 +1,31 @@
 .section__also {
   padding: 125px 0;
+
+  .shadow {
+    margin-top: 43px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(79, 79, 79, 0.56) 2.6%,
+      rgba(106, 106, 106, 0.27) 48.44%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    mix-blend-mode: multiply;
+    filter: blur(20px);
+  }
+
   .section__title {
     margin-bottom: 80px;
   }
+
   .cathalogue {
     margin-top: 20px;
+  }
+
+  .new_green_bord_btn {
+    width: 138px;
+    height: 43px;
+    margin: 80px auto 0;
+    cursor: pointer;
   }
 }
 
@@ -21,21 +42,35 @@
   display: flex;
   flex-direction: column;
 
+  &--download {
+    &:after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 16px;
+      background: center / auto url(../images/before_cloud.svg) no-repeat;
+      margin-left: 10px;
+    }
+  }
   @media screen and (max-width: 900px) {
     width: 100%;
     margin-bottom: 20px;
 
     min-width: 310px;
   }
-
+  .also__overlay {
+    height: 100%;
+    background: #121212;
+    opacity: 0;
+  }
   &:hover {
     .also__overlay {
-      background: #121212;
+      opacity: 1;
       height: 100%;
     }
 
     .also__btn {
-      transform: translateX(0);
+      transform: scaleX(1);
     }
 
     .also__content {
@@ -80,7 +115,12 @@
     top: 20px;
     cursor: pointer;
     transition: all 0.5s;
-    transform: translateX(-100%);
+    transform-origin: 25px center;
+    transform: scaleX(0);
+
+    &:hover {
+      font-weight: 500;
+    }
   }
 
   &__subdescription {
@@ -194,7 +234,7 @@
     margin-top: auto;
     transition: all 0.5s;
 
-    transform: translateY(68%);
+    transform: translateY(54%);
   }
 
   &:nth-child(3n - 1) {
@@ -216,6 +256,10 @@
     }
 
     .also__title:before {
+      background: #01bd95;
+    }
+
+    .also__btn {
       background: #01bd95;
     }
   }
@@ -264,6 +308,20 @@
     .also__title:before {
       background: #ee0064;
     }
+
+    .also__btn {
+      background: #ee0064;
+    }
+  }
+
+  &__delay {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 13px;
+    color: #cfcfcf;
   }
 }
 

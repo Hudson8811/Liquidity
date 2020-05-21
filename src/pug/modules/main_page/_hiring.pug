@@ -1,36 +1,48 @@
 .section.section__hiring
-    .hiring_block(style="background-image: url(images/hiring.png);")
+    .hiring_block.goanim.an(style="background-image: url(images/hiring.png);")
         .section__title We are #[span(class="section__title--bold") hiring]
         .section__subtitle We are looking for the talents permanently
         a.new_green_bord_btn(href="#") All vacancies
 
-    .container
+    .container.goanim.an
         .says
             .says__title
                 img(src="images/says.svg", alt="icon")
                 span What the media says
             .says__flickity--js
                 .item
-                    .says__subtitle B2Broker is a big multinational family with over 150 employees. We appreciate everyone who works with #[span(class="db")] us and inspires us to achieve our success.
+                    .says__subtitle B2Broker is a big multinational family with over 150#[span(class="db")] employees. We appreciate everyone who works with#[span(class="db")] us and inspires us to achieve our success.
+
                 .item
-                    .says__subtitle B2Broker is a big multinational family with over 150 employees. We appreciate everyone who works with #[span(class="db")] us and inspires us to achieve our success.
+                    .says__subtitle B2Broker webinars will enable you to gain practical #[span(class="db")]knowledge and valuable advice to set up your #[span(class="db")]own business.
+
+                .item
+                    .says__subtitle Clients who work with B2Broker are delivered a viable#[span(class="db")] business in around four weeks, comprising of a cutting-edge#[span(class="db")] trading solution that provides a vast range of features.
+                
+                .item
+                    .says__subtitle B2Broker has become one of the leading players in the market#[span(class="db")] with a long list of clients who have chosen its comprehensive#[span(class="db")] package which provides a solution for MT4 & MT5.
+                
+                .item
+                    .says__subtitle B2Broker Expands Liquidity Offering,#[span(class="db")] Adds 40 Crypto CFD Pairs
 
         .family
-            .family__block
+            .item(data-target="0")
+
+            .family__block(data-target="1")
                 .family__line
                 img(src="images/family/logo1.png", alt="img").family__logo
-
-            .family__block
-                .family__line
-                img(src="images/family/logo2.png", alt="img").family__logo
-
-            .family__block
+            
+            .family__block(data-target="2")
                 .family__line
                 img(src="images/family/logo3.png", alt="img").family__logo
 
-            .family__block
+            .family__block(data-target="3")
                 .family__line
                 img(src="images/family/logo4.png", alt="img").family__logo
+
+            .family__block(data-target="4")
+                .family__line
+                img(src="images/family/logo2.png", alt="img").family__logo
                 
     a(href="#").new_more_btn Check more
 

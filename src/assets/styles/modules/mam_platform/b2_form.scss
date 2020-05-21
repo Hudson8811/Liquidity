@@ -14,12 +14,24 @@
     }
   }
   &.light_theme {
+    .new_form__label_capch .new_form__capch {
+      background: #e0e0e0;
+    }
     background: #eff4f6;
+    .new_form__label__lang_select_wrapper {
+      background: #ffffff;
+    }
     .new_form__label {
       background: #ffffff;
       border: 1px solid #d1dbe2;
       box-sizing: border-box;
       border-radius: 5px;
+
+      &.active {
+        .new_form__placeholder {
+          color: rgba(110, 129, 152, 0.7);
+        }
+      }
     }
     .new_form__star,
     .new_form__input {
@@ -32,7 +44,7 @@
       font-size: 14px;
       line-height: 16px;
       letter-spacing: -0.318182px;
-      color: rgba(110, 129, 152, 0.7);
+      color: rgba(110, 129, 152, 0.9);
     }
     .new_form__select {
       background-color: #fff;
