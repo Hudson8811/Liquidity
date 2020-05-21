@@ -295,10 +295,12 @@ body.hidden {
       .big_header__bottom_row__right_row {
         .row {
           &:nth-child(1) {
-            min-width: 186px;
+            min-width: 190px;
+            flex-shrink: 0;
           }
           &:nth-child(2) {
-            min-width: 150.7px;
+            min-width: 160px;
+            flex-shrink: 0;
           }
         }
       }
