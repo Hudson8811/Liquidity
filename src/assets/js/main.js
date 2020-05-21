@@ -797,12 +797,12 @@ $(document).on("click", ".faq_btn_js", function (event) {
   }
 });
 
-$(".new_form__label .new_form__input").focus(function () {
+$(document).on("focus", ".new_form__label .new_form__input", function () {
   $(this).parent().addClass("active");
   $(this).parent().removeClass("error");
 });
 
-$(".new_form__label .new_form__input").blur(function () {
+$(document).on("blur", ".new_form__label .new_form__input", function () {
   if ($(this).val() == "") {
     $(this).parent().removeClass("active");
     $(this).parent().addClass("error");
