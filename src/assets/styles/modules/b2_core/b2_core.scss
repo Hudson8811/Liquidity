@@ -3,6 +3,10 @@
   position: relative;
   padding-bottom: 267px;
 
+  .new_form__capch {
+    object-fit: cover;
+  }
+
   .forex_liquidity--overlay {
     background: rgba(27, 27, 27, 0.65);
   }
