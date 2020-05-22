@@ -2,6 +2,7 @@
   padding-top: 280px;
   position: relative;
   padding-bottom: 267px;
+  overflow: hidden;
 
   video::-webkit-media-controls {
     display: none !important;
@@ -135,12 +136,20 @@
 
 .b2_core__title_video {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  width: 100%;
+  width: 132vw;
   height: 100%;
+  margin-left: -66vw;
   display: block;
   object-fit: cover;
+  object-position: center;
+
+  @media screen and (max-width: 1300px) {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .modal-form-1.modal-form-2 {
