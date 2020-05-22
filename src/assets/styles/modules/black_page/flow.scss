@@ -18,14 +18,26 @@
 
       &:nth-child(3n + 1) {
         width: 36%;
+
+        @media screen and (max-width: 840px) {
+          width: 100%;
+        }
       }
 
       &:nth-child(3n-1) {
         width: 28%;
+
+        @media screen and (max-width: 840px) {
+          width: 100%;
+        }
       }
 
       &:nth-child(3n) {
         width: 28%;
+
+        @media screen and (max-width: 840px) {
+          width: 100%;
+        }
       }
     }
   }

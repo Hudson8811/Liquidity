@@ -1,11 +1,16 @@
 .main_section {
   margin-top: 136px;
-  padding-top: calc(203px);
+  padding-top: 110px;
   padding-bottom: 61px;
   position: relative;
   overflow: hidden;
   background: center / cover url(../images/main_section--banner.png) no-repeat;
   position: relative;
+
+  @media screen and (max-width: 580px) {
+    margin-top: 180px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -20,6 +25,7 @@
     );
     transform: matrix(1, 0, 0, -1, 0, 0);
   }
+
   .section__title {
     position: absolute;
     z-index: 1;
@@ -27,37 +33,46 @@
     color: #ffffff;
     margin-bottom: 0;
 
-    &:not(#machine) {
-      margin-top: 85px;
-    }
+    line-height: 78px;
   }
+
   .section__subtitle {
     position: relative;
     z-index: 1;
     color: #ffffff;
     margin-bottom: 192px;
   }
+
   .container {
     z-index: 1;
     position: relative;
   }
+
   .machine_container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    height: 156px;
+    align-items: center;
+    height: 290px;
     margin-bottom: 50px;
 
-    @media screen and (max-width: 882px) {
-      height: 236px;
+    .section__title:not(#machine) {
+      margin-top: 117px;
+    }
 
-      .section__title:not(#machine) {
-        margin-top: 165px;
+    @media screen and (max-width: 882px) {
+      .section__title {
+        font-size: 50px;
+        line-height: 55px;
       }
     }
 
     @media screen and (max-width: 580px) {
       height: 132px;
+
+      .section__title {
+        font-size: 30px;
+        line-height: 35px;
+      }
 
       .section__title:not(#machine) {
         margin-top: 65px;

@@ -3,6 +3,10 @@
   position: relative;
   padding-bottom: 267px;
 
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+
   .new_form__capch {
     object-fit: cover;
   }

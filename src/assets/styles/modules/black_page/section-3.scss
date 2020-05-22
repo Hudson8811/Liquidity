@@ -17,9 +17,19 @@
   .number_block {
     margin-top: 80px;
 
+    @media screen and (max-width: 760px) {
+      flex-direction: column;
+    }
+
     &-content {
       text-align: center;
       margin-right: 60px;
+
+      @media screen and (max-width: 760px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center !important;
+      }
 
       &:nth-child(3) {
         text-align: left;

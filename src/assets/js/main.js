@@ -343,6 +343,7 @@ $(document).ready(function () {
     pageDots: false,
     selectedAttraction: 0.1,
     friction: 0.8,
+    prevNextButtons: false,
   });
 
   $(".grafic_slider--slick_item").on("click", function () {
@@ -357,6 +358,7 @@ $(document).ready(function () {
     percentPosition: false,
     selectedAttraction: 0.04,
     friction: 0.5,
+    prevNextButtons: false,
   });
 
   $(".mac_slider--slick-item").on("click", function () {
@@ -873,15 +875,16 @@ $(document).on("click", ".office_slider__item", function (e) {
 
 var machine = new Typed("#machine", {
   strings: [
-    '<span style="font-weight: 900;">L^100i^120q^90u^150i^300d^130i^380t^200y</span> &amp; <b style="font-weight: 900;">T^180e^210c^300h^50n^230o^150logy</b>',
-    '<b style="font-weight: 900;">Liquidity</b> &amp; <b style="font-weight: 900;">Technology</b>',
+    '<span style="font-weight: 900;">L^100i^120q^90u^150i^300d^130i^380t^200y</span>  &amp; <b style="font-weight: 900;">T^180e^210c^300h^50n^230o^150logy</b>',
+    "<span class='db'>Prime of Prime</span> <b style='font-weight: 900;'>Multi-Asset Liquidity</b>",
+    "<span class='db'>Advanced</span> <b style='font-weight: 900;'>White Label Solutions</b>",
+    "<b style='font-weight: 900;'>Technology Solutions</b>",
   ],
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,
   startDelay: 1000,
   loop: true,
-  loopCount: 1,
   showCursor: false,
   contentType: "html",
 });

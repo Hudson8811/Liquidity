@@ -1,137 +1,135 @@
 .section-15 {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    .section__title {
-        max-width: 975px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: 50px;
+  background: #eff4f6;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  .section__title {
+    max-width: 975px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .main-text {
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 785px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .check_block {
+    &__text {
+      font-size: 18px;
+      line-height: 23px;
+      /* or 128% */
+      letter-spacing: -0.5px;
+      color: #555555;
     }
-    .main-text {
-        font-size: 18px;
+  }
+  .business_slider--arrow_block {
+    margin-top: 50px;
+    margin-bottom: 57px;
+  }
+  .bottom_block {
+    max-width: 276px;
+    margin: 0 auto;
+    &--text {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: -0.318182px;
+      color: #999999;
+    }
+    .btn {
+      height: 33px;
+      max-width: 177px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height */
+      text-align: center;
+      color: #ffffff;
+      margin: 0 auto;
+    }
+  }
+  .business--slick_slider {
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 107px;
+    .item {
+      padding: 66px 72px 76px 72px;
+      min-height: 527px;
+      &--description {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        /* or 136% */
+        box-sizing: border-box;
+
+        color: #637786;
+      }
+
+      .check_block--mam_platform-item--text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
         line-height: 23px;
-        max-width: 785px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .check_block {
-        &__text {
-            font-size: 18px;
-            line-height: 23px;
-            /* or 128% */
-            letter-spacing: -0.5px;
-            color: #555555;
+        /* or 144% */
+        color: #63636e;
+      }
+
+      .check_block--mam_platform-item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
         }
+      }
     }
-    .business_slider--arrow_block {
-        margin-top: 50px;
-        margin-bottom: 57px;
-    }
-    .bottom_block {
-        max-width: 276px;
-        margin: 0 auto;
-        &--text {
-            margin-bottom: 40px;
-            font-size: 14px;
-            line-height: 16px;
-            text-align: center;
-            letter-spacing: -0.318182px;
-            color: #999999;
-        }
-        .btn {
-            height: 33px;
-            max-width: 177px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            /* identical to box height */
-            text-align: center;
-            color: #FFFFFF;
-            margin: 0 auto;
-        }
-    }
-    .business--slick_slider {
-        max-width: 1600px;
-        margin: 0 auto;
-        margin-bottom: 80px;
-        margin-top: 107px;
-        .item {
-            &--description {
-                font-size: 14px;
-                box-sizing: border-box;
-            }
-            &:nth-child(1) {
-                .item--description {
-                    padding-right: 28px;
-                }
-            }
-            &:nth-child(2) {
-                .item--description {
-                    padding-right: 74px;
-                }
-            }
-            &:nth-child(3) {
-                .item--description {
-                    padding-right: 14px;
-                }
-            }
-            &:nth-child(4) {
-                .item--description {
-                    padding-right: 10px;
-                }
-            }
-            &:nth-child(5) {
-                .item--description {
-                    padding-right: 10px;
-                }
-            }
-            &:nth-child(6) {
-                .item--description {
-                    padding-right: 10px;
-                }
-            }
-        }
-    }
+  }
 }
 
-@media screen and (max-width:580px) {
-    .section-15 {
-        padding-bottom: 50px;
-        padding-top: 50px;
-        .section__title {
-            margin-bottom: 20px;
-        }
-        .main-text {
-            font-size: 14px;
-            line-height: 17px;
-        }
-        .business--slick_slider {
-            .item {
-                padding: 20px;
-                width: 290px;
-                margin: 0 50px;
-                &--heading {
-                    font-size: 20px;
-                    line-height: 24px;
-                    margin-bottom: 10px;
-                }
-                &--description {
-                    font-size: 11px;
-                    line-height: 14px;
-                }
-                .check_block {
-                    margin-bottom: 10px;
-                    &__text {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
+@media screen and (max-width: 580px) {
+  .section-15 {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    .section__title {
+      margin-bottom: 20px;
     }
+    .main-text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .business--slick_slider {
+      .item {
+        padding: 20px;
+        width: 290px;
+        margin: 0 50px;
+        &--heading {
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+        &--description {
+          font-size: 11px;
+          line-height: 14px;
+        }
+        .check_block {
+          margin-bottom: 10px;
+          &__text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }

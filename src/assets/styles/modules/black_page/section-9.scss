@@ -1,130 +1,135 @@
 .section-9 {
-    padding-top: 119px;
-    padding-bottom: 120px;
-    background: #FBFBFB;
-    .section__title {
-        text-align: center;
-        margin-bottom: 50px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #eff4f6;
+  .section__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .main-text {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 638px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .grafic_image {
+    margin: 0 -40px;
+    img {
+      display: block;
+      width: 100%;
     }
-    .main-text {
-        font-size: 18px;
-        line-height: 25px;
-        max-width: 638px;
-        text-align: center;
-        margin: 0 auto;
+  }
+  .trade_catalog {
+    margin: 0 -39px;
+    margin-top: 47px;
+    justify-content: center;
+    &-item {
+      margin: 0px 39px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 92px;
+      margin-bottom: 20px;
+      mix-blend-mode: multiply;
+      img {
+        display: block;
         width: 100%;
+      }
+      &:nth-child(1) {
+        width: 176px;
+      }
+      &:nth-child(2) {
+        width: 142px;
+      }
+      &:nth-child(3) {
+        width: 195px;
+      }
+      &:nth-child(4) {
+        width: 170px;
+      }
+      &:nth-child(5) {
+        width: 206px;
+      }
+      &:nth-child(6) {
+        width: 180px;
+      }
+      &:nth-child(7) {
+        width: 180px;
+      }
     }
+  }
+  .another_trades {
+    margin: 0 -34px;
+    .description {
+      margin-top: 33px;
+    }
+    .flex_block {
+      margin-top: 33px;
+      background: #fff;
+    }
+    &--left {
+      width: 100%;
+      padding: 64px 77px 50px 71px;
+      & > div:nth-child(1) {
+        width: 100%;
+      }
+      & > div:nth-child(2) {
+        justify-content: flex-start;
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: 580px) {
+        margin-bottom: 0;
+        padding: 20px;
+      }
+    }
+    &--text {
+      max-width: 473px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .section-9 {
     .grafic_image {
-        margin: 0 -40px;
-        img {
-            display: block;
-            width: 100%;
-        }
+      margin: 0;
     }
     .trade_catalog {
-        background: #fff;
-        margin: 0 -39px;
-        margin-top: 47px;
-        justify-content: center;
-        &-item {
-            margin: 0px 39px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 92px;
-            margin-bottom: 20px;
-            img {
-                display: block;
-                width: 100%;
-            }
-            &:nth-child(1) {
-                width: 176px;
-            }
-            &:nth-child(2) {
-                width: 142px;
-            }
-            &:nth-child(3) {
-                width: 195px;
-            }
-            &:nth-child(4) {
-                width: 170px;
-            }
-            &:nth-child(5) {
-                width: 206px;
-            }
-            &:nth-child(6) {
-                width: 180px;
-            }
-            &:nth-child(7) {
-                width: 180px;
-            }
-        }
+      margin: 0 auto;
     }
     .another_trades {
-        margin: 0 -34px;
-        .description {
-            margin-top: 33px;
-        }
-        .flex_block {
-            margin-top: 33px;
-            background: #fff;
-        }
-        &--left {
-            width: 100%;
-            padding: 64px 77px 50px 71px;
-            &>div:nth-child(1) {
-                width: 100%;
-            }
-            &>div:nth-child(2) {
-                justify-content: flex-start;
-                padding-left: 0;
-            }
-        }
-        &--text {
-            max-width: 473px;
-            width: 100%;
-        }
+      margin: 0 auto;
     }
+  }
 }
 
-@media screen and (max-width:1080px) {
-    .section-9 {
-        .grafic_image {
-            margin: 0;
+@media screen and (max-width: 920px) {
+  .section-9 {
+    .trade_catalog {
+      &-item {
+        margin: 0 10px;
+        height: 50px;
+        img {
+          width: 70%;
         }
-        .trade_catalog {
-            margin: 0 auto;
-        }
-        .another_trades {
-            margin: 0 auto;
-        }
+      }
     }
+  }
 }
 
-@media screen and (max-width:920px) {
-    .section-9 {
-        .trade_catalog {
-            &-item {
-                margin: 0 10px;
-                height: 50px;
-                img {
-                    width: 70%;
-                }
-            }
-        }
+@media screen and (max-width: 580px) {
+  .section-9 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .section__title {
+      margin-bottom: 20px;
     }
-}
-
-@media screen and (max-width:580px) {
-    .section-9 {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        .section__title {
-            margin-bottom: 20px;
-        }
-        .main-text {
-            font-size: 14px;
-            line-height: 17px;
-        }
+    .main-text {
+      font-size: 14px;
+      line-height: 17px;
     }
+  }
 }

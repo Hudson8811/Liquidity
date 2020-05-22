@@ -1,0 +1,38 @@
+.section.section__products.dark_style {
+  background: #1d262f;
+}
+.section__products {
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .section__subtitle {
+    margin-bottom: 70px;
+  }
+
+  .check_block--mam_platform {
+    &--catalog {
+      justify-content: center;
+
+      @media screen and (max-width: 580px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+
+    &-item {
+      width: auto !important;
+      padding: 0 !important;
+
+      &--text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+}

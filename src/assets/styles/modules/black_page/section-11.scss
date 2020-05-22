@@ -1,50 +1,58 @@
 .section-11 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-bottom: 172px;
-    padding-top: 170px;
-    background: #FBFBFB;
+  background: #eff4f6;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 68px 0;
+  .box_block {
+    &--title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 65px;
+      /* or 130% */
+      color: #383838;
+    }
+    padding: 84px 80px;
+    box-sizing: border-box;
+    width: 494px;
+    margin: 0 29px;
+    &--text {
+      margin-top: 37px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .section-11 {
     .box_block {
-        padding: 84px 80px;
-        box-sizing: border-box;
-        width: 494px;
-        margin: 0 29px;
-        &--text {
-            margin-top: 37px;
-        }
+      width: 40%;
+      margin: 0 10px;
+      padding: 20px;
+      min-height: 170px;
+      &--title {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
+      &--text {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
+  }
 }
 
-@media screen and (max-width:1080px) {
-    .section-11 {
-        .box_block {
-            width: 40%;
-            margin: 0 10px;
-            padding: 20px;
-            min-height: 170px;
-            &--title {
-                font-size: 20px;
-                line-height: 25px;
-                margin-bottom: 20px;
-            }
-            &--text {
-                font-size: 14px;
-                line-height: 17px;
-            }
-        }
+@media screen and (max-width: 580px) {
+  .section-11 {
+    display: block;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    .box_block {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 98%;
     }
-}
-
-@media screen and (max-width:580px) {
-    .section-11 {
-        display: block;
-        padding-bottom: 50px;
-        padding-top: 50px;
-        .box_block {
-            margin: 0 auto;
-            margin-bottom: 20px;
-            width: 98%;
-        }
-    }
+  }
 }
