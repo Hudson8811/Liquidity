@@ -28,7 +28,8 @@
     border-bottom: 1px solid #efefef;
     height: 56px;
     &--shadow {
-      border-width: 2px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-bottom: none;
     }
     &_wrapper {
     }
@@ -42,7 +43,7 @@
     }
   }
   &__subheading_row {
-    border-bottom: 1px solid #efefef;
+    border-bottom: none;
     .packages_table__col {
       font-family: Roboto;
       font-style: normal;
@@ -93,7 +94,6 @@
     /* identical to box height, or 225% */
     letter-spacing: 0px;
     color: #3f3f3f;
-    border-bottom: 1px solid #efefef;
     text-decoration: none;
 
     &_vip {
@@ -195,7 +195,6 @@
   margin: 0 auto;
   margin-top: 70px;
   text-decoration: none;
-  display: none;
   transition: all 0.2s;
 
   &:hover {
@@ -212,14 +211,14 @@
 .packages_table__wrapper-js-1 {
   display: block;
 
-  &.active {
-    display: none;
-  }
+  // &.active {
+  //   display: none;
+  // }
 }
-.packages_table__wrapper-js-2 {
-  display: none;
+// .packages_table__wrapper-js-2 {
+//   display: none;
 
-  &.active {
-    display: block;
-  }
-}
+//   &.active {
+//     display: block;
+//   }
+// }

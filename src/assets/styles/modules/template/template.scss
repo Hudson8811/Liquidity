@@ -2068,3 +2068,68 @@ select:visited {
     }
   }
 }
+
+.fancybox-is-open .fancybox-bg {
+  background: rgba(51, 61, 72, 0.7);
+  backdrop-filter: blur(20px);
+  opacity: 1 !important;
+}
+
+#modal4 {
+  background: #1c242c;
+  border-radius: 20px;
+  padding: 40px;
+
+  .fancybox-button.fancybox-close-small {
+    width: 22px;
+    height: 22px;
+    top: 35px;
+    right: 35px;
+    background: center/cover url(../images/close.svg) no-repeat;
+    opacity: 0.3;
+    svg {
+      display: none;
+    }
+  }
+
+  .svg-sprite-icon {
+    height: 69px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70px;
+    width: 100%;
+  }
+
+  .snx__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 84px;
+    /* or 105% */
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #ffffff;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 730px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+  .snx__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 44px;
+    /* identical to box height, or 183% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+}

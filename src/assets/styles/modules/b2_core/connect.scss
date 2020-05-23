@@ -24,6 +24,13 @@
   .mac_slider {
     .mac_slider--slick-item {
       height: 580px;
+      background: #eff4f6;
+
+      &--sup {
+        img {
+          mix-blend-mode: multiply;
+        }
+      }
     }
     .flickity-button {
       display: none;

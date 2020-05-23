@@ -129,7 +129,7 @@
     transition: all 0.25s;
     position: absolute;
     left: 22px;
-    top: 20px;
+    top: 18px;
     z-index: 0;
     font-family: Roboto;
     font-style: normal;
@@ -179,6 +179,7 @@
     position: relative;
     height: 53px;
     margin-bottom: 19px;
+
     &.active {
       .new_form__placeholder {
         font-family: Roboto;
@@ -293,6 +294,7 @@
         padding: 0 20px;
         background-position: 82% 50%;
         order: -1;
+        letter-spacing: 2.2px;
       }
       .new_form__placeholder {
         left: 110px;
@@ -382,6 +384,30 @@
     .consent_block,
     .new_form__description__50 {
       margin-top: 19px;
+    }
+  }
+}
+
+.new_form__label {
+  &.error {
+    border: 1px solid rgba(238, 0, 100, 0.7) !important;
+
+    & ~ .consent_block {
+      b {
+        border-color: rgba(238, 0, 100, 0.7) !important;
+      }
+    }
+
+    select {
+      border-color: rgba(238, 0, 100, 0.7) !important;
+    }
+
+    .new_form__star {
+      color: rgba(238, 0, 100, 0.7) !important;
+    }
+
+    .new_form__capch {
+      border-color: rgba(238, 0, 100, 0.7) !important;
     }
   }
 }

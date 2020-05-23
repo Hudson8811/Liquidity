@@ -10,15 +10,15 @@
       label.new_form__label
         span.new_form__placeholder Your Name
         span.new_form__star *
-        input.new_form__input(type="text")
+        input.new_form__input(type="text", required)
       label.new_form__label
         span.new_form__placeholder Your Email
         span.new_form__star *
-        input.new_form__input(type="text")
+        input.new_form__input(type="email", required)
       label.new_form__label.new_form__label__phone_select
         span.new_form__placeholder Phone
         span.new_form__star *
-        input.new_form__input(type="text")
+        input.new_form__input(type="text", required)
         select.new_form__select.new_form__select_phone
             option(value="+7") +7
             option(value="+7") +7
@@ -27,7 +27,7 @@
         span.new_form__placeholder Enter symbols
         span.new_form__star *
         img.new_form__capch(src="images/capch_text_white.png")
-        input.new_form__input(type="text")
+        input.new_form__input(type="text", required)
 
       label.new_form__label.new_form__label__lang_select
         span.new_form__placeholder Preffered language
@@ -38,7 +38,7 @@
             option(value="English") English
             option(value="English") English
             option(value="English") English
-      button.new_form__sabmit Request a Callback
+      button.new_form__sabmit(type='submit') Request a Callback
       label.consent_block
         input(type="checkbox")
         b
