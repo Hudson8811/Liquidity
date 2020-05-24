@@ -1,0 +1,56 @@
+.forex_liquidity.forex_liquidity__new.forex_liquidity__new__forex
+  .forex_liquidity--overlay
+  .container
+    .forex_liquidity__content
+      h2.section__title #[span(class="section__title--bold") ETF] CFDs
+      span.section__subtitle The most requested ETF CFD contracts#[span(class="db")] from the market
+
+      .number_block
+        .number_block-content 
+          .number_block--text Trading instruments
+          .number_block--number 7
+        .number_block-content 
+          .number_block--text Execution from
+          .number_block--number 100
+            span.number_block--number-text ms
+        .number_block-content 
+          .number_block--text Leverage up to
+          .number_block--number 1:5
+
+    form.new_form.new_form__flex.b2_form.light_theme
+      label.new_form__label
+        span.new_form__placeholder Your Name
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label
+        span.new_form__placeholder Your Email
+        span.new_form__star *
+        input.new_form__input(type="text")
+      label.new_form__label.new_form__label__phone_select
+        span.new_form__placeholder Phone
+        span.new_form__star *
+        input.new_form__input(type="text")
+        select.new_form__select.new_form__select_phone
+            option(value="+7") +7
+            option(value="+7") +7
+            option(value="+7") +7
+      label.new_form__label.new_form__label_capch
+        span.new_form__placeholder Enter symbols
+        span.new_form__star *
+        img.new_form__capch(src="images/capch_text_white.png")
+        input.new_form__input(type="text")
+
+      label.new_form__label.new_form__label__lang_select
+        span.new_form__placeholder Preffered language
+        input.new_form__input(type="text")
+        .new_form__label__lang_select_wrapper
+          img(src="images/en.png",class="new_form__label__lang_select_icon")
+          select.new_form__select
+            option(value="English") English
+            option(value="English") English
+            option(value="English") English
+      button.new_form__sabmit Request a Callback
+      label.consent_block
+        input(type="checkbox")
+        b
+        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

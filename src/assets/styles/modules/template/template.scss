@@ -2133,3 +2133,175 @@ select:visited {
     color: #ffffff;
   }
 }
+
+.section-14.section__metals {
+  .check_container {
+    padding-left: 11%;
+
+    .check_block--mam_platform-item:nth-child(3n-1) {
+      width: 33%;
+    }
+
+    @media screen and (max-width: 840px) {
+      .check_block--mam_platform-item {
+        &:nth-child(3n-1) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.section-14.section__cash {
+  .check_container {
+    padding-left: 11%;
+
+    .check_block--mam_platform-item:nth-child(3n-1) {
+      width: 33%;
+    }
+
+    .check_block--mam_platform-item:nth-child(3n) {
+      width: 39%;
+    }
+
+    @media screen and (max-width: 840px) {
+      .check_block--mam_platform-item:nth-child(3n-1) {
+        width: 100%;
+      }
+
+      .check_block--mam_platform-item {
+        &:nth-child(3n) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.section-14.section__etf {
+  .check_container {
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: -30px;
+
+    .check_block--mam_platform-item {
+      margin-bottom: 30px;
+    }
+
+    .check_block--mam_platform-item:nth-child(2) {
+      width: 37%;
+    }
+
+    .check_block--mam_platform-item:nth-child(3n + 1) {
+      width: 30%;
+    }
+
+    .check_block--mam_platform-item:nth-child(4) {
+      width: 26%;
+    }
+
+    .check_block--mam_platform-item:nth-child(5) {
+      width: 23%;
+    }
+
+    .check_block--mam_platform-item:nth-child(3n) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 840px) {
+      .check_block--mam_platform-item:nth-child(2) {
+        width: 100%;
+      }
+
+      .check_block--mam_platform-item {
+        &:nth-child(3n) {
+          width: 100%;
+        }
+
+        &:nth-child(3n + 1) {
+          width: 100%;
+        }
+
+        &:nth-child(4) {
+          width: 100%;
+        }
+
+        &:nth-child(5) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.number_block.cash {
+  .number_block-content {
+    &:nth-child(1) {
+      text-align: left;
+    }
+
+    &:nth-child(3) {
+      text-align: center;
+    }
+  }
+}
+
+.number_block.energy {
+  .number_block-content {
+    &:nth-child(1) {
+      text-align: left;
+    }
+  }
+}
+
+.number_block.etf {
+  .number_block-content {
+    &:nth-child(1) {
+      text-align: left;
+    }
+  }
+}
+
+.cfd {
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 109px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 880px) {
+      margin-top: 50px;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    width: 14.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    /* identical to box height, or 144% */
+    color: #a7a7a7;
+    margin-top: 60px;
+    text-align: center;
+  }
+}
