@@ -759,7 +759,13 @@ $(document).ready(function () {
     prevNextButtons: true,
     pageDots: false,
   });
+
+  $(".trading__slider .item").on("click", function () {
+    let index = $(this).index();
+    $(".trading__slider").flickity("select", index);
+  });
 });
+
 $(".tabs_slider .item").on("click", function () {
   let index = $(this).index();
   $(".tabs_slider").flickity("select", index);
