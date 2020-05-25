@@ -1,0 +1,25 @@
+.trading {
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    color: #ffffff;
+    display: block;
+    text-align: center;
+  }
+
+  .item {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 87px;
+    transition: opacity 0.5s;
+    opacity: 0.15;
+
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+}

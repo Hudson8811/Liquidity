@@ -752,6 +752,13 @@ $(document).ready(function () {
   //   $(".packages_table__wrapper-js-1").slideUp();
   //   $(".packages_table__wrapper-js-2").slideDown();
   // });
+
+  $(".trading__slider").flickity({
+    wrapAround: true,
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false,
+  });
 });
 $(".tabs_slider .item").on("click", function () {
   let index = $(this).index();

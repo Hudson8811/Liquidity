@@ -1,0 +1,46 @@
+.section.section__arch
+    .container
+        .section__title.section__title--bold  Architecture
+
+        img.banner(src="images/architecture.png", alt="banner")
+
+        .arch__catalog
+            .arch__item
+                .arch__icon
+                    span 1
+                .arch__text User initiates the request to load balancer.
+            
+            .arch__item
+                .arch__icon
+                    span 2
+                .arch__text Load balancer delivers information to frontend server.
+            
+            .arch__item
+                .arch__icon
+                    span 3
+                .arch__text Front-office validates request and sends it to order matcher server.
+            
+            .arch__item
+                .arch__icon
+                    span 4
+                .arch__text Order matcher receives  request and executes it immediately or inputs order into order book for execution.
+            
+            .arch__item
+                .arch__icon
+                    span 5
+                .arch__text Front-office receives updates from order matcher and updates the information for user back-office services.
+            
+            .arch__item
+                .arch__icon
+                    span 6
+                .arch__text The trade Market data service then publishes public updates to public web sockets.
+            
+            .arch__item
+                .arch__icon
+                    span 7
+                .arch__text This information inclu- des order book updates, charts updates, trade history updates and mini-tiker updates.
+            
+            .arch__item
+                .arch__icon
+                    span 8
+                .arch__text Market data service aggregates information into charts bars and wri- tes it to the market da- tabase.
