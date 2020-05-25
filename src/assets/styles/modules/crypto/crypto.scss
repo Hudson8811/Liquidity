@@ -1,0 +1,212 @@
+.section__crypto_number {
+  .number_block {
+    max-width: 666px;
+  }
+
+  .number_update {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 33px;
+    /* or 236% */
+    color: #383838;
+    margin-top: 27px;
+  }
+}
+
+.section__crypto_flow {
+  .section__title {
+    margin-bottom: 70px;
+  }
+}
+
+.section__compare {
+  .table thead td {
+    padding: 10px 20px;
+  }
+}
+
+.section__crypto_product {
+  .check_block--mam_platform--catalog {
+    justify-content: space-between;
+
+    .check_block--mam_platform-item {
+      .check_block--mam_platform-item--text {
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
+
+.section__crypto_gblock {
+  padding: 183px 0;
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .gray__block {
+    &--title {
+      text-align: left;
+    }
+
+    &--subtitle {
+      text-align: left;
+    }
+  }
+}
+
+.section__crypto_market {
+  .check_container {
+    padding-left: 0;
+    justify-content: space-between;
+
+    .check_block--mam_platform-item {
+      align-items: flex-start;
+
+      svg {
+        margin-top: 15px;
+      }
+
+      &:nth-child(3n + 1) {
+        width: 40%;
+      }
+
+      &:nth-child(3n - 1) {
+        width: 30%;
+      }
+
+      &:nth-child(3n) {
+        width: 24%;
+      }
+
+      @media screen and (max-width: 840px) {
+        &:nth-child(3n + 1) {
+          width: 100%;
+        }
+
+        &:nth-child(3n - 1) {
+          width: 100%;
+        }
+
+        &:nth-child(3n) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.man {
+  &__block {
+    width: calc(50% - 10px);
+    background: #fff;
+    @media screen and (max-width: 930px) {
+      width: 100%;
+      margin: 20px 0;
+    }
+    &:hover {
+      .man__name {
+        background: #1f2832;
+
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: 20px;
+
+      @media screen and (max-width: 930px) {
+        margin-right: 0;
+      }
+    }
+
+    &_container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+
+      @media screen and (max-width: 930px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 46px;
+    transition: all 0.5s;
+
+    @media screen and (max-width: 930px) {
+      align-items: flex-start;
+    }
+
+    span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 114.4%;
+      /* identical to box height, or 21px */
+      color: #7a7a7a;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 380px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 119% */
+    color: #383838;
+    margin-bottom: 23px;
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #637786;
+  }
+
+  &__description {
+    box-sizing: border-box;
+    padding: 48px 55px;
+  }
+
+  &__btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 53px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    background: linear-gradient(180deg, #00d0a4 0%, #00b890 100%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+}
