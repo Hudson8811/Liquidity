@@ -762,7 +762,7 @@ $(document).ready(function () {
 
   $(".trading__slider .item").on("click", function () {
     let index = $(this).index();
-    $(".trading__slider").flickity("select", index);
+    $(".trading__sliderzzzzzzzzzz").flickity("select", index);
   });
 });
 
