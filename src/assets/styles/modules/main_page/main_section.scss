@@ -53,6 +53,14 @@
     align-items: center;
     height: 290px;
     margin-bottom: 50px;
+    #machine {
+      position: relative;
+
+      &:after {
+        content: "|";
+        animation: blink 0.7s infinite;
+      }
+    }
 
     .section__title:not(#machine) {
       margin-top: 117px;
@@ -119,6 +127,9 @@
   opacity: 1;
   font-weight: 200;
   animation: blink 0.7s infinite;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 @keyframes blink {
   0% {
