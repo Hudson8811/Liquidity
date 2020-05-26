@@ -3,14 +3,9 @@
 
   .shadow {
     margin-top: 43px;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(79, 79, 79, 0.56) 2.6%,
-      rgba(106, 106, 106, 0.27) 48.44%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    mix-blend-mode: multiply;
-    filter: blur(20px);
+    display: block;
+    width: 100%;
+    max-width: 982px;
   }
 
   .section__title {
@@ -401,5 +396,12 @@
     @media screen and (max-width: 580px) {
       width: 280px;
     }
+  }
+}
+
+.section.section__also {
+  background: #191c20;
+  .container {
+    background: #191c20;
   }
 }
