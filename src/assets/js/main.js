@@ -360,6 +360,7 @@ $(document).ready(function () {
     friction: 0.5,
     prevNextButtons: false,
     autoPlay: 5000,
+    pauseAutoPlayOnHover: false,
   });
 
   $(".mac_slider--slick-item").on("click", function () {
@@ -923,7 +924,7 @@ $(".flickity_notification--js").flickity({
   adaptiveHeight: false,
   pageDots: false,
   percentPosition: false,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
 });
 
 $(".advanced_slider--slick-2").slick({

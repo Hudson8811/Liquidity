@@ -14,6 +14,10 @@
 }
 
 .packages_table {
+  .packages_table__row_wrapper {
+    box-sizing: border-box;
+    padding: 0 2px;
+  }
   overflow-x: auto;
   width: 980px;
   max-width: 100%;

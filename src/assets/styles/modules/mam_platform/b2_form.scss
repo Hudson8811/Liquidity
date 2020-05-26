@@ -1,4 +1,7 @@
 .b2_form {
+  .new_form__select_phone {
+    letter-spacing: 2.2px;
+  }
   .new_form__select__language {
     position: relative;
     margin-left: 10px;
@@ -50,8 +53,6 @@
       font-weight: bold;
       font-size: 14px;
       line-height: 16px;
-      /* identical to box height */
-      letter-spacing: -0.318182px;
       color: #9dafbd;
     }
   }
