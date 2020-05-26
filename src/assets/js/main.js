@@ -333,7 +333,7 @@ $(document).ready(function () {
     adaptiveHeight: false,
     pageDots: false,
     prevNextButtons: false,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     wrapAround: true,
   });
 

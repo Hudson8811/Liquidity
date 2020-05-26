@@ -4,7 +4,7 @@
   padding-bottom: 61px;
   position: relative;
   overflow: hidden;
-  background: center / cover url(../images/main_section--banner.png) no-repeat;
+  background: left top / cover url(../images/main_section--banner.jpg) no-repeat;
   position: relative;
 
   @media screen and (max-width: 580px) {
@@ -109,5 +109,24 @@
       box-sizing: border-box;
       padding-bottom: 20px;
     }
+  }
+}
+
+.typed-cursor {
+  font-size: 82px;
+  color: #fff;
+  opacity: 1;
+  font-weight: 200;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

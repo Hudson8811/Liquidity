@@ -31,6 +31,7 @@
     align-items: stretch;
     border-bottom: 1px solid #efefef;
     height: 56px;
+
     &--shadow {
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
       border-bottom: none;
@@ -43,6 +44,10 @@
       }
       .packages_table__col {
         border-right: 0;
+
+        &:nth-child(3) {
+          background: #f8fafa;
+        }
       }
     }
   }
