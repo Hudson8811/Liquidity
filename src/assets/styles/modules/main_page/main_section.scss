@@ -91,3 +91,23 @@
     color: #191c20;
   }
 }
+
+.section.machine-slider {
+  #machine-slider {
+    margin-top: 0 !important;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px 0;
+      height: 250px;
+      box-sizing: border-box;
+      padding-bottom: 20px;
+    }
+  }
+}

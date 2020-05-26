@@ -557,6 +557,18 @@ $(document).ready(function () {
     arrows: false,
   });
 
+  $("#machine-slider").slick({
+    infinite: true,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+  });
+
   var scrollPos = 0;
   var countDelay = 0;
   $(window).scroll(function () {
@@ -942,17 +954,17 @@ $(document).on("click", ".office_slider__item", function (e) {
 
 var machine = new Typed("#machine", {
   strings: [
-    '<span style="font-weight: 900;">L^100i^120q^90u^150i^300d^130i^380t^200y</span>  &amp; <b style="font-weight: 900;">T^180e^210c^300h^50n^230o^150logy</b>',
-    "<span class='db'>P^100r^200i^120m^100e of Pr^200ime</span> <b style='font-weight: 900;'>M^140u^200l^250t^300i-As^140s^300et Liquidity</b>",
-    "<span class='db'>A^200d^250v^300a^100nc^200ed</span> <b style='font-weight: 900;'>W^100hi^300te La^200bel Sol^300uti^200on^250s</b>",
-    "<b style='font-weight: 900;'>Tec^200hnolo^300gy Sol^140uti^200ons</b>",
+    '<span style="font-weight: 900;">L^10i^20q^90u^50i^30d^30i^80t^20y</span>  &amp; <b style="font-weight: 900;">T^10e^20c^30h^50n^20o^50logy</b>',
+    "<span class='db'>P^10r^20i^20m^10e of Pr^20ime</span> <b style='font-weight: 900;'>M^40u^20l^50t^30i-As^40s^30et Liquidity</b>",
+    "<span class='db'>A^20d^50v^30a^10nc^20ed</span> <b style='font-weight: 900;'>W^100hi^30te La^20bel Sol^30uti^20on^50s</b>",
+    "<b style='font-weight: 900;'>Tec^20hnolo^300gy Sol^40uti^20ons</b>",
   ],
-  typeSpeed: 70,
-  backSpeed: 70,
+  typeSpeed: 40,
+  backSpeed: 20,
   backDelay: 1000,
   startDelay: 1000,
   loop: true,
-  showCursor: false,
+  showCursor: true,
   contentType: "html",
 });
 

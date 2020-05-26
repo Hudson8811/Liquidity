@@ -682,7 +682,7 @@ select:visited {
 }
 
 .grafic_slider {
-  max-width: 1600px;
+  max-width: 1632px;
   margin: 0 auto;
   margin-top: 70px;
   @media screen and (min-width: 581px) {
@@ -2324,7 +2324,6 @@ select:visited {
     &__row--shadow {
       position: relative;
       z-index: 2;
-      border-bottom: 1px solid #fcfcfc;
       box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     }
 
