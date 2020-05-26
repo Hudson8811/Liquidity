@@ -1,20 +1,4 @@
 $(document).ready(function () {
-  var machine = new Typed("#machine", {
-    strings: [
-      '<span style="font-weight: 900;">L^10i^20q^90u^50i^30d^30i^80t^20y</span>  &amp; <b style="font-weight: 900;">T^10e^20c^30h^50n^20o^50logy</b>',
-      "<span>P^10r^20i^20m^10e of Pr^20ime</span> </br> <b style='font-weight: 900;'>M^40u^20l^50t^30i-As^40s^30et Liquidity</b>",
-      "<span>A^20d^50v^30a^10nc^20ed</span></br> <b style='font-weight: 900;'>W^100hi^30te La^20bel Sol^30uti^20on^50s</b>",
-      "<b style='font-weight: 900;'>Tec^20hnolo^300gy Sol^40uti^20ons</b>",
-    ],
-    typeSpeed: 40,
-    backSpeed: 20,
-    backDelay: 1000,
-    startDelay: 1000,
-    loop: true,
-    showCursor: false,
-    contentType: "html",
-  });
-
   $(document).on("click", ".genuine__row", function () {
     var row = $(this).data("row_number");
     $(this).toggleClass("active");
@@ -1047,3 +1031,19 @@ function falidator(item) {
     return false;
   }
 }
+
+var machine = new Typed("#machine", {
+  strings: [
+    '<span style="font-weight: 900;">L^10i^20q^90u^50i^30d^30i^80t^20y</span>  &amp; <b style="font-weight: 900;">T^10e^20c^30h^50n^20o^50logy</b>',
+    "<span>P^10r^20i^20m^10e of Pr^20ime</span> </br> <b style='font-weight: 900;'>M^40u^20l^50t^30i-As^40s^30et Liquidity</b>",
+    "<span>A^20d^50v^30a^10nc^20ed</span></br> <b style='font-weight: 900;'>W^100hi^30te La^20bel Sol^30uti^20on^50s</b>",
+    "<b style='font-weight: 900;'>Tec^20hnolo^300gy Sol^40uti^20ons</b>",
+  ],
+  typeSpeed: 40,
+  backSpeed: 20,
+  backDelay: 1000,
+  startDelay: 1000,
+  loop: true,
+  showCursor: false,
+  contentType: "html",
+});
