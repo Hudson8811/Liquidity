@@ -1,5 +1,4 @@
 .actions {
-  padding-bottom: 125px;
   .container.flex {
     display: flex;
     justify-content: space-between;
@@ -33,6 +32,10 @@
       margin-bottom: 20px;
     }
   }
+}
+
+.actions.section {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 970px) {

@@ -393,7 +393,7 @@
 
   &_green_btn {
     background: #0aab88;
-    border: 2px solid #01bd95;
+    border: 1px solid #01bd95;
     box-sizing: border-box;
     border-radius: 5px;
     font-family: Roboto;
@@ -412,7 +412,7 @@
 
     &:hover {
       background: #02b991;
-      border: 2px solid #00c89d;
+      border: 1px solid #00c89d;
       box-sizing: border-box;
       border-radius: 5px;
     }
@@ -431,7 +431,7 @@
     justify-content: center;
     height: 45px;
     width: 155px;
-    border: 2px solid #555555;
+    border: 1px solid #555555;
     box-sizing: border-box;
     border-radius: 5px;
     margin-left: 19px;
@@ -439,7 +439,7 @@
 
     &:hover {
       color: #e3e3e3;
-      border: 2.5px solid #666666;
+      border: 1px solid #666666;
     }
   }
 }
@@ -580,7 +580,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #01bd95;
+  border: 1px solid #01bd95;
   box-sizing: border-box;
   border-radius: 5px;
   transition: color 0.2s;
@@ -593,7 +593,7 @@
 
   &:hover {
     color: #e3e3e3;
-    border: 2.5px solid #00c89d;
+    border: 1px solid #00c89d;
     box-sizing: border-box;
     border-radius: 5px;
   }

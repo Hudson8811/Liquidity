@@ -1,7 +1,8 @@
 .chance {
+  background: #ffffff;
   .opportunities {
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     background: #ffffff;
   }
   .main-text {
@@ -15,7 +16,7 @@
     max-width: 651px;
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 109px;
+    margin-bottom: 150px;
   }
   .section__title {
     letter-spacing: 0;
@@ -29,7 +30,6 @@
     }
   }
   .container.flex.traders {
-    margin-bottom: 125px;
     .text.left {
       margin-top: -23px;
     }
@@ -42,7 +42,6 @@
     }
   }
   .container.flex.clients {
-    margin-bottom: 125px;
     .text.right {
       margin-left: 3px;
       .title {
@@ -56,6 +55,6 @@
     }
   }
   .container.flex.marketing {
-    margin-bottom: 0;
+    margin-bottom: -20px;
   }
 }
