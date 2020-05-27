@@ -1,0 +1,74 @@
+.section__powerful {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .gray_block__container {
+    margin-top: 110px;
+
+    .gray__block {
+      background: #2e3740;
+
+      &--title {
+        color: #fff;
+        text-align: left;
+      }
+
+      &--subtitle {
+        color: #dfdfdf;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.coin {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 45px 67px;
+  background: #2e3740;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  &__block {
+    width: 50%;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 302px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* or 119% */
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+
+  .trading__flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: -10px;
+    margin-top: 0;
+
+    .check_block--mam_platform-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

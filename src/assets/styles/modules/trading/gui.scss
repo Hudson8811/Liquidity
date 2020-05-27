@@ -65,3 +65,79 @@
     top: 50%;
   }
 }
+
+.section__ib {
+  .section__ib_heading {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 25px;
+    /* identical to box height, or 69% */
+    text-align: center;
+    color: #383838;
+    margin: 80px auto 50px;
+  }
+
+  .check_block--mam_platform-item--text {
+    color: #555;
+  }
+}
+
+.section__saas {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+}
+
+.section__trading_mobile_app {
+  .check_container {
+    margin-top: -60px;
+    padding: 0 10%;
+    .check_block--mam_platform-item {
+      width: 33.333% !important;
+    }
+  }
+}
+
+.section__def {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .gray__block {
+    &--title {
+      text-align: left;
+    }
+
+    &--subtitle {
+      text-align: left;
+    }
+  }
+}
+
+.section__party {
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .it_for__item {
+    background: #fff;
+  }
+}
+
+.sextion__extra {
+  .section__title {
+    margin-bottom: 80px;
+  }
+}
+
+.section__quotes {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+  svg {
+    display: block;
+    margin-top: 20px;
+  }
+}
