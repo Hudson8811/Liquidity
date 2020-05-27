@@ -1,5 +1,4 @@
 .section__future {
-  background: #191f24;
   @media screen and (max-width: 580px) {
     padding: 50px 0;
   }
@@ -9,6 +8,9 @@
   .section__subtitle {
     margin-bottom: 80px;
   }
+}
+.section__future.section {
+  background: #191f24;
 }
 
 .future__wrapper:not(.future__wrapper--active)

@@ -6,7 +6,9 @@
   animation: signal 1.5s infinite;
   margin-left: 8px;
 }
-
+.section__webinars.section {
+  background: #191f24;
+}
 .section__webinars {
   .live_webinars {
     display: flex;

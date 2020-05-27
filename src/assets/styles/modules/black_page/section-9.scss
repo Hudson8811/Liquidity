@@ -1,6 +1,4 @@
 .section-9 {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: #eff4f6;
   .section__title {
     text-align: center;
@@ -32,10 +30,12 @@
       align-items: center;
       height: 92px;
       margin-bottom: 20px;
-      mix-blend-mode: multiply;
+
+      background: #eff4f6;
       img {
         display: block;
         width: 100%;
+        mix-blend-mode: multiply;
       }
       &:nth-child(1) {
         width: 176px;

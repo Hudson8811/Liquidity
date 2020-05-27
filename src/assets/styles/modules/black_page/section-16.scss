@@ -1,73 +1,71 @@
 .section-16 {
-    padding-top: 50px;
-    padding-bottom: 103px;
+  .section__title {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .main-text {
+    max-width: 441px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .video_block {
+    height: 738px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .video_block {
+    margin-top: 106px;
+  }
+  .you_button {
+    margin-top: 72px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .youtube {
+        width: 24px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .section-16 {
+    .video_block {
+      margin-top: 20px;
+      height: 50vw;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .section-16 {
+    padding-bottom: 50px;
     .section__title {
-        max-width: 700px;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 50px;
+      margin-bottom: 20px;
     }
     .main-text {
-        max-width: 441px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 18px;
-        line-height: 25px;
-    }
-    .video_block {
-        height: 738px;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-    .video_block {
-        margin-top: 106px;
+      font-size: 14px;
+      line-height: 17px;
     }
     .you_button {
-        margin-top: 72px;
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .youtube {
-                width: 24px;
-                margin-right: 16px;
-            }
-        }
+      margin-top: 20px;
     }
-}
-
-@media screen and (max-width:1110px) {
-    .section-16 {
-        .video_block {
-            margin-top: 20px;
-            height: 50vw;
+    .video_block {
+      &--play {
+        width: 40px;
+        height: 40px;
+        .icon-play {
+          height: 20px;
         }
+      }
     }
-}
-
-@media screen and (max-width:580px) {
-    .section-16 {
-        padding-bottom: 50px;
-        .section__title {
-            margin-bottom: 20px;
-        }
-        .main-text {
-            font-size: 14px;
-            line-height: 17px;
-        }
-        .you_button {
-            margin-top: 20px;
-        }
-        .video_block {
-            &--play {
-                width: 40px;
-                height: 40px;
-                .icon-play {
-                    height: 20px;
-                }
-            }
-        }
-    }
+  }
 }

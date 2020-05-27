@@ -1,66 +1,65 @@
 .section-23 {
-    background: #fff;
-    padding-top: 150px;
-    padding-bottom: 147px;
+  background: #fff;
+
+  .section__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .main-text {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 444px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .best_with {
+    margin-top: 80px;
+  }
+  .best_with {
+    &:nth-child(4) {
+      .best_with--right {
+        .check_block {
+          &:nth-child(1) {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      .best_with--right {
+        .check_block {
+          &:nth-child(2) {
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .section-23 {
+    .best_with {
+      display: block;
+      &--left {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .section-23 {
+    padding-top: 50px;
+    padding-bottom: 50px;
     .section__title {
-        text-align: center;
-        margin-bottom: 50px;
+      margin-bottom: 20px;
     }
     .main-text {
-        font-size: 18px;
-        line-height: 25px;
-        max-width: 444px;
-        margin: 0 auto;
-        text-align: center;
+      font-size: 14px;
+      line-height: 17px;
     }
-    .best_with {
-        margin-top: 80px;
-    }
-    .best_with {
-        &:nth-child(4) {
-            .best_with--right {
-                .check_block {
-                    &:nth-child(1) {
-                        padding-right: 20px;
-                    }
-                }
-            }
-        }
-        &:nth-child(5) {
-            .best_with--right {
-                .check_block {
-                    &:nth-child(2) {
-                        padding-right: 50px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:690px) {
-    .section-23 {
-        .best_with {
-            display: block;
-            &--left {
-                width: 100%;
-                margin: 0 auto;
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:580px) {
-    .section-23 {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        .section__title {
-            margin-bottom: 20px;
-        }
-        .main-text {
-            font-size: 14px;
-            line-height: 17px;
-        }
-    }
+  }
 }
