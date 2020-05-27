@@ -69,6 +69,7 @@
 @import "copy_trading/chance.scss";
 @import "copy_trading/make_traders.scss";
 @import "copy_trading/ct_works.scss";
+
 //pamm
 @import "pamm/section-1.scss";
 @import "pamm/what_is.scss";
@@ -133,3 +134,6 @@
 @import "trading/enguine.scss";
 @import "trading/architecture.scss";
 @import "trading/balances.scss";
+@import "trading/gui.scss";
+@import "trading/watchlist.scss";
+@import "trading/mode.scss";

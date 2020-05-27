@@ -1,0 +1,20 @@
+.section__watchlist {
+  .section__subtitle {
+    margin-bottom: 62px;
+  }
+
+  video,
+  img {
+    display: block;
+    width: auto;
+    height: 480px;
+    margin: 0 auto;
+  }
+  svg {
+    width: inherit;
+  }
+
+  .flickity-prev-next-button {
+    top: 64%;
+  }
+}

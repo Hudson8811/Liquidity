@@ -2035,6 +2035,14 @@ select:visited {
   &.white_section {
     background: #fff;
   }
+
+  &__black {
+    background: #1e252d !important;
+  }
+
+  &__blue {
+    background: #eff4f6 !important;
+  }
 }
 
 .br {

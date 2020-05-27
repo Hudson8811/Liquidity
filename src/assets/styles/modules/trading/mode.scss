@@ -1,0 +1,54 @@
+.section__mode {
+  .mam_tabs-btn {
+    margin: 0 4px;
+    width: 113px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262f41;
+    border: 1.49748px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 2.4958px;
+    svg {
+      circle,
+      path {
+        fill: #fdfefe;
+      }
+    }
+    &.active {
+      background: #ffffff;
+      opacity: 0.9;
+      border: 0.499161px solid #dae4e8;
+      box-sizing: border-box;
+      box-shadow: 0px 0.998322px 1.99664px rgba(0, 0, 0, 0.15);
+      border-radius: 2.4958px;
+      svg {
+        circle,
+        path {
+          fill: #262f41;
+        }
+      }
+    }
+  }
+
+  .mam_tabs-content {
+    display: none;
+    margin-top: 45px;
+
+    .banner {
+      margin-bottom: 43px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .container.flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
