@@ -2084,7 +2084,7 @@ select:visited {
 #modal4 {
   background: #1c242c;
   border-radius: 20px;
-  padding: 166px 195px;
+  padding: 146px 260px;
 
   @media screen and (max-width: 1000px) {
     padding: 40px;
@@ -2101,12 +2101,29 @@ select:visited {
       display: none;
     }
   }
+  .svg_container {
+    background: rgba(196, 196, 196, 0.05);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 286px;
+    height: 286px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 68px;
+
+    @media screen and (max-width: 700px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
 
   .svg-sprite-icon {
-    height: 69px;
+    height: 60px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 70px;
     width: 100%;
   }
 
@@ -2114,15 +2131,15 @@ select:visited {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 80px;
+    font-size: 50px;
     line-height: 84px;
-    /* or 105% */
+    /* identical to box height, or 168% */
 
     text-align: center;
     letter-spacing: 1px;
 
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
     @media screen and (max-width: 730px) {
       font-size: 30px;
@@ -2133,10 +2150,10 @@ select:visited {
   .snx__subtitle {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
+    font-weight: normal;
+    font-size: 18px;
     line-height: 44px;
-    /* identical to box height, or 183% */
+    /* identical to box height, or 244% */
 
     text-align: center;
 

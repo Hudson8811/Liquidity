@@ -1,6 +1,10 @@
 .trading {
   padding-bottom: 150px;
 
+  @media screen and (max-width: 580px) {
+    padding-bottom: 50px;
+  }
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -18,11 +22,32 @@
   }
 
   .item {
-    width: 100%;
+    width: 98%;
     max-width: 980px;
     margin: 0 87px;
     transition: opacity 0.5s;
     opacity: 0.15;
+
+    @media screen and (max-width: 1000px) {
+      img {
+        height: auto !important;
+        width: 100% !important;
+      }
+      .trading__flex {
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        .check_block--mam_platform-item {
+          width: 100%;
+          margin: 0;
+          margin-bottom: 20px;
+
+          span.db {
+            display: none;
+          }
+        }
+      }
+    }
 
     &.is-selected {
       opacity: 1;
@@ -31,6 +56,10 @@
 
   .flickity-prev-next-button {
     top: 41%;
+
+    @media screen and (max-width: 1000px) {
+      display: none !important;
+    }
   }
 
   .flickity-prev-next-button.previous {
@@ -88,5 +117,77 @@
 .section__trading {
   .section__subtitle {
     margin-bottom: 80px;
+  }
+}
+
+.section__dynamic {
+  @media screen and (max-width: 1000px) {
+    .trading__flex {
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .check_block--mam_platform-item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+
+        span.db {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.section__multiple {
+  @media screen and (max-width: 1000px) {
+    .trading__flex {
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .check_block--mam_platform-item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+
+        span.db {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.section__ib {
+  @media screen and (max-width: 1000px) {
+    .trading__flex {
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .check_block--mam_platform-item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+
+        span.db {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.trading__slider {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1920px) {
+    .flickity-prev-next-button.next {
+      right: 1vw !important;
+    }
+
+    .flickity-prev-next-button.previous {
+      left: 1vw !important;
+    }
   }
 }

@@ -26,6 +26,11 @@
   box-sizing: border-box;
   border-radius: 16px;
   color: #656565;
+
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .section__dynamic {
@@ -94,8 +99,15 @@
   .check_container {
     margin-top: -60px;
     padding: 0 10%;
+    @media screen and (max-width: 580px) {
+      margin-top: 0;
+    }
     .check_block--mam_platform-item {
       width: 33.333% !important;
+
+      @media screen and (max-width: 580px) {
+        width: 100% !important;
+      }
     }
   }
 }

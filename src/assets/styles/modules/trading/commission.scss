@@ -19,7 +19,10 @@
     color: #6a6a6a;
   }
 }
-
+.black_table__wrapper {
+  overflow: auto;
+  width: 98%;
+}
 .black_table {
   background: #2e3740;
   width: 980px;

@@ -771,6 +771,7 @@ $(document).ready(function () {
     contain: true,
     prevNextButtons: true,
     pageDots: false,
+    adaptiveHeight: true,
   });
 
   $(".trading__slider .item").on("click", function () {

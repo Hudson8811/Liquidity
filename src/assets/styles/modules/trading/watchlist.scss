@@ -9,6 +9,11 @@
     width: auto;
     height: 480px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1000px) {
+      height: auto;
+      width: 98%;
+    }
   }
   svg {
     width: inherit;

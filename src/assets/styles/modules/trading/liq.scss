@@ -1,6 +1,10 @@
 .section__liq {
   .it_for__item {
     padding: 30px 55px;
+
+    @media screen and (max-width: 580px) {
+      padding: 10px;
+    }
   }
   .section__subtitle {
     margin-bottom: 80px;

@@ -19,6 +19,14 @@
     border-radius: 5px;
     width: calc(25% - 33px / 4);
     margin-bottom: 10px;
+
+    @media screen and (max-width: 990px) {
+      width: calc(50% - 5px);
+    }
+
+    @media screen and (max-width: 990px) {
+      width: 100%;
+    }
   }
 
   &__icon {
