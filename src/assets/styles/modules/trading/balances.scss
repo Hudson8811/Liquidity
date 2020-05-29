@@ -31,6 +31,12 @@
     margin: 0 87px;
     transition: opacity 0.5s;
     opacity: 0.15;
+    img {
+      display: block;
+      height: 580px;
+      width: auto;
+      margin: 0 auto;
+    }
 
     @media screen and (max-width: 1000px) {
       img {

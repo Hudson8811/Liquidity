@@ -197,4 +197,50 @@
   .new_form__label {
     margin-bottom: 18px;
   }
+  .b2_form.light_theme .new_form__label,
+  .b2_form.light_theme .new_form__select {
+    background: rgba(26, 26, 26, 0.1);
+    border: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    .new_form__star {
+      color: #fff;
+    }
+
+    .new_form__placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:hover {
+      .new_form__placeholder {
+        color: #fff;
+      }
+    }
+  }
+
+  .b2_form.light_theme .new_form__label__lang_select_wrapper {
+    background: rgba(26, 26, 26, 0.1);
+  }
+
+  .b2_form.light_theme .new_form__select {
+    color: #ffffff;
+  }
+
+  .b2_form.light_theme .new_form__label__lang_select_wrapper .new_form__select {
+    border: none;
+    background-position: calc(100% - 30px) center;
+  }
+
+  .b2_form.light_theme .new_form__select {
+    background-image: url(../images/triangl.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .b2_form.light_theme .new_form__select.new_form__select_phone {
+    background-position: calc(100% - 14px) center;
+    border: none;
+    border-right: 1px solid #f3f3f3;
+  }
 }
