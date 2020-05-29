@@ -72,6 +72,10 @@
 }
 
 .section__ib {
+  .check_block--mam_platform-item--text {
+    font-size: 16px;
+  }
+
   .section__ib_heading {
     font-family: Roboto;
     font-style: normal;
@@ -96,6 +100,10 @@
 }
 
 .section__trading_mobile_app {
+  .section__subtitle {
+    max-width: none;
+  }
+
   .check_container {
     margin-top: -60px;
     padding: 0 10%;
@@ -135,6 +143,16 @@
 
   .it_for__item {
     background: #fff;
+
+    &:nth-child(2) {
+      .it_for__text {
+        display: flex;
+        flex-direction: column;
+        .it_for__heading {
+          flex-basis: 56px;
+        }
+      }
+    }
   }
 }
 
@@ -151,5 +169,11 @@
   svg {
     display: block;
     margin-top: 20px;
+  }
+}
+
+.section_b2_trading__best.best {
+  .check_block__text {
+    font-size: 16px;
   }
 }

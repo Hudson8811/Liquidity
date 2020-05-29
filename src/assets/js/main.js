@@ -321,6 +321,11 @@ $(document).ready(function () {
     adaptiveHeight: true,
   });
 
+  $(".gif__slider--js").flickity({
+    pageDots: false,
+    contain: true,
+  });
+
   $(".hear_flickity_small--js").flickity({
     adaptiveHeight: false,
     pageDots: false,
@@ -771,7 +776,7 @@ $(document).ready(function () {
     contain: true,
     prevNextButtons: true,
     pageDots: false,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
   });
 
   $(".trading__slider .item").on("click", function () {

@@ -1,6 +1,10 @@
 .trading {
   padding-bottom: 150px;
 
+  .check_block--mam_platform-item--text {
+    font-size: 16px;
+  }
+
   @media screen and (max-width: 580px) {
     padding-bottom: 50px;
   }
@@ -36,7 +40,6 @@
       .trading__flex {
         flex-wrap: wrap;
         margin-top: 20px;
-
         .check_block--mam_platform-item {
           width: 100%;
           margin: 0;
@@ -121,6 +124,9 @@
 }
 
 .section__dynamic {
+  .check_block--mam_platform-item--text {
+    font-size: 16px;
+  }
   @media screen and (max-width: 1000px) {
     .trading__flex {
       flex-wrap: wrap;
@@ -140,6 +146,9 @@
 }
 
 .section__multiple {
+  .check_block--mam_platform-item--text {
+    font-size: 16px;
+  }
   @media screen and (max-width: 1000px) {
     .trading__flex {
       flex-wrap: wrap;

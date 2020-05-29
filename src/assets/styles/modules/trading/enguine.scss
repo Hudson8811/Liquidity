@@ -2,7 +2,9 @@
   background: #eff4f6;
 
   .container__table {
-    overflow: auto;
+    @media screen and (max-width: 1000px) {
+      overflow: auto;
+    }
   }
 }
 

@@ -1,0 +1,18 @@
+.section__how_ex {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .mam_tabs-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.gif__slider--js {
+  .item {
+    width: 100%;
+  }
+}

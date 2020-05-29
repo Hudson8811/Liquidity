@@ -1,4 +1,7 @@
 .section__commission {
+  .new_box-catalog .box_block--text {
+    letter-spacing: 0;
+  }
   .section__subtitle {
     margin-bottom: 80px;
   }
@@ -17,6 +20,10 @@
     text-align: center;
     margin: 80px auto 50px;
     color: #6a6a6a;
+
+    .extrabold {
+      color: #3a3a3a;
+    }
   }
 }
 .black_table__wrapper {
