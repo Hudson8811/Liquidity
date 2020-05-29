@@ -23,7 +23,7 @@
     }
     .new_form__label {
       background: #ffffff;
-      border: 1px solid #d1dbe2;
+      border: 1px solid rgba(209, 219, 227, 0.7);
       box-sizing: border-box;
       border-radius: 5px;
 
@@ -102,7 +102,9 @@
     }
   }
 }
-
+.b2_form.section .section__subtitle {
+  color: #fff;
+}
 .new_form {
   max-width: 700px;
   width: 100%;
@@ -174,12 +176,12 @@
   }
   &__label {
     background: #28323e;
-    border: 1px solid #d1dbe2;
+    border: 1px solid rgba(209, 219, 227, 0.7);
     box-sizing: border-box;
     border-radius: 5px;
     position: relative;
     height: 53px;
-    margin-bottom: 19px;
+    margin-bottom: 8px;
 
     &.active {
       .new_form__placeholder {

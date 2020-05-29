@@ -1,0 +1,62 @@
+.forex_liquidity.forex_liquidity__new.forex_liquidity__new__b2_enterprise
+  .forex_liquidity--overlay
+  .container
+    .forex_liquidity__content
+      h2.section__title #[span(class="section__title--bold db") Enterprise]  Wallets Solution
+
+      span.section__description Our highly secure, reliable and scalable wallets solution for Enterprises #[span(class='db')] enables you to engage your customers with an outstanding crypto#[span(class='db')] payment experience. 
+
+      span.section__description No need to develop blockchain wallets. Just plug and use ready-made#[span(class='db')] Cryptocurrency Wallets and reduce costs with cutting-edge blockchain#[span(class='db')] technology that is trusted throughout the industry. 
+
+      span.section__description We make crypto payments simple!
+
+      .trading__flex
+        .check_block--mam_platform-item.circle
+            +icon('circle')
+            .check_block--mam_platform-item--text Coins
+        
+        .check_block--mam_platform-item.circle
+            +icon('circle')
+            .check_block--mam_platform-item--text StableCoins
+        
+        .check_block--mam_platform-item.circle
+            +icon('circle')
+            .check_block--mam_platform-item--text Tokens
+
+    form.new_form.new_form__flex.b2_form.light_theme
+      label.new_form__label
+        span.new_form__placeholder Your Name
+        span.new_form__star *
+        input.new_form__input(type="text", required)
+      label.new_form__label
+        span.new_form__placeholder Your Email
+        span.new_form__star *
+        input.new_form__input(type="email", required)
+      label.new_form__label.new_form__label__phone_select
+        span.new_form__placeholder Phone
+        span.new_form__star *
+        input.new_form__input(type="text", required)
+        select.new_form__select.new_form__select_phone
+            option(value="+7") +7
+            option(value="+7") +7
+            option(value="+7") +7
+      label.new_form__label.new_form__label_capch
+        span.new_form__placeholder Enter symbols
+        span.new_form__star *
+        img.new_form__capch(src="images/capch_text_white.png")
+        input.new_form__input(type="text", required)
+
+      label.new_form__label.new_form__label__lang_select
+        span.new_form__placeholder Preffered language
+        input.new_form__input(type="text")
+        .new_form__label__lang_select_wrapper
+          img(src="images/en.png",class="new_form__label__lang_select_icon")
+          select.new_form__select
+            option(value="English") English
+            option(value="English") English
+            option(value="English") English
+      button.new_form__sabmit(type='submit') Request a Callback
+      label.consent_block
+        input(type="checkbox")
+        b
+        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]

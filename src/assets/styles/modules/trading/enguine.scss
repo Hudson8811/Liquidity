@@ -28,6 +28,20 @@
       align-items: center;
       height: 100%;
       min-height: 58px;
+      border-right: 3px solid #fff;
+      box-sizing: border-box;
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.green {
+        background: rgba(1, 189, 149, 0.05);
+        color: #01bd95;
+      }
+
+      &.red {
+        color: #ee0064;
+      }
 
       &:nth-child(1) {
         justify-content: flex-start;
@@ -83,8 +97,6 @@
         /* identical to box height, or 143% */
         text-align: center;
         color: #000000;
-        border-right: 3px solid #fff;
-        box-sizing: border-box;
         min-height: 40px;
 
         &:nth-child(1) {
