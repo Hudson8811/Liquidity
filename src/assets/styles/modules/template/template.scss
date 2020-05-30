@@ -2415,3 +2415,30 @@ select:visited {
     margin-right: 15px;
   }
 }
+
+.section-3.section-3__forex {
+  .number_block--text {
+    color: #454545;
+  }
+}
+
+.section-4.section-4__forex {
+  .number_block--text {
+    color: #454545;
+  }
+}
+
+.section-3.section-3__crypto {
+  .number_block-content {
+    &:nth-child(3) {
+      text-align: center;
+    }
+  }
+  .number_block--text {
+    color: #454545;
+  }
+}
+
+.section__segment {
+  border-bottom: 1px solid #575757;
+}

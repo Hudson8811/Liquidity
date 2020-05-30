@@ -1,7 +1,9 @@
 .section-10 {
   padding-bottom: 0;
   background: #fbfbfb;
-
+  .grafic_slider--slick_item--description {
+    max-width: none;
+  }
   .grafic_slider {
     margin-top: 109px;
     margin-bottom: 0;

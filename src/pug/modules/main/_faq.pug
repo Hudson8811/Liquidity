@@ -5,59 +5,122 @@
     .question
 
       .question-item.faq_btn_js(data-id="1")
-        span How to accept cryptocurrencies
+        span Why do I need to place deposit?
         .question__plus
           span
           span
-        .question-item_content(data-id="1") Receive, store and send virtual currencies such as Bitcoin, Ethereum, Ripple, Monero, etc.
+        .question-item_content(data-id="1") The deposit on Margin Account is using for trades confirmation of all connected trading sessions. It could be trading servers, like Metatrader, or other FIX API sessions. Also, deposited funds are using to provide trading operations on the Margin Account.
 
       .question-item.faq_btn_js(data-id="2")
-        span What cryptocurrencies are available?
+        span Can I get datafeed only from you?
         .question__plus
           span
           span
-        .question-item_content(data-id="2") We have built a strong onboarding procedures. You will have a personal account manager that will provide you with all the necessary documentation on the product possibilities. In addition, we will schedule a call with the product manager that will walk you through the functionality and will answer all of your questions.
+        .question-item_content(data-id="2") The liquidity could be used as a Datafeed, and a trading session could be disabled on the bridge/gateway level. At any moment the trading session could be activated back to cover necessary risks.
 
       .question-item.faq_btn_js(data-id="3")
-        span Do you support Stable Coins and Tokens?
+        span Where do you take liquidity from?
         .question__plus
           span
           span
-        .question-item_content(data-id="3") We have a team of 30+ dedicated developers that are working on B2Core improvements and new features and we are always open for client wishes. All you will need to do is to give us a technical description of what you want and our team will take care about the implementation and your personal account manager will keep you posted about the release dates.
+        .question-item_content(data-id="3") Our liquidity consists of an aggregated flow of liquidity from tier-one counterparties, which allows us to provide minimum levels of spreads and commissions.
 
       .question-item.faq_btn_js(data-id="4")
-        span Do you have a test account?
+        span What is the Margin Call and Stop Out level on. your Side?
         .question__plus
           span
           span
-        .question-item_content(data-id="4") In case you found a bug in the product, we have a 24/7 Helpdesk system with 20+ Support specialists behind it. Your personal account manager will walk you through it so that once you face a problem you can quickly report it and our support team will immediately start working on the fix.
+        .question-item_content(data-id="4") The Margin Call and Stop Out level are set on 100% and 120% levels of Margin Utilization level, which calculated as (Margin Used / Equity) * 100%.
 
       .question-item.faq_btn_js(data-id="5")
-        span How to integrate a crypto payment gateway
+        span How do I connect to the liquidity if I have MT4/MT5?
         .question__plus
           span
           span
-        .question-item_content(data-id="5") It is as simple as creating a method in your admin panel for deposits and withdrawals and entering the API keys in order to connect to the platform, this can be done in a matter of minutes.
+        .question-item_content(data-id="5") We are providing solutions from PrimeXM and OneZero companies in order to connect Metatrader servers to our liquidity. 
 
       .question-item.faq_btn_js(data-id="6")
-        span What are the fees?
+        span Can I use FIX API to connect to the liquidity?
         .question__plus
           span
           span
-        .question-item_content(data-id="6") Specifically for that we build a right-based User groups, where you will be able to assign to the users only the sections that are specifically needed for his/her department. In addition, we launched a tag system, that will allow your admins to monitor only the clients' data that are "tagged" to them.
+        .question-item_content(data-id="6") Yes, it is possible to take the liquidity by the FIX API connector.
 
       .question-item.faq_btn_js(data-id="7")
-        span Is it secure?
+        span Does Crypto liquidity available 24/7?
         .question__plus
           span
           span
-        .question-item_content(data-id="7") In order to upgrade to a higher package you just need to inform the account manager about your decision and it will be taken care of from there. However, in order to downgrade from one package to another, you need to inform our team 2 month prior.
+        .question-item_content(data-id="7") Yes, the Crypto liquidity available 24 by 7, without any holidays.
+      
+      .question-item.faq_btn_js(data-id="8")
+        span What is the leverage you provide?
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="8") The leverage for FX instruments is 1:100, Margin requiremets for other instruments are available on our Contract Specifications.
+      
+      .question-item.faq_btn_js(data-id="9")
+        span Is it possible to put my own markup up on prices of the liquidity stream?
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="9") It is possible through your own PrimeXM XCore, OneZero Hub or any other liquidity aggregator/advanced bridge solution.
+      
+      .question-item.faq_btn_js(data-id="10")
+        span I need to integrate liquidity ASAP. How quickly you can do this? 
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="10") The fastest way to connect the liquidity takes 24 hours.
+      
+      .question-item.faq_btn_js(data-id="11")
+        span How to avoid Stop Out?
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="11") It is recommended to keep the Used margin on the level of 65-75% to avoid Stop Out. Also some positions could be closed in case of too high level of Used Margin.
+      
+      .question-item.faq_btn_js(data-id="12")
+        span What happens with the positions in case of Stop Out?  
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="12") In case of Stop Out positions are automatically closed on PrimeXM/ OneZero level, but remain on MT 4/5 level. 
+      
+      .question-item.faq_btn_js(data-id="13")
+        span I have a balance discrepancy between MT 4/5 and PrimeXM/OZ after the Stop Out. What should I do? 
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="13") To avoid balance discrepancy it is recommended follow one from the two options:#[b(class="br")]Option 1. Deposit money to the marginal account #[span(class="db")]Deposit necessary amount of money on marginal account on PrimeXM / OneZero to provide enough margin for the positions#[span(class="db")] Re-open positions on PrimeXM / OneZero #[b(class="br")]Option 2. Close positions in MT 4 / 5#[span(class="db")]How to close the positions in A-Book on MT level#[span(class="db")]To avoid any discrepancy between marginal account and MT, you should close the positions which were closed on PrimeXM / OZ also in MT following the steps below:#[b(class="br")]Move the accounts with the positions to close from A-Book group to the B-Book group.#[span(class="db")]IMPORTANT: Make sure that the following parameters in the group from which you are moving accounts and the group to which you are moving accounts are the same:#[span(class="db")]Mark-up#[span(class="db")]Currency#[span(class="db")]System: Hedging / Netting #[span(class="db")]Close the positions#[span(class="db")]Move the accounts back to the A-Book group if needed.
+      
+      .question-item.faq_btn_js(data-id="14")
+        span What is the rollover? 
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="14") Rollover is the process when the positions are shifted to the next trading day and SWAPs are calculated. Rollover is proceed automatically every day at the fixed same moment of time.
+      
+      .question-item.faq_btn_js(data-id="15")
+        span How the rollover can influence the opened positions? 
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="15") During the rollover often spread can be expanded, so some positions can be closed by Stop Out in can of the too bog level of the Used Margin. So it is recommended to keep the level of the Used Margin on the level of 65-75%.
+      
+      .question-item.faq_btn_js(data-id="16")
+        span Why the position was closed / limit order opened while the chart displays the price haven't reached the defined level?
+        .question__plus
+          span
+          span
+        .question-item_content(data-id="16") It often happens that traders look on the Bid-price graph while the position was filled by Ask price. So the first step of answering to such a request will be to ask trader to double-check.
       
       .another_question.another_question__for_btn
         div
           .another_question--heading Any other questions?
           .another_question--link We are on hand to answer all your questions. Get in touch.
-        a(href="#").btn.btn--green.js-modal2-btn ASK us now
+        a(href="#").btn.btn--green.js-modal2-btn Ask us now
 
       
           

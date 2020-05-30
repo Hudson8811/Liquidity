@@ -25,6 +25,9 @@
   .table thead td {
     padding: 10px 20px;
   }
+  .table tbody td {
+    border-bottom: 1px solid #efefef;
+  }
 }
 
 .section__crypto_product {
@@ -34,6 +37,7 @@
     .check_block--mam_platform-item {
       .check_block--mam_platform-item--text {
         padding-right: 0 !important;
+        letter-spacing: 0;
       }
     }
   }
@@ -207,5 +211,34 @@
     background: linear-gradient(180deg, #00d0a4 0%, #00b890 100%);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      background: linear-gradient(180deg, #00deae 0%, #00b890 100%);
+    }
+  }
+}
+
+.section__main_faq {
+  .another_question {
+    background: transparent;
+    border: 3px solid #eff4f6;
+    box-sizing: border-box;
+    .btn.btn--green.js-modal2-btn {
+      background: linear-gradient(180deg, #00d0a4 0%, #00b890 100%);
+      /* small shadow */
+
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      transition: all 0.2s;
+
+      &:hover {
+        background: linear-gradient(180deg, #00deae 0%, #00b890 100%);
+        /* small shadow */
+
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+      }
+    }
   }
 }
