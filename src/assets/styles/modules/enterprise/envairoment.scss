@@ -1,0 +1,111 @@
+.section__envairoment {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .envairoment__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    color: #383838;
+    margin: 60px auto 30px;
+  }
+
+  .envairoment__Subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: center;
+    color: #383838;
+  }
+
+  .trading__flex {
+    box-sizing: border-box;
+    padding-top: 38px;
+    margin-top: 50px;
+    border-top: 7px solid #eff4f6;
+
+    .check_block--mam_platform-item--text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    }
+  }
+  .tabs_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .mam_tabs-content {
+    width: 100%;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .mam_tabs-btn {
+    max-width: 278px;
+    min-height: 107px;
+    width: 100%;
+    margin: 0 5px 38px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .envairoment__icon {
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      border: 2.92623px solid #7c8c9f;
+      box-sizing: border-box;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--number {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 27px;
+        color: #7c8c9f;
+      }
+    }
+
+    .envairoment__text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 30px;
+      /* or 167% */
+      color: #637786;
+    }
+
+    &.active {
+      .envairoment__icon {
+        border: 2.92623px solid #01bd95;
+        box-sizing: border-box;
+
+        &--number {
+          color: #01bd95;
+        }
+      }
+    }
+  }
+}

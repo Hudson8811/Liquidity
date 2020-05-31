@@ -1,0 +1,41 @@
+.section__lang {
+  .section__title {
+    margin-bottom: 130px;
+  }
+
+  .lang {
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-bottom: -85px;
+    }
+    &__item {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 85px;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      display: block;
+      width: 49px;
+      height: 49px;
+      margin-right: 18px;
+    }
+
+    &__text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      /* identical to box height, or 100% */
+      text-align: center;
+      color: #000000;
+    }
+  }
+}

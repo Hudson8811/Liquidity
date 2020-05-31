@@ -1,0 +1,99 @@
+.section__flow_crypto {
+  .section__subtitle {
+    margin-bottom: 50px;
+  }
+
+  .flow__slider--js {
+    .flickity-prev-next-button {
+      bottom: -68px;
+    }
+
+    .item {
+      margin: 50px 68px;
+      width: 98%;
+      max-width: 900px;
+      min-height: 450px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff4f6;
+      /* Small_shadow */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding: 68px 86px;
+
+      &.is-selected {
+        .flow__icon {
+          border: 4.13115px solid #01bd95;
+        }
+
+        .flow__icon--number {
+          color: #01bd95;
+        }
+      }
+    }
+
+    .flow__left {
+      max-width: 309px;
+      width: 100%;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .flow__right {
+      max-width: 382px;
+      width: 100%;
+      margin-left: 70px;
+    }
+
+    .flow__title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
+      /* identical to box height, or 119% */
+      margin-bottom: 35px;
+      text-align: center;
+      color: #383838;
+    }
+
+    .flow__subtitle {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 20px;
+      /* identical to box height, or 154% */
+      text-align: center;
+      color: #383838;
+    }
+
+    .flow__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 4.13115px solid #cccedd;
+      margin: 0 auto 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--number {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 39px;
+        line-height: 39px;
+        /* identical to box height, or 147% */
+        text-align: center;
+        letter-spacing: -1.15672px;
+        color: #cccedd;
+      }
+    }
+  }
+}

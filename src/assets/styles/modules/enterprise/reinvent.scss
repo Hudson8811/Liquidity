@@ -1,0 +1,16 @@
+.section__reinvent {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .gray__block {
+    &--title,
+    &--subtitle {
+      text-align: left;
+    }
+
+    &--subtitle {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -326,6 +326,15 @@ $(document).ready(function () {
     contain: true,
   });
 
+  $(".aml_slider--js").flickity({
+    pageDots: false,
+    contain: true,
+  });
+
+  $(".flow__slider--js").flickity({
+    pageDots: false,
+  });
+
   $(".hear_flickity_small--js").flickity({
     adaptiveHeight: false,
     pageDots: false,

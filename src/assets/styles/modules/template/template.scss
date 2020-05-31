@@ -2442,3 +2442,267 @@ select:visited {
 .section__segment {
   border-bottom: 1px solid #575757;
 }
+
+.section.who_is_it_for__ex {
+  .section__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    color: #383838;
+    margin-bottom: 80px;
+  }
+
+  .it_for__item {
+    &:nth-child(3) {
+    }
+
+    &:nth-child(6) {
+      padding-right: 43px;
+    }
+  }
+}
+
+.section__transaction {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+}
+
+.who_is_it_for.who_is_it_for__businesses {
+  .section__subtitle {
+    max-width: none;
+    margin-bottom: 80px;
+    letter-spacing: -0.5px;
+  }
+
+  .it_for__item {
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      padding-right: 48px;
+    }
+  }
+}
+
+.section__fully {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .trading__flex {
+    flex-wrap: wrap;
+    max-width: 830px;
+    margin: 0 auto;
+
+    .check_block--mam_platform-item {
+      width: 33%;
+      margin: 0 0 25px 0;
+    }
+    .check_block--mam_platform-item--text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 23px;
+      /* or 144% */
+      color: #63636e;
+    }
+  }
+}
+
+.section__aml {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .item {
+    width: 100%;
+  }
+  .aml_slider--js {
+    padding-bottom: 104px;
+  }
+}
+
+.section__sacurity_ex.section {
+  .section__title {
+    margin-bottom: 80px;
+  }
+}
+
+.section__exch.section {
+  .section__title {
+    margin-bottom: 120px;
+  }
+
+  .section__extitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    margin: 120px auto 50px;
+  }
+
+  .trading__flex {
+    flex-wrap: wrap;
+    max-width: 750px;
+    margin: 0 auto;
+
+    .check_block--mam_platform-item.circle {
+      width: 33%;
+      margin: 0 0 20px 0;
+
+      .check_block--mam_platform-item--text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.ex_frame {
+  .section__subtitle:nth-child(2) {
+    margin-bottom: 80px;
+  }
+
+  .watch_more {
+    margin: 50px auto 80px;
+  }
+
+  .ex_frame__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000000;
+  }
+}
+
+.section__ex_features {
+  .section__title {
+    margin-bottom: 150px;
+  }
+
+  .feature__block {
+    margin-bottom: 150px;
+  }
+
+  .feature__text {
+    padding-bottom: 11%;
+  }
+}
+
+.section__role {
+  .it_for__item {
+    background: #ffffff;
+    /* Small_shadow */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.section__solushen {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .solushen {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* or 122% */
+    text-align: center;
+    margin: 90px auto 60px;
+    color: #383838;
+  }
+
+  .check_block--mam_platform-item--text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+  }
+}
+
+.section__config {
+  .trading__flex {
+    margin-bottom: -20px;
+    flex-wrap: wrap;
+    max-width: 880px;
+    margin: 80px auto 0;
+
+    .check_block--mam_platform-item {
+      margin: 0 0 20px 0;
+      width: 33%;
+
+      &:nth-child(3n + 1) {
+        width: 22%;
+      }
+    }
+
+    .check_block--mam_platform-item--text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+    }
+  }
+}
+
+.section__anty_fraud_ex {
+  .section__subtitle {
+    max-width: none;
+  }
+}
+
+.section__report {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .trading__flex {
+    margin-top: 125px;
+
+    .check_block--mam_platform-item--text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      color: #ffffff;
+    }
+  }
+}
+
+.section.section__catalog_ex {
+  .section__title {
+    margin-bottom: 100px;
+  }
+}
+
+.section.section_tex_ex {
+  background: #fff;
+
+  .main-text {
+    max-width: none;
+  }
+}

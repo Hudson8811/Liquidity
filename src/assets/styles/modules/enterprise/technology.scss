@@ -1,0 +1,29 @@
+.section__technology {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .container:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 835px;
+
+    .row {
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .check_block--mam_platform-item--text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #63636e;
+  }
+}
