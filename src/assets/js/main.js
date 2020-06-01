@@ -331,6 +331,11 @@ $(document).ready(function () {
     contain: true,
   });
 
+  $(".invoiced__slider--js").flickity({
+    pageDots: false,
+    contain: true,
+  });
+
   $(".flow__slider--js").flickity({
     pageDots: false,
   });

@@ -23,6 +23,14 @@
     margin-top: 105px;
     justify-content: flex-start;
 
+    @media screen and (max-width: 920px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+    }
+
     .check_block--mam_platform-item {
       margin-left: 0;
     }

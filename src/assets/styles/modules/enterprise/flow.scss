@@ -6,6 +6,10 @@
   .flow__slider--js {
     .flickity-prev-next-button {
       bottom: -68px;
+
+      @media screen and (max-width: 580px) {
+        bottom: -40px;
+      }
     }
 
     .item {
@@ -22,6 +26,10 @@
       border-radius: 5px;
       box-sizing: border-box;
       padding: 68px 86px;
+
+      @media screen and (max-width: 580px) {
+        flex-direction: column;
+      }
 
       &.is-selected {
         .flow__icon {
@@ -47,6 +55,10 @@
       max-width: 382px;
       width: 100%;
       margin-left: 70px;
+      @media screen and (max-width: 580px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
 
     .flow__title {

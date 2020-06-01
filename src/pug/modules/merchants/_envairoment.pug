@@ -1,0 +1,33 @@
+.section.section__envairoment
+    .section__title Staging #[span(class="section__title--bold") Environment ]
+    .section__subtitle Integration is firstly made in a staging environment for client testing. Production deployment only takes#[span(class="db")] place after approval in order to minimize the risk of bugs at the production stage. This process ensures your#[span(class="db")] product will be the most stable one on the market!
+
+    .container.tabs_container
+        .mam_tabs-btn.active(data-id="1")
+            .envairoment__icon
+                .envairoment__icon--number 1
+            .envairoment__text Integration
+        .mam_tabs-btn(data-id="2")
+            .envairoment__icon
+                .envairoment__icon--number 2
+            .envairoment__text Production
+        
+        .mam_tabs-content.active(data-id="1")
+            img.banner(src="images/staging1.png", alt="banner")
+            .envairoment__title Integration
+            .envairoment__Subtitle Test your integration in a staging environment with confidence!
+        
+        .mam_tabs-content(data-id="2")
+            img.banner(src="images/staging2.png", alt="banner")
+            .envairoment__title Production
+            .envairoment__Subtitle Go live with fully tested integration and start accepting crypto payments immediately!
+    
+    .container  
+        .trading__flex
+            .check_block--mam_platform-item.circle
+                +icon('circle')
+                .check_block--mam_platform-item--text Separate entity for#[span(class="db")] internal testing
+            
+            .check_block--mam_platform-item.circle
+                +icon('circle')
+                .check_block--mam_platform-item--text Pre-release of the#[span(class="db")] features on staging

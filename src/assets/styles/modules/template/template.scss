@@ -2501,6 +2501,10 @@ select:visited {
     .check_block--mam_platform-item {
       width: 33%;
       margin: 0 0 25px 0;
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
     }
     .check_block--mam_platform-item--text {
       font-family: Roboto;
@@ -2510,6 +2514,12 @@ select:visited {
       line-height: 23px;
       /* or 144% */
       color: #63636e;
+
+      @media screen and (max-width: 800px) {
+        span.db {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -2558,6 +2568,9 @@ select:visited {
     .check_block--mam_platform-item.circle {
       width: 33%;
       margin: 0 0 20px 0;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
 
       .check_block--mam_platform-item--text {
         font-family: Roboto;
@@ -2630,6 +2643,11 @@ select:visited {
     margin: 90px auto 60px;
     color: #383838;
   }
+  @media screen and (max-width: 800px) {
+    .trading__flex {
+      flex-direction: column;
+    }
+  }
 
   .check_block--mam_platform-item--text {
     font-family: Roboto;
@@ -2651,9 +2669,16 @@ select:visited {
     .check_block--mam_platform-item {
       margin: 0 0 20px 0;
       width: 33%;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
 
       &:nth-child(3n + 1) {
         width: 22%;
+
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
       }
     }
 
@@ -2664,11 +2689,17 @@ select:visited {
       font-size: 16px;
       line-height: 26px;
       color: #000000;
+
+      @media screen and (max-width: 800px) {
+        span.db {
+          display: none;
+        }
+      }
     }
   }
 }
 
-.section__anty_fraud_ex {
+.section.section__anty_fraud_ex {
   .section__subtitle {
     max-width: none;
   }
@@ -2681,6 +2712,9 @@ select:visited {
 
   .trading__flex {
     margin-top: 125px;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
 
     .check_block--mam_platform-item--text {
       font-family: Roboto;
@@ -2704,5 +2738,237 @@ select:visited {
 
   .main-text {
     max-width: none;
+  }
+}
+.section__main_heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  /* or 122% */
+  text-align: center;
+
+  color: #383838;
+}
+
+.section__volatility {
+  .section__main_heading {
+    margin-bottom: 35px;
+  }
+
+  .section__subtitle {
+    margin-bottom: 100px;
+  }
+}
+
+.merchants {
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: -0.292236px;
+    text-transform: capitalize;
+
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height, or 139% */
+
+    color: #eff4f6;
+  }
+
+  &__block {
+    background: #2e3740;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 86px;
+    width: calc(33.333% - 20px / 3);
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__flex {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.section.section__catalog_merch {
+  background: #fff;
+}
+
+.merch_tools {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  &__container {
+    max-width: 1048px;
+  }
+
+  &__block {
+    box-sizing: border-box;
+    padding: 84px 77px;
+    background: #eff4f6;
+    border-radius: 5px;
+    margin: 0 30px;
+    width: 50%;
+    max-width: 494px;
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      max-width: none;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      margin-bottom: 56px;
+
+      @media screen and (max-width: 1000px) {
+        max-width: 200px;
+        margin: 0 auto 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 65px;
+    /* or 130% */
+    margin-bottom: 54px;
+    color: #383838;
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 161% */
+
+    letter-spacing: -0.5px;
+
+    color: #63636e;
+  }
+}
+.section.merch_tools__section {
+  .section__title {
+    margin-bottom: 80px;
+  }
+}
+
+.section__anywhere {
+  .section__subtitle {
+    margin-bottom: 100px;
+  }
+}
+
+.any_info {
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    @media screen and (max-width: 780px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 33.333%;
+
+    @media screen and (max-width: 780px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 34px;
+    }
+  }
+
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 119% */
+    text-align: center;
+    color: #383838;
+    margin-bottom: 34px;
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    text-align: center;
+    color: #383838;
+  }
+}
+
+.section__invoiced {
+  .flickity_castom_arrow {
+    .flickity-prev-next-button {
+      top: 50%;
+      margin-top: -22px;
+      bottom: auto;
+    }
+
+    .flickity-prev-next-button.previous {
+      left: 0;
+      margin-left: 0;
+    }
+
+    .flickity-prev-next-button.next {
+      right: 0;
+      margin-right: 0;
+    }
+  }
+
+  .item {
+    width: 100%;
   }
 }

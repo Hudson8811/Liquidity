@@ -32,6 +32,14 @@
     margin-top: 50px;
     border-top: 7px solid #eff4f6;
 
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+
+      .check_block--mam_platform-item {
+        margin-bottom: 20px;
+      }
+    }
+
     .check_block--mam_platform-item--text {
       font-family: Roboto;
       font-style: normal;
@@ -39,6 +47,12 @@
       font-size: 16px;
       line-height: 19px;
       color: #000000;
+
+      @media screen and (max-width: 580px) {
+        span.db {
+          display: none;
+        }
+      }
     }
   }
   .tabs_container {

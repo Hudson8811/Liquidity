@@ -60,7 +60,7 @@
     }
     .check_block__text {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 23px;
       /* identical to box height, or 128% */
       letter-spacing: 0px;
@@ -78,9 +78,23 @@
     padding-right: 0;
   }
   .best_with:nth-child(5) .best_with--right .check_block:nth-child(4) {
-    padding-right: 73px;
     .check_block__icon {
       margin-top: -14px;
+    }
+  }
+  .best_with--right {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-self: flex-end;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .check_block {
+    &:last-child {
+      margin-bottom: 0 !important;
     }
   }
 }
@@ -120,5 +134,11 @@
     .best_with--text {
       padding-right: 0;
     }
+  }
+}
+
+.section.section__b2_best__litle_ex {
+  .check_block__text {
+    font-size: 16px;
   }
 }
