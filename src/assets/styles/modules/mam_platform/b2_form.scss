@@ -35,8 +35,15 @@
     }
     .new_form__star,
     .new_form__input {
-      color: #9dafbd;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height */
+      color: rgba(255, 255, 255, 0.9);
     }
+
     .new_form__placeholder {
       font-family: Roboto;
       font-style: normal;
@@ -114,8 +121,7 @@
   margin-top: 65px;
   .consent_block {
     width: calc(50% - 9px);
-    margin-left: 0;
-    margin-top: -21px;
+    margin-left: auto;
     p,
     a {
       color: #6e8198;
@@ -194,7 +200,7 @@
         line-height: 12px;
         letter-spacing: -0.318182px;
         top: 8px;
-        color: rgba(255, 255, 255, 0.7);
+        color: #fff;
       }
     }
     &__50 {

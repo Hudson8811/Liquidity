@@ -195,8 +195,13 @@
 
 .forex_liquidity__new {
   .new_form__label {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
+
+  .new_form__sabmit {
+    margin-top: 25px;
+  }
+
   .b2_form.light_theme .new_form__label,
   .b2_form.light_theme .new_form__select {
     background: rgba(26, 26, 26, 0.1);
@@ -217,6 +222,16 @@
         color: #fff;
       }
     }
+  }
+  .b2_form.light_theme .new_form__label.active {
+    background: rgba(13, 13, 13, 0.4);
+    .new_form__label__lang_select_wrapper {
+      background: rgba(13, 13, 13, 0.4);
+    }
+  }
+
+  .b2_form.light_theme .new_form__label:hover {
+    background: rgba(13, 13, 13, 0.4);
   }
 
   .b2_form.light_theme .new_form__label__lang_select_wrapper {

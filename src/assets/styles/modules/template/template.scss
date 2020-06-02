@@ -1993,6 +1993,9 @@ select:visited {
     text-align: center;
     justify-content: center;
   }
+  .new_form__label {
+    margin-bottom: 12px;
+  }
 }
 
 @media screen and (max-width: 1180px) {
@@ -2398,7 +2401,7 @@ select:visited {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #7e7e7e;
+  color: #9e9e9e;
   border: 1px solid #d7d7d7;
   box-sizing: border-box;
   border-radius: 5px;
@@ -2409,6 +2412,7 @@ select:visited {
 
   &:hover {
     color: #606060;
+    border: 1px solid #b8b8b8;
   }
   img {
     width: 24px;
@@ -2971,4 +2975,8 @@ select:visited {
   .item {
     width: 100%;
   }
+}
+
+.gren_bg_btn {
+  background: #0ad7ab !important;
 }
