@@ -2264,18 +2264,6 @@ select:visited {
   }
 }
 
-.number_block.cash {
-  .number_block-content {
-    &:nth-child(1) {
-      text-align: left;
-    }
-
-    &:nth-child(3) {
-      text-align: center;
-    }
-  }
-}
-
 .number_block.energy {
   .number_block-content {
     &:nth-child(1) {
@@ -2979,4 +2967,8 @@ select:visited {
 
 .gren_bg_btn {
   background: #0ad7ab !important;
+}
+
+.b2_form.section.section__black {
+  border-top: 1px solid #575757;
 }

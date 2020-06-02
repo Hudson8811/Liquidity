@@ -1,8 +1,9 @@
-.section-3 {
+.section.section-3 {
   background-color: #fff;
 
   .section__title {
     padding-bottom: 28px;
+    text-align: left;
   }
 
   .main-text {
@@ -20,7 +21,7 @@
     }
 
     &-content {
-      text-align: center;
+      text-align: left;
       margin-right: 60px;
 
       @media screen and (max-width: 760px) {
