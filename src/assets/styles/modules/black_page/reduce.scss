@@ -110,6 +110,7 @@
   &__block {
     background: #2e3740;
     padding: 52px 90px;
+    padding-right: 10px;
     min-height: 229px;
     box-sizing: border-box;
     display: flex;
@@ -124,6 +125,12 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    span.db {
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
     }
   }
 

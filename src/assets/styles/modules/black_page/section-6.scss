@@ -26,6 +26,11 @@
         padding: 10px 35px;
         width: 190px;
         box-sizing: border-box;
+
+        &:nth-child(3) {
+          border-right: 0;
+        }
+
         &:first-child {
           width: 400px;
         }
@@ -38,6 +43,7 @@
 
       &:last-child {
         border: none;
+        border-left: 3px solid #fff;
       }
 
       span {
@@ -56,6 +62,13 @@
     tbody {
       tr {
         background: #fff;
+
+        td {
+          box-sizing: border-box;
+          &:nth-child(3) {
+            background: #f8fafa;
+          }
+        }
       }
       span {
         font-weight: 500;

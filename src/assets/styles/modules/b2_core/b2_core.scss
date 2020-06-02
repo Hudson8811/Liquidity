@@ -43,6 +43,7 @@
   .section__title {
     text-align: center;
     margin-bottom: 50px;
+
     @media screen and (max-width: 580px) {
       margin-bottom: 20px;
     }
@@ -57,6 +58,11 @@
     text-align: center;
     letter-spacing: 0px;
     color: #63636e;
+    @media screen and (max-width: 980px) {
+      span.db {
+        display: none;
+      }
+    }
   }
 }
 

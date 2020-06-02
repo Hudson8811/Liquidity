@@ -1,6 +1,4 @@
 .section-12 {
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-
   .section__title {
     margin: 0 auto;
     text-align: center;
@@ -66,6 +64,9 @@
 
     .speed_block {
       margin-bottom: 28px;
+      background: #eff4f6;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
 
       @media screen and (min-width: 1600px) {
         padding-right: 16px;
@@ -78,7 +79,8 @@
       border-radius: 4px;
       height: 11px;
       width: calc(100% - 16px);
-      margin: 0 auto;
+      margin: 0 8px;
+      max-width: 330px;
       margin-bottom: 6px;
     }
 
@@ -91,8 +93,26 @@
       margin: 0 8px;
       margin-bottom: 20px;
     }
-  }
 
+    &--green_gr,
+    &--gray_gr {
+      transform-origin: left center;
+      animation: 6s ease-in infinite grove;
+    }
+  }
+  @keyframes grove {
+    0% {
+      width: 0;
+    }
+
+    80% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0;
+    }
+  }
   .connectivity_block {
     &--heading {
       max-width: 918px;
@@ -126,7 +146,7 @@
 
     .box_block {
       box-sizing: border-box;
-      padding: 32px 67px 32px 45px;
+      padding: 32px 46px 32px 45px;
       width: calc(33.333% - 10px);
       margin: 0 5px;
       margin-bottom: 10px;
@@ -149,6 +169,7 @@
         line-height: 19px;
         /* or 136% */
         color: #637786;
+        letter-spacing: 0;
       }
     }
   }

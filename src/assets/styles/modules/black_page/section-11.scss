@@ -6,6 +6,7 @@
 
   .box_block {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
     &--title {
       font-family: Roboto;
       font-style: normal;
@@ -15,12 +16,16 @@
       /* or 130% */
       color: #383838;
     }
+
     padding: 84px 80px;
     box-sizing: border-box;
     width: 494px;
     margin: 0 29px;
+    padding-right: 53px;
+
     &--text {
       margin-top: 37px;
+      letter-spacing: 0;
     }
   }
 }
