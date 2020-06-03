@@ -1934,14 +1934,14 @@ select:visited {
     display: block;
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
     /* or 162% */
 
     letter-spacing: -0.5px;
 
-    color: #c4c4c4;
+    color: #fff;
     padding-right: 20px;
   }
   .container {
@@ -2040,7 +2040,7 @@ select:visited {
   }
 
   &__black {
-    background: #1e252d !important;
+    background: #191f24 !important;
   }
 
   &__blue {
@@ -2106,7 +2106,6 @@ select:visited {
   }
   .svg_container {
     background: rgba(196, 196, 196, 0.05);
-    border: 1px solid #000000;
     box-sizing: border-box;
     width: 286px;
     height: 286px;
@@ -2821,7 +2820,7 @@ select:visited {
   }
 
   &__container {
-    max-width: 1048px;
+    max-width: 1108px;
   }
 
   &__block {
@@ -2843,7 +2842,17 @@ select:visited {
     img {
       display: block;
       width: 100%;
+      margin: 0 auto;
       margin-bottom: 56px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        max-width: 297px;
+      }
+
+      &:nth-child(3) {
+        max-width: 315px;
+      }
 
       @media screen and (max-width: 1000px) {
         max-width: 200px;
@@ -2863,7 +2872,7 @@ select:visited {
     font-size: 50px;
     line-height: 65px;
     /* or 130% */
-    margin-bottom: 54px;
+    margin-bottom: 38px;
     color: #383838;
   }
 
@@ -2969,6 +2978,28 @@ select:visited {
   background: #0ad7ab !important;
 }
 
-.b2_form.section.section__black {
+.section.section__black {
   border-top: 1px solid #575757;
+}
+
+.benefits_section__enterprise {
+  .gray_block__container .gray__block {
+    &:nth-child(5) {
+      padding-right: 50px;
+    }
+  }
+}
+
+.section__sacurity_merch {
+  .new_box-catalog__wrapper {
+    max-width: 1070px;
+  }
+  .new_box-catalog {
+    .box_block--text {
+      letter-spacing: 0;
+    }
+    .box_block {
+      padding: 32px 35px 32px 45px;
+    }
+  }
 }

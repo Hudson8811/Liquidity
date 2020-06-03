@@ -1,4 +1,8 @@
 .section__how_ex {
+  .item {
+    overflow: hidden;
+  }
+
   .section__subtitle {
     margin-bottom: 80px;
   }
@@ -15,6 +19,39 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 126px;
+      height: 126px;
+      display: block;
+      position: absolute;
+      background: #fff;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 126px;
+      height: 126px;
+      display: block;
+      position: absolute;
+      background: #fff;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
+    }
   }
   .mam_tabs-btn {
     width: 226px;
@@ -22,11 +59,10 @@
     justify-content: center;
     align-items: center;
     min-height: 83px;
-    margin-top: 50px;
-    margin-bottom: 33px;
+    margin: 50px 8px 33px 8px;
 
-    &:nth-child(1) {
-      margin-right: 17px;
+    &:not(.active) {
+      background: #eff4f6;
     }
 
     @media screen and (max-width: 580px) {
@@ -69,6 +105,7 @@
   }
 
   .gif__naw {
+    position: relative;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -102,6 +139,7 @@
 
   .flickity-prev-next-button {
     bottom: 19px;
+    z-index: 2;
   }
 }
 

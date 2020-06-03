@@ -1,6 +1,11 @@
 .footer-menu-section-2 {
   .footer-menu-section-flex__item .menu li a {
     letter-spacing: 0;
+
+    &:hover {
+      color: #fff;
+      font-weight: 700;
+    }
   }
   .footer-menu-section-flex__title span {
     letter-spacing: 0;

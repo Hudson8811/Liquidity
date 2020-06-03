@@ -36,15 +36,6 @@
         border-right: 0;
       }
 
-      &.green {
-        background: rgba(1, 189, 149, 0.05);
-        color: #01bd95;
-      }
-
-      &.red {
-        color: #ee0064;
-      }
-
       &:nth-child(1) {
         justify-content: flex-start;
         width: 400px;
@@ -82,6 +73,15 @@
         line-height: 36px;
         /* identical to box height, or 225% */
         text-align: center;
+        color: #ee0064;
+      }
+
+      &.green {
+        background: rgba(1, 189, 149, 0.05);
+        color: #01bd95;
+      }
+
+      &.red {
         color: #ee0064;
       }
     }

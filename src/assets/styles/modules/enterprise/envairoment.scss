@@ -1,4 +1,15 @@
 .section__envairoment {
+  .banner {
+    height: 500px;
+    width: auto;
+    margin: 0 auto;
+
+    @media screen and (max-width: 980px) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
   .section__subtitle {
     margin-bottom: 80px;
   }

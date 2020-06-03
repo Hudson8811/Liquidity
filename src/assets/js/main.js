@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $(".big_menu_content--js").fadeOut();
   $(document).on("click", ".genuine__row", function () {
     var row = $(this).data("row_number");
     $(this).toggleClass("active");
@@ -663,14 +664,14 @@ $(document).ready(function () {
         $(this).addClass("active");
         $('.big_menu_content--js[data-id="' + id + '"]');
         $(".big_menu_content--js")
-          .fadeOut(300)
+          .fadeOut(400)
           .promise()
           .done(function () {
             $('.big_menu_content--js[data-id="' + id + '"]')
               .addClass("active")
               .promise()
               .done(function () {
-                $(this).fadeIn(300);
+                $(this).fadeIn(400);
                 $(".big_menu_btn--js").removeClass("disabled");
               });
           });
@@ -686,14 +687,14 @@ $(document).ready(function () {
           $(this).addClass("active");
           $(".burger--js").addClass("active");
           $(".big_menu_content--js")
-            .fadeOut(300)
+            .fadeOut(400)
             .promise()
             .done(function () {
               $('.big_menu_content--js[data-id="' + id + '"]')
                 .addClass("active")
                 .promise()
                 .done(function () {
-                  $(this).fadeIn(300);
+                  $(this).fadeIn(400);
                 });
             });
         }
@@ -795,7 +796,7 @@ $(document).ready(function () {
 
   $(".trading__slider .item").on("click", function () {
     let index = $(this).index();
-    $(".trading__sliderzzzzzzzzzz").flickity("select", index);
+    $(".trading__slider").flickity("select", index);
   });
 });
 
@@ -809,7 +810,7 @@ $(document).on("click", ".burger--js", function () {
   $("body").removeClass("hidden");
   $(".big_menu_btn--js").removeClass("active");
   $(".big_menu_content--js")
-    .fadeOut(300)
+    .fadeOut(400)
     .promise()
     .done(function () {
       $(this).removeClass("active");
@@ -819,7 +820,7 @@ $(document).on("click", ".burger--js", function () {
 $(document).on("mouseleave", ".big_header", function (event) {
   event.preventDefault();
   $(".big_menu_content--js")
-    .fadeOut(300)
+    .fadeOut(400)
     .promise()
     .done(function () {
       $(this).removeClass("active");

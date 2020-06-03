@@ -17,4 +17,37 @@
       margin-bottom: 0;
     }
   }
+
+  .invoiced_scroll {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__wrapper {
+      width: 100%;
+      height: 567px;
+      position: absolute;
+      overflow-y: auto;
+      max-width: 740px;
+      margin-top: 63px;
+
+      @media screen and (max-width: 1060px) {
+        height: 53.5vw;
+        max-width: 70.5vw;
+        margin-top: 6vw;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      max-width: 554px;
+      margin: 0 auto;
+
+      @media screen and (max-width: 1060px) {
+        max-width: 52.3vw;
+      }
+    }
+  }
 }

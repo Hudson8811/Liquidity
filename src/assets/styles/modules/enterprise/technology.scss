@@ -30,4 +30,12 @@
     letter-spacing: 0;
     color: #63636e;
   }
+
+  .check_block--mam_platform-item {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

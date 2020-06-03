@@ -1,12 +1,19 @@
-.section.section__flow_crypto
+.section.section__flow_crypto.section__flow_merch
     .container
         .section__title Crypto Payments #[span(class="section__title--bold") Flow]
-        .section__subtitle We handle the whole crypto payments flow from checkout to settlement,#[span(class="db")] enabling businesses to benefit from this payment method without the need#[span(class="db")] for any technical expertise.
+        .section__subtitle We handle the whole crypto payments flow from checkout to settlement,#[span(class="db")] enabling businesses to benefit from this payment method.
     
     .flow__slider--js.flickity_castom_arrow
         .item
             .flow__left
-                img(src="images/flow_item1.png", alt="images")
+                .flow_text #[span(class="text__bold") Total:] 0.700 BTC
+                img.flow_hesh(src="images/hesh.png", alt="hesh")
+                .flow_text.flow_text__bold Copy address:
+                .flow_flex
+                    .flow_text.bg 5bec2f1edb91
+                    a(href="#")
+                        img.flow_copy(src="images/copy.png", alt="icon")
+
             .flow__right
                 .flow__icon
                     .flow__icon--number 1
@@ -15,27 +22,51 @@
         
         .item
             .flow__left
-                img(src="images/flow_merg1.png", alt="images")
+                .flow_title 0.700 BTC
+                .flow_content
+                    .flow_content_item
+                        .flow_content_line(style="width:79px")
+                        .flow_text 0.983 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:52px")
+                        .flow_text 0.013785 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:98px")
+                        .flow_text 0.000352 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:98px")
+                        .flow_text.green 0.7000 BTC
+                .flow_flex
+                    .flow_text.large_bold Success operation
+                    a(href="#")
+                        img.flow_copy(src="images/img_check.png", alt="icon")
             .flow__right
                 .flow__icon
                     .flow__icon--number 2
                 .flow__title Payment
                 .flow__subtitle Your customer pays the invoice 
-            
+                
         .item
             .flow__left
-                img(src="images/flow_merg2.png", alt="images")
+                .flow_text.bg 0.700 BTC
+                img.flow_slider_img4(src="images/flow_slider_img4.png", alt="icon")
+                .flow_text.bg 5600 USD
             .flow__right
                 .flow__icon
                     .flow__icon--number 3
                 .flow__title Conversion
                 .flow__subtitle B2BinPay converts the customer’s payment into your chosen currency after blockchain confirmation
-        
+
         .item
             .flow__left
-                img(src="images/flow_merg3.png", alt="images")
+                .flow_title + $ 5600
+                .flow_text #[span(class="text__bold") Total:] 5600 USD
+                img.flow_slider_item3(src="images/flow_slider_item3.png", alt="icon")
             .flow__right
                 .flow__icon
-                    .flow__icon--number 3
+                    .flow__icon--number 4
                 .flow__title Crypto / FIAT
-                .flow__subtitle Balance deducted and ready to be withdrawn.#[span(class="db")] B2BinPay initiates a bank settlement to you the next business day
+                .flow__subtitle Balance deducted and ready to be withdrawn. B2BinPay initiates a bank settlement to you the next business day

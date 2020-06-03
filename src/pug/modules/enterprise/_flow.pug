@@ -6,7 +6,14 @@
     .flow__slider--js.flickity_castom_arrow
         .item
             .flow__left
-                img(src="images/flow_item1.png", alt="images")
+                .flow_text #[span(class="text__bold") Total:] 0.700 BTC
+                img.flow_hesh(src="images/hesh.png", alt="hesh")
+                .flow_text.flow_text__bold Copy address:
+                .flow_flex
+                    .flow_text.bg 5bec2f1edb91
+                    a(href="#")
+                        img.flow_copy(src="images/copy.png", alt="icon")
+
             .flow__right
                 .flow__icon
                     .flow__icon--number 1
@@ -15,16 +22,38 @@
         
         .item
             .flow__left
-                img(src="images/flow_item2.png", alt="images")
+                .flow_title 0.7000 BTC
+                .flow_content
+                    .flow_content_item
+                        .flow_content_line(style="width:79px")
+                        .flow_text 0.983 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:52px")
+                        .flow_text 0.013785 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:98px")
+                        .flow_text 0.000352 BTC
+                        
+                    .flow_content_item
+                        .flow_content_line(style="width:98px")
+                        .flow_text.green 0.7000 BTC
+                .flow_flex
+                    .flow_text.large_bold Success operation
+                    a(href="#")
+                        img.flow_copy(src="images/img_check.png", alt="icon")
             .flow__right
                 .flow__icon
                     .flow__icon--number 2
                 .flow__title Payment
                 .flow__subtitle Your customer pays the invoice 
+                
             
         .item
             .flow__left
-                img(src="images/flow_item3.png", alt="images")
+                .flow_title 0.6965 BTC
+                img.flow_slider_item3(src="images/flow_slider_item3.png", alt="icon")
             .flow__right
                 .flow__icon
                     .flow__icon--number 3
