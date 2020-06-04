@@ -9,9 +9,18 @@
           .speed_block--main
             img(src="images/speed.svg", alt="speed")
             span.big 49#[span(class="little") ms]
-        .speed_form--green_gr
-        .speed_form--gray_gr
-        .speed_form--left-text up to 2 times faster than other LPs
+        .speed__flex
+          .speed__flex__left
+            .speed_form--left-text Time for IT infrastructure setup 
+            .speed_form--gray_gr
+            .speed_form--left__subtext Other LP
+            .speed_form--green_gr
+            .speed_form--left__subtext B2Broker LP
+          
+          .speed__flex__right
+            .speed__exstra_text 2x
+            .speed_form--left__subtext Faster than other LPs
+
       .speed_form--right
         .speed_form--heading Presence in major financial centers for low latency execution
         .speed_form--description Physical proximity to all central trade servers of major exchanges, liquidity providers, banks and other financial institutions, allows us to minimize trade requests.

@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
 
     .new_green_bord_btn {
       width: 168px;
@@ -32,9 +32,9 @@
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      color: #b8b8b8;
+      font-size: 18px;
+      line-height: 21px;
+      color: #cdcdcd;
       background: transparent;
 
       &:hover {
@@ -48,9 +48,12 @@
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
       color: #ffffff;
+      border-radius: 9px;
+
+      &:hover {
+        border-radius: 9px;
+      }
     }
 
     @media screen and (max-width: 580px) {
@@ -119,13 +122,15 @@
 
   &__content {
     box-sizing: border-box;
-    background: #2e3740;
+
     width: 977px;
-    padding-top: 27px;
+
     border-radius: 0px 8px 8px 8px;
     margin-bottom: -2px;
     overflow-y: hidden;
     display: none;
+    background: linear-gradient(180deg, #2a333d 15.1%, #222a33 100%), #2a333d;
+    min-height: 659px;
 
     &.active {
       display: block;
@@ -137,6 +142,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 36px;
+    background: #2e3740;
+    padding-top: 27px;
+
     &__btn {
       padding: 0 15px;
       height: 37px;
@@ -169,6 +177,11 @@
     border-bottom: 2px solid #3b434b;
     padding: 15px 15px 15px 36px;
     transition: background 0.5s;
+    background: #2e3740;
+
+    @media screen and (max-width: 599px) {
+      width: max-content;
+    }
 
     &__heading_row {
       padding: 25px 15px 25px 36px;

@@ -1075,13 +1075,7 @@ $(document).on("click", ".produst_tabs_btn--js", function (e) {
     var id = $(this).data("id");
     $(".produst_tabs_btn--js").removeClass("active");
     $(this).addClass("active");
-    $(".produst_tabs_content--js")
-      .fadeOut(300)
-      .promise()
-      .done(function () {
-        $(this)
-          .siblings('.produst_tabs_content--js[data-id="' + id + '"]')
-          .fadeIn(300);
-      });
+    $(".produst_tabs_content--js").removeClass("active");
+    $('.produst_tabs_content--js[data-id="' + id + '"]').addClass("active");
   }
 });
