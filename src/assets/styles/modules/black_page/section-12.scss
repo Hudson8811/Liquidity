@@ -29,6 +29,7 @@
       width: 401px;
       flex-shrink: 0;
       margin-right: 60px;
+      position: relative;
 
       &-text {
         font-family: Roboto;
@@ -109,6 +110,10 @@
     &--green_gr,
     &--gray_gr {
       transform-origin: left center;
+    }
+
+    &--green_gr.active,
+    &--gray_gr.active {
       animation: 4s ease-in grove;
     }
 

@@ -203,6 +203,54 @@ $(document).ready(function () {
     //   }, wub4_t2);
     // }, wub4_t);
   }
+  function checkPositionSpeed() {
+    // координаты дива
+    var div_position2 = $(".speed_form--left").offset();
+    // отступ сверху
+    var div_top2 = div_position2.top;
+    // отступ слева
+    var div_left2 = div_position2.left;
+    // ширина
+    var div_width2 = $(".speed_form--left").width();
+    // высота
+    var div_height2 = $(".speed_form--left").height();
+
+    // проскроллено сверху
+    var top_scroll2 = $(document).scrollTop();
+    // проскроллено слева
+    var left_scroll2 = $(document).scrollLeft();
+    // ширина видимой страницы
+    var screen_width2 = $(window).width();
+    // высота видимой страницы
+    var screen_height2 = $(window).height();
+
+    // координаты углов видимой области
+    var see2_x1 = left_scroll2;
+    var see2_x2 = screen_width2 + left_scroll2;
+    var see2_y1 = top_scroll2;
+    var see2_y2 = screen_height2 + top_scroll2;
+
+    // координаты углов искомого элемента
+    var div2_x1 = div_left2;
+    var div2_x2 = div_left2 + div_height2;
+    var div2_y1 = div_top2;
+    var div2_y2 = div_top2 + div_width2;
+
+    // проверка - виден див полностью или нет
+    if (
+      div2_x1 >= see2_x1 &&
+      div2_x2 <= see2_x2 &&
+      div2_y1 >= see2_y1 &&
+      div2_y2 <= see2_y2
+    ) {
+      // если виден
+      $(".speed_form--gray_gr").addClass("active");
+      $(".speed_form--green_gr").addClass("active");
+
+      $(document).off("scroll");
+    } else {
+    }
+  }
 
   function checkPosition() {
     // координаты дива
@@ -263,18 +311,25 @@ $(document).ready(function () {
     }
   }
 
+  function check() {
+    if ($("body").hasClass("b2_core")) {
+      checkPosition();
+    } else {
+      checkPositionSpeed();
+    }
+  }
+
   $(document).ready(function () {
     $(document).scroll(function () {
       // при скролле страницы делаем проверку
-      checkPosition();
+      check();
     });
 
     // после загрузки страницы сразу проверяем
-    checkPosition();
-
+    check();
     // проверка при масштабировании и изменении размера страницы
     $(window).resize(function () {
-      checkPosition();
+      check();
     });
   });
 
