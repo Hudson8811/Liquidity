@@ -13,6 +13,13 @@
     &.active {
       display: block;
     }
+
+    &:nth-child(4) {
+      img {
+        position: relative;
+        z-index: 10;
+      }
+    }
   }
   .tabs_container {
     display: flex;

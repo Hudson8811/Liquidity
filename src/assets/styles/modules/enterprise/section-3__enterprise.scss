@@ -6,6 +6,24 @@
   .container {
     max-width: 1050px;
   }
+
+  .number_block {
+    justify-content: space-between;
+    padding-right: 14%;
+
+    @media screen and (max-width: 760px) {
+      padding-right: 0;
+    }
+  }
+
+  .number_block-content {
+    &:nth-child(3),
+    &:nth-child(2) {
+      .number_block--text {
+        padding-right: 37px;
+      }
+    }
+  }
 }
 
 .section__enguine__enterprise {

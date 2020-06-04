@@ -7,6 +7,12 @@
     &--title,
     &--subtitle {
       text-align: left;
+
+      @media screen and (max-width: 990px) {
+        span.db {
+          display: none;
+        }
+      }
     }
 
     &--subtitle {

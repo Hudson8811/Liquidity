@@ -1,4 +1,8 @@
 .section__envairoment {
+  .main_tabs_slider.main_tabs_slider_b2_core--js {
+    pointer-events: none;
+  }
+
   .banner {
     height: 500px;
     width: auto;
@@ -86,7 +90,7 @@
     min-height: 107px;
     width: 100%;
     margin: 0 5px 38px 0;
-
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,6 +135,17 @@
           color: #01bd95;
         }
       }
+    }
+  }
+}
+
+.section.section__envairoment .main_tabs_slider .item {
+  display: block;
+  img {
+    width: auto;
+
+    @media screen and (max-width: 982px) {
+      width: 100%;
     }
   }
 }

@@ -8,9 +8,9 @@
         .tabs__title StableCoins and Tokens
         .tabs__subtitle Our aim is to simplify crypto payments to everyone, everywhere.
         .tabs_container
-            .mam_tabs-btn.active(data-id="1") Picture
-            .mam_tabs-btn(data-id="2") Gif
-            .mam_tabs-content.active(data-id="1")
+            .mam_tabs-btn.mam_tabs-btn--flick_active(data-id="1") Picture
+            .mam_tabs-btn.active(data-id="2") Gif
+            .mam_tabs-content(data-id="1")
                 .gif__slider--js.flickity_castom_arrow
                     .item
                         img.banner(src="images/ex/item1.png", alt="banner")
@@ -75,5 +75,5 @@
                     .item
                         img.banner(src="images/ex/item21.png", alt="banner")
                         .gif__naw 5. Any ERC-20 Tokens ready to be used for Withdrawals
-            .mam_tabs-content(data-id="2")
+            .mam_tabs-content.active(data-id="2")
                 img.banner(src="images/ex/how_gif.gif", alt="gif")

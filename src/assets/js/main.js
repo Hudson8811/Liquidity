@@ -374,12 +374,7 @@ $(document).ready(function () {
   $(".hear_flickity--js").flickity({
     pageDots: false,
     prevNextButtons: false,
-    adaptiveHeight: true,
-  });
-
-  $(".gif__slider--js").flickity({
-    pageDots: false,
-    contain: true,
+    adaptiveHeight: false,
   });
 
   $(".aml_slider--js").flickity({
@@ -448,6 +443,14 @@ $(document).ready(function () {
     adaptiveHeight: true,
     pageDots: false,
     percentPosition: false,
+  });
+
+  $(".section__envairoment .mam_tabs-btn").on("click", function () {
+    let index = $(this).index();
+    $(".section__envairoment .main_tabs_slider_b2_core--js ").flickity(
+      "select",
+      index
+    );
   });
 
   $(".business--slick_slider .item").on("click", function () {
@@ -632,6 +635,19 @@ $(document).ready(function () {
     arrows: false,
   });
 
+  $(".invoiced_scroll__wrapper").slick({
+    infinite: true,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    pauseOnHover: false,
+  });
+
   $("#machine-slider").slick({
     infinite: true,
     vertical: true,
@@ -690,6 +706,10 @@ $(document).ready(function () {
           $(this)
             .siblings('.mam_tabs-content[data-id="' + id + '"]')
             .fadeIn(300);
+          $(".gif__slider--js").flickity({
+            pageDots: false,
+            contain: true,
+          });
         });
     }
   });

@@ -3,10 +3,14 @@
     width: 100%;
 
     img {
-      height: 100%;
+      height: 530px;
       object-fit: cover;
       object-position: center;
       max-height: 530px;
+
+      @media screen and (max-width: 640px) {
+        height: 50vw;
+      }
     }
   }
 }
