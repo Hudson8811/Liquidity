@@ -169,7 +169,7 @@ body.hidden {
             width: 117px;
             height: 31px;
             margin-right: 6px;
-            font-weight: bold;
+            font-weight: 400;
             font-size: 13px;
             line-height: 15px;
             /* identical to box height */
@@ -198,7 +198,6 @@ body.hidden {
             flex-shrink: 0;
             width: 96px;
             height: 31px;
-            font-weight: bold;
             margin-right: 17px;
             border: 1px solid #555555;
             box-sizing: border-box;
@@ -206,7 +205,7 @@ body.hidden {
             border-radius: 5px;
             font-family: Roboto;
             font-style: normal;
-            font-weight: bold;
+            font-weight: 400;
             font-size: 13px;
             line-height: 15px;
             color: #b8b8b8;
@@ -217,9 +216,6 @@ body.hidden {
               box-sizing: border-box;
               box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
               border-radius: 5px;
-              font-family: Roboto;
-              font-style: normal;
-              font-weight: bold;
               font-size: 13px;
               line-height: 15px;
               color: #e3e3e3;
