@@ -118,6 +118,12 @@
     transition: all 0.5s;
     z-index: 1;
 
+    height: 294px;
+
+    @media screen and (max-width: 980px) {
+      height: auto;
+    }
+
     &.disabled {
       pointer-events: none;
       opacity: 0.5;
@@ -172,6 +178,13 @@
     line-height: 19px;
     /* or 136% */
     color: rgba(255, 255, 255, 0.7);
+    max-height: 136px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and(max-width:980px) {
+      height: auto;
+    }
   }
 
   &__article {

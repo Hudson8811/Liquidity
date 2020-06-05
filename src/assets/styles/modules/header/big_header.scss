@@ -108,6 +108,16 @@ body.hidden {
         width: 100%;
         visibility: hidden;
 
+        &:nth-child(4) {
+          .big_header__bottom_row__right_row {
+            justify-content: flex-start;
+
+            .row:nth-child(1) {
+              margin-right: 18%;
+            }
+          }
+        }
+
         &.active {
           display: flex;
           visibility: visible;
@@ -190,7 +200,7 @@ body.hidden {
             height: 31px;
             font-weight: bold;
             margin-right: 17px;
-            border: 1px solid #01bd95;
+            border: 1px solid #555555;
             box-sizing: border-box;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
@@ -203,7 +213,7 @@ body.hidden {
             transition: 0.2s;
 
             &:hover {
-              border: 1px solid #00c89d;
+              border: 1px solid #666666;
               box-sizing: border-box;
               box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
               border-radius: 5px;
