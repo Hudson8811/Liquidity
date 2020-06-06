@@ -1946,7 +1946,7 @@ select:visited {
     line-height: 25px;
     /* or 162% */
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0;
 
     color: #fff;
     padding-right: 20px;
@@ -2392,9 +2392,9 @@ select:visited {
   align-items: center;
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
   color: #9e9e9e;
   border: 1px solid #d7d7d7;
   box-sizing: border-box;
@@ -3032,5 +3032,24 @@ select:visited {
     .box_block {
       padding: 32px 35px 32px 45px;
     }
+  }
+}
+
+.forex_liquidity__new__cash.forex_liquidity__new__forex {
+  .forex_liquidity__content .section__subtitle {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+}
+
+.forex_liquidity__new__cfd.forex_liquidity__new__forex {
+  .forex_liquidity__content .section__subtitle {
+    margin-bottom: 159px;
+  }
+}
+
+.forex_liquidity__new__etf.forex_liquidity__new__forex {
+  .forex_liquidity__content .section__subtitle {
+    margin-bottom: 130px;
   }
 }

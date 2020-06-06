@@ -635,17 +635,34 @@ $(document).ready(function () {
     arrows: false,
   });
 
-  $(".invoiced_scroll__wrapper").slick({
-    infinite: true,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    pauseOnHover: false,
+  $(".invoiced__slider--js").on("change.flickity", function (event, index) {
+    if (index == 2) {
+      $(".invoiced_scroll__wrapper").slick({
+        infinite: false,
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        pauseOnHover: false,
+        verticalSwiping: true,
+      });
+    }
+  });
+
+  $(".invoiced_scroll__wrapper").on("afterChange", function (
+    event,
+    slick,
+    currentSlide
+  ) {
+    if (currentSlide === 1) {
+      $(".invoiced_scroll__wrapper .item:nth-child(1)").addClass(
+        "slick-current slick-active"
+      );
+    }
   });
 
   $("#machine-slider").slick({

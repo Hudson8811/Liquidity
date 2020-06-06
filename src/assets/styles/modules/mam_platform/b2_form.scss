@@ -50,7 +50,7 @@
       font-weight: 300;
       font-size: 14px;
       line-height: 16px;
-      letter-spacing: -0.318182px;
+      letter-spacing: 0;
       color: rgba(110, 129, 152, 0.9);
     }
     .new_form__select {
@@ -258,7 +258,7 @@
         background: #6c6c6c;
         border-right: 1px solid #d1dbe3;
         box-sizing: border-box;
-        border-radius: 5px;
+        border-radius: 0px 5px 5px 0px;
         width: 144px;
         object-fit: contain;
 
