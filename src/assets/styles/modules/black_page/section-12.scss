@@ -129,8 +129,9 @@
 
       &__right {
         width: 100%;
-        max-width: 73px;
+        max-width: 75px;
         align-self: flex-end;
+        flex-shrink: 0;
 
         .speed_form--left__subtext {
           margin: 0;
