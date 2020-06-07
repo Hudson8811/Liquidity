@@ -36,10 +36,24 @@
   position: relative;
   margin: 100px auto 0;
   max-width: 1600px;
-  padding: 134px 0 147px;
+  padding: 106px 0 117px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 980px) {
+    span.db {
+      display: none;
+    }
+  }
+
+  .blockshow__btn_wrapper {
+    margin-top: 35px;
+  }
+
+  .alert {
+    padding-right: 27px;
+  }
 
   &:before {
     content: "";
@@ -53,33 +67,42 @@
     z-index: 0;
   }
 
-  .new_green_btn {
-    width: 183px;
-    height: 42px;
-    margin: 40px auto 0;
-  }
-  &__inner {
-    width: 100%;
-    max-width: 544px;
-    margin: 0 auto;
+  &__title {
     position: relative;
     z-index: 1;
-  }
-
-  &__title {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 52px;
+    font-size: 60px;
     line-height: 120%;
-    /* or 62px */
-    text-align: center;
+    /* or 72px */
+
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-bottom: 22px;
+    margin-top: 39px;
 
     @media screen and (max-width: 580px) {
-      font-size: 40px;
-      line-height: 45px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 1;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 31px;
+    /* or 148% */
+
+    color: #ffffff;
+    margin-bottom: 61px;
+
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 
@@ -87,7 +110,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 36px;
+    margin-right: 84px;
+
+    @media screen and (max-width: 700px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .future_btn_block {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__date {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 137% */
+    color: #ffffff;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__icon {
@@ -106,21 +161,21 @@
   &__name {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 16px;
     line-height: 22px;
     /* or 137% */
     color: #ffffff;
   }
 
-  &__description {
+  &__discription {
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 25px;
-    /* or 139% */
-    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+
     color: #ffffff;
   }
 
@@ -159,16 +214,9 @@
 }
 
 .timer {
-  height: 38px;
-  width: 132px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.48);
-  border: 1px solid #00c49a;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;

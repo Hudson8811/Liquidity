@@ -1161,7 +1161,7 @@ var machine = new Typed("#machine", {
   contentType: "html",
 });
 
-$(document).on("click", ".produst_tabs_btn--js", function (e) {
+$(".produst_tabs_btn--js").hover(function (e) {
   e.preventDefault();
   if (!$(this).hasClass("active")) {
     var id = $(this).data("id");

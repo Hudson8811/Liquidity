@@ -62,7 +62,7 @@
     }
 
     .also__btn {
-      opacity: 1;
+      transform: translateX(0);
     }
 
     .also__content {
@@ -107,7 +107,7 @@
     top: 20px;
     cursor: pointer;
     transition: all 0.5s;
-    opacity: 0;
+    transform: translateX(-100%);
 
     &:hover {
       font-weight: 500;
@@ -201,14 +201,14 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 23px;
     /* identical to box height */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: #ffffff;
-    transition: opacity 0.3s;
+    transition: opacity 0.1s;
 
     &:before {
       content: "";
