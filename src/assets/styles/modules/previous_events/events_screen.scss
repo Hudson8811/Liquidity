@@ -22,3 +22,139 @@
     color: #fff;
   }
 }
+
+.filter {
+  padding: 20px 0;
+  background: #1e2226;
+
+  .container {
+    max-width: none;
+    width: 100%;
+    background: #1e252d;
+    border-top: 1px solid #393b3e;
+    border-bottom: 1px solid #393b3e;
+  }
+
+  &__item {
+    width: 196px;
+  }
+
+  .list {
+    background: #2a3139;
+    border: 1.5px solid #37414a;
+    box-sizing: border-box;
+    border-radius: 0;
+    max-height: 161px;
+    margin-top: 0;
+    box-shadow: none;
+    left: -2px;
+    overflow: auto;
+    width: 198px;
+
+    .option {
+      padding-left: 24px;
+      box-sizing: border-box;
+      width: 98%;
+      margin: 0 auto;
+    }
+
+    .option.focus,
+    .option.selected.focus,
+    .option:hover {
+      background: #2a3139;
+    }
+
+    .mCSB_scrollTools {
+      opacity: 1;
+      filter: none;
+    }
+
+    .mCSB_draggerRail,
+    .mCSB_dragger_bar {
+      width: 5px;
+      border-radius: 10px;
+    }
+
+    .mCSB_draggerRail {
+      background: #1e252d;
+    }
+
+    .mCSB_dragger_bar {
+      background: #37414a;
+    }
+
+    .mCSB_scrollTools {
+      height: 126px;
+      top: 16px;
+    }
+
+    .mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+    .mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools,
+    .mCustomScrollBox:hover > .mCSB_scrollTools,
+    .mCustomScrollBox:hover ~ .mCSB_scrollTools,
+    .mCustomScrollbar
+      > .mCustomScrollBox
+      > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+    .mCustomScrollbar
+      > .mCustomScrollBox
+      ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag {
+      opacity: 1;
+      filter: none;
+    }
+
+    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+    .mCSB_scrollTools .mCSB_dragger.nice-select.open .mCSB_dragger_bar,
+    .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+    .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+      opacity: 1;
+      background: #37414a;
+    }
+  }
+
+  &__item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    /* identical to box height, or 203% */
+    color: rgba(255, 255, 255, 0.81);
+    background: #1e252d;
+    border-radius: 0;
+    border: 1.5px solid #37414a;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 9px 24px;
+    box-sizing: border-box;
+
+    &:nth-child(2) {
+      border-left: 1.5px solid #37414a;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #37414a;
+    }
+
+    &:after {
+      border-color: #fff;
+      border-width: 1px;
+      right: 24px;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 98%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}

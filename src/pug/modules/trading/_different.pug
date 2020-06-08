@@ -25,4 +25,23 @@
     .container
         .different__title How it works
 
-        img.banner(src="images/different.png", alt="banner")
+        .schem1
+            img.banner(src="images/different.png", alt="banner")
+        
+        .schem1_bot
+            .schem1_bot__wrap
+                .schem1_bot__item
+                    .lo_block.gray Bid (buy) LO
+                    .lo_block.white Ask (sell) LO
+
+                .schem1_bot__item
+                    .schem1_icon 1
+                    .schem1_text
+                        .schem1_title Market order flow 
+                        .schem1_subtitle A  market order to sell two lots arrives, and matches with the first two limit orders in the queue at the best price.
+
+                .schem1_bot__item
+                    .schem1_icon 2
+                    .schem1_text
+                        .schem1_title Limit order flow 
+                        .schem1_subtitle A limit order to sell one lot at 29.97 arrives, and is added to the back of the queue.

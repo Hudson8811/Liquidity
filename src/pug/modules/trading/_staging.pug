@@ -2,4 +2,52 @@
     .container.goanim.an
         .section__title #[span(class="section__title--bold") Staging]  Environment 
         .section__subtitle B2Trader updates are first deployed to the staging environment for client testing and proceed to#[span(class="db")] production deployment only after approval. This is done to minimize the risk of bugs on production#[span(class="db")] and is a scheme that will make your product the most stable on the market.
-        img.banner(src="images/staging.png", alt="banner")
+        .stag
+            .stag__heading
+                .stag__heading_item
+                    span Development 
+                .stag__heading_item
+                    span Staging 
+                .stag__heading_item
+                    span Production 
+            
+            .stag__content
+                .stag__content_item
+                    .stag__left
+                        .stag__title Configuration
+                        <svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+                        </svg>
+                        .stag__subtitle changes
+                    img(src="images/stag.png", alt="img")
+                
+                .stag__content_item
+                    .stag__left
+                        .stag__title Promote 
+                        <svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+                        </svg>
+                        .stag__subtitle changes
+                    img(src="images/stag.png", alt="img")
+                
+                .stag__content_item
+                    .stag__left
+                        .stag__title Approve
+                        <svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+                        </svg>
+                        .stag__subtitle changes
+                    img(src="images/stag.png", alt="img")
+
+            .stag__bot
+                .check_block--mam_platform-item.circle
+                    +icon('circle')
+                    .check_block--mam_platform-item--text Separate Entity for#[span(class="db")] Internal Testing
+                
+                .check_block--mam_platform-item.circle
+                    +icon('circle')
+                    .check_block--mam_platform-item--text Absolute Recreation of#[span(class="db")] the Production Product
+                
+                .check_block--mam_platform-item.circle
+                    +icon('circle')
+                    .check_block--mam_platform-item--text Pre-Release of the#[span(class="db")] Features on Staging

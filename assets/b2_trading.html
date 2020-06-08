@@ -559,6 +559,7 @@
       <div class="site-content" id="content">
         <div class="content">
           <div class="forex_liquidity forex_liquidity__new forex_liquidity__new__b2_trading">
+            <video class="b2_core__title_video" autoplay loop pip="false" muted src="images/dynamic_layout.mp4"></video>
             <div class="forex_liquidity--overlay"></div>
             <div class="container">
               <div class="forex_liquidity__content">
@@ -1491,7 +1492,8 @@
           <div class="section dark_style section__dynamic">
             <div class="container goanim an">
               <div class="section__title"> <span class="section__title--bold">Dynamic</span> interface</div>
-              <video class="banner" autoplay loop pip="false" muted src="images/dynamic_layout.mp4"></video><svg class="shadow" height="53" viewBox="0 0 1072 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <video class="banner" autoplay loop pip="false" muted src="images/dynamic_layout.mp4"></video>
+            </div><svg class="shadow" height="53" viewBox="0 0 1072 53" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:multiply" filter="url(#filter0_f)">
 <ellipse cx="536.129" cy="36.0215" rx="535.5" ry="16" fill="url(#paint0_radial)"/>
 </g>
@@ -1508,6 +1510,7 @@
 </radialGradient>
 </defs>
 </svg>
+            <div class="container">
               <div class="trading__flex">
                 <div class="check_block--mam_platform-item circle">
                   <svg class="svg-sprite-icon icon-circle">
@@ -1639,7 +1642,7 @@
               </div>
             </div>
           </div>
-          <div class="section section__watchlist">
+          <div class="section section__watchlist section__black dark_style">
             <div class="trading goanim an">
               <div class="trading__slider flickity_castom_arrow">
                 <div class="item">
@@ -2006,7 +2009,30 @@
               </div>
             </div>
             <div class="container">
-              <div class="different__title">How it works</div><img class="banner" src="images/different.png" alt="banner">
+              <div class="different__title">How it works</div>
+              <div class="schem1"><img class="banner" src="images/different.png" alt="banner"></div>
+              <div class="schem1_bot">
+                <div class="schem1_bot__wrap">
+                  <div class="schem1_bot__item">
+                    <div class="lo_block gray">Bid (buy) LO</div>
+                    <div class="lo_block white">Ask (sell) LO</div>
+                  </div>
+                  <div class="schem1_bot__item">
+                    <div class="schem1_icon">1</div>
+                    <div class="schem1_text">
+                      <div class="schem1_title">Market order flow </div>
+                      <div class="schem1_subtitle">A  market order to sell two lots arrives, and matches with the first two limit orders in the queue at the best price.</div>
+                    </div>
+                  </div>
+                  <div class="schem1_bot__item">
+                    <div class="schem1_icon">2</div>
+                    <div class="schem1_text">
+                      <div class="schem1_title">Limit order flow </div>
+                      <div class="schem1_subtitle">A limit order to sell one lot at 29.97 arrives, and is added to the back of the queue.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="section dark_style section__powerful">
@@ -2071,12 +2097,83 @@
             <div class="container goanim an">
               <div class="section__title section__title--bold">SaaS AWS</div>
               <div class="section__subtitle">B2Trader uses hosting solutions that dynamically scale resources and support the most demanding and<span class="db"></span> highly loaded projects. Our AWS hosting offers high levels of availability, scalability and performance,<span class="db"></span>   requiring higher amounts of management and administration that we organize fully on our side.</div><img class="banner" src="images/saas.png" alt="banner">
+              <div class="schem2">
+                <div class="schem2__wrap">
+                  <div class="schem2__item">
+                    <div class="schem2__icon active"></div>
+                    <div class="schem2__text">
+                      <div class="schem2__title">Binary protocol</div>
+                      <div class="schem2__subtitle">A protocol which is intended to be read by a machine that has the advantage of terseness, which translates into speed of transmission and interpretation</div>
+                    </div>
+                  </div>
+                  <div class="schem2__item">
+                    <div class="schem2__icon"></div>
+                    <div class="schem2__text">
+                      <div class="schem2__title">Replication</div>
+                      <div class="schem2__subtitle">A set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="section section__saas section__blue">
             <div class="container goanim an">
               <div class="section__title"><span class="section__title--bold">Staging</span>  Environment </div>
-              <div class="section__subtitle">B2Trader updates are first deployed to the staging environment for client testing and proceed to<span class="db"></span> production deployment only after approval. This is done to minimize the risk of bugs on production<span class="db"></span> and is a scheme that will make your product the most stable on the market.</div><img class="banner" src="images/staging.png" alt="banner">
+              <div class="section__subtitle">B2Trader updates are first deployed to the staging environment for client testing and proceed to<span class="db"></span> production deployment only after approval. This is done to minimize the risk of bugs on production<span class="db"></span> and is a scheme that will make your product the most stable on the market.</div>
+              <div class="stag">
+                <div class="stag__heading">
+                  <div class="stag__heading_item"><span>Development </span></div>
+                  <div class="stag__heading_item"><span>Staging </span></div>
+                  <div class="stag__heading_item"><span>Production </span></div>
+                </div>
+                <div class="stag__content">
+                  <div class="stag__content_item">
+                    <div class="stag__left">
+                      <div class="stag__title">Configuration</div><svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+</svg>
+                      <div class="stag__subtitle">changes</div>
+                    </div><img src="images/stag.png" alt="img">
+                  </div>
+                  <div class="stag__content_item">
+                    <div class="stag__left">
+                      <div class="stag__title">Promote </div><svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+</svg>
+                      <div class="stag__subtitle">changes</div>
+                    </div><img src="images/stag.png" alt="img">
+                  </div>
+                  <div class="stag__content_item">
+                    <div class="stag__left">
+                      <div class="stag__title">Approve</div><svg width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M91.2511 8.86825C91.6416 8.47773 91.6416 7.84456 91.2511 7.45404L84.8871 1.09008C84.4966 0.699551 83.8634 0.699551 83.4729 1.09008C83.0824 1.4806 83.0824 2.11376 83.4729 2.50429L89.1297 8.16114L83.4729 13.818C83.0824 14.2085 83.0824 14.8417 83.4729 15.2322C83.8634 15.6227 84.4966 15.6227 84.8871 15.2322L91.2511 8.86825ZM0.543945 9.16113L90.5439 9.16114L90.5439 7.16114L0.543945 7.16113L0.543945 9.16113Z" fill="#B0C4D4"/>
+</svg>
+                      <div class="stag__subtitle">changes</div>
+                    </div><img src="images/stag.png" alt="img">
+                  </div>
+                </div>
+                <div class="stag__bot">
+                  <div class="check_block--mam_platform-item circle">
+                    <svg class="svg-sprite-icon icon-circle">
+                      <use xlink:href="images/svg/symbol/sprite.svg#circle"></use>
+                    </svg>
+                    <div class="check_block--mam_platform-item--text">Separate Entity for<span class="db"></span> Internal Testing</div>
+                  </div>
+                  <div class="check_block--mam_platform-item circle">
+                    <svg class="svg-sprite-icon icon-circle">
+                      <use xlink:href="images/svg/symbol/sprite.svg#circle"></use>
+                    </svg>
+                    <div class="check_block--mam_platform-item--text">Absolute Recreation of<span class="db"></span> the Production Product</div>
+                  </div>
+                  <div class="check_block--mam_platform-item circle">
+                    <svg class="svg-sprite-icon icon-circle">
+                      <use xlink:href="images/svg/symbol/sprite.svg#circle"></use>
+                    </svg>
+                    <div class="check_block--mam_platform-item--text">Pre-Release of the<span class="db"></span> Features on Staging</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="section section__mobile_app section__trading_mobile_app">
@@ -4458,6 +4555,7 @@
     <script src="js/flickity.js"></script>
     <script src="js/flickity-fade.js"></script>
     <script src="js/typed.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>

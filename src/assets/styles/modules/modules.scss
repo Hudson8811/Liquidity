@@ -6,6 +6,7 @@
 @import "template/slick.scss";
 @import "template/flickity.scss";
 @import "template/fancybox.scss";
+@import "template/nice-select.scss";
 @import "black_page/footer-menu-section.scss";
 @import "black_page/form-block-section.scss";
 @import "black_page/section-1.scss";
@@ -162,3 +163,4 @@
 
 //Previous Events
 @import "previous_events/events_screen.scss";
+@import "previous_events/events_content.scss";

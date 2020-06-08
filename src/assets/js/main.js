@@ -623,6 +623,10 @@ $(document).ready(function () {
     $(this).parent().next(".head__item--content").addClass("hide");
   });
 
+  $(".filter__item").niceSelect();
+
+  $(".filter__item .list").mCustomScrollbar();
+
   setTimeout(function () {
     $(".text_flicky--js").slick({
       infinite: true,

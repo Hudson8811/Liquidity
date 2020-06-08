@@ -568,33 +568,43 @@
           <div class="filter">
             <div class="container">
               <div class="filter__wrapper">
-                <div class="filter__item">
-                  <div class="filter__heading">All Events</div>
-                  <div class="filter__content">
-                    <div class="filter__content_item">All Events</div>
-                    <div class="filter__content_item">Futures Events</div>
-                    <div class="filter__content_item">Previous Events</div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <div class="filter__heading">All Themes</div>
-                  <div class="filter__content">
-                    <div class="filter__content_item">All Themes</div>
-                    <div class="filter__content_item">FOREX </div>
-                    <div class="filter__content_item">Payments</div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <div class="filter__heading">All Years</div>
-                  <div class="filter__content">
-                    <div class="filter__content_item">All Years</div>
-                    <div class="filter__content_item">2020</div>
-                    <div class="filter__content_item">2019</div>
-                    <div class="filter__content_item">2018</div>
-                  </div>
-                </div>
+                <select class="filter__item">
+                  <option class="filter__content_item" value="1" data-display="All Events">All Events</option>
+                  <option class="filter__content_item" value="2">Futures Events</option>
+                  <option class="filter__content_item" value="3">Previous Events</option>
+                </select>
+                <select class="filter__item">
+                  <option class="filter__content_item" value="1" data-display="All Themes">All Themes</option>
+                  <option class="filter__content_item" value="2">FOREX </option>
+                  <option class="filter__content_item" value="3">Payments</option>
+                </select>
+                <select class="filter__item">
+                  <option class="filter__content_item" value="1" data-display="All Years">All Years</option>
+                  <option class="filter__content_item" value="2">2020</option>
+                  <option class="filter__content_item" value="3">2019</option>
+                  <option class="filter__content_item" value="4">2018</option>
+                  <option class="filter__content_item" value="5">2017</option>
+                  <option class="filter__content_item" value="6">2016</option>
+                  <option class="filter__content_item" value="7">2015</option>
+                  <option class="filter__content_item" value="8">2014</option>
+                  <option class="filter__content_item" value="9">2013</option>
+                </select>
               </div>
             </div>
+          </div>
+          <div class="section section__blue events_content">
+            <aside>
+              <ul>
+                <li><a href="#">News Feed</a></li>
+                <li><a href="#">Сorporate news</a></li>
+                <li><a href="#">Product Updates</a></li>
+                <li><a href="#">Webinars</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Articles</a></li>
+              </ul>
+            </aside>
           </div>
           <div class="footer-menu-section footer-menu-section-2">
             <div class="container goanim an">
@@ -2463,6 +2473,7 @@
     <script src="js/flickity.js"></script>
     <script src="js/flickity-fade.js"></script>
     <script src="js/typed.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
