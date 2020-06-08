@@ -135,8 +135,13 @@ body.hidden {
       width: 248px;
       flex-shrink: 0;
       margin-right: auto;
-      height: 16px;
       overflow: hidden;
+      visibility: hidden;
+
+      &.active {
+        visibility: visible;
+      }
+
       .item {
         width: 100%;
         font-weight: normal;
