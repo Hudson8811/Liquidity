@@ -1,0 +1,9 @@
+extends template/main
+
+block variables
+    -var title = 'Previous Events'
+    -var newFooter = true
+
+block content
+    include modules/previous_events/events_screen
+    include modules/mam_platform/_footer-menu-section-2

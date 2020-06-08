@@ -994,6 +994,8 @@ $(document).on("click", ".castom_select .castom_select__heading", function (e) {
   $(".castom_select__content").slideToggle();
 });
 
+$(".filter__content").mCustomScrollbar();
+
 $(document).on("focus", ".new_form__label .new_form__input", function () {
   $(this).parent().addClass("active");
   $(this).parent().removeClass("error");

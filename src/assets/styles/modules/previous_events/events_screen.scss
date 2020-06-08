@@ -1,0 +1,24 @@
+.events_screen.section {
+  padding: 130px 0 157px 0;
+}
+
+.events_screen {
+  margin-top: 136px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .section__subtitle.bold {
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  .section__subtitle {
+    line-height: 21px;
+    color: #fff;
+  }
+
+  .section__title {
+    color: #fff;
+  }
+}
