@@ -1,3 +1,19 @@
+setTimeout(function () {
+  $(".text_flicky--js").slick({
+    infinite: true,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+  });
+
+  $(".text_flicky--js").addClass("active");
+}, 0);
+
 $(document).ready(function () {
   $(".big_menu_content--js").fadeOut();
   $(document).on("click", ".genuine__row", function () {
@@ -626,22 +642,6 @@ $(document).ready(function () {
   $(".filter__item").niceSelect();
 
   $(".filter__item .list").mCustomScrollbar();
-
-  setTimeout(function () {
-    $(".text_flicky--js").slick({
-      infinite: true,
-      vertical: true,
-      autoplay: true,
-      autoplaySpeed: 7000,
-      speed: 1000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: false,
-    });
-
-    $(".text_flicky--js").addClass("active");
-  }, 0);
 
   $(".invoiced__slider--js").on("change.flickity", function (event, index) {
     if (index == 2) {
