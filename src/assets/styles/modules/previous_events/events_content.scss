@@ -1,0 +1,122 @@
+.events_content {
+  background: #edeff5;
+}
+
+.events_sidebar {
+  width: 180px;
+
+  &__ul {
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 25px;
+    height: 47px;
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    /* identical to box height, or 203% */
+    text-decoration: none;
+    color: #525252;
+    border-right: 5px solid;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  &__li {
+    margin-bottom: 1px;
+    background: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      .events_sidebar__link {
+        border-width: 35px;
+        font-weight: bold;
+      }
+
+      &.video {
+        .events_sidebar__link {
+          position: relative;
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 16px;
+            height: 11px;
+            background: center / cover url(../images/white_youtube.svg)
+              no-repeat;
+            z-index: 2;
+            margin-top: -5.5px;
+            margin-right: -25.5px;
+          }
+        }
+      }
+    }
+
+    &:not(.active):hover {
+      .events_sidebar__link {
+        border-width: 15px;
+      }
+    }
+
+    &:nth-child(1) {
+      .events_sidebar__link {
+        border-color: #6ccf53;
+      }
+    }
+
+    &:nth-child(2) {
+      .events_sidebar__link {
+        border-color: #0ad7ab;
+      }
+    }
+
+    &:nth-child(3) {
+      .events_sidebar__link {
+        border-color: #1484db;
+      }
+    }
+
+    &:nth-child(4) {
+      .events_sidebar__link {
+        border-color: #ffee58;
+      }
+    }
+
+    &:nth-child(5) {
+      .events_sidebar__link {
+        border-color: #ffb422;
+      }
+    }
+
+    &:nth-child(6) {
+      .events_sidebar__link {
+        border-color: #d567e7;
+      }
+    }
+
+    &:nth-child(7) {
+      .events_sidebar__link {
+        border-color: #f84040;
+      }
+    }
+
+    &:nth-child(8) {
+      .events_sidebar__link {
+        border-color: #4bbaf9;
+      }
+    }
+  }
+}

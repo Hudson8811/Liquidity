@@ -2705,6 +2705,10 @@ select:visited {
   .section__subtitle {
     max-width: none;
   }
+
+  .gray_block__container .gray__block:nth-child(3) {
+    padding-right: 25px;
+  }
 }
 
 .section__report {
@@ -2725,6 +2729,7 @@ select:visited {
       font-size: 16px;
       line-height: 26px;
       color: #ffffff;
+      letter-spacing: 0;
     }
   }
 }
