@@ -33,6 +33,10 @@
     background: #1e252d;
     border-top: 1px solid #393b3e;
     border-bottom: 1px solid #393b3e;
+
+    @media screen and (max-width: 580px) {
+      border: none;
+    }
   }
 
   &__item {
@@ -146,6 +150,16 @@
       border-width: 1px;
       right: 24px;
     }
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      border-left: 1.5px solid #37414a;
+      border-top: 1.5px solid #37414a;
+
+      &:last-child {
+        border-bottom: 1.5px solid #37414a;
+      }
+    }
   }
 
   &__wrapper {
@@ -156,5 +170,9 @@
     width: 98%;
     max-width: 980px;
     margin: 0 auto;
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+    }
   }
 }

@@ -469,6 +469,11 @@ $(document).ready(function () {
     );
   });
 
+  $(document).on("click", ".aside_burger--js", function (event) {
+    $(this).toggleClass("active");
+    $(".events_sidebar").toggleClass("active");
+  });
+
   $(".business--slick_slider .item").on("click", function () {
     let index = $(this).index();
     $(".business--slick_slider").flickity("select", index);
@@ -907,6 +912,7 @@ $(".tabs_slider .item").on("click", function () {
 
 $(document).on("click", ".burger--js", function () {
   $(this).removeClass("active");
+  $(".big_header").removeClass("active");
   $("body").removeClass("hidden");
   $(".big_menu_btn--js").removeClass("active");
   $(".big_menu_content--js")

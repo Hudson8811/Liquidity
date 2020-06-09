@@ -86,6 +86,10 @@
     box-sizing: border-box;
     border-radius: 4px;
     overflow: hidden;
+
+    @media screen and (max-width: 580px) {
+      height: auto;
+    }
   }
 
   &__banner {
