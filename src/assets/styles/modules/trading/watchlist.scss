@@ -16,6 +16,9 @@
     }
   }
   svg {
+    @media screen and (max-width: 980px) {
+      width: 100% !important;
+    }
   }
 
   .flickity-prev-next-button {
