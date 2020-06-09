@@ -65,6 +65,17 @@
       /* identical to box height, or 128% */
       letter-spacing: 0px;
       color: #63636e;
+
+      span.db {
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+
+        @media screen and (max-width: 980px) {
+          display: none;
+        }
+      }
     }
     &--right {
       max-width: 316px;

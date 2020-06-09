@@ -167,12 +167,23 @@
 }
 
 .events_content {
+  width: 100%;
+  max-width: 770px;
+
   .container {
-    max-width: 770px;
+    max-width: none;
+    width: 100%;
   }
 
-  .future:nth-child(1) {
-    padding-top: 0;
+  .future {
+    &:nth-child(1) {
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 167px;
+    }
   }
 
   .future {
@@ -180,6 +191,78 @@
     &__location {
       color: #3a3a3a;
       line-height: 23px;
+    }
+
+    &__month {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 44px;
+      /* identical to box height, or 111% */
+      color: #5e5f60;
+    }
+
+    &__booth {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 27px;
+      /* identical to box height, or 193% */
+      /* Booth */
+      color: #9a9a9a;
+    }
+
+    &__btn {
+      color: #6c6c6c;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 8px;
+    }
+
+    &__date:before {
+      background: center/cover url(../images/black_date.svg) no-repeat;
+    }
+
+    &__location:before {
+      background: center/cover url(../images/black_loc.svg) no-repeat;
+    }
+
+    &__description {
+      width: 197px;
+      margin-right: 0;
+      flex-shrink: 0;
+      padding-top: 7px;
+    }
+
+    &__content {
+      width: 100%;
+      max-width: 565px;
+      padding-right: 16%;
+    }
+
+    .future__line {
+      ellipse {
+        fill: #caccd2;
+      }
+    }
+
+    &__overlay {
+      display: none;
+      &:before {
+        margin-top: 40px;
+      }
+    }
+
+    &__banner {
+      width: 100%;
+    }
+
+    &:hover {
+      .future__line {
+        path {
+          stroke-opacity: 1;
+          stroke: #00e8b6;
+        }
+      }
     }
   }
 }

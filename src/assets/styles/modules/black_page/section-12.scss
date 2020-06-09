@@ -165,6 +165,11 @@
   .connectivity_block {
     &--heading {
       max-width: 918px;
+      padding-right: 111px;
+
+      @media screen and (max-width: 980px) {
+        padding-right: 20px;
+      }
     }
     &--heading,
     &--description {
@@ -172,7 +177,11 @@
     }
     &--description {
       max-width: 918px;
-      padding-right: 41px;
+      padding-right: 178px;
+
+      @media screen and (max-width: 980px) {
+        padding-right: 20px;
+      }
     }
     &--image {
       margin: 0 auto;
