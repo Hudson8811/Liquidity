@@ -475,3 +475,43 @@
     }
   }
 }
+
+.footer_creative__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-menu .menu li a {
+    line-height: 17px;
+  }
+  .creative__block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 180px;
+    flex-shrink: 0;
+
+    span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      /* or 300% */
+      letter-spacing: 0;
+      color: #545454;
+      display: block;
+      margin-right: auto;
+    }
+    img {
+      display: block;
+      width: 104px;
+    }
+  }
+}

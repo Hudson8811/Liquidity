@@ -40,6 +40,12 @@
   overflow: hidden;
   margin-bottom: 25px;
 
+  &:hover {
+    .news__btn_block {
+      transform: translateX(0);
+    }
+  }
+
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
@@ -67,11 +73,6 @@
   &:nth-child(2n) {
     .news__preview {
       align-items: flex-start;
-      &:hover {
-        .news__btn_block {
-          transform: translateX(0);
-        }
-      }
     }
 
     .news__btn_block {

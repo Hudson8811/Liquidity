@@ -67,19 +67,24 @@
     .timer {
       font-family: Roboto;
       font-style: normal;
-      font-weight: 900;
-      font-size: 16px;
+      font-weight: 500;
+      font-size: 14px;
       line-height: 22px;
       /* identical to box height, or 137% */
       text-align: center;
       color: rgba(100, 100, 100, 0.3);
       height: 40px;
-      width: 99px;
-      background: rgba(255, 255, 255, 0.48);
+      width: 100%;
+      color: #646464;
       border: 1px solid #01bd95;
       box-sizing: border-box;
       border-radius: 5px;
       margin: 0 auto;
+
+      &.disabled {
+        color: rgba(100, 100, 100, 0.3);
+        font-size: 16px;
+      }
     }
   }
 

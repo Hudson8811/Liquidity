@@ -127,6 +127,18 @@
       }
     }
   }
+
+  &__discription {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 98.19%;
+    /* identical to box height, or 21px */
+    margin-top: 40px;
+    text-align: center;
+    color: #898989;
+  }
 }
 
 .family {
@@ -136,6 +148,8 @@
     object-fit: contain;
     opacity: 0.25;
     transition: all 0.5s;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   &__line {
@@ -143,6 +157,7 @@
     height: 2px;
     background-color: rgba(129, 129, 129, 0.25);
     transition: all 0.5s;
+    margin-bottom: auto;
   }
 
   &__block {

@@ -13,6 +13,15 @@
       width: 101%;
       height: 101%;
     }
+    .video_block--youtube_btn {
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      .video_block--youtube_btn {
+        transform: scale(1.2);
+      }
+    }
   }
   .video_wrapper {
     width: calc(50% - 10px);

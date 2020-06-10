@@ -520,14 +520,14 @@ $(document).ready(function () {
     if ($(".goanim").length > 0) {
       $(".goanim").each(function () {
         if (
-          $(window).scrollTop() + window.innerHeight / 1.2 >
-            $(this).offset().top &&
+          $(window).scrollTop() + window.innerHeight > $(this).offset().top &&
           $(window).scrollTop() - window.innerHeight < $(this).offset().top
         ) {
           $(this).removeClass("goanim");
         } else if (
           $(this).hasClass("footan") &&
-          $(window).scrollTop() + window.innerHeight > $("body").height() - 100
+          $(window).scrollTop() + window.innerHeight >
+            $("body").height() + 100 - $("body").height()
         ) {
           $(this).removeClass("goanim");
         }
@@ -1090,40 +1090,44 @@ function timer(f_time) {
     diff = parseInt(diff / 1000);
     var s = diff % 60;
     if (s < 10) {
-      $(".seconds_1").html(0);
-      $(".seconds_2").html(s);
+      $(".timer:not(.disabled) .timer_section .seconds_1").html(0);
+      $(".timer:not(.disabled) .timer_section .seconds_2").html(s);
     } else {
-      $(".seconds_1").html(parseInt(s / 10));
-      $(".seconds_2").html(s % 10);
+      $(".timer:not(.disabled) .timer_section .seconds_1").html(
+        parseInt(s / 10)
+      );
+      $(".timer:not(.disabled) .timer_section .seconds_2").html(s % 10);
     }
     //минуты
     diff = parseInt(diff / 60);
     var m = diff % 60;
     if (m < 10) {
-      $(".minutes_1").html(0);
-      $(".minutes_2").html(m);
+      $(".timer:not(.disabled) .timer_section .minutes_1").html(0);
+      $(".timer:not(.disabled) .timer_section .minutes_2").html(m);
     } else {
-      $(".minutes_1").html(parseInt(m / 10));
-      $(".minutes_2").html(m % 10);
+      $(".timer:not(.disabled) .timer_section .minutes_1").html(
+        parseInt(m / 10)
+      );
+      $(".timer:not(.disabled) .timer_section .minutes_2").html(m % 10);
     }
     //часы
     diff = parseInt(diff / 60);
     var h = diff % 24;
     if (h < 10) {
-      $(".hours_1").html(0);
-      $(".hours_2").html(h);
+      $(".timer:not(.disabled) .timer_section .hours_1").html(0);
+      $(".timer:not(.disabled) .timer_section .hours_2").html(h);
     } else {
-      $(".hours_1").html(parseInt(h / 10));
-      $(".hours_2").html(h % 10);
+      $(".timer:not(.disabled) .timer_section .hours_1").html(parseInt(h / 10));
+      $(".timer:not(.disabled) .timer_section .hours_2").html(h % 10);
     }
     //дни
     var d = parseInt(diff / 24);
     if (d < 10) {
-      $(".days_1").html(0);
+      $(".timer:not(.disabled) .timer_section .days_1").html(0);
       $(".days_2").html(d);
     } else {
-      $(".days_1").html(parseInt(d / 10));
-      $(".days_2").html(d % 10);
+      $(".timer:not(.disabled) .timer_section .days_1").html(parseInt(d / 10));
+      $(".timer:not(.disabled) .timer_section .days_2").html(d % 10);
     }
     setTimeout(timer_go, left);
   }

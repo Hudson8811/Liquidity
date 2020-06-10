@@ -3114,6 +3114,7 @@ select:visited {
     line-height: 31px;
     /* or 148% */
     color: #ffffff;
+    padding-right: 18%;
 
     @media screen and (max-width: 580px) {
       font-size: 15px;
@@ -3127,7 +3128,7 @@ select:visited {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    margin-top: 181px;
+    margin-top: 84px;
 
     .new_green_btn {
       margin-right: 25px;
@@ -3170,8 +3171,8 @@ select:visited {
   justify-content: center;
   align-items: center;
   height: 42px;
-  padding: 0 48px 0 27px;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 0 27px;
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   width: fit-content;
   box-sizing: border-box;
@@ -3498,5 +3499,12 @@ select:visited {
     /* identical to box height, or 139% */
     text-align: center;
     color: #637786;
+  }
+}
+
+.section__dynamic {
+  .svg_shadow {
+    display: block;
+    margin: 15px auto 0;
   }
 }

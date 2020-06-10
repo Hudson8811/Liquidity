@@ -15,7 +15,22 @@
       width: 98%;
     }
   }
-  svg {
+  svg.bot_shadow {
+    display: block;
+    margin: 33px auto 0;
+
+    &.bot_shadow-1 {
+      width: 800px;
+    }
+
+    &.bot_shadow-2 {
+      width: 800px;
+    }
+
+    &.bot_shadow-4 {
+      width: 350px;
+    }
+
     @media screen and (max-width: 980px) {
       width: 100% !important;
     }
@@ -23,5 +38,9 @@
 
   .flickity-prev-next-button {
     top: 64%;
+  }
+
+  .item {
+    background-color: #191f24;
   }
 }

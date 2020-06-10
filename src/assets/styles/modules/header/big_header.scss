@@ -278,7 +278,7 @@ body.hidden {
   &__center_row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     .header__logo {
       max-width: 139px;
     }
