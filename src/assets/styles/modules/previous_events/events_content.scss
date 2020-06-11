@@ -269,7 +269,7 @@
       flex-shrink: 0;
       padding-top: 7px;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 1000px) {
         width: 100%;
       }
     }
@@ -278,10 +278,6 @@
       width: 100%;
       max-width: 565px;
       padding-right: 16%;
-
-      @media screen and (max-width: 980px) {
-        max-width: none;
-      }
     }
 
     .future__line {
@@ -395,6 +391,11 @@
   box-sizing: border-box;
   padding: 5px;
   z-index: 103;
+  display: none;
+
+  @media screen and (max-width: 580px) {
+    display: block;
+  }
 
   cursor: pointer;
 
