@@ -102,6 +102,12 @@
     z-index: 0;
     border-radius: 5px;
     object-fit: contain;
+
+    @media screen and (max-width: 1000px) {
+      object-fit: cover;
+
+      object-position: 100% 0;
+    }
   }
 
   &__title {

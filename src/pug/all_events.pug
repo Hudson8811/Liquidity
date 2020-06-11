@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'All Events'
+    -var newFooter = true
+
+block content
+    include modules/all_events/events_screen
+    include modules/all_events/events_content
+    include modules/mam_platform/_footer-menu-section-2

@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Announcement Events'
+    -var newFooter = true
+
+block content
+    include modules/announcement_events/events_screen
+    include modules/announcement_events/events_content
+    include modules/mam_platform/_footer-menu-section-2
