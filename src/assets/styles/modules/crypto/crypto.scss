@@ -119,10 +119,6 @@
     &:hover {
       .man__name {
         background: #2e3740;
-
-        span {
-          color: #ffffff;
-        }
       }
     }
 
@@ -154,6 +150,7 @@
     box-sizing: border-box;
     padding: 46px;
     transition: all 0.5s;
+    will-change: background;
 
     @media screen and (max-width: 930px) {
       align-items: flex-start;
