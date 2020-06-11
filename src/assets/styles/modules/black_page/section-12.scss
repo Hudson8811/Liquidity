@@ -124,7 +124,8 @@
 
       &__left {
         width: 100%;
-        max-width: 256px;
+        max-width: 260px;
+        flex-shrink: 0;
       }
 
       &__right {

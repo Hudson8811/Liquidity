@@ -461,6 +461,19 @@ $(document).ready(function () {
     percentPosition: false,
   });
 
+  $(".mode_slider--js").flickity({
+    wrapAround: true,
+    adaptiveHeight: false,
+    pageDots: false,
+    percentPosition: false,
+    prevNextButtons: false,
+  });
+
+  $(".section__mode .mam_tabs-btn").on("click", function () {
+    let index = $(this).index();
+    $(".mode_slider--js ").flickity("select", index);
+  });
+
   $(".section__envairoment .mam_tabs-btn").on("click", function () {
     let index = $(this).index();
     $(".section__envairoment .main_tabs_slider_b2_core--js ").flickity(
