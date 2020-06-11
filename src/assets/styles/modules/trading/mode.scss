@@ -35,8 +35,13 @@
     width: 100%;
   }
   .mam_tabs-content {
+    height: 572px;
     width: 100%;
     margin-top: 45px;
+
+    @media screen and (max-width: 980px) {
+      height: auto;
+    }
 
     .banner {
       margin-bottom: 43px;
