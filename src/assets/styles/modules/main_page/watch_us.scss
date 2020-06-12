@@ -13,15 +13,6 @@
       width: 101%;
       height: 101%;
     }
-    .video_block--youtube_btn {
-      transition: transform 0.5s;
-    }
-
-    &:hover {
-      .video_block--youtube_btn {
-        transform: scale(1.2);
-      }
-    }
   }
   .video_wrapper {
     width: calc(50% - 10px);
@@ -102,5 +93,17 @@
     font-size: 36px;
     line-height: 36px;
     color: #2f3438;
+  }
+}
+
+.video_block {
+  .video_block--youtube_btn {
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    .video_block--youtube_btn {
+      transform: scale(1.1);
+    }
   }
 }

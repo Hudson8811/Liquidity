@@ -41,6 +41,12 @@
 
   &__item {
     width: 196px;
+
+    &:nth-child(2) {
+      .list {
+        width: 196px;
+      }
+    }
   }
 
   .list {

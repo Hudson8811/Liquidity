@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'News Feed'
+    -var newFooter = true
+
+block content
+    include modules/news_feed/events_screen
+    include modules/news_feed/events_content
+    include modules/mam_platform/_footer-menu-section-2

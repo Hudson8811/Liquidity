@@ -1,0 +1,51 @@
+.webinars__join {
+  margin-top: 130px;
+}
+
+.events_content__schedule {
+  .future__bot_flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    @media screen and (max-width: 580px) {
+      display: block;
+    }
+  }
+
+  .future_btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    @media screen and (max-width: 580px) {
+      margin-top: 20px;
+    }
+  }
+  .new_green_btn {
+    width: 142px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .new_more_btn {
+    width: 118px;
+  }
+
+  .timer__wrapper {
+    margin-left: auto;
+  }
+
+  .future__description {
+    margin-right: 15px;
+  }
+}
+
+.watch_now_btn {
+  margin-right: 0;
+  width: 160px;
+
+  svg {
+    display: block;
+    margin-right: 10px;
+  }
+}

@@ -234,7 +234,7 @@
     }
   }
 
-  p:not(.consent_block__p) {
+  p.paragraph {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -248,7 +248,7 @@
       color: #333333;
     }
 
-    & + p:not(.consent_block__p) {
+    & + p.paragraph {
       margin-top: 84px;
     }
 
@@ -284,7 +284,8 @@
 
   .future {
     &__date,
-    &__location {
+    &__location,
+    &__time {
       color: #3a3a3a;
       line-height: 23px;
     }
@@ -324,6 +325,10 @@
 
     &__location:before {
       background: center/cover url(../images/black_loc.svg) no-repeat;
+    }
+
+    &__time:before {
+      background: center/cover url(../images/black_time.svg) no-repeat;
     }
 
     &__description {
