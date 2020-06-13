@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Corporate news'
+    -var newFooter = true
+
+block content
+    include modules/corporate_news/events_screen
+    include modules/corporate_news/events_content
+    include modules/mam_platform/_footer-menu-section-2

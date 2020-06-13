@@ -1,0 +1,135 @@
+.join_form_section {
+  background: #f2f4f8;
+  /* Small_shadow */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.jfs__form_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 55px;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+
+  .jfs__form {
+    margin-top: 0;
+    padding: 0;
+    display: block;
+    background: transparent !important;
+    max-width: 341px;
+    margin-bottom: 45px;
+
+    .new_form__label {
+      display: flex;
+      width: 100%;
+    }
+
+    .new_form__sabmit {
+      width: 100%;
+    }
+
+    .consent_block {
+      width: 100%;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    &_left {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      @media screen and (max-width: 900px) {
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &_right {
+      margin-top: auto;
+
+      @media screen and (max-width: 900px) {
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .jfs_banner {
+    position: absolute;
+    width: 100%;
+    max-width: 341px;
+    background: #1f2832;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 27px 31px;
+    box-sizing: border-box;
+    bottom: 80px;
+
+    p {
+      &:nth-child(1) {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 161.4%;
+        /* or 29px */
+        margin-bottom: 9px;
+        color: #ffffff;
+      }
+
+      &:nth-child(2) {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 161.4%;
+        /* identical to box height, or 23px */
+        color: #ffffff;
+      }
+
+      &:nth-child(3) {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 121.4%;
+        /* or 16px */
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.back_btn__container {
+  margin-top: 50px;
+  padding-bottom: 150px;
+}
+
+.section.join_form_section {
+  padding-bottom: 0;
+}
+
+.back_btn.white {
+  color: #9e9e9e;
+
+  svg {
+    path {
+      stroke: #9e9e9e;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.section.join_form_section
+    .container
+        .section__title Join to our #[span(class="section__title--bold") webinar]
+        .section__subtitle We offer a large range of products and services to enhance your#[span(class="db")] business operations. Check them out here...
+        .jfs__form_wrapper
+            .jfs__form_left
+                img(src="images/jfs.png", alt="img")
+                .jfs_banner
+                    p Alex Kukhtikov
+                    p Business Development Teamlead
+                    p Business Development for EU and CIS regions
+                    
+            .jfs__form_right
+                form.new_form.new_form__flex.light_theme.b2_form.jfs__form
+                    label.new_form__label
+                        span.new_form__placeholder Your Name
+                        span.new_form__star *
+                        input.new_form__input(type="text")
+
+                    label.new_form__label
+                        span.new_form__placeholder Your Email
+                        span.new_form__star *
+                        input.new_form__input(type="text")
+
+                    label.new_form__label.new_form__label__phone_select
+                        span.new_form__placeholder Phone
+                        span.new_form__star *
+                        input.new_form__input(type="text")
+                        select.new_form__select.new_form__select_phone
+                            option(value="+7") +7
+                            option(value="+7") +7
+                            option(value="+7") +7
+
+                    label.new_form__label.new_form__label__50.new_form__label__web_select
+                        span.new_form__placeholder Nickname
+                        span.new_form__star *
+                        input.new_form__input(type="text")
+                        select.new_form__select.new_form__select_web
+                            option(value="Telegram") Telegram
+                            option(value="Telegram") Telegram
+                            option(value="Telegram") Telegram
+
+                    label.new_form__label.new_form__label__lang_select
+                        .new_form__label__lang_select_wrapper
+                            img(src="images/new_en.png",class="new_form__label__lang_select_icon")
+                            select.new_form__select
+                                option(value="English") English
+                                option(value="English") English
+                                option(value="English") English
+
+                    label.new_form__label.new_form__label__50
+                        span.new_form__placeholder Comment
+                        input.new_form__input(type="text")
+
+                    label.new_form__label.new_form__label_capch
+                        span.new_form__placeholder Enter symbols
+                        span.new_form__star *
+                        img.new_form__capch.new_form__capch--white(src="images/capch_text_white.png")
+                        input.new_form__input(type="text")
+
+                    
+                    button.new_form__sabmit Request a Callback
+                    label.consent_block
+                        input(type="checkbox")
+                        b
+                        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
+
+.container.back_btn__container
+    a.back_btn.white(href="#") 
+                <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.60571 1.28516L0.908326 5.28516L4.60571 9.28516" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                | back

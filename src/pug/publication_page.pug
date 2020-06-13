@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+    -var title = 'Publication page'
+    -var newFooter = true
+
+block content
+    include modules/publication_page/events_screen
+    include modules/publication_page/events_content
+    include modules/publication_page/_also
+    include modules/mam_platform/_footer-menu-section-2

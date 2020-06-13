@@ -1,0 +1,140 @@
+.article_content {
+  .also:before {
+    display: none;
+  }
+  .also {
+    @media screen and (max-width: 980px) {
+      span.db {
+        display: none;
+      }
+    }
+  }
+
+  .also__flex:nth-child(6n + 1) {
+    .also {
+      width: 100%;
+    }
+  }
+
+  .also__flex:nth-child(6n + 2) {
+    .also {
+      &:nth-child(1) {
+        width: 100%;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        max-width: 242px;
+
+        @media screen and (max-width: 1000px) {
+          max-width: none;
+        }
+
+        &:not(:hover) {
+          .also__content {
+            transform: translateY(50%);
+          }
+        }
+
+        &:hover {
+          .also__content {
+            transform: translateY(5px);
+          }
+        }
+      }
+    }
+  }
+
+  .also__flex:nth-child(6n + 3) {
+    .also {
+      width: calc(50% - 10px);
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .also__flex:nth-child(6n + 4) {
+    .also {
+      width: calc(33.333% - 40px / 3) !important;
+
+      &:nth-child(2) {
+        &:not(:hover) {
+          .also__content {
+            transform: translateY(55%);
+          }
+        }
+
+        &:hover {
+          .also__content {
+            transform: translateY(5px);
+          }
+        }
+      }
+
+      &:not(:hover) {
+        .also__content {
+          transform: translateY(50%);
+        }
+      }
+
+      &:hover {
+        .also__content {
+          transform: translateY(5px);
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .also__flex:nth-child(6n - 1) {
+    .also {
+      &:nth-child(2) {
+        width: 100%;
+      }
+
+      &:nth-child(1) {
+        width: 100%;
+        max-width: 242px;
+
+        @media screen and (max-width: 1000px) {
+          max-width: none;
+        }
+
+        &:not(:hover) {
+          .also__content {
+            transform: translateY(50%);
+          }
+        }
+
+        &:hover {
+          .also__content {
+            transform: translateY(5px);
+          }
+        }
+      }
+    }
+  }
+
+  .also__flex:nth-child(6n) {
+    .also {
+      width: 100%;
+
+      &:not(:hover) {
+        .also__content {
+          transform: translateY(41%);
+        }
+      }
+
+      &:hover {
+        .also__content {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

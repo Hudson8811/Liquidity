@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Webinar Futures'
+    -var newFooter = true
+
+block content
+    include modules/webinar_futures/_webinars
+    include modules/webinar_futures/events_content
+    include modules/mam_platform/_footer-menu-section-2

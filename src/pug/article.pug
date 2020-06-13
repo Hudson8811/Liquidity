@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Article'
+    -var newFooter = true
+
+block content
+    include modules/article/events_screen
+    include modules/article/events_content
+    include modules/mam_platform/_footer-menu-section-2

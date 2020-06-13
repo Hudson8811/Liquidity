@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Product update'
+    -var newFooter = true
+
+block content
+    include modules/product_update/events_screen
+    include modules/product_update/events_content
+    include modules/mam_platform/_footer-menu-section-2
