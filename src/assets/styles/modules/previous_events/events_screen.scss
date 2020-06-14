@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media screen and (min-width: 1920px) {
+    background-position: left top;
+  }
+
   .section__subtitle.bold {
     font-weight: 600;
     margin-top: 20px;

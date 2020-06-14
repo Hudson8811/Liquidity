@@ -1,0 +1,45 @@
+.videos_content {
+  background: transparent;
+
+  @media screen and (max-width: 580px) {
+    padding: 0 20px;
+  }
+
+  .video_block {
+    margin-top: 35px;
+  }
+
+  & > .video_block:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .container--flex {
+    @media screen and (max-width: 800px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .video_wrapper {
+    width: calc(50% - 10px);
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+
+    .video_block {
+      height: 218px;
+
+      .image_preview {
+        height: 101%;
+      }
+    }
+
+    .video_block--youtube_btn {
+      width: 56px;
+    }
+  }
+
+  .video_description {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    -var title = 'Media'
+    -var newFooter = true
+
+block content
+    include modules/media/_webinars
+    include modules/media/events_content
+    include modules/media/white_media
+    include modules/media/media_content
+    include modules/mam_platform/_footer-menu-section-2

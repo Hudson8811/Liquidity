@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Videos'
+    -var newFooter = true
+
+block content
+    include modules/video/_webinars
+    include modules/video/events_content
+    include modules/mam_platform/_footer-menu-section-2
