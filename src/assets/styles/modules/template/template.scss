@@ -3512,6 +3512,13 @@ select:visited {
 .noise {
   position: relative;
 
+  .container,
+  .blockshow,
+  .join {
+    position: relative;
+    z-index: 1;
+  }
+
   &:after {
     content: "";
     left: 0;
@@ -3521,6 +3528,6 @@ select:visited {
     height: 100%;
     position: absolute;
     z-index: 0;
-    background: center / cover url(../images/noise.png) no-repeat;
+    background: center / auto url(../images/noise.png) repeat;
   }
 }

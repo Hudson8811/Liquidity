@@ -268,6 +268,54 @@ $(document).ready(function () {
     }
   }
 
+  function checkPositionCircle() {
+    // координаты дива
+    var div_position3 = $(".join__icon").offset();
+    // отступ сверху
+    var div_top3 = div_position3.top;
+    // отступ слева
+    var div_left3 = div_position3.left;
+    // ширина
+    var div_width3 = $(".join__icon").width();
+    // высота
+    var div_height3 = $(".join__icon").height();
+
+    // проскроллено сверху
+    var top_scroll3 = $(document).scrollTop();
+    // проскроллено слева
+    var left_scroll3 = $(document).scrollLeft();
+    // ширина видимой страницы
+    var screen_width3 = $(window).width();
+    // высота видимой страницы
+    var screen_height3 = $(window).height();
+
+    // координаты углов видимой области
+    var see3_x1 = left_scroll3;
+    var see3_x2 = screen_width3 + left_scroll3;
+    var see3_y1 = top_scroll3;
+    var see3_y2 = screen_height3 + top_scroll3;
+
+    // координаты углов искомого элемента
+    var div3_x1 = div_left3;
+    var div3_x2 = div_left3 + div_height3;
+    var div3_y1 = div_top3;
+    var div3_y2 = div_top3 + div_width3;
+
+    // проверка - виден див полностью или нет
+    if (
+      div3_x1 >= see3_x1 &&
+      div3_x2 <= see3_x2 &&
+      div3_y1 >= see3_y1 &&
+      div3_y2 <= see3_y2
+    ) {
+      // если виден
+      $(".join__icon svg").addClass("anim_circle_bar");
+
+      $(document).off("scroll");
+    } else {
+    }
+  }
+
   function checkPosition() {
     // координаты дива
     var div_position = $(
@@ -330,6 +378,8 @@ $(document).ready(function () {
   function check() {
     if ($("body").hasClass("b2_core")) {
       checkPosition();
+    } else if ($("body").hasClass("circle_anim")) {
+      checkPositionCircle();
     } else {
       checkPositionSpeed();
     }

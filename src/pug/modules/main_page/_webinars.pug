@@ -1,11 +1,11 @@
-.section.section__webinars.dark_style
+.section.section__webinars.dark_style.noise
     .container.goanim.an
         .section__title Online #[span(class="section__title--bold") Webinars]
         .live_webinars.signal_button
             .red_signal
             span Live webinars
 
-    .join.noise(style="background-image: url(images/join.png);")
+    .join(style="background-image: url(images/join.png);")
         .container
             .alert
                 .alert__left
@@ -40,6 +40,10 @@
                 .join__who
                     .join__icon
                         img(src="images/join_name.png", alt="name")
+                        <svg  height="100%" width="100%">
+                            <circle cx="28" cy="28" r="28" stroke="#00e8b6" stroke-width="2"  stroke-dasharray=" 400%,1000px;" />
+                        </svg>
+
                     div
                         .join__name Alex  Kukhtikov
                         .join__discription Business Development Teamlead

@@ -59,7 +59,14 @@
     min-width: 310px;
   }
   .also__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
     height: 100%;
+    background: transparent;
+    transition: all 0.5s;
   }
   &:hover {
     .also__overlay {
@@ -141,7 +148,8 @@
     margin-bottom: 13px;
   }
 
-  &__overlay {
+  &:after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;

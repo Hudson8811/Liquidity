@@ -41,11 +41,19 @@
       }
     }
 
+    // &:hover {
+    //   .future__line {
+    //     path {
+    //       stroke-opacity: 1;
+    //       stroke: #00e8b6;
+    //     }
+    //   }
+    // }
+
     &:hover {
       .future__line {
-        path {
-          stroke-opacity: 1;
-          stroke: #00e8b6;
+        g circle:nth-child(2) {
+          stroke: #515151;
         }
       }
     }
