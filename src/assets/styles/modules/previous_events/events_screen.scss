@@ -173,6 +173,12 @@
         border-bottom: 1.5px solid #37414a;
       }
     }
+
+    &:not(.scroll__list) {
+      .list {
+        height: 127px;
+      }
+    }
   }
 
   &__wrapper {
