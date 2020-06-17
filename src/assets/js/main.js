@@ -542,7 +542,7 @@ $(document).ready(function () {
     $(".business--slick_slider").flickity("select", index);
   });
 
-  $(".video_block--preview").click(function () {
+  $(".video_block--preview:not(.popup)").click(function () {
     $(this).toggleClass("video_block--preview--hidden");
     var src = $(this).siblings("iframe").attr("src");
     $(this)
@@ -636,6 +636,16 @@ $(document).ready(function () {
       type: "inline",
     });
   }
+
+  $(".video_modal--js").click(function () {
+    var video_id = $(this).data("id");
+    console.log(video_id);
+    event.preventDefault();
+    $.fancybox.open({
+      src: `#modal_video_${video_id}`,
+      type: "inline",
+    });
+  });
 
   $(".js-modal2-btn").click(function () {
     modal2();
