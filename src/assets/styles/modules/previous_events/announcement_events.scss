@@ -54,5 +54,12 @@
     line-height: 19px;
     /* identical to box height, or 178% */
     color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+    padding: 10px 23px;
   }
 }

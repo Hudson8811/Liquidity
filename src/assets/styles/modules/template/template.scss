@@ -7,6 +7,10 @@ body {
   line-height: 16px;
   background: #fff;
   overflow-x: hidden;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 .unselectable {

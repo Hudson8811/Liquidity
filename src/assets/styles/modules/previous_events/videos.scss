@@ -7,6 +7,12 @@
 
   .video_block {
     margin-top: 35px;
+    overflow: hidden;
+
+    .image_preview {
+      height: 101%;
+      width: 101%;
+    }
   }
 
   & > .video_block:nth-child(1) {
@@ -28,18 +34,10 @@
 
     .video_block {
       height: 218px;
-
-      .image_preview {
-        height: 101%;
-      }
     }
 
     .video_block--youtube_btn {
       width: 56px;
     }
-  }
-
-  .video_description {
-    font-size: 20px;
   }
 }

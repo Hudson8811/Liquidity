@@ -15,6 +15,19 @@
 
 .partners_content__section {
   background: #1d262f;
+
+  .section__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+
+    text-align: center;
+
+    color: #ffffff;
+    margin-bottom: 180px;
+  }
 }
 
 .partners {
@@ -228,10 +241,10 @@
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    line-height: 140%;
+    line-height: 20px;
     /* or 18px */
     margin-top: 20px;
-    color: #ffffff;
+    color: #cecece;
 
     & + .partners__text {
       margin-top: 20px;

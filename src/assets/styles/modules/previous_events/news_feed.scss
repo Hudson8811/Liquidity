@@ -10,19 +10,13 @@
       height: 248px;
       padding: 15px 19px;
 
-      .also__content {
-        transform: translateY(41%);
-      }
-
-      &:hover {
-        .also__content {
-          transform: translateY(0);
-        }
-      }
-
       &__description {
         font-size: 16px;
         line-height: 21px;
+      }
+
+      .also__btn {
+        top: 15px;
       }
     }
 
@@ -85,35 +79,12 @@
         @media screen and (max-width: 1000px) {
           max-width: none;
         }
-
-        &:not(:hover) {
-          .also__content {
-            transform: translateY(50%);
-          }
-        }
-
-        &:hover {
-          .also__content {
-            transform: translateY(5px);
-          }
-        }
       }
     }
   }
 
   .also__flex:nth-child(7n - 1) {
     .also {
-      &:not(:hover) {
-        .also__content {
-          transform: translateY(50%);
-        }
-      }
-
-      &:hover {
-        .also__content {
-          transform: translateY(5px);
-        }
-      }
     }
   }
 
@@ -129,18 +100,6 @@
 
         @media screen and (max-width: 1000px) {
           max-width: none;
-        }
-
-        &:not(:hover) {
-          .also__content {
-            transform: translateY(50%);
-          }
-        }
-
-        &:hover {
-          .also__content {
-            transform: translateY(5px);
-          }
         }
       }
     }

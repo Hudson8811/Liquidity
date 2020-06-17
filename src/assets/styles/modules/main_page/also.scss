@@ -79,7 +79,15 @@
     }
 
     .also__content {
-      transform: translateY(-20%);
+      transform: translateY(0);
+
+      .also__subdescription {
+        padding-top: 10px;
+      }
+
+      .also__description {
+        min-height: 1px;
+      }
     }
 
     .also__title {
@@ -95,6 +103,15 @@
     line-height: 27px;
     /* or 150% */
     color: #ffffff;
+    height: auto;
+    max-height: 70px;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    transition: min-height 0.5s, height 0.5s;
   }
 
   &__btn {
@@ -135,7 +152,10 @@
     line-height: 21px;
     /* or 150% */
     color: #ffffff;
-    margin-top: 23px;
+    padding-top: 23px;
+    height: 70px;
+    overflow: hidden;
+    transition: padding 0.5s;
   }
 
   &__date {
@@ -218,7 +238,7 @@
     margin-top: auto;
     transition: all 0.5s;
 
-    transform: translateY(40%);
+    transform: translateY(90px);
   }
 
   &__delay {

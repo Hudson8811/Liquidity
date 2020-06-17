@@ -5,17 +5,13 @@
   background-size: cover;
   padding: 150px 0;
 
-  @media screen and (min-width: 1920px) {
-    background-position: left top;
-  }
-
   .section__subtitle.bold {
     font-weight: 600;
     margin-top: 20px;
   }
 
   .section__subtitle {
-    line-height: 21px;
+    line-height: 30px;
     color: #fff;
   }
 
@@ -40,27 +36,21 @@
     }
   }
 
-  &__item {
-    width: 196px;
-
-    &:nth-child(2) {
-      .list {
-        width: 196px;
-      }
-    }
-  }
-
   .list {
     background: #2a3139;
-    border: 1.5px solid #37414a;
+
     box-sizing: border-box;
     border-radius: 0;
-    max-height: 161px;
     margin-top: 0;
     box-shadow: none;
     left: -2px;
     overflow: auto;
     width: 198px;
+
+    .mCSB_scrollTools_vertical {
+      opacity: 0 !important;
+      transition: none !important;
+    }
 
     .option {
       padding-left: 24px;
@@ -119,6 +109,22 @@
     .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
       opacity: 1;
       background: #37414a;
+    }
+  }
+
+  &__item {
+    width: 196px;
+
+    &:nth-child(2) {
+      .list {
+        width: 196px;
+      }
+    }
+
+    &.scroll__list {
+      .mCSB_scrollTools_vertical {
+        opacity: 1 !important;
+      }
     }
   }
 

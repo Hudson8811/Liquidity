@@ -23,18 +23,6 @@
         @media screen and (max-width: 1000px) {
           max-width: none;
         }
-
-        &:not(:hover) {
-          .also__content {
-            transform: translateY(50%);
-          }
-        }
-
-        &:hover {
-          .also__content {
-            transform: translateY(5px);
-          }
-        }
       }
     }
   }
@@ -52,32 +40,6 @@
   .also__flex:nth-child(6n + 4) {
     .also {
       width: calc(33.333% - 40px / 3) !important;
-
-      &:nth-child(2) {
-        &:not(:hover) {
-          .also__content {
-            transform: translateY(55%);
-          }
-        }
-
-        &:hover {
-          .also__content {
-            transform: translateY(5px);
-          }
-        }
-      }
-
-      &:not(:hover) {
-        .also__content {
-          transform: translateY(50%);
-        }
-      }
-
-      &:hover {
-        .also__content {
-          transform: translateY(5px);
-        }
-      }
 
       @media screen and (max-width: 1000px) {
         width: 100% !important;

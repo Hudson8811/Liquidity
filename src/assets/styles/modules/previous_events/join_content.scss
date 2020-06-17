@@ -9,6 +9,9 @@
       height: 50vw;
       margin-top: 50px;
     }
+    &--preview .image_preview {
+      height: 101%;
+    }
   }
 
   .back_btn {
@@ -67,6 +70,10 @@
       & p {
         margin-top: 10px;
       }
+    }
+
+    & + li {
+      margin-top: 10px;
     }
   }
 }
