@@ -1,3 +1,13 @@
+@keyframes border_w {
+  0% {
+    border-width: 0;
+  }
+
+  100% {
+    border-width: 35px;
+  }
+}
+
 .events {
   background: #edeff5;
   display: flex;
@@ -91,6 +101,8 @@
       .events_sidebar__link {
         border-width: 35px;
         font-weight: bold;
+
+        animation: 2s ease-in-out border_w;
       }
 
       &.video {
