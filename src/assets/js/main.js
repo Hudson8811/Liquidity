@@ -719,7 +719,9 @@ $(document).ready(function () {
 
   $(".filter__item").niceSelect();
 
-  $(".filter__item .list").mCustomScrollbar();
+  $(".filter__item .list").mCustomScrollbar({
+    mouseWheel: { preventDefault: true },
+  });
 
   $(".invoiced__slider--js").on("change.flickity", function (event, index) {
     if (index == 2) {
