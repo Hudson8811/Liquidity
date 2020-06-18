@@ -39,13 +39,13 @@
     }
   }
 
-  &:hover {
-    .future__line {
-      g circle:nth-child(2) {
-        stroke: #00e8b6;
-      }
-    }
-  }
+  // &:hover {
+  //   .future__line {
+  //     g circle:nth-child(2) {
+  //       stroke: #00e8b6;
+  //     }
+  //   }
+  // }
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
