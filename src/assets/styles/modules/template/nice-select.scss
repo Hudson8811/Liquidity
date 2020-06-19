@@ -160,9 +160,6 @@ $arrow_color: $gray !default;
       font-weight: bold;
     }
 
-    &.selected {
-      font-weight: bold;
-    }
     &.disabled {
       background-color: transparent;
       color: $gray;

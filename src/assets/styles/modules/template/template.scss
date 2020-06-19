@@ -3569,3 +3569,21 @@ select:visited {
     color: #cecece;
   }
 }
+
+.section__have_filter {
+  min-height: 648px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__dosnt_filter {
+  min-height: 732px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

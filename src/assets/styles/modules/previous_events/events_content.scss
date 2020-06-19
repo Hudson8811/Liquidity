@@ -198,7 +198,6 @@
     /* or 203% */
     text-align: center;
     color: #494949;
-    margin-bottom: 7px;
     white-space: nowrap;
 
     @media screen and (max-width: 580px) {
@@ -210,7 +209,7 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: 8px 0;
+    padding: 7px 0;
     border: none;
     border-bottom: 1px solid #767676;
     border-radius: 0;
@@ -397,10 +396,11 @@
 
     &__banner {
       width: 100%;
+      transition: all 0.5s;
     }
 
     &:hover {
-      .future__content {
+      .future__banner {
         filter: brightness(0.5);
       }
     }
@@ -736,6 +736,16 @@
 
   padding-bottom: 16px;
   border-bottom: 1px solid #d6d6d6;
+
+  &:hover {
+    color: #6c6c6c;
+
+    svg {
+      path {
+        stroke: #6c6c6c;
+      }
+    }
+  }
 }
 
 .section__report_also {
