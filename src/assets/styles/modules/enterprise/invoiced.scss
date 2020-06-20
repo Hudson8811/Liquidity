@@ -37,6 +37,18 @@
         max-width: 70.5vw;
         margin-top: 6vw;
       }
+
+      .item:nth-child(1) {
+        img {
+          object-position: top;
+        }
+      }
+
+      .item:nth-child(2) {
+        img {
+          object-position: bottom;
+        }
+      }
     }
 
     &__img {
@@ -44,9 +56,12 @@
       width: 100%;
       max-width: 554px;
       margin: 0 auto;
+      height: 567px;
+      object-fit: cover;
 
       @media screen and (max-width: 1060px) {
         max-width: 52.3vw;
+        height: 53.5vw;
       }
     }
   }
