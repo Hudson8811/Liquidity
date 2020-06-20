@@ -9,6 +9,11 @@
       height: 50vw;
       margin-top: 50px;
     }
+
+    &--preview {
+      overflow: hidden;
+    }
+
     &--preview .image_preview {
       height: 101%;
     }
