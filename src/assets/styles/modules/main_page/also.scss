@@ -36,6 +36,8 @@
   background-position: center;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
 
   &__shadow {
     display: block;
@@ -81,6 +83,9 @@
 
     .also__content {
       transform: translateY(0);
+      margin-top: 0;
+      max-height: 154px;
+      min-height: 154px;
 
       .also__subdescription {
         padding-top: 10px;
@@ -111,6 +116,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    flex-shrink: 0;
     box-sizing: border-box;
     transition: min-height 0.5s, height 0.5s;
   }
@@ -155,7 +161,6 @@
     color: #ffffff;
     padding-top: 23px;
     height: 70px;
-    overflow: hidden;
     transition: padding 0.5s;
   }
 
@@ -236,10 +241,15 @@
   &__content {
     position: relative;
     z-index: 2;
-    margin-top: auto;
-    transition: all 0.5s;
 
     transform: translateY(90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 1000px;
+    min-height: 1px;
+    transition: transform 0.5s, min-height 0s, max-height 0s;
   }
 
   &__delay {

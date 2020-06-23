@@ -163,12 +163,12 @@
 
       circle {
         fill: transparent;
-        stroke-dasharray: 400%, 1000px;
       }
 
       &.anim_circle_bar {
         circle {
           animation: 1s ease-out circle_bar;
+          animation-delay: 1.5s;
         }
       }
     }
