@@ -428,10 +428,9 @@ $(document).ready(function () {
       checkPosition();
     } else if ($("body").hasClass("circle_anim")) {
       checkPositionCircle();
-    } else if($("body").hasClass("navbar_animation")){
-      checkPositionNavbarAnim()
-    }
-    else {
+    } else if ($("body").hasClass("navbar_animation")) {
+      checkPositionNavbarAnim();
+    } else {
       checkPositionSpeed();
     }
   }
@@ -1207,14 +1206,14 @@ $(document).on("click", ".office_slider__item", function (e) {
 
 function timer(f_time) {
   function timer_go() {
-    var n_time = Date.now();
-    var diff = f_time - n_time;
+    let n_time = Date.now();
+    let diff = f_time - n_time;
     if (diff <= 0) return false;
-    var left = diff % 1000;
+    let left = diff % 1000;
 
     //секунды
     diff = parseInt(diff / 1000);
-    var s = diff % 60;
+    let s = diff % 60;
     if (s < 10) {
       $(".timer:not(.disabled) .timer_section .seconds_1").html(0);
       $(".timer:not(.disabled) .timer_section .seconds_2").html(s);
@@ -1226,7 +1225,7 @@ function timer(f_time) {
     }
     //минуты
     diff = parseInt(diff / 60);
-    var m = diff % 60;
+    let m = diff % 60;
     if (m < 10) {
       $(".timer:not(.disabled) .timer_section .minutes_1").html(0);
       $(".timer:not(.disabled) .timer_section .minutes_2").html(m);
@@ -1238,7 +1237,7 @@ function timer(f_time) {
     }
     //часы
     diff = parseInt(diff / 60);
-    var h = diff % 24;
+    let h = diff % 24;
     if (h < 10) {
       $(".timer:not(.disabled) .timer_section .hours_1").html(0);
       $(".timer:not(.disabled) .timer_section .hours_2").html(h);
@@ -1247,7 +1246,7 @@ function timer(f_time) {
       $(".timer:not(.disabled) .timer_section .hours_2").html(h % 10);
     }
     //дни
-    var d = parseInt(diff / 24);
+    let d = parseInt(diff / 24);
     if (d < 10) {
       $(".timer:not(.disabled) .timer_section .days_1").html(0);
       $(".days_2").html(d);
@@ -1261,12 +1260,12 @@ function timer(f_time) {
 }
 
 $(document).ready(function () {
-  var time = $(".timer").attr("data-finish");
+  let time = $(".timer").attr("data-finish");
   timer(time);
 });
 
 $(".family__block").hover(function () {
-  var familyTarget = $(this).data("target");
+  let familyTarget = $(this).data("target");
   $(".says__flickity--js").flickity("select", familyTarget);
 });
 
