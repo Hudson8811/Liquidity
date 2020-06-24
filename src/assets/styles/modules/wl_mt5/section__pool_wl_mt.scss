@@ -1,0 +1,37 @@
+.section__pool_wl_mt {
+  border-top: 1px solid #575757;
+
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .section__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .trading__flex {
+    margin: 101px auto 80px;
+  }
+
+  .section__subtitle__pool {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 33px;
+    /* or 160% */
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .check_block--mam_platform-item--text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+}

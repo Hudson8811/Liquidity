@@ -1,0 +1,49 @@
+.section__branding_wl_mt {
+  .banner {
+    max-width: 820px;
+    margin: 80px auto;
+  }
+
+  .trading__flex {
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    max-width: 794px;
+    margin: 0 auto;
+    margin-bottom: -13px;
+  }
+
+  .branding_wl_mt__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    color: #383838;
+    margin-bottom: 46px;
+  }
+
+  .check_block--mam_platform-item {
+    margin: 0 15px 13px 15px;
+
+    &--text {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+      letter-spacing: 0;
+      color: #555555;
+    }
+
+    &:nth-child(6) {
+      margin-right: 0;
+    }
+
+    &:nth-child(5) {
+      margin-right: 30px;
+      margin-left: 0;
+    }
+  }
+}

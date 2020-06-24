@@ -416,7 +416,7 @@ select:visited {
 
 .main-text {
   font-weight: normal;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
   color: #63636e;
 }
 
@@ -1937,7 +1937,7 @@ select:visited {
     font-size: 24px;
     line-height: 35px;
     /* or 146% */
-    letter-spacing: -0.6px;
+    letter-spacing: 0;
     padding-right: 0;
     color: #ffffff;
   }
