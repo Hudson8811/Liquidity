@@ -3559,10 +3559,14 @@ select:visited {
     padding: 27px 36px;
     background: #1a222b;
     border-radius: 0px 0px 5px 5px;
+    box-sizing: border-box;
+    min-height: 136px;
   }
 
   .video_description {
     color: #fff;
+    margin-top: 0;
+    margin-bottom: 13px;
   }
 
   .video_subdescription {

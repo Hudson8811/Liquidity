@@ -63,18 +63,18 @@
   }
   .also__overlay {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -1px;
+    top: -1px;
     display: block;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    transition: all 0.5s;
+    width: 105%;
+    height: 105%;
+    background: #121212;
+    opacity: 0;
+    transition: opacity 0.4s;
   }
   &:hover {
     .also__overlay {
-      height: 100%;
-      background: #121212;
+      opacity: 1;
     }
 
     .also__btn {
@@ -215,7 +215,8 @@
   }
 
   &__title {
-    position: relative;
+    position: absolute;
+    top: 20px;
     z-index: 2;
     font-family: Roboto;
     font-style: normal;
@@ -227,6 +228,7 @@
     align-items: center;
     justify-content: flex-start;
     color: #ffffff;
+
     transition: opacity 0.1s;
 
     &:before {

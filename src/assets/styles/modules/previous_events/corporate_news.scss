@@ -1,20 +1,6 @@
 .corporate_news_content {
   .also__flex:nth-child(6n + 4) {
     .also {
-      &:nth-child(1) {
-        &:not(:hover) {
-          .also__content {
-            transform: translateY(55%);
-          }
-        }
-
-        &:hover {
-          .also__content {
-            transform: translateY(5px);
-          }
-        }
-      }
-
       @media screen and (max-width: 1000px) {
         width: 100% !important;
       }

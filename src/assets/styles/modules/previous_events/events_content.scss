@@ -40,7 +40,6 @@
   width: 180px;
   margin-right: 29px;
   flex-shrink: 0;
-
   position: sticky;
 
   top: 100px;
@@ -92,6 +91,8 @@
   &__li {
     margin-bottom: 1px;
     background: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
 
     &:last-child {
       margin-bottom: 0;
@@ -456,7 +457,7 @@
     font-size: 18px;
     line-height: 21px;
     /* identical to box height */
-    letter-spacing: 0;
+    letter-spacing: 0.1em;
     color: #343434;
     text-align: center;
     margin-bottom: 14px;

@@ -27,9 +27,6 @@
         width: 100%;
       }
 
-      .video_description {
-        font-size: 20px;
-      }
       &:nth-child(2) {
         margin-left: 20px;
 
@@ -41,9 +38,14 @@
 
     .video_block {
       height: 218px;
+      overflow: hidden;
 
       .video_block--youtube_btn {
         width: 56px;
+      }
+      .video_block--preview .image_preview {
+        width: 101%;
+        height: 101%;
       }
     }
   }
