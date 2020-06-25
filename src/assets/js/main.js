@@ -24,402 +24,149 @@ $(document).ready(function () {
       .slideToggle();
   });
 
-  function outNum1() {
-    const wub1_num = 51;
-    const wub1_time = 2500; //ms
-    const wub1_step = 1;
-    let wub1_el = document.querySelector("#wub1--js");
-    let wub1_n = 0;
-    let wub1_t = Math.round(wub1_time / (wub1_num / wub1_step));
+  function get_timer(id) {
+    time = $(id).data("time");
+    let date_new = time;
+    let date_t = new Date(date_new);
+    let date = new Date();
+    let timer = date_t - date;
+    let timeout = "00 : 00 : 00";
+    let timedisabled = "72 : 00 : 00";
+
+    if (date_t > date) {
+      let hour = parseInt(timer / (60 * 60 * 1000));
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      hour = hour.toString();
+      let min = parseInt(timer / (1000 * 60)) % 60;
+      if (min < 10) {
+        min = "0" + min;
+      }
+      min = min.toString();
+      let sec = parseInt(timer / 1000) % 60;
+      if (sec < 10) {
+        sec = "0" + sec;
+      }
+      sec = sec.toString();
+      let timethis = hour + " : " + min + " : " + sec;
+
+      if ($(id).hasClass("disabled")) {
+        $(` ${id}   .timer_section`).text(timedisabled);
+      } else {
+        $(` ${id}   .timer_section`).text(timethis);
+      }
+    } else {
+      $(` ${id}   .timer_section`).text(timeout);
+    }
+  }
+
+  timer = function (element) {
+    setInterval(function () {
+      get_timer(element);
+    }, 1000);
+  };
+
+  timer("#timer1");
+  timer("#timer2");
+  timer("#timer3");
+  timer("#timer4");
+  timer("#timer5");
+
+  function outNum(number, time, element) {
+    const wub_num = number;
+    const wub_time = time; //ms
+    const wub_step = 1;
+    let wub_el = document.querySelector(element);
+    let wub_n = 0;
+    let wub_t = Math.round(wub_time / (wub_num / wub_step));
     let interval = setInterval(function () {
-      wub1_n = wub1_n + wub1_step;
-      if (wub1_n == wub1_num) {
+      wub_n = wub_n + wub_step;
+      if (wub_n == wub_num) {
         clearInterval(interval);
       }
-      wub1_el.innerHTML = wub1_n;
-    }, wub1_t);
-
-    // let timeout = setTimeout(function () {
-    //   wub1_num2 = 51;
-    //   wub1_t2 = wub1_t + 500;
-    //   let wub1_interval = setInterval(function () {
-    //     wub1_n = wub1_n + wub1_step;
-    //     if (wub1_n == wub1_num2) {
-    //       clearInterval(wub1_interval);
-    //     }
-    //     wub1_el.innerHTML = wub1_n;
-    //   }, wub1_t2);
-    // }, wub1_t);
+      wub_el.innerHTML = wub_n;
+    }, wub_t);
   }
 
-  function outNum2() {
-    const wub2_num = 27;
-    const wub2_time = 2100; //ms
-    const wub2_step = 1;
-    let wub2_el = document.querySelector("#wub2--js");
-    let wub2_n = 0;
-    let wub2_t = Math.round(wub2_time / (wub2_num / wub2_step));
-    let interval2 = setInterval(function () {
-      wub2_n = wub2_n + wub2_step;
-      if (wub2_n == wub2_num) {
-        clearInterval(interval2);
-      }
-      wub2_el.innerHTML = wub2_n;
-    }, wub2_t);
-
-    // let timeout2 = setTimeout(function () {
-    //   wub2_num2 = 27;
-    //   wub2_t2 = wub2_t + 500;
-    //   let wub2_interval = setInterval(function () {
-    //     wub2_n = wub2_n + wub2_step;
-    //     if (wub2_n == wub2_num2) {
-    //       clearInterval(wub2_interval);
-    //     }
-    //     wub2_el.innerHTML = wub2_n;
-    //   }, wub2_t2);
-    // }, wub2_t);
-  }
-
-  function outNum3() {
-    const wub3_num = 15;
-    const wub3_time = 1800; //ms
-    const wub3_step = 1;
-    let wub3_el = document.querySelector("#wub3--js");
-    let wub3_n = 0;
-    let wub3_t = Math.round(wub3_time / (wub3_num / wub3_step));
-    let interval3 = setInterval(function () {
-      wub3_n = wub3_n + wub3_step;
-      if (wub3_n == wub3_num) {
-        clearInterval(interval3);
-      }
-      wub3_el.innerHTML = wub3_n;
-    }, wub3_t);
-
-    // let timeout3 = setTimeout(function () {
-    //   wub3_num2 = 15;
-    //   wub3_t2 = wub3_t + 500;
-    //   let wub3_interval = setInterval(function () {
-    //     wub3_n = wub3_n + wub3_step;
-    //     if (wub3_n == wub3_num2) {
-    //       clearInterval(wub3_interval);
-    //     }
-    //     wub3_el.innerHTML = wub3_n;
-    //   }, wub3_t2);
-    // }, wub3_t);
-  }
-
-  function outNum4() {
-    const wub4_num = 5;
-    const wub4_time = 1500; //ms
-    const wub4_step = 1;
-    let wub4_el = document.querySelector("#wub4--js");
-    let wub4_n = 0;
-    let wub4_t = Math.round(wub4_time / (wub4_num / wub4_step));
-    let interval4 = setInterval(function () {
-      wub4_n = wub4_n + wub4_step;
-      if (wub4_n == wub4_num) {
-        clearInterval(interval4);
-      }
-      wub4_el.innerHTML = wub4_n;
-    }, wub4_t);
-
-    // let timeout4 = setTimeout(function () {
-    //   wub4_num2 = 5;
-    //   wub4_t2 = wub4_t + 0;
-    //   let wub4_interval = setInterval(function () {
-    //     wub4_n = wub4_n + wub4_step;
-    //     if (wub4_n == wub4_num2) {
-    //       clearInterval(wub4_interval);
-    //     }
-    //     wub4_el.innerHTML = wub4_n;
-    //   }, wub4_t2);
-    // }, wub4_t);
-  }
-
-  function outNum5() {
-    const wub5_num = 18;
-    const wub5_time = 2000; //ms
-    const wub5_step = 1;
-    let wub5_el = document.querySelector("#wub5--js");
-    let wub5_n = 0;
-    let wub5_t = Math.round(wub5_time / (wub5_num / wub5_step));
-    let interval5 = setInterval(function () {
-      wub5_n = wub5_n + wub5_step;
-      if (wub5_n == wub5_num) {
-        clearInterval(interval5);
-      }
-      wub5_el.innerHTML = wub5_n;
-    }, wub5_t);
-
-    // let timeout5 = setTimeout(function () {
-    //   wub5_num2 = 18;
-    //   wub5_t2 = wub5_t + 500;
-    //   let wub5_interval = setInterval(function () {
-    //     wub5_n = wub5_n + wub5_step;
-    //     if (wub5_n == wub5_num2) {
-    //       clearInterval(wub5_interval);
-    //     }
-    //     wub5_el.innerHTML = wub5_n;
-    //   }, wub5_t2);
-    // }, wub5_t);
-  }
-
-  function outNum6() {
-    const wub4_num = 5;
-    const wub4_time = 1500; //ms
-    const wub4_step = 1;
-    let wub4_el = document.querySelector("#wub6--js");
-    let wub4_n = 0;
-    let wub4_t = Math.round(wub4_time / (wub4_num / wub4_step));
-    let interval4 = setInterval(function () {
-      wub4_n = wub4_n + wub4_step;
-      if (wub4_n == wub4_num) {
-        clearInterval(interval4);
-      }
-      wub4_el.innerHTML = wub4_n;
-    }, wub4_t);
-
-    // let timeout4 = setTimeout(function () {
-    //   wub4_num2 = 5;
-    //   wub4_t2 = wub4_t + 0;
-    //   let wub4_interval = setInterval(function () {
-    //     wub4_n = wub4_n + wub4_step;
-    //     if (wub4_n == wub4_num2) {
-    //       clearInterval(wub4_interval);
-    //     }
-    //     wub4_el.innerHTML = wub4_n;
-    //   }, wub4_t2);
-    // }, wub4_t);
-  }
-
-  function outNum7() {
-    const wub4_num = 1;
-    const wub4_time = 1000; //ms
-    const wub4_step = 1;
-    let wub4_el = document.querySelector("#wub7--js");
-    let wub4_n = 0;
-    let wub4_t = Math.round(wub4_time / (wub4_num / wub4_step));
-    let interval4 = setInterval(function () {
-      wub4_n = wub4_n + wub4_step;
-      if (wub4_n == wub4_num) {
-        clearInterval(interval4);
-      }
-      wub4_el.innerHTML = wub4_n;
-    }, wub4_t);
-
-    // let timeout4 = setTimeout(function () {
-    //   wub4_num2 = 5;
-    //   wub4_t2 = wub4_t + 0;
-    //   let wub4_interval = setInterval(function () {
-    //     wub4_n = wub4_n + wub4_step;
-    //     if (wub4_n == wub4_num2) {
-    //       clearInterval(wub4_interval);
-    //     }
-    //     wub4_el.innerHTML = wub4_n;
-    //   }, wub4_t2);
-    // }, wub4_t);
-  }
-  function checkPositionSpeed() {
+  function checkContent(element) {
     // координаты дива
-    var div_position2 = $(".speed_form--left").offset();
+    let div_position = $(element).offset();
     // отступ сверху
-    var div_top2 = div_position2.top;
+    let div_top = div_position.top;
     // отступ слева
-    var div_left2 = div_position2.left;
+    let div_left = div_position.left;
     // ширина
-    var div_width2 = $(".speed_form--left").width();
+    let div_width = $(element).width();
     // высота
-    var div_height2 = $(".speed_form--left").height();
+    let div_height = $(element).height();
 
     // проскроллено сверху
-    var top_scroll2 = $(document).scrollTop();
+    let top_scroll = $(document).scrollTop();
     // проскроллено слева
-    var left_scroll2 = $(document).scrollLeft();
+    let left_scroll = $(document).scrollLeft();
     // ширина видимой страницы
-    var screen_width2 = $(window).width();
+    let screen_width = $(window).width();
     // высота видимой страницы
-    var screen_height2 = $(window).height();
+    let screen_height = $(window).height();
 
     // координаты углов видимой области
-    var see2_x1 = left_scroll2;
-    var see2_x2 = screen_width2 + left_scroll2;
-    var see2_y1 = top_scroll2;
-    var see2_y2 = screen_height2 + top_scroll2;
+    let see_x1 = left_scroll;
+    let see_x2 = screen_width + left_scroll;
+    let see_y1 = top_scroll;
+    let see_y2 = screen_height + top_scroll;
 
     // координаты углов искомого элемента
-    var div2_x1 = div_left2;
-    var div2_x2 = div_left2 + div_height2;
-    var div2_y1 = div_top2;
-    var div2_y2 = div_top2 + div_width2;
+    let div_x1 = div_left;
+    let div_x2 = div_left + div_height;
+    let div_y1 = div_top;
+    let div_y2 = div_top + div_width;
 
-    // проверка - виден див полностью или нет
-    if (
-      div2_x1 >= see2_x1 &&
-      div2_x2 <= see2_x2 &&
-      div2_y1 >= see2_y1 &&
-      div2_y2 <= see2_y2
-    ) {
-      // если виден
-      $(".speed_form--gray_gr").addClass("active");
-      $(".speed_form--green_gr").addClass("active");
-
-      $(document).off("scroll");
-    } else {
-    }
-  }
-
-  function checkPositionCircle() {
-    // координаты дива
-    var div_position3 = $(".join__icon").offset();
-    // отступ сверху
-    var div_top3 = div_position3.top;
-    // отступ слева
-    var div_left3 = div_position3.left;
-    // ширина
-    var div_width3 = $(".join__icon").width();
-    // высота
-    var div_height3 = $(".join__icon").height();
-
-    // проскроллено сверху
-    var top_scroll3 = $(document).scrollTop();
-    // проскроллено слева
-    var left_scroll3 = $(document).scrollLeft();
-    // ширина видимой страницы
-    var screen_width3 = $(window).width();
-    // высота видимой страницы
-    var screen_height3 = $(window).height();
-
-    // координаты углов видимой области
-    var see3_x1 = left_scroll3;
-    var see3_x2 = screen_width3 + left_scroll3;
-    var see3_y1 = top_scroll3;
-    var see3_y2 = screen_height3 + top_scroll3;
-
-    // координаты углов искомого элемента
-    var div3_x1 = div_left3;
-    var div3_x2 = div_left3 + div_height3;
-    var div3_y1 = div_top3;
-    var div3_y2 = div_top3 + div_width3;
-
-    // проверка - виден див полностью или нет
-    if (
-      div3_x1 >= see3_x1 &&
-      div3_x2 <= see3_x2 &&
-      div3_y1 >= see3_y1 &&
-      div3_y2 <= see3_y2
-    ) {
-      // если виден
-      $(".join__icon svg").addClass("anim_circle_bar");
-
-      $(document).off("scroll");
-    } else {
-    }
-  }
-
-  function checkPositionNavbarAnim() {
-    // координаты дива
-    var div_position4 = $(".events_sidebar__ul").offset();
-    // отступ сверху
-    var div_top4 = div_position4.top;
-    // отступ слева
-    var div_left4 = div_position4.left;
-    // ширина
-    var div_width4 = $(".events_sidebar__ul").width();
-    // высота
-    var div_height4 = $(".events_sidebar__ul").height();
-
-    // проскроллено сверху
-    var top_scroll4 = $(document).scrollTop();
-    // проскроллено слева
-    var left_scroll4 = $(document).scrollLeft();
-    // ширина видимой страницы
-    var screen_width4 = $(window).width();
-    // высота видимой страницы
-    var screen_height4 = $(window).height();
-
-    // координаты углов видимой области
-    var see4_x1 = left_scroll4;
-    var see4_x2 = screen_width4 + left_scroll4;
-    var see4_y1 = top_scroll4;
-    var see4_y2 = screen_height4 + top_scroll4;
-
-    // координаты углов искомого элемента
-    var div4_x1 = div_left4;
-    var div4_x2 = div_left4 + div_height4;
-    var div4_y1 = div_top4;
-    var div4_y2 = div_top4 + div_width4;
-
-    // проверка - виден див полностью или нет
-    if (
-      div4_x1 >= see4_x1 &&
-      div4_x2 <= see4_x2 &&
-      div4_y1 >= see4_y1 &&
-      div4_y2 <= see4_y2
-    ) {
-      // если виден
-      $(".events_sidebar__li.active").addClass("go_animation");
-
-      $(document).off("scroll");
-    } else {
-    }
-  }
-
-  function checkPosition() {
-    // координаты дива
-    var div_position = $(
-      ".who_uses_section .container .who_uses_block__item"
-    ).offset();
-    // отступ сверху
-    var div_top = div_position.top;
-    // отступ слева
-    var div_left = div_position.left;
-    // ширина
-    var div_width = $(
-      ".who_uses_section .container .who_uses_block__item"
-    ).width();
-    // высота
-    var div_height = $(
-      ".who_uses_section .container .who_uses_block__item"
-    ).height();
-
-    // проскроллено сверху
-    var top_scroll = $(document).scrollTop();
-    // проскроллено слева
-    var left_scroll = $(document).scrollLeft();
-    // ширина видимой страницы
-    var screen_width = $(window).width();
-    // высота видимой страницы
-    var screen_height = $(window).height();
-
-    // координаты углов видимой области
-    var see_x1 = left_scroll;
-    var see_x2 = screen_width + left_scroll;
-    var see_y1 = top_scroll;
-    var see_y2 = screen_height + top_scroll;
-
-    // координаты углов искомого элемента
-    var div_x1 = div_left;
-    var div_x2 = div_left + div_height;
-    var div_y1 = div_top;
-    var div_y2 = div_top + div_width;
-
-    // проверка - виден див полностью или нет
     if (
       div_x1 >= see_x1 &&
       div_x2 <= see_x2 &&
       div_y1 >= see_y1 &&
       div_y2 <= see_y2
     ) {
-      // если виден
-      outNum1();
-      outNum2();
-      outNum3();
-      outNum4();
-      outNum5();
-      outNum6();
-      outNum7();
+      return true;
+    }
+  }
+  function checkPositionSpeed() {
+    // проверка - виден див полностью или нет
+    if (checkContent(".speed_form--left") === true) {
+      $(".speed_form--gray_gr").addClass("active");
+      $(".speed_form--green_gr").addClass("active");
       $(document).off("scroll");
-    } else {
+    }
+  }
+
+  function checkPositionCircle() {
+    if (checkContent(".join__icon") === true) {
+      $(".join__icon svg").addClass("anim_circle_bar");
+      $(document).off("scroll");
+    }
+  }
+
+  function checkPositionNavbarAnim() {
+    if (checkContent(".events_sidebar__ul") === true) {
+      $(".events_sidebar__li.active").addClass("go_animation");
+      $(document).off("scroll");
+    }
+  }
+
+  function checkPosition() {
+    if (
+      checkContent(".who_uses_section .container .who_uses_block__item") ===
+      true
+    ) {
+      outNum(51, 2500, "#wub1--js");
+      outNum(27, 2100, "#wub2--js");
+      outNum(15, 1800, "#wub3--js");
+      outNum(5, 1500, "#wub4--js");
+      outNum(18, 2000, "#wub5--js");
+      outNum(5, 1500, "#wub6--js");
+      outNum(1, 1000, "#wub7--js");
+      $(document).off("scroll");
     }
   }
 
@@ -467,25 +214,6 @@ $(document).ready(function () {
     $(".lizy").toggleClass("hide");
     $(".js-show_much").removeClass("hide");
   });
-  // $('.grafic_slider--slick').slick({
-  //     infinite: true,
-  //     speed: 500,
-  //     slidesToShow: 1,
-  //     sliderToScroll: 1,
-  //     variableWidth: true,
-  //     centerMode: true,
-  //     prevArrow: $('.slick--prev'),
-  //     nextArrow: $('.slick--next'),
-  // });
-  // $('.mac_slider--slick').slick({
-  //     infinite: true,
-  //     speed: 300,
-  //     slidesToShow: 1,
-  //     variableWidth: true,
-  //     centerMode: true,
-  //     prevArrow: $('.mac_slick--prev'),
-  //     nextArrow: $('.mac_slick--next'),
-  // });
 
   $(".hear_flickity--js").flickity({
     pageDots: false,
@@ -973,49 +701,6 @@ $(document).ready(function () {
     $(".says__flickity--js").flickity("select", index);
   });
 
-  ///////////////////////////////////// СТАРАЯ ТАБЛИЦА ///////////////////////////////////////
-  // $(document).on("click", "body", function (e) {
-  //   var targetI = e.target;
-  //   if (
-  //     !targetI.classList.contains("packages_table__wrapper") &&
-  //     !targetI.classList.contains("packages_hide_table_btn") &&
-  //     !targetI.classList.contains("packages_more_table_btn") &&
-  //     !targetI.classList.contains("packages_table__row") &&
-  //     !targetI.classList.contains("packages_table__col") &&
-  //     !targetI.classList.contains("svg-sprite-icon") &&
-  //     targetI.classList.contains("section__packages")
-  //   ) {
-  //     $("html, body").animate(
-  //       { scrollTop: $(".section__packages").offset().top },
-  //       2000
-  //     );
-  //     $(".packages_table__wrapper-js-2").slideUp();
-  //     $(".packages_table__wrapper-js-1").slideDown();
-  //     $(".packages_more_table_btn").removeClass("active");
-  //     $(".packages_hide_table_btn").removeClass("active");
-  //   }
-  // });
-
-  // $(function () {
-  //   $(".packages_hide_table_btn").click(function (e) {
-  //     e.preventDefault();
-  //     var target = $(this).attr("href");
-  //     $(".packages_table__wrapper-js-2").slideUp();
-  //     $(".packages_table__wrapper-js-1").slideDown();
-  //     $(".packages_more_table_btn").removeClass("active");
-  //     $(".packages_hide_table_btn").removeClass("active");
-  //     $("html, body").animate({ scrollTop: $(target).offset().top }, 2000);
-  //   });
-  // });
-
-  // $(document).on("click", ".packages_more_table_btn--js", function (e) {
-  //   e.preventDefault();
-  //   $(this).addClass("active");
-  //   $(".packages_hide_table_btn--js").addClass("active");
-  //   $(".packages_table__wrapper-js-1").slideUp();
-  //   $(".packages_table__wrapper-js-2").slideDown();
-  // });
-
   $(".trading__slider").flickity({
     wrapAround: true,
     contain: true,
@@ -1059,52 +744,6 @@ $(document).on("mouseleave", ".big_header", function (event) {
   $(".big_menu_btn--js").removeClass("active");
   $(".burger--js").removeClass("active");
 });
-
-// $(document).on("hover", ".big_menu_btn--js", function (event) {
-//   if ($(window).width() > 900) {
-//     event.preventDefault();
-//     if (!$(this).hasClass("active")) {
-//       var id = $(this).data("id");
-//       $(".big_menu_btn--js").removeClass("active");
-//       $(this).addClass("active");
-//       $('.big_menu_content--js[data-id="' + id + '"]');
-//       $(".big_menu_content--js")
-//         .fadeOut(300)
-//         .promise()
-//         .done(function () {
-//           $('.big_menu_content--js[data-id="' + id + '"]')
-//             .addClass("active")
-//             .promise()
-//             .done(function () {
-//               $(this).fadeIn(300);
-//             });
-//         });
-//     }
-//   } else return;
-// });
-
-// $(document).on("click", ".big_menu_btn--js", function (event) {
-//   event.preventDefault();
-//   if (!$(this).hasClass("active")) {
-//     $("body").addClass("hidden");
-//     $(".big_header").addClass("active");
-//     var id = $(this).data("id");
-//     $(".big_menu_btn--js").removeClass("active");
-//     $(this).addClass("active");
-//     $(".burger--js").addClass("active");
-//     $(".big_menu_content--js")
-//       .fadeOut(300)
-//       .promise()
-//       .done(function () {
-//         $('.big_menu_content--js[data-id="' + id + '"]')
-//           .addClass("active")
-//           .promise()
-//           .done(function () {
-//             $(this).fadeIn(300);
-//           });
-//       });
-//   }
-// });
 
 $(document).on("click", ".faq_btn_js", function (event) {
   event.preventDefault();
@@ -1202,66 +841,6 @@ $(".advanced_slider--slick-2").slick({
 $(document).on("click", ".office_slider__item", function (e) {
   let index = $(this).index();
   $(".office_slider").flickity("select", index);
-});
-
-function timer(f_time) {
-  function timer_go() {
-    let n_time = Date.now();
-    let diff = f_time - n_time;
-    if (diff <= 0) return false;
-    let left = diff % 1000;
-
-    //секунды
-    diff = parseInt(diff / 1000);
-    let s = diff % 60;
-    if (s < 10) {
-      $(".timer:not(.disabled) .timer_section .seconds_1").html(0);
-      $(".timer:not(.disabled) .timer_section .seconds_2").html(s);
-    } else {
-      $(".timer:not(.disabled) .timer_section .seconds_1").html(
-        parseInt(s / 10)
-      );
-      $(".timer:not(.disabled) .timer_section .seconds_2").html(s % 10);
-    }
-    //минуты
-    diff = parseInt(diff / 60);
-    let m = diff % 60;
-    if (m < 10) {
-      $(".timer:not(.disabled) .timer_section .minutes_1").html(0);
-      $(".timer:not(.disabled) .timer_section .minutes_2").html(m);
-    } else {
-      $(".timer:not(.disabled) .timer_section .minutes_1").html(
-        parseInt(m / 10)
-      );
-      $(".timer:not(.disabled) .timer_section .minutes_2").html(m % 10);
-    }
-    //часы
-    diff = parseInt(diff / 60);
-    let h = diff % 24;
-    if (h < 10) {
-      $(".timer:not(.disabled) .timer_section .hours_1").html(0);
-      $(".timer:not(.disabled) .timer_section .hours_2").html(h);
-    } else {
-      $(".timer:not(.disabled) .timer_section .hours_1").html(parseInt(h / 10));
-      $(".timer:not(.disabled) .timer_section .hours_2").html(h % 10);
-    }
-    //дни
-    let d = parseInt(diff / 24);
-    if (d < 10) {
-      $(".timer:not(.disabled) .timer_section .days_1").html(0);
-      $(".days_2").html(d);
-    } else {
-      $(".timer:not(.disabled) .timer_section .days_1").html(parseInt(d / 10));
-      $(".timer:not(.disabled) .timer_section .days_2").html(d % 10);
-    }
-    setTimeout(timer_go, left);
-  }
-  setTimeout(timer_go, 0);
-}
-
-$(document).ready(function () {
-  let time = $(".timer").attr("data-finish");
-  timer(time);
 });
 
 $(".family__block").hover(function () {
