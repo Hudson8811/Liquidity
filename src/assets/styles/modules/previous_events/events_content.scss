@@ -106,22 +106,22 @@
           border-width: 15px;
         }
       }
+    }
 
-      &.video {
-        .events_sidebar__link {
-          position: relative;
+    &.video {
+      .events_sidebar__link {
+        position: relative;
 
-          &:before {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 6px;
-            background: center / auto url(../images/little_u.svg) no-repeat;
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            margin-top: -3px;
-          }
+        &:before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 6px;
+          background: center / auto url(../images/little_u.svg) no-repeat;
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          margin-top: -3px;
         }
       }
     }
