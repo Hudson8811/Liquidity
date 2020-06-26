@@ -3212,6 +3212,10 @@ select:visited {
 
 .section.b2_form.light_theme.main__white_form {
   background: center / cover url(../images/contact_us_bg.png) no-repeat;
+
+  .new_form__label_capch {
+    border-left: 0;
+  }
 }
 
 .schem2 {
