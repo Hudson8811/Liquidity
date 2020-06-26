@@ -49,7 +49,7 @@ $(document).ready(function () {
         sec = "0" + sec;
       }
       sec = sec.toString();
-      let timethis = hour + " : " + min + " : " + sec;
+      let timethis = hour + ":" + min + ":" + sec;
 
       if ($(id).hasClass("disabled")) {
         $(` ${id}   .timer_section`).text(timedisabled);
