@@ -131,6 +131,16 @@ $(document).ready(function () {
       return true;
     }
   }
+  function circleAnimation() {
+    setTimeout(() => {
+      $(".join__icon svg").addClass("is-active");
+    }, 1500);
+  }
+  if (!$("body").hasClass("circle_anim")) {
+    circleAnimation();
+  } else {
+  }
+
   function checkPositionSpeed() {
     // проверка - виден див полностью или нет
     if (checkContent(".speed_form--left") === true) {
@@ -142,6 +152,7 @@ $(document).ready(function () {
 
   function checkPositionCircle() {
     if (checkContent(".join__icon") === true) {
+      circleAnimation();
       $(".join__icon svg").addClass("anim_circle_bar");
       $(document).off("scroll");
     }

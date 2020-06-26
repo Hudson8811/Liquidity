@@ -4,7 +4,7 @@
   }
 
   100% {
-    border-width: 35px;
+    border-width: 15px;
   }
 }
 
@@ -103,7 +103,7 @@
         .events_sidebar__link {
           font-weight: bold;
           animation: 1s ease-in-out border_w;
-          border-width: 35px;
+          border-width: 15px;
         }
       }
 
@@ -322,6 +322,10 @@
 
     .future__description {
       padding-top: 3px;
+    }
+
+    .future__content {
+      height: 240px;
     }
 
     &__month {

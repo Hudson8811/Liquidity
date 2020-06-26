@@ -10,7 +10,7 @@
   }
 
   .also + .also {
-    margin-left: 16px;
+    margin-left: 0;
   }
 
   .also {
@@ -96,7 +96,8 @@
     &:nth-child(4n) {
       width: 100%;
       margin-left: 0;
-      padding: 74px 85px 55px;
+      padding: 74px 88px 55px;
+      margin-bottom: 16px;
 
       @media screen and (max-width: 580px) {
         padding: 20px;
@@ -160,6 +161,10 @@
         font-size: 25px;
         line-height: 28px;
       }
+    }
+
+    &__media_content {
+      width: 100%;
     }
   }
 
@@ -255,6 +260,7 @@
 
 .media_content_two {
   background: #edeff5;
+  padding-top: 0;
 
   .container {
     padding-left: 211px;
