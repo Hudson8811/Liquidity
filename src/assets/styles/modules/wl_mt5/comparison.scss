@@ -1,0 +1,25 @@
+.section__comparison__wl_mt5 {
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .enguine_table .row .col:nth-child(2),
+  .enguine_table .row .col:nth-child(3) {
+    flex-direction: column;
+
+    span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      /* or 138% */
+      text-align: center;
+      letter-spacing: 0;
+      color: #3f3f3f;
+    }
+
+    .svg-sprite-icon + span {
+      margin-top: 5px;
+    }
+  }
+}

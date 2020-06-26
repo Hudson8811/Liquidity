@@ -1,0 +1,59 @@
+.section__platforms_wl_mt5 {
+  .container.flex {
+    max-width: 638px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 65px;
+
+    .platforms__block {
+      &:nth-child(2) {
+        .platforms__content {
+          justify-content: center;
+
+          img {
+            margin-right: 27px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section__subtitle {
+    opacity: 0.8;
+  }
+}
+
+.platforms__block {
+  .platforms {
+    &__title {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
+      /* identical to box height, or 119% */
+      color: #686868;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+
+      img {
+        margin-right: 75px;
+        display: block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
