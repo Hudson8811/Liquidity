@@ -1,0 +1,20 @@
+.or_features__wl_mt_pricing {
+  background: #fff;
+
+  .text_catalog-item {
+    width: 100%;
+    &:nth-child(1) {
+      max-width: 289px;
+    }
+
+    &:nth-child(4) {
+      max-width: 296px;
+    }
+
+    &:nth-child(3n),
+    &:nth-child(3n - 1) {
+      max-width: 290px;
+      width: 100%;
+    }
+  }
+}

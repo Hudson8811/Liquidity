@@ -1,0 +1,59 @@
+.section.dif_types_wl
+    .section__title Different #[span(class="section__title--bold") order types]
+    .container.dif_container_1
+        .dif_types__title Fill policy
+
+        .gray_block__container
+            .gray__block
+                .gray__block--title Return
+                .gray__block--subtitle Used only for market (Buy and Sell), limit and stop limit orders and in the Exchange Execution mode. For limit and stop limit ones, it is applied in the Market Execution and Exchange Execution modes.
+            
+            .gray__block
+                .gray__block--title IOC
+                .gray__block--subtitle An immediate or cancel order (IOC) is an order to buy or sell that executes all or part immediately and cancels any unfilled portion of the order.
+            
+            .gray__block
+                .gray__block--title FOK
+                .gray__block--subtitle FOK (Fill or Kill) order as the time in force causes the entire order to execute immediately or be cancelled.
+    
+
+    .container.dif_container_2
+        .dif_types__title Protection orders
+
+        .gray_block__container
+            .gray__block
+                .gray__block--title Stop Loss
+                .gray__block--subtitle There are two kinds of stop-loss orders: buy and sell. Sell-stop orders offer protection to long positions by triggering a market sell order in the event the price drops below a certain level. Buy-stop orders protect short positions. They will be above the current market price and will trigger in the event that the price rises above this level.
+            
+            .gray__block
+                .gray__block--title Take Profit
+                .gray__block--subtitle A take-profit order is a kind of limit order which indicates the exact price at which to close out an open position to make a profit. The advantage of using a take-profit order means the trader need not worry about manually executing or second-guessing a trade.
+    
+
+    .container.dif_container_3
+        .dif_types__title Pending orders
+
+        .gray_block__container
+            .gray__block
+                .gray__block--title Limit
+                .gray__block--subtitle A limit order is a type of order to purchase or sell asset at a specified price or better. While the price is guaranteed, the filling of the order is not, and limit orders will not be executed unless the security price meets the order qualifications.
+            
+            .gray__block
+                .gray__block--title Stop
+                .gray__block--subtitle Stop orders are orders that are triggered when an asset moves past a specific price point. Beyond that price point, stop orders are converted into market orders that are executed at the best available price.
+            
+            .gray__block
+                .gray__block--title Stop Limit
+                .gray__block--subtitle Stop-limit orders have a price limit at which they will execute. Two prices are indicated in a stop-limit order: the stop price which converts the order to a sell order, and the limit price. Rather than the order becoming a market order to sell, the sell order becomes a limit order that only executes at the limit price or better.
+    
+
+    .container.dif_container_4
+
+        .gray_block__container
+            .gray__block
+                .gray__block--title Close By orders
+                .gray__block--subtitle The Close-By facility allows two hedged orders to be closed by cancelling each other out. The benefit of doing this is that only one spread is paid for two orders. In contrast, if two hedged orders are closed independently then two spreads will be paid, hence the trade cost is paid twice.
+            
+            .gray__block
+                .gray__block--title Market orders
+                .gray__block--subtitle A Market order is an order placed without a price for the purpose of hitting the best Bid or taking the best Offer presently available in the market. The order fills at the current best price and may partially fill at multiple price levels.
