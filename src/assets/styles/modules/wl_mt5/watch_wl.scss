@@ -1,0 +1,73 @@
+.section__wacth_wl {
+  background: center / cover url(../images/watch_wl.png) no-repeat;
+  padding: 100px 0 200px;
+
+  .section__title {
+    color: #fff;
+  }
+
+  .section__subtitle {
+    color: #fff;
+    margin-bottom: 80px;
+  }
+
+  .video_form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .video_block--preview {
+      background: rgba(26, 26, 26, 1);
+      border: 1px solid rgba(209, 219, 227, 0.7);
+      box-sizing: border-box;
+      border-radius: 5px;
+
+      .image_preview {
+        object-position: top;
+      }
+    }
+
+    .video_block {
+      height: 323px;
+    }
+
+    &__left {
+      width: 100%;
+      max-width: 624px;
+      margin-right: 14px;
+    }
+
+    .video_description__wrapper {
+      background: #1a2129;
+      padding: 17px 30px 17px 10px;
+    }
+
+    .video_description {
+      margin-top: 0;
+      margin-bottom: 13px;
+      color: #fff;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 21px;
+      line-height: 27px;
+      /* or 129% */
+    }
+
+    .video_subdescription {
+      color: #fff;
+    }
+
+    .new_form__sabmit {
+      margin-top: 13px;
+    }
+
+    .consent_block {
+      margin-top: 25px;
+    }
+
+    .new_form__capch {
+      background: #e0e0e0;
+      overflow: hidden;
+    }
+  }
+}
