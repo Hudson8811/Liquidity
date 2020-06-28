@@ -5,17 +5,37 @@
       max-width: 517px;
       margin: 36px 0;
       min-height: 150px;
+
+      @media screen and (max-width: 900px) {
+        max-width: none;
+      }
     }
   }
 
   .little_description {
     padding-right: 20px;
   }
+
+  @media screen and (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .section__title--bold {
+      display: block;
+    }
+  }
 }
 
 .little_description {
   max-width: 225px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 900px) {
+    max-width: none;
+  }
 
   &__title {
     font-style: normal;
@@ -25,6 +45,10 @@
     /* identical to box height, or 158% */
     color: #ffffff;
     margin-bottom: 17px;
+
+    @media screen and (max-width: 900px) {
+      text-align: center;
+    }
   }
 
   &__description {
@@ -34,5 +58,9 @@
     line-height: 19px;
     /* or 146% */
     color: #ffffff;
+
+    @media screen and (max-width: 900px) {
+      text-align: center;
+    }
   }
 }

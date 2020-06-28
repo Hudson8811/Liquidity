@@ -3,6 +3,10 @@
 
   .main-text {
     font-size: 21px;
+
+    @media screen and (max-width: 580px) {
+      font-size: 14px;
+    }
   }
 
   .little_description {

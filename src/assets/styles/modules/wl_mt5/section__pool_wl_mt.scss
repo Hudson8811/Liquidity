@@ -17,6 +17,10 @@
 
   .trading__flex {
     margin: 101px auto 80px;
+
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
   }
 
   .section__subtitle__pool {

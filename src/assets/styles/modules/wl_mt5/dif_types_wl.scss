@@ -45,6 +45,14 @@
       position: relative;
       z-index: 2;
       margin-bottom: 0;
+
+      @media screen and (max-width: 820px) {
+        display: block;
+
+        .gray__block + .gray__block {
+          margin-top: 20px;
+        }
+      }
     }
 
     .gray__block {
@@ -69,6 +77,10 @@
 
     .gray__block {
       width: calc(33.333% - 20px / 3);
+
+      @media screen and (max-width: 820px) {
+        width: 100%;
+      }
     }
   }
 
@@ -78,6 +90,10 @@
 
     .gray__block {
       width: calc(50% - 5px);
+
+      @media screen and (max-width: 820px) {
+        width: 100%;
+      }
     }
   }
 
@@ -87,6 +103,10 @@
 
     .gray__block {
       width: calc(33.333% - 20px / 3);
+
+      @media screen and (max-width: 820px) {
+        width: 100%;
+      }
     }
   }
 
@@ -100,6 +120,10 @@
 
     .gray__block {
       width: calc(50% - 5px);
+
+      @media screen and (max-width: 820px) {
+        width: 100%;
+      }
     }
   }
 }

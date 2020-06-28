@@ -11,6 +11,10 @@
     max-width: 794px;
     margin: 0 auto;
     margin-bottom: -13px;
+
+    @media screen and (max-width: 880px) {
+      display: block;
+    }
   }
 
   .branding_wl_mt__title {
@@ -44,6 +48,18 @@
     &:nth-child(5) {
       margin-right: 30px;
       margin-left: 0;
+    }
+
+    @media screen and (max-width: 880px) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+
+      .check_block--mam_platform-item--text {
+        span.db {
+          display: none;
+        }
+      }
     }
   }
 }

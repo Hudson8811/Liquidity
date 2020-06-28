@@ -15,6 +15,10 @@
 
   .arch__catalog {
     margin: 60px auto 50px;
+
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
   }
 
   .main-text + .migration__title {
@@ -47,6 +51,12 @@
   .speed_form--left {
     width: 331px;
     margin-right: 77px;
+
+    @media screen and (max-width: 720px) {
+      margin-right: auto;
+      width: 98%;
+      max-width: none;
+    }
   }
 
   .speed_form {
@@ -58,6 +68,8 @@
   .arch__catalog,
   .container {
     max-width: 748px;
+
+    width: 98%;
   }
 
   .speed_form .speed__flex .speed__exstra_text {
@@ -87,16 +99,31 @@
   .box-catalog {
     justify-content: space-between;
 
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
+
     .box_block {
       width: calc(50% - 5px);
       margin: 0;
       padding-right: 60px;
+
+      @media screen and (max-width: 980px) {
+        padding-right: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
     }
   }
 
   .arch__item {
     width: calc(50% - 5.5px);
     padding: 54px 63px 67px 41px;
+
+    @media screen and (max-width: 980px) {
+      padding: 20px;
+      width: 100%;
+    }
 
     .arch__icon {
       width: 51px;

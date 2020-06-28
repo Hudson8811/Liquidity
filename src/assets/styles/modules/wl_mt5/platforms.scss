@@ -6,6 +6,31 @@
     align-items: stretch;
     margin-top: 65px;
 
+    @media screen and (max-width: 780px) {
+      display: block;
+
+      .platforms__content {
+        justify-content: center;
+      }
+
+      .platforms__block + .platforms__block {
+        margin-top: 20px;
+      }
+    }
+
+    .platforms__content {
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+
+        img {
+          margin-right: 0;
+          & + img {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
     .platforms__block {
       &:nth-child(2) {
         .platforms__content {
@@ -13,6 +38,10 @@
 
           img {
             margin-right: 27px;
+
+            @media screen and (max-width: 500px) {
+              margin-right: 0;
+            }
 
             &:last-child {
               margin-right: 0;
