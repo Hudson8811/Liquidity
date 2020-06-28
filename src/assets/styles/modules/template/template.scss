@@ -3595,3 +3595,9 @@ select:visited {
   justify-content: center;
   align-items: center;
 }
+
+.form_wl_mt.b2_form {
+  .section__subtitle {
+    max-width: none;
+  }
+}
