@@ -1,0 +1,106 @@
+.manager_wl_mt {
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 110px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+  }
+
+  &__container {
+    background: #2e3740;
+    border-radius: 5px;
+    padding: 42px 58px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    .check_block--mam_platform-item {
+      margin-bottom: 23px;
+
+      &:nth-child(n + 4) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(6) {
+        margin-right: 12px;
+        margin-left: -20px;
+      }
+
+      &--text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 23px;
+        /* identical to box height, or 144% */
+
+        align-items: center;
+        letter-spacing: 0;
+
+        color: #ffffff;
+      }
+    }
+  }
+
+  .trading {
+    margin-top: 150px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 50px;
+    }
+  }
+
+  & + .or_features__wl_mt_pricing {
+    background: #1f2832;
+
+    .container {
+      max-width: 765px;
+    }
+
+    .text_catalog-item--heading {
+      color: #fff;
+    }
+
+    .text_catalog-item--description {
+      color: #fff;
+    }
+
+    .text_catalog-item {
+      &:nth-child(3n + 1) {
+        max-width: 240px;
+      }
+
+      &:nth-child(3n - 1),
+      &:nth-child(3n) {
+        max-width: 200px;
+      }
+    }
+  }
+}

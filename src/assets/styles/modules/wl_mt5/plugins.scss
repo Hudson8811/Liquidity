@@ -1,0 +1,32 @@
+.plugins_wl {
+  .section__subtitle {
+    margin-bottom: 80px;
+  }
+
+  .gray__block {
+    &--title,
+    &--subtitle {
+      text-align: left;
+    }
+
+    &--subtitle {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section__title__plugins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 87px;
+    height: 87px;
+    background: center / auto url(../images/plugins.svg) no-repeat;
+    margin-right: 10px;
+  }
+}
