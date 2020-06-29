@@ -119,7 +119,7 @@
           height: 6px;
           background: center / auto url(../images/little_u.svg) no-repeat;
           position: absolute;
-          left: 10px;
+          left: 74px;
           top: 50%;
           margin-top: -3px;
         }
@@ -757,5 +757,12 @@
 
   @media screen and (max-width: 980px) {
     padding-left: 0;
+  }
+}
+
+.events__futures_castomize {
+  .future__date,
+  .future__location {
+    color: #5e5f60;
   }
 }
