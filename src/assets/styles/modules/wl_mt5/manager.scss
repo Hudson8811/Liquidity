@@ -1,4 +1,8 @@
 .manager_wl_mt {
+  .trading .flickity-prev-next-button {
+    top: 50%;
+    margin-top: 70px;
+  }
   &__title {
     font-style: normal;
     font-weight: 900;
@@ -126,6 +130,45 @@
       &:nth-child(3n) {
         max-width: 200px;
       }
+    }
+  }
+}
+
+.or_features__wl_mt4 {
+  background: #1f2832;
+  .text_catalog {
+    align-items: flex-end;
+    .text_catalog-item {
+      width: calc(25% - 195px / 4);
+      height: auto;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 980px) {
+        width: 100%;
+      }
+
+      &--heading,
+      &--description {
+        color: #fff;
+      }
+    }
+
+    .text_catalog-item:nth-child(1),
+    .text_catalog-item:nth-child(10),
+    .text_catalog-item:nth-child(13),
+    .text_catalog-item:nth-child(4),
+    .text_catalog-item:nth-child(7) {
+      margin-left: 0;
+    }
+
+    .text_catalog-item:nth-child(1),
+    .text_catalog-item:nth-child(2),
+    .text_catalog-item:nth-child(3) {
+      margin-left: 0;
+    }
+
+    &:nth-child(1) {
+      min-width: 268px;
     }
   }
 }

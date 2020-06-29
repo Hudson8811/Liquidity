@@ -6,3 +6,11 @@
     margin-top: 0;
   }
 }
+
+.section__b2_best__wl_mt4 {
+  .best_with:nth-child(4) {
+    .best_with--text {
+      padding-right: 0;
+    }
+  }
+}
