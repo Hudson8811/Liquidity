@@ -61,10 +61,14 @@
       max-width: 184px;
       height: 44px;
       background: linear-gradient(180deg, #00c69b 0%, #00ae89 100%);
-      border-radius: 9px;
+      border-radius: 5px;
       color: #fcfdfd;
       margin: 0 auto;
       text-decoration: none;
+
+      &:hover {
+        background: linear-gradient(180deg, #00deae 0, #00b890 100%);
+      }
     }
   }
 }
