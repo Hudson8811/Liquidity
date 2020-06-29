@@ -136,6 +136,7 @@
 
 .or_features__wl_mt4 {
   background: #1f2832;
+
   .text_catalog {
     align-items: flex-end;
     .text_catalog-item {
@@ -171,4 +172,12 @@
       min-width: 268px;
     }
   }
+}
+
+.section.or_features.or_features__wl_mt.or_features__wl_mt_pricing {
+  border-bottom: 1px solid #575757;
+}
+
+.section.or_features.or_features__wl_mt4 {
+  border-bottom: 1px solid #575757;
 }
