@@ -724,6 +724,39 @@ $(document).ready(function () {
     let index = $(this).index();
     $(".trading__slider").flickity("select", index);
   });
+
+  $(document).on("click", ".lema__sidebar__item", function (e) {
+    e.preventDefault();
+    if (!$(this).hasClass("active")) {
+      var id = $(this).data("id");
+      $(".lema__sidebar__item").removeClass("active");
+      $(this).addClass("active");
+
+      $(".lema__content")
+        .fadeOut(100)
+        .promise()
+        .done(function () {
+          $('.lema__content[data-id="' + id + '"]').fadeIn(100);
+          $(" .hear_flickity--js, .hear_flickity_small--js").flickity(
+            "destroy"
+          );
+
+          $(" .hear_flickity--js").flickity({
+            pageDots: false,
+            prevNextButtons: false,
+            adaptiveHeight: false,
+          });
+
+          $("  .hear_flickity_small--js").flickity({
+            adaptiveHeight: false,
+            pageDots: false,
+            prevNextButtons: false,
+            contain: true,
+            asNavFor: '.lema__content[data-id="' + id + '"] .hear_flickity--js',
+          });
+        });
+    }
+  });
 });
 
 $(".tabs_slider .item").on("click", function () {

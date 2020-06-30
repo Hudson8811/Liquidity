@@ -1,8 +1,14 @@
-.lema_section {
+.section.lema_section {
+  padding-bottom: 0;
+
   .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
   }
 }
 
@@ -15,6 +21,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    max-height: 517px;
 
     &__item {
       font-style: normal;
@@ -32,19 +39,40 @@
       &:hover {
         color: #01bd95;
       }
+
+      &.active {
+        color: #01bd95;
+      }
     }
   }
 
   &__content {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
+    max-width: 781px;
+    display: none;
+
+    .lema__content__active {
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      padding-bottom: 717px;
+    }
+
+    &.active {
+      display: block;
+    }
   }
 
+  &__content[data-id="3"],
+  &__content[data-id="4"] {
+    .lema__content__active {
+      padding-bottom: 150px;
+    }
+  }
   &__slider {
     width: 100%;
     max-width: 583px;
+    min-height: 517px;
 
     .hear_flickity--js .item img {
       height: 455px;
@@ -121,6 +149,48 @@
 
   &__link_block + .lema__link_block {
     margin-top: 25px;
+  }
+
+  &__soc_block {
+    margin-top: auto;
+
+    &__title {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 31px;
+      /* identical to box height, or 172% */
+      color: #a1a6a9;
+      border-bottom: 1px solid #9dafbd;
+      margin-bottom: 10px;
+    }
+
+    a {
+      height: 20px;
+      width: 20px;
+      margin-right: 7px;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .social_block {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: -7px;
+    }
+  }
+
+  &__map {
+    width: 100vw;
+    display: block;
+    height: 567px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
 }
 
