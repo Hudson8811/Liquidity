@@ -56,7 +56,14 @@
       padding-left: 24px;
       box-sizing: border-box;
       width: 98%;
-      margin: 0 auto;
+      margin: 10px auto;
+      white-space: normal;
+      line-height: 20px;
+      min-height: 20px;
+      padding-right: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .option.focus,

@@ -115,13 +115,13 @@
         &:before {
           content: "";
           display: block;
-          width: 10px;
-          height: 6px;
-          background: center / auto url(../images/little_u.svg) no-repeat;
+          width: 12px;
+          height: 8px;
+          background: center / cover url(../images/little_u.svg) no-repeat;
           position: absolute;
           left: 74px;
           top: 50%;
-          margin-top: -3px;
+          margin-top: -4px;
         }
       }
     }
