@@ -1,0 +1,143 @@
+.lema_section {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}
+
+.lema {
+  &__sidebar {
+    width: 136px;
+    flex-shrink: 0;
+    margin-right: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__item {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 44px;
+      color: #cbd0d3;
+      cursor: pointer;
+      transition: color 0.5s;
+
+      & + .lema__sidebar__item {
+        margin-top: 20px;
+      }
+
+      &:hover {
+        color: #01bd95;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 583px;
+
+    .hear_flickity--js .item img {
+      height: 455px;
+    }
+
+    .hear_flickity_small--js .item {
+      width: calc(100% / 6 - 8px * 5 / 6);
+
+      img {
+        height: 49px;
+      }
+    }
+  }
+
+  &__sidebar__right {
+    width: 158px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    span {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      /* or 150% */
+      letter-spacing: 0;
+      color: #63636e;
+
+      &.extrabold {
+        font-weight: 900;
+      }
+    }
+
+    .show_on_map_btn {
+      width: 100%;
+      max-width: 151px;
+      margin-top: auto;
+    }
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    display: block;
+    letter-spacing: 0;
+    color: #01bd95;
+    text-decoration: none;
+  }
+
+  &__adress {
+    span {
+      display: block;
+    }
+  }
+
+  &__phone {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 31px;
+    /* identical to box height, or 172% */
+    color: #000000;
+    display: block;
+    margin: 40px 0;
+    text-decoration: none;
+  }
+
+  &__link_block + .lema__link_block {
+    margin-top: 25px;
+  }
+}
+
+.show_on_map_btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  /* identical to box height, or 146% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border: 1px solid #acb8c4;
+  box-sizing: border-box;
+  border-radius: 9px;
+  color: #c4c4c4;
+  text-decoration: none;
+  cursor: pointer;
+}
