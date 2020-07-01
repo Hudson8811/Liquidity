@@ -113,6 +113,7 @@
 
   & + .or_features__wl_mt_pricing {
     background: #1f2832;
+    border-bottom: 1px solid #575757;
 
     .container {
       max-width: 765px;
@@ -179,10 +180,18 @@
   }
 }
 
-.section.or_features.or_features__wl_mt.or_features__wl_mt_pricing {
-  border-bottom: 1px solid #575757;
-}
-
 .section.or_features.or_features__wl_mt4 {
   border-bottom: 1px solid #575757;
+
+  .text_catalog .text_catalog-item {
+    &:nth-child(1) {
+      min-width: 245px;
+    }
+  }
+}
+
+.or_features__wl_mt_pricing__wl_mt5 {
+  .section__title {
+    margin-bottom: 80px;
+  }
 }
