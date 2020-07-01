@@ -1,0 +1,55 @@
+.new_hiring_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 637px;
+  padding: 0;
+  border-bottom: 4px solid #ffffff;
+
+  .section__title {
+    color: #fff;
+    text-align: center;
+  }
+  .section__subtitle {
+    text-align: center;
+    margin: 24px auto 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  .new_green_bord_btn {
+    font-size: 18px;
+    max-width: 159px;
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.hiring_block__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .little_hiring_block {
+    min-height: 500px;
+    width: calc(50% - 1px);
+
+    .section__Subtitle {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      /* or 131% */
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
