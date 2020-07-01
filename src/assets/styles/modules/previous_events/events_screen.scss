@@ -24,6 +24,12 @@
   padding: 20px 0;
   background: #1e2226;
 
+  .option:hover {
+    font-weight: 400;
+    text-shadow: 0 0 0.9px rgba(255, 255, 255, 0.81),
+      0 0 0.9px rgba(255, 255, 255, 0.81);
+  }
+
   .container {
     max-width: none;
     width: 100%;
@@ -39,6 +45,26 @@
   .language_filter {
     .option:nth-child(6) {
       padding-right: 30px;
+    }
+
+    .option:nth-child(7) {
+      padding-right: 40px;
+    }
+
+    .option:nth-child(8),
+    .option:nth-child(9),
+    .option:nth-child(10),
+    .option:nth-child(13),
+    .option:nth-child(14) {
+      padding-right: 65px;
+    }
+
+    .option:nth-child(11) {
+      padding-right: 8px;
+    }
+
+    .option:nth-child(12) {
+      padding-right: 12px;
     }
   }
 
