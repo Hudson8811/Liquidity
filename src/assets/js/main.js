@@ -508,8 +508,6 @@ $(document).ready(function () {
 
   $(".filter__item").niceSelect();
 
-  $(".nice-select").niceSelect();
-
   $(".filter__item .list").mCustomScrollbar({
     mouseWheel: { preventDefault: true },
   });
