@@ -3629,11 +3629,16 @@ select:visited {
 }
 
 #modal_video_7 {
+  border-radius: 0;
+
   .video_block--preview {
     background: #1a1a1a;
+    overflow: hidden;
   }
 
   .image_preview {
     object-position: top;
+    width: 101%;
+    height: 101%;
   }
 }
