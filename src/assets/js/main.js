@@ -779,6 +779,52 @@ $(document).ready(function () {
   });
 });
 
+function backPreloader() {
+  let bacItems = ["9", "8", "7", "6", "5", "4", "3", "2", "1"];
+
+  bacItems.forEach(function (item) {
+    $(`.preloader__item[data-id='${item}']`).css("transform", "translateY(0");
+  });
+}
+let check = false;
+function preloader() {
+  if (check === false) {
+    let items = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let duration = 0.333;
+
+    items.forEach(function (item) {
+      $(`.preloader__item[data-id='${item}']`).css({
+        transform: "translateY(-100%)",
+        transitionDelay: `${duration}s`,
+      });
+
+      duration = duration + 0.333;
+    });
+    check = true;
+  } else {
+    let items = ["9", "8", "7", "6", "5", "4", "3", "2", "1"];
+    let duration = 0.333;
+
+    items.forEach(function (item) {
+      $(`.preloader__item[data-id='${item}']`).css({
+        transform: "translateY(0%)",
+        transitionDelay: `${duration}s`,
+      });
+
+      duration = duration + 0.333;
+    });
+    check = false;
+  }
+}
+
+$(document).ready(function () {
+  preloader();
+
+  setInterval(() => {
+    preloader();
+  }, 3332);
+});
+
 $(".tabs_slider .item").on("click", function () {
   let index = $(this).index();
   $(".tabs_slider").flickity("select", index);

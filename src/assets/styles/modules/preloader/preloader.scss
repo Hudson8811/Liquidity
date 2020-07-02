@@ -1,0 +1,22 @@
+.preloader__wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #060606;
+
+  .preloader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 78px;
+
+    &__item {
+      width: 26px;
+      height: 26px;
+      transition-duration: 0.333s;
+    }
+  }
+}
