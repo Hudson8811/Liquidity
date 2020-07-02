@@ -1,0 +1,13 @@
+extends template/main
+
+block variables
+    - var title = 'Careers'
+    -var newFooter = true
+
+block content
+    include modules/careers/events_screen
+    include modules/careers/_careers_content
+    include modules/careers/_video
+    include modules/careers/_b2broker
+    include modules/careers/_hiring
+    include modules/mam_platform/_footer-menu-section-2

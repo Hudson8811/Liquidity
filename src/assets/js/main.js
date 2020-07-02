@@ -508,6 +508,8 @@ $(document).ready(function () {
 
   $(".filter__item").niceSelect();
 
+  $(".nice-select").niceSelect();
+
   $(".filter__item .list").mCustomScrollbar({
     mouseWheel: { preventDefault: true },
   });
@@ -756,6 +758,26 @@ $(document).ready(function () {
           });
         });
     }
+  });
+
+  $(document).on("click", ".read_more_careers_btn--js", function (e) {
+    e.preventDefault();
+    $(".careers_table .row").removeClass("active");
+    $(this).parent().parent(".row").addClass("active");
+  });
+
+  $(document).on("click", ".careers_table .row .row_content", function () {
+    if ($(this).parent(".row").hasClass("active")) {
+      $(this).parent(".row").removeClass("active");
+    }
+  });
+
+  $(document).on("click", ".apply_now_careers_btn", function () {
+    event.preventDefault();
+    $.fancybox.open({
+      src: "#modal5",
+      type: "inline",
+    });
   });
 });
 

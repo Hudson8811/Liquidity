@@ -1,0 +1,36 @@
+.towns {
+  background: #1c222b;
+  border-bottom: 1px solid #393b3e;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 28px;
+      /* identical to box height, or 203% */
+      color: rgba(255, 255, 255, 0.81);
+      margin: 0 20px;
+      height: 87px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-sizing: border-box;
+      border-bottom: 3px solid transparent;
+      transition: all 0.5s;
+
+      &:hover {
+        border-color: #03e2b2;
+      }
+
+      &:nth-child(1) {
+        font-weight: bold;
+      }
+    }
+  }
+}
