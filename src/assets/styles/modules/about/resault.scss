@@ -1,0 +1,22 @@
+.ab_resault {
+  background: #fdfdfd;
+
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  .number_block {
+    justify-content: space-between;
+
+    &--number {
+      color: #383838;
+      text-align: center;
+    }
+
+    &--text {
+      color: #383838;
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+}

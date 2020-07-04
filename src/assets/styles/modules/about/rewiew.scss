@@ -1,0 +1,69 @@
+.section__review {
+  background: #f7f7f7;
+}
+.p__review {
+  border-top: 5px solid #383838;
+  padding: 65px 0;
+  position: relative;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 43px;
+  /* or 145% */
+  color: #383838;
+  padding-right: 10px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 38px;
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    background: #f7f7f7 center / cover url(../images/about/line.svg) no-repeat;
+  }
+}
+
+.review {
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  &__image {
+    display: block;
+    flex-shrink: 0;
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: #383838;
+  }
+
+  &__position {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #383838;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #383838;
+  }
+}

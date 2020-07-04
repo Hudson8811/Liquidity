@@ -207,6 +207,113 @@ $(document).ready(function () {
     });
   });
 
+  var elem = document.getElementById("ab__content");
+  if (elem.addEventListener) {
+    if ("onwheel" in document) {
+      elem.addEventListener("wheel", onWheel);
+    } else if ("onmousewheel" in document) {
+      elem.addEventListener("mousewheel", onWheel);
+    } else {
+      elem.addEventListener("MozMousePixelScroll", onWheel);
+    }
+  } else {
+    // IE8-
+    elem.attachEvent("onmousewheel", onWheel);
+  }
+  function activated(element) {
+    if ($(element).css("opacity") == 0) {
+      $(element).css("opacity", "1");
+    } else if ($(element).css("opacity") == 1) {
+      $(element).css("opacity", "0");
+    }
+  }
+
+  const element2 = $('.ab__text__item[data-id="2"]');
+  const element3 = $('.ab__text__item[data-id="3"]');
+  const element4 = $('.ab__text__item[data-id="4"]');
+  const element5 = $('.ab__text__item[data-id="5"]');
+  const element6 = $('.ab__text__item[data-id="6"]');
+
+  const logo1 = $('.ab__core__item[data-id="1"] .ab__core__icon');
+  const logo2 = $('.ab__core__item[data-id="2"] .ab__core__icon');
+  const logo3 = $('.ab__core__item[data-id="3"] .ab__core__icon');
+  const logo4 = $('.ab__core__item[data-id="4"] .ab__core__icon');
+  const logo5 = $('.ab__core__item[data-id="5"] .ab__core__icon');
+  const logo6 = $('.ab__core__item[data-id="6"] .ab__core__icon');
+  const logo7 = $('.ab__core__item[data-id="7"] .ab__core__icon');
+  const logo8 = $('.ab__core__item[data-id="8"] .ab__core__icon');
+  const logo9 = $('.ab__core__item[data-id="9"] .ab__core__icon');
+
+  const discription1 = $('.ab__core__item[data-id="1"] .ab__core__text');
+  const discription2 = $('.ab__core__item[data-id="2"] .ab__core__text');
+  const discription3 = $('.ab__core__item[data-id="3"] .ab__core__text');
+  const discription4 = $('.ab__core__item[data-id="4"] .ab__core__text');
+  const discription5 = $('.ab__core__item[data-id="5"] .ab__core__text');
+  const discription6 = $('.ab__core__item[data-id="6"] .ab__core__text');
+  const discription7 = $('.ab__core__item[data-id="7"] .ab__core__text');
+  const discription8 = $('.ab__core__item[data-id="8"] .ab__core__text');
+  const discription9 = $('.ab__core__item[data-id="9"] .ab__core__text');
+
+  const bigCircle = document.querySelector(".circle");
+  const radius = bigCircle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+  bigCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+  bigCircle.style.strokeDashoffset = circumference;
+  function setProgress(persent) {
+    const offset = circumference - (persent / 100) * circumference;
+    if (bigCircle.style.strokeDashoffset !== offset) {
+      bigCircle.style.strokeDashoffset = offset;
+    } else {
+      bigCircle.style.strokeDashoffset =
+        bigCircle.style.strokeDashoffset - offset;
+    }
+  }
+
+  function onWheel(e) {
+    e = e || window.event;
+    let delta = e.deltaY || e.detail || e.wheelDelta;
+    let info = document.getElementById("info");
+    info.innerHTML = +info.innerHTML + delta;
+    console.log(info.innerHTML);
+
+    if (info.innerHTML == 0) {
+      setProgress(0);
+    }
+
+    if (info.innerHTML == 1000) {
+      setProgress(20);
+      activated(element2);
+    } else if (info.innerHTML == 2000) {
+      setProgress(38);
+      activated(element3);
+    } else if (info.innerHTML == 3000) {
+      setProgress(55);
+      activated(element4);
+    } else if (info.innerHTML == 4000) {
+      setProgress(75);
+      activated(element5);
+      $(".ab__logo").removeClass("active");
+    } else if (info.innerHTML == 5000) {
+      setProgress(100);
+      activated(element6);
+      $(".ab__logo").addClass("active");
+      $(".ab__logo svg").removeClass("active");
+    } else if (info.innerHTML == 6000) {
+      $(".ab__logo svg").addClass("active");
+      $(".ab__logo").removeClass("active");
+      $(".ab__text").removeClass("disabled");
+      setProgress(100);
+    } else if (info.innerHTML == 7000) {
+      $(".ab__text").addClass("disabled");
+      $(".ab__logo").addClass("disabled");
+      setProgress(0);
+      activated(logo1);
+      discription1.addClass("active");
+    }
+
+    e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+  }
+
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 10) $(".header").addClass("header--slicky");

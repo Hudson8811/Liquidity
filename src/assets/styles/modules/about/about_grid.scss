@@ -1,0 +1,23 @@
+.about__grid {
+  .b2_grid {
+    margin-bottom: 80px;
+  }
+
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 31px;
+    color: #636363;
+    max-width: 680px;
+    margin: 0 auto;
+
+    & + p {
+      margin-top: 30px;
+    }
+  }
+}

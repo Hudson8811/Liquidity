@@ -1,0 +1,35 @@
+.about_hiring {
+  .hiring_block__wrapper:nth-child(1) {
+    .new_hiring_block {
+      border-bottom: 0;
+      &:nth-child(1) {
+        .new_green_bord_btn {
+          max-width: 178px;
+        }
+      }
+
+      &:nth-child(2) {
+        .new_green_bord_btn {
+          max-width: 137px;
+        }
+      }
+    }
+  }
+
+  .hiring_block__wrapper:nth-child(2) {
+    .new_hiring_block {
+      border-bottom: 0;
+      &:nth-child(1) {
+        .new_green_bord_btn {
+          max-width: 166px;
+        }
+      }
+
+      &:nth-child(2) {
+        .new_green_bord_btn {
+          max-width: 176px;
+        }
+      }
+    }
+  }
+}
