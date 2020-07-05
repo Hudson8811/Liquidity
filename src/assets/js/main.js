@@ -275,7 +275,7 @@ $(document).ready(function () {
     let delta = e.deltaY || e.detail || e.wheelDelta;
     let info = document.getElementById("info");
     let value = +info.innerHTML + delta;
-    info.innerHTML = Math.round(value / 10) * 10;
+    info.innerHTML = Math.round(value / 100) * 100;
 
     if (info.innerHTML == 0) {
       setProgress(0);
@@ -410,10 +410,16 @@ $(document).ready(function () {
       $(".ab__title_block__subtitle")
         .addClass("active")
         .removeClass("six_move");
+      $(".animation_brand").css({
+        padding: "150px 0",
+      });
     } else if (info.innerHTML == 21000) {
       $(" .ab__core__item  .ab__core__icon").addClass("six_move");
       $(".ab__title_block__heading").addClass("six_move");
       $(".ab__title_block__subtitle").addClass("six_move");
+      $(".animation_brand").css({
+        padding: "0",
+      });
     }
     e.preventDefault ? e.preventDefault() : (e.returnValue = false);
   }

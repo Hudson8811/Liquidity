@@ -1,6 +1,7 @@
 .animation_brand {
   background: #1a2129;
   position: relative;
+  transition: padding 0.5s;
   #info {
     position: absolute;
     width: 0;
@@ -27,6 +28,7 @@
       &__heading {
         transform: translateY(100%);
         opacity: 0;
+        will-change: auto;
 
         transition: opacity 1s, transform 1s;
 
@@ -46,6 +48,7 @@
         transform: translateY(300%);
         opacity: 0;
         transition: opacity 1s, transform 1s;
+        will-change: auto;
 
         &.active {
           opacity: 1;
@@ -97,6 +100,7 @@
         max-height: 50px;
         transition: max-width 0.5s, max-height 0.5s;
         z-index: 9;
+        will-change: auto;
 
         &.active {
           max-width: 0;
@@ -253,6 +257,7 @@
         transform-origin: center;
         transform: rotate(-135deg);
         transition: all 0.5s;
+        will-change: auto;
       }
     }
 
@@ -305,6 +310,7 @@
         transition: opacity 0.5s, transform 0.5s, max-width 0.5s,
           max-height 0.5s;
         position: relative;
+        will-change: auto;
 
         &.opacity03 {
           opacity: 0.3 !important;
@@ -339,6 +345,7 @@
           border-radius: 50%;
           opacity: 0;
           transition: opacity 1s;
+          will-change: auto;
         }
 
         &.gradient {
