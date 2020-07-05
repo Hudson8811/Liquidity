@@ -82,10 +82,10 @@ $(document).ready(function () {
     function onWheel(e) {
       e = e || window.event;
 
-      var delta = Math.max(1, Math.min(1, e.wheelDelta || -e.detail));
+      var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
       let info = document.getElementById("info");
-      let value = +info.innerHTML + delta;
-      info.innerHTML = value;
+      let value = -info.innerHTML + delta;
+      info.innerHTML = -value;
 
       if (info.innerHTML == 0) {
         setProgress(0);
