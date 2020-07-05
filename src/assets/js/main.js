@@ -274,8 +274,8 @@ $(document).ready(function () {
     e = e || window.event;
     let delta = e.deltaY || e.detail || e.wheelDelta;
     let info = document.getElementById("info");
-    info.innerHTML = Math.ceil(+info.innerHTML + delta);
-    console.log(info.innerHTML);
+    let value = +info.innerHTML + delta;
+    info.innerHTML = Math.round(value / 10) * 10;
 
     if (info.innerHTML == 0) {
       setProgress(0);
