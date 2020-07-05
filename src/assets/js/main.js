@@ -259,6 +259,7 @@ $(document).ready(function () {
   const circumference = 2 * Math.PI * radius;
   bigCircle.style.strokeDasharray = `${circumference} ${circumference}`;
   bigCircle.style.strokeDashoffset = circumference;
+
   function setProgress(persent) {
     const offset = circumference - (persent / 100) * circumference;
     if (bigCircle.style.strokeDashoffset !== offset) {
@@ -273,7 +274,7 @@ $(document).ready(function () {
     e = e || window.event;
     let delta = e.deltaY || e.detail || e.wheelDelta;
     let info = document.getElementById("info");
-    info.innerHTML = +info.innerHTML + delta;
+    info.innerHTML = Math.ceil(+info.innerHTML + delta);
     console.log(info.innerHTML);
 
     if (info.innerHTML == 0) {
