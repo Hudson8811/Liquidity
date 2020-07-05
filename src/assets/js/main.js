@@ -301,16 +301,119 @@ $(document).ready(function () {
     } else if (info.innerHTML == 6000) {
       $(".ab__logo svg").addClass("active");
       $(".ab__logo").removeClass("active");
+      $(".ab__logo").removeClass("disabled");
       $(".ab__text").removeClass("disabled");
       setProgress(100);
+      discription1.removeClass("active");
+      logo1.removeClass("active");
+      $(".ab__content").removeClass("second_move");
+      $(".animation_brand .section__title").removeClass("disabled");
     } else if (info.innerHTML == 7000) {
+      $(".ab__content").addClass("second_move");
+      $(".animation_brand .section__title").addClass("disabled");
       $(".ab__text").addClass("disabled");
       $(".ab__logo").addClass("disabled");
       setProgress(0);
-      activated(logo1);
+      logo1.addClass("active").removeClass("disabled");
+      logo2.removeClass("active");
       discription1.addClass("active");
+      discription2.removeClass("active");
+    } else if (info.innerHTML == 8000) {
+      logo1.addClass("disabled");
+      logo2.addClass("active").removeClass("disabled");
+      logo3.removeClass("active");
+      discription1.removeClass("active");
+      discription2.addClass("active");
+      discription3.removeClass("active");
+    } else if (info.innerHTML == 9000) {
+      discription2.removeClass("active");
+      discription3.addClass("active");
+      discription4.removeClass("active");
+      logo2.addClass("disabled");
+      logo3.addClass("active").removeClass("disabled");
+      $(".ab__core__item").removeClass("second_move");
+      logo4.removeClass("active");
+    } else if (info.innerHTML == 10000) {
+      discription3.removeClass("active");
+      discription4.addClass("active");
+      discription5.removeClass("active");
+      logo3.addClass("disabled");
+      logo4.addClass("active").removeClass("disabled");
+      logo5.removeClass("active");
+      $(".ab__core__item").addClass("second_move");
+    } else if (info.innerHTML == 11000) {
+      discription4.removeClass("active");
+      discription5.addClass("active");
+      discription6.removeClass("active");
+      logo4.addClass("disabled");
+      logo5.addClass("active").removeClass("disabled");
+      logo6.removeClass("active");
+    } else if (info.innerHTML == 12000) {
+      discription5.removeClass("active");
+      discription6.addClass("active");
+      discription7.removeClass("active");
+      logo5.addClass("disabled");
+      logo6.addClass("active").removeClass("disabled");
+      logo7.removeClass("active");
+    } else if (info.innerHTML == 13000) {
+      discription6.removeClass("active");
+      discription7.addClass("active");
+      discription8.removeClass("active");
+      logo6.addClass("disabled");
+      logo7.addClass("active").removeClass("disabled");
+      logo8.removeClass("active");
+    } else if (info.innerHTML == 14000) {
+      discription7.removeClass("active");
+      discription8.addClass("active");
+      discription9.removeClass("active");
+      logo7.addClass("disabled");
+      logo8.addClass("active").removeClass("disabled");
+      logo9.removeClass("active");
+      $(
+        ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
+      ).removeClass("opacity03");
+    } else if (info.innerHTML == 15000) {
+      $(".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)")
+        .addClass("opacity03")
+        .removeClass("opacity1");
+      discription8.removeClass("active");
+      discription9.addClass("active");
+      logo8.addClass("disabled");
+      logo9.addClass("active");
+      $(".ab__core__icon").removeClass("opacity1");
+    } else if (info.innerHTML == 16000) {
+      $(
+        ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
+      ).addClass("opacity1");
+      discription9.removeClass("active");
+      $(" .ab__core__item  .ab__core__icon").removeClass("gradient");
+      $(".ab__core__icon").addClass("opacity1");
+    } else if (info.innerHTML == 17000) {
+      $(" .ab__core__item  .ab__core__icon").addClass("gradient");
+      $(" .ab__core__item  .ab__core__icon").removeClass("three_move");
+    } else if (info.innerHTML == 18000) {
+      $(" .ab__core__item  .ab__core__icon")
+        .addClass("three_move")
+        .removeClass("for_move");
+    } else if (info.innerHTML == 19000) {
+      $(" .ab__core__item  .ab__core__icon")
+        .addClass("for_move")
+        .removeClass("five_move");
+      $(".ab__title_block__heading").removeClass("active");
+      $(".ab__title_block__subtitle").removeClass("active");
+    } else if (info.innerHTML == 20000) {
+      $(" .ab__core__item  .ab__core__icon")
+        .addClass("five_move")
+        .removeClass("six_move");
+      $(".ab__title_block__heading").addClass("active").removeClass("six_move");
+      $(".ab__title_block__subtitle")
+        .addClass("active")
+        .removeClass("six_move");
+    } else if (info.innerHTML == 21000) {
+      $(" .ab__core__item  .ab__core__icon").addClass("six_move");
+      $(".ab__title_block__heading").addClass("six_move");
+      $(".ab__title_block__subtitle").addClass("six_move");
     }
-
     e.preventDefault ? e.preventDefault() : (e.returnValue = false);
   }
 
