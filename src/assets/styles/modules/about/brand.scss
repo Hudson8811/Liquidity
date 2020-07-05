@@ -2,6 +2,21 @@
   background: #1a2129;
   position: relative;
   transition: padding 0.5s;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+
+  &.full {
+    padding: 0;
+
+    .section__title {
+      display: none;
+    }
+
+    max-height: 700px;
+  }
+
   #info {
     position: absolute;
     width: 0;
@@ -654,5 +669,23 @@
         }
       }
     }
+  }
+}
+
+.mobile__animation_brand {
+  justify-content: center;
+  align-items: center;
+  background: #1a2129;
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+  }
+
+  img {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    max-width: 465px;
   }
 }

@@ -10,6 +10,10 @@
     .item {
       height: 60px;
 
+      @media screen and (max-width: 800px) {
+        height: auto;
+      }
+
       img {
         height: 100%;
       }
@@ -20,9 +24,17 @@
     .item {
       img {
         height: 381px;
+
+        @media screen and (max-width: 800px) {
+          height: 50vw;
+        }
       }
     }
   }
+}
+
+.careers_table__wrapper {
+  overflow-x: auto;
 }
 
 .careers_table {

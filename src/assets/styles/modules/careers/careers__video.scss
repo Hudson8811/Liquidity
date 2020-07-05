@@ -1,5 +1,9 @@
 .careers__video {
   .video_block {
     height: 490px;
+
+    @media screen and (max-width: 800px) {
+      height: 50vw;
+    }
   }
 }

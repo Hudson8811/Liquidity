@@ -8,6 +8,10 @@
   .number_block {
     justify-content: space-between;
 
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+
     &--number {
       color: #383838;
       text-align: center;

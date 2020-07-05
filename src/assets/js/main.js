@@ -222,16 +222,12 @@ $(document).ready(function () {
         $(".ab__title_block__subtitle")
           .addClass("active")
           .removeClass("six_move");
-        $(".animation_brand").css({
-          padding: "150px 0",
-        });
+        $(".animation_brand").removeClass("full");
       } else if (info.innerHTML == 210) {
         $(" .ab__core__item  .ab__core__icon").addClass("six_move");
         $(".ab__title_block__heading").addClass("six_move");
         $(".ab__title_block__subtitle").addClass("six_move");
-        $(".animation_brand").css({
-          padding: "0",
-        });
+        $(".animation_brand").addClass("full");
       }
       e.preventDefault ? e.preventDefault() : (e.returnValue = false);
     }

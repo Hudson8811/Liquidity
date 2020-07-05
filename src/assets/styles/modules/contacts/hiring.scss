@@ -38,11 +38,19 @@
   justify-content: space-between;
   align-items: stretch;
 
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+
   .little_hiring_block {
     min-height: 500px;
     width: calc(50% - 1px);
 
-    .section__Subtitle {
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+
+    .section__subtitle {
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
@@ -50,6 +58,12 @@
       /* or 131% */
       text-align: center;
       color: #ffffff;
+
+      @media screen and (max-width: 800px) {
+        span.db {
+          display: none;
+        }
+      }
     }
   }
 }
