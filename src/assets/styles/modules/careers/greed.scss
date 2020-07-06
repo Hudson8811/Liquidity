@@ -7,7 +7,7 @@
   &__item {
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
     flex-wrap: wrap;
 
     width: calc(33.333% - 40px / 3);

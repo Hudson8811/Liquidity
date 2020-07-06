@@ -19,7 +19,7 @@
       /* identical to box height, or 203% */
       color: rgba(255, 255, 255, 0.81);
       margin: 0 20px;
-      height: 87px;
+      height: 84px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,12 +32,28 @@
         height: 40px;
       }
 
-      &:hover {
+      &.active {
         border-color: #03e2b2;
       }
 
       &:nth-child(1) {
         font-weight: bold;
+      }
+
+      &.remote {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 10px;
+          background: center / auto url(../images/home.svg) no-repeat;
+          margin-right: 5px;
+        }
       }
     }
   }

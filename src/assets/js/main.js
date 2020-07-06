@@ -1177,6 +1177,14 @@ $(".family__block").hover(function () {
   $(".says__flickity--js").flickity("select", familyTarget);
 });
 
+$(".towns li ").hover(function () {
+  let townTarget = $(this).data("id");
+  $(".towns li").removeClass("active");
+  $(this).addClass("active");
+  $(".hear_flickity--js").flickity("select", townTarget);
+  $(".hear_flickity_small--js").flickity("select", townTarget);
+});
+
 function falidator(item) {
   check = true;
   $(item)
