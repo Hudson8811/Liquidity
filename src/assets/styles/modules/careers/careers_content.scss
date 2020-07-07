@@ -74,6 +74,9 @@
       &:nth-child(1) {
         width: 425px;
         padding-left: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
         span {
           font-style: normal;
@@ -85,16 +88,15 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
+        }
 
-          &:before {
-            content: "";
-            display: block;
-            height: 7px;
-            width: 12px;
-            background: center / auto url(../images/careers/row.svg) no-repeat;
-            margin-right: 10px;
-            transition: transform 0.5s;
-          }
+        img {
+          display: block;
+          height: 7px;
+          width: 12px;
+          margin-right: 10px;
+          transition: transform 0.5s;
+          cursor: pointer;
         }
       }
 
@@ -200,13 +202,12 @@
     }
 
     .row_content {
-      display: block;
+      display: none;
       width: 100%;
       box-sizing: border-box;
       padding-left: 105px;
-      padding-bottom: 0;
-      transition: max-height 0.5s, padding 0.5s;
-      max-height: 0;
+      padding-bottom: 50px;
+      transition: padding 0.5s;
       overflow: hidden;
 
       p {
@@ -261,12 +262,7 @@
         display: flex;
       }
 
-      .row_content {
-        padding-bottom: 50px;
-        max-height: none;
-      }
-
-      .col:nth-child(1) span:before {
+      .col:nth-child(1) img {
         transform: rotate(180deg);
       }
     }

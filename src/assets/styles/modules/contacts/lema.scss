@@ -57,6 +57,10 @@
         margin-top: 20px;
       }
 
+      &.disabled {
+        pointer-events: none;
+      }
+
       &:hover {
         color: #01bd95;
       }
@@ -101,6 +105,7 @@
 
     .hear_flickity--js .item img {
       height: 455px;
+      object-position: top;
     }
 
     .hear_flickity_small--js .item {
@@ -108,6 +113,9 @@
 
       img {
         height: 49px;
+        display: block;
+        object-fit: cover;
+        object-position: top;
       }
     }
   }
@@ -143,7 +151,7 @@
 
     .show_on_map_btn {
       width: 100%;
-      max-width: 151px;
+      max-width: 145px;
       margin-top: auto;
     }
   }
@@ -202,6 +210,63 @@
       margin-right: 7px;
       display: block;
       margin-bottom: 7px;
+
+      &.youtube:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+        svg path:nth-child(3) {
+          fill: #dbdee1;
+        }
+      }
+
+      &.linkedin:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
+
+      &.instagram:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
+
+      &.telegram:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
+
+      &.twitter:not(:hover) {
+        svg path:nth-child(1) {
+          fill: #dbdee1;
+        }
+      }
+
+      &.wechat:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
+
+      &.facebook:not(:hover) {
+        svg path:nth-child(1) {
+          fill: #dbdee1;
+        }
+      }
+
+      &.youku:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
+
+      &.weibo:not(:hover) {
+        svg circle {
+          fill: #dbdee1;
+        }
+      }
     }
 
     .social_block {
@@ -227,20 +292,25 @@
 
 .show_on_map_btn {
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
   /* identical to box height, or 146% */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 44px;
-  border: 1px solid #acb8c4;
+  height: 40px;
+
+  border: 1px solid #dbdee1;
   box-sizing: border-box;
-  border-radius: 9px;
+  border-radius: 5px;
   color: #c4c4c4;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    border: 1px solid #acb8c3;
+  }
 }
 
 .contacts_form {

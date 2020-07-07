@@ -1,5 +1,6 @@
 .ab_resault {
   background: #fdfdfd;
+  position: relative;
 
   .section__title {
     margin-bottom: 80px;
@@ -22,5 +23,15 @@
       letter-spacing: 0;
       text-align: center;
     }
+  }
+
+  .number__trigger {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    margin-left: -5px;
   }
 }

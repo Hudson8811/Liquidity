@@ -15,8 +15,27 @@ setTimeout(function () {
 }, 0);
 
 $(document).ready(function () {
+  $(
+    ".lema_section .hear_flickity--js, .includes_team .hear_flickity--js"
+  ).flickity({
+    pageDots: false,
+    prevNextButtons: false,
+    adaptiveHeight: false,
+    autoPlay: true,
+  });
+
+  $(
+    ".lema_section .hear_flickity_small--js, .includes_team .hear_flickity_small--js"
+  ).flickity({
+    adaptiveHeight: false,
+    pageDots: false,
+    prevNextButtons: false,
+    contain: true,
+    asNavFor: " .hear_flickity--js",
+  });
+
   if ($("body").hasClass("bigAnimation")) {
-    var elem = document.getElementById("ab__content");
+    var elem = document.getElementById("animation_brand");
     if (elem.addEventListener) {
       if ("onwheel" in document) {
         elem.addEventListener("wheel", onWheel);
@@ -36,7 +55,7 @@ $(document).ready(function () {
         $(element).css("opacity", "0");
       }
     }
-
+    const element1 = $('.ab__text__item[data-id="1"]');
     const element2 = $('.ab__text__item[data-id="2"]');
     const element3 = $('.ab__text__item[data-id="3"]');
     const element4 = $('.ab__text__item[data-id="4"]');
@@ -79,156 +98,252 @@ $(document).ready(function () {
       }
     }
 
+    let animationFirstStepTrigger = false;
+
+    let logo1Trigger = false;
+    let logo2Trigger = false;
+    let logo3Trigger = false;
+    let logo4Trigger = false;
+    let logo5Trigger = false;
+    let logo6Trigger = false;
+    let logo7Trigger = false;
+    let logo8Trigger = false;
+    let logo9Trigger = false;
+
     function onWheel(e) {
       e = e || window.event;
 
-      var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+      let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
       let info = document.getElementById("info");
       let value = -info.innerHTML + delta;
       info.innerHTML = -value;
 
-      if (info.innerHTML == 0) {
-        setProgress(0);
+      if (info.innerHTML == 10) {
+        $("html, body").animate(
+          {
+            scrollTop: $("#ab__content").offset().top,
+          },
+          1000
+        );
+        $(".ab__logo").removeClass("disabled");
+
+        setTimeout(() => {
+          activated(element1);
+        }, 1000);
+
+        setTimeout(() => {
+          activated(element2);
+          setProgress(20);
+        }, 2000);
+
+        setTimeout(() => {
+          activated(element3);
+          setProgress(38);
+        }, 3000);
+
+        setTimeout(() => {
+          activated(element4);
+          setProgress(55);
+        }, 4000);
+
+        setTimeout(() => {
+          activated(element5);
+          setProgress(75);
+        }, 5000);
+
+        setTimeout(() => {
+          activated(element6);
+          setProgress(100);
+          $(".ab__logo").addClass("active");
+        }, 6000);
+
+        setTimeout(() => {
+          animationFirstStepTrigger = true;
+        }, 7000);
+      } else if (animationFirstStepTrigger) {
+        setTimeout(() => {
+          $(".ab__logo svg").addClass("active");
+        }, 1000);
+
+        setTimeout(() => {
+          $(".animation_brand .section__title").addClass("disabled");
+          $(".ab__text").addClass("disabled");
+          $(".ab__logo").addClass("disabled");
+          $(".ab__circle").addClass("disabled");
+        }, 2000);
+
+        setTimeout(() => {
+          logo1.addClass("active");
+          discription1.addClass("active");
+
+          logo1Trigger = true;
+        }, 2500);
+
+        animationFirstStepTrigger = false;
+      }
+      if (logo1Trigger) {
+        setTimeout(() => {
+          logo1.addClass("disabled");
+          discription1.removeClass("active");
+          logo2.addClass("active");
+          discription2.addClass("active");
+
+          logo2Trigger = true;
+        }, 1000);
+        logo1Trigger = false;
+      } else if (logo2Trigger) {
+        setTimeout(() => {
+          logo2.addClass("disabled");
+          discription2.removeClass("active");
+          logo3.addClass("active");
+          discription3.addClass("active");
+
+          logo3Trigger = true;
+        }, 1000);
+        logo2Trigger = false;
+      } else if (logo2Trigger) {
+        setTimeout(() => {
+          logo2.addClass("disabled");
+          discription2.removeClass("active");
+          logo3.addClass("active");
+          discription3.addClass("active");
+
+          logo3Trigger = true;
+        }, 1000);
+        logo2Trigger = false;
+      } else if (logo3Trigger) {
+        setTimeout(() => {
+          logo3.addClass("disabled");
+          discription3.removeClass("active");
+          logo4.addClass("active");
+          discription4.addClass("active");
+
+          logo4Trigger = true;
+        }, 1000);
+        logo3Trigger = false;
       }
 
-      if (info.innerHTML == 10) {
-        setProgress(20);
-        activated(element2);
-      } else if (info.innerHTML == 20) {
-        setProgress(38);
-        activated(element3);
-      } else if (info.innerHTML == 30) {
-        setProgress(55);
-        activated(element4);
-      } else if (info.innerHTML == 40) {
-        setProgress(75);
-        activated(element5);
-        $(".ab__logo").removeClass("active");
-      } else if (info.innerHTML == 50) {
-        setProgress(100);
-        activated(element6);
-        $(".ab__logo").addClass("active");
-        $(".ab__logo svg").removeClass("active");
-      } else if (info.innerHTML == 60) {
-        $(".ab__logo svg").addClass("active");
-        $(".ab__logo").removeClass("active");
-        $(".ab__logo").removeClass("disabled");
-        $(".ab__text").removeClass("disabled");
-        setProgress(100);
-        discription1.removeClass("active");
-        logo1.removeClass("active");
-        $(".ab__content").removeClass("second_move");
-        $(".animation_brand .section__title").removeClass("disabled");
-      } else if (info.innerHTML == 70) {
-        $(".ab__content").addClass("second_move");
-        $(".animation_brand .section__title").addClass("disabled");
-        $(".ab__text").addClass("disabled");
-        $(".ab__logo").addClass("disabled");
-        setProgress(0);
-        logo1.addClass("active").removeClass("disabled");
-        logo2.removeClass("active");
-        discription1.addClass("active");
-        discription2.removeClass("active");
-      } else if (info.innerHTML == 80) {
-        logo1.addClass("disabled");
-        logo2.addClass("active").removeClass("disabled");
-        logo3.removeClass("active");
-        discription1.removeClass("active");
-        discription2.addClass("active");
-        discription3.removeClass("active");
-      } else if (info.innerHTML == 90) {
-        discription2.removeClass("active");
-        discription3.addClass("active");
-        discription4.removeClass("active");
-        logo2.addClass("disabled");
-        logo3.addClass("active").removeClass("disabled");
-        $(".ab__core__item").removeClass("second_move");
-        logo4.removeClass("active");
-      } else if (info.innerHTML == 100) {
-        discription3.removeClass("active");
-        discription4.addClass("active");
-        discription5.removeClass("active");
-        logo3.addClass("disabled");
-        logo4.addClass("active").removeClass("disabled");
-        logo5.removeClass("active");
-        $(".ab__core__item").addClass("second_move");
-      } else if (info.innerHTML == 110) {
-        discription4.removeClass("active");
-        discription5.addClass("active");
-        discription6.removeClass("active");
-        logo4.addClass("disabled");
-        logo5.addClass("active").removeClass("disabled");
-        logo6.removeClass("active");
-      } else if (info.innerHTML == 120) {
-        discription5.removeClass("active");
-        discription6.addClass("active");
-        discription7.removeClass("active");
-        logo5.addClass("disabled");
-        logo6.addClass("active").removeClass("disabled");
-        logo7.removeClass("active");
-      } else if (info.innerHTML == 130) {
-        discription6.removeClass("active");
-        discription7.addClass("active");
-        discription8.removeClass("active");
-        logo6.addClass("disabled");
-        logo7.addClass("active").removeClass("disabled");
-        logo8.removeClass("active");
-      } else if (info.innerHTML == 140) {
-        discription7.removeClass("active");
-        discription8.addClass("active");
-        discription9.removeClass("active");
-        logo7.addClass("disabled");
-        logo8.addClass("active").removeClass("disabled");
-        logo9.removeClass("active");
-        $(
-          ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
-        ).removeClass("opacity03");
-      } else if (info.innerHTML == 150) {
-        $(".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)")
-          .addClass("opacity03")
-          .removeClass("opacity1");
-        discription8.removeClass("active");
-        discription9.addClass("active");
-        logo8.addClass("disabled");
-        logo9.addClass("active");
-        $(".ab__core__icon").removeClass("opacity1");
-      } else if (info.innerHTML == 160) {
-        $(
-          ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
-        ).addClass("opacity1");
-        discription9.removeClass("active");
-        $(" .ab__core__item  .ab__core__icon").removeClass("gradient");
-        $(".ab__core__icon").addClass("opacity1");
-      } else if (info.innerHTML == 170) {
-        $(" .ab__core__item  .ab__core__icon").addClass("gradient");
-        $(" .ab__core__item  .ab__core__icon").removeClass("three_move");
-      } else if (info.innerHTML == 180) {
-        $(" .ab__core__item  .ab__core__icon")
-          .addClass("three_move")
-          .removeClass("for_move");
-      } else if (info.innerHTML == 190) {
-        $(" .ab__core__item  .ab__core__icon")
-          .addClass("for_move")
-          .removeClass("five_move");
-        $(".ab__title_block__heading").removeClass("active");
-        $(".ab__title_block__subtitle").removeClass("active");
-      } else if (info.innerHTML == 200) {
-        $(" .ab__core__item  .ab__core__icon")
-          .addClass("five_move")
-          .removeClass("six_move");
-        $(".ab__title_block__heading")
-          .addClass("active")
-          .removeClass("six_move");
-        $(".ab__title_block__subtitle")
-          .addClass("active")
-          .removeClass("six_move");
-        $(".animation_brand").removeClass("full");
-      } else if (info.innerHTML == 210) {
-        $(" .ab__core__item  .ab__core__icon").addClass("six_move");
-        $(".ab__title_block__heading").addClass("six_move");
-        $(".ab__title_block__subtitle").addClass("six_move");
-        $(".animation_brand").addClass("full");
-      }
+      // if ($(logo2).hasClass("active")) {
+      // } else if (info.innerHTML == 60) {
+      //   // $(".ab__logo svg").addClass("active");
+      //   // $(".ab__logo").removeClass("active");
+      //   // $(".ab__logo").removeClass("disabled");
+      //   // $(".ab__text").removeClass("disabled");
+      //   // setProgress(100);
+      //   discription1.removeClass("active");
+      //   logo1.removeClass("active");
+      //   $(".ab__content").removeClass("second_move");
+      //   $(".animation_brand .section__title").removeClass("disabled");
+      // } else if (info.innerHTML == 70) {
+      //   $(".ab__content").addClass("second_move");
+      //   $(".animation_brand .section__title").addClass("disabled");
+      //   $(".ab__text").addClass("disabled");
+      //   $(".ab__logo").addClass("disabled");
+      //   setProgress(0);
+      //   logo1.addClass("active").removeClass("disabled");
+      //   logo2.removeClass("active");
+      //   discription1.addClass("active");
+      //   discription2.removeClass("active");
+      // } else if (info.innerHTML == 80) {
+      //   logo1.addClass("disabled");
+      //   logo2.addClass("active").removeClass("disabled");
+      //   logo3.removeClass("active");
+      //   discription1.removeClass("active");
+      //   discription2.addClass("active");
+      //   discription3.removeClass("active");
+      // } else if (info.innerHTML == 90) {
+      //   discription2.removeClass("active");
+      //   discription3.addClass("active");
+      //   discription4.removeClass("active");
+      //   logo2.addClass("disabled");
+      //   logo3.addClass("active").removeClass("disabled");
+      //   $(".ab__core__item").removeClass("second_move");
+      //   logo4.removeClass("active");
+      // } else if (info.innerHTML == 100) {
+      //   discription3.removeClass("active");
+      //   discription4.addClass("active");
+      //   discription5.removeClass("active");
+      //   logo3.addClass("disabled");
+      //   logo4.addClass("active").removeClass("disabled");
+      //   logo5.removeClass("active");
+      //   $(".ab__core__item").addClass("second_move");
+      // } else if (info.innerHTML == 110) {
+      //   discription4.removeClass("active");
+      //   discription5.addClass("active");
+      //   discription6.removeClass("active");
+      //   logo4.addClass("disabled");
+      //   logo5.addClass("active").removeClass("disabled");
+      //   logo6.removeClass("active");
+      // } else if (info.innerHTML == 120) {
+      //   discription5.removeClass("active");
+      //   discription6.addClass("active");
+      //   discription7.removeClass("active");
+      //   logo5.addClass("disabled");
+      //   logo6.addClass("active").removeClass("disabled");
+      //   logo7.removeClass("active");
+      // } else if (info.innerHTML == 130) {
+      //   discription6.removeClass("active");
+      //   discription7.addClass("active");
+      //   discription8.removeClass("active");
+      //   logo6.addClass("disabled");
+      //   logo7.addClass("active").removeClass("disabled");
+      //   logo8.removeClass("active");
+      // } else if (info.innerHTML == 140) {
+      //   discription7.removeClass("active");
+      //   discription8.addClass("active");
+      //   discription9.removeClass("active");
+      //   logo7.addClass("disabled");
+      //   logo8.addClass("active").removeClass("disabled");
+      //   logo9.removeClass("active");
+      //   $(
+      //     ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
+      //   ).removeClass("opacity03");
+      // } else if (info.innerHTML == 150) {
+      //   $(".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)")
+      //     .addClass("opacity03")
+      //     .removeClass("opacity1");
+      //   discription8.removeClass("active");
+      //   discription9.addClass("active");
+      //   logo8.addClass("disabled");
+      //   logo9.addClass("active");
+      //   $(".ab__core__icon").removeClass("opacity1");
+      // } else if (info.innerHTML == 160) {
+      //   $(
+      //     ".ab__core__icon:not(.ab__core__item:nth-child(9) .ab__core__icon)"
+      //   ).addClass("opacity1");
+      //   discription9.removeClass("active");
+      //   $(" .ab__core__item  .ab__core__icon").removeClass("gradient");
+      //   $(".ab__core__icon").addClass("opacity1");
+      // } else if (info.innerHTML == 170) {
+      //   $(" .ab__core__item  .ab__core__icon").addClass("gradient");
+      //   $(" .ab__core__item  .ab__core__icon").removeClass("three_move");
+      // } else if (info.innerHTML == 180) {
+      //   $(" .ab__core__item  .ab__core__icon")
+      //     .addClass("three_move")
+      //     .removeClass("for_move");
+      // } else if (info.innerHTML == 190) {
+      //   $(" .ab__core__item  .ab__core__icon")
+      //     .addClass("for_move")
+      //     .removeClass("five_move");
+      //   $(".ab__title_block__heading").removeClass("active");
+      //   $(".ab__title_block__subtitle").removeClass("active");
+      // } else if (info.innerHTML == 200) {
+      //   $(" .ab__core__item  .ab__core__icon")
+      //     .addClass("five_move")
+      //     .removeClass("six_move");
+      //   $(".ab__title_block__heading")
+      //     .addClass("active")
+      //     .removeClass("six_move");
+      //   $(".ab__title_block__subtitle")
+      //     .addClass("active")
+      //     .removeClass("six_move");
+      //   $(".animation_brand").removeClass("full");
+      // } else if (info.innerHTML == 210) {
+      //   $(" .ab__core__item  .ab__core__icon").addClass("six_move");
+      //   $(".ab__title_block__heading").addClass("six_move");
+      //   $(".ab__title_block__subtitle").addClass("six_move");
+      //   $(".animation_brand").addClass("full");
+      // }
       e.preventDefault ? e.preventDefault() : (e.returnValue = false);
     }
   }
@@ -399,6 +514,24 @@ $(document).ready(function () {
     }
   }
 
+  function checkNumber() {
+    if (checkContent(".ab_resault .number__trigger") === true) {
+      outNum(203, 2500, "#number-1");
+      outNum(128, 2100, "#number-2");
+      outNum(18, 1800, "#number-3");
+      outNum(13, 1500, "#number-4");
+      outNum(7, 1000, "#number-5");
+      outNum(4, 1000, "#number-6");
+      $(document).off("scroll");
+    }
+  }
+
+  function checkEngineers() {
+    if (checkContent(".engineers__trigger") === true) {
+      $(".images_catalog").addClass("active");
+    }
+  }
+
   function check() {
     if ($("body").hasClass("b2_core")) {
       checkPosition();
@@ -406,6 +539,10 @@ $(document).ready(function () {
       checkPositionCircle();
     } else if ($("body").hasClass("navbar_animation")) {
       checkPositionNavbarAnim();
+    } else if ($("body").hasClass("bigAnimation")) {
+      checkNumber();
+    } else if ($("body").hasClass("team")) {
+      checkEngineers();
     } else {
       checkPositionSpeed();
     }
@@ -944,11 +1081,11 @@ $(document).ready(function () {
     $(".trading__slider").flickity("select", index);
   });
 
-  $(document).on("click", ".lema__sidebar__item", function (e) {
+  $(".lema__sidebar__item").hover(function (e) {
     e.preventDefault();
     if (!$(this).hasClass("active")) {
-      var id = $(this).data("id");
-      $(".lema__sidebar__item").removeClass("active");
+      const id = $(this).data("id");
+      $(".lema__sidebar__item").removeClass("active").addClass("disabled");
       $(this).addClass("active");
 
       $(".lema__content")
@@ -964,6 +1101,7 @@ $(document).ready(function () {
             pageDots: false,
             prevNextButtons: false,
             adaptiveHeight: false,
+            autoPlay: true,
           });
 
           $("  .hear_flickity_small--js").flickity({
@@ -973,6 +1111,7 @@ $(document).ready(function () {
             contain: true,
             asNavFor: '.lema__content[data-id="' + id + '"] .hear_flickity--js',
           });
+          $(".lema__sidebar__item").removeClass("disabled");
         });
     }
   });
@@ -980,12 +1119,26 @@ $(document).ready(function () {
   $(document).on("click", ".read_more_careers_btn--js", function (e) {
     e.preventDefault();
     $(".careers_table .row").removeClass("active");
+    $(".careers_table .row .row_content").removeClass("active");
+
     $(this).parent().parent(".row").addClass("active");
+    $(this).parent(".col").siblings(".row_content").slideDown();
   });
 
   $(document).on("click", ".careers_table .row .row_content", function () {
     if ($(this).parent(".row").hasClass("active")) {
       $(this).parent(".row").removeClass("active");
+      $(this).slideUp();
+    }
+  });
+
+  $(document).on("click", " .ct--js", function () {
+    if ($(this).parent().parent(".row").hasClass("active")) {
+      $(this).parent().parent(".row").removeClass("active");
+      $(this).parent(".col").siblings(".row_content").slideUp();
+    } else {
+      $(this).parent().parent(".row").addClass("active");
+      $(this).parent(".col").siblings(".row_content").slideDown();
     }
   });
 
@@ -1204,22 +1357,6 @@ function falidator(item) {
   }
 }
 
-var machine = new Typed("#machine", {
-  strings: [
-    '<span style="font-weight: 900;">L^10i^20q^90u^50i^30d^30i^80t^20y</span>  &amp; <b style="font-weight: 900;">T^10e^20c^30h^50n^20o^50logy</b>',
-    "<span>P^10r^20i^20m^10e of Pr^20ime</span> </br> <b style='font-weight: 900;'>M^40u^20l^50t^30i-As^40s^30et Liquidity</b>",
-    "<span>A^20d^50v^30a^10nc^20ed</span></br> <b style='font-weight: 900;'>W^100hi^30te La^20bel Sol^30uti^20on^50s</b>",
-    "<b style='font-weight: 900;'>Tec^20hnolo^300gy Sol^40uti^20ons</b>",
-  ],
-  typeSpeed: 40,
-  backSpeed: 20,
-  backDelay: 1000,
-  startDelay: 1000,
-  loop: true,
-  showCursor: false,
-  contentType: "html",
-});
-
 $(".produst_tabs_btn--js").hover(function (e) {
   e.preventDefault();
   if (!$(this).hasClass("active")) {
@@ -1230,3 +1367,34 @@ $(".produst_tabs_btn--js").hover(function (e) {
     $('.produst_tabs_content--js[data-id="' + id + '"]').addClass("active");
   }
 });
+
+if ($("body").hasClass("bigAnimation")) {
+  const mission = new Typed("#mission", {
+    strings: [
+      "<span> We don't tell you now to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
+    ],
+    typeSpeed: 40,
+    backSpeed: 20,
+    backDelay: 1000,
+    startDelay: 1000,
+    loop: true,
+    showCursor: false,
+    contentType: "html",
+  });
+} else {
+  const machine = new Typed("#machine", {
+    strings: [
+      '<span style="font-weight: 900;">L^10i^20q^90u^50i^30d^30i^80t^20y</span>  &amp; <b style="font-weight: 900;">T^10e^20c^30h^50n^20o^50logy</b>',
+      "<span>P^10r^20i^20m^10e of Pr^20ime</span> </br> <b style='font-weight: 900;'>M^40u^20l^50t^30i-As^40s^30et Liquidity</b>",
+      "<span>A^20d^50v^30a^10nc^20ed</span></br> <b style='font-weight: 900;'>W^100hi^30te La^20bel Sol^30uti^20on^50s</b>",
+      "<b style='font-weight: 900;'>Tec^20hnolo^300gy Sol^40uti^20ons</b>",
+    ],
+    typeSpeed: 40,
+    backSpeed: 20,
+    backDelay: 1000,
+    startDelay: 1000,
+    loop: true,
+    showCursor: false,
+    contentType: "html",
+  });
+}

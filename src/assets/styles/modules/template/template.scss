@@ -3619,6 +3619,7 @@ select:visited {
     top: 0;
     background: rgba(31, 40, 50, 0.6);
     z-index: 0;
+    mix-blend-mode: multiply;
   }
 
   .section__title,
@@ -3640,5 +3641,18 @@ select:visited {
     object-position: top;
     width: 101%;
     height: 101%;
+  }
+}
+
+.events_screen.section.section__dosnt_filter.rectangle {
+  &:before {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 32.37%,
+        rgba(0, 0, 0, 0.42) 100%
+      ),
+      rgba(0, 0, 0, 0.6);
+
+    mix-blend-mode: normal;
   }
 }
