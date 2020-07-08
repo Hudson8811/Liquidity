@@ -160,7 +160,7 @@ $(document).ready(function () {
         startAnimTriger = false;
         $("html, body").animate(
           {
-            scrollTop: $("#ab__content").offset().top,
+            scrollTop: $("#animation_brand").offset().top,
           },
           1000
         );
