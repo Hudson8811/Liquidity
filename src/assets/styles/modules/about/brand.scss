@@ -1,4 +1,5 @@
 .animation_brand {
+  overflow: hidden;
   background: #1a2129;
   position: relative;
   transition: padding 0.5s;
@@ -32,8 +33,15 @@
   }
   .section__title {
     padding-top: 150px;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
     color: #fff;
+    max-height: 84px;
+    transition: padding 0.5s, max-height 0.5s;
+
+    &.height0-anim {
+      max-height: 0;
+      padding: 0;
+    }
 
     &.disabled {
       opacity: 0;
@@ -42,44 +50,59 @@
 
   .ab {
     &__title_block {
+      z-index: 30;
       position: absolute;
-      transform: translateY(40%);
+      transform: translateY(400%);
       box-sizing: border-box;
       padding-left: 40px;
+      transition: opacity 1s, transform 1.5s;
+      opacity: 0;
 
-      &__heading {
-        transform: translateY(100%);
-        opacity: 0;
-        will-change: auto;
+      &.active {
+        opacity: 1;
+        transform: translateY(90%);
 
-        transition: opacity 1s, transform 1s;
-
-        &.active {
-          opacity: 1;
-          transform: translateY(50%);
-        }
-
-        &.six_move {
-          transform: scale(0.7);
+        .ab__title_block__heading,
+        .ab__title_block__subtitle,
+        .reanim_btn svg {
+          transform: scale(1);
         }
       }
 
+      .reanim_btn {
+        margin-top: 38px;
+
+        svg {
+          display: block;
+          margin: 0 auto;
+          opacity: 0.4;
+          cursor: pointer;
+          transition: all 1.3s;
+          transform: scale(1.3);
+        }
+
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+
+      &__heading {
+        will-change: auto;
+        transition: all 1.9s;
+
+        transform: scale(1.9);
+      }
+
       &__subtitle {
+        transition: all 1.3s;
         display: block;
         margin: 0 auto;
-        transform: translateY(300%);
-        opacity: 0;
-        transition: opacity 1s, transform 1s;
+        margin-top: 25px;
         will-change: auto;
 
-        &.active {
-          opacity: 1;
-          transform: translateY(200%);
-        }
-
-        &.six_move {
-          transform: scale(0.5);
-        }
+        transform: scale(1.9);
       }
     }
     &__content {
@@ -93,8 +116,8 @@
       min-height: 553px;
       transition: max-height 1s, min-height 1s;
 
-      &.second_move {
-        min-height: 778px;
+      &.height800-anim {
+        min-height: 800px;
       }
     }
 
@@ -108,7 +131,77 @@
       box-sizing: border-box;
       border: 1px solid rgba(255, 255, 255, 0);
       box-sizing: border-box;
-      transition: all 0.5s;
+      transition: all 1s;
+
+      &.opacity0-anim {
+        opacity: 0;
+      }
+
+      &.lastStep-anim {
+        position: absolute;
+        top: 0;
+        border: none;
+        background: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        max-width: 620px;
+        max-height: 620px;
+        min-width: 620px;
+        min-height: 620px;
+        left: 50%;
+        margin-left: -310px;
+        padding: 0;
+        z-index: 21;
+        transition: all 1s;
+
+        svg {
+          max-width: 163px;
+          max-height: 163px;
+          position: relative;
+          top: auto !important;
+          left: auto !important;
+          bottom: auto !important;
+          right: auto !important;
+          transition: all 0.5s;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            align-self: flex-start;
+          }
+
+          &:nth-child(7),
+          &:nth-child(8),
+          &:nth-child(9) {
+            align-self: flex-end;
+          }
+
+          &:nth-child(3n-1) {
+            justify-self: center;
+          }
+          &:nth-child(3n) {
+            justify-self: end;
+          }
+        }
+
+        &.logoAnim {
+          max-width: 166px;
+          max-height: 166px;
+          min-width: 166px;
+          min-height: 166px;
+          margin-left: -83px;
+          top: 253px;
+
+          svg {
+            max-width: 55px;
+            max-height: 55px;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+          }
+        }
+      }
 
       &.disabled {
         opacity: 0;
@@ -299,6 +392,10 @@
       opacity: 1;
       transition: opacity 0.5s;
 
+      &.lastStepOpacity0 {
+        opacity: 0;
+      }
+
       &__text {
         font-style: normal;
         font-weight: normal;
@@ -339,11 +436,7 @@
         position: relative;
         will-change: auto;
 
-        &.opacity03 {
-          opacity: 0.3 !important;
-        }
-
-        &.opacity1 {
+        &.opacity1-anim {
           opacity: 1 !important;
         }
         &.for_move {
@@ -408,13 +501,34 @@
         justify-content: flex-start;
         box-sizing: border-box;
         transition: padding 0.5s;
+        z-index: 8;
 
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3) {
           padding-top: 195px;
-          .ab__core__icon {
+
+          &.p0-anim {
+            padding-top: 0;
           }
+        }
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          padding-top: 230px;
+        }
+
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+          padding-top: 460px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(5),
+        &:nth-child(8) {
+          z-index: 10;
         }
       }
 
