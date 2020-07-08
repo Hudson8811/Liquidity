@@ -1350,6 +1350,13 @@ $(".towns li ").hover(function () {
   $(".hear_flickity_small--js").flickity("select", townTarget);
 });
 
+$(".careers_content .hear_flickity--js").on("change.flickity", function (
+  event,
+  index
+) {
+  $(".towns li").removeClass("active");
+  $(`.towns li[data-id="${index}"]`).addClass("active");
+});
 function falidator(item) {
   check = true;
   $(item)
@@ -1383,7 +1390,7 @@ $(".produst_tabs_btn--js").hover(function (e) {
 if ($("body").hasClass("bigAnimation")) {
   const mission = new Typed("#mission", {
     strings: [
-      "<span> We don't tell you now to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
+      "<span> We don't tell you how to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
     ],
     typeSpeed: 40,
     backSpeed: 20,
