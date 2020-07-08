@@ -10,6 +10,10 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
+    a {
+      display: block;
+    }
+
     width: calc(33.333% - 40px / 3);
 
     @media screen and (max-width: 1000px) {
@@ -46,7 +50,7 @@
         max-width: none;
       }
 
-      img + img {
+      a + a {
         margin-top: 20px;
       }
     }
@@ -91,5 +95,54 @@
 .careers_hiring {
   .new_hiring_block {
     border-bottom: 0;
+  }
+}
+
+.fancybox-thumbs {
+  top: auto;
+  width: auto;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: transparent;
+}
+
+.fancybox-inner {
+  width: 100%;
+}
+
+.fancybox-thumbs__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    &:before {
+      border: none;
+    }
+  }
+}
+
+.fancybox-thumbs > ul > li {
+  border-color: transparent;
+}
+
+.fancybox-container--thumbs .fancybox-caption-wrap,
+.fancybox-container--thumbs .fancybox-controls,
+.fancybox-container--thumbs .fancybox-slider-wrap {
+  right: 0;
+  bottom: 0;
+}
+
+@media all and (max-width: 800px) {
+  .fancybox-thumbs {
+    display: none !important;
+  }
+
+  .fancybox-container--thumbs .fancybox-controls,
+  .fancybox-container--thumbs .fancybox-slider-wrap,
+  .fancybox-container--thumbs .fancybox-caption-wrap {
+    bottom: 0;
   }
 }

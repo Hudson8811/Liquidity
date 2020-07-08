@@ -18,14 +18,8 @@ $(document).ready(function () {
   $(".fancybox-thumb").fancybox({
     prevEffect: "none",
     nextEffect: "none",
-    helpers: {
-      title: {
-        type: "outside",
-      },
-      thumbs: {
-        width: 50,
-        height: 50,
-      },
+    thumbs: {
+      autoStart: true,
     },
   });
 
@@ -111,6 +105,8 @@ $(document).ready(function () {
           bigCircle.style.strokeDashoffset - offset;
       }
     }
+
+    setProgress(0);
     startAnimTriger = true;
     let animationFirstStepTrigger = false;
     let animationLastStepTrigger = false;
@@ -148,7 +144,6 @@ $(document).ready(function () {
       $(".ab__circle").removeClass("disabled");
       activated(".ab__text__item");
       $(".ab__logo").removeClass("lastStep-anim logoAnim").addClass("disabled");
-      setProgress(0);
       $(".ab__content").removeClass("height800-anim");
       $(".ab__core").removeClass("lastStepOpacity0");
       $(".ab__core__item").removeClass("p0-anim");
@@ -174,63 +169,56 @@ $(document).ready(function () {
         startAnimTriger = false;
         $("html, body").animate(
           {
-            scrollTop: $("#animation_brand").offset().top,
+            scrollTop: $("#animationTrigger").offset().top,
           },
-          1000
+          700
         );
         $(".ab__logo").removeClass("disabled");
+        $(".ab__circle").addClass("active");
 
         setTimeout(() => {
           activated(element1);
-        }, 1000);
+          setProgress(100);
+        }, 700);
 
         setTimeout(() => {
           activated(element2);
-          setProgress(20);
-        }, 2000);
+        }, 1400);
 
         setTimeout(() => {
           activated(element3);
-          setProgress(38);
-        }, 3000);
+        }, 2100);
 
         setTimeout(() => {
           activated(element4);
-          setProgress(55);
-        }, 4000);
+        }, 2800);
 
         setTimeout(() => {
           activated(element5);
-          setProgress(75);
-        }, 5000);
+        }, 3500);
 
         setTimeout(() => {
           activated(element6);
-          setProgress(100);
+
           $(".ab__logo").addClass("active");
-        }, 6000);
+        }, 4200);
 
         setTimeout(() => {
           animationFirstStepTrigger = true;
-        }, 7000);
+        }, 4900);
       } else if (animationFirstStepTrigger) {
-        setTimeout(() => {
-          $(".ab__logo svg").addClass("active");
-        }, 1000);
+        setTimeout(() => {}, 700);
 
         setTimeout(() => {
-          $(".animation_brand .section__title").addClass("disabled");
+          $(".ab__logo svg").addClass("active");
           $(".ab__text").addClass("disabled");
           $(".ab__logo").addClass("disabled");
           $(".ab__circle").addClass("disabled");
-        }, 2000);
-
-        setTimeout(() => {
           logo1.addClass("active");
           discription1.addClass("active");
 
           logo1Trigger = true;
-        }, 2500);
+        }, 1400);
 
         animationFirstStepTrigger = false;
       }
@@ -242,7 +230,7 @@ $(document).ready(function () {
           discription2.addClass("active");
 
           logo2Trigger = true;
-        }, 1000);
+        }, 700);
         logo1Trigger = false;
       } else if (logo2Trigger) {
         setTimeout(() => {
@@ -252,7 +240,7 @@ $(document).ready(function () {
           discription3.addClass("active");
 
           logo3Trigger = true;
-        }, 1000);
+        }, 700);
         logo2Trigger = false;
       } else if (logo2Trigger) {
         setTimeout(() => {
@@ -262,19 +250,22 @@ $(document).ready(function () {
           discription3.addClass("active");
 
           logo3Trigger = true;
-        }, 1000);
+        }, 700);
         logo2Trigger = false;
       } else if (logo3Trigger) {
+        setProgress(0);
         setTimeout(() => {
           logo3.addClass("disabled");
           discription3.removeClass("active");
           logo4.addClass("active");
           discription4.addClass("active");
           $(".ab__core__item").addClass("p0-anim");
-          $(".animation_brand .section__title").addClass("height0-anim");
+          $(".animation_brand .section__title")
+            .addClass("height0-anim")
+            .addClass("disabled");
           $(".ab__content").addClass("height800-anim");
           logo4Trigger = true;
-        }, 1000);
+        }, 700);
         logo3Trigger = false;
       } else if (logo4Trigger) {
         setTimeout(() => {
@@ -284,7 +275,7 @@ $(document).ready(function () {
           discription5.addClass("active");
 
           logo5Trigger = true;
-        }, 1000);
+        }, 700);
         logo4Trigger = false;
       } else if (logo5Trigger) {
         setTimeout(() => {
@@ -294,7 +285,7 @@ $(document).ready(function () {
           discription6.addClass("active");
 
           logo6Trigger = true;
-        }, 1000);
+        }, 700);
         logo5Trigger = false;
       } else if (logo6Trigger) {
         setTimeout(() => {
@@ -304,7 +295,7 @@ $(document).ready(function () {
           discription7.addClass("active");
 
           logo7Trigger = true;
-        }, 1000);
+        }, 700);
         logo6Trigger = false;
       } else if (logo7Trigger) {
         setTimeout(() => {
@@ -313,7 +304,7 @@ $(document).ready(function () {
           logo8.addClass("active");
           discription8.addClass("active");
           logo8Trigger = true;
-        }, 1000);
+        }, 700);
         logo7Trigger = false;
       } else if (logo8Trigger) {
         setTimeout(() => {
@@ -323,7 +314,7 @@ $(document).ready(function () {
           discription9.addClass("active");
 
           logo9Trigger = true;
-        }, 1000);
+        }, 700);
 
         $(".ab__logo")
           .addClass("lastStep-anim")
@@ -339,34 +330,28 @@ $(document).ready(function () {
           discription9.removeClass("active");
 
           animationLastStepTrigger = true;
-        }, 1000);
+        }, 700);
         logo9Trigger = false;
       } else if (animationLastStepTrigger) {
         setTimeout(() => {
           $(".ab__logo").removeClass("opacity0-anim");
-        }, 1000);
-
-        setTimeout(() => {
           $(".ab__core").addClass("lastStepOpacity0");
-        }, 1000);
-
-        setTimeout(() => {
-          logoAnimTrigger = true;
-        }, 2000);
-
-        animationLastStepTrigger = false;
-      } else if (logoAnimTrigger) {
-        $(".ab__logo").addClass("logoAnim");
+          $(".ab__logo").addClass("logoAnim");
+        }, 700);
 
         setTimeout(() => {
           $(".ab__title_block").addClass("active");
-        }, 500);
-
-        logoAnimTrigger = false;
+        }, 1000);
 
         setTimeout(() => {
           fullAnimTrigger = true;
-        }, 2000);
+        }, 1400);
+
+        setTimeout(() => {
+          logoAnimTrigger = true;
+        }, 1400);
+
+        animationLastStepTrigger = false;
       }
       if (!fullAnimTrigger) {
         e.preventDefault ? e.preventDefault() : (e.returnValue = false);
@@ -540,15 +525,37 @@ $(document).ready(function () {
     }
   }
 
+  let chechNubmerTrigger = false;
+
   function checkNumber() {
-    if (checkContent(".ab_resault .number__trigger") === true) {
-      outNum(203, 2500, "#number-1");
-      outNum(128, 2100, "#number-2");
-      outNum(18, 1800, "#number-3");
-      outNum(13, 1500, "#number-4");
-      outNum(7, 1000, "#number-5");
-      outNum(4, 1000, "#number-6");
-      $(document).off("scroll");
+    if (checkContent(".ab_resault .number__trigger") && !chechNubmerTrigger) {
+      outNum(203, 3000, "#number-1");
+      outNum(128, 2600, "#number-2");
+      outNum(18, 2400, "#number-3");
+      outNum(13, 2000, "#number-4");
+      outNum(7, 1500, "#number-5");
+      outNum(4, 1500, "#number-6");
+
+      chechNubmerTrigger = true;
+    }
+  }
+  let chechTextTrigger = false;
+
+  function checkText() {
+    if (checkContent(".mission__overlay") && !chechTextTrigger) {
+      const mission = new Typed("#mission", {
+        strings: [
+          "<span> We don't tell you how to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
+        ],
+        typeSpeed: 20,
+        backSpeed: 10,
+        backDelay: 1000,
+        startDelay: 1000,
+        loop: false,
+        showCursor: false,
+        contentType: "html",
+      });
+      chechTextTrigger = true;
     }
   }
 
@@ -566,6 +573,7 @@ $(document).ready(function () {
     } else if ($("body").hasClass("navbar_animation")) {
       checkPositionNavbarAnim();
     } else if ($("body").hasClass("bigAnimation")) {
+      checkText();
       checkNumber();
     } else if ($("body").hasClass("team")) {
       checkEngineers();
@@ -1402,18 +1410,6 @@ $(".produst_tabs_btn--js").hover(function (e) {
 });
 
 if ($("body").hasClass("bigAnimation")) {
-  const mission = new Typed("#mission", {
-    strings: [
-      "<span> We don't tell you how to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
-    ],
-    typeSpeed: 40,
-    backSpeed: 20,
-    backDelay: 1000,
-    startDelay: 1000,
-    loop: true,
-    showCursor: false,
-    contentType: "html",
-  });
 } else {
   const machine = new Typed("#machine", {
     strings: [
