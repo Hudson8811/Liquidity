@@ -209,6 +209,10 @@
       padding-bottom: 50px;
       transition: padding 0.5s;
       overflow: hidden;
+      background: #29313b;
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      padding-top: 30px;
 
       p {
         font-style: normal;
@@ -248,8 +252,6 @@
     }
 
     &.active {
-      padding-top: 50px;
-
       background: #333d46;
       box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
       border-radius: 4px;

@@ -32,19 +32,8 @@
       height: 80px;
       margin-bottom: 60px;
       margin-right: 57px;
-      transition-delay: 1s;
-      transition: opacity 2s;
+      transition: opacity 1s;
       opacity: 0;
-
-      &:nth-child(n + 22) {
-        transition-delay: 2s;
-        transition: opacity 3s;
-      }
-
-      &:nth-child(n + 50) {
-        transition-delay: 3s;
-        transition: opacity 5s;
-      }
 
       &:nth-child(7n) {
         margin-right: 0;

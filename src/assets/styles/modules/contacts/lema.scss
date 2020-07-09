@@ -304,12 +304,14 @@
   border: 1px solid #dbdee1;
   box-sizing: border-box;
   border-radius: 5px;
-  color: #c4c4c4;
+  color: #9e9e9e;
+
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
     border: 1px solid #acb8c3;
+    color: #8e8d8d;
   }
 }
 

@@ -561,6 +561,11 @@ $(document).ready(function () {
 
   function checkEngineers() {
     if (checkContent(".engineers__trigger") === true) {
+      for (let index = 1; index < 71; index++) {
+        $(`.images_catalog__item:nth-child(${index})`).css({
+          transitionDelay: `${index / 30}s`,
+        });
+      }
       $(".images_catalog").addClass("active");
     }
   }
@@ -664,6 +669,11 @@ $(document).ready(function () {
   $(".grafic_slider--slick_item").on("click", function () {
     let index = $(this).index();
     $(".grafic_slider--slick").flickity("select", index);
+  });
+
+  $(".hover_flickity--js .item").hover(function () {
+    let index = $(this).index();
+    $(".hover_flickity--js").flickity("select", index);
   });
 
   $(".mac_slider--slick").flickity({
@@ -1150,31 +1160,36 @@ $(document).ready(function () {
     }
   });
 
-  $(document).on("click", ".read_more_careers_btn--js", function (e) {
+  $(document).on("click", ".careers_table .row", function (e) {
     e.preventDefault();
-    $(".careers_table .row").removeClass("active");
-    $(".careers_table .row .row_content").removeClass("active");
 
-    $(this).parent().parent(".row").addClass("active");
-    $(this).parent(".col").siblings(".row_content").slideDown();
-  });
-
-  $(document).on("click", ".careers_table .row .row_content", function () {
-    if ($(this).parent(".row").hasClass("active")) {
-      $(this).parent(".row").removeClass("active");
-      $(this).slideUp();
-    }
-  });
-
-  $(document).on("click", " .ct--js", function () {
-    if ($(this).parent().parent(".row").hasClass("active")) {
-      $(this).parent().parent(".row").removeClass("active");
-      $(this).parent(".col").siblings(".row_content").slideUp();
+    if (!$(this).hasClass("active")) {
+      $(".careers_table .row").removeClass("active");
+      $(".careers_table .row .row_content").removeClass("active").slideUp();
+      $(this).addClass("active");
+      $(this).children(".row_content").slideDown();
     } else {
-      $(this).parent().parent(".row").addClass("active");
-      $(this).parent(".col").siblings(".row_content").slideDown();
+      $(this).removeClass("active");
+      $(this).children(".row_content").slideUp();
     }
   });
+
+  // $(document).on("click", ".careers_table .row .row_content", function () {
+  //   if ($(this).parent(".row").hasClass("active")) {
+  //     $(this).parent(".row").removeClass("active");
+  //     $(this).slideUp();
+  //   }
+  // });
+
+  // $(document).on("click", " .ct--js", function () {
+  //   if ($(this).parent().parent(".row").hasClass("active")) {
+  //     $(this).parent().parent(".row").removeClass("active");
+  //     $(this).parent(".col").siblings(".row_content").slideUp();
+  //   } else {
+  //     $(this).parent().parent(".row").addClass("active");
+  //     $(this).parent(".col").siblings(".row_content").slideDown();
+  //   }
+  // });
 
   $(document).on("click", ".apply_now_careers_btn", function () {
     event.preventDefault();

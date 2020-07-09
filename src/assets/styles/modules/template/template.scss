@@ -3627,6 +3627,17 @@ select:visited {
     position: relative;
     z-index: 1;
   }
+
+  &.rectangle_team {
+    &:before {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 32.37%,
+          rgba(0, 0, 0, 0.42) 100%
+        ),
+        rgba(0, 0, 0, 0.6);
+    }
+  }
 }
 
 #modal_video_7 {
@@ -3641,18 +3652,5 @@ select:visited {
     object-position: top;
     width: 101%;
     height: 101%;
-  }
-}
-
-.events_screen.section.section__dosnt_filter.rectangle {
-  &:before {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 32.37%,
-        rgba(0, 0, 0, 0.42) 100%
-      ),
-      rgba(0, 0, 0, 0.6);
-
-    mix-blend-mode: normal;
   }
 }
