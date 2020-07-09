@@ -1200,13 +1200,6 @@ $(document).ready(function () {
   });
 });
 
-function backPreloader() {
-  let bacItems = ["9", "8", "7", "6", "5", "4", "3", "2", "1"];
-
-  bacItems.forEach(function (item) {
-    $(`.preloader__item[data-id='${item}']`).css("transform", "translateY(0");
-  });
-}
 let check = false;
 function preloader() {
   if (check === false) {
@@ -1214,7 +1207,7 @@ function preloader() {
     let duration = 0.333;
 
     items.forEach(function (item) {
-      $(`.preloader__item[data-id='${item}']`).css({
+      $(`#preloader1 .preloader__item[data-id='${item}']`).css({
         transform: "translateY(-100%)",
         transitionDelay: `${duration}s`,
       });
@@ -1227,7 +1220,7 @@ function preloader() {
     let duration = 0.333;
 
     items.forEach(function (item) {
-      $(`.preloader__item[data-id='${item}']`).css({
+      $(`#preloader1 .preloader__item[data-id='${item}']`).css({
         transform: "translateY(0%)",
         transitionDelay: `${duration}s`,
       });
@@ -1238,12 +1231,94 @@ function preloader() {
   }
 }
 
+let check2 = false;
+function preloader2() {
+  if (!check2) {
+    let items2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let duration2 = 0.1;
+
+    items2.forEach(function (item) {
+      $(`#preloader2 .preloader__item[data-id='${item}']`).css({
+        transform: "translateY(-100%)",
+        transition: `0.3s`,
+        transitionDelay: `${duration2}s`,
+      });
+
+      duration2 = duration2 + 0.1;
+    });
+    check2 = true;
+  } else {
+    let items2 = ["9", "8", "7", "6", "5", "4", "3", "2", "1"];
+    let duration2 = 0.1;
+
+    items2.forEach(function (item) {
+      $(`#preloader2 .preloader__item[data-id='${item}']`).css({
+        transform: "translateY(0%)",
+        transition: `0.3s`,
+        transitionDelay: `${duration2}s`,
+      });
+
+      duration2 = duration2 + 0.1;
+    });
+    check2 = false;
+  }
+}
+
+let check3 = false;
+
+function startPreloader3(item, t, o) {
+  $(item).css({
+    transitionDelay: `${t}s`,
+    opacity: `${o}`,
+  });
+}
+
+function preloader3() {
+  if (!check3) {
+    startPreloader3('#preloader3 .preloader__item[data-id="7"]', 0.3, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="4"]', 0.4, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="8"]', 0.4, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="1"]', 0.5, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="5"]', 0.5, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="9"]', 0.5, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="2"]', 0.6, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="6"]', 0.6, 1);
+    startPreloader3('#preloader3 .preloader__item[data-id="3"]', 0.7, 1);
+
+    check3 = true;
+  } else {
+    startPreloader3('#preloader3 .preloader__item[data-id="3"]', 0.3, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="6"]', 0.4, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="2"]', 0.4, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="9"]', 0.5, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="5"]', 0.5, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="1"]', 0.5, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="8"]', 0.6, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="4"]', 0.6, 0);
+    startPreloader3('#preloader3 .preloader__item[data-id="7"]', 0.7, 0);
+
+    check3 = false;
+  }
+}
+
 $(document).ready(function () {
   preloader();
+
+  preloader2();
+
+  preloader3();
 
   setInterval(() => {
     preloader();
   }, 3332);
+
+  setInterval(() => {
+    preloader2();
+  }, 2000);
+
+  setInterval(() => {
+    preloader3();
+  }, 1000);
 });
 
 $(".tabs_slider .item").on("click", function () {
