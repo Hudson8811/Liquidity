@@ -28,12 +28,20 @@
       border-bottom: 3px solid transparent;
       transition: all 0.5s;
 
+      &:nth-child(1) {
+        cursor: auto;
+      }
+
       @media screen and (max-width: 1000px) {
         height: 40px;
       }
 
       &.active {
         border-color: #03e2b2;
+      }
+
+      &.disabled {
+        pointer-events: none;
       }
 
       &:nth-child(1) {

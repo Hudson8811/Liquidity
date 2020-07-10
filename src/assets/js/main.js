@@ -126,6 +126,7 @@ $(document).ready(function () {
       $(".ab__content").css("opacity", "0");
 
       startAnimTriger = true;
+      bacFirstTrigger = false;
       animationFirstStepTrigger = false;
       animationLastStepTrigger = false;
       logoAnimTrigger = false;
@@ -151,6 +152,9 @@ $(document).ready(function () {
       $(".animation_brand .section__title").removeClass(
         "disabled height0-anim"
       );
+      $(".animation_brand .new_logo")
+        .removeClass("height0-anim")
+        .removeClass("disabled");
 
       setTimeout(() => {
         $(".ab__content").css("opacity", "1");
@@ -169,43 +173,47 @@ $(document).ready(function () {
         startAnimTriger = false;
         $("html, body").animate(
           {
-            scrollTop: $("#animationTrigger").offset().top,
+            scrollTop:
+              $("#animationTrigger").offset().top - window.innerHeight / 2,
           },
           700
         );
         $(".ab__logo").removeClass("disabled");
-        $(".ab__circle").addClass("active");
 
         setTimeout(() => {
           activated(element1);
+        }, 500);
+
+        setTimeout(() => {
+          $(".ab__circle").addClass("active");
           setProgress(100);
-        }, 700);
+        }, 800);
 
         setTimeout(() => {
           activated(element2);
-        }, 1400);
+        }, 1000);
 
         setTimeout(() => {
           activated(element3);
-        }, 2100);
+        }, 1500);
 
         setTimeout(() => {
           activated(element4);
-        }, 2800);
+        }, 2000);
 
         setTimeout(() => {
           activated(element5);
-        }, 3500);
+        }, 2500);
 
         setTimeout(() => {
           activated(element6);
 
           $(".ab__logo").addClass("active");
-        }, 4200);
+        }, 3000);
 
         setTimeout(() => {
           animationFirstStepTrigger = true;
-        }, 4900);
+        }, 3500);
       } else if (animationFirstStepTrigger) {
         setTimeout(() => {}, 700);
 
@@ -214,23 +222,31 @@ $(document).ready(function () {
           $(".ab__text").addClass("disabled");
           $(".ab__logo").addClass("disabled");
           $(".ab__circle").addClass("disabled");
-          logo1.addClass("active");
-          discription1.addClass("active");
-
-          logo1Trigger = true;
         }, 1400);
 
+        setTimeout(() => {
+          logo1.addClass("active");
+          discription1.addClass("active");
+        }, 2000);
+
+        setTimeout(() => {
+          logo1Trigger = true;
+          bacFirstTrigger = true;
+        }, 3000);
         animationFirstStepTrigger = false;
       }
+
       if (logo1Trigger) {
         setTimeout(() => {
           logo1.addClass("disabled");
           discription1.removeClass("active");
           logo2.addClass("active");
           discription2.addClass("active");
-
-          logo2Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo2Trigger = true;
+        }, 1700);
         logo1Trigger = false;
       } else if (logo2Trigger) {
         setTimeout(() => {
@@ -238,19 +254,11 @@ $(document).ready(function () {
           discription2.removeClass("active");
           logo3.addClass("active");
           discription3.addClass("active");
-
-          logo3Trigger = true;
         }, 700);
-        logo2Trigger = false;
-      } else if (logo2Trigger) {
+
         setTimeout(() => {
-          logo2.addClass("disabled");
-          discription2.removeClass("active");
-          logo3.addClass("active");
-          discription3.addClass("active");
-
           logo3Trigger = true;
-        }, 700);
+        }, 1700);
         logo2Trigger = false;
       } else if (logo3Trigger) {
         setProgress(0);
@@ -263,9 +271,17 @@ $(document).ready(function () {
           $(".animation_brand .section__title")
             .addClass("height0-anim")
             .addClass("disabled");
+
+          $(".animation_brand .new_logo")
+            .addClass("height0-anim")
+            .addClass("disabled");
           $(".ab__content").addClass("height800-anim");
-          logo4Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo4Trigger = true;
+        }, 1700);
+
         logo3Trigger = false;
       } else if (logo4Trigger) {
         setTimeout(() => {
@@ -273,9 +289,11 @@ $(document).ready(function () {
           discription4.removeClass("active");
           logo5.addClass("active");
           discription5.addClass("active");
-
-          logo5Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo5Trigger = true;
+        }, 1700);
         logo4Trigger = false;
       } else if (logo5Trigger) {
         setTimeout(() => {
@@ -283,9 +301,11 @@ $(document).ready(function () {
           discription5.removeClass("active");
           logo6.addClass("active");
           discription6.addClass("active");
-
-          logo6Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo6Trigger = true;
+        }, 1700);
         logo5Trigger = false;
       } else if (logo6Trigger) {
         setTimeout(() => {
@@ -293,9 +313,11 @@ $(document).ready(function () {
           discription6.removeClass("active");
           logo7.addClass("active");
           discription7.addClass("active");
-
-          logo7Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo7Trigger = true;
+        }, 1700);
         logo6Trigger = false;
       } else if (logo7Trigger) {
         setTimeout(() => {
@@ -303,8 +325,11 @@ $(document).ready(function () {
           discription7.removeClass("active");
           logo8.addClass("active");
           discription8.addClass("active");
-          logo8Trigger = true;
         }, 700);
+
+        setTimeout(() => {
+          logo8Trigger = true;
+        }, 1700);
         logo7Trigger = false;
       } else if (logo8Trigger) {
         setTimeout(() => {
@@ -312,10 +337,10 @@ $(document).ready(function () {
           discription8.removeClass("active");
           logo9.addClass("active");
           discription9.addClass("active");
-
-          logo9Trigger = true;
         }, 700);
-
+        setTimeout(() => {
+          logo9Trigger = true;
+        }, 1700);
         $(".ab__logo")
           .addClass("lastStep-anim")
           .removeClass("disabled")
@@ -336,12 +361,15 @@ $(document).ready(function () {
         setTimeout(() => {
           $(".ab__logo").removeClass("opacity0-anim");
           $(".ab__core").addClass("lastStepOpacity0");
-          $(".ab__logo").addClass("logoAnim");
         }, 700);
 
         setTimeout(() => {
-          $(".ab__title_block").addClass("active");
+          $(".ab__logo").addClass("logoAnim");
         }, 1000);
+
+        setTimeout(() => {
+          $(".ab__title_block").addClass("active");
+        }, 1200);
 
         setTimeout(() => {
           fullAnimTrigger = true;
@@ -1454,21 +1482,52 @@ $(".family__block").hover(function () {
   $(".says__flickity--js").flickity("select", familyTarget);
 });
 
-$(".towns li ").hover(function () {
+$(".towns li:not(:nth-child(1)) ").hover(function () {
   let townTarget = $(this).data("id");
-  $(".towns li").removeClass("active");
-  $(this).addClass("active");
-  $(".hear_flickity--js").flickity("select", townTarget);
-  $(".hear_flickity_small--js").flickity("select", townTarget);
+
+  if (!$(this).hasClass("active")) {
+    $(".towns li").removeClass("active");
+    $(this).addClass("active");
+    $(".towns li").addClass("disabled");
+
+    $(".careers_wrapper")
+      .fadeOut()
+      .promise()
+      .done(function () {
+        $(" .hear_flickity--js, .hear_flickity_small--js").flickity("destroy");
+        $('.careers_wrapper[data-id="' + townTarget + '"]').fadeIn();
+        $(
+          '.careers_wrapper[data-id="' + townTarget + '"] .hear_flickity--js'
+        ).flickity({
+          pageDots: false,
+          prevNextButtons: false,
+          adaptiveHeight: false,
+          autoPlay: true,
+        });
+
+        $(
+          '.careers_wrapper[data-id="' +
+            townTarget +
+            '"] .hear_flickity_small--js'
+        ).flickity({
+          adaptiveHeight: false,
+          pageDots: false,
+          prevNextButtons: false,
+          contain: true,
+          asNavFor:
+            '.careers_wrapper[data-id="' + townTarget + '"] .hear_flickity--js',
+        });
+
+        $(".towns li").removeClass("disabled");
+      });
+  }
 });
 
-$(".careers_content .hear_flickity--js").on("change.flickity", function (
-  event,
-  index
-) {
-  $(".towns li").removeClass("active");
-  $(`.towns li[data-id="${index}"]`).addClass("active");
+$(".careers_wrapper .hear_flickity_small--js .item").hover(function () {
+  let index = $(this).index();
+  $(".careers_wrapper .hear_flickity--js").flickity("select", index);
 });
+
 function falidator(item) {
   check = true;
   $(item)

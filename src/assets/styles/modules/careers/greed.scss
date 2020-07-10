@@ -10,8 +10,22 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
+    &:nth-child(1) {
+      a {
+        height: 100%;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
     a {
       display: block;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     width: calc(33.333% - 40px / 3);
@@ -144,5 +158,12 @@
   .fancybox-container--thumbs .fancybox-slider-wrap,
   .fancybox-container--thumbs .fancybox-caption-wrap {
     bottom: 0;
+  }
+}
+
+.fancybox-container.fancybox-show-thumbs.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav.fancybox-is-open.fancybox-is-zoomable.fancybox-can-swipe {
+  .fancybox-bg {
+    background: #1a2837 !important;
+    opacity: 0.85 !important;
   }
 }

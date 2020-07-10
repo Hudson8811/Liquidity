@@ -6,8 +6,16 @@
     margin-bottom: 80px;
   }
 
+  .container {
+    max-width: 1600px;
+  }
+
   .number_block {
     justify-content: space-between;
+
+    &-content {
+      min-width: 121px;
+    }
 
     @media screen and (max-width: 700px) {
       display: block;

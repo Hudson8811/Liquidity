@@ -1,6 +1,12 @@
 .careers__video {
   .video_block {
     height: 490px;
+    overflow: hidden;
+
+    .video_block--preview .image_preview {
+      width: 101%;
+      height: 101%;
+    }
 
     @media screen and (max-width: 800px) {
       height: 50vw;

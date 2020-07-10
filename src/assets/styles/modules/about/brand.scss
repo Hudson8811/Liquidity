@@ -10,10 +10,26 @@
   align-items: center;
   flex-direction: column;
 
+  .new_logo {
+    max-width: 200px;
+    padding-bottom: 50px;
+    max-height: 84px;
+    transition: padding 0.5s, max-height 0.5s;
+
+    &.height0-anim {
+      max-height: 0;
+      padding: 0;
+    }
+
+    &.disabled {
+      opacity: 0;
+    }
+  }
+
   #animationTrigger {
     position: absolute;
     left: 50%;
-    top: 100px;
+    top: 50%;
     width: 1px;
     height: 1px;
     opacity: 0;
@@ -41,7 +57,7 @@
     overflow: hidden;
   }
   .section__title {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
     color: #fff;
     max-height: 84px;
     transition: padding 0.5s, max-height 0.5s;
@@ -144,6 +160,12 @@
       box-sizing: border-box;
       transition: all 0.7s;
       z-index: 1;
+
+      will-change: auto;
+
+      svg {
+        will-change: auto;
+      }
 
       &.opacity0-anim {
         opacity: 0;
@@ -394,7 +416,7 @@
         stroke-dashoffset: 0;
         transform-origin: center;
         transform: rotate(-135deg);
-        transition: transform 0.5s, all 4s;
+        transition: transform 0.5s, all 3s;
         will-change: auto;
       }
 
@@ -430,7 +452,7 @@
         max-width: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity 1s, padding 0.5s;
+        transition: opacity 0.5s, padding 0.5s;
         padding-top: 90px;
 
         &.active {

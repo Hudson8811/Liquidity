@@ -1,4 +1,24 @@
 .careers_content {
+  .careers_wrapper {
+    display: none;
+    min-height: 454px;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .careers_contect_heading {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    text-align: center;
+    color: #7b7b7b;
+    margin-bottom: 72px;
+  }
+
   .hear_flickity--js,
   .hear_flickity_small--js,
   .careers_table {
@@ -16,6 +36,8 @@
 
       img {
         height: 100%;
+        object-fit: cover;
+        object-position: top;
       }
     }
   }
@@ -23,7 +45,9 @@
   .hear_flickity--js {
     .item {
       img {
-        height: 381px;
+        height: 578px;
+        object-fit: cover;
+        object-position: center;
 
         @media screen and (max-width: 800px) {
           height: 50vw;
@@ -207,12 +231,12 @@
       box-sizing: border-box;
       padding-left: 105px;
       padding-bottom: 50px;
-      transition: padding 0.5s;
       overflow: hidden;
       background: #29313b;
       box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
       padding-top: 30px;
+      will-change: auto;
 
       p {
         font-style: normal;
