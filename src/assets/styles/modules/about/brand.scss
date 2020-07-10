@@ -470,6 +470,7 @@
         border-radius: 50%;
         box-sizing: border-box;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background: #313a44;
@@ -479,6 +480,23 @@
           max-height 0.5s;
         position: relative;
         will-change: auto;
+        img {
+          width: auto;
+          max-width: 21px;
+        }
+
+        .core_title {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          /* identical to box height */
+          text-align: center;
+          letter-spacing: -0.318182px;
+          color: #ececec;
+          display: block;
+          margin-top: 10px;
+        }
 
         &.opacity1-anim {
           opacity: 1 !important;
