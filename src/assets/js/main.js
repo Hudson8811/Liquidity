@@ -15,6 +15,90 @@ setTimeout(function () {
 }, 0);
 
 $(document).ready(function () {
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoidG9vbG5hZG8iLCJhIjoiY2tja3FvcjlqMThydDJ5czVwMWs5ZG80MSJ9.sf5D5QgC6CaLwYvR1opD9w";
+  var map = new mapboxgl.Map({
+    container: "lema__map1",
+    style: "mapbox://styles/mapbox/light-v10", // stylesheet location
+    center: [55, 37], // starting position [lng, lat]
+    zoom: 2, // starting zoom
+  });
+
+  var geojson = {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          message: "Foo",
+          iconSize: [60, 60],
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [30.585937500000004, 53.54030739150022],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          message: "Bar",
+          iconSize: [50, 50],
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [22.5, 38.272688535980976],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          message: "Baz",
+          iconSize: [40, 40],
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [39.37500000000001, 62.431074232920935],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          message: "Baz",
+          iconSize: [40, 40],
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [19.335937500000004, 47.754097979680026],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          message: "Baz",
+          iconSize: [40, 40],
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [106.17187500000001, 38.548165423046584],
+        },
+      },
+    ],
+  };
+
+  geojson.features.forEach(function (marker) {
+    // create a DOM element for the marker
+    var elMap = document.createElement("div");
+    elMap.className = "marker";
+    elMap.style.backgroundImage = "url(images/contacts/mapIcon.svg)";
+    elMap.style.width = "36px";
+    elMap.style.height = "70px";
+
+    // add marker to map
+    new mapboxgl.Marker(elMap)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+  });
+
   $(".fancybox-thumb").fancybox({
     prevEffect: "none",
     nextEffect: "none",

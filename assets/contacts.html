@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -642,8 +643,9 @@
                     <div class="lema__adress"> <span class="extrabold">Limassol </span><span>Georgiou Kaningos 1,</span><span>Office 104 -105</span><span>Pamelva Court, 3105.</span></div><a class="lema__phone" href="tel: + 44 208 068 86 36 ">+ 44 208 068 86 36</a>
                     <div class="lema__link_block"><span><span class="extrabold">Sales </span> department</span><a class="lema__link" href="#">sales@b2broker.net</a></div>
                     <div class="lema__link_block"><span><span class="extrabold">HR </span>  department</span><a class="lema__link" href="#">hr@b2broker.net</a></div>
-                    <div class="lema__link_block"><span>General issues</span><a class="lema__link" href="#">mail@b2broker.net</a></div><a class="show_on_map_btn" href="#">Show on map</a>
-                  </aside><img class="lema__map" src="images/contacts/map1.png" alt="img">
+                    <div class="lema__link_block"><span>General issues</span><a class="lema__link" href="#">mail@b2broker.net</a></div><a class="show_on_map_btn" id="show_marker1" href="#">Show on map</a>
+                  </aside>
+                  <div class="lema__map" id="lema__map1"></div>
                 </div>
               </div>
               <div class="lema__content" data-id="2">
@@ -671,7 +673,8 @@
                     <div class="lema__link_block"><span><span class="extrabold">Sales </span> department</span><a class="lema__link" href="#">sales@b2broker.net</a></div>
                     <div class="lema__link_block"><span><span class="extrabold">HR </span>  department</span><a class="lema__link" href="#">hr@b2broker.net</a></div>
                     <div class="lema__link_block"><span>General issues</span><a class="lema__link" href="#">mail@b2broker.net</a></div><a class="show_on_map_btn" href="#">Show on map</a>
-                  </aside><img class="lema__map" src="images/contacts/map1.png" alt="img">
+                  </aside>
+                  <div class="lema__map"></div>
                 </div>
               </div>
               <div class="lema__content not_map" data-id="3">
@@ -2789,6 +2792,7 @@
     <script src="js/typed.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
