@@ -987,6 +987,20 @@ $(document).ready(function () {
     });
   });
 
+  $(document).on("click", ".modal_new_form_1--js", function () {
+    $.fancybox.open({
+      src: "#modalFormNew",
+      type: "inline",
+    });
+  });
+
+  $(document).on("click", ".modal_new_form_2--js", function () {
+    $.fancybox.open({
+      src: "#modalFormNew2",
+      type: "inline",
+    });
+  });
+
   $(".packages_more_table_btn--js").click(function () {
     modal3();
   });

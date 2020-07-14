@@ -3654,3 +3654,92 @@ select:visited {
     height: 101%;
   }
 }
+
+#modalFormNew {
+  .new_form__label__100 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    border: none;
+
+    .new_form__placeholder {
+      position: relative;
+      background: #28323e;
+      border: 1px solid #d1dbe3;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height */
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 144px;
+      width: 100%;
+      height: 53px;
+      left: 0;
+      top: 0;
+      margin-right: -2px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .new_form__star {
+      z-index: 10;
+    }
+
+    .new_form__select {
+      position: relative;
+      width: calc(100% - 142px);
+      background-position: 13px center;
+      border: 1px solid rgba(209, 219, 227, 0.7);
+      box-sizing: border-box;
+      border-radius: 0 5px 5px 0;
+      border-width: 1px 1px 1px 0;
+      box-sizing: border-box;
+      padding-left: 31px;
+
+      background-color: #28323e;
+    }
+  }
+}
+
+#modalFormNew2 {
+  background: #f2f4f8;
+  border-radius: 20px;
+  padding-bottom: 0;
+
+  .fancybox-button.fancybox-close-small {
+    background-image: url(../images/white_close_btn.svg);
+    opacity: 1;
+  }
+
+  .forex_liquidity__form-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+    color: #3a3a3a;
+    margin-top: 0;
+  }
+
+  .section__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+
+    text-align: center;
+    letter-spacing: 0;
+
+    color: #63636e;
+  }
+}
