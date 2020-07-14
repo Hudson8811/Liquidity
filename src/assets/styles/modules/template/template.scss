@@ -3536,7 +3536,7 @@ select:visited {
     position: absolute;
     z-index: 0;
     background: center / 1000px url(../images/noise.png) repeat;
-    opacity: 0.2;
+    opacity: 1;
   }
 }
 
@@ -3741,5 +3741,20 @@ select:visited {
     letter-spacing: 0;
 
     color: #63636e;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .fancybox-show-thumbs .fancybox-content {
+    width: auto !important;
+
+    height: 935px !important;
+    transform: translate(253px, 44px) !important;
+  }
+
+  .fancybox-image {
+    width: auto !important;
+
+    height: 935px !important;
   }
 }

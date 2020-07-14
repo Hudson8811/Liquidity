@@ -141,7 +141,7 @@
       align-items: center;
       position: relative;
       min-height: 553px;
-      transition: max-height 1s, min-height 1s;
+      transition: max-height 1s, min-height 1s, transform 0.5s;
 
       &.height800-anim {
         min-height: 800px;
@@ -160,6 +160,7 @@
       box-sizing: border-box;
       transition: all 0.7s;
       z-index: 1;
+      transform-origin: center;
 
       will-change: auto;
 
@@ -228,8 +229,6 @@
           top: 210px;
 
           svg {
-            max-width: 55px;
-            max-height: 55px;
             justify-content: center;
             align-items: center;
             margin: 0;
@@ -243,7 +242,7 @@
 
       &.new_disabled {
         background: transparent !important;
-        border-color: transparent !important;
+        border: none !important;
       }
 
       svg {
@@ -268,8 +267,10 @@
           z-index: 10;
 
           &.active {
-            max-width: calc(100% - 32px);
-            max-height: calc(100% - 32px);
+            top: 10px;
+            left: 10px;
+            max-width: calc(100% - 20px);
+            max-height: calc(100% - 20px);
           }
         }
 
@@ -860,5 +861,18 @@
     width: 98%;
     margin: 0 auto;
     max-width: 465px;
+  }
+}
+
+.skip__anim_btn {
+  opacity: 0;
+  transition: opacity 0.5s;
+  padding-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 40;
+
+  &.active {
+    opacity: 1;
   }
 }
