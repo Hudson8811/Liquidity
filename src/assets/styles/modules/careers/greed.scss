@@ -4,6 +4,49 @@
   align-items: stretch;
   flex-wrap: wrap;
 
+  .fancybox-thumb {
+    position: relative;
+
+    &:nth-child(1) {
+      .b2_grid_heading,
+      span.bg {
+        max-width: 349px;
+      }
+    }
+  }
+
+  &_heading {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    /* identical to box height, or 162% */
+    z-index: 2;
+    align-items: center;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+  }
+
+  span.bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 34px;
+    background: linear-gradient(
+      270deg,
+      #181818 3.72%,
+      rgba(24, 24, 24, 0) 112.03%
+    );
+    mix-blend-mode: multiply;
+  }
+
   &__item {
     display: flex;
     justify-content: flex-start;

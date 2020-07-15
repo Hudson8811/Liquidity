@@ -1,6 +1,10 @@
 div(class="modal-fancy modal-form-1 modal-form-2" id="modal5" style="display:none")
-    h3.forex_liquidity__form-title Please fill the form and we will#[span(class="db")] contact you
+    h3.forex_liquidity__form-title Please fill the form and send request.#[span(class="db")] We will contact your shortly!
+    .section__subtitle We are happy to work with new talents. Looking forward to your reply!
     form.new_form.new_form__flex
+      label.new_form__label.new_form__label__100
+        span.new_form__placeholder Vacancy
+        input.new_form__input(type="text", value="Operations Manager, Minsk")
       label.new_form__label.new_form__label__50
         span.new_form__placeholder Your Name
         span.new_form__star *
@@ -43,8 +47,21 @@ div(class="modal-fancy modal-form-1 modal-form-2" id="modal5" style="display:non
             option(value="Telegram") Telegram
       button.new_form__sabmit.new_form__sabmit__50(type="submit") Request a Callback
       //- .new_form__description.new_form__description__50 Based on your IP, you are in the Russian Federation. #[a(href="#") Change] Your data will be in US data center.
+      .new_form__label__50.ap__file_wrapper
+        .ap__text_wrapper
+          span.ap__file Attach files up to 5 Mb
+          span.ap__discription Doc or PDF
+          span.ap__discription Up to 2 files
+        .ap__input_wrapper
+          input.ap__input#file_input(type="file",multiple, data-multiple-caption="{count} files selected" )
+          label.ap__dop_input(for="file_input")
+        .ap_images_wrapper
+          img.ap_images(src="images/file.svg")
+          img.remove_file(src="images/remove_file.svg")
+          .ap__span_file File for attachment.pdf
+        .ap_images_wrapper
+          img.ap_images(src="images/file.svg")
+          img.remove_file(src="images/remove_file.svg")
+          .ap__span_file File for attachment.doc
       label.consent_block
-        input(type="checkbox")
-        b
-        p I agree to the #[a(href="#") Terms of Service] and #[a(href="#") Privacy Policy]
-      
+        p B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our #[a(href="#") Privacy Policy.]

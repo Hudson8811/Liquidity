@@ -876,3 +876,32 @@
     opacity: 1;
   }
 }
+
+.skip__anim_btn {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    z-index: -2;
+    top: 3px;
+    left: 50%;
+    margin-left: -50px;
+    height: 10px;
+    background: center / 100% url(../images/white_ar.svg) no-repeat;
+  }
+  &:after {
+    content: "";
+    top: 0;
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 15px;
+    left: 50%;
+    margin-left: -14px;
+    background: #1a2129;
+    z-index: -1;
+  }
+}

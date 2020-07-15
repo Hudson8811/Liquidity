@@ -15,6 +15,20 @@ setTimeout(function () {
 }, 0);
 
 $(document).ready(function () {
+  $(document).on("click", ".show_on_map_btn", function (e) {
+    e.preventDefault();
+    var mapId = $(this).data("id");
+    $(".map__wrapper .map").fadeOut();
+    $('.map__wrapper .map[data-id="' + mapId + '"]').fadeIn();
+
+    $("html, body").animate(
+      {
+        scrollTop: $(".map__wrapper").offset().top,
+      },
+      700
+    );
+  });
+
   // mapboxgl.accessToken =
   //   "pk.eyJ1IjoidG9vbG5hZG8iLCJhIjoiY2tja3FvcjlqMThydDJ5czVwMWs5ZG80MSJ9.sf5D5QgC6CaLwYvR1opD9w";
   // var map = new mapboxgl.Map({

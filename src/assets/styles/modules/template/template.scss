@@ -3758,3 +3758,119 @@ select:visited {
     height: 935px !important;
   }
 }
+
+#modal5 {
+  .new_form__label__100 {
+    width: 100%;
+    .new_form__placeholder {
+      left: 22px;
+      top: 18px;
+      z-index: 0;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.318182px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .new_form__input {
+      padding-left: 81px;
+      box-sizing: border-box;
+      padding-top: 0;
+      font-weight: 900;
+    }
+  }
+}
+
+.ap {
+  &__discription {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    /* or 136% */
+    color: rgba(132, 144, 157, 0.6);
+    display: block;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__span_file {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &_images {
+    display: block;
+    width: 22px;
+    margin: 0 auto 8px;
+
+    &_wrapper {
+      max-width: 95px;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      position: relative;
+
+      .remove_file {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: 50%;
+        margin-left: -6px;
+        top: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__file {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    /* identical to box height, or 136% */
+    color: #84909d;
+  }
+
+  &__file_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    &_wrapper {
+      margin-left: 4px;
+    }
+
+    & + .ap__dop_input {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #28323e;
+      background-image: url(../images/new_skrep.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 4px 8px;
+      cursor: pointer;
+    }
+  }
+}

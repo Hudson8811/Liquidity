@@ -1,4 +1,15 @@
 .careers_content {
+  .careers__heading {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 84px;
+    /* identical to box height, or 168% */
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+
   .careers_wrapper {
     display: none;
     min-height: 454px;
@@ -341,5 +352,47 @@
     text-decoration: none;
 
     display: none;
+  }
+}
+
+.cc {
+  &__persent {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 25px;
+  }
+  &_heading {
+    max-width: 829px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 54px;
+    box-sizing: border-box;
+    border: 2px solid #3c4650;
+    border-radius: 10px;
+    margin: 0 auto 50px;
+
+    &__right {
+      max-width: 429px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      /* or 171% */
+
+      color: #d1dbe3;
+    }
+
+    &__left {
+      max-width: 223px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      /* or 142% */
+      margin-right: auto;
+      text-align: center;
+      color: #d1dbe3;
+    }
   }
 }

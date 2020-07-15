@@ -4,8 +4,9 @@
             ul
                 li.lema__sidebar__item(data-id="1").active I Limassol
                 li.lema__sidebar__item(data-id="2") I Moscow
-                li.lema__sidebar__item(data-id="3") I Hong-Kong
-                li.lema__sidebar__item(data-id="4") I Minsk
+                li.lema__sidebar__item(data-id="3", style="white-space:nowrap;") I St. Petersburg
+                li.lema__sidebar__item(data-id="4") I Hong-Kong
+                li.lema__sidebar__item(data-id="5") I Minsk
             
             .lema__soc_block
                 .lema__soc_block__title Follow us
@@ -127,10 +128,7 @@
                         span General issues
                         a.lema__link(href="#") mail@b2broker.net
                     
-                    a.show_on_map_btn#show_marker1(href="#") Show on map
-                
-                img.lema__map(src="images/contacts/map1.png", alt="img")
-                //- .lema__map#lema__map1
+                    a.show_on_map_btn#show_marker1(href="#", data-id="1") Show on map
         
         .lema__content(data-id="2")
             .lema__content__active
@@ -184,12 +182,63 @@
                         span General issues
                         a.lema__link(href="#") mail@b2broker.net
                     
-                    a.show_on_map_btn(href="#") Show on map
+                    a.show_on_map_btn(href="#", data-id="2") Show on map
                 
-                img.lema__map(src="images/contacts/map1.png", alt="img")
-                //- .lema__map
         
         .lema__content.not_map(data-id="3")
+            .lema__content__active
+                .lema__slider
+                    .hear_flickity--js.hover_flickity--js
+                        .item
+                            img(src="images/st1.png", alt="image", class="banner")
+                        .item
+                            img(src="images/st2.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st3.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st4.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st5.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st6.jpg", alt="image", class="banner")
+
+                    .hear_flickity_small--js.hover_flickity--js
+                        .item
+                            img(src="images/st1.png", alt="image", class="banner")
+                        .item
+                            img(src="images/st2.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st3.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st4.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st5.jpg", alt="image", class="banner")
+                        .item
+                            img(src="images/st6.jpg", alt="image", class="banner")
+                
+                aside.lema__sidebar__right
+                    .lema__adress 
+                        span.extrabold St. Petersburg
+                        span Professor Popov street, 
+                        span 37 Sch
+
+                    a(href="tel: + 375 17 378 01 91 ").lema__phone + 375 17 378 01 91
+
+                    .lema__link_block
+                        span #[span(class="extrabold") Sales ] department
+                        a.lema__link(href="#") sales@b2broker.net
+                    
+                    .lema__link_block
+                        span #[span(class="extrabold") HR ]  department
+                        a.lema__link(href="#") hr@b2broker.net
+                    
+                    .lema__link_block
+                        span General issues
+                        a.lema__link(href="#") vrudko@b2prime.by
+                    
+                    a.show_on_map_btn(href="#", data-id="3") Show on map
+
+        .lema__content.not_map(data-id="4")
             .lema__content__active
                 .lema__slider
                     .hear_flickity--js.hover_flickity--js
@@ -241,9 +290,9 @@
                         span General issues
                         a.lema__link(href="#") mail@b2broker.net
                     
-                    a.show_on_map_btn(href="#") Show on map
+                    a.show_on_map_btn(href="#", data-id="4") Show on map
         
-        .lema__content.not_map(data-id="4")
+        .lema__content.not_map(data-id="5")
             .lema__content__active
                 .lema__slider
                     .hear_flickity--js.hover_flickity--js
@@ -295,4 +344,12 @@
                         span General issues
                         a.lema__link(href="#") mail@b2broker.net
                     
-                    a.show_on_map_btn(href="#") Show on map
+                    a.show_on_map_btn(href="#", data-id="5") Show on map
+
+.map__wrapper
+    img.active(src="images/map1.png", data-id="0").map
+    img(src="images/map2.png", data-id="2").map
+    img(src="images/map3.png", data-id="3").map
+    img(src="images/map4.png", data-id="4").map
+    img(src="images/map5.png", data-id="5").map
+    img(src="images/map6.png", data-id="1").map
