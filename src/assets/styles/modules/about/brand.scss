@@ -179,6 +179,7 @@
         background: transparent;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         align-items: center;
         max-width: 620px;
         max-height: 620px;
@@ -191,8 +192,9 @@
         transition: all 1s;
 
         svg {
-          max-width: none;
-          max-height: none;
+          display: block;
+          max-width: 163px;
+          max-height: 163px;
           position: relative;
           top: auto !important;
           left: auto !important;

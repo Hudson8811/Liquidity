@@ -271,29 +271,20 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".skip__anim_btn--js", function () {
-      $(".ab__core__item svg").css({
-        transition: "all 0s",
-      });
-      $(".ab__core__item ").css({
-        transition: "all 0s",
-      });
-      $(".ab__core ").css({
-        transition: "all 0s",
-      });
-      $(".ab__logo ").css({
-        transition: "all 0s",
-      });
-      $(".ab__circle ").css({
-        transition: "all 0s",
-      });
-
       setTimeout(() => {
-        $(".ab__core__item svg").attr("style", "");
-        $(".ab__core__item ").attr("style", "");
-        $(".ab__core ").attr("style", "");
-        $(".ab__logo ").attr("style", "");
-        $(".ab__circle ").attr("style", "");
-      }, 700);
+        $(".ab__logo").attr("style", "");
+      }, 500);
+      animationLastStepTrigger = true;
+      logo1Trigger = false;
+      logo2Trigger = false;
+      logo3Trigger = false;
+      logo4Trigger = false;
+      logo5Trigger = false;
+      logo6Trigger = false;
+      logo7Trigger = false;
+      logo8Trigger = false;
+      logo9Trigger = false;
+      animationLastStepTrigger = true;
       discription1.removeClass("active");
       discription2.removeClass("active");
       discription3.removeClass("active");
@@ -312,43 +303,30 @@ $(document).ready(function () {
       discription7.removeClass("active");
       discription8.removeClass("active");
       discription9.removeClass("active");
-
-      $(".ab__logo")
-        .addClass("lastStep-anim")
-        .removeClass("new_disabled")
-        .removeClass("disabled")
-        .removeClass("active")
-        .removeClass("opacity0-anim");
+      logo1.addClass("disabled active opacity1-anim");
+      logo2.addClass("disabled active opacity1-anim");
+      logo3.addClass("disabled active opacity1-anim ");
+      logo4.addClass("disabled active opacity1-anim");
+      logo5.addClass("disabled active opacity1-anim ");
+      logo6.addClass("disabled active opacity1-anim");
+      logo7.addClass("disabled active opacity1-anim");
+      logo8.addClass("disabled active opacity1-anim");
+      logo9.addClass("active opacity1-anim");
+      $(".ab__logo").css("transition", "none");
 
       $(".ab__logo svg").removeClass("active");
-
-      $(".ab__core__icon").addClass("opacity1-anim");
-
-      $(".ab__core").addClass("lastStepOpacity0");
+      $(".ab__logo")
+        .addClass("new_disabled lastStep-anim opacity0-anim")
+        .removeClass("active disabled");
 
       $(".ab__core__item").addClass("p0-anim");
+
       $(".animation_brand .section__title")
         .addClass("height0-anim")
         .addClass("disabled");
       $(".ab__content").addClass("height800-anim");
-      $(".ab__text").addClass("disabled");
-      $(".ab__circle").removeClass("disabled").removeClass("active");
+
       $(".skip__anim_btn").removeClass("active");
-      startAnimTriger = false;
-      fullAnimTrigger = true;
-      setProgress(0);
-      warking = false;
-      $(".ab__logo").css("opacity", "0");
-
-      setTimeout(() => {
-        $(".ab__logo").addClass("logoAnim").removeClass("lastStepOpacity0");
-        $(".ab__logo").css("opacity", "1");
-        $(".ab__title_block").addClass("active");
-      }, 700);
-
-      setTimeout(() => {
-        $(".ab__logo").attr("style", "");
-      }, 1000);
     });
 
     function onWheel(e) {
@@ -398,7 +376,7 @@ $(document).ready(function () {
 
           setTimeout(() => {
             activated(element6);
-            $(".skip__anim_btn--js").addClass("active");
+
             $(".ab__logo").addClass("active");
           }, 3000);
 
@@ -416,6 +394,7 @@ $(document).ready(function () {
           }, 1400);
 
           setTimeout(() => {
+            $(".skip__anim_btn--js").addClass("active");
             logo1.addClass("active");
             discription1.addClass("active");
           }, 2000);
