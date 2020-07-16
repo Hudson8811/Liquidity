@@ -194,7 +194,8 @@
         svg {
           display: block;
           max-width: 163px;
-          max-height: 163px;
+          max-height: none;
+          height: auto;
           position: relative;
           top: auto !important;
           left: auto !important;

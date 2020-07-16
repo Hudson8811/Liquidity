@@ -1019,11 +1019,11 @@
               <div class="section__title">Why <span class="section__title--bold">B2Broker?</span></div>
               <div class="section__subtitle">Over the years, we have grown into a strong and recognized player in the market.<span class="db"></span> We are acknowledged as industry innovators and trendsetters. If there is a task that<span class="db"></span> requires the creation of new solutions based on related technologies or you are<span class="db"></span> thinking about trying something new, we very much welcome such opportunities.</div>
               <div class="b2_grid">
-                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/careers/b2_item1.png"><img src="images/careers/b2_item1.png" alt="img"><span class="b2_grid_heading">Corporate parties in the best restaurants</span><span class="bg"></span></a></div>
-                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/about/img2.jpg"><img src="images/about/img2.jpg" alt="img"><span class="b2_grid_heading">Congratulations on all holidays</span><span class="bg"></span></a><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/about/img3.png"><img src="images/about/img3.png" alt="img"><span class="b2_grid_heading">Cool gifts and lotteries</span><span class="bg"></span></a></div>
-                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/careers/b2_item4.png"><img src="images/careers/b2_item4.png" alt="img"><span class="b2_grid_heading">The most delicious corporate cakes</span><span class="bg"></span></a></div>
-                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/careers/b2_item5.jpg"><img src="images/careers/b2_item5.jpg" alt="img"><span class="b2_grid_heading">Corporate parties in the best restaurants</span><span class="bg"></span></a></div>
-                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" href="images/careers/b2_item6.png"><img src="images/careers/b2_item6.png" alt="img"><span class="b2_grid_heading">Celebrating birthdays of our employees</span><span class="bg"></span></a></div>
+                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-caption="Corporate parties in the best restaurants" data-fancybox="gallery" href="images/careers/b2_item1.png"><img src="images/careers/b2_item1.png" alt="img"><span class="b2_grid_heading">Corporate parties in the best restaurants</span><span class="bg"></span></a></div>
+                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" data-caption="Congratulations on all holidays" href="images/about/img2.jpg"><img src="images/about/img2.jpg" alt="img"><span class="b2_grid_heading">Congratulations on all holidays</span><span class="bg"></span></a><a class="fancybox-thumb" rel="fancybox-thumb" data-caption="Cool gifts and lotteries" data-fancybox="gallery" href="images/about/img3.png"><img src="images/about/img3.png" alt="img"><span class="b2_grid_heading">Cool gifts and lotteries</span><span class="bg"></span></a></div>
+                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" data-caption="The most delicious corporate cakes" href="images/careers/b2_item4.png"><img src="images/careers/b2_item4.png" alt="img"><span class="b2_grid_heading">The most delicious corporate cakes</span><span class="bg"></span></a></div>
+                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" data-caption="Corporate parties in the best restaurants" href="images/careers/b2_item5.jpg"><img src="images/careers/b2_item5.jpg" alt="img"><span class="b2_grid_heading">Corporate parties in the best restaurants</span><span class="bg"></span></a></div>
+                <div class="b2_grid__item"><a class="fancybox-thumb" rel="fancybox-thumb" data-fancybox="gallery" data-caption="Celebrating birthdays of our employees" href="images/careers/b2_item6.png"><img src="images/careers/b2_item6.png" alt="img"><span class="b2_grid_heading">Celebrating birthdays of our employees</span><span class="bg"></span></a></div>
               </div>
             </div>
             <div class="container paragraf__wrapper">
@@ -3019,7 +3019,7 @@
         <div class="section__subtitle">We are happy to work with new talents. Looking forward to your reply!</div>
         <form class="new_form new_form__flex">
           <label class="new_form__label new_form__label__100"><span class="new_form__placeholder">Vacancy</span>
-            <input class="new_form__input" type="text" value="Operations Manager, Minsk">
+            <input class="new_form__input" type="text" value="Operations Manager, Minsk" disabled>
           </label>
           <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Name</span><span class="new_form__star">*</span>
             <input class="new_form__input" type="text" required>
@@ -3063,13 +3063,13 @@
           <div class="new_form__label__50 ap__file_wrapper">
             <div class="ap__text_wrapper"><span class="ap__file">Attach files up to 5 Mb</span><span class="ap__discription">Doc or PDF</span><span class="ap__discription">Up to 2 files</span></div>
             <div class="ap__input_wrapper">
-              <input class="ap__input" id="file_input" type="file" multiple data-multiple-caption="{count} files selected">
+              <input class="ap__input" id="file_input" type="file">
               <label class="ap__dop_input" for="file_input"></label>
             </div>
-            <div class="ap_images_wrapper"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg">
+            <div class="ap_images_wrapper" id="ap_images_wrapper1"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg">
               <div class="ap__span_file">File for attachment.pdf</div>
             </div>
-            <div class="ap_images_wrapper"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg">
+            <div class="ap_images_wrapper" id="ap_images_wrapper2"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg">
               <div class="ap__span_file">File for attachment.doc</div>
             </div>
           </div>

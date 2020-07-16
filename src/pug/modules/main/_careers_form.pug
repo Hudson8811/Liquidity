@@ -4,7 +4,7 @@ div(class="modal-fancy modal-form-1 modal-form-2" id="modal5" style="display:non
     form.new_form.new_form__flex
       label.new_form__label.new_form__label__100
         span.new_form__placeholder Vacancy
-        input.new_form__input(type="text", value="Operations Manager, Minsk")
+        input.new_form__input(type="text", value="Operations Manager, Minsk", disabled)
       label.new_form__label.new_form__label__50
         span.new_form__placeholder Your Name
         span.new_form__star *
@@ -53,13 +53,13 @@ div(class="modal-fancy modal-form-1 modal-form-2" id="modal5" style="display:non
           span.ap__discription Doc or PDF
           span.ap__discription Up to 2 files
         .ap__input_wrapper
-          input.ap__input#file_input(type="file",multiple, data-multiple-caption="{count} files selected" )
+          input.ap__input#file_input(type="file")
           label.ap__dop_input(for="file_input")
-        .ap_images_wrapper
+        .ap_images_wrapper#ap_images_wrapper1
           img.ap_images(src="images/file.svg")
           img.remove_file(src="images/remove_file.svg")
           .ap__span_file File for attachment.pdf
-        .ap_images_wrapper
+        .ap_images_wrapper#ap_images_wrapper2
           img.ap_images(src="images/file.svg")
           img.remove_file(src="images/remove_file.svg")
           .ap__span_file File for attachment.doc

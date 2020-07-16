@@ -15,6 +15,14 @@ setTimeout(function () {
 }, 0);
 
 $(document).ready(function () {
+  $(document).on("change", "#file_input", function () {
+    $("#ap_images_wrapper1").addClass("active");
+  });
+
+  $(document).on("click", ".remove_file", function () {
+    $(this).parent("#ap_images_wrapper1").removeClass("active");
+  });
+
   $(document).on("click", ".show_on_map_btn", function (e) {
     e.preventDefault();
     var mapId = $(this).data("id");
@@ -23,7 +31,7 @@ $(document).ready(function () {
 
     $("html, body").animate(
       {
-        scrollTop: $(".map__wrapper").offset().top,
+        scrollTop: $(".map__wrapper").offset().top - 320,
       },
       700
     );
@@ -116,6 +124,7 @@ $(document).ready(function () {
   $(".fancybox-thumb").fancybox({
     prevEffect: "none",
     nextEffect: "none",
+
     thumbs: {
       autoStart: true,
     },
@@ -274,7 +283,7 @@ $(document).ready(function () {
       setTimeout(() => {
         $(".ab__logo").attr("style", "");
       }, 500);
-      animationLastStepTrigger = true;
+
       logo1Trigger = false;
       logo2Trigger = false;
       logo3Trigger = false;
@@ -284,7 +293,6 @@ $(document).ready(function () {
       logo7Trigger = false;
       logo8Trigger = false;
       logo9Trigger = false;
-      animationLastStepTrigger = true;
       discription1.removeClass("active");
       discription2.removeClass("active");
       discription3.removeClass("active");
@@ -318,15 +326,19 @@ $(document).ready(function () {
       $(".ab__logo")
         .addClass("new_disabled lastStep-anim opacity0-anim")
         .removeClass("active disabled");
-
       $(".ab__core__item").addClass("p0-anim");
-
       $(".animation_brand .section__title")
         .addClass("height0-anim")
         .addClass("disabled");
       $(".ab__content").addClass("height800-anim");
-
+      setProgress(0);
       $(".skip__anim_btn").removeClass("active");
+      animationLastStepTrigger = true;
+      animationFirstStepTrigger = false;
+      $(".ab__core__text").css("display", "none");
+      setTimeout(() => {
+        $(".ab__core__text").attr("style", "");
+      }, 500);
     });
 
     function onWheel(e) {
@@ -1668,6 +1680,21 @@ $(document).on("click", ".office_slider__item", function (e) {
 $(".family__block").hover(function () {
   let familyTarget = $(this).data("target");
   $(".says__flickity--js").flickity("select", familyTarget);
+});
+
+$(".careers_wrapper .hear_flickity--js").flickity({
+  pageDots: false,
+  prevNextButtons: false,
+  adaptiveHeight: false,
+  autoPlay: true,
+});
+
+$(".careers_wrapper .hear_flickity_small--js").flickity({
+  adaptiveHeight: false,
+  pageDots: false,
+  prevNextButtons: false,
+  contain: true,
+  asNavFor: ".careers_wrapper .hear_flickity--js",
 });
 
 $(".towns li:not(:nth-child(1)) ").hover(function () {

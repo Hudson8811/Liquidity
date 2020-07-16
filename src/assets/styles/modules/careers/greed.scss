@@ -45,6 +45,7 @@
       rgba(24, 24, 24, 0) 112.03%
     );
     mix-blend-mode: multiply;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
   &__item {
@@ -204,7 +205,7 @@
   }
 }
 
-.fancybox-container.fancybox-show-thumbs.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav.fancybox-is-open.fancybox-is-zoomable.fancybox-can-swipe {
+.fancybox-show-thumbs {
   .fancybox-bg {
     background: #1a2837 !important;
     opacity: 0.85 !important;
