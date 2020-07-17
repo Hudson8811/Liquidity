@@ -3744,41 +3744,59 @@ select:visited {
   }
 }
 
-@media screen and (min-width: 1800px) {
-  .fancybox-show-thumbs .fancybox-content {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    transition: none !important;
+.fancybox-show-thumbs .fancybox-caption {
+  max-width: 1018px;
+  margin: 0 auto;
+  bottom: auto;
+  top: 50%;
+  margin-top: 273px;
+  &:before {
+    top: 0;
+    background: hsla(0, 0%, 9%, 0.6);
+    background-image: none;
+  }
+
+  .fancybox-caption__body {
+    text-align: left;
+  }
+}
+
+.fancybox-show-thumbs .fancybox-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: none !important;
+}
+
+.fancybox-image {
+  display: block !important;
+  width: 1018px !important;
+  max-width: 1018px !important;
+  min-width: 1018px !important;
+  max-height: 687px !important;
+  min-height: 687px !important;
+  position: relative !important;
+  transition: none !important;
+  object-fit: cover !important;
+}
+
+@media screen and (max-width: 1799px) {
+  .fancybox-image {
+    max-width: none !important;
+    min-width: 0 !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    width: 60vw !important;
+    height: 50vh !important;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   .fancybox-show-thumbs .fancybox-caption {
-    max-width: 1018px;
-    margin: 0 auto;
-    bottom: auto;
-    top: 50%;
-    margin-top: 273px;
-    &:before {
-      top: 0;
-      background: hsla(0, 0%, 9%, 0.6);
-      background-image: none;
-    }
-
-    .fancybox-caption__body {
-      text-align: left;
-    }
-  }
-
-  .fancybox-image {
-    display: block !important;
-    width: 1018px !important;
-    max-width: 1018px !important;
-    min-width: 1018px !important;
-    max-height: 687px !important;
-    min-height: 687px !important;
-    position: relative !important;
-    transition: none !important;
-    object-fit: cover !important;
+    width: 60vw;
+    margin-top: calc(25vh - 71px);
   }
 }
 
