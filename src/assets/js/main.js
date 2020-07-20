@@ -1089,14 +1089,18 @@ $(document).ready(function () {
     });
   });
 
-  $(document).on("click", ".modal_new_form_1--js", function () {
+  $(document).on("click", ".modal_new_form_1--js", function (e) {
+    e.preventDefault();
+
     $.fancybox.open({
       src: "#modalFormNew",
       type: "inline",
     });
   });
 
-  $(document).on("click", ".modal_new_form_2--js", function () {
+  $(document).on("click", ".modal_new_form_2--js", function (e) {
+    e.preventDefault();
+
     $.fancybox.open({
       src: "#modalFormNew2",
       type: "inline",
