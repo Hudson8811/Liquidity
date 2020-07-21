@@ -1027,6 +1027,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modal",
       type: "inline",
+      autoFocus: false,
     });
   });
 
@@ -1037,6 +1038,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: `#modal_video_${video_id}`,
       type: "inline",
+      autoFocus: false,
     });
   });
 
@@ -1046,7 +1048,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modal2",
       type: "inline",
-      overlay: { locked: false },
+      autoFocus: false,
     });
   });
 
@@ -1055,6 +1057,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modal3",
       type: "inline",
+      autoFocus: false,
     });
   }
 
@@ -1063,6 +1066,7 @@ $(document).ready(function () {
     $.fancybox.close({
       src: "#modal3",
       type: "inline",
+      autoFocus: false,
     });
   }
 
@@ -1071,6 +1075,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modal4",
       type: "inline",
+      autoFocus: false,
     });
   }
 
@@ -1080,10 +1085,12 @@ $(document).ready(function () {
     $.fancybox.close({
       src: "#modal2",
       type: "inline",
+      autoFocus: false,
     });
     $.fancybox.open({
       src: "#modal4",
       type: "inline",
+      autoFocus: false,
     });
   });
 
@@ -1093,6 +1100,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modalFormNew",
       type: "inline",
+      autoFocus: false,
     });
   });
 
@@ -1102,6 +1110,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modalFormNew2",
       type: "inline",
+      autoFocus: false,
     });
   });
 
@@ -1426,6 +1435,7 @@ $(document).ready(function () {
     $.fancybox.open({
       src: "#modal5",
       type: "inline",
+      autoFocus: false,
     });
   });
 });
