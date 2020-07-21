@@ -1020,38 +1020,34 @@ $(document).ready(function () {
     }
   });
 
-  function modal() {
-    event.preventDefault();
+  $(".js-action-btn").click(function (e) {
+    modal();
+
+    e.preventDefault();
     $.fancybox.open({
       src: "#modal",
       type: "inline",
     });
-  }
-
-  $(".js-action-btn").click(function () {
-    modal();
   });
 
-  function modal2() {
-    event.preventDefault();
-    $.fancybox.open({
-      src: "#modal2",
-      type: "inline",
-    });
-  }
-
-  $(".video_modal--js").click(function () {
+  $(".video_modal--js").click(function (e) {
     var video_id = $(this).data("id");
     console.log(video_id);
-    event.preventDefault();
+    e.preventDefault();
     $.fancybox.open({
       src: `#modal_video_${video_id}`,
       type: "inline",
     });
   });
 
-  $(".js-modal2-btn").click(function () {
-    modal2();
+  $(".js-modal2-btn").click(function (e) {
+    e.preventDefault();
+
+    $.fancybox.open({
+      src: "#modal2",
+      type: "inline",
+      overlay: { locked: false },
+    });
   });
 
   function modal3() {
@@ -1078,7 +1074,9 @@ $(document).ready(function () {
     });
   }
 
-  $('.new_form__sabmit[type="submit"]').click(function () {
+  $('.new_form__sabmit[type="submit"]').click(function (e) {
+    e.preventDefault();
+
     $.fancybox.close({
       src: "#modal2",
       type: "inline",
