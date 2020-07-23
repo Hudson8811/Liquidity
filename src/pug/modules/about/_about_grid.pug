@@ -1,33 +1,99 @@
 .section.about__grid
-    //- .container
-    //-     .b2_grid
-    //-         .b2_grid__item
-    //-             a.fancybox-thumb(rel="fancybox-thumb", data-fancybox="gallery",href="images/careers/b2_item1.png")
-    //-                 img(src="images/careers/b2_item1.png", alt="img")
 
-    //-         .b2_grid__item
-    //-             a.fancybox-thumb(rel="fancybox-thumb",data-fancybox="gallery",href="images/about/img2.jpg")
-    //-                 img(src="images/about/img2.jpg", alt="img")
-    //-             a.fancybox-thumb(rel="fancybox-thumb",data-fancybox="gallery",href="images/about/img3.png")
-    //-                 img(src="images/about/img3.png", alt="img")
-                    
-    //-         .b2_grid__item
-    //-             a.fancybox-thumb(rel="fancybox-thumb",data-fancybox="gallery",href="images/careers/b2_item4.png")
-    //-                 img(src="images/careers/b2_item4.png", alt="img")
-                    
-    //-         .b2_grid__item
-    //-             a.fancybox-thumb(rel="fancybox-thumb",data-fancybox="gallery",href="images/careers/b2_item5.jpg")
-    //-                 img(src="images/careers/b2_item5.png", alt="img")
-                    
-    //-         .b2_grid__item
-    //-             a.fancybox-thumb(rel="fancybox-thumb",data-fancybox="gallery",href="images/careers/b2_item6.png")
-    //-                 img(src="images/careers/b2_item6.png", alt="img")
     .container
-        .section__title What #[span(class="section__title--bold") we do]
-        p We offer solutions for established companies to increase and optimize their workflows and help new brokers build their businesses.
+        .section__title Who  #[span(class="section__title--bold") we are]
+        .who_we_discription We #[span(class="bold") build your own financial business]  by connecting you to the#[span(class="db")] markets and providing you with all the innovative and cutting edge#[span(class="db")] technologies #[span(class="bold") in a short space of time and at a reasonable cost.]
+        .who_we__support_wrapper
+            .who_we__support We will support you all the way
+    .u_can
+        .container
+            .section__title With us #[span(class='section__title--bold') you can]
 
-        p Brokerage businesses do not stand still. Strong competition forces companies to move ahead and offer their clients new solutions and better conditions. If you are already on the market, we’ll show you how to expand your product range and increase conversion rates. We can help you also pinpoint any flaws and fix the errors. 
-
-        p Our advanced base of technical solutions help clients save time and money on consuming infrastructure projects so they can focus on selling and enlarging their client base while eliminating the need to commit to expensive, long-term and labour-consuming processes of building and supporting the technical infrastructure of a brokerage business. 
-
-        p As one of the leading liquidity and technology providers of solutions for the crypto and foreign exchange industry, our specialist area is in the sphere of B2B services and products, catering for a wide range of brokerage businesses, institutional and other corporate clients.
+            .u_can__container
+                .u_can__item
+                    img.u_can__icon(src="images/u_icon1.svg", alt="icon")
+                    .u_can__text
+                        .u_can__title Start
+                        .u_can__discription new business or empower your existing one
+                
+                .u_can__item
+                    img.u_can__icon(src="images/u_icon2.svg", alt="icon")
+                    .u_can__text
+                        .u_can__title Ask
+                        .u_can__discription for suggestions and get constructive advice
+                    
+                .u_can__item
+                    img.u_can__icon(src="images/u_icon3.svg", alt="icon")
+                    .u_can__text
+                        .u_can__title Learn
+                        .u_can__discription about new industry features or ask#[span(class="db")] us to implement them into your business model
+                
+                .u_can__item
+                    img.u_can__icon(src="images/u_icon4.svg", alt="icon")
+                    .u_can__text
+                        .u_can__title Trade
+                        .u_can__discription and manage your risks or allow others to trade#[span(class="db")] by providing them with access to as many markets as possible.
+    
+    .we_offer
+        .container
+            .section__title What #[span(class='section__title--bold') we offer]
+            .we_offer__container
+                .we_offer__item
+                    .we_offer__title Integrations with all the most popular solutions
+                    .we_offer__subtitle in the market so our clients are able to get everything in one place
+                
+                .we_offer__item
+                    .we_offer__title 24/7 technical support 
+                    .we_offer__subtitle We offer institutional-grade tools and technology and complement those capabilities with bespoke attention when it come to problem solving
+                
+                .we_offer__item
+                    .we_offer__title A personal account manager
+                    .we_offer__subtitle from the time of contract-signing is available in your native language and is on hand to serve you all way towards your success 
+                
+                .we_offer__item
+                    .we_offer__title Professional access to FX, CFD and Crypto liquidity
+                    .we_offer__subtitle via multiple connection methods is available for all our clients.
+                
+                .we_offer__item
+                    .we_offer__title A full range of services
+                    .we_offer__subtitle to start your own brokerage or exchange with minimum cost and maximum levels of technology and professionalism 
+    .where_we_work
+        .container
+            .section__title Where #[span(class='section__title--bold') we work]
+            .section__subtitle  B2Broker currently have corporate clients from over 40 countries.#[span(class="db")] We work across the globe.
+            img.banner(src="images/where_we.png", alt="map")
+            
+    .who_we_serve
+        .container
+            .section__title Who #[span(class='section__title--bold') we serve]
+            .who_we_serve__container
+                .who_we_serve__item Established 
+                    img.who_we_serve__img(src="images/left_ar.svg", alt="icon")
+                .who_we_serve__item Beginners
+                    img.who_we_serve__img(src="images/right_ar.svg", alt="icon")
+        .container
+            .who_we_serve__catalog
+                div.who_we_serve__citem
+                    +icon('circle')
+                    .who_we_serve__text Investment firms
+                div.who_we_serve__citem
+                    +icon('circle')
+                    .who_we_serve__text FOREX & Crypto Brokerage firms
+                div.who_we_serve__citem
+                    +icon('circle')
+                    .who_we_serve__text Family offices
+                div.who_we_serve__citem
+                    +icon('circle')
+                    .who_we_serve__text Hedge funds
+    .we_are_a_company
+        .container
+            .section__title We are #[span(class='section__title--bold') a company that:]
+            .we_are_a_company__container
+                .we_are_a_company__item #[span(class="bold") Provide] advanced client service from the time of contract-signing
+                .we_are_a_company__item #[span(class="bold") Care] for your success
+                .we_are_a_company__item #[span(class="bold") Understand] responsibility for both our own #[span(class="db")] corporate clients and their end users
+                .we_are_a_company__item #[span(class="bold") Share] expertise and industry insights in every #[span(class="db")] aspect of your business and guide you along the way
+                .we_are_a_company__item No difference in service for big or small clients. We #[span(class="bold") serve] #[span(class="db")] #[span(class="bold") everyone] on an equal footing with utmost professionalism#[span(class="db")]  and deep involvement in all the details
+                .we_are_a_company__item #[span(class="bold") Never stop] our growth and expansion. We #[span(class="db")] produce innovative solutions and add additional #[span(class="db")] features to existing products every month
+                .we_are_a_company__item #[span(class="bold") Grow] faster than others
+                .we_are_a_company__item  #[span(class="bold") Hire] industry professionals or those who have big ambitions
