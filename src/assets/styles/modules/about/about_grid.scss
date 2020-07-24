@@ -60,6 +60,12 @@
     align-items: stretch;
     margin-bottom: -10px;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -73,6 +79,10 @@
     padding-right: 35px;
     width: calc(50% - 5px);
     margin-bottom: 10px;
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
   }
 
   &__icon {
@@ -99,6 +109,12 @@
     align-items: center;
 
     color: #383838;
+
+    @media screen and (max-width: 1000px) {
+      span.db {
+        display: none;
+      }
+    }
   }
 }
 
@@ -109,6 +125,13 @@
     align-items: stretch;
     margin: 0 -15px -15px;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
   }
 
   &__item {
@@ -118,6 +141,12 @@
     box-shadow: 0px 2px 20px rgba(165, 165, 165, 0.3);
     border-radius: 5px;
     margin: 15px;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -188,11 +217,23 @@
         left: -9px;
       }
     }
+
+    @media screen and (max-width: 650px) {
+      font-size: 15px;
+      line-height: 18px;
+      min-height: 40px;
+      margin: 0 5px;
+    }
   }
 
   &__img {
     position: absolute;
     bottom: -100%;
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+      bottom: -80px;
+    }
   }
 
   &__catalog {
@@ -204,6 +245,10 @@
     padding: 30px 20%;
     border: 2px solid rgba(157, 175, 189, 0.5);
     border-radius: 5px;
+
+    @media screen and (max-width: 650px) {
+      padding: 20px;
+    }
   }
 
   &__citem {
@@ -226,6 +271,11 @@
     text-align: center;
     color: #383838;
     margin-left: 19px;
+
+    @media screen and (max-width: 650px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }
 

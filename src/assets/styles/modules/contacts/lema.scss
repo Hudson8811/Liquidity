@@ -49,9 +49,14 @@
       font-weight: bold;
       font-size: 24px;
       line-height: 44px;
+      /* identical to box height, or 183% */
       color: #cbd0d3;
       cursor: pointer;
       transition: color 0.5s;
+
+      &:hover {
+        color: #b3bcc1;
+      }
 
       & + .lema__sidebar__item {
         margin-top: 20px;
@@ -59,10 +64,6 @@
 
       &.disabled {
         pointer-events: none;
-      }
-
-      &:hover {
-        color: #01bd95;
       }
 
       &.active {
@@ -101,6 +102,10 @@
     width: 100%;
     max-width: 583px;
     min-height: 517px;
+
+    .hear_flickity--js {
+      pointer-events: none;
+    }
 
     .hear_flickity--js .item img {
       height: 455px;
@@ -289,10 +294,11 @@
   align-items: center;
   height: 40px;
 
-  border: 1px solid #dbdee1;
+  mix-blend-mode: normal;
+  border: 1px solid #acb8c4;
   box-sizing: border-box;
-  border-radius: 5px;
-  color: #9e9e9e;
+  border-radius: 9px;
+  color: #c4c4c4;
 
   text-decoration: none;
   cursor: pointer;

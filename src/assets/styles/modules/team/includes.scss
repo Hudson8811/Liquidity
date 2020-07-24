@@ -10,4 +10,24 @@
     margin-bottom: 50px;
     max-width: 552px;
   }
+
+  .hear_flickity--js {
+    pointer-events: none;
+  }
+
+  .hear_flickity_small--js {
+    .item {
+      img {
+        height: 60px;
+
+        @media screen and (max-width: 1000px) {
+          object-fit: cover;
+        }
+
+        @media screen and (max-width: 580px) {
+          height: 20px;
+        }
+      }
+    }
+  }
 }

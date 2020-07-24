@@ -40,6 +40,10 @@
         border-color: #03e2b2;
       }
 
+      &:hover:not(:nth-child(1)) {
+        color: #fff;
+      }
+
       &.disabled {
         pointer-events: none;
       }
