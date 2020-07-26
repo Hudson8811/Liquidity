@@ -4079,3 +4079,83 @@ select:visited {
     color: #ffffff;
   }
 }
+
+.mid_description {
+  &__wrapper {
+    max-width: 535px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: -40px;
+  }
+
+  &__item {
+    width: calc(50% - 70px / 2);
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    /* or 119% */
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* or 136% */
+    color: #ababab;
+  }
+}
+
+.benefits_b2m {
+  .section__title {
+    margin-bottom: 140px;
+  }
+
+  .b2m_ben__catalog {
+    margin-top: 130px;
+  }
+}
+
+.b2m_ben {
+  &__catalog {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: -60px;
+  }
+
+  &__item {
+    width: calc(33.333% - 110px / 3);
+    margin-bottom: 60px;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* or 119% */
+    color: #383838;
+    margin-bottom: 25px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* or 136% */
+    color: #637786;
+  }
+}

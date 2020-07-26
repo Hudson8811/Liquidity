@@ -1,0 +1,28 @@
+.b2m_leverage {
+  .section__title {
+    margin-bottom: 70px;
+  }
+
+  &__wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    video {
+      position: absolute;
+      display: block;
+      width: 746px;
+      max-width: 746px;
+      margin-top: -46px;
+      margin-left: 2px;
+    }
+  }
+}

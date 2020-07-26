@@ -4,7 +4,7 @@ let imagemin = require("gulp-imagemin"),
   cache = require("gulp-cache"),
   imgPATH = {
     input: [
-      "./src/assets/images/**/*.{png,jpg,gif,svg,mp4,mkv}",
+      "./src/assets/images/**/*.{png,jpg,gif,svg,mp4,mkv,mov}",
       "!./src/assets/images/svg/*",
     ],
     output: "./assets/images/",
