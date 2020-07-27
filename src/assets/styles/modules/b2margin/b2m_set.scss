@@ -1,0 +1,36 @@
+.b2m_set {
+  .b2m_ben__catalog {
+    margin-top: 120px;
+  }
+}
+
+.d_accounts {
+  background: #ffffff;
+  /* Small_shadow */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 40px;
+  margin-top: 104px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 119% */
+    margin-bottom: 20px;
+    color: #383838;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* or 136% */
+    text-align: center;
+    color: #637786;
+    margin-bottom: 60px;
+  }
+}

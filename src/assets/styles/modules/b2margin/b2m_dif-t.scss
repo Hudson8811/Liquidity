@@ -1,0 +1,17 @@
+.b2m_dif-t {
+  .container {
+    padding: 30px;
+
+    &:before {
+      background: #eff4f6;
+    }
+
+    .gray__block {
+      background: #ffffff;
+
+      .gray__block--subtitle + .gray__block--subtitle {
+        margin-top: 20px;
+      }
+    }
+  }
+}

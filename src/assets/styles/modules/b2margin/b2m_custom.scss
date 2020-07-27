@@ -4,6 +4,10 @@
     margin: 50px auto 130px;
     .item {
       width: 100%;
+
+      img {
+        min-height: 667px;
+      }
     }
   }
 
