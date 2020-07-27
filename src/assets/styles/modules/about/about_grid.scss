@@ -52,7 +52,7 @@
 }
 
 .u_can {
-  padding: 150px 0;
+  padding: 200px 0;
 
   &__container {
     display: flex;
@@ -165,13 +165,13 @@
     font-size: 14px;
     line-height: 19px;
     /* or 136% */
-    color: #383838;
+    color: #637786;
   }
 }
 
 .where_we_work {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   .banner {
     max-width: 662px;
@@ -228,7 +228,7 @@
 
   &__img {
     position: absolute;
-    bottom: -100%;
+    bottom: -96%;
 
     @media screen and (max-width: 650px) {
       width: 100%;
@@ -280,11 +280,11 @@
 }
 
 .we_are_a_company {
-  padding-top: 150px;
+  padding-top: 200px;
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     max-width: 720px;

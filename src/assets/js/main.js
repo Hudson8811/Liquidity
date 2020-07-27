@@ -390,9 +390,6 @@ $(document).ready(function () {
             logo4.addClass("active");
             discription4.addClass("active");
             $(".ab__core__item").addClass("p0-anim");
-            $(".animation_brand .section__title")
-              .addClass("height0-anim")
-              .addClass("disabled");
 
             $(".animation_brand .new_logo")
               .addClass("height0-anim")
@@ -468,11 +465,16 @@ $(document).ready(function () {
             .removeClass("disabled")
             .removeClass("active")
             .addClass("opacity0-anim");
+
           $(".ab__logo svg").removeClass("active");
 
           logo8Trigger = false;
         } else if (logo9Trigger) {
           setTimeout(() => {
+            $(".animation_brand .section__title")
+              .addClass("height0-anim")
+              .addClass("disabled");
+            $(".skip__anim_btn").removeClass("active");
             $(".ab__core__icon").addClass("opacity1-anim");
             discription9.removeClass("active");
 

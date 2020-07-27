@@ -3819,7 +3819,7 @@ select:visited {
 
     .new_form__placeholder {
       left: 22px;
-      top: 18px;
+      top: 16px;
       z-index: 0;
       font-family: Roboto;
       font-style: normal;
@@ -3862,6 +3862,7 @@ select:visited {
 }
 
 .wrapper_more_file {
+  position: relative;
   background: #404d5b;
   border-radius: 7px;
   display: flex;
@@ -3972,7 +3973,7 @@ select:visited {
     cursor: pointer;
 
     &_wrapper {
-      margin-left: 2px;
+      margin-left: 5px;
     }
 
     & + .ap__dop_input {
@@ -3986,6 +3987,16 @@ select:visited {
       background-repeat: no-repeat;
       background-size: 4px 8px;
       cursor: pointer;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

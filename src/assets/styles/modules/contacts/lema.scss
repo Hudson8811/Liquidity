@@ -154,22 +154,57 @@
     }
 
     .show_on_map_btn {
-      width: 100%;
-      max-width: 145px;
-      margin-top: auto;
     }
   }
 
   &__link {
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 28px;
-    /* identical to box height, or 156% */
     display: block;
     letter-spacing: 0;
     color: #01bd95;
     text-decoration: none;
+
+    &.fill_form {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      /* identical to box height, or 136% */
+      color: #63636e;
+    }
+
+    &.skype {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        display: block;
+        letter-spacing: 0;
+        color: #01bd95;
+        text-decoration: none;
+      }
+
+      svg {
+        display: block;
+        margin-right: 8px;
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: #52a6e4;
+          }
+        }
+      }
+    }
   }
 
   &__adress {
@@ -179,14 +214,14 @@
   }
 
   &__phone {
+    display: block;
     font-style: normal;
     font-weight: 900;
     font-size: 18px;
     line-height: 31px;
     /* identical to box height, or 172% */
-    color: #000000;
-    display: block;
-    margin: 40px 0;
+    margin: 37px 0;
+    color: #63636e;
     text-decoration: none;
   }
 
@@ -285,26 +320,16 @@
 
 .show_on_map_btn {
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 146% */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-
-  mix-blend-mode: normal;
-  border: 1px solid #acb8c4;
-  box-sizing: border-box;
-  border-radius: 9px;
-  color: #c4c4c4;
-
-  text-decoration: none;
+  text-decoration-line: underline;
+  display: block;
+  color: #63636e;
   cursor: pointer;
+  margin-top: 8px;
 
   &:hover {
-    border: 1px solid #acb8c3;
     color: #8e8d8d;
   }
 }
@@ -325,4 +350,13 @@
       display: block;
     }
   }
+}
+
+.fill_form__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height, or 136% */
+  color: #63636e;
 }
