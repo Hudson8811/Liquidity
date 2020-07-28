@@ -1,0 +1,21 @@
+.section.b2m_risk.section__blue
+    .container
+        .section__title Risk #[span(class="section__title--bold") Management ]
+
+        img.banner(src="images/risk_m.png", alt="img", style="max-width:746px;")
+
+        .b2m_risk__catalog
+            .b2m_risk__item
+                .b2m_risk__title A-Book
+                .b2m_risk__desc #[span(class="bold") Works as an STP brokerage model] when a broker sends all trades from end-user customers directly to the Margin account. 
+                .b2m_risk__subtitle There is no risk from clients' profit and loss because broker positions earn the same P&L on the Margin account.
+            
+            .b2m_risk__item
+                .b2m_risk__title B-Book
+                .b2m_risk__desc #[span(class="bold") Works by internal execution without sending anything to the Margin account.] In this case, brokers are the opposite side of client trades, and their profits are equal to client losses and vice versa. 
+                .b2m_risk__subtitle Brokers operate with manual hedging on the Margin account side.
+            
+            .b2m_risk__item
+                .b2m_risk__title C-Book
+                .b2m_risk__desc #[span(class="bold") Is a hybrid model] where brokers can choose a percentage of coverage from 0% (full B-book) to 100% (full A-book) for each customer and get hedging trades on the Margin account depending on the coverage percentage. 
+                .b2m_risk__subtitle This model offers a balance between B-book, with potential additional profit, and A-book models.

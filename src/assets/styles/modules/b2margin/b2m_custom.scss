@@ -7,6 +7,10 @@
 
       img {
         min-height: 667px;
+
+        @media screen and (max-width: 980px) {
+          min-height: 1px;
+        }
       }
     }
   }
@@ -23,6 +27,10 @@
     &.previous {
       left: 0;
       margin-left: -77px;
+    }
+
+    @media screen and (max-width: 980px) {
+      display: none !important;
     }
   }
 }

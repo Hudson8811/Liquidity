@@ -8,10 +8,28 @@
 
     .gray__block {
       background: #ffffff;
+      padding-right: 71px;
+
+      @media screen and (max-width: 980px) {
+        span.db {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 920px) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
 
       .gray__block--subtitle + .gray__block--subtitle {
         margin-top: 20px;
       }
+    }
+  }
+
+  .dif_container_4 {
+    .gray__block {
+      padding-right: 61px;
     }
   }
 }

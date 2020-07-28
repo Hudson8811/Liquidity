@@ -1329,7 +1329,7 @@ select:visited {
     line-height: 30px;
     /* identical to box height, or 150% */
     color: #383838;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
   }
   &--text {
     font-weight: normal;
@@ -1337,7 +1337,7 @@ select:visited {
     line-height: 20px;
     /* or 143% */
     color: #383838;
-    margin-bottom: 20px;
+    margin-bottom: 42px;
     padding-right: 81px;
   }
   .check_block {
@@ -4134,6 +4134,8 @@ select:visited {
   .b2m_ben__catalog {
     margin-top: 130px;
   }
+
+
 }
 
 .b2m_ben {
@@ -4143,12 +4145,24 @@ select:visited {
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -60px;
+
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
   }
 
   &__item {
     width: calc(33.333% - 110px / 3);
     margin-bottom: 60px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 980px) {
+      width: 100%;
+
+      span.db {
+        display: none;
+      }
+    }
   }
 
   &__title {
@@ -4168,5 +4182,78 @@ select:visited {
     line-height: 19px;
     /* or 136% */
     color: #637786;
+  }
+}
+
+.section__education.b2m_ed {
+  .section__subtitle {
+    max-width: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #565656;
+  }
+
+  .language_heading {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    /* or 119% */
+
+    text-align: center;
+
+    color: #373737;
+  }
+}
+
+.section__technical.b2m_tech {
+  background: #fff;
+
+  .section__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #63636e;
+  }
+}
+
+.section.section__wacth_wl.b2_frame.b2m_watch {
+  background: #1b2329;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 100px 0;
+
+  &:before {
+    display: none;
+  }
+
+  .video_form .video_description__wrapper {
+    background: #1b2329;
+  }
+}
+
+.b2_form.section.b2_form__b2margin2 {
+  background: #1b2329;
+}
+
+.best .best_with .check_block {
+  margin-bottom: 22px !important;
+}
+
+@media screen and (max-width: 980px) {
+  .reduce__subtitle {
+    span.db {
+      display: none;
+    }
   }
 }

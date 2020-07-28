@@ -7,6 +7,10 @@
   .flickity-prev-next-button {
     width: 30px;
     height: 30px;
+
+    @media screen and (max-width: 980px) {
+      display: none !important;
+    }
   }
 
   .flickity-prev-next-button.next {
@@ -36,6 +40,10 @@
     align-items: flex-start;
     min-height: 400px;
 
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
+
     img {
       display: block;
       width: 100%;
@@ -45,6 +53,11 @@
 
   &__right {
     max-width: 330px;
+
+    @media screen and (max-width: 980px) {
+      max-width: none;
+      margin-top: 40px;
+    }
   }
 
   &__title {

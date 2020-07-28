@@ -26,6 +26,10 @@
     border-radius: 5px;
     margin-bottom: 40px;
 
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+
     &:before {
       content: "";
       border-radius: 5px;
@@ -81,5 +85,11 @@
     color: #dddddd;
     z-index: 10;
     position: relative;
+
+    @media screen and (max-width: 980px) {
+      span.db {
+        display: none;
+      }
+    }
   }
 }

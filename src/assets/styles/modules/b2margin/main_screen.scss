@@ -3,4 +3,30 @@
     min-height: 43px;
     margin: 30px auto 60px;
   }
+
+  @media screen and (max-width: 850px) {
+    .mid_description__wrapper {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      display: block;
+
+      .mid_description__wrapper {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 40px;
+
+        .mid_description__item {
+          width: 100%;
+
+          span.db {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
