@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    -var title = 'Legal'
+    -var newFooter = true
+
+block content
+    include modules/legal/events_screen
+    include modules/legal/_legal_content
+    include modules/legal/_trademark
+    include modules/legal/_hiring
+    include modules/mam_platform/_footer-menu-section-2
