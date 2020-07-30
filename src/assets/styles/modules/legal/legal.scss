@@ -2,6 +2,10 @@
   .container {
     padding: 120px 0;
     border-bottom: 1px solid rgba(51, 51, 51, 0.17);
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   p + p {
