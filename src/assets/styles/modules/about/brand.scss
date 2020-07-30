@@ -87,6 +87,10 @@
         opacity: 1;
         transform: translateY(53%);
 
+        @media screen and (max-width: 1366px) {
+          transform: translateY(90%);
+        }
+
         .ab__title_block__heading,
         .ab__title_block__subtitle,
         .reanim_btn svg {
@@ -145,6 +149,10 @@
 
       &.height800-anim {
         min-height: 800px;
+
+        @media screen and (max-width: 1366px) {
+          min-height: 650px;
+        }
       }
     }
 
@@ -190,6 +198,14 @@
         padding: 0;
         z-index: 21;
         transition: all 1s;
+
+        @media screen and (max-width: 1366px) {
+          max-width: 520px;
+          max-height: 520px;
+          min-width: 520px;
+          min-height: 520px;
+          margin-left: -260px;
+        }
 
         svg {
           display: block;
@@ -459,6 +475,10 @@
         transition: opacity 0.5s, padding 0.5s;
         padding-top: 90px;
 
+        @media screen and (max-width: 1366px) {
+          padding-top: 20px;
+        }
+
         &.active {
           opacity: 1;
           max-width: 100%;
@@ -583,12 +603,20 @@
         &:nth-child(5),
         &:nth-child(6) {
           padding-top: 230px;
+
+          @media screen and (max-width: 1366px) {
+            padding-top: 177px;
+          }
         }
 
         &:nth-child(7),
         &:nth-child(8),
         &:nth-child(9) {
           padding-top: 460px;
+
+          @media screen and (max-width: 1366px) {
+            padding-top: 355px;
+          }
         }
 
         &:nth-child(2),
@@ -608,6 +636,10 @@
 
           &.disabled {
             transform: translateX(-140%);
+
+            @media screen and (max-width: 1366px) {
+              transform: translateX(-110%);
+            }
           }
 
           &.three_move {
@@ -671,6 +703,9 @@
 
           &.active {
             transform: translateX(140%);
+            @media screen and (max-width: 1366px) {
+              transform: translateX(110%);
+            }
           }
 
           &.three_move {
@@ -700,6 +735,10 @@
 
           &.disabled {
             transform: translateX(-140%);
+
+            @media screen and (max-width: 1366px) {
+              transform: translateX(-110%);
+            }
           }
 
           &.three_move {
@@ -740,6 +779,10 @@
 
           &.active {
             transform: translateX(140%);
+
+            @media screen and (max-width: 1366px) {
+              transform: translateX(110%);
+            }
           }
 
           &.three_move {
@@ -770,6 +813,10 @@
 
           &.disabled {
             transform: translateX(-140%);
+
+            @media screen and (max-width: 1366px) {
+              transform: translateX(-110%);
+            }
           }
 
           &.three_move {
@@ -826,6 +873,10 @@
 
           &.active {
             transform: translateX(140%);
+
+            @media screen and (max-width: 1366px) {
+              transform: translateX(110%);
+            }
           }
 
           &.three_move {
@@ -874,6 +925,10 @@
   cursor: pointer;
   position: relative;
   z-index: 40;
+
+  @media screen and (max-width: 1366px) {
+    padding-bottom: 20px;
+  }
 
   &.active {
     opacity: 1;

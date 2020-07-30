@@ -360,3 +360,38 @@
   /* identical to box height, or 136% */
   color: #63636e;
 }
+
+.map__wrapper {
+  position: relative;
+}
+
+.map__btn_block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  a {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 275% */
+    color: #cbd0d3;
+    min-height: 44px;
+    margin-right: 40px;
+    text-decoration: none;
+
+    &.active {
+      color: #01bd95;
+      font-weight: bold;
+    }
+  }
+}

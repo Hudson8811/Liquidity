@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Anti-money laundering and know your customer policy (AML&KYC)'
+    -var newFooter = true
+
+block content
+    include modules/legal/_legal__aml
+    include modules/legal/_hiring_aml
+    include modules/mam_platform/_footer-menu-section-2

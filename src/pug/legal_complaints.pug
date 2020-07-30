@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Complaints Policy'
+    -var newFooter = true
+
+block content
+    include modules/legal/_legal__complaints
+    include modules/legal/_hiring_complaints
+    include modules/mam_platform/_footer-menu-section-2

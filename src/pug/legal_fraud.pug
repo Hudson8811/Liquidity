@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+    -var title = 'Fraud prevention policy'
+    -var newFooter = true
+
+block content
+    include modules/legal/_legal__fraud
+    include modules/legal/_hiring_fraud
+    include modules/mam_platform/_footer-menu-section-2
