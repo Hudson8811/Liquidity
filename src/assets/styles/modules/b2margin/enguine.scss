@@ -7,6 +7,14 @@
   .enguine_table .row .col:nth-child(4) {
     width: 194px;
   }
+
+  .enguine_table .row:not(:nth-child(1)) .col:nth-child(2) {
+    background: #fff;
+  }
+
+  .enguine_table .row:not(:nth-child(1)) .col:nth-child(3) {
+    background: #f8fafa;
+  }
 }
 .section__enguine__description {
   font-style: normal;
