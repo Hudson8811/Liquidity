@@ -14,7 +14,24 @@ setTimeout(function () {
   $(".text_flicky--js").addClass("active");
 }, 0);
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  let child = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  if (
+    !$(".we_are_a_company__item:nth-child(" + child + ")").hasClass("active")
+  ) {
+    $(".we_are_a_company__item").removeClass("active");
+    $(".we_are_a_company__item:nth-child(" + child + ")").addClass("active");
+  }
+}
+
 $(document).ready(function () {
+  setInterval(() => {
+    getRandomIntInclusive(1, 8);
+  }, 1000);
+
   $(document).on("change", "#file_input1", function () {
     $("#ap_images_wrapper1").addClass("active");
     $("#file_input_wrapper2").addClass("active");

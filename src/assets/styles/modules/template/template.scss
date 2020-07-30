@@ -3750,10 +3750,12 @@ select:visited {
   bottom: auto;
   top: 50%;
   margin-top: 273px;
+
   &:before {
     top: 0;
     background: hsla(0, 0%, 9%, 0.6);
     background-image: none;
+    width: 100%;
   }
 
   .fancybox-caption__body {
@@ -4041,7 +4043,7 @@ select:visited {
 }
 
 .modern {
-  max-width: 546px;
+  max-width: 572px;
   margin: 66px auto 0;
 
   &__top_line {
