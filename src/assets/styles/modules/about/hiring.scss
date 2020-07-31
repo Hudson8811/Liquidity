@@ -24,11 +24,17 @@
     background-size: 106%;
   }
 
-  @media screen and (max-width: 1650px) {
+  @media screen and (max-width: 1000px) {
     background-size: cover;
 
     &:hover {
       background-size: cover;
     }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .hiring_block__wrapper .little_hiring_block {
+    min-height: 300px;
   }
 }

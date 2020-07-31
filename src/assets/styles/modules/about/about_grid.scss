@@ -301,6 +301,7 @@
     line-height: 18px;
     /* identical to box height, or 138% */
     color: #63636e;
+    transition: all 1s;
 
     &.active {
       background: #27323e;

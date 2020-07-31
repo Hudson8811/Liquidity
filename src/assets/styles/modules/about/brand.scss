@@ -87,7 +87,7 @@
         opacity: 1;
         transform: translateY(53%);
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1900px) {
           transform: translateY(90%);
         }
 
@@ -150,7 +150,7 @@
       &.height800-anim {
         min-height: 800px;
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1900px) {
           min-height: 650px;
         }
       }
@@ -199,7 +199,7 @@
         z-index: 21;
         transition: all 1s;
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1900px) {
           max-width: 520px;
           max-height: 520px;
           min-width: 520px;
@@ -475,7 +475,7 @@
         transition: opacity 0.5s, padding 0.5s;
         padding-top: 90px;
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1900px) {
           padding-top: 20px;
         }
 
@@ -604,7 +604,7 @@
         &:nth-child(6) {
           padding-top: 230px;
 
-          @media screen and (max-width: 1366px) {
+          @media screen and (max-width: 1900px) {
             padding-top: 177px;
           }
         }
@@ -614,7 +614,7 @@
         &:nth-child(9) {
           padding-top: 460px;
 
-          @media screen and (max-width: 1366px) {
+          @media screen and (max-width: 1900px) {
             padding-top: 355px;
           }
         }
@@ -637,7 +637,7 @@
           &.disabled {
             transform: translateX(-140%);
 
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(-110%);
             }
           }
@@ -703,7 +703,7 @@
 
           &.active {
             transform: translateX(140%);
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(110%);
             }
           }
@@ -736,7 +736,7 @@
           &.disabled {
             transform: translateX(-140%);
 
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(-110%);
             }
           }
@@ -780,7 +780,7 @@
           &.active {
             transform: translateX(140%);
 
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(110%);
             }
           }
@@ -814,7 +814,7 @@
           &.disabled {
             transform: translateX(-140%);
 
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(-110%);
             }
           }
@@ -874,7 +874,7 @@
           &.active {
             transform: translateX(140%);
 
-            @media screen and (max-width: 1366px) {
+            @media screen and (max-width: 1900px) {
               transform: translateX(110%);
             }
           }
@@ -926,7 +926,7 @@
   position: relative;
   z-index: 40;
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1900px) {
     padding-bottom: 20px;
   }
 

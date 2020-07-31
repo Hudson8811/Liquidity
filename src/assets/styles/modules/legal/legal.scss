@@ -138,6 +138,20 @@
     color: #333333;
     padding-bottom: 7px;
 
+    a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      /* or 22px */
+      color: #333333;
+      text-decoration: none;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     & + .disclamers__item {
       margin-top: 7px;
     }
@@ -169,6 +183,20 @@
       /* identical to box height, or 136% */
       margin-bottom: 20px;
       color: #333333;
+
+      a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        /* identical to box height, or 136% */
+        text-decoration: none;
+        color: #333333;
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
 
     &:not(:first-child) {
@@ -179,6 +207,20 @@
       /* identical to box height, or 17px */
       padding-bottom: 7px;
       color: #333333;
+
+      a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140%;
+        /* identical to box height, or 17px */
+        text-decoration: none;
+        color: #333333;
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
 
       &:not(:last-child) {
         border-bottom: 1px solid rgba(60, 60, 60, 0.17);
@@ -333,7 +375,7 @@
       height: 4px;
       flex-shrink: 0;
       display: block;
-      margin-top: 6px;
+      margin-top: 8px;
       margin-right: 14px;
       background: center / cover url(../images/little_circle.svg) no-repeat;
     }
@@ -394,8 +436,6 @@
     }
 
     &:not(:first-child) {
-      border-bottom: 1px solid #efefef;
-
       .legal_table__col:nth-child(1) {
         display: flex;
         justify-content: flex-start;
@@ -458,6 +498,10 @@
 .second_legal_table {
   .legal_table__row {
     padding: 0;
+
+    &:not(:first-child) {
+      border-bottom: 1px solid #efefef;
+    }
 
     .legal_table__col:nth-child(1) {
       width: 319px;

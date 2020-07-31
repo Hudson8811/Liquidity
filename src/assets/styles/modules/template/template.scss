@@ -3764,24 +3764,10 @@ select:visited {
 }
 
 .fancybox-show-thumbs .fancybox-content {
-  position: relative !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  transition: none !important;
-  width: 1018px !important;
-  max-width: 1018px !important;
-  min-width: 1018px !important;
-  max-height: 687px !important;
-  min-height: 687px !important;
-  height: 687px !important;
-  transform: translate(0, 0) scale(1, 1) !important;
-}
-
-.fancybox-show-thumbs .fancybox-slide {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  margin-bottom: 0 !important;
 }
 
 .fancybox-image {
