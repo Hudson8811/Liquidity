@@ -1,0 +1,127 @@
+.comparison_tk {
+  .section__title {
+    margin-bottom: 80px;
+  }
+
+  &__catalog {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    background: #ffffff;
+    border: 1px solid #e8edf0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px 35px;
+    width: calc(33.333% - 44px / 3);
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 42px;
+    /* identical to box height, or 233% */
+    color: #383838;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* or 136% */
+    color: #63636e;
+  }
+
+  .enguine_table {
+    margin-top: 50px;
+
+    .row {
+      .col {
+        height: auto;
+      }
+
+      &:not(:nth-child(1)) {
+        .col:nth-child(2),
+        .col:nth-child(3),
+        .col:nth-child(4) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 36px;
+          /* identical to box height, or 225% */
+          text-align: center;
+          color: #3f3f3f;
+        }
+
+        .col:nth-child(5) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 21px;
+          /* or 150% */
+          color: #3f3f3f;
+          box-sizing: border-box;
+          padding: 20px 13.5px;
+          text-align: left;
+          display: block;
+          letter-spacing: 0;
+        }
+
+        .col:nth-child(1) {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 21px;
+          /* identical to box height, or 131% */
+          color: #3f3f3f;
+        }
+
+        .col:nth-child(2) {
+          background: #fff;
+        }
+
+        .col:nth-child(3),
+        .col:nth-child(5) {
+          background: #f8fafa;
+        }
+      }
+
+      .col:nth-child(1) {
+        width: 292px;
+      }
+
+      .col:nth-child(2),
+      .col:nth-child(3) {
+        width: 133px;
+      }
+
+      .col:nth-child(4) {
+        width: 137px;
+      }
+
+      .col:nth-child(5) {
+        width: 288px;
+      }
+    }
+
+    .icon-bold_check {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+
+    .icon-close {
+      width: 11px;
+      height: 11px;
+    }
+  }
+}

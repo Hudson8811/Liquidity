@@ -1,0 +1,40 @@
+.forex_liquidity__new__forex_tk {
+  .section__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+    color: #c4c4c4;
+    margin-bottom: 36px;
+  }
+
+  .supported_platforms-item {
+    margin-right: 0;
+
+    & + .supported_platforms-item {
+      margin-left: 86px;
+    }
+  }
+
+  .supported_platforms {
+    margin-top: 112px;
+  }
+
+  .check_block--mam_platform {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: -13px;
+
+    &-item {
+      margin-bottom: 13px;
+      width: calc(50% - 82px / 2);
+
+      &:nth-child(2n) {
+        margin-left: auto;
+      }
+    }
+  }
+}
