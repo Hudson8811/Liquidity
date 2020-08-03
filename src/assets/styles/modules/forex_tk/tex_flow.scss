@@ -173,6 +173,20 @@
     box-sizing: border-box;
     background: #2f3945;
 
+    &__flex_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 80px;
+    }
+
+    &__img,
+    &__right {
+      display: block;
+      width: calc(50% - 40px / 2);
+    }
+
     & + .feat_tk__block {
       margin-top: 45px;
     }

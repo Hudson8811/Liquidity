@@ -677,6 +677,24 @@ $(document).ready(function () {
       $(document).off("scroll");
     }
   }
+  let checkNewSpeedBlock1Trigger = false;
+  let checkNewSpeedBlock2Trigger = false;
+
+  function checkNewSpeedBlock1() {
+    if (
+      checkContent("#grove1 .pac_ad__trigeer") === true &&
+      !checkNewSpeedBlock1Trigger
+    ) {
+      $("#grove1 .new_speed").addClass("active");
+      checkNewSpeedBlock1Trigger = true;
+    } else if (
+      checkContent("#grove2 .pac_ad__trigeer") === true &&
+      !checkNewSpeedBlock2Trigger
+    ) {
+      $("#grove2 .new_speed").addClass("active");
+      checkNewSpeedBlock2Trigger = true;
+    }
+  }
 
   function checkPositionCircle() {
     if (checkContent(".join__icon") === true) {
@@ -766,6 +784,8 @@ $(document).ready(function () {
       checkNumber();
     } else if ($("body").hasClass("team")) {
       checkEngineers();
+    } else if ($("body").hasClass("forex_tk")) {
+      checkNewSpeedBlock1();
     } else {
       checkPositionSpeed();
     }
@@ -917,12 +937,36 @@ $(document).ready(function () {
       .siblings("iframe")
       .attr("src", src + "&autoplay=1");
   });
-  $(".feat_tk__slider").slick({
+  $(".feat_tk__slider1").slick({
     infinite: false,
     speed: 300,
     slidesToShow: 1,
-    prevArrow: $(".feat_tk__arrow__prev"),
-    nextArrow: $(".feat_tk__arrow__next"),
+    prevArrow: $(".feat_tk__slider_wrapper1 .feat_tk__arrow__prev"),
+    nextArrow: $(".feat_tk__slider_wrapper1 .feat_tk__arrow__next"),
+  });
+
+  $(".feat_tk__slider2").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(".feat_tk__slider_wrapper2 .feat_tk__arrow__prev"),
+    nextArrow: $(".feat_tk__slider_wrapper2 .feat_tk__arrow__next"),
+  });
+
+  $(".feat_tk__slider3").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(".feat_tk__slider_wrapper3 .feat_tk__arrow__prev"),
+    nextArrow: $(".feat_tk__slider_wrapper3 .feat_tk__arrow__next"),
+  });
+
+  $(".feat_tk__slider4").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(".feat_tk__slider_wrapper4 .feat_tk__arrow__prev"),
+    nextArrow: $(".feat_tk__slider_wrapper4 .feat_tk__arrow__next"),
   });
 
   $(document).on("click", ".feat_tk__acard__title ", function () {

@@ -1,0 +1,238 @@
+.pac_ad {
+  &__trigeer {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: 50%;
+    margin-top: -5px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__wrapper {
+    position: relative;
+    background: #202830;
+    border-radius: 5px;
+    padding: 55px 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    color: #ffffff;
+    margin-bottom: 31px;
+  }
+
+  &__little_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+    /* or 31px */
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    /* or 20px */
+    color: #ffffff;
+
+    & + .pac_ad__subtitle {
+      margin-top: 20px;
+    }
+  }
+}
+.new_speed {
+  width: 100%;
+  height: 11px;
+  border-radius: 4px;
+  transform-origin: left center;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    animation: 2s ease-in grove;
+  }
+
+  &--gray {
+    background: #434c56;
+  }
+
+  &--blue {
+    background: linear-gradient(90deg, #0272d9 1.59%, #42a3fd 93.04%);
+  }
+
+  &--green {
+    background: linear-gradient(266.12deg, #16f1c2 22.33%, #00b68f 99.88%);
+  }
+
+  &--blue-green {
+    background: linear-gradient(90deg, #3b8bd4 -3.9%, #06bd98 112.99%);
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    & + .new_speed__wrapper {
+      margin-top: 80px;
+    }
+
+    &_left {
+      width: 100%;
+    }
+
+    &_right {
+      width: 155px;
+      flex-shrink: 0;
+      margin-left: 49px;
+
+      &--abs {
+        position: absolute;
+        width: auto;
+        margin-left: 0;
+        right: 54px;
+        bottom: 70px;
+
+        .new_speed__wrapper_right_border {
+          display: none;
+        }
+
+        svg {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &_border {
+        padding-top: 31px;
+        border-bottom: 1px solid #434c56;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #434c56;
+    margin-bottom: 13px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    color: #ffffff;
+    opacity: 0.7;
+    margin-top: 8px;
+
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__price {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+    letter-spacing: -0.318182px;
+    color: #ffffff;
+    margin-left: 14px;
+    flex-shrink: 0;
+  }
+
+  &__big_price {
+    &__subtitle {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 143% */
+      color: #ffffff;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+  }
+}
+
+#grove2 {
+  .new_speed__wrapper_left {
+    max-width: 347px;
+  }
+
+  .new_speed__wrapper {
+    min-height: 250px;
+  }
+}
+
+.pac_ad__wrapper.map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 55px 40px;
+
+  & > img {
+    display: block;
+    width: 100%;
+    max-width: 469px;
+  }
+
+  & > div {
+    max-width: 396px;
+  }
+}
+
+.pac_ad__wrapper.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div {
+    &:nth-child(1) {
+      max-width: 366px;
+    }
+    &:nth-child(2) {
+      max-width: 337px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
