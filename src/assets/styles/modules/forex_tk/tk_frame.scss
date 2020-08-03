@@ -1,0 +1,26 @@
+.section.section__wacth_wl.b2_frame.tk_frame {
+  &:before {
+    display: none;
+  }
+
+  background-image: url(../images/tk_video_bg.png);
+  background-size: 101% auto;
+
+  .video_form .video_block {
+    height: 457px;
+  }
+
+  .video_form .video_block--preview {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(209, 219, 227, 0.7);
+  }
+}
+#modal_video_20 {
+  .video_block--preview .image_preview {
+    width: 101%;
+    height: 101%;
+    object-position: top;
+    background: #000;
+  }
+}
