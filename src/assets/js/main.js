@@ -659,12 +659,13 @@ $(document).ready(function () {
       return true;
     }
   }
+
   function circleAnimation() {
     setTimeout(() => {
       $(".join__icon svg").addClass("is-active");
     }, 1500);
   }
-  if (!$("body").hasClass("circle_anim")) {
+  if ($("body").hasClass("circle_anim")) {
     circleAnimation();
   } else {
   }
@@ -741,25 +742,6 @@ $(document).ready(function () {
       chechNubmerTrigger = true;
     }
   }
-  let chechTextTrigger = false;
-
-  function checkText() {
-    if (checkContent(".mission__overlay") && !chechTextTrigger) {
-      const mission = new Typed("#mission", {
-        strings: [
-          "<span> We don't tell you how to build your business.</span> <span class='db'></span> <span>Our mission is to work with you. </span>",
-        ],
-        typeSpeed: 20,
-        backSpeed: 10,
-        backDelay: 1000,
-        startDelay: 1000,
-        loop: false,
-        showCursor: false,
-        contentType: "html",
-      });
-      chechTextTrigger = true;
-    }
-  }
 
   function checkEngineers() {
     if (checkContent(".engineers__trigger") === true) {
@@ -780,13 +762,12 @@ $(document).ready(function () {
     } else if ($("body").hasClass("navbar_animation")) {
       checkPositionNavbarAnim();
     } else if ($("body").hasClass("bigAnimation")) {
-      checkText();
       checkNumber();
     } else if ($("body").hasClass("team")) {
       checkEngineers();
     } else if ($("body").hasClass("forex_tk")) {
       checkNewSpeedBlock1();
-    } else {
+    } else if ($("body").hasClass("speed_anim")) {
       checkPositionSpeed();
     }
   }
@@ -1434,11 +1415,19 @@ $(document).ready(function () {
   $(document).on("click", ".careers_table .row", function (e) {
     e.preventDefault();
 
+    let vakansy = $(this).children(".col:nth-child(1)").children("span").text();
+
     if (!$(this).hasClass("active")) {
       $(".careers_table .row").removeClass("active");
       $(".careers_table .row .row_content").removeClass("active").slideUp();
       $(this).addClass("active");
       $(this).children(".row_content").slideDown();
+
+      $("#modal5")
+        .children(".new_form__flex")
+        .children("label:nth-child(1)")
+        .children("input")
+        .val(vakansy);
     } else {
       $(this).removeClass("active");
       $(this).children(".row_content").slideUp();

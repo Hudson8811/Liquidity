@@ -61,6 +61,10 @@
     color: #6a6a6a;
   }
 
+  .gen_block__image + .gen_block__name {
+    padding-top: 20px;
+  }
+
   &__description {
     font-style: normal;
     font-weight: normal;
