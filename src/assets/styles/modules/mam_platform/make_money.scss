@@ -1,10 +1,10 @@
 .make_money {
-  background: #fff;
+  background: $white;
   padding-top: 125px;
   padding-bottom: 125px;
   overflow: hidden;
   .opportunities {
-    background: #fff;
+    background: $white;
     padding: 0;
     .green__title {
       letter-spacing: 1px;
@@ -24,7 +24,7 @@
     /* or 139% */
     text-align: center;
     letter-spacing: 0px;
-    color: #63636e;
+    color: $gray;
     max-width: 651px;
     margin: 0 auto;
     margin-bottom: 150px;

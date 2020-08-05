@@ -19,7 +19,7 @@
     line-height: 145%;
     /* or 26px */
     text-align: justify;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__reg_p {
@@ -38,7 +38,7 @@
     font-size: 48px;
     line-height: 84px;
     /* or 175% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 80px;
   }
 }
@@ -262,7 +262,7 @@
   line-height: 85px;
   /* or 106% */
   text-align: center;
-  color: #383838;
+  color: $darkgray;
   @media screen and (max-width: 800px) {
     font-size: 40px;
     line-height: 45px;
@@ -276,7 +276,7 @@
   line-height: 145%;
   /* or 20px */
   text-align: center;
-  color: #63636e;
+  color: $gray;
   margin: 50px auto 100px;
 
   @media screen and (max-width: 800px) {
@@ -303,7 +303,7 @@
     /* identical to box height, or 119% */
     margin-bottom: 20px;
     display: block;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__description {
@@ -406,7 +406,7 @@
     }
 
     &:first-child {
-      background: #fff;
+      background: $white;
       padding: 0;
 
       .legal_table__col {
@@ -419,7 +419,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        color: #000000;
+        color: $black;
         height: 40px;
         background: #e8edf0;
       }
@@ -520,7 +520,7 @@
     line-height: 21px;
     /* or 150% */
     color: #3f3f3f;
-    background: #fff;
+    background: $white;
   }
 
   .legal_table__row:not(:first-child) .legal_table__col:nth-child(2) {
@@ -536,6 +536,6 @@
   }
 
   .legal_table__row:nth-child(2n + 1) {
-    background: #fff;
+    background: $white;
   }
 }

@@ -47,7 +47,7 @@
 
       svg {
         path {
-          fill: #fff;
+          fill: $white;
         }
       }
     }
@@ -90,7 +90,7 @@
     font-size: 16px;
     line-height: 26px;
     /* identical to box height, or 162% */
-    color: #63636e;
+    color: $gray;
   }
 }
 

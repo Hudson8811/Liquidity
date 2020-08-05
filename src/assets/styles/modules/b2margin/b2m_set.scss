@@ -5,7 +5,7 @@
 }
 
 .d_accounts {
-  background: #ffffff;
+  background: $white;
   /* Small_shadow */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
@@ -19,7 +19,7 @@
     line-height: 28px;
     /* identical to box height, or 119% */
     margin-bottom: 20px;
-    color: #383838;
+    color: $darkgray;
     text-align: center;
   }
 
@@ -30,7 +30,7 @@
     line-height: 19px;
     /* or 136% */
     text-align: center;
-    color: #637786;
+    color: $grayblue-text;
     margin-bottom: 60px;
   }
 }

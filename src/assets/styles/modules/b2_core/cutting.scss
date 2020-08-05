@@ -1,5 +1,5 @@
 .cutting_section {
-  background: #eff4f6;
+  background: $bluebg;
   padding: 164px 0;
   @media screen and (max-width: 580px) {
     padding: 50px 0;
@@ -29,7 +29,7 @@
     line-height: 42px;
     text-align: center;
     letter-spacing: 0;
-    color: #000000;
+    color: $black;
     margin-bottom: 30px;
   }
   .branding_subheading {
@@ -43,7 +43,7 @@
     /* or 143% */
     text-align: center;
     letter-spacing: 0px;
-    color: #63636e;
+    color: $white;
     margin-bottom: 50px;
   }
 }
@@ -73,7 +73,7 @@
     font-size: 21px;
     line-height: 28px;
     /* identical to box height, or 119% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 27px;
   }
   &__subheading {
@@ -84,6 +84,6 @@
     line-height: 19px;
     /* or 136% */
 
-    color: #637786;
+    color: $grayblue-text;
   }
 }

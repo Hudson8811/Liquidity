@@ -57,7 +57,7 @@
     }
 
     &.active {
-      background: #ffffff;
+      background: $white;
       opacity: 0.9;
       border: 1px solid #dae4e8;
       box-sizing: border-box;
@@ -68,7 +68,7 @@
       font-weight: bold;
       font-size: 18px;
       line-height: 22px;
-      color: #000000;
+      color: $black;
     }
   }
 
@@ -88,7 +88,7 @@
     line-height: 44px;
     /* identical to box height, or 122% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     margin-top: 80px;
     margin-bottom: 30px;
   }
@@ -101,7 +101,7 @@
     line-height: 20px;
     /* or 143% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 50px;
   }
 }
@@ -141,7 +141,7 @@
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 20px;
   }
 
@@ -152,7 +152,7 @@
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
-    color: #ffffff;
+    color: $white;
   }
 
   &__icon {

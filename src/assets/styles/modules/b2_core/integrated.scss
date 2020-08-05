@@ -3,7 +3,7 @@
   @media screen and (max-width: 580px) {
     padding: 50px 0;
   }
-  background: linear-gradient(180deg, #eff4f6 0%, #eff4f6 100%);
+  background: linear-gradient(180deg, $bluebg 0%, $bluebg 100%);
   .section__subtitle {
     max-width: 636px;
     margin: 0 auto;
@@ -18,7 +18,7 @@
     text-align: center;
     letter-spacing: -1.0135px;
 
-    color: #383838;
+    color: $darkgray;
   }
   .branding_block {
     width: 100%;
@@ -79,7 +79,7 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: 0;
-  color: #637786;
+  color: $grayblue-text;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -90,7 +90,7 @@
 
   &__li {
     margin-bottom: 1px;
-    background: #fff;
+    background: $white;
     overflow: hidden;
     box-sizing: border-box;
 
@@ -184,7 +184,7 @@
 
 .events_form {
   margin-top: 15px;
-  background: #fff;
+  background: $white;
   width: 100%;
   box-sizing: border-box;
   padding: 26px 19px 26px;
@@ -530,7 +530,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   right: 13px;
   top: 10px;
   box-sizing: border-box;
@@ -548,7 +548,7 @@
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background: $black;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -561,7 +561,7 @@
       display: block;
       width: 20px;
       height: 2px;
-      background: #000;
+      background: $black;
       position: absolute;
     }
 

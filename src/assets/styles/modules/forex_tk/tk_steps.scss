@@ -4,7 +4,7 @@
   }
 
   &__content {
-    background: #eff4f6;
+    background: $bluebg;
     padding: 36px 63px;
     box-sizing: border-box;
 
@@ -30,7 +30,7 @@
     font-size: 14px;
     line-height: 23px;
     /* or 167% */
-    color: #383838;
+    color: $darkgray;
   }
 
   &__subtitle {
@@ -50,7 +50,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #000;
+      background: $black;
       margin-top: 8px;
     }
     & + li {

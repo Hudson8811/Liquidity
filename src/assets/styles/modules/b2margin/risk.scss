@@ -19,7 +19,7 @@
 
   &__item {
     background: #f9fbfb;
-    border: 5px solid #ffffff;
+    border: 5px solid $white;
     box-sizing: border-box;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -40,7 +40,7 @@
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 15px;
   }
 
@@ -50,7 +50,7 @@
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 29px;
 
     @media screen and (max-width: 820px) {
@@ -67,7 +67,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    color: #383838;
+    color: $darkgray;
 
     &:before {
       content: "";

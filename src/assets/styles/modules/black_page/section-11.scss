@@ -1,5 +1,5 @@
 .section-11 {
-  background: #eff4f6;
+  background: $bluebg;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -14,7 +14,7 @@
       font-size: 50px;
       line-height: 65px;
       /* or 130% */
-      color: #383838;
+      color: $darkgray;
     }
 
     padding: 84px 80px;

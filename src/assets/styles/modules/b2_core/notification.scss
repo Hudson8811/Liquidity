@@ -1,5 +1,5 @@
 .section__notification {
-  background: #eff4f6;
+  background: $bluebg;
 
   .new_box-catalog {
     margin-top: 117px;
@@ -103,7 +103,7 @@
     width: calc(33.333% - 10px);
     margin: 0 5px;
     margin-bottom: 10px;
-    background: #ffffff;
+    background: $white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 
@@ -123,7 +123,7 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 19px;
-      color: #637786;
+      color: $grayblue-text;
     }
   }
 }

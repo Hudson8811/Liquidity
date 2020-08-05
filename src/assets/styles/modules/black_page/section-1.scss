@@ -36,18 +36,18 @@
       font-size: 24px;
       line-height: 30px;
       text-align: center;
-      color: #ffffff;
+      color: $white;
     }
     &-description {
       font-weight: normal;
       font-size: 11px;
       line-height: 13px;
-      color: #ffffff;
+      color: $white;
       padding-right: 46px;
       margin-bottom: 18px;
       padding-left: 8px;
       a {
-        color: #fff;
+        color: $white;
       }
     }
     .btn {
@@ -59,7 +59,7 @@
       text-align: center;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: $white;
       border: none;
       height: 50px;
       display: flex;
@@ -69,7 +69,7 @@
   }
   &__content {
     .section__title {
-      color: #fff;
+      color: $white;
     }
     .section__subtitle {
       margin-top: 42px;

@@ -16,7 +16,7 @@
     line-height: 26px;
     text-align: center;
     margin-bottom: 80px;
-    color: #383838;
+    color: $darkgray;
   }
 }
 
@@ -56,7 +56,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__subtitle {
@@ -64,7 +64,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 26px;
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 20px;
   }
 
@@ -75,7 +75,7 @@
     line-height: 130.7%;
     /* or 31px */
 
-    color: #383838;
+    color: $darkgray;
   }
   &__item {
     display: flex;

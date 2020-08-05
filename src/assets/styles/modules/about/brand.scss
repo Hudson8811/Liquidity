@@ -58,7 +58,7 @@
   }
   .section__title {
     padding-bottom: 30px;
-    color: #fff;
+    color: $white;
     max-height: 84px;
     transition: padding 0.5s, max-height 0.5s;
     margin-bottom: 0;
@@ -408,7 +408,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 28px;
-        color: #ffffff;
+        color: $white;
         margin-bottom: 5px;
       }
 
@@ -417,7 +417,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
-        color: #ffffff;
+        color: $white;
       }
     }
 
@@ -467,7 +467,7 @@
         line-height: 31px;
         /* or 172% */
         text-align: center;
-        color: #ffffff;
+        color: $white;
         opacity: 0;
         max-width: 0;
         max-height: 0;
@@ -944,7 +944,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: $white;
 
   span {
     margin: 0 4px;

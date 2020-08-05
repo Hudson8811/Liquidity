@@ -26,7 +26,7 @@
       font-size: 24px;
       line-height: 111%;
       /* or 27px */
-      color: #ffffff;
+      color: $white;
       letter-spacing: 1px;
     }
   }
@@ -77,7 +77,7 @@
     line-height: 120%;
     /* or 72px */
 
-    color: #ffffff;
+    color: $white;
     margin-bottom: 22px;
     margin-top: 39px;
 
@@ -97,7 +97,7 @@
     line-height: 31px;
     /* or 148% */
 
-    color: #ffffff;
+    color: $white;
     margin-bottom: 61px;
 
     @media screen and (max-width: 580px) {
@@ -129,7 +129,7 @@
     font-size: 16px;
     line-height: 22px;
     /* identical to box height, or 137% */
-    color: #ffffff;
+    color: $white;
   }
 
   &__wrapper {
@@ -193,7 +193,7 @@
     font-size: 16px;
     line-height: 22px;
     /* or 137% */
-    color: #ffffff;
+    color: $white;
   }
 
   &__discription {
@@ -204,7 +204,7 @@
     line-height: 22px;
     /* or 137% */
 
-    color: #ffffff;
+    color: $white;
   }
 
   &__timer {
@@ -228,7 +228,7 @@
       font-size: 16px;
       line-height: 22px;
       /* identical to box height, or 137% */
-      color: #ffffff;
+      color: $white;
     }
 
     .timer {
@@ -252,7 +252,7 @@
   line-height: 22px;
   /* identical to box height, or 137% */
   text-align: center;
-  color: #ffffff;
+  color: $white;
 
   &_section {
     display: flex;
@@ -281,7 +281,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  color: #ffffff;
+  color: $white;
   transition: all 0.2s;
 
   &:hover {

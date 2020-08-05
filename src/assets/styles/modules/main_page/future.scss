@@ -119,7 +119,7 @@
     font-size: 32px;
     line-height: 27px;
     /* or 84% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 18px;
   }
 
@@ -132,7 +132,7 @@
     font-size: 14px;
     line-height: 21px;
     /* or 150% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 45px;
   }
 
@@ -150,7 +150,7 @@
   //   height: 100%;
   //   background: linear-gradient(
   //     109.43deg,
-  //     #000000 1.98%,
+  //     $black 1.98%,
   //     rgba(0, 0, 0, 0) 136%
   //   );
   //   mix-blend-mode: multiply;
@@ -174,7 +174,7 @@
     font-size: 16px;
     line-height: 27px;
     /* identical to box height, or 169% */
-    color: #ffffff;
+    color: $white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -227,7 +227,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 22px;
     position: relative;
 
@@ -249,7 +249,7 @@
     font-size: 16px;
     line-height: 27px;
     /* identical to box height, or 169% */
-    color: #ffffff;
+    color: $white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -308,7 +308,7 @@
     line-height: 44px;
     /* identical to box height, or 111% */
 
-    color: #ffffff;
+    color: $white;
     margin-top: -104px;
     margin-left: 95%;
 
@@ -355,7 +355,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    color: #ffffff;
+    color: $white;
     width: 198px;
     height: 45px;
     display: flex;
@@ -385,7 +385,7 @@
     justify-content: center;
     height: 45px;
     width: 155px;
-    border: 1px solid #555555;
+    border: 1px solid $text-black;
     box-sizing: border-box;
     border-radius: 5px;
     margin-left: 19px;
@@ -401,7 +401,7 @@
 .future__schedule {
   width: 100%;
   position: relative;
-  background: #ffffff;
+  background: $white;
   box-sizing: border-box;
   border-radius: 3px;
   padding: 36px 64px 36px 42px;
@@ -527,7 +527,7 @@
       font-size: 14px;
       line-height: 27px;
       /* or 193% */
-      color: #ffffff;
+      color: $white;
       writing-mode: tb;
       text-decoration: none;
     }

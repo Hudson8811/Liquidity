@@ -9,7 +9,7 @@
   }
 
   .enguine_table .row:not(:nth-child(1)) .col:nth-child(2) {
-    background: #fff;
+    background: $white;
   }
 
   .enguine_table .row:not(:nth-child(1)) .col:nth-child(3) {
@@ -25,7 +25,7 @@
 
   text-indent: 35px;
 
-  color: #63636e;
+  color: $white;
 
   &:nth-child(1) {
     margin-top: 30px;

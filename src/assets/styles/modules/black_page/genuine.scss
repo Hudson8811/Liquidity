@@ -49,7 +49,7 @@
       font-family: Roboto;
       font-style: normal;
       font-weight: 400;
-      color: #ffffff;
+      color: $white;
       border-radius: 9px;
 
       &:hover {
@@ -261,7 +261,7 @@
     line-height: 36px;
     /* identical to box height, or 225% */
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: $white;
 
     &:first-child {
       margin-left: 0;
@@ -321,7 +321,7 @@
     line-height: 27px;
     /* identical to box height, or 135% */
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: $white;
   }
 
   &__subtitle {
@@ -331,6 +331,6 @@
     font-size: 13px;
     line-height: 20px;
     /* identical to box height, or 153% */
-    color: #ffffff;
+    color: $white;
   }
 }

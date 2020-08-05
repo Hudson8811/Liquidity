@@ -1,5 +1,5 @@
 .section-6 {
-  background: #eff4f6;
+  background: $bluebg;
   .section__title {
     padding: 0px 20px;
     text-align: center;
@@ -21,7 +21,7 @@
       font-size: 14px;
       line-height: 20px;
       /* identical to box height, or 142% */
-      color: #383838;
+      color: $darkgray;
       td {
         padding: 10px 35px;
         width: 190px;
@@ -38,12 +38,12 @@
     }
     .gray {
       background: rgba(153, 153, 153, 0.1);
-      border-right: 3px solid #fff;
+      border-right: 3px solid $white;
       box-sizing: border-box;
 
       &:last-child {
         border: none;
-        border-left: 3px solid #fff;
+        border-left: 3px solid $white;
       }
 
       span {
@@ -53,7 +53,7 @@
         font-size: 13.9611px;
         line-height: 20px;
         /* identical to box height, or 143% */
-        color: #000000;
+        color: $black;
       }
     }
     .dark_gray {
@@ -61,7 +61,7 @@
     }
     tbody {
       tr {
-        background: #fff;
+        background: $white;
 
         td {
           box-sizing: border-box;
@@ -77,7 +77,7 @@
         /* identical to box height, or 225% */
         letter-spacing: -0.5px;
         text-indent: 35px;
-        color: #63636e;
+        color: $gray;
       }
       td {
         padding: 10px 0;

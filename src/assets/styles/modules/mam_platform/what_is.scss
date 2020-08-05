@@ -1,14 +1,14 @@
 .what_is {
   padding-top: 125px;
   padding-bottom: 125px;
-  background: #eff4f6;
+  background: $bluebg;
   .main__text {
     font-weight: normal;
     font-size: 20px;
     line-height: 29px;
     /* or 145% */
     letter-spacing: 0px;
-    color: #63636e;
+    color: $gray;
     margin-top: 50px;
   }
   .container.flex {

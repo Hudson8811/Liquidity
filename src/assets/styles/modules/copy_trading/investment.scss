@@ -1,10 +1,10 @@
 .investment {
-  background: #eff4f6;
+  background: $bluebg;
 
   .opportunities {
     padding-top: 0;
     padding-bottom: 0;
-    background: #eff4f6;
+    background: $bluebg;
     .container.flex.invest-1 {
       justify-content: space-between;
       img {
@@ -81,7 +81,7 @@
           font-size: 20px;
           line-height: 35px;
           /* identical to box height, or 175% */
-          color: #383838;
+          color: $darkgray;
           margin-bottom: 4px;
         }
         &--description {
@@ -90,7 +90,7 @@
           line-height: 20px;
           /* identical to box height, or 143% */
 
-          color: #383838;
+          color: $darkgray;
         }
       }
     }

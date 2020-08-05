@@ -30,7 +30,7 @@
     /* or 31px */
     text-align: center;
     margin-bottom: 45px;
-    color: #383838;
+    color: $darkgray;
   }
 
   .who_we__support {
@@ -41,7 +41,7 @@
     /* identical to box height, or 21px */
     text-align: center;
     padding-bottom: 6px;
-    color: #383838;
+    color: $darkgray;
     border-bottom: 3px solid #01bf94;
     display: inline-block;
 
@@ -96,7 +96,7 @@
     line-height: 135%;
     /* or 28px */
     align-items: center;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__discription {
@@ -108,7 +108,7 @@
 
     align-items: center;
 
-    color: #383838;
+    color: $darkgray;
 
     @media screen and (max-width: 1000px) {
       span.db {
@@ -155,7 +155,7 @@
     font-size: 16px;
     line-height: 19px;
     /* or 119% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 20px;
   }
 
@@ -165,7 +165,7 @@
     font-size: 14px;
     line-height: 19px;
     /* or 136% */
-    color: #637786;
+    color: $grayblue-text;
   }
 }
 
@@ -269,7 +269,7 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin-left: 19px;
 
     @media screen and (max-width: 650px) {
@@ -300,7 +300,7 @@
     font-size: 13px;
     line-height: 18px;
     /* identical to box height, or 138% */
-    color: #63636e;
+    color: $gray;
     transition: all 1s;
 
     &.active {
@@ -311,7 +311,7 @@
       line-height: 18px;
       /* identical to box height, or 138% */
 
-      color: #ffffff;
+      color: $white;
     }
   }
 }

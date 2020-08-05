@@ -25,7 +25,7 @@
 
     text-align: center;
 
-    color: #ffffff;
+    color: $white;
     margin-bottom: 180px;
   }
 }
@@ -75,7 +75,7 @@
     line-height: 47px;
     /* identical to box height */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 50px;
   }
 
@@ -222,7 +222,8 @@
     font-size: 18px;
     line-height: 20px;
     /* identical to box height, or 111% */
-    color: #ffffff;
+    color: $white;
+    min-height: 50px;
   }
 
   &__link {
@@ -257,7 +258,7 @@
       font-size: 13px;
       line-height: 140%;
       /* or 18px */
-      color: #ffffff;
+      color: $white;
     }
   }
 

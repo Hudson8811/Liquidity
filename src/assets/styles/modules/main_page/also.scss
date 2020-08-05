@@ -121,7 +121,7 @@
     font-size: 18px;
     line-height: 27px;
     /* or 150% */
-    color: #ffffff;
+    color: $white;
     height: auto;
     max-height: 70px;
     overflow: hidden;
@@ -151,7 +151,7 @@
     box-sizing: border-box;
     text-decoration: none;
     background: #42aeea;
-    color: #ffffff;
+    color: $white;
     z-index: 5;
     left: 0;
     top: 20px;
@@ -171,7 +171,7 @@
     font-size: 14px;
     line-height: 21px;
     /* or 150% */
-    color: #ffffff;
+    color: $white;
     padding-top: 23px;
     height: 70px;
     transition: padding 0.5s;
@@ -241,7 +241,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color: #ffffff;
+    color: $white;
 
     transition: opacity 0.1s;
 
@@ -328,7 +328,7 @@
     font-size: 36px;
     line-height: 27px;
     /* or 75% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 10px;
 
     @media screen and (max-width: 580px) {
@@ -343,7 +343,7 @@
     font-size: 14px;
     line-height: 21px;
     /* identical to box height, or 150% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 36px;
   }
 

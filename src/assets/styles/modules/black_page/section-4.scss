@@ -1,5 +1,5 @@
 .section-4 {
-  background: #eff4f6;
+  background: $bluebg;
 
   .section__title {
     padding-bottom: 26px;
@@ -17,7 +17,7 @@
     max-width: 842px;
     justify-content: space-between;
     &--text {
-      color: #383838;
+      color: $darkgray;
     }
     &-content {
       @media screen and (min-width: 1600px) {
@@ -30,10 +30,10 @@
       }
     }
     &--number {
-      color: #383838;
+      color: $darkgray;
     }
     &--number-text {
-      color: #383838;
+      color: $darkgray;
       margin-left: 12px;
     }
   }

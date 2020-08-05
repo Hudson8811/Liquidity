@@ -146,7 +146,7 @@
       line-height: 21px;
       /* or 150% */
       letter-spacing: 0;
-      color: #63636e;
+      color: $gray;
 
       &.extrabold {
         font-weight: 900;
@@ -173,7 +173,7 @@
       font-size: 14px;
       line-height: 19px;
       /* identical to box height, or 136% */
-      color: #63636e;
+      color: $gray;
     }
 
     &.skype {
@@ -221,7 +221,7 @@
     line-height: 31px;
     /* identical to box height, or 172% */
     margin: 37px 0;
-    color: #63636e;
+    color: $gray;
     text-decoration: none;
   }
 
@@ -325,7 +325,7 @@
   line-height: 16px;
   text-decoration-line: underline;
   display: block;
-  color: #63636e;
+  color: $gray;
   cursor: pointer;
   margin-top: 8px;
 
@@ -358,7 +358,7 @@
   font-size: 14px;
   line-height: 19px;
   /* identical to box height, or 136% */
-  color: #63636e;
+  color: $gray;
 }
 
 .map__wrapper {

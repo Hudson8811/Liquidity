@@ -34,7 +34,7 @@
     font-size: 36px;
     line-height: 44px;
     /* identical to box height, or 122% */
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -50,7 +50,7 @@
   &__right {
     box-sizing: border-box;
     padding: 55px 42px;
-    background: #eff4f6;
+    background: $bluebg;
     /* Small_shadow */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -94,7 +94,7 @@
     font-size: 14px;
     line-height: 19px;
     /* or 136% */
-    color: #637786;
+    color: $grayblue-text;
   }
   p + p {
     margin-top: 20px;

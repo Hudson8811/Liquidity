@@ -43,7 +43,7 @@
     font-size: 18px;
     line-height: 28px;
     /* identical to box height, or 158% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 17px;
 
     @media screen and (max-width: 900px) {
@@ -57,7 +57,7 @@
     font-size: 13px;
     line-height: 19px;
     /* or 146% */
-    color: #ffffff;
+    color: $white;
 
     @media screen and (max-width: 900px) {
       text-align: center;

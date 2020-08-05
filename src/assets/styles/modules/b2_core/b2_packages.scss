@@ -1,5 +1,5 @@
 .section__packages {
-  background: #eff4f6;
+  background: $bluebg;
   @media screen and (max-width: 580px) {
     padding: 50px 0;
   }
@@ -21,7 +21,7 @@
   width: 980px;
   max-width: 100%;
   margin: 0 auto;
-  background: #ffffff;
+  background: $white;
   /* Small_shadow */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   &__row {
@@ -76,7 +76,7 @@
       line-height: 20px;
       /* identical to box height, or 143% */
       text-align: center;
-      color: #000000;
+      color: $black;
       &:nth-child(1) {
         justify-content: center;
         width: 416px;
@@ -88,7 +88,7 @@
   &__col,
   a {
     height: 100%;
-    border-right: 3px solid #fff;
+    border-right: 3px solid $white;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -168,7 +168,7 @@
   align-items: center;
   text-align: center;
   transition: all 0.2s;
-  color: #ffffff;
+  color: $white;
 
   &:hover {
     background: #02b991;
@@ -188,7 +188,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #ffffff;
+  color: $white;
   background: #9dafbd;
   border: 2px solid #9dafbd;
   box-sizing: border-box;

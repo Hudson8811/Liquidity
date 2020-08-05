@@ -1,11 +1,11 @@
 $roboto: "Roboto", sans-serif;
 body {
   position: relative;
-  color: #63636e;
+  color: $gray;
   font-family: $roboto;
   font-size: 14px;
   line-height: 16px;
-  background: #fff;
+  background: $white;
   overflow-x: hidden;
 
   &.hidden {
@@ -50,10 +50,10 @@ select:visited {
 }
 
 .section__title {
-  font-size: 80px;
-  line-height: 84px;
+  font-size: $title-font;
+  line-height: $title-lineheight;
   font-weight: 300;
-  color: #383838;
+  color: $darkgray;
   &--bold {
     font-weight: 900;
   }
@@ -62,16 +62,16 @@ select:visited {
 .section__subtitle {
   display: block;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 35px;
-  letter-spacing: -0.5px;
-  color: #ffffff;
+  font-size: $subtitle-font;
+  line-height: $subtitle-lineheight;
+  letter-spacing: 0;
+  color: $white;
 }
 
 .btn {
   text-decoration: none;
   font-family: $roboto;
-  color: #fff;
+  color: $white;
   border-radius: 5px;
   transition-duration: 0.5s;
   cursor: pointer;
@@ -105,7 +105,7 @@ select:visited {
 }
 
 .and_item {
-  background: #ffffff;
+  background: $white;
   /* Small_shadow */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -157,7 +157,7 @@ select:visited {
 }
 
 .form__input {
-  background: #ffffff;
+  background: $white;
   border: 1px solid #d1dbe3;
   box-sizing: border-box;
   border-radius: 5px;
@@ -182,7 +182,7 @@ select:visited {
     transition: color 0.5s ease;
   }
   &:focus::placeholder {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -199,7 +199,7 @@ select:visited {
     width: 96px;
     appearance: none;
     box-sizing: border-box;
-    background: #fff 60px center / 6.11px 3.81px
+    background: $white 60px center / 6.11px 3.81px
       url(../images/icons/Triangle.png) no-repeat;
   }
   .form__input {
@@ -266,14 +266,14 @@ select:visited {
       text-decoration: none;
       color: #e3e3e3;
       &:hover {
-        color: #fff;
+        color: $white;
         font-weight: bold;
-        // text-shadow: 0 0 .65px #fff, 0 0 .65px #fff, 0 0 .65px #fff;
+        // text-shadow: 0 0 .65px $white, 0 0 .65px $white, 0 0 .65px $white;
       }
       &.active {
-        color: #fff;
+        color: $white;
         font-weight: bold;
-        // text-shadow: 0 0 .65px #fff, 0 0 .65px #fff, 0 0 .65px #fff;
+        // text-shadow: 0 0 .65px $white, 0 0 .65px $white, 0 0 .65px $white;
       }
     }
     &.disabled {
@@ -304,12 +304,12 @@ select:visited {
     font-weight: 900;
     font-size: 64px;
     line-height: 75px;
-    color: #ffffff;
+    color: $white;
     &-text {
       font-weight: 500;
       font-size: 24px;
       line-height: 28px;
-      color: #ffffff;
+      color: $white;
     }
   }
 }
@@ -417,7 +417,7 @@ select:visited {
 .main-text {
   font-weight: normal;
   letter-spacing: 0;
-  color: #63636e;
+  color: $gray;
 }
 
 .green--gradient {
@@ -437,7 +437,7 @@ select:visited {
   display: flex;
   flex-wrap: wrap;
   &_item {
-    background: #ffffff;
+    background: $white;
     box-shadow: 0px 1.83691px 3.67383px rgba(0, 0, 0, 0.15);
     border-radius: 3.67383px;
     padding: 3px 14px;
@@ -446,7 +446,7 @@ select:visited {
     line-height: 13px;
     text-align: center;
     letter-spacing: -0.292236px;
-    color: #63636e;
+    color: $gray;
   }
 }
 
@@ -553,7 +553,7 @@ select:visited {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 15px;
   }
   &--text {
@@ -585,11 +585,11 @@ select:visited {
 //     .aggregation_item {
 //         width: 25%;
 //         &--heading {
-//             background-color: #fff;
+//             background-color: $white;
 //             font-weight: 300;
 //             font-size: 16px;
 //             line-height: 28px;
-//             color: #383838;
+//             color: $darkgray;
 //             padding: 39px 10px;
 //             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 //             text-align: center;
@@ -600,7 +600,7 @@ select:visited {
 //             &-block {
 //                 position: relative;
 //                 width: 100%;
-//                 background-color: #fff;
+//                 background-color: $white;
 //                 font-weight: 500;
 //                 font-size: 9px;
 //                 line-height: 11px;
@@ -626,7 +626,7 @@ select:visited {
 //             }
 //             &_mark-block {
 //                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-//                 background-color: #fff;
+//                 background-color: $white;
 //                 height: 111px;
 //                 display: flex;
 //                 justify-content: center;
@@ -715,7 +715,7 @@ select:visited {
         font-size: 24px;
         line-height: 30px;
         text-align: center;
-        color: #383838;
+        color: $darkgray;
         margin-bottom: 15px;
       }
       &--description {
@@ -723,7 +723,7 @@ select:visited {
         line-height: 20px;
         /* or 143% */
         text-align: center;
-        color: #383838;
+        color: $darkgray;
         max-width: 342px;
         margin: 0 auto;
       }
@@ -826,7 +826,7 @@ select:visited {
       width: 36%;
       height: 60%;
       path {
-        fill: #fff;
+        fill: $white;
       }
     }
   }
@@ -837,27 +837,27 @@ select:visited {
 }
 
 .box_block {
-  background: #ffffff;
+  background: $white;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   &--title {
     font-size: 50px;
     line-height: 65px;
     /* or 130% */
-    color: #383838;
+    color: $darkgray;
   }
   &--text {
     font-size: 18px;
     line-height: 29px;
     /* or 161% */
     letter-spacing: -0.5px;
-    color: #63636e;
+    color: $gray;
   }
 }
 
 .speed_block {
   width: 100%;
-  background: #ffffff;
+  background: $white;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   display: flex;
@@ -888,7 +888,7 @@ select:visited {
       font-size: 64px;
       line-height: 75px;
       /* identical to box height */
-      color: #63636e;
+      color: $gray;
       margin-left: 7px;
     }
     .little {
@@ -896,7 +896,7 @@ select:visited {
       font-size: 24px;
       line-height: 28px;
       text-align: center;
-      color: #63636e;
+      color: $gray;
     }
   }
 }
@@ -907,14 +907,14 @@ select:visited {
     font-size: 40px;
     line-height: 44px;
     /* or 110% */
-    color: #383838;
+    color: $darkgray;
   }
   &--description {
     font-size: 18px;
     line-height: 23px;
     /* or 128% */
     letter-spacing: -0.5px;
-    color: #63636e;
+    color: $gray;
   }
   &--heading,
   &--description {
@@ -977,7 +977,7 @@ select:visited {
       width: 36%;
       height: 60%;
       path {
-        fill: #fff;
+        fill: $white;
       }
     }
   }
@@ -1106,14 +1106,14 @@ select:visited {
       opacity: 1;
       box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-      background: #ffffff;
+      background: $white;
     }
     &--heading {
       font-weight: 900;
       font-size: 36px;
       line-height: 44px;
       /* identical to box height, or 122% */
-      color: #383838;
+      color: $darkgray;
       margin-bottom: 20px;
     }
     &--description {
@@ -1239,7 +1239,7 @@ select:visited {
 
 .question-item {
   padding: 20px 91px;
-  background: #ffffff;
+  background: $white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-bottom: 2px;
@@ -1252,7 +1252,7 @@ select:visited {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #383838;
+    color: $darkgray;
     cursor: pointer;
     overflow: hidden;
   }
@@ -1262,7 +1262,7 @@ select:visited {
     line-height: 23px;
     /* identical to box height, or 128% */
     letter-spacing: -0.5px;
-    color: #63636e;
+    color: $gray;
     margin-top: 20px;
     margin-bottom: 30px;
     position: absolute;
@@ -1287,7 +1287,7 @@ select:visited {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 15px;
   }
   &--link {
@@ -1295,7 +1295,7 @@ select:visited {
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
-    color: #383838;
+    color: $darkgray;
     a {
       color: #01cca0;
       font-weight: bold;
@@ -1328,7 +1328,7 @@ select:visited {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height, or 150% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 15px;
   }
   &--text {
@@ -1336,7 +1336,7 @@ select:visited {
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 42px;
     padding-right: 81px;
   }
@@ -1479,13 +1479,13 @@ select:visited {
     font-size: 11px;
     line-height: 15px;
     /* or 136% */
-    color: #ffffff;
+    color: $white;
   }
   input + b {
     width: 16px;
     height: 15px;
     background: transparent;
-    border: 1px solid #ffffff;
+    border: 1px solid $white;
     box-sizing: border-box;
     flex-shrink: 0;
     margin-right: 10px;
@@ -1518,7 +1518,7 @@ select:visited {
     right: -15px;
     background: #484848;
     svg path {
-      fill: #fff;
+      fill: $white;
     }
   }
 }
@@ -1549,7 +1549,7 @@ select:visited {
       line-height: 25px;
       /* identical to box height, or 139% */
       letter-spacing: -0.5px;
-      color: #ffffff;
+      color: $white;
       margin-left: 10px;
     }
   }
@@ -1562,7 +1562,7 @@ select:visited {
     line-height: 25px;
     /* identical to box height, or 139% */
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: $white;
     opacity: 0.5;
   }
   &-items {
@@ -1591,14 +1591,14 @@ select:visited {
       font-size: 24px;
       line-height: 28px;
       /* identical to box height, or 119% */
-      color: #383838;
+      color: $darkgray;
       margin-bottom: 24px;
     }
     &--subtitle {
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
-      color: #637786;
+      color: $grayblue-text;
     }
   }
 }
@@ -1623,7 +1623,7 @@ select:visited {
 }
 
 .head__item {
-  background: #eff4f6;
+  background: $bluebg;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1643,7 +1643,7 @@ select:visited {
     text-align: center;
     letter-spacing: -0.292236px;
     text-transform: capitalize;
-    color: #000000;
+    color: $black;
     margin-bottom: 22px;
   }
   &--text {
@@ -1651,7 +1651,7 @@ select:visited {
     font-size: 14px;
     line-height: 23px;
     /* identical to box height, or 167% */
-    color: #383838;
+    color: $darkgray;
   }
   &--show-btn {
     font-weight: 500;
@@ -1659,7 +1659,7 @@ select:visited {
     line-height: 23px;
     /* identical to box height, or 146% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     background: #01bd95;
     border-radius: 9px;
     display: block;
@@ -1678,7 +1678,7 @@ select:visited {
     line-height: 23px;
     /* identical to box height, or 146% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     background: #9dafbd;
     border-radius: 9px;
     width: 204.5px;
@@ -1712,14 +1712,14 @@ select:visited {
 .mam_tabs-btn,
 .mam_tabs-btn-2 {
   background: #eaedf2;
-  border: 3px solid #ffffff;
+  border: 3px solid $white;
   box-sizing: border-box;
   border-radius: 5px;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   /* identical to box height, or 136% */
-  color: #637786;
+  color: $grayblue-text;
   height: 83px;
   &.w50 {
     display: flex;
@@ -1736,7 +1736,7 @@ select:visited {
 }
 .mam_tabs-btn.active,
 .mam_tabs-btn-2.active {
-  background: #ffffff;
+  background: $white;
   opacity: 0.9;
   border: 1px solid #dae4e8;
   box-sizing: border-box;
@@ -1746,7 +1746,7 @@ select:visited {
   font-size: 18px;
   line-height: 24px;
   /* identical to box height, or 136% */
-  color: #000000;
+  color: $black;
 }
 
 .overflow_hidden {
@@ -1839,14 +1839,14 @@ select:visited {
     line-height: 26px;
     /* or 144% */
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: $white;
     margin-left: 18px;
     max-width: 244px;
   }
 }
 
 .gray__block {
-  background: #eff4f6;
+  background: $bluebg;
   /* small shadow */
   padding: 48px 0;
   box-sizing: border-box;
@@ -1856,7 +1856,7 @@ select:visited {
     line-height: 28px;
     /* identical to box height, or 119% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 23px;
   }
   &--subtitle {
@@ -1865,7 +1865,7 @@ select:visited {
     line-height: 16px;
     text-align: center;
     margin-bottom: 23px;
-    color: #383838;
+    color: $darkgray;
   }
   &--description {
     font-weight: normal;
@@ -1873,7 +1873,7 @@ select:visited {
     line-height: 20px;
     /* identical to box height, or 143% */
     text-align: center;
-    color: #637786;
+    color: $grayblue-text;
   }
 }
 
@@ -1939,7 +1939,7 @@ select:visited {
     /* or 146% */
     letter-spacing: 0;
     padding-right: 0;
-    color: #ffffff;
+    color: $white;
   }
   .section__description {
     display: block;
@@ -1952,7 +1952,7 @@ select:visited {
 
     letter-spacing: -0;
 
-    color: #fff;
+    color: $white;
     padding-right: 20px;
   }
   .container {
@@ -1978,7 +1978,7 @@ select:visited {
 
       text-align: center;
 
-      color: #ffffff;
+      color: $white;
       margin-bottom: 20px;
     }
     .consent_block {
@@ -2046,7 +2046,7 @@ select:visited {
 
 .section {
   &.white_section {
-    background: #fff;
+    background: $white;
   }
 
   &__black {
@@ -2054,7 +2054,7 @@ select:visited {
   }
 
   &__blue {
-    background: #eff4f6 !important;
+    background: $bluebg !important;
   }
 }
 
@@ -2150,7 +2150,7 @@ select:visited {
     text-align: center;
     letter-spacing: 1px;
 
-    color: #ffffff;
+    color: $white;
     margin-bottom: 10px;
 
     @media screen and (max-width: 730px) {
@@ -2169,7 +2169,7 @@ select:visited {
 
     text-align: center;
 
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -2429,7 +2429,7 @@ select:visited {
   }
 
   .number_block--text {
-    color: #63636e;
+    color: $gray;
   }
 }
 
@@ -2440,7 +2440,7 @@ select:visited {
     }
   }
   .number_block--text {
-    color: #63636e;
+    color: $gray;
   }
 }
 
@@ -2457,7 +2457,7 @@ select:visited {
     line-height: 44px;
     /* identical to box height, or 122% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 80px;
   }
 
@@ -2518,7 +2518,7 @@ select:visited {
       font-size: 16px;
       line-height: 23px;
       /* or 144% */
-      color: #63636e;
+      color: $gray;
 
       @media screen and (max-width: 800px) {
         span.db {
@@ -2561,7 +2561,7 @@ select:visited {
     line-height: 44px;
     align-items: center;
     text-align: center;
-    color: #ffffff;
+    color: $white;
     margin: 120px auto 50px;
   }
 
@@ -2583,7 +2583,7 @@ select:visited {
         font-weight: bold;
         font-size: 16px;
         line-height: 26px;
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -2606,7 +2606,7 @@ select:visited {
     line-height: 70px;
     text-align: center;
     margin-bottom: 50px;
-    color: #000000;
+    color: $black;
   }
 }
 
@@ -2626,7 +2626,7 @@ select:visited {
 
 .section__role {
   .it_for__item {
-    background: #ffffff;
+    background: $white;
     /* Small_shadow */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   }
@@ -2646,7 +2646,7 @@ select:visited {
     /* or 122% */
     text-align: center;
     margin: 90px auto 60px;
-    color: #383838;
+    color: $darkgray;
   }
   @media screen and (max-width: 800px) {
     .trading__flex {
@@ -2660,7 +2660,7 @@ select:visited {
     font-weight: bold;
     font-size: 16px;
     line-height: 26px;
-    color: #63636e;
+    color: $gray;
   }
 }
 
@@ -2693,7 +2693,7 @@ select:visited {
       font-weight: bold;
       font-size: 16px;
       line-height: 26px;
-      color: #63636e;
+      color: $gray;
 
       @media screen and (max-width: 800px) {
         span.db {
@@ -2731,7 +2731,7 @@ select:visited {
       font-weight: bold;
       font-size: 16px;
       line-height: 26px;
-      color: #ffffff;
+      color: $white;
       letter-spacing: 0;
     }
   }
@@ -2744,7 +2744,7 @@ select:visited {
 }
 
 .section.section_tex_ex {
-  background: #fff;
+  background: $white;
 
   .main-text {
     max-width: none;
@@ -2759,7 +2759,7 @@ select:visited {
   /* or 122% */
   text-align: center;
 
-  color: #383838;
+  color: $darkgray;
 }
 
 .section__volatility {
@@ -2782,7 +2782,7 @@ select:visited {
     letter-spacing: -0.292236px;
     text-transform: capitalize;
 
-    color: #ffffff;
+    color: $white;
   }
 
   &__subtitle {
@@ -2793,7 +2793,7 @@ select:visited {
     line-height: 19px;
     /* identical to box height, or 139% */
 
-    color: #eff4f6;
+    color: $bluebg;
   }
 
   &__block {
@@ -2826,7 +2826,7 @@ select:visited {
 }
 
 .section.section__catalog_merch {
-  background: #fff;
+  background: $white;
 }
 
 .merch_tools {
@@ -2845,7 +2845,7 @@ select:visited {
   &__block {
     box-sizing: border-box;
     padding: 84px 77px;
-    background: #eff4f6;
+    background: $bluebg;
     border-radius: 5px;
     margin: 0 30px;
     width: 50%;
@@ -2892,7 +2892,7 @@ select:visited {
     line-height: 65px;
     /* or 130% */
     margin-bottom: 38px;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__subtitle {
@@ -2905,7 +2905,7 @@ select:visited {
 
     letter-spacing: -0.5px;
 
-    color: #63636e;
+    color: $gray;
   }
 }
 .section.merch_tools__section {
@@ -2953,7 +2953,7 @@ select:visited {
     line-height: 28px;
     /* identical to box height, or 119% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 34px;
   }
 
@@ -2965,7 +2965,7 @@ select:visited {
     line-height: 20px;
     /* or 143% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
   }
 }
 
@@ -3097,7 +3097,7 @@ select:visited {
     font-size: 60px;
     line-height: 120%;
     /* or 72px */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 22px;
     margin-top: 39px;
 
@@ -3116,7 +3116,7 @@ select:visited {
     font-size: 21px;
     line-height: 31px;
     /* or 148% */
-    color: #ffffff;
+    color: $white;
     padding-right: 18%;
 
     @media screen and (max-width: 580px) {
@@ -3165,7 +3165,7 @@ select:visited {
   max-width: 118px;
 
   &:hover {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -3192,7 +3192,7 @@ select:visited {
     font-weight: 300;
     font-size: 18px;
     line-height: 15px;
-    color: #ffffff;
+    color: $white;
 
     @media screen and (max-width: 580px) {
       font-size: 14px;
@@ -3220,10 +3220,10 @@ select:visited {
 
 .schem2 {
   padding: 0px 17px 17px 17px;
-  background: #eff4f6;
+  background: $bluebg;
 
   &__wrap {
-    background: #fff;
+    background: $white;
     display: flex;
     border-top: 7px solid #dbe2e7;
     justify-content: center;
@@ -3267,7 +3267,7 @@ select:visited {
     font-size: 16px;
     line-height: 19px;
     /* identical to box height */
-    color: #000000;
+    color: $black;
   }
 
   &__subtitle {
@@ -3296,7 +3296,7 @@ select:visited {
 }
 
 .stag {
-  background-color: #fff;
+  background-color: $white;
   padding: 17px 18px 57px;
 
   &__bot {
@@ -3304,7 +3304,7 @@ select:visited {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    border-top: 7px solid #eff4f6;
+    border-top: 7px solid $bluebg;
     padding-top: 42px;
 
     @media screen and (max-width: 980px) {
@@ -3337,7 +3337,7 @@ select:visited {
         font-size: 16px;
         line-height: 23px;
         letter-spacing: 0;
-        color: #555555;
+        color: $text-black;
         margin-left: 7px;
 
         @media screen and (max-width: 980px) {
@@ -3381,7 +3381,7 @@ select:visited {
         height: calc(100% - 8px);
         left: 4px;
         top: 4px;
-        background: #fff;
+        background: $white;
         z-index: 1;
       }
 
@@ -3391,7 +3391,7 @@ select:visited {
         font-weight: 500;
         font-size: 21px;
         line-height: 25px;
-        color: #000000;
+        color: $black;
         letter-spacing: 0;
         position: relative;
         z-index: 2;
@@ -3494,7 +3494,7 @@ select:visited {
     margin-bottom: 6px;
     text-align: center;
 
-    color: #000000;
+    color: $black;
   }
 
   &__subtitle {
@@ -3505,7 +3505,7 @@ select:visited {
     line-height: 19px;
     /* identical to box height, or 139% */
     text-align: center;
-    color: #637786;
+    color: $grayblue-text;
   }
 }
 
@@ -3568,7 +3568,7 @@ select:visited {
   }
 
   .video_description {
-    color: #fff;
+    color: $white;
     margin-top: 0;
     margin-bottom: 13px;
   }
@@ -3740,7 +3740,7 @@ select:visited {
     text-align: center;
     letter-spacing: 0;
 
-    color: #63636e;
+    color: $gray;
   }
 }
 
@@ -4089,7 +4089,7 @@ select:visited {
     line-height: 21px;
     /* or 162% */
     margin-left: 13px;
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -4114,7 +4114,7 @@ select:visited {
     font-size: 21px;
     line-height: 25px;
     /* or 119% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 15px;
   }
 
@@ -4171,7 +4171,7 @@ select:visited {
     font-size: 24px;
     line-height: 28px;
     /* or 119% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 25px;
   }
 
@@ -4181,7 +4181,7 @@ select:visited {
     font-size: 14px;
     line-height: 19px;
     /* or 136% */
-    color: #637786;
+    color: $grayblue-text;
   }
 }
 
@@ -4213,7 +4213,7 @@ select:visited {
 }
 
 .section__technical.b2m_tech {
-  background: #fff;
+  background: $white;
 
   .section__subtitle {
     font-style: normal;
@@ -4224,7 +4224,7 @@ select:visited {
 
     text-align: center;
 
-    color: #63636e;
+    color: $gray;
   }
 }
 

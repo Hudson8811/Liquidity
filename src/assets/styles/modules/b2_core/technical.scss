@@ -6,7 +6,7 @@
   line-height: 84px;
   /* identical to box height, or 105% */
   text-align: center;
-  color: #383838;
+  color: $darkgray;
   @media screen and (max-width: 400px) {
     font-size: 30px;
     line-height: 40px;
@@ -14,7 +14,7 @@
 }
 
 .section__technical {
-  background: #eff4f6;
+  background: $bluebg;
   .date_text {
     margin: 80px auto;
   }

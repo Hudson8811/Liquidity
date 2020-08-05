@@ -40,7 +40,7 @@
     font-size: 36px;
     line-height: 44px;
     /* identical to box height, or 122% */
-    color: #ffffff;
+    color: $white;
     margin-bottom: 31px;
 
     @media screen and (max-width: 700px) {
@@ -56,7 +56,7 @@
     line-height: 130%;
     /* or 31px */
     margin-bottom: 30px;
-    color: #ffffff;
+    color: $white;
 
     @media screen and (max-width: 700px) {
       font-size: 16px;
@@ -70,7 +70,7 @@
     font-size: 14px;
     line-height: 140%;
     /* or 20px */
-    color: #ffffff;
+    color: $white;
 
     @media screen and (max-width: 980px) {
       span.db {
@@ -190,7 +190,7 @@
     font-size: 18px;
     line-height: 20px;
     /* identical to box height, or 111% */
-    color: #ffffff;
+    color: $white;
     padding-bottom: 10px;
     border-bottom: 1px solid #434c56;
     margin-bottom: 13px;
@@ -202,7 +202,7 @@
     font-size: 14px;
     line-height: 20px;
     /* identical to box height, or 143% */
-    color: #ffffff;
+    color: $white;
     opacity: 0.7;
     margin-top: 8px;
 
@@ -225,7 +225,7 @@
     line-height: 16px;
     /* identical to box height */
     letter-spacing: -0.318182px;
-    color: #ffffff;
+    color: $white;
     margin-left: 14px;
     flex-shrink: 0;
   }
@@ -237,7 +237,7 @@
       font-size: 14px;
       line-height: 20px;
       /* identical to box height, or 143% */
-      color: #ffffff;
+      color: $white;
       opacity: 0.7;
       margin-top: 10px;
     }

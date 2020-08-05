@@ -20,7 +20,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #eff4f6;
+      background: $bluebg;
       /* Small_shadow */
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
       border-radius: 5px;
@@ -85,7 +85,7 @@
       box-sizing: border-box;
       max-width: 309px;
       width: 100%;
-      background: #ffffff;
+      background: $white;
       border-radius: 4px;
       height: 314px;
       display: flex;
@@ -117,12 +117,12 @@
         font-weight: normal;
         font-size: 14.6715px;
         line-height: 14px;
-        color: #637786;
+        color: $grayblue-text;
 
         &.bg {
           padding: 4px 6px;
           border-radius: 4px;
-          background: #eff4f6;
+          background: $bluebg;
         }
 
         &__bold {
@@ -167,7 +167,7 @@
 
       .flow_content {
         width: 100%;
-        background: #eff4f6;
+        background: $bluebg;
         border-radius: 4px;
         box-sizing: border-box;
         padding: 11px 16px;
@@ -213,7 +213,7 @@
       /* identical to box height, or 119% */
       margin-bottom: 35px;
       text-align: center;
-      color: #383838;
+      color: $darkgray;
     }
 
     .flow__subtitle {
@@ -224,7 +224,7 @@
       line-height: 20px;
       /* identical to box height, or 154% */
       text-align: center;
-      color: #383838;
+      color: $darkgray;
     }
 
     .flow__icon {

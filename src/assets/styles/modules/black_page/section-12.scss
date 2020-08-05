@@ -39,7 +39,7 @@
         line-height: 20px;
         /* identical to box height, or 111% */
         border-bottom: 1px solid #434c56;
-        color: #63636e;
+        color: $gray;
         padding-bottom: 9px;
         margin-bottom: 24px;
       }
@@ -52,7 +52,7 @@
         line-height: 20px;
         /* identical to box height, or 143% */
 
-        color: #63636e;
+        color: $gray;
         margin: 8px 0px 11px 0;
         opacity: 0.7;
       }
@@ -68,7 +68,7 @@
       font-size: 30px;
       line-height: 35px;
       /* or 117% */
-      color: #383838;
+      color: $darkgray;
       margin-bottom: 40px;
     }
 
@@ -77,12 +77,12 @@
       line-height: 25px;
       /* or 139% */
       letter-spacing: -0.5px;
-      color: #63636e;
+      color: $gray;
     }
 
     .speed_block {
       margin-bottom: 28px;
-      background: #eff4f6;
+      background: $bluebg;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
       border-radius: 5px;
 
@@ -209,7 +209,7 @@
       width: calc(33.333% - 10px);
       margin: 0 5px;
       margin-bottom: 10px;
-      background: #eff4f6;
+      background: $bluebg;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
       border-radius: 5px;
 
@@ -227,7 +227,7 @@
         font-size: 14px;
         line-height: 19px;
         /* or 136% */
-        color: #637786;
+        color: $grayblue-text;
         letter-spacing: 0;
       }
     }

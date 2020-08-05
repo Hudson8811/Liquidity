@@ -7,7 +7,7 @@
     line-height: 27px;
     /* or 279% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
   }
 
   .section__title {
@@ -22,7 +22,7 @@
     line-height: 35px;
     /* or 167% */
     text-align: center;
-    color: #ffffff;
+    color: $white;
     margin-top: 50px;
 
     @media screen and (max-width: 980px) {
@@ -57,7 +57,7 @@
     font-size: 16px;
     line-height: 19px;
     /* identical to box height, or 178% */
-    color: #ffffff;
+    color: $white;
 
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);

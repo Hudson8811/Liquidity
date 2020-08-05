@@ -15,7 +15,7 @@
     line-height: 44px;
     /* identical to box height, or 122% */
     margin-bottom: 30px;
-    color: #ffffff;
+    color: $white;
     text-align: center;
     margin-top: 110px;
   }
@@ -28,7 +28,7 @@
     /* or 143% */
     text-align: center;
     margin-bottom: 50px;
-    color: #ffffff;
+    color: $white;
 
     @media screen and (max-width: 610px) {
       span.db {
@@ -81,7 +81,7 @@
         align-items: center;
         letter-spacing: 0;
 
-        color: #ffffff;
+        color: $white;
 
         @media screen and (max-width: 980px) {
           span.db {
@@ -106,13 +106,13 @@
       line-height: 20px;
       /* or 143% */
       text-align: center;
-      color: #ffffff;
+      color: $white;
       margin-bottom: 50px;
     }
   }
 
   & + .or_features__wl_mt_pricing {
-    background: #1f2832;
+    background: $darkbg;
     border-bottom: 1px solid #575757;
 
     .container {
@@ -120,11 +120,11 @@
     }
 
     .text_catalog-item--heading {
-      color: #fff;
+      color: $white;
     }
 
     .text_catalog-item--description {
-      color: #fff;
+      color: $white;
     }
 
     .text_catalog-item {
@@ -141,7 +141,7 @@
 }
 
 .or_features__wl_mt4 {
-  background: #1f2832;
+  background: $darkbg;
 
   .text_catalog {
     align-items: flex-end;
@@ -156,7 +156,7 @@
 
       &--heading,
       &--description {
-        color: #fff;
+        color: $white;
       }
     }
 

@@ -1,5 +1,5 @@
 .section-17 {
-  background: #eff4f6;
+  background: $bluebg;
   .section__title {
     text-align: center;
     margin-bottom: 120px;
@@ -11,7 +11,7 @@
     box-sizing: border-box;
     margin-bottom: 20px;
     border-radius: 0px;
-    background: #ffffff;
+    background: $white;
     /* Small_shadow */
 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -20,7 +20,7 @@
       font-size: 24px;
       line-height: 28px;
       /* identical to box height, or 119% */
-      color: #383838;
+      color: $darkgray;
       margin-bottom: 23px;
     }
     &--text {
@@ -29,7 +29,7 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
-      color: #637786;
+      color: $grayblue-text;
       letter-spacing: 0;
 
       span.db {

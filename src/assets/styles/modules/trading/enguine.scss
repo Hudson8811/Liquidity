@@ -1,5 +1,5 @@
 .section__enguine {
-  background: #eff4f6;
+  background: $bluebg;
 
   .container__table {
     @media screen and (max-width: 1000px) {
@@ -12,7 +12,7 @@
   overflow: auto;
   width: 980px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  background: #fff;
+  background: $white;
   border-radius: 4px;
   margin-top: 80px;
 
@@ -30,7 +30,7 @@
       align-items: center;
       height: 100%;
       min-height: 58px;
-      border-right: 3px solid #fff;
+      border-right: 3px solid $white;
       box-sizing: border-box;
       &:last-child {
         border-right: 0;
@@ -98,7 +98,7 @@
         line-height: 20px;
         /* identical to box height, or 143% */
         text-align: center;
-        color: #000000;
+        color: $black;
         min-height: 40px;
 
         &:nth-child(1) {

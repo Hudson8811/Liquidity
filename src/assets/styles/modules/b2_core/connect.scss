@@ -12,7 +12,7 @@
     text-align: center;
     letter-spacing: -0.318182px;
 
-    color: #637786;
+    color: $grayblue-text;
   }
 
   .section__title {
@@ -24,7 +24,7 @@
   .mac_slider {
     .mac_slider--slick-item {
       height: 580px;
-      background: #eff4f6;
+      background: $bluebg;
 
       &--sup {
         img {

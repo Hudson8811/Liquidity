@@ -1,5 +1,5 @@
 .section__external {
-  background: #eff4f6;
+  background: $bluebg;
   .section__title {
     margin-bottom: 80px;
   }
@@ -7,7 +7,7 @@
     &__item {
       width: 33.333%;
       padding: 35px 60px;
-      background: #eff4f6;
+      background: $bluebg;
 
       img {
         mix-blend-mode: multiply;

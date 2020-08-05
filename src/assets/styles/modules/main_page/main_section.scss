@@ -30,7 +30,7 @@
     position: absolute;
     z-index: 1;
     display: block;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 0;
     line-height: 78px;
   }
@@ -38,7 +38,7 @@
   .section__subtitle {
     position: relative;
     z-index: 1;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 172px;
   }
 
@@ -100,7 +100,7 @@
   }
 
   input {
-    color: #6e8198 !important;
+    color: $grayblue !important;
   }
 
   .new_form__star {
@@ -131,7 +131,7 @@
 .typed-cursor {
   font-size: 82px;
   line-height: 86px;
-  color: #fff;
+  color: $white;
   opacity: 1;
   font-weight: 200;
   animation: blink 0.7s infinite;

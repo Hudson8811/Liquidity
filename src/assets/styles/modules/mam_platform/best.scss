@@ -1,5 +1,5 @@
 .best {
-  background: #eff4f6;
+  background: $bluebg;
   padding-top: 125px;
   padding-bottom: 125px;
   &.pamm_best {
@@ -64,7 +64,7 @@
       line-height: 23px;
       /* identical to box height, or 128% */
       letter-spacing: 0px;
-      color: #63636e;
+      color: $gray;
 
       span.db {
         margin: 0;

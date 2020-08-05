@@ -41,7 +41,7 @@
       }
 
       &:hover:not(:nth-child(1)) {
-        color: #fff;
+        color: $white;
       }
 
       &.disabled {

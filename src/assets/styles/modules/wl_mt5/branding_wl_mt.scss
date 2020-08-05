@@ -24,7 +24,7 @@
     line-height: 44px;
     /* identical to box height, or 122% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 46px;
   }
 
@@ -38,7 +38,7 @@
       line-height: 24px;
       /* identical to box height, or 150% */
       letter-spacing: 0;
-      color: #555555;
+      color: $text-black;
     }
 
     &:nth-child(6) {

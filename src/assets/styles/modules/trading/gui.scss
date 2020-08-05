@@ -84,12 +84,12 @@
     line-height: 25px;
     /* identical to box height, or 69% */
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     margin: 80px auto 50px;
   }
 
   .check_block--mam_platform-item--text {
-    color: #555;
+    color: $text-black;
   }
 }
 
@@ -142,7 +142,7 @@
   }
 
   .it_for__item {
-    background: #fff;
+    background: $white;
 
     &:nth-child(2) {
       .it_for__text {

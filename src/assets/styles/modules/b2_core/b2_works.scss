@@ -1,5 +1,5 @@
 .b2_works {
-  background: #fff;
+  background: $white;
   .tabs_slider .item {
     margin: 0px 5px 20px 5px;
     height: 97px;
@@ -14,7 +14,7 @@
       font-weight: normal;
       font-size: 18px;
       line-height: 24px;
-      color: #637786;
+      color: $grayblue-text;
     }
 
     &.active {
@@ -26,7 +26,7 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
-        color: #383838;
+        color: $darkgray;
       }
     }
   }
@@ -53,7 +53,7 @@
       line-height: 44px;
       /* identical to box height, or 122% */
       text-align: center;
-      color: #383838;
+      color: $darkgray;
       margin-top: 60px;
       margin-bottom: 30px;
     }
@@ -67,7 +67,7 @@
       line-height: 20px;
       /* or 143% */
       text-align: center;
-      color: #383838;
+      color: $darkgray;
     }
   }
 }

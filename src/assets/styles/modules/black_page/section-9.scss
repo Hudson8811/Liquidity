@@ -1,5 +1,5 @@
 .section-9 {
-  background: #eff4f6;
+  background: $bluebg;
   .section__title {
     text-align: center;
     margin-bottom: 50px;
@@ -31,7 +31,7 @@
       height: 92px;
       margin-bottom: 20px;
 
-      background: #eff4f6;
+      background: $bluebg;
       img {
         display: block;
         width: 100%;
@@ -67,7 +67,7 @@
     }
     .flex_block {
       margin-top: 33px;
-      background: #fff;
+      background: $white;
     }
     &--left {
       width: 100%;
@@ -89,7 +89,7 @@
       max-width: 473px;
       width: 100%;
       font-size: 13px;
-      color: #637786;
+      color: $grayblue-text;
     }
   }
 }

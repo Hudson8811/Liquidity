@@ -5,8 +5,8 @@
   &__wrapper {
     max-width: 1300px;
     margin: 60px auto;
-    background: #eff4f6;
-    border: 3px solid #ffffff;
+    background: $bluebg;
+    border: 3px solid $white;
     box-sizing: border-box;
     border-radius: 12px;
     padding: 100px 0;
@@ -35,7 +35,7 @@
   }
 
   &__heading {
-    background: #ffffff;
+    background: $white;
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
@@ -58,7 +58,7 @@
         font-weight: normal;
         font-size: 12px;
         line-height: 16px;
-        color: #63636e;
+        color: $gray;
       }
     }
   }
@@ -72,7 +72,7 @@
 
   &__row {
     width: calc(20% - 40px / 5);
-    background: #ffffff;
+    background: $white;
     border-radius: 5px;
     padding: 10px 13.5px;
     box-sizing: border-box;
@@ -102,7 +102,7 @@
     line-height: 23px;
     /* identical to box height, or 144% */
     margin-bottom: 10px;
-    color: #000000;
+    color: $black;
     padding: 0 8px;
   }
 
@@ -132,10 +132,10 @@
       line-height: 16px;
       /* identical to box height, or 133% */
       display: block;
-      color: #000000;
+      color: $black;
 
       &.gray {
-        color: #63636e;
+        color: $gray;
       }
     }
 
@@ -163,7 +163,7 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
-      color: #63636e;
+      color: $gray;
       margin-left: 6px;
     }
 
@@ -174,7 +174,7 @@
   }
 
   &__wrapper {
-    background: #ffffff;
+    background: $white;
     border-radius: 12px;
     padding: 100px 0;
     max-width: 1300px;
@@ -192,7 +192,7 @@
     line-height: 74px;
     /* identical to box height, or 185% */
     margin-bottom: 25px;
-    color: #383838;
+    color: $darkgray;
 
     @media screen and (max-width: 800px) {
       font-size: 18px;
@@ -207,7 +207,7 @@
     font-size: 21px;
     line-height: 30px;
     /* identical to box height, or 143% */
-    color: #63636e;
+    color: $gray;
     margin-bottom: 50px;
 
     @media screen and (max-width: 800px) {
@@ -223,7 +223,7 @@
     line-height: 20px;
     /* identical to box height, or 111% */
     padding-bottom: 15px;
-    color: #63636e;
+    color: $gray;
     border-bottom: 1px solid #bac1c9;
     margin-bottom: 60px;
   }
@@ -280,7 +280,7 @@
         font-size: 14px;
         line-height: 23px;
         letter-spacing: -0.292236px;
-        color: #63636e;
+        color: $gray;
         opacity: 0.7;
       }
     }
@@ -288,8 +288,8 @@
 }
 
 .evolution {
-  background: #eff4f6;
-  border: 3px solid #ffffff;
+  background: $bluebg;
+  border: 3px solid $white;
   box-sizing: border-box;
   border-radius: 12px;
   padding: 100px 0;
@@ -304,7 +304,7 @@
     line-height: 74px;
     /* identical to box height, or 185% */
     margin-bottom: 25px;
-    color: #383838;
+    color: $darkgray;
 
     @media screen and (max-width: 800px) {
       font-size: 18px;
@@ -318,7 +318,7 @@
     font-size: 21px;
     line-height: 30px;
     /* or 143% */
-    color: #63636e;
+    color: $gray;
 
     @media screen and (max-width: 800px) {
       font-size: 16px;
@@ -341,7 +341,7 @@
       justify-content: flex-start;
       align-items: stretch;
       &:not(:nth-child(1)) {
-        background-color: #fff;
+        background-color: $white;
 
         & + .evol__table__row {
           margin-top: 5px;
@@ -353,7 +353,7 @@
             font-size: 16px;
             line-height: 140%;
             /* or 22px */
-            color: #383838;
+            color: $darkgray;
           }
 
           &:not(:nth-child(1)) {
@@ -362,7 +362,7 @@
             font-size: 11px;
             line-height: 140%;
             /* or 15px */
-            color: #63636e;
+            color: $gray;
           }
         }
       }
@@ -376,7 +376,7 @@
           font-weight: normal;
           font-size: 16px;
           line-height: 140%;
-          color: #383838;
+          color: $darkgray;
           padding-top: 0;
           padding-bottom: 0;
         }
@@ -408,7 +408,7 @@
 .revenue__wrapper.uniue {
   .b_modal__heading {
     margin: 60px auto;
-    background: #eff4f6;
+    background: $bluebg;
     border-radius: 5px;
 
     @media screen and (max-width: 780px) {

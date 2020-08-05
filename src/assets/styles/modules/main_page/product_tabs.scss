@@ -18,7 +18,7 @@
     box-sizing: border-box;
 
     li {
-      background: #1f2832;
+      background: $darkbg;
       min-height: 57px;
       font-family: Roboto;
       font-style: normal;
@@ -43,7 +43,7 @@
       &.active {
         background: #2e3740;
         border-radius: 5px;
-        color: #ffffff;
+        color: $white;
         position: relative;
         z-index: 1;
 
@@ -83,7 +83,7 @@
     font-size: 36px;
     line-height: 30px;
     margin-bottom: 22px;
-    color: #ffffff;
+    color: $white;
   }
 
   &__subtitle {
@@ -154,7 +154,7 @@
     font-size: 20px;
     line-height: 27px;
     /* identical to box height, or 135% */
-    color: #ffffff;
+    color: $white;
     cursor: pointer;
     margin-bottom: 15px;
     position: relative;
@@ -199,7 +199,7 @@
     margin-bottom: 35px;
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: $white;
 
     &:before {
       content: "";

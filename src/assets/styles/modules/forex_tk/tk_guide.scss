@@ -1,7 +1,7 @@
 .tk_guide {
   max-width: 1300px;
   margin: 0 auto;
-  background: #eff4f6;
+  background: $bluebg;
   border-radius: 12px;
   padding: 100px 0;
   margin-top: 60px;
@@ -21,7 +21,7 @@
     font-size: 21px;
     line-height: 25px;
     /* identical to box height */
-    color: #000000;
+    color: $black;
   }
 
   &__ul {
@@ -127,7 +127,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: $white;
     min-height: 52px;
     width: 100%;
     border: none;
@@ -153,7 +153,7 @@
     box-sizing: border-box;
     display: block;
     width: calc(50% - 20px / 2);
-    color: #000;
+    color: $black;
 
     @media screen and (max-width: 580px) {
       width: 100%;

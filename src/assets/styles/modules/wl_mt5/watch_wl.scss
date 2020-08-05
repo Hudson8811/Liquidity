@@ -18,13 +18,13 @@
   .section__title {
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: $white;
   }
 
   .section__subtitle {
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: $white;
     margin-bottom: 80px;
   }
 
@@ -75,7 +75,7 @@
     .video_description {
       margin-top: 0;
       margin-bottom: 13px;
-      color: #fff;
+      color: $white;
       font-style: normal;
       font-weight: 900;
       font-size: 21px;
@@ -84,7 +84,7 @@
     }
 
     .video_subdescription {
-      color: #fff;
+      color: $white;
     }
 
     .new_form__sabmit {

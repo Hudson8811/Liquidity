@@ -3,11 +3,11 @@
     padding: 30px;
 
     &:before {
-      background: #eff4f6;
+      background: $bluebg;
     }
 
     .gray__block {
-      background: #ffffff;
+      background: $white;
       padding-right: 71px;
 
       @media screen and (max-width: 980px) {

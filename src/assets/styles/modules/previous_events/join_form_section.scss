@@ -74,7 +74,7 @@
     position: absolute;
     width: 100%;
     max-width: 341px;
-    background: #1f2832;
+    background: $darkbg;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 27px 31px;
@@ -90,7 +90,7 @@
         line-height: 161.4%;
         /* or 29px */
         margin-bottom: 9px;
-        color: #ffffff;
+        color: $white;
       }
 
       &:nth-child(2) {
@@ -100,7 +100,7 @@
         font-size: 14px;
         line-height: 161.4%;
         /* identical to box height, or 23px */
-        color: #ffffff;
+        color: $white;
       }
 
       &:nth-child(3) {
@@ -110,7 +110,7 @@
         font-size: 13px;
         line-height: 121.4%;
         /* or 16px */
-        color: #ffffff;
+        color: $white;
       }
     }
   }

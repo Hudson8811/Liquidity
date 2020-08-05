@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     background: #262f41;
-    border: 1.49748px solid #ffffff;
+    border: 1.49748px solid $white;
     box-sizing: border-box;
     border-radius: 2.4958px;
     svg {
@@ -17,7 +17,7 @@
       }
     }
     &.active {
-      background: #ffffff;
+      background: $white;
       opacity: 0.9;
       border: 0.499161px solid #dae4e8;
       box-sizing: border-box;

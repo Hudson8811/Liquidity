@@ -5,10 +5,10 @@
   align-items: center;
   min-height: 637px;
   padding: 0;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid $white;
 
   .section__title {
-    color: #fff;
+    color: $white;
     text-align: center;
   }
   .section__subtitle {
@@ -21,7 +21,7 @@
     /* identical to box height */
     text-align: center;
     letter-spacing: 0;
-    color: #ffffff;
+    color: $white;
   }
 
   .new_green_bord_btn {
@@ -37,7 +37,7 @@
     border-radius: 5px;
 
     &:hover {
-      color: #fff;
+      color: $white;
     }
   }
 }
@@ -66,7 +66,7 @@
       line-height: 23px;
       /* or 131% */
       text-align: center;
-      color: #ffffff;
+      color: $white;
 
       @media screen and (max-width: 800px) {
         span.db {

@@ -1,5 +1,5 @@
 .section-18 {
-  background: #eff4f6;
+  background: $bluebg;
 
   .section__title {
     text-align: center;
@@ -29,7 +29,7 @@
     align-items: flex-start;
     margin: 25px 0;
     margin-bottom: 77px;
-    background: #ffffff;
+    background: $white;
     border: 1.06634px solid #fbfbfb;
     box-sizing: border-box;
     box-shadow: 0px 0px 4.18874px rgba(0, 0, 0, 0.05);
@@ -85,7 +85,7 @@
       font-size: 20px;
       line-height: 30px;
       /* identical to box height, or 150% */
-      color: #383838;
+      color: $darkgray;
       margin-bottom: 15px;
     }
     &--description {
@@ -93,7 +93,7 @@
       font-size: 14px;
       line-height: 20px;
       /* or 143% */
-      color: #383838;
+      color: $darkgray;
     }
   }
 }

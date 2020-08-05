@@ -57,7 +57,7 @@
     /* or 139% */
     text-align: center;
     letter-spacing: 0px;
-    color: #63636e;
+    color: $gray;
     @media screen and (max-width: 980px) {
       span.db {
         display: none;
@@ -67,12 +67,12 @@
 }
 
 .section.dark_style {
-  background: #1f2832;
+  background: $darkbg;
   .section__title {
-    color: #fff;
+    color: $white;
   }
   .section__subtitle {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -86,7 +86,7 @@
 }
 
 .b2_frame {
-  background: #fff;
+  background: $white;
 }
 
 .b2_form_5 {
@@ -180,7 +180,7 @@
 
     text-align: center;
 
-    color: #ffffff;
+    color: $white;
   }
 
   .section__subtitle {
@@ -194,7 +194,7 @@
     text-align: center;
     letter-spacing: -0.5px;
 
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -215,7 +215,7 @@
     border-radius: 5px;
 
     .new_form__star {
-      color: #fff;
+      color: $white;
     }
 
     .new_form__placeholder {
@@ -224,7 +224,7 @@
 
     &:hover {
       .new_form__placeholder {
-        color: #fff;
+        color: $white;
       }
     }
   }
@@ -244,7 +244,7 @@
   }
 
   .b2_form.light_theme .new_form__select {
-    color: #ffffff;
+    color: $white;
   }
 
   .b2_form.light_theme .new_form__label__lang_select_wrapper .new_form__select {
@@ -268,6 +268,6 @@
 .forex_liquidity__new {
   .b2_form.light_theme .new_form__input,
   .b2_form.light_theme .new_form__star {
-    color: #fff !important;
+    color: $white !important;
   }
 }

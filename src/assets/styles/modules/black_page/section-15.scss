@@ -1,5 +1,5 @@
 .section-15 {
-  background: #eff4f6;
+  background: $bluebg;
 
   .section__title {
     max-width: 975px;
@@ -22,7 +22,7 @@
       line-height: 23px;
       /* or 128% */
       letter-spacing: -0.5px;
-      color: #555555;
+      color: $text-black;
     }
   }
   .business_slider--arrow_block {
@@ -51,7 +51,7 @@
       line-height: 16px;
       /* identical to box height */
       text-align: center;
-      color: #ffffff;
+      color: $white;
       margin: 0 auto;
       background: #0aab88;
       border: 2px solid #01bd95;
@@ -85,7 +85,7 @@
         /* or 136% */
         box-sizing: border-box;
 
-        color: #637786;
+        color: $grayblue-text;
       }
 
       .check_block--mam_platform-item--text {
@@ -95,7 +95,7 @@
         font-size: 16px;
         line-height: 23px;
         /* or 144% */
-        color: #63636e;
+        color: $gray;
       }
 
       .check_block--mam_platform-item {

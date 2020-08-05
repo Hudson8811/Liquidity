@@ -1,5 +1,5 @@
 .pamm_platform_works {
-  background: #eff4f6;
+  background: $bluebg;
   padding-top: 125px;
   padding-bottom: 125px;
   overflow: hidden;
@@ -10,7 +10,7 @@
     /* or 139% */
     text-align: center;
     letter-spacing: 0px;
-    color: #63636e;
+    color: $gray;
     max-width: 577px;
     margin: 0 auto;
     margin-top: 50px;
@@ -20,7 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     background: #eaedf2;
-    border: 3px solid #ffffff;
+    border: 3px solid $white;
     box-sizing: border-box;
     border-radius: 5px;
     height: 122px;
@@ -30,7 +30,7 @@
     font-size: 14px;
     line-height: 20px;
     /* or 143% */
-    color: #637786;
+    color: $grayblue-text;
     margin-right: 10px;
     padding-left: 43px;
     padding-right: 38px;
@@ -66,7 +66,7 @@
     line-height: 20px;
     /* or 143% */
     color: #272f41;
-    background: #ffffff;
+    background: $white;
     opacity: 0.9;
     border: 1px solid #dae4e8;
     box-sizing: border-box;
@@ -164,7 +164,7 @@
       position: absolute;
       bottom: -14px;
       left: 50px;
-      background: #eff4f6;
+      background: $bluebg;
       width: 67px;
       height: 26px;
       text-align: center;
@@ -242,7 +242,7 @@
         align-items: center;
         width: 139px;
         height: 63px;
-        background: #fff;
+        background: $white;
         font-weight: bold;
         font-size: 18px;
         line-height: 20px;

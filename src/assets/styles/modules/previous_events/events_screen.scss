@@ -12,11 +12,11 @@
 
   .section__subtitle {
     line-height: 30px;
-    color: #fff;
+    color: $white;
   }
 
   .section__title {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -172,7 +172,7 @@
     }
 
     &:after {
-      border-color: #fff;
+      border-color: $white;
       border-width: 1px;
       right: 24px;
     }

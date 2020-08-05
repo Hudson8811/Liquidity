@@ -10,7 +10,7 @@
     font-size: 24px;
     line-height: 28px;
     /* identical to box height, or 119% */
-    color: #000000;
+    color: $black;
     display: block;
     text-align: center;
     margin: 20px auto 20px;
@@ -19,7 +19,7 @@
   .gray__block {
     width: calc(50% - 5px);
     padding: 32px 27px 32px 45px;
-    background: #ffffff;
+    background: $white;
     /* Small_shadow */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -62,7 +62,7 @@
     font-size: 36px;
     line-height: 44px;
     /* identical to box height, or 122% */
-    color: #383838;
+    color: $darkgray;
     margin: 80px auto 50px;
     text-align: center;
   }
@@ -80,7 +80,7 @@
     &__wrap {
       box-sizing: border-box;
       padding: 15px 31px;
-      background: #eff4f6;
+      background: $bluebg;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -134,7 +134,7 @@
         align-items: center;
         justify-content: flex-start;
         letter-spacing: 0;
-        color: #000000;
+        color: $black;
 
         &:nth-child(1) {
           margin-bottom: 22px;
@@ -157,7 +157,7 @@
 
         &.white {
           &:before {
-            background: #ffffff;
+            background: $white;
           }
         }
       }
@@ -193,7 +193,7 @@
     /* identical to box height */
     letter-spacing: 0;
     margin-bottom: 8px;
-    color: #000000;
+    color: $black;
   }
 
   &_subtitle {
@@ -203,6 +203,6 @@
     font-size: 14px;
     line-height: 23px;
     /* or 167% */
-    color: #383838;
+    color: $darkgray;
   }
 }

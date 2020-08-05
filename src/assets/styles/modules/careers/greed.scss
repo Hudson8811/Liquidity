@@ -30,7 +30,7 @@
     align-items: center;
     padding: 6px 10px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: $white;
   }
 
   span.bg {
@@ -145,7 +145,7 @@
       font-size: 36px;
       line-height: 42px;
       letter-spacing: -0.9px;
-      color: #383838;
+      color: $darkgray;
     }
   }
 }

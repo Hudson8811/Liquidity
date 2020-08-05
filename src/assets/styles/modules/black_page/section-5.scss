@@ -1,5 +1,5 @@
 .section-5 {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, $white 0%, $white 100%);
   .another_trades .flex_block {
     margin-left: 0;
     margin-right: 0;
@@ -30,7 +30,7 @@
     font-size: 16px;
     line-height: 28px;
     text-align: center;
-    color: #383838;
+    color: $darkgray;
     .bold {
       font-weight: 900;
     }
@@ -44,7 +44,7 @@
       padding-top: 35px;
       width: calc(33.333% - 18px);
       margin: 0px 9px;
-      background: #ffffff;
+      background: $white;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
     .green--gradient {
@@ -86,15 +86,15 @@
   .heading {
     background: linear-gradient(
       90deg,
-      #ffffff 1.59%,
-      #ffffff 93.04%,
-      #ffffff 97.53%
+      $white 1.59%,
+      $white 93.04%,
+      $white 97.53%
     );
     font-weight: 900;
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    color: #63636e;
+    color: $gray;
     padding: 46px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     &.castom_padding {
@@ -104,14 +104,14 @@
   .green--gradient--1 {
     font-weight: 400;
     box-shadow: none;
-    color: #fff;
+    color: $white;
     background: linear-gradient(90deg, #01bd95 1.59%, #00e2b2 93.04%);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   }
   .green--gradient--2 {
     font-weight: 400;
     background: linear-gradient(90deg, #00deaf 1.59%, #01bd95 93.04%);
-    color: #fff;
+    color: $white;
   }
   .trade_mark {
     margin: 0 -7px;
@@ -233,7 +233,7 @@
       font-size: 18px;
       line-height: 26px;
       letter-spacing: -0.5px;
-      color: #63636e;
+      color: $gray;
       &:last-child {
         box-sizing: border-box;
         padding-right: 13px;

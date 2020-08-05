@@ -1,13 +1,24 @@
 // Colors
-$white: #FFFFFF;
-$black: #282828;
-$text-black: #181C27;
-$main: #4CAE89;
-$pink: #E45D97;
-$background_black: #181C27;
-$grey: #F7F7F7;
+$white: #ffffff;
+$gray: #63636e;
+$darkgray: #383838;
+$black: #000;
+$text-black: #555;
+$main: #4cae89;
+$pink: #e45d97;
+$background_black: #181c27;
+$grey: #f7f7f7;
+$bluebg: #eff4f6;
+$darkbg: #1f2832;
+$grayblue: #6e8198;
+$grayblue-text: #637786;
+$head-white: #e3e3e3;
 
 // Sizes
+$title-font: 80px;
+$title-lineheight: 84px;
+$subtitle-font: 24px;
+$subtitle-lineheight: 35px;
 $small-font: 14px;
 $font-18: 18px;
 $base-font-size: 16px;
@@ -17,18 +28,18 @@ $big-font: 72px;
 $big-font-mobile: 40px;
 
 $breakpoints: (
-    "phone" : 320px,
-    "phone-wide" : 480px,
-    "phablet" : 560px,
-    "tablet-small": 640px,
-    "tablet" : 768px,
-    "tablet-middle" : 900px,
-    "tablet-wide" : 1000px,
-    "desktop" : 1248px,
-    "desktop-wide": 1440px,
-    "desktop-big": 1800px,
-    "desktop-huge": 2000px,
-    "desktop-max": 2900px,
+  "phone": 320px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-middle": 900px,
+  "tablet-wide": 1000px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px,
+  "desktop-big": 1800px,
+  "desktop-huge": 2000px,
+  "desktop-max": 2900px,
 );
 
 $content-size: 1200px;

@@ -1,7 +1,7 @@
 .faq {
   padding-top: 125px;
   padding-bottom: 125px;
-  background: #eff4f6;
+  background: $bluebg;
   .question__plus {
     position: absolute;
     width: 22px;
@@ -27,14 +27,14 @@
     position: relative;
     box-shadow: none;
     margin-bottom: 0;
-    background: #eff4f6;
+    background: $bluebg;
     border-radius: 4px;
     padding: 35px 127px 35px 91px;
     border-bottom: 2px solid rgba(157, 175, 189, 0.3);
     margin-bottom: 0px;
     &.active {
       padding: 50px 127px 50px 91px;
-      background: #ffffff;
+      background: $white;
       border: 2px solid rgba(157, 175, 189, 0.3);
       border-radius: 5px;
       margin-top: -4px;

@@ -18,7 +18,7 @@
   }
 
   &__item {
-    background: #ffffff;
+    background: $white;
     border: 1px solid #e8edf0;
     box-sizing: border-box;
     border-radius: 5px;
@@ -41,7 +41,7 @@
     font-size: 18px;
     line-height: 42px;
     /* identical to box height, or 233% */
-    color: #383838;
+    color: $darkgray;
     margin-bottom: 8px;
   }
 
@@ -51,7 +51,7 @@
     font-size: 14px;
     line-height: 19px;
     /* or 136% */
-    color: #63636e;
+    color: $gray;
   }
 
   .enguine_table {
@@ -102,7 +102,7 @@
         }
 
         .col:nth-child(2) {
-          background: #fff;
+          background: $white;
         }
 
         .col:nth-child(3),

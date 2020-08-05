@@ -1,5 +1,5 @@
 .section.section-3 {
-  background-color: #fff;
+  background-color: $white;
 
   .section__title {
     padding-bottom: 28px;
@@ -48,11 +48,11 @@
     }
 
     &--number-text {
-      color: #383838;
+      color: $darkgray;
     }
 
     &--number {
-      color: #383838;
+      color: $darkgray;
     }
   }
 }

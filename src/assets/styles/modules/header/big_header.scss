@@ -30,7 +30,7 @@ body.hidden {
       display: block;
       width: 100%;
       height: 2px;
-      background-color: #fff;
+      background-color: $white;
       z-index: 100;
       flex-shrink: 0;
     }
@@ -63,7 +63,7 @@ body.hidden {
   #About--js {
     &.active {
       font-weight: 700;
-      color: #fff;
+      color: $white;
     }
     &.disabled {
       pointer-events: none;
@@ -149,7 +149,7 @@ body.hidden {
         font-size: 13px;
         line-height: 15px;
         letter-spacing: 0px;
-        color: #fff;
+        color: $white;
       }
     }
     &__right_row {
@@ -164,7 +164,7 @@ body.hidden {
             line-height: 15px;
             /* identical to box height */
             letter-spacing: 0px;
-            color: #e3e3e3;
+            color: $head-white;
             text-decoration: none;
           }
           .Schedule_button {
@@ -181,7 +181,7 @@ body.hidden {
             line-height: 15px;
             /* identical to box height */
             text-align: center;
-            color: #ffffff;
+            color: $white;
             background: #0aab88;
             border: 1px solid #01bd95;
             box-sizing: border-box;
@@ -206,7 +206,7 @@ body.hidden {
             width: 96px;
             height: 31px;
             margin-right: 17px;
-            border: 1px solid #555555;
+            border: 1px solid $text-black;
             box-sizing: border-box;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
@@ -225,7 +225,7 @@ body.hidden {
               border-radius: 5px;
               font-size: 13px;
               line-height: 15px;
-              color: #e3e3e3;
+              color: $head-white;
             }
           }
 
@@ -253,7 +253,7 @@ body.hidden {
             font-size: 13px;
             line-height: 15px;
 
-            color: #e3e3e3;
+            color: $head-white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -311,7 +311,7 @@ body.hidden {
           line-height: 19px;
           /* identical to box height */
           letter-spacing: 0px;
-          color: #e3e3e3;
+          color: $head-white;
         }
       }
     }
@@ -360,7 +360,7 @@ body.hidden {
 
       letter-spacing: 0px;
 
-      color: #e3e3e3;
+      color: $head-white;
     }
     &__text {
       font-weight: 300;
@@ -448,9 +448,9 @@ body.hidden {
           line-height: 29px;
           /* or 207% */
           letter-spacing: 0px;
-          color: #e3e3e3;
+          color: $head-white;
           a {
-            color: #e3e3e3;
+            color: $head-white;
             text-decoration: none;
           }
         }

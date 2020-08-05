@@ -1,5 +1,5 @@
 .tk_strategy {
-  background: #ffffff;
+  background: $white;
   border-radius: 20px;
   max-width: 744px;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   padding: 10px;
 
   &__bottom {
-    background: #ffffff;
+    background: $white;
     box-sizing: border-box;
     padding: 44px 77px 44px 63px;
     margin-top: 80px;
@@ -37,7 +37,7 @@
       font-size: 21px;
       line-height: 30px;
       /* or 143% */
-      color: #63636e;
+      color: $gray;
 
       @media screen and (max-width: 750px) {
         font-size: 14px;
@@ -79,7 +79,7 @@
   }
 
   &__border-wrapper {
-    border: 4px solid #ffffff;
+    border: 4px solid $white;
     box-sizing: border-box;
     border-radius: 30px;
     padding: 20px;
@@ -109,7 +109,7 @@
         height: calc(100% - 6px);
         left: 3px;
         top: 3px;
-        background: #fff;
+        background: $white;
         border-radius: 20px;
         z-index: 1;
       }
@@ -145,7 +145,7 @@
     font-size: 13px;
     line-height: 17px;
     /* or 131% */
-    color: #637786;
+    color: $grayblue-text;
 
     & + .tk_strategy__block {
       margin-top: 5px;
@@ -169,7 +169,7 @@
     line-height: 44px;
     /* identical to box height, or 183% */
     margin-top: 28px;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__subtitle {
@@ -179,7 +179,7 @@
     line-height: 140%;
     /* or 18px */
     margin-bottom: 20px;
-    color: #383838;
+    color: $darkgray;
   }
 
   &__desc {
@@ -188,7 +188,7 @@
     font-size: 13px;
     line-height: 17px;
     /* or 131% */
-    color: #637786;
+    color: $grayblue-text;
   }
 
   &__section {

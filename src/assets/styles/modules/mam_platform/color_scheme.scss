@@ -1,5 +1,5 @@
 .color_scheme {
-  background: #fff;
+  background: $white;
   padding-top: 125px;
   padding-bottom: 125px;
   .subtitle {
@@ -8,7 +8,7 @@
     line-height: 25px;
     /* or 139% */
     letter-spacing: 0px;
-    color: #63636e;
+    color: $gray;
     margin-top: 50px;
     margin-bottom: 50px;
     &-2 {
@@ -17,7 +17,7 @@
       line-height: 25px;
       /* identical to box height, or 139% */
       letter-spacing: 0px;
-      color: #63636e;
+      color: $gray;
       margin-top: 50px;
     }
   }
