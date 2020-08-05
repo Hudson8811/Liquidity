@@ -1,5 +1,5 @@
 .b_modal {
-  max-width: 951px;
+  width: 951px;
   margin: 0 auto;
 
   &__wrapper {
@@ -10,6 +10,11 @@
     box-sizing: border-box;
     border-radius: 12px;
     padding: 100px 0;
+    overflow: auto;
+
+    @media screen and (max-width: 1300px) {
+      width: 98%;
+    }
   }
 
   &__circle_item {
@@ -174,6 +179,10 @@
     padding: 100px 0;
     max-width: 1300px;
     margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+      width: 98%;
+    }
   }
 
   &__title {
@@ -184,6 +193,12 @@
     /* identical to box height, or 185% */
     margin-bottom: 25px;
     color: #383838;
+
+    @media screen and (max-width: 800px) {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+    }
   }
 
   &__subtitle {
@@ -194,6 +209,11 @@
     /* identical to box height, or 143% */
     color: #63636e;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 
   &__heading {
@@ -213,6 +233,20 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 800px) {
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
     ul {
       margin-left: 35px;
     }
@@ -227,6 +261,7 @@
         height: 11px;
         border-radius: 50%;
         margin-right: 8px;
+        flex-shrink: 0;
       }
 
       .prsnt {
@@ -260,6 +295,7 @@
   padding: 100px 0;
   max-width: 1300px;
   margin: 60px auto;
+  width: 98%;
 
   &__title {
     font-style: normal;
@@ -269,6 +305,11 @@
     /* identical to box height, or 185% */
     margin-bottom: 25px;
     color: #383838;
+
+    @media screen and (max-width: 800px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__subtitle {
@@ -278,6 +319,11 @@
     line-height: 30px;
     /* or 143% */
     color: #63636e;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 }
 
@@ -285,6 +331,10 @@
   &__table {
     width: 999px;
     margin: 0 auto;
+
+    &_wrapper {
+      overflow: auto;
+    }
 
     &__row {
       display: flex;
@@ -360,5 +410,13 @@
     margin: 60px auto;
     background: #eff4f6;
     border-radius: 5px;
+
+    @media screen and (max-width: 780px) {
+      display: block;
+
+      div + div {
+        margin-top: 20px;
+      }
+    }
   }
 }

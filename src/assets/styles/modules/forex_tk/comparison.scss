@@ -1,4 +1,8 @@
 .comparison_tk {
+  .container__table {
+    overflow: auto;
+  }
+
   .section__title {
     margin-bottom: 80px;
   }
@@ -7,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+
+    @media screen and (max-width: 780px) {
+      display: block;
+    }
   }
 
   &__item {
@@ -17,6 +25,14 @@
     box-sizing: border-box;
     padding: 30px 35px;
     width: calc(33.333% - 44px / 3);
+
+    @media screen and (max-width: 780px) {
+      width: 100%;
+
+      & + .comparison_tk__item {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__title {

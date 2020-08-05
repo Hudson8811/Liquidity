@@ -10,6 +10,11 @@
     & + .what_tk__text {
       margin-top: 25px;
     }
+
+    @media screen and (max-width: 580px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .banner {
@@ -23,6 +28,11 @@
     line-height: 45px;
     /* or 150% */
     color: #3e3e3e;
+
+    @media screen and (max-width: 580px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__subtitle {
@@ -33,6 +43,11 @@
     /* or 145% */
     color: #535357;
     margin-top: 20px;
+
+    @media screen and (max-width: 580px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 
   &__heading {
@@ -46,6 +61,11 @@
     /* or 144% */
     color: #3e3e3e;
     margin-top: 53px;
+
+    @media screen and (max-width: 580px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
 
     &:before {
       content: "";

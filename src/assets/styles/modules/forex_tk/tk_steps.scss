@@ -7,6 +7,10 @@
     background: #eff4f6;
     padding: 36px 63px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 580px) {
+      padding: 10px;
+    }
   }
 
   &__title {

@@ -12,6 +12,10 @@
     padding: 44px 77px 44px 63px;
     margin-top: 80px;
 
+    @media screen and (max-width: 750px) {
+      padding: 10px;
+    }
+
     &_title {
       font-style: normal;
       font-weight: bold;
@@ -20,6 +24,11 @@
       /* identical to box height, or 187% */
       color: #3e3e3e;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 750px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
 
     &_subtitle {
@@ -29,6 +38,11 @@
       line-height: 30px;
       /* or 143% */
       color: #63636e;
+
+      @media screen and (max-width: 750px) {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 
@@ -36,11 +50,23 @@
     padding: 40px;
     box-sizing: border-box;
     margin-right: 5px;
+
+    @media screen and (max-width: 750px) {
+      padding: 10px;
+    }
   }
 
   &__blocks {
     width: 300px;
     flex-shrink: 0;
+
+    @media screen and (max-width: 750px) {
+      width: 100%;
+
+      span.db {
+        display: none;
+      }
+    }
   }
 
   &__desc--second {
@@ -130,6 +156,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+      display: block;
+    }
   }
 
   &__title {
@@ -172,11 +202,19 @@
     width: 100%;
     box-sizing: border-box;
     padding: 0 96px 0 100px;
+
+    @media screen and (max-width: 1000px) {
+      padding: 0;
+    }
   }
 
   &__arrow {
     position: absolute;
     left: 30px;
     top: 0;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 }

@@ -6,8 +6,20 @@
   background-image: url(../images/tk_video_bg.png);
   background-size: 101% auto;
 
+  @media screen and (max-width: 1750px) {
+    background-size: 200% auto;
+  }
+
+  @media screen and (max-width: 1080px) {
+    background-size: 2000% auto;
+  }
+
   .video_form .video_block {
     height: 457px;
+
+    @media screen and (max-width: 580px) {
+      height: 200px;
+    }
   }
 
   .video_form .video_block--preview {
