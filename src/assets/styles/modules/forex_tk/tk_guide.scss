@@ -144,6 +144,25 @@
     }
   }
 
+  .new_form__label {
+    background: transparent;
+    border: none;
+    width: calc(50% - 20px / 2);
+    height: auto;
+    margin-bottom: 0;
+
+    span {
+      color: rgba(110, 129, 152, 0.7);
+      top: 21px;
+    }
+
+    &.active {
+      span {
+        color: rgba(110, 129, 152, 0.7);
+      }
+    }
+  }
+
   &__input {
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid #d1dbe2;
@@ -152,7 +171,7 @@
     padding: 20px 22px;
     box-sizing: border-box;
     display: block;
-    width: calc(50% - 20px / 2);
+    width: 100%;
     color: $black;
 
     @media screen and (max-width: 580px) {

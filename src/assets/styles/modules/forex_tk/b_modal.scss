@@ -149,6 +149,10 @@
 }
 
 .revenue {
+  & + .revenue {
+    margin-top: 50px;
+  }
+
   &__coments {
     display: flex;
     justify-content: flex-start;
@@ -232,6 +236,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      display: block;
+      width: 50%;
+      max-width: 434px;
+    }
 
     @media screen and (max-width: 800px) {
       display: block;
