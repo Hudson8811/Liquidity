@@ -919,7 +919,7 @@ $(document).ready(function () {
       .attr("src", src + "&autoplay=1");
   });
   $(".feat_tk__slider1").slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 1,
     prevArrow: $(".feat_tk__slider_wrapper1 .feat_tk__arrow__prev"),
@@ -927,7 +927,7 @@ $(document).ready(function () {
   });
 
   $(".feat_tk__slider2").slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 1,
     prevArrow: $(".feat_tk__slider_wrapper2 .feat_tk__arrow__prev"),
@@ -935,7 +935,7 @@ $(document).ready(function () {
   });
 
   $(".feat_tk__slider3").slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 1,
     prevArrow: $(".feat_tk__slider_wrapper3 .feat_tk__arrow__prev"),
@@ -943,7 +943,7 @@ $(document).ready(function () {
   });
 
   $(".feat_tk__slider4").slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 1,
     prevArrow: $(".feat_tk__slider_wrapper4 .feat_tk__arrow__prev"),
