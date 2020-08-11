@@ -312,7 +312,8 @@
     line-height: 20px;
     /* identical to box height, or 143% */
     color: #dbdbdb;
-    border: 1px solid #01bd95;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     border-radius: 5px;
     transition: all 0.5s;
@@ -329,7 +330,7 @@
     }
 
     &:hover {
-      opacity: 0.8;
+      border: 1px solid #01bd95;
     }
   }
 
