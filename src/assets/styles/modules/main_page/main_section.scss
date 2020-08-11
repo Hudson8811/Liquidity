@@ -27,7 +27,8 @@
   }
 
   .section__title {
-    position: absolute;
+    width: 100%;
+    position: relative;
     z-index: 1;
     display: block;
     color: $white;
@@ -51,8 +52,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 290px;
+    height: 210px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
     #machine {
       position: relative;
 
@@ -63,7 +65,7 @@
     }
 
     .section__title:not(#machine) {
-      margin-top: 117px;
+      margin-top: 0;
     }
 
     @media screen and (max-width: 882px) {
@@ -82,7 +84,6 @@
       }
 
       .section__title:not(#machine) {
-        margin-top: 65px;
       }
     }
   }
