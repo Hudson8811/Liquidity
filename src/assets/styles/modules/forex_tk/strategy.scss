@@ -212,6 +212,7 @@
     position: absolute;
     left: 30px;
     top: 0;
+    overflow: visible;
 
     @media screen and (max-width: 1000px) {
       display: none;
