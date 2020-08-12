@@ -3,37 +3,61 @@
   border-radius: 10px;
   padding: 0 70px;
   box-sizing: border-box;
-  width: 100%;
+  width: 98%;
+  margin: 45px auto 100px;
+  max-width: 1040px;
 
   &__block {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 35px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(157, 175, 189, 0.5);
+    }
   }
 
   &__desc {
     width: 50%;
     max-width: 488px;
+    font-size: $base-font-size;
+    line-height: $what_tk__desc-line;
+    /* or 137% */
+    color: $what_tk__desc;
   }
 
   &__title {
     width: 40%;
     max-width: 380px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    position: relative;
     font-weight: $medium;
     font-size: $font-18;
     line-height: $subtitle-font;
     /* or 140% */
     color: $darkgray;
+    padding-left: 35px;
 
     svg {
       display: block;
       flex-shrink: 0;
       margin-right: 15px;
-      margin-top: 1px;
+      margin-top: 3px;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
+  }
+}
+
+.what_crypto_tk__section {
+  .what_tk__text {
+    margin-bottom: 80px;
+  }
+
+  .what_tk__subtitle {
+    font-size: $base-font-size;
+    line-height: $what_tk__subtitle;
+    letter-spacing: -0.5px;
   }
 }
