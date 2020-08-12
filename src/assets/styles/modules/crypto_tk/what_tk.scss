@@ -1,0 +1,39 @@
+.what_tk_cat {
+  background: $bluebg;
+  border-radius: 10px;
+  padding: 0 70px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 35px 0;
+  }
+
+  &__desc {
+    width: 50%;
+    max-width: 488px;
+  }
+
+  &__title {
+    width: 40%;
+    max-width: 380px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: $medium;
+    font-size: $font-18;
+    line-height: $subtitle-font;
+    /* or 140% */
+    color: $darkgray;
+
+    svg {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 15px;
+      margin-top: 1px;
+    }
+  }
+}

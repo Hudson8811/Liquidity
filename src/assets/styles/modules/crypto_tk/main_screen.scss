@@ -1,0 +1,17 @@
+.forex_liquidity__new__crypto_tk {
+  .supported_platforms-and {
+    font-size: $and-size;
+    line-height: $and-size;
+    /* or 180% */
+    color: $opacity-gray;
+    margin: 0 20px;
+  }
+
+  .supported_platforms-item {
+    max-width: 136px;
+  }
+
+  .supported_platforms-items {
+    align-items: center;
+  }
+}
