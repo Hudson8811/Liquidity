@@ -219,3 +219,14 @@
     }
   }
 }
+
+
+#svgline{
+  .ball01{
+    opacity: 0;
+    transition: 0.3s ease;
+    &.active{
+      opacity: 1;
+    }
+  }
+}
