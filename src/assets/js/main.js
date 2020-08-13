@@ -918,6 +918,15 @@ $(document).ready(function () {
       .siblings("iframe")
       .attr("src", src + "&autoplay=1");
   });
+
+  $(".feat_tk__slider0").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(".feat_tk__slider_wrapper0 .feat_tk__arrow__prev"),
+    nextArrow: $(".feat_tk__slider_wrapper0 .feat_tk__arrow__next"),
+  });
+
   $(".feat_tk__slider1").slick({
     infinite: true,
     speed: 300,
