@@ -1,0 +1,150 @@
+.tk_head {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px 33px 60px 70px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+  @include respond-to("tablet") {
+    padding: 10px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+
+    p {
+      font-weight: $extrabold;
+      font-size: $tk-heading-size;
+      line-height: $tk-heading-line;
+      /* identical to box height, or 238% */
+      color: $tk-head;
+      padding-right: 50px;
+      border-right: 1px solid $tk-bg;
+      margin-right: 51px;
+
+      @include respond-to("tablet") {
+        padding-right: 0;
+        border: none;
+        margin-right: 0;
+      }
+    }
+
+    img {
+      max-width: 140px;
+      display: block;
+
+      @include respond-to("tablet") {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      & + img {
+        margin-left: 24px;
+
+        @include respond-to("tablet") {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-size: $base-font-size;
+    line-height: $subtitle-font;
+    /* or 150% */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: $gray;
+
+    & + .tk_head__item {
+      margin-top: 20px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin-right: 15px;
+      margin-top: 8px;
+      flex-shrink: 0;
+      background: $tk-bg;
+      border-radius: 50%;
+    }
+  }
+
+  &__desc {
+    font-weight: $bold;
+    font-size: $base-font-size;
+    line-height: $tk-desc-line;
+    /* identical to box height, or 119% */
+    color: $gray;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(157, 175, 189, 0.5);
+    padding-left: 21px;
+    box-sizing: border-box;
+
+    & + .tk_head__heading {
+      margin-top: 30px;
+    }
+  }
+}
+
+.enguine_table__crypto_ck {
+  &.fixed {
+    padding-top: 52px;
+
+    .row:nth-child(1) {
+      position: fixed;
+      top: 70px;
+    }
+  }
+
+  .row:nth-child(1) {
+    min-height: 51px;
+    height: 51px;
+  }
+
+  .row:nth-child(2) {
+    .enguine_table__crypto_heading {
+      border: none;
+    }
+  }
+
+  .enguine_table__crypto_heading {
+    min-height: 96px;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: $extrabold;
+    font-size: $tk-heading-size;
+    line-height: $crypto-head-table-size;
+    /* identical to box height, or 238% */
+    padding: 27px 0 27px 35px;
+    color: $tk-head;
+
+    border-top: 13px solid $bluebg;
+  }
+}
+
+.uniue_crypto {
+  .revenue__subtitle {
+    font-size: $font-18;
+    line-height: 140%;
+  }
+
+  .revenue__title {
+    font-size: $tk-heading-line;
+    line-height: $big-font;
+    margin-bottom: 25px;
+  }
+}

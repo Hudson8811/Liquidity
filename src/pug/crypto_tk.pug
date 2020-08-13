@@ -2,31 +2,25 @@ extends template/main
 
 block variables
 	- var title = 'Crypto Broker TK'
-	- var pageClass = 'forex_tk'
+	- var pageClass = 'crypto_tk forex_tk'
 
 block content
 	include modules/crypto_tk/_main_screen
 	include modules/crypto_tk/_what_tk_section
-	include modules/forex_tk/_comparison
-	include modules/forex_tk/_tex_flow
+	include modules/crypto_tk/_comparison
+	include modules/crypto_tk/_tex_flow
 	include modules/forex_tk/_form
-	include modules/forex_tk/_pac_ad
+	include modules/crypto_tk/_pac_ad
 	include modules/forex_tk/_watch_videos
-	include modules/forex_tk/_steps
-	include modules/forex_tk/_strategy
-	include modules/forex_tk/_guide
-	include modules/forex_tk/_b_modal
-	include modules/forex_tk/_form2
+	include modules/crypto_tk/_steps
+	include modules/crypto_tk/_strategy
+	include modules/crypto_tk/_guide
+	include modules/crypto_tk/_b_modal
+	include modules/crypto_tk/_form2
 	include modules/forex_tk/_faq
 	include modules/forex_tk/_best
 	include modules/mam_platform/_footer-menu-section-2
 
 block script
-	<script src="js/gsap.min.js"></script>
-	<script src="js/ScrollMagic.js"></script>
-	<script src="js/jquery.ScrollMagic.js"></script>
-	<script src="js/animation.gsap.min.js"></script>
-	<script src="js/DrawSVGPlugin3.min.js"></script>
-	<script src="js/MotionPathHelper.min.js"></script>
-	<script src="js/MotionPathPlugin.min.js?v=15"></script>
+	script(src="js/jquery.drawsvg.js")
 	script(src="js/svgline.js")

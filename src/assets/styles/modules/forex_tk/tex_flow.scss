@@ -202,7 +202,8 @@
       }
     }
 
-    &__desc {
+    &__desc,
+    &__desc a {
       font-style: normal;
       font-weight: normal;
       font-size: 13px;
@@ -217,6 +218,10 @@
           display: none;
         }
       }
+    }
+
+    &__desc a {
+      opacity: 1;
     }
   }
 

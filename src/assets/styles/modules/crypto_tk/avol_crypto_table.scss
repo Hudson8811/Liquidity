@@ -1,0 +1,39 @@
+.evol_crypto_table {
+  .evol__table__row:nth-child(1) {
+    min-height: 51px;
+
+    margin-bottom: 0;
+    border: none;
+
+    .evol__table__col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: $medium;
+      box-sizing: border-box;
+      font-size: $and-size;
+      line-height: $normal-indent;
+      color: $gray;
+      background: #e8edf0;
+
+      &:not(:last-child()) {
+        border-right: 3px solid $bluebg;
+      }
+    }
+  }
+
+  .evol__table__row:not(:first-child) {
+    .evol__table__col:nth-child(1) {
+      color: $gray;
+    }
+  }
+
+  &.fixed {
+    padding-top: 52px;
+
+    .evol__table__row:nth-child(1) {
+      position: fixed;
+      top: 70px;
+    }
+  }
+}

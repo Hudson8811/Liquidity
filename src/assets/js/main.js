@@ -1459,6 +1459,44 @@ $(document).ready(function () {
       autoFocus: false,
     });
   });
+
+  if ($("body").hasClass("crypto_tk")) {
+    $(window).scroll(function () {
+      let tablePos =
+        $(".enguine_table__crypto_ck").offset().top - $(this).scrollTop();
+
+      let tableLastPos =
+        $(".enguine_table__crypto_ck .row:last-child").offset().top -
+        $(this).scrollTop();
+
+      let tablePos2 =
+        $(".evol_crypto_table").offset().top - $(this).scrollTop();
+
+      let tableLastPos2 =
+        $(".evol_crypto_table .evol__table__row:last-child").offset().top -
+        $(this).scrollTop();
+
+      if (tablePos < 130) {
+        $(".enguine_table__crypto_ck").addClass("fixed");
+
+        if (tableLastPos < 150) {
+          $(".enguine_table__crypto_ck").removeClass("fixed");
+        }
+      } else {
+        $(".enguine_table__crypto_ck").removeClass("fixed");
+      }
+
+      if (tablePos2 < 130) {
+        $(".evol_crypto_table").addClass("fixed");
+
+        if (tableLastPos2 < 150) {
+          $(".evol_crypto_table").removeClass("fixed");
+        }
+      } else {
+        $(".evol_crypto_table").removeClass("fixed");
+      }
+    });
+  }
 });
 
 let check = false;

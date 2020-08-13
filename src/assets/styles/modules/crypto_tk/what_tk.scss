@@ -7,11 +7,20 @@
   margin: 45px auto 100px;
   max-width: 1040px;
 
+  @include respond-to("tablet") {
+    padding: 0 10px;
+  }
+
   &__block {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 35px 0;
+
+    @include respond-to("tablet") {
+      padding: 10px 0;
+      display: block;
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid rgba(157, 175, 189, 0.5);
@@ -25,6 +34,16 @@
     line-height: $what_tk__desc-line;
     /* or 137% */
     color: $what_tk__desc;
+
+    @include respond-to("tablet") {
+      width: 100%;
+      max-width: none;
+      margin-top: 10px;
+
+      span.db {
+        display: none;
+      }
+    }
   }
 
   &__title {
@@ -37,6 +56,16 @@
     /* or 140% */
     color: $darkgray;
     padding-left: 35px;
+
+    @include respond-to("tablet") {
+      width: 100%;
+      max-width: none;
+      box-sizing: border-box;
+
+      span.db {
+        display: none;
+      }
+    }
 
     svg {
       display: block;

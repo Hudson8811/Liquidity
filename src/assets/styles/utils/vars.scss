@@ -15,6 +15,9 @@ $grayblue-text: #637786;
 $head-white: #e3e3e3;
 $opacity-gray: #8e8c8b;
 $what_tk__desc: #82898f;
+$tk-head: #3f3f3f;
+$tk-bg: #747474;
+
 // Sizes
 $title-font: 80px;
 $title-lineheight: 84px;
@@ -28,13 +31,20 @@ $normal-indent: 20px;
 $big-font: 72px;
 $big-font-mobile: 40px;
 $and-size: 13px;
+$tk-heading-size: 21px;
+$feat_tk__text_block__title: 20px;
 
 // line
 $what_tk__subtitle: 23px;
 $what_tk__desc-line: 22px;
+$tk-heading-line: 30px;
+$tk-desc-line: 19px;
+$crypto-head-table-size: 50px;
 
 // wight
 $medium: 500;
+$bold: 600;
+$extrabold: 900;
 
 $breakpoints: (
   "phone": 320px,
