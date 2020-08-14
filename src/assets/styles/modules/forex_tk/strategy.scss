@@ -19,7 +19,7 @@
     &_title {
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 30px;
       line-height: 45px;
       /* identical to box height, or 187% */
       color: #3e3e3e;
@@ -34,8 +34,8 @@
     &_subtitle {
       font-style: normal;
       font-weight: normal;
-      font-size: 21px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 23px;
       /* or 143% */
       color: $gray;
 
@@ -220,12 +220,11 @@
   }
 }
 
-
-#svgline{
-  .ball01{
+#svgline {
+  .ball01 {
     opacity: 0;
     transition: 0.3s ease;
-    &.active{
+    &.active {
       opacity: 1;
     }
   }

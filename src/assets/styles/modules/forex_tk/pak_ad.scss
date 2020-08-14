@@ -72,6 +72,14 @@
     /* or 20px */
     color: $white;
 
+    span {
+      opacity: 0.8;
+    }
+
+    .bold {
+      opacity: 1;
+    }
+
     @media screen and (max-width: 980px) {
       span.db {
         display: none;

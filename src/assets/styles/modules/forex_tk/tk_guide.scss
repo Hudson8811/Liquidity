@@ -1,5 +1,6 @@
 .tk_guide {
   max-width: 1300px;
+  width: 98%;
   margin: 0 auto;
   background: $bluebg;
   border-radius: 12px;
@@ -17,11 +18,12 @@
 
   &__title {
     font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
     /* identical to box height */
-    color: $black;
+    color: $darkgray;
+    margin-bottom: 35px;
   }
 
   &__ul {
@@ -32,14 +34,14 @@
     border: 1px solid #01bd95;
     box-sizing: border-box;
     border-radius: 5px;
-    max-width: 414px;
+    max-width: 401px;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     /* or 139% */
     color: #01bd95;
-    padding: 25px 40px;
+    padding: 25px 38px;
   }
 
   &__li {
@@ -47,8 +49,8 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    color: #666666;
-    margin-top: 24px;
+    color: $gray;
+    margin-top: 18px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -59,7 +61,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      background: #666666;
+      background: #01c79c;
       margin-right: 18px;
       flex-shrink: 0;
       border-radius: 50%;
@@ -92,22 +94,21 @@
   &__form_title {
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 140%;
     /* or 143% */
     margin: 0 auto;
     text-align: center;
     max-width: 520px;
-    color: #666666;
+    color: $gray;
     padding-top: 40px;
-    border-top: 3px solid #d1dbe2;
   }
 
   &__form {
     max-width: 700px;
     margin: 33px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
 
     @media screen and (max-width: 580px) {
@@ -117,7 +118,7 @@
 
   &__button {
     background: linear-gradient(180deg, #00d0a4 0%, #00b890 100%);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     font-style: normal;
     font-weight: bold;
@@ -132,7 +133,7 @@
     width: 100%;
     border: none;
     cursor: pointer;
-    width: calc(50% - 20px / 2);
+    max-width: 194px;
 
     @media screen and (max-width: 580px) {
       width: 100%;
@@ -147,9 +148,11 @@
   .new_form__label {
     background: transparent;
     border: none;
-    width: calc(50% - 20px / 2);
+    width: 100%;
+    max-width: 308px;
     height: auto;
     margin-bottom: 0;
+    margin-right: 20px;
 
     span {
       color: rgba(110, 129, 152, 0.7);
@@ -179,14 +182,15 @@
     }
   }
 
-  &__form_subtitle {
+  &__form_subtitle,
+  &__form_subtitle a {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 120%;
+    line-height: 140%;
     /* or 14px */
     text-align: center;
-    color: #3b4759;
+    color: #989898;
     opacity: 0.7;
   }
 }

@@ -34,7 +34,7 @@
     padding: 39px 97px;
     background: #313b47;
     max-width: 910px;
-    margin: 0 auto 120px;
+    margin: 0 auto 60px;
 
     @media screen and (max-width: 580px) {
       padding: 20px;
@@ -209,8 +209,8 @@
       font-size: 13px;
       line-height: 140%;
       /* or 18px */
-      color: #dcedfb;
-      opacity: 0.6;
+      color: $white;
+      opacity: 0.8;
       margin-top: 15px;
 
       @media screen and (max-width: 980px) {
@@ -248,7 +248,7 @@
 
 .feat_tk {
   &__block {
-    padding: 75px 80px;
+    padding: 75px 61px;
     box-sizing: border-box;
     background: #2f3945;
 
@@ -431,20 +431,42 @@
     &__title {
       font-style: normal;
       font-weight: 900;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 20px;
       /* identical to box height, or 143% */
       color: $white;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     &__desc {
-      font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 20px;
       /* or 143% */
       color: $white;
+      opacity: 0.8;
+
+      &_num {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:nth-child(3) {
+          margin-bottom: 9px;
+        }
+
+        .feat_tk__text_block__number {
+          margin-right: 8px;
+        }
+
+        & + .feat_tk__text_block__desc_num {
+          margin-top: 15px;
+        }
+      }
 
       & + .feat_tk__text_block__desc {
         margin-top: 15px;
@@ -463,6 +485,8 @@
 
   &__acard {
     margin-top: 50px;
+    box-sizing: border-box;
+    padding: 0 17px;
 
     @media screen and (max-width: 580px) {
       width: 100% !important;
@@ -475,7 +499,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__acard__item {
@@ -485,6 +509,7 @@
 
     svg {
       flex-shrink: 0;
+      margin-top: 5px;
     }
 
     & + .feat_tk__acard__item {
