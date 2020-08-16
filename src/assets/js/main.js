@@ -28,6 +28,8 @@ function getRandomIntInclusive(min, max) {
 }
 
 $(document).ready(function () {
+  $("input[name='phone']").mask("(999) 999-99-99");
+
   setInterval(() => {
     getRandomIntInclusive(1, 8);
   }, 1000);
@@ -1026,6 +1028,25 @@ $(document).ready(function () {
     $(this).parent().removeClass("error");
   });
   $(document).on("blur", ".form_label input", function () {
+    if ($(this).val() == "") {
+      $(this).parent().removeClass("active");
+      $(this).parent().addClass("error");
+    } else {
+      $(this).parent().removeClass("error");
+      if (
+        $(this).attr("type") == "email" &&
+        !isValidEmailAddress($(this).val())
+      ) {
+        $(this).parent().addClass("error");
+      }
+    }
+  });
+
+  $(document).on("focus", ".buty__label input", function () {
+    $(this).parent().addClass("active");
+    $(this).parent().removeClass("error");
+  });
+  $(document).on("blur", ".buty__label input", function () {
     if ($(this).val() == "") {
       $(this).parent().removeClass("active");
       $(this).parent().addClass("error");

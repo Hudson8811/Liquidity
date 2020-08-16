@@ -515,3 +515,119 @@
     }
   }
 }
+
+.small_footer {
+  .social_block {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: block;
+      margin: 0 12px;
+
+      &.facebook:not(:hover) svg path:nth-child(1) {
+        fill: #252e38;
+      }
+
+      &.twitter:not(:hover) svg path:nth-child(1) {
+        fill: #252e38;
+      }
+    }
+
+    svg {
+      width: 26px;
+      height: 26px;
+
+      &:not(:hover) {
+        circle {
+          fill: #252e38;
+        }
+      }
+    }
+  }
+  &__title {
+    font-weight: $light;
+    font-size: $subtitle-font;
+    line-height: 28px;
+    /* identical to box height */
+    text-align: center;
+    color: $white;
+    margin-bottom: 21px;
+  }
+
+  &__link {
+    font-weight: $medium;
+    font-size: $subtitle-font;
+    line-height: 28px;
+    /* identical to box height */
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 75px;
+  }
+
+  &__top {
+    padding: 120px 0;
+    background: #16191c;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #393b3e;
+  }
+
+  &__center {
+    padding: 60px 0;
+    background: #16191c;
+
+    .big_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__bottom {
+    padding: 40px 0;
+    background: #16191c;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.small_police {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__item {
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 36px;
+    /* or 257% */
+    color: #656b70;
+    margin-right: 59px;
+
+    a {
+      font-weight: $normal;
+      font-size: $small-font;
+      line-height: 36px;
+      /* or 257% */
+      color: #656b70;
+      text-decoration: none;
+    }
+
+    &:first-child {
+      font-weight: $light;
+    }
+
+    &:last-child {
+      line-height: 16px;
+      color: rgba(235, 245, 255, 0.5);
+      margin-left: auto;
+      text-align: right;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

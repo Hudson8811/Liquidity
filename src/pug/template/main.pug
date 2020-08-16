@@ -57,11 +57,17 @@ html(lang="ru-RU")
 				frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
 			};
 		.wrapper
-			include ../modules/header/big_header
+			if smallPage
+				include ../modules/header/small_header
+			else
+				include ../modules/header/big_header
 			#content.site-content
 				.content
 					block content
-			include ../modules/footer/newFooter
+			if smallPage
+				include ../modules/footer/small_footer
+			else
+				include ../modules/footer/newFooter
 			include ../modules/main/_popup_form
 			include ../modules/main/_popup_form2
 			include ../modules/main/_popup_form_new
