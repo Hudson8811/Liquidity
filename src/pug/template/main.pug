@@ -59,12 +59,14 @@ html(lang="ru-RU")
 		.wrapper
 			if smallPage
 				include ../modules/header/small_header
+			else if smallPageWeb
+				include ../modules/header/small_header2
 			else
 				include ../modules/header/big_header
 			#content.site-content
 				.content
 					block content
-			if smallPage
+			if smallPage || smallPageWeb
 				include ../modules/footer/small_footer
 			else
 				include ../modules/footer/newFooter

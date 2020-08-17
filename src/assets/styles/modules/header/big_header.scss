@@ -835,21 +835,40 @@ body.hidden {
   width: 100%;
   left: 0;
   top: 35px;
+  z-index: 99;
+
+  &_web {
+    .small_header__item .new_green_bord_btn {
+      min-width: 197px;
+    }
+  }
 
   .big_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
   }
 
   &__menu {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include respond-to("phone-wide") {
+      display: block;
+    }
   }
 
   &__item {
     margin-left: 66px;
+
+    @include respond-to("tablet") {
+      margin: 20px auto 0;
+    }
 
     a {
       color: $white;

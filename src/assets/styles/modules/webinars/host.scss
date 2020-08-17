@@ -1,0 +1,64 @@
+.host {
+  margin-top: 56px;
+
+  li {
+    margin-left: 11px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 150%;
+    color: $darkgray;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $darkgray;
+      margin-right: 25px;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    & + li {
+      margin-top: 20px;
+    }
+  }
+
+  &__block {
+    background: $bluebg2;
+    padding: 105px 69px 87px 73px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 550px;
+    margin-left: auto;
+  }
+
+  &__title {
+    font-weight: $medium;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+    color: $darkgray;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 130%;
+    color: $darkgray;
+    margin-bottom: 7px;
+  }
+
+  &__desc {
+    font-weight: $light;
+    font-size: 13px;
+    line-height: 130%;
+    /* or 17px */
+    color: rgba(56, 56, 56, 0.6);
+  }
+}

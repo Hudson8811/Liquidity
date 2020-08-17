@@ -521,6 +521,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     a {
       display: block;
@@ -583,6 +584,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include respond-to("tablet") {
+        display: block;
+      }
     }
   }
 
@@ -598,6 +603,10 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @include respond-to("tablet-wide") {
+    display: block;
+  }
+
   &__item {
     font-weight: $normal;
     font-size: $small-font;
@@ -605,6 +614,10 @@
     /* or 257% */
     color: #656b70;
     margin-right: 59px;
+
+    @include respond-to("tablet-wide") {
+      margin-right: 0;
+    }
 
     a {
       font-weight: $normal;
@@ -624,6 +637,10 @@
       color: rgba(235, 245, 255, 0.5);
       margin-left: auto;
       text-align: right;
+
+      @include respond-to("tablet-wide") {
+        margin-top: 20px;
+      }
 
       span {
         display: block;
