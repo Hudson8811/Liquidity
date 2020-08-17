@@ -94,6 +94,17 @@ $(document).ready(function () {
     },
   });
 
+  $(document).on("click", ".web_screen__more_btn", function (e) {
+    e.preventDefault();
+
+    $("html, body").animate(
+      {
+        scrollTop: $(".web_topics__section").offset().top,
+      },
+      700
+    );
+  });
+
   $(
     ".lema_section .hear_flickity--js, .includes_team .hear_flickity--js"
   ).flickity({
@@ -1089,6 +1100,16 @@ $(document).ready(function () {
 
     $.fancybox.open({
       src: "#modal2",
+      type: "inline",
+      autoFocus: false,
+    });
+  });
+
+  $(document).on("click", ".web_form_btn--js", function (e) {
+    e.preventDefault();
+
+    $.fancybox.open({
+      src: "#modal_web_form",
       type: "inline",
       autoFocus: false,
     });

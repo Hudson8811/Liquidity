@@ -648,3 +648,11 @@
     }
   }
 }
+
+.small_footer2 {
+  .small_footer__link {
+    font-size: $font-18;
+    line-height: $what_tk__desc-line;
+    text-decoration: underline;
+  }
+}

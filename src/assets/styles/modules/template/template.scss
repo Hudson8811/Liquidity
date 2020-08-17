@@ -4277,3 +4277,19 @@ select:visited {
   margin: 0 auto;
   width: 98%;
 }
+
+#modal_web_form {
+  padding: 0;
+  width: 98%;
+  max-width: 1200px;
+
+  .fancybox-close-small {
+    display: none;
+  }
+}
+
+.webinars {
+  .fancybox-bg {
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+}

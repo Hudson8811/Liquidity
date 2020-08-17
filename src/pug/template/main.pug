@@ -66,8 +66,10 @@ html(lang="ru-RU")
 			#content.site-content
 				.content
 					block content
-			if smallPage || smallPageWeb
+			if smallPage
 				include ../modules/footer/small_footer
+			else if smallPageWeb
+				include ../modules/footer/small_footer2
 			else
 				include ../modules/footer/newFooter
 			include ../modules/main/_popup_form
@@ -85,6 +87,7 @@ html(lang="ru-RU")
 			include ../modules/video_popup/_video6
 			include ../modules/video_popup/_video7
 			include ../modules/video_popup/_video8
+			include ../modules/webinars/web_modal
 		script(src="js/jquery-3.3.1.min.js")
 		script(src="js/slick.min.js")
 		script(src="js/jquery.fancybox.min.js")

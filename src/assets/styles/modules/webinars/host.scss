@@ -1,6 +1,21 @@
 .host {
   margin-top: 56px;
 
+  &__section {
+    .web_topics__title {
+      max-width: 512px;
+      margin-left: auto;
+      line-height: 84px;
+      margin-bottom: 40px;
+      padding-top: 66px;
+      text-align: center;
+    }
+
+    .big_container {
+      position: relative;
+    }
+  }
+
   li {
     margin-left: 11px;
     display: flex;
@@ -35,6 +50,19 @@
     width: 100%;
     max-width: 550px;
     margin-left: auto;
+    margin-right: 9px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 560px;
+      height: 560px;
+      background: center / cover url(../images/host.png) no-repeat;
+      z-index: -1;
+    }
   }
 
   &__title {
