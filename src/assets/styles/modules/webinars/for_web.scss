@@ -11,6 +11,11 @@
     padding: 44px 24px;
     margin-bottom: 0;
 
+    @include respond-to("tablet-wide") {
+      width: 100%;
+      margin-top: 20px;
+    }
+
     .liq__title {
       font-size: 22px;
       margin: 20px 0;

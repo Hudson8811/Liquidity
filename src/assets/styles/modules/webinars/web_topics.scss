@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @include respond-to("tablet") {
+    display: block;
+  }
+
   &__section {
     background: $bluebg2;
 
@@ -17,6 +21,10 @@
     line-height: $new_main_screen-line;
     /* identical to box height */
     color: #373737;
+
+    @include respond-to("tablet") {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {
@@ -30,11 +38,22 @@
   &__text {
     max-width: 397px;
     width: 50%;
+
+    @include respond-to("tablet") {
+      max-width: none;
+      width: 100%;
+    }
   }
 
   &__items {
     max-width: 510px;
     width: 50%;
+
+    @include respond-to("tablet") {
+      max-width: none;
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 
   &__item {
@@ -48,8 +67,20 @@
     align-items: flex-start;
     padding-left: 11px;
 
+    @include respond-to("tablet") {
+      font-size: $and-size;
+
+      span.db {
+        display: none;
+      }
+    }
+
     & + .web_topics__item {
       margin-top: 32px;
+
+      @include respond-to("tablet") {
+        margin-top: 10px;
+      }
     }
 
     img {
@@ -57,6 +88,11 @@
       margin-right: 26px;
       flex-shrink: 0;
       margin-top: 4px;
+
+      @include respond-to("tablet") {
+        margin-top: 0;
+        margin-right: 10px;
+      }
     }
   }
 

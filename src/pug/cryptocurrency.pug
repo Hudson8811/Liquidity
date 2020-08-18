@@ -1,0 +1,26 @@
+extends template/main
+
+block variables
+	- var title = 'Cryptocurrency Exchange Turnkey'
+	- var pageClass = 'crypto_tk forex_tk'
+
+block content
+	include modules/cryptocurrency/_main_screen
+	include modules/cryptocurrency/_what_tk_section
+	include modules/cryptocurrency/_comparison
+	include modules/cryptocurrency/_tex_flow
+	include modules/cryptocurrency/_form
+	include modules/cryptocurrency/_pac_ad
+	include modules/forex_tk/_watch_videos
+	include modules/cryptocurrency/_steps
+	include modules/cryptocurrency/_strategy
+	include modules/crypto_tk/_guide
+	include modules/cryptocurrency/_b_modal
+	include modules/cryptocurrency/_form2
+	include modules/cryptocurrency/_faq
+	include modules/cryptocurrency/_best
+	include modules/mam_platform/_footer-menu-section-2
+
+block script
+	script(src="js/jquery.drawsvg.js")
+	script(src="js/svgline.js")

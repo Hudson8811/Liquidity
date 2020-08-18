@@ -1,0 +1,24 @@
+.comparison_cryptocurrency {
+  .tk_head__desc {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .tk_head__item {
+    a {
+      font-size: $base-font-size;
+      line-height: $tk-desc-line;
+      /* identical to box height, or 119% */
+      color: $gray;
+      margin-left: 5px;
+    }
+  }
+
+  .tk_head__content {
+    &:nth-child(2) {
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(157, 175, 189, 0.5);
+      margin-bottom: 30px;
+    }
+  }
+}

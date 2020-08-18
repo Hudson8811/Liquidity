@@ -9,6 +9,14 @@
       margin-bottom: 40px;
       padding-top: 66px;
       text-align: center;
+
+      @include respond-to("tablet-wide") {
+        text-align: right;
+      }
+
+      @include respond-to("phone-wide") {
+        text-align: center;
+      }
     }
 
     .big_container {
@@ -25,6 +33,12 @@
     font-size: $small-font;
     line-height: 150%;
     color: $darkgray;
+
+    @include respond-to("tablet-wide") {
+      span.db {
+        display: none;
+      }
+    }
 
     &:before {
       content: "";
@@ -52,6 +66,10 @@
     margin-left: auto;
     margin-right: 9px;
 
+    @include respond-to("tablet-wide") {
+      padding: 20px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -62,6 +80,16 @@
       height: 560px;
       background: center / cover url(../images/host.png) no-repeat;
       z-index: -1;
+
+      @include respond-to("tablet-wide") {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include respond-to("phone-wide") {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 

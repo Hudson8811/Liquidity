@@ -14,5 +14,9 @@
     /* or 28px */
     color: $darkgray;
     margin-bottom: 30px;
+
+    @include respond-to("tablet-wide") {
+      text-align: center;
+    }
   }
 }

@@ -1,0 +1,21 @@
+.forex_liquidity__new__cryptocurrency_tk {
+  .forex_liquidity__content {
+    max-width: 580px;
+  }
+
+  .check_block--mam_platform-item {
+    width: calc(50% - 50px / 2);
+
+    @media screen and (max-width: 580px) {
+      width: 100%;
+
+      span.db {
+        display: none;
+      }
+    }
+  }
+
+  .supported_platforms {
+    margin-top: 50px;
+  }
+}

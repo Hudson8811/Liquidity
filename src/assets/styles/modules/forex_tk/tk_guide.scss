@@ -138,6 +138,7 @@
     @media screen and (max-width: 580px) {
       width: 100%;
       margin-top: 20px;
+      max-width: none;
     }
 
     &:hover {
@@ -153,6 +154,7 @@
     height: auto;
     margin-bottom: 0;
     margin-right: 20px;
+    display: block;
 
     span {
       color: rgba(110, 129, 152, 0.7);
@@ -192,5 +194,9 @@
     text-align: center;
     color: #989898;
     opacity: 0.7;
+  }
+
+  &__form_subtitle a {
+    opacity: 1;
   }
 }

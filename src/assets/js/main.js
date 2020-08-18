@@ -940,6 +940,31 @@ $(document).ready(function () {
     nextArrow: $(".feat_tk__slider_wrapper0 .feat_tk__arrow__next"),
   });
 
+  $(".feat_tk__slider__cryptocurrency").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(
+      ".feat_tk__slider_wrapper__cryptocurrency .feat_tk__arrow__prev"
+    ),
+    nextArrow: $(
+      ".feat_tk__slider_wrapper__cryptocurrency .feat_tk__arrow__next"
+    ),
+  });
+
+  $(".antifraud__slider").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: $(".antifraud .feat_tk__arrow__prev"),
+    nextArrow: $(".antifraud .feat_tk__arrow__next"),
+  });
+
+  $(document).on("click", ".tk_strategy__block", function () {
+    $(this).children(".tk_strategy__block__subtitle").slideToggle();
+    $(this).toggleClass("active");
+  });
+
   $(".feat_tk__slider1").slick({
     infinite: true,
     speed: 300,

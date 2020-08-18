@@ -637,6 +637,7 @@
       color: rgba(235, 245, 255, 0.5);
       margin-left: auto;
       text-align: right;
+      margin-right: 0;
 
       @include respond-to("tablet-wide") {
         margin-top: 20px;

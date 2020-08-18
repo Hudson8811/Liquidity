@@ -4270,6 +4270,11 @@ select:visited {
   line-height: 44px;
   /* or 176% */
   color: #98a2ae;
+
+  @include respond-to("tablet") {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .big_container {
@@ -4291,5 +4296,511 @@ select:visited {
 .webinars {
   .fancybox-bg {
     background: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+.new_speed__desc_cryptocurrency {
+  margin-top: 80px;
+  padding: 35px 28px;
+  box-sizing: border-box;
+  background: #2f3945;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $font-18;
+  line-height: 160%;
+  /* or 29px */
+  color: $white;
+
+  @include respond-to("tablet") {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+}
+
+.new_speed--yellow {
+  background: linear-gradient(280.94deg, #ffbb55 8.83%, #f07c00 92.64%);
+}
+
+.feat_tk__slider_wrapper__cryptocurrency {
+  .feat_tk__arrow {
+  }
+}
+
+.feat_tk__slider__cryptocurrency {
+  .item {
+    padding: 0 !important;
+
+    &:nth-child(2) {
+      img {
+        max-width: 630px;
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        padding-bottom: 65px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pac_ad__little_title,
+  .pac_ad__subtitle {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 45px auto 75px;
+  }
+}
+
+.cryptocurrency {
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to("tablet") {
+      display: block;
+
+      span.db {
+        display: none;
+      }
+
+      .cryptocurrency__item {
+        margin-top: 20px;
+        font-size: 12px;
+
+        &:before {
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  &__line {
+    border-bottom: 1.5px solid #3c4856;
+    max-width: 761px;
+    margin: 0 auto 75px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 25px;
+    margin: 0 20px;
+    font-weight: $bold;
+    font-size: $base-font-size;
+    line-height: $what_tk__subtitle;
+    color: $white;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #21c5a2;
+      position: absolute;
+      left: 0;
+      top: 13px;
+    }
+  }
+}
+
+.multiple_cryptocurrency {
+  & > .pac_ad__little_title,
+  & > .pac_ad__subtitle {
+    text-align: center;
+  }
+  & > .pac_ad__little_title {
+    font-weight: $extrabold;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &__wrapper {
+    padding: 47px 53px;
+    padding-right: 113px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-to("tablet") {
+      padding: 10px;
+    }
+
+    .pac_ad__little_title,
+    .pac_ad__subtitle {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(#3b8bd4 0%, #06bd98 100%);
+      z-index: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      bottom: 2px;
+      right: 2px;
+      background: #202830;
+      z-index: 1;
+    }
+  }
+}
+
+.cryptocurrency_sec {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+  }
+
+  &__heading {
+    background: #2b3541;
+    border-radius: 5px;
+    font-weight: $medium;
+    font-size: 26px;
+    line-height: 44px;
+    /* identical to box height, or 169% */
+    color: $white;
+    margin-bottom: 10px;
+
+    height: 86px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      display: block;
+      margin: 0 25px;
+    }
+
+    @include respond-to("tablet") {
+      font-size: 16px;
+
+      svg {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &__items {
+    width: calc(50% - 45px / 2);
+
+    @include respond-to("tablet") {
+      width: 100%;
+
+      & + .cryptocurrency_sec__items {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include respond-to("tablet") {
+      padding: 10px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #636b75;
+    }
+  }
+
+  &__title {
+    font-weight: $bold;
+    font-size: $base-font-size;
+    line-height: 140%;
+    color: $white;
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 140%;
+    /* or 20px */
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.cryptocurrency_ddos {
+  padding: 38px 53px;
+  padding-right: 114px;
+  margin-top: 60px;
+  background: #2b3541;
+  border-radius: 5px;
+
+  @include respond-to("tablet") {
+    padding: 10px;
+  }
+
+  &__title {
+    font-weight: $bold;
+    font-size: 24px;
+    line-height: 130%;
+    /* or 31px */
+    color: $white;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 140%;
+    /* or 20px */
+    color: $white;
+  }
+}
+.pac_ad__wrapper.antifraud {
+  padding: 70px 55px 80px 80px;
+
+  @include respond-to("tablet-wide") {
+    padding: 10px;
+  }
+}
+
+.antifraud {
+  &__title {
+    font-weight: $extrabold;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    color: $white;
+    margin-bottom: 95px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond-to("tablet-wide") {
+      display: block;
+    }
+  }
+
+  &__texts {
+    width: 50%;
+    max-width: 320px;
+
+    @include respond-to("tablet-wide") {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-weight: $medium;
+    font-size: 13px;
+    line-height: 21px;
+    /* identical to box height, or 165% */
+    text-transform: uppercase;
+    color: #67707c;
+    padding-top: 10px;
+    border-top: 1px solid #67707c;
+    text-decoration: none;
+
+    & + .antifraud__text {
+      margin-top: 25px;
+    }
+
+    &:hover {
+      color: #e5e5e5;
+      border-top: 1px solid #e5e5e5;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+
+    @include respond-to("tablet-wide") {
+      max-width: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .item {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 265px;
+      margin: 0 auto 113px;
+
+      @include respond-to("tablet-wide") {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__arrows {
+    width: 114px;
+    position: absolute;
+    bottom: 235px;
+    right: 225px;
+
+    @include respond-to("tablet-wide") {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-weight: $normal;
+    font-size: $small-font;
+    line-height: 20px;
+    /* or 143% */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.pac_ad__subtitle--before {
+  padding-left: 26px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background: #00e8b6;
+  }
+}
+
+.tk_strategy__block {
+  position: relative;
+
+  &__title {
+    font-weight: $medium;
+    font-size: 13px;
+    line-height: 17px;
+    color: #637786;
+    cursor: pointer;
+  }
+
+  &__subtitle {
+    font-weight: $normal;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 131% */
+    color: #637786;
+    opacity: 0.85;
+    padding-top: 10px;
+    padding-right: 22px;
+    display: none;
+  }
+
+  &__plus {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    width: 14px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      position: absolute;
+      display: block;
+      background-color: #637786;
+      opacity: 0.5;
+      width: 10px;
+      height: 1px;
+      transition: all 0.5s;
+
+      &:nth-child(2) {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &.active {
+    span {
+      &:nth-child(2) {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.wblue {
+  background: #009ffa;
+}
+
+.revenue__wrapper__cryptocurrency {
+  .revenue__heading {
+    margin-bottom: 27px;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .revenue__flex {
+    display: block;
+
+    img {
+      max-width: none;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      margin-left: 0;
+
+      li + li {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .revenue:nth-child(4) {
+    .text {
+      opacity: 1;
+    }
   }
 }

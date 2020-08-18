@@ -446,6 +446,12 @@
       color: $white;
       opacity: 0.8;
 
+      @include respond-to("tablet") {
+        span.db {
+          display: none;
+        }
+      }
+
       &_num {
         font-weight: normal;
         font-size: 14px;
