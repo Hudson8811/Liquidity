@@ -10,6 +10,13 @@ $(document).on("scroll", function () {
         $svg.height()) *
       0.85;
     if (p < 0.282955344441662) p = 0.282955344441662;
+
+    if (p > 0.282955344441662) {
+      $("#svgline").addClass("active");
+    } else {
+      $("#svgline").removeClass("active");
+    }
+
     $svg.drawsvg("progress", p);
     console.log(p);
     console.log(p > 0.87);

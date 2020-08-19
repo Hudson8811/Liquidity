@@ -58,6 +58,12 @@
     margin-top: 50px;
 
     .row {
+      &:nth-child(1) {
+        .col {
+          color: #3f3f3f;
+        }
+      }
+
       .col {
         height: auto;
       }

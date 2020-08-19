@@ -683,6 +683,18 @@ $(document).ready(function () {
   } else {
   }
 
+  let chechSvgTrigger = true;
+
+  // function checkSvg() {
+  //   if (checkContent(".ball02") && chechSvgTrigger) {
+  //     $("#svgline").addClass("visible");
+  //     chechSvgTrigger = false;
+  //   } else if (checkContent(".ball02") && !chechSvgTrigger) {
+  //     $("#svgline").removeClass("visible");
+  //     chechSvgTrigger = true;
+  //   }
+  // }
+
   function checkPositionSpeed() {
     // проверка - виден див полностью или нет
     if (checkContent(".speed_form--left") === true) {
@@ -881,10 +893,11 @@ $(document).ready(function () {
     pauseAutoPlayOnHover: false,
   });
 
-  $(".mac_slider--slick-item").on("click", function () {
-    let index = $(this).index();
-    $(".mac_slider--slick").flickity("select", index);
-  });
+  // изменение слайдов по клику
+  // $(".mac_slider--slick-item").on("click", function () {
+  //   let index = $(this).index();
+  //   $(".mac_slider--slick").flickity("select", index);
+  // });
 
   $(".business--slick_slider").flickity({
     wrapAround: true,
@@ -1549,7 +1562,8 @@ $(document).ready(function () {
         $(".evol_crypto_table").offset().top - $(this).scrollTop();
 
       let tableLastPos2 =
-        $(".evol_crypto_table .evol__table__row:last-child").offset().top -
+        $(".evol_crypto_table").offset().top +
+        $(".evol_crypto_table").height() -
         $(this).scrollTop();
 
       if (tablePos < 130) {
@@ -1565,7 +1579,7 @@ $(document).ready(function () {
       if (tablePos2 < 130) {
         $(".evol_crypto_table").addClass("fixed");
 
-        if (tableLastPos2 < 150) {
+        if (tableLastPos2 < 60) {
           $(".evol_crypto_table").removeClass("fixed");
         }
       } else {

@@ -78,6 +78,7 @@
   .feat_tk__text_block {
     .feat_tk__text_block__desc__wrapper {
       margin-bottom: 20px;
+      margin-top: 20px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -86,6 +87,8 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        width: 45%;
 
         & + .feat_tk__text_block__desc {
           margin-top: 0;
