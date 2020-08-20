@@ -4265,7 +4265,7 @@ select:visited {
 
 .feat_tk__title__black {
   font-style: normal;
-  font-weight: normal;
+  font-weight: $light;
   font-size: 25px;
   line-height: 44px;
   /* or 176% */
@@ -4552,7 +4552,7 @@ select:visited {
   &__subtitle {
     font-weight: $normal;
     font-size: $small-font;
-    line-height: 140%;
+    line-height: 150%;
     /* or 20px */
     color: rgba(255, 255, 255, 0.8);
   }
@@ -4581,7 +4581,7 @@ select:visited {
   &__subtitle {
     font-weight: $normal;
     font-size: $small-font;
-    line-height: 140%;
+    line-height: 150%;
     /* or 20px */
     color: $white;
   }
@@ -4595,6 +4595,18 @@ select:visited {
 }
 
 .antifraud {
+  &__lock {
+    display: block;
+    margin-bottom: auto;
+  }
+
+  &__slider__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__title {
     font-weight: $extrabold;
     font-size: 36px;
@@ -4608,7 +4620,7 @@ select:visited {
   &__flex {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 
     @include respond-to("tablet-wide") {
       display: block;
@@ -4636,12 +4648,13 @@ select:visited {
     padding-top: 10px;
     border-top: 1px solid #67707c;
     text-decoration: none;
+    transition: all 0.5s;
 
     & + .antifraud__text {
       margin-top: 25px;
     }
 
-    &:hover {
+    &.active {
       color: #e5e5e5;
       border-top: 1px solid #e5e5e5;
     }
@@ -4677,7 +4690,7 @@ select:visited {
   &__arrows {
     width: 114px;
     position: absolute;
-    bottom: 235px;
+    bottom: 215px;
     right: 225px;
 
     @include respond-to("tablet-wide") {
@@ -4812,4 +4825,35 @@ select:visited {
   .what_tk__subtitle {
     color: #82898f;
   }
+}
+
+.revenue__wrapper__cryptocurrency {
+  .revenue__flex li {
+    .prsnt,
+    .circle {
+      margin-right: 15px;
+    }
+
+    .prsnt {
+      min-width: 35px;
+      text-align: right;
+    }
+  }
+}
+
+.svg_lock_path {
+  stroke-dasharray: 126%;
+  stroke-dashoffset: 100%;
+  transition: all 0.5s;
+}
+
+.circl_lock {
+  transition: all 0.5s;
+
+  transform: translate(-220px, -4px);
+}
+
+.slick-disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }

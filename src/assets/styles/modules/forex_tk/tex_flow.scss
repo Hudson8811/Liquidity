@@ -1,5 +1,9 @@
 .section.dark_style.tex_flow {
   background: #242f3c !important;
+
+  .section__title {
+    margin-bottom: 80px;
+  }
 }
 
 .tex_flow {
@@ -288,7 +292,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     border-bottom: 1px solid rgba(227, 228, 230, 0.2);
 
     @media screen and (max-width: 580px) {
@@ -318,7 +322,7 @@
     /* identical to box height, or 143% */
     color: #dbdbdb;
 
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     border-radius: 5px;
     transition: all 0.5s;
@@ -335,7 +339,7 @@
     }
 
     &:hover {
-      border: 1px solid #01bd95;
+      border: 2px solid #01bd95;
     }
   }
 

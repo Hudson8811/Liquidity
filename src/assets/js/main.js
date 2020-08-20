@@ -966,16 +966,31 @@ $(document).ready(function () {
   });
 
   $(".antifraud__slider").slick({
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
     prevArrow: $(".antifraud .feat_tk__arrow__prev"),
     nextArrow: $(".antifraud .feat_tk__arrow__next"),
   });
 
+  $(".tk_strategy .tk_strategy__block:nth-child(1)").addClass("active");
+  $(".tk_strategy .tk_strategy__block:nth-child(1)")
+    .children(".tk_strategy__block__subtitle")
+    .slideDown();
+
   $(document).on("click", ".tk_strategy__block", function () {
-    $(this).children(".tk_strategy__block__subtitle").slideToggle();
-    $(this).toggleClass("active");
+    if (!$(this).hasClass("active")) {
+      $(this).siblings(".tk_strategy__block").removeClass("active");
+      $(this)
+        .siblings(".tk_strategy__block")
+        .children(".tk_strategy__block__subtitle")
+        .slideUp();
+      $(this).children(".tk_strategy__block__subtitle").slideDown();
+      $(this).addClass("active");
+    } else {
+      $(this).children(".tk_strategy__block__subtitle").slideUp();
+      $(this).removeClass("active");
+    }
   });
 
   $(".feat_tk__slider1").slick({
@@ -1282,6 +1297,44 @@ $(document).ready(function () {
     }
   });
 
+  $(".antifraud__slider").on("afterChange", function (
+    event,
+    slick,
+    currentSlide
+  ) {
+    $(".antifraud__text").removeClass("active");
+    $('.antifraud__text[data-id="' + currentSlide + '"]').addClass("active");
+
+    $(".svg_lock_path").css(
+      "stroke-dasharray",
+      "calc(126% + " + currentSlide * 50 + "px)"
+    );
+
+    if (currentSlide == 1) {
+      $(".circl_lock").css({ transform: "translate(-220px, -30px)" });
+    } else if (currentSlide == 2) {
+      $(".circl_lock").css({ transform: "translate(-205px, -72px)" });
+    } else if (currentSlide == 3) {
+      $(".circl_lock").css({ transform: "translate(-172px, -108px)" });
+    } else if (currentSlide == 4) {
+      $(".circl_lock").css({ transform: "translate(-128px, -124px)" });
+    } else if (currentSlide == 5) {
+      $(".circl_lock").css({ transform: "translate(-78px, -121px)" });
+    } else if (currentSlide == 6) {
+      $(".circl_lock").css({ transform: "translate(-31px, -88px)" });
+    } else if (currentSlide == 7) {
+      $(".circl_lock").css({ transform: "translate(-10px, -56px)" });
+    } else if (currentSlide == 8) {
+      $(".circl_lock").css({ transform: "translate(-4px, -4px)" });
+    } else if (currentSlide == 0) {
+      $(".circl_lock").css({ transform: "translate(-220px, -4px)" });
+    }
+  });
+
+  $(document).on("click", ".antifraud__text", function (e) {
+    e.preventDefault();
+  });
+
   $("#machine-slider").slick({
     infinite: true,
     vertical: true,
@@ -1555,7 +1608,8 @@ $(document).ready(function () {
         $(".enguine_table__crypto_ck").offset().top - $(this).scrollTop();
 
       let tableLastPos =
-        $(".enguine_table__crypto_ck .row:last-child").offset().top -
+        $(".enguine_table__crypto_ck").offset().top +
+        $(".enguine_table__crypto_ck").height() -
         $(this).scrollTop();
 
       let tablePos2 =
@@ -1566,10 +1620,10 @@ $(document).ready(function () {
         $(".evol_crypto_table").height() -
         $(this).scrollTop();
 
-      if (tablePos < 130) {
+      if (tablePos < 51) {
         $(".enguine_table__crypto_ck").addClass("fixed");
 
-        if (tableLastPos < 150) {
+        if (tableLastPos < 51) {
           $(".enguine_table__crypto_ck").removeClass("fixed");
         }
       } else {

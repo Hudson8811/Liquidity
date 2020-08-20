@@ -398,6 +398,10 @@
           justify-content: center;
           align-items: center;
 
+          &:nth-child(1) {
+            justify-content: flex-start !important;
+          }
+
           &:not(:last-child) {
             border-right: 3px solid $bluebg;
             box-sizing: border-box;

@@ -55,6 +55,10 @@
   box-sizing: border-box;
   width: 98%;
 
+  .what_tk__subtitle {
+    color: #82898f;
+  }
+
   @include respond-to("tablet") {
     padding: 10px;
   }
