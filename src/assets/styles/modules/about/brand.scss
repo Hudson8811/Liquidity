@@ -166,10 +166,10 @@
       box-sizing: border-box;
       border: 1px solid rgba(255, 255, 255, 0);
       box-sizing: border-box;
-      transition: all 0.7s;
+      transition: opacity 0.7s, min-width 1s, max-width 1s, min-height 1s,
+        max-height 1s;
       z-index: 1;
-      transform-origin: center;
-
+      transform-origin: center center;
       will-change: auto;
 
       svg {
@@ -182,7 +182,6 @@
 
       &.lastStep-anim {
         position: absolute;
-        top: 0;
         border: none;
         background: transparent;
         display: grid;
@@ -193,18 +192,14 @@
         max-height: 620px;
         min-width: 620px;
         min-height: 620px;
-        left: 50%;
-        margin-left: -310px;
         padding: 0;
         z-index: 21;
-        transition: all 1s;
 
         @media screen and (max-width: 1900px) {
           max-width: 520px;
           max-height: 520px;
           min-width: 520px;
           min-height: 520px;
-          margin-left: -260px;
         }
 
         svg {
@@ -244,8 +239,7 @@
           max-height: 166px;
           min-width: 166px;
           min-height: 166px;
-          margin-left: -83px;
-          top: 210px;
+          top: 0;
 
           svg {
             justify-content: center;
@@ -454,7 +448,7 @@
       align-items: center;
       z-index: 20;
       opacity: 1;
-      transition: opacity 0.5s;
+      transition: opacity 0.5s, transform 0.5s;
 
       &.lastStepOpacity0 {
         opacity: 0;
@@ -469,10 +463,8 @@
         text-align: center;
         color: $white;
         opacity: 0;
-        max-width: 0;
-        max-height: 0;
         overflow: hidden;
-        transition: opacity 0.5s, padding 0.5s;
+        transition: opacity 0.3s;
         padding-top: 90px;
 
         @media screen and (max-width: 1900px) {
@@ -481,8 +473,6 @@
 
         &.active {
           opacity: 1;
-          max-width: 100%;
-          max-height: 100%;
         }
       }
 
@@ -504,6 +494,10 @@
           max-height 0.5s;
         position: relative;
         will-change: auto;
+        position: absolute;
+        z-index: 10;
+        cursor: pointer;
+
         img {
           width: auto;
           max-width: 21px;
@@ -524,20 +518,6 @@
 
         &.opacity1-anim {
           opacity: 1 !important;
-        }
-        &.for_move {
-          max-width: 120px;
-          max-height: 120px;
-        }
-
-        &.five_move {
-          max-width: 65px;
-          max-height: 65px;
-        }
-
-        &.six_move {
-          max-width: 50px;
-          max-height: 50px;
         }
 
         .gradient {
@@ -603,20 +583,12 @@
         &:nth-child(5),
         &:nth-child(6) {
           padding-top: 230px;
-
-          @media screen and (max-width: 1900px) {
-            padding-top: 177px;
-          }
         }
 
         &:nth-child(7),
         &:nth-child(8),
         &:nth-child(9) {
           padding-top: 460px;
-
-          @media screen and (max-width: 1900px) {
-            padding-top: 355px;
-          }
         }
 
         &:nth-child(2),
@@ -626,38 +598,21 @@
         }
       }
 
-      &__item[data-id="1"] {
-        .ab__core__icon {
-          border: 7px solid #0abe98;
+      &__icon[data-id="1"] {
+        border: 7px solid #0abe98;
 
-          .gradient {
-            background: #0abe98;
-          }
+        .gradient {
+          background: #0abe98;
+        }
 
-          &.disabled {
-            transform: translateX(-140%);
+        &.active {
+          transform: translate(-140%, -140%);
 
-            @media screen and (max-width: 1900px) {
-              transform: translateX(-110%);
-            }
-          }
-
-          &.three_move {
-            transform: translate(-100%, 40%);
-          }
-
-          &.for_move {
-            transform: translate(-100%, 90%);
-          }
-
-          &.five_move {
-            transform: translate(-100%, 255%);
-          }
-
-          &.six_move {
-            transform: translate(-100%, 355%);
+          @media screen and (max-width: 1900px) {
+            transform: translate(-110%, -110%);
           }
         }
+
         .ab__core__text {
           padding-top: 0;
 
@@ -667,232 +622,122 @@
         }
       }
 
-      &__item[data-id="2"] {
-        .ab__core__icon {
-          .gradient {
-            background: #28f3c8;
-          }
+      &__icon[data-id="2"] {
+        .gradient {
+          background: #28f3c8;
+        }
 
-          border: 7px solid #28f3c8;
+        border: 7px solid #28f3c8;
 
-          &.three_move {
-            transform: translate(0, 40%);
-          }
+        &.active {
+          transform: translate(0%, -140%);
 
-          &.for_move {
-            transform: translate(0, 90%);
-          }
-
-          &.five_move {
-            transform: translate(0, 255%);
-          }
-
-          &.six_move {
-            transform: translate(0, 355%);
+          @media screen and (max-width: 1900px) {
+            transform: translate(0%, -110%);
           }
         }
       }
 
-      &__item[data-id="3"] {
-        .ab__core__icon {
-          border: 7px solid #7dffe0;
+      &__icon[data-id="3"] {
+        border: 7px solid #7dffe0;
 
-          .gradient {
-            background: #7dffe0;
-          }
+        .gradient {
+          background: #7dffe0;
+        }
 
-          &.active {
-            transform: translateX(140%);
-            @media screen and (max-width: 1900px) {
-              transform: translateX(110%);
-            }
-          }
-
-          &.three_move {
-            transform: translate(100%, 40%);
-          }
-
-          &.for_move {
-            transform: translate(100%, 90%);
-          }
-
-          &.five_move {
-            transform: translate(100%, 255%);
-          }
-          &.six_move {
-            transform: translate(100%, 355%);
+        &.active {
+          transform: translate(140%, -140%);
+          @media screen and (max-width: 1900px) {
+            transform: translate(110%, -110%);
           }
         }
       }
 
-      &__item[data-id="4"] {
-        .ab__core__icon {
-          border: 7px solid #079270;
+      &__icon[data-id="4"] {
+        border: 7px solid #079270;
 
-          .gradient {
-            background: #079270;
-          }
+        .gradient {
+          background: #079270;
+        }
 
-          &.disabled {
-            transform: translateX(-140%);
+        &.active {
+          transform: translate(-140%, 0%);
 
-            @media screen and (max-width: 1900px) {
-              transform: translateX(-110%);
-            }
-          }
-
-          &.three_move {
-            transform: translateX(-100%);
-          }
-
-          &.for_move {
-            transform: translate(-100%, 0);
-          }
-
-          &.five_move {
-            transform: translate(-100%, 0);
-          }
-
-          &.six_move {
-            transform: translate(-100%, 0);
+          @media screen and (max-width: 1900px) {
+            transform: translate(-110%, 0%);
           }
         }
       }
 
-      &__item[data-id="5"] {
-        .ab__core__icon {
-          border: 7px solid #0abe98;
+      &__icon[data-id="5"] {
+        border: 7px solid #0abe98;
+        z-index: 11;
 
-          .gradient {
-            background: #0abe98;
+        .gradient {
+          background: #0abe98;
+        }
+      }
+
+      &__icon[data-id="6"] {
+        border: 7px solid #28f3c8;
+
+        .gradient {
+          background: #28f3c8;
+        }
+
+        &.active {
+          transform: translate(140%, 0%);
+
+          @media screen and (max-width: 1900px) {
+            transform: translate(110%, 0%);
           }
         }
       }
 
-      &__item[data-id="6"] {
-        .ab__core__icon {
-          border: 7px solid #28f3c8;
+      &__icon[data-id="7"] {
+        border: 7px solid #046a51;
 
-          .gradient {
-            background: #28f3c8;
-          }
+        .gradient {
+          background: #046a51;
+        }
 
-          &.active {
-            transform: translateX(140%);
+        &.active {
+          transform: translate(-140%, 140%);
 
-            @media screen and (max-width: 1900px) {
-              transform: translateX(110%);
-            }
-          }
-
-          &.three_move {
-            transform: translateX(100%);
-          }
-
-          &.for_move {
-            transform: translate(100%, 0);
-          }
-
-          &.five_move {
-            transform: translate(100%, 0);
-          }
-
-          &.six_move {
-            transform: translate(100%, 0);
+          @media screen and (max-width: 1900px) {
+            transform: translate(-110%, 110%);
           }
         }
       }
 
-      &__item[data-id="7"] {
-        .ab__core__icon {
-          border: 7px solid #046a51;
+      &__icon[data-id="8"] {
+        border: 7px solid #079270;
 
-          .gradient {
-            background: #046a51;
-          }
+        .gradient {
+          background: #079270;
+        }
 
-          &.disabled {
-            transform: translateX(-140%);
+        &.active {
+          transform: translate(0%, 140%);
 
-            @media screen and (max-width: 1900px) {
-              transform: translateX(-110%);
-            }
-          }
-
-          &.three_move {
-            transform: translate(-100%, -40%);
-          }
-
-          &.for_move {
-            transform: translate(-100%, -90%);
-          }
-
-          &.five_move {
-            transform: translate(-100%, -255%);
-          }
-
-          &.six_move {
-            transform: translate(-100%, -355%);
+          @media screen and (max-width: 1900px) {
+            transform: translate(0%, 110%);
           }
         }
       }
 
-      &__item[data-id="8"] {
-        .ab__core__icon {
-          border: 7px solid #079270;
+      &__icon[data-id="9"] {
+        border: 7px solid #0abe98;
 
-          .gradient {
-            background: #079270;
-          }
-
-          &.three_move {
-            transform: translate(0, -40%);
-          }
-
-          &.for_move {
-            transform: translate(0, -90%);
-          }
-
-          &.five_move {
-            transform: translate(0, -255%);
-          }
-
-          &.six_move {
-            transform: translate(0, -355%);
-          }
+        .gradient {
+          background: #0abe98;
         }
-      }
 
-      &__item[data-id="9"] {
-        .ab__core__icon {
-          border: 7px solid #0abe98;
+        &.active {
+          transform: translate(140%, 140%);
 
-          .gradient {
-            background: #0abe98;
-          }
-
-          &.active {
-            transform: translateX(140%);
-
-            @media screen and (max-width: 1900px) {
-              transform: translateX(110%);
-            }
-          }
-
-          &.three_move {
-            transform: translate(100%, -40%);
-          }
-
-          &.for_move {
-            transform: translate(100%, -90%);
-          }
-
-          &.five_move {
-            transform: translate(100%, -255%);
-          }
-
-          &.six_move {
-            transform: translate(100%, -355%);
+          @media screen and (max-width: 1900px) {
+            transform: translate(110%, 110%);
           }
         }
       }
@@ -926,9 +771,9 @@
   position: relative;
   z-index: 40;
 
-  @media screen and (max-width: 1900px) {
-    padding-bottom: 20px;
-  }
+  // @media screen and (max-width: 1900px) {
+  //   padding-bottom: 20px;
+  // }
 
   &.active {
     opacity: 1;
@@ -948,5 +793,26 @@
 
   span {
     margin: 0 4px;
+  }
+}
+
+.ab__core__text_wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ab__core__text {
+    position: absolute;
+  }
+}
+
+.ab__core {
+  &.topMove {
+    transform: translateY(-128px);
   }
 }

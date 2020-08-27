@@ -158,25 +158,25 @@ $(document).ready(function () {
     const element5 = $('.ab__text__item[data-id="5"]');
     const element6 = $('.ab__text__item[data-id="6"]');
 
-    const logo1 = $('.ab__core__item[data-id="1"] .ab__core__icon');
-    const logo2 = $('.ab__core__item[data-id="2"] .ab__core__icon');
-    const logo3 = $('.ab__core__item[data-id="3"] .ab__core__icon');
-    const logo4 = $('.ab__core__item[data-id="4"] .ab__core__icon');
-    const logo5 = $('.ab__core__item[data-id="5"] .ab__core__icon');
-    const logo6 = $('.ab__core__item[data-id="6"] .ab__core__icon');
-    const logo7 = $('.ab__core__item[data-id="7"] .ab__core__icon');
-    const logo8 = $('.ab__core__item[data-id="8"] .ab__core__icon');
-    const logo9 = $('.ab__core__item[data-id="9"] .ab__core__icon');
+    const logo1 = $('.ab__core__icon[data-id="1"]');
+    const logo2 = $('.ab__core__icon[data-id="2"]');
+    const logo3 = $('.ab__core__icon[data-id="3"]');
+    const logo4 = $('.ab__core__icon[data-id="4"]');
+    const logo5 = $('.ab__core__icon[data-id="5"]');
+    const logo6 = $('.ab__core__icon[data-id="6"]');
+    const logo7 = $('.ab__core__icon[data-id="7"]');
+    const logo8 = $('.ab__core__icon[data-id="8"]');
+    const logo9 = $('.ab__core__icon[data-id="9"]');
 
-    const discription1 = $('.ab__core__item[data-id="1"] .ab__core__text');
-    const discription2 = $('.ab__core__item[data-id="2"] .ab__core__text');
-    const discription3 = $('.ab__core__item[data-id="3"] .ab__core__text');
-    const discription4 = $('.ab__core__item[data-id="4"] .ab__core__text');
-    const discription5 = $('.ab__core__item[data-id="5"] .ab__core__text');
-    const discription6 = $('.ab__core__item[data-id="6"] .ab__core__text');
-    const discription7 = $('.ab__core__item[data-id="7"] .ab__core__text');
-    const discription8 = $('.ab__core__item[data-id="8"] .ab__core__text');
-    const discription9 = $('.ab__core__item[data-id="9"] .ab__core__text');
+    const discription1 = $('.ab__core__text[data-id="1"] ');
+    const discription2 = $('.ab__core__text[data-id="2"] ');
+    const discription3 = $('.ab__core__text[data-id="3"] ');
+    const discription4 = $('.ab__core__text[data-id="4"] ');
+    const discription5 = $('.ab__core__text[data-id="5"] ');
+    const discription6 = $('.ab__core__text[data-id="6"] ');
+    const discription7 = $('.ab__core__text[data-id="7"] ');
+    const discription8 = $('.ab__core__text[data-id="8"] ');
+    const discription9 = $('.ab__core__text[data-id="9"] ');
 
     const bigCircle = document.querySelector(".circle");
     const radius = bigCircle.r.baseVal.value;
@@ -201,17 +201,11 @@ $(document).ready(function () {
     let logoAnimTrigger = false;
     let fullAnimTrigger = false;
     let logo1Trigger = false;
-    let logo2Trigger = false;
-    let logo3Trigger = false;
-    let logo4Trigger = false;
-    let logo5Trigger = false;
-    let logo6Trigger = false;
-    let logo7Trigger = false;
-    let logo8Trigger = false;
-    let logo9Trigger = false;
+    let lockLogoAnim = false;
     let warking = true;
 
     $(document).on("click", ".reanim_btn", function () {
+      setProgress(0);
       $(".ab__content").css("opacity", "0");
       warking = true;
       startAnimTriger = true;
@@ -221,17 +215,10 @@ $(document).ready(function () {
       logoAnimTrigger = false;
       fullAnimTrigger = false;
       logo1Trigger = false;
-      logo2Trigger = false;
-      logo3Trigger = false;
-      logo4Trigger = false;
-      logo5Trigger = false;
-      logo6Trigger = false;
-      logo7Trigger = false;
-      logo8Trigger = false;
-      logo9Trigger = false;
+      lockLogoAnim = false;
       $(".ab__title_block").removeClass("active");
       $(".ab__text").removeClass("disabled");
-      $(".ab__circle").removeClass("disabled");
+      $(".ab__circle").removeClass("disabled").removeClass("active");
       activated(".ab__text__item");
       $(".ab__logo")
         .removeClass("lastStep-anim logoAnim")
@@ -251,6 +238,9 @@ $(document).ready(function () {
       $(".ab__content").css({
         transform: "translateY(10%)",
       });
+
+      $(".ab__core__text").attr("style", "");
+      $(".ab__core__text").removeClass("active");
 
       setTimeout(() => {
         $(".ab__content").css({
@@ -274,6 +264,7 @@ $(document).ready(function () {
       logo7Trigger = false;
       logo8Trigger = false;
       logo9Trigger = false;
+      lockLogoAnim = true;
       discription1.removeClass("active");
       discription2.removeClass("active");
       discription3.removeClass("active");
@@ -388,8 +379,7 @@ $(document).ready(function () {
 
           setTimeout(() => {
             $(".skip__anim_btn--js").addClass("active");
-            logo1.addClass("active");
-            discription1.addClass("active");
+            logo5.addClass("active");
           }, 2000);
 
           setTimeout(() => {
@@ -400,40 +390,14 @@ $(document).ready(function () {
         }
 
         if (logo1Trigger) {
-          $(".ab__logo").addClass("disabled");
-          setTimeout(() => {
-            logo1.addClass("disabled");
-            discription1.removeClass("active");
-            logo2.addClass("active");
-
-            discription2.addClass("active");
-          }, 0);
-
-          setTimeout(() => {
-            logo2Trigger = true;
-          }, 1000);
           logo1Trigger = false;
-        } else if (logo2Trigger) {
-          setTimeout(() => {
-            logo2.addClass("disabled");
-            discription2.removeClass("active");
-            logo3.addClass("active");
-            discription3.addClass("active");
-          }, 0);
+          $(".ab__logo").addClass("disabled");
+
+          $(".skip__anim_btn--js").removeClass("active");
 
           setTimeout(() => {
-            logo3Trigger = true;
-          }, 1000);
-          logo2Trigger = false;
-        } else if (logo3Trigger) {
-          setProgress(0);
-          setTimeout(() => {
-            logo3.addClass("disabled");
-            discription3.removeClass("active");
-            logo4.addClass("active");
-            discription4.addClass("active");
+            logo1.addClass("active");
             $(".ab__core__item").addClass("p0-anim");
-
             $(".animation_brand .new_logo")
               .addClass("height0-anim")
               .addClass("disabled");
@@ -441,111 +405,171 @@ $(document).ready(function () {
           }, 0);
 
           setTimeout(() => {
-            logo4Trigger = true;
-          }, 1000);
-
-          logo3Trigger = false;
-        } else if (logo4Trigger) {
-          setTimeout(() => {
-            logo4.addClass("disabled");
-            discription4.removeClass("active");
-            logo5.addClass("active");
-            discription5.addClass("active");
-          }, 0);
+            logo2.addClass("active");
+          }, 500);
 
           setTimeout(() => {
-            logo5Trigger = true;
+            logo3.addClass("active");
           }, 1000);
-          logo4Trigger = false;
-        } else if (logo5Trigger) {
+
           setTimeout(() => {
-            logo5.addClass("disabled");
-            discription5.removeClass("active");
             logo6.addClass("active");
-            discription6.addClass("active");
-          }, 0);
+          }, 1500);
 
           setTimeout(() => {
-            logo6Trigger = true;
-          }, 1000);
-          logo5Trigger = false;
-        } else if (logo6Trigger) {
-          setTimeout(() => {
-            logo6.addClass("disabled");
-            discription6.removeClass("active");
-            logo7.addClass("active");
-            discription7.addClass("active");
-          }, 0);
-
-          setTimeout(() => {
-            logo7Trigger = true;
-          }, 1000);
-          logo6Trigger = false;
-        } else if (logo7Trigger) {
-          setTimeout(() => {
-            logo7.addClass("disabled");
-            discription7.removeClass("active");
-            logo8.addClass("active");
-            discription8.addClass("active");
-          }, 0);
-
-          setTimeout(() => {
-            logo8Trigger = true;
-          }, 1000);
-          logo7Trigger = false;
-        } else if (logo8Trigger) {
-          setTimeout(() => {
-            logo8.addClass("disabled");
-            discription8.removeClass("active");
             logo9.addClass("active");
-            discription9.addClass("active");
-          }, 0);
+          }, 2000);
+
           setTimeout(() => {
-            logo9Trigger = true;
-          }, 1000);
-          $(".ab__logo")
-            .addClass("lastStep-anim")
-            .removeClass("disabled")
-            .removeClass("active")
-            .addClass("opacity0-anim");
+            logo8.addClass("active");
+          }, 2500);
 
-          $(".ab__logo svg").removeClass("active");
-
-          logo8Trigger = false;
-        } else if (logo9Trigger) {
           setTimeout(() => {
-            $(".animation_brand .section__title")
-              .addClass("height0-anim")
-              .addClass("disabled");
-            $(".skip__anim_btn").removeClass("active");
-            $(".ab__core__icon").addClass("opacity1-anim");
-            discription9.removeClass("active");
+            logo7.addClass("active");
+          }, 3000);
 
+          setTimeout(() => {
+            logo4.addClass("active");
+
+            $(".ab__logo")
+              .removeClass("disabled")
+              .removeClass("active")
+              .addClass("opacity0-anim");
+            $(".ab__logo svg").removeClass("active");
+          }, 3500);
+
+          setTimeout(() => {
+            $(".ab__core__icon").addClass("disabled");
+          }, 4000);
+
+          setTimeout(() => {
+            $(".ab__core").addClass("topMove");
+            $(".ab__core__text").removeClass("active");
+            $(".ab__core__icon").addClass("disabled");
+            $(logo1).removeClass("disabled");
+            $(discription1).addClass("active");
+          }, 4500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo2).removeClass("disabled");
+              $(discription2).addClass("active");
+
+              $(".ab__core__icon").hover(function () {
+                var iconId = $(this).data("id");
+                $(".ab__core__text").removeClass("active");
+                $(".ab__core__icon").addClass("disabled");
+                $(this).removeClass("disabled");
+                $('.ab__core__text[data-id="' + iconId + '"]').addClass(
+                  "active"
+                );
+                lockLogoAnim = true;
+                animationLastStepTrigger = true;
+              });
+            }
+          }, 5500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo3).removeClass("disabled");
+              $(discription3).addClass("active");
+            }
+          }, 6500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo4).removeClass("disabled");
+              $(discription4).addClass("active");
+            }
+          }, 7500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo5).removeClass("disabled");
+              $(discription5).addClass("active");
+            }
+          }, 8500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo6).removeClass("disabled");
+              $(discription6).addClass("active");
+            }
+          }, 9500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo7).removeClass("disabled");
+              $(discription7).addClass("active");
+            }
+          }, 10500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo8).removeClass("disabled");
+              $(discription8).addClass("active");
+            }
+          }, 11500);
+
+          setTimeout(() => {
+            if (!lockLogoAnim) {
+              $(".ab__core__text").removeClass("active");
+              $(".ab__core__icon").addClass("disabled");
+              $(logo9).removeClass("disabled");
+              $(discription9).addClass("active");
+            }
+          }, 12500);
+
+          setTimeout(() => {
+            $(".ab__core__icon").off();
             animationLastStepTrigger = true;
-          }, 0);
-          logo9Trigger = false;
+          }, 13000);
         } else if (animationLastStepTrigger) {
+          setTimeout(() => {
+            $(".ab__core__icon").removeClass("disabled");
+          }, 0);
+          setTimeout(() => {
+            $(".ab__core__text").removeClass("active").css("opacity", "0");
+            $("#animation_brand .section__title").addClass(
+              "height0-anim disabled"
+            );
+            $(".ab__content").removeClass("height800-anim");
+            $(".ab__core").removeClass("topMove");
+
+            $(".skip__anim_btn").removeClass("active");
+            $(".ab__logo").addClass("lastStep-anim");
+          }, 500);
+
           setTimeout(() => {
             $(".ab__logo").removeClass("opacity0-anim");
             $(".ab__core").addClass("lastStepOpacity0");
-          }, 700);
-
-          setTimeout(() => {
-            $(".ab__logo").addClass("logoAnim");
-            $(".skip__anim_btn").removeClass("active");
           }, 1000);
 
           setTimeout(() => {
+            $(".ab__logo").addClass("logoAnim");
+          }, 1500);
+
+          setTimeout(() => {
             $(".ab__title_block").addClass("active");
-          }, 1200);
+          }, 1600);
 
           setTimeout(() => {
             fullAnimTrigger = true;
-          }, 1400);
-
-          setTimeout(() => {
-            logoAnimTrigger = true;
-          }, 1400);
+          }, 1600);
 
           animationLastStepTrigger = false;
         }
