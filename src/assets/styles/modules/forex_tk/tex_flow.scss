@@ -214,7 +214,7 @@
       line-height: 140%;
       /* or 18px */
       color: $white;
-      opacity: 0.8;
+      opacity: 0.5;
       margin-top: 15px;
 
       @media screen and (max-width: 980px) {
@@ -322,7 +322,7 @@
     /* identical to box height, or 143% */
     color: #dbdbdb;
 
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     border-radius: 5px;
     transition: all 0.5s;
@@ -339,7 +339,7 @@
     }
 
     &:hover {
-      border: 2px solid #01bd95;
+      border: 1px solid #01bd95;
     }
   }
 
@@ -448,7 +448,7 @@
       line-height: 20px;
       /* or 143% */
       color: $white;
-      opacity: 0.8;
+      opacity: 0.5;
 
       @include respond-to("tablet") {
         span.db {
@@ -502,6 +502,30 @@
       width: 100% !important;
       margin-top: 30px;
     }
+
+    &__plus {
+      flex-shrink: 0;
+      margin-top: 5px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 1px;
+        position: absolute;
+        background-color: #e3e4e6;
+        transition: transform 0.5s;
+      }
+
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
   }
 
   &__acard__title {
@@ -510,17 +534,20 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    &.active {
+      .feat_tk__acard__plus {
+        &:after {
+          transform: rotate(0);
+        }
+      }
+    }
   }
 
   &__acard__item {
     box-sizing: border-box;
     padding-right: 9px;
     width: 100%;
-
-    svg {
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
 
     & + .feat_tk__acard__item {
       margin-top: 15px;
@@ -552,5 +579,11 @@
     p {
       font-weight: $normal;
     }
+  }
+}
+
+.feat_tk__text_block__desc__wrapper {
+  .feat_tk__text_block__desc {
+    opacity: 1;
   }
 }

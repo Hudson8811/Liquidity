@@ -13,6 +13,10 @@
   .what_tk_cat__desc {
     width: 55%;
 
+    .bold {
+      color: #596065;
+    }
+
     p + p {
       margin-top: 20px;
     }
@@ -21,6 +25,10 @@
   .what_tk_cat__desc__item {
     position: relative;
     padding-left: 21px;
+
+    .bold {
+      color: #596065;
+    }
 
     &:before {
       content: "";
@@ -31,7 +39,7 @@
       position: absolute;
       top: 9px;
       left: 0;
-      background: #747474;
+      background: #596065;
     }
   }
   .what_tk__subtitle {

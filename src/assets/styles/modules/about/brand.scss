@@ -167,7 +167,7 @@
       border: 1px solid rgba(255, 255, 255, 0);
       box-sizing: border-box;
       transition: opacity 0.7s, min-width 1s, max-width 1s, min-height 1s,
-        max-height 1s;
+        max-height 1s, transform 1s;
       z-index: 1;
       transform-origin: center center;
       will-change: auto;
@@ -240,6 +240,11 @@
           min-width: 166px;
           min-height: 166px;
           top: 0;
+          transform: translateY(85px);
+
+          @media screen and (max-width: 1900px) {
+            transform: translateY(150px);
+          }
 
           svg {
             justify-content: center;
