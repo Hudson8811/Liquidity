@@ -1,29 +1,27 @@
-var $doc = $(document),
-  $win = $(window),
-  $svg = $("#svgline").drawsvg(),
-  max = $doc.height() - $win.height();
+var  $svg = $("#svgline").drawsvg({
+  stagger: 0,
+  easing: 'linear'
+});
 
 $(document).on("scroll", function () {
-  if ($(this).scrollTop() >= $("#svgline").position().top - $win.height()) {
-    var p =
-      (($doc.scrollTop() - $("#svgline").position().top + $win.height()) /
-        $svg.height()) *
-      0.85;
-    if (p < 0.282955344441662) p = 0.282955344441662;
-
-    if (p > 0.282955344441662) {
+  if ($(this).scrollTop() >= $("#svgline").position().top - $(window).height()/2) {
+    var p =  ( ($(document).scrollTop() - ($("#svgline").position().top - $(window).height()/2)) / $svg.height() );
+    if (p > 0.001) {
       $("#svgline").addClass("active");
     } else {
       $("#svgline").removeClass("active");
     }
-
+    if (p > 0.99) {
+      p=1;
+    }
     $svg.drawsvg("progress", p);
-    console.log(p);
-    console.log(p > 0.87);
-    if (p > 0.87) {
+    if (p > 0.99) {
       $(".ball01").addClass("active");
     } else {
       $(".ball01").removeClass("active");
     }
   }
 });
+
+
+
