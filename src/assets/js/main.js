@@ -250,6 +250,7 @@ $(document).ready(function () {
       }, 500);
 
       $(".ab__core__icon").off();
+      $(".animation_brand").off("mousemove");
     });
 
     $(document).on("click", ".skip__anim_btn--js", function () {
@@ -373,120 +374,54 @@ $(document).ready(function () {
           animationFirstStepTrigger = false;
         }
 
-        if (logo1Trigger) {
-          logo1Trigger = false;
+        $(".animation_brand").mousemove(function () {
+          if (logo1Trigger) {
+            logo1Trigger = false;
 
-          setTimeout(() => {
-            logo4.addClass("active");
+            setTimeout(() => {
+              logo4.addClass("active");
 
-            $(".ab__logo")
-              .removeClass("disabled")
-              .removeClass("active")
-              .addClass("opacity0-anim");
-            $(".ab__logo svg").removeClass("active");
-          }, 0);
+              $(".ab__logo")
+                .removeClass("disabled")
+                .removeClass("active")
+                .addClass("opacity0-anim");
+              $(".ab__logo svg").removeClass("active");
+            }, 0);
 
-          setTimeout(() => {
-            $(".ab__core__icon").addClass("disabled");
-          }, 500);
-
-          setTimeout(() => {
-            $(".ab__core").addClass("topMove");
-            $(".ab__core__text").removeClass("active");
-            $(".ab__core__icon").addClass("disabled");
-            $(logo1).removeClass("disabled");
-            $(discription1).addClass("active");
-          }, 1500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
+            setTimeout(() => {
+              $(".ab__core__icon").addClass("disabled");
+              $(".ab__core").addClass("topMove");
               $(".ab__core__text").removeClass("active");
               $(".ab__core__icon").addClass("disabled");
-              $(logo2).removeClass("disabled");
-              $(discription2).addClass("active");
+            }, 500);
 
-              $(".ab__core__icon").hover(function () {
-                var iconId = $(this).data("id");
+            setTimeout(() => {
+              if (!lockLogoAnim) {
                 $(".ab__core__text").removeClass("active");
                 $(".ab__core__icon").addClass("disabled");
-                $(this).removeClass("disabled");
-                $('.ab__core__text[data-id="' + iconId + '"]').addClass(
-                  "active"
-                );
-                lockLogoAnim = true;
-                animationLastStepTrigger = true;
-              });
-            }
-          }, 2500);
 
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo3).removeClass("disabled");
-              $(discription3).addClass("active");
-            }
-          }, 3500);
+                $(".ab__core__icon").hover(function () {
+                  var iconId = $(this).data("id");
+                  $(".ab__core__text").removeClass("active");
+                  $(".ab__core__icon").addClass("disabled");
+                  $(this).removeClass("disabled");
+                  $('.ab__core__text[data-id="' + iconId + '"]').addClass(
+                    "active"
+                  );
+                  lockLogoAnim = true;
+                  animationLastStepTrigger = true;
+                });
+              }
+            }, 1500);
+          }
+        });
 
+        if (animationLastStepTrigger) {
           setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo4).removeClass("disabled");
-              $(discription4).addClass("active");
-            }
-          }, 4500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo5).removeClass("disabled");
-              $(discription5).addClass("active");
-            }
-          }, 5500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo6).removeClass("disabled");
-              $(discription6).addClass("active");
-            }
-          }, 6500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo7).removeClass("disabled");
-              $(discription7).addClass("active");
-            }
-          }, 7500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo8).removeClass("disabled");
-              $(discription8).addClass("active");
-            }
-          }, 8500);
-
-          setTimeout(() => {
-            if (!lockLogoAnim) {
-              $(".ab__core__text").removeClass("active");
-              $(".ab__core__icon").addClass("disabled");
-              $(logo9).removeClass("disabled");
-              $(discription9).addClass("active");
-
-              animationLastStepTrigger = true;
-            }
-          }, 9500);
-        } else if (animationLastStepTrigger) {
-          setTimeout(() => {
+            $(".ab__core__icon").off();
+            $(".animation_brand").off("mousemove");
             $(".ab__core__icon").removeClass("disabled");
-          }, 0);
+          }, 200);
           setTimeout(() => {
             $(".ab__core__text").removeClass("active").css("opacity", "0");
             $("#animation_brand .section__title").addClass(
@@ -957,8 +892,6 @@ $(document).ready(function () {
       $(this).children(".tk_strategy__block__subtitle").slideDown();
       $(this).addClass("active");
     } else {
-      $(this).children(".tk_strategy__block__subtitle").slideUp();
-      $(this).removeClass("active");
     }
   });
 
@@ -1274,29 +1207,34 @@ $(document).ready(function () {
     $(".antifraud__text").removeClass("active");
     $('.antifraud__text[data-id="' + currentSlide + '"]').addClass("active");
 
-    $(".svg_lock_path").css(
-      "stroke-dasharray",
-      "calc(126% + " + currentSlide * 50 + "px)"
-    );
-
     if (currentSlide == 1) {
-      $(".circl_lock").css({ transform: "translate(-220px, -30px)" });
+      $(".circl_lock").css({ transform: "translate(-228px, -30px)" });
+
+      $(".svg_lock_path").css("stroke-dasharray", "480px");
     } else if (currentSlide == 2) {
-      $(".circl_lock").css({ transform: "translate(-205px, -72px)" });
+      $(".circl_lock").css({ transform: "translate(-213px, -72px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "530px");
     } else if (currentSlide == 3) {
-      $(".circl_lock").css({ transform: "translate(-172px, -108px)" });
+      $(".circl_lock").css({ transform: "translate(-180px, -111px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "580px");
     } else if (currentSlide == 4) {
-      $(".circl_lock").css({ transform: "translate(-128px, -124px)" });
+      $(".circl_lock").css({ transform: "translate(-130px, -132px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "630px");
     } else if (currentSlide == 5) {
-      $(".circl_lock").css({ transform: "translate(-78px, -121px)" });
+      $(".circl_lock").css({ transform: "translate(-75px, -125px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "690px");
     } else if (currentSlide == 6) {
-      $(".circl_lock").css({ transform: "translate(-31px, -88px)" });
+      $(".circl_lock").css({ transform: "translate(-33px, -100px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "740px");
     } else if (currentSlide == 7) {
-      $(".circl_lock").css({ transform: "translate(-10px, -56px)" });
+      $(".circl_lock").css({ transform: "translate(-4px, -56px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "790px");
     } else if (currentSlide == 8) {
-      $(".circl_lock").css({ transform: "translate(-4px, -4px)" });
+      $(".circl_lock").css({ transform: "translate(2px, 0px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "840px");
     } else if (currentSlide == 0) {
-      $(".circl_lock").css({ transform: "translate(-220px, -4px)" });
+      $(".circl_lock").css({ transform: "translate(-228px, -4px)" });
+      $(".svg_lock_path").css("stroke-dasharray", "440px");
     }
   });
 

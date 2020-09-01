@@ -4842,15 +4842,15 @@ select:visited {
 }
 
 .svg_lock_path {
-  stroke-dasharray: 126%;
+  stroke-dasharray: 440px;
   stroke-dashoffset: 100%;
   transition: all 0.5s;
 }
 
 .circl_lock {
   transition: all 0.5s;
-
-  transform: translate(-220px, -4px);
+  transform-origin: right top;
+  transform: translate(-228px, -4px);
 }
 
 .slick-disabled {
