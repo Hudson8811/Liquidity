@@ -248,6 +248,8 @@ $(document).ready(function () {
           transform: "translateY(0%)",
         });
       }, 500);
+
+      $(".ab__core__icon").off();
     });
 
     $(document).on("click", ".skip__anim_btn--js", function () {
@@ -355,55 +357,24 @@ $(document).ready(function () {
           }, 1400);
 
           setTimeout(() => {
-            $(".skip__anim_btn--js").addClass("active");
-            logo5.addClass("active");
-          }, 2000);
-
-          setTimeout(() => {
-            logo1Trigger = true;
-            bacFirstTrigger = true;
-          }, 3000);
-          animationFirstStepTrigger = false;
-        }
-
-        if (logo1Trigger) {
-          logo1Trigger = false;
-          $(".ab__logo").addClass("disabled");
-
-          $(".skip__anim_btn--js").removeClass("active");
-
-          setTimeout(() => {
-            logo1.addClass("active");
+            $(".ab__logo").addClass("disabled");
             $(".ab__core__item").addClass("p0-anim");
             $(".animation_brand .new_logo")
               .addClass("height0-anim")
               .addClass("disabled");
             $(".ab__content").addClass("height800-anim");
-          }, 0);
-
-          setTimeout(() => {
-            logo2.addClass("active");
-          }, 500);
-
-          setTimeout(() => {
-            logo3.addClass("active");
-          }, 1000);
-
-          setTimeout(() => {
-            logo6.addClass("active");
-          }, 1500);
-
-          setTimeout(() => {
-            logo9.addClass("active");
+            $(".ab__core__icon").addClass("active");
           }, 2000);
 
           setTimeout(() => {
-            logo8.addClass("active");
-          }, 2500);
+            logo1Trigger = true;
+            bacFirstTrigger = true;
+          }, 2100);
+          animationFirstStepTrigger = false;
+        }
 
-          setTimeout(() => {
-            logo7.addClass("active");
-          }, 3000);
+        if (logo1Trigger) {
+          logo1Trigger = false;
 
           setTimeout(() => {
             logo4.addClass("active");
@@ -413,11 +384,11 @@ $(document).ready(function () {
               .removeClass("active")
               .addClass("opacity0-anim");
             $(".ab__logo svg").removeClass("active");
-          }, 3500);
+          }, 0);
 
           setTimeout(() => {
             $(".ab__core__icon").addClass("disabled");
-          }, 4000);
+          }, 500);
 
           setTimeout(() => {
             $(".ab__core").addClass("topMove");
@@ -425,7 +396,7 @@ $(document).ready(function () {
             $(".ab__core__icon").addClass("disabled");
             $(logo1).removeClass("disabled");
             $(discription1).addClass("active");
-          }, 4500);
+          }, 1500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -446,7 +417,7 @@ $(document).ready(function () {
                 animationLastStepTrigger = true;
               });
             }
-          }, 5500);
+          }, 2500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -455,7 +426,7 @@ $(document).ready(function () {
               $(logo3).removeClass("disabled");
               $(discription3).addClass("active");
             }
-          }, 6500);
+          }, 3500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -464,7 +435,7 @@ $(document).ready(function () {
               $(logo4).removeClass("disabled");
               $(discription4).addClass("active");
             }
-          }, 7500);
+          }, 4500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -473,7 +444,7 @@ $(document).ready(function () {
               $(logo5).removeClass("disabled");
               $(discription5).addClass("active");
             }
-          }, 8500);
+          }, 5500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -482,7 +453,7 @@ $(document).ready(function () {
               $(logo6).removeClass("disabled");
               $(discription6).addClass("active");
             }
-          }, 9500);
+          }, 6500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -491,7 +462,7 @@ $(document).ready(function () {
               $(logo7).removeClass("disabled");
               $(discription7).addClass("active");
             }
-          }, 10500);
+          }, 7500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -500,7 +471,7 @@ $(document).ready(function () {
               $(logo8).removeClass("disabled");
               $(discription8).addClass("active");
             }
-          }, 11500);
+          }, 8500);
 
           setTimeout(() => {
             if (!lockLogoAnim) {
@@ -508,13 +479,10 @@ $(document).ready(function () {
               $(".ab__core__icon").addClass("disabled");
               $(logo9).removeClass("disabled");
               $(discription9).addClass("active");
-            }
-          }, 12500);
 
-          setTimeout(() => {
-            $(".ab__core__icon").off();
-            animationLastStepTrigger = true;
-          }, 13000);
+              animationLastStepTrigger = true;
+            }
+          }, 9500);
         } else if (animationLastStepTrigger) {
           setTimeout(() => {
             $(".ab__core__icon").removeClass("disabled");
