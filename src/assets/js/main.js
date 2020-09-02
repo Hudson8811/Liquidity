@@ -873,8 +873,9 @@ $(document).ready(function () {
     infinite: false,
     speed: 300,
     slidesToShow: 1,
-    prevArrow: $(".antifraud .feat_tk__arrow__prev"),
-    nextArrow: $(".antifraud .feat_tk__arrow__next"),
+    arrows: false,
+    // prevArrow: $(".antifraud .feat_tk__arrow__prev"),
+    // nextArrow: $(".antifraud .feat_tk__arrow__next"),
   });
 
   $(".tk_strategy .tk_strategy__block:nth-child(1)").addClass("active");
@@ -1200,6 +1201,12 @@ $(document).ready(function () {
     }
   });
 
+  $(document).on("click", ".antifraud__text", function (e) {
+    e.preventDefault();
+    var antifraud = $(this).data("id");
+    $(".antifraud__slider").slick("slickGoTo", antifraud);
+  });
+
   $(".antifraud__slider").on("afterChange", function (
     event,
     slick,
@@ -1210,7 +1217,6 @@ $(document).ready(function () {
 
     if (currentSlide == 1) {
       $(".circl_lock").css({ transform: "translate(-228px, -30px)" });
-
       $(".svg_lock_path").css("stroke-dasharray", "480px");
     } else if (currentSlide == 2) {
       $(".circl_lock").css({ transform: "translate(-213px, -72px)" });

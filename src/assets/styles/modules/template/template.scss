@@ -4597,7 +4597,7 @@ select:visited {
 .antifraud {
   &__lock {
     display: block;
-    margin-bottom: auto;
+    margin-bottom: 0;
   }
 
   &__slider__wrapper {
