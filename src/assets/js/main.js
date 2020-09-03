@@ -1251,6 +1251,10 @@ $(document).ready(function () {
     setCss3Style(document.getElementsByClassName('circl_lock')[0], 'transition-duration', transliteTimeText);
     setCss3Style(document.getElementsByClassName('svg_lock_path')[0], 'transition-duration', transliteTimeText);
 
+
+    setCss3Style(document.getElementsByClassName('circl_lock')[0], 'transition-timing-function', 'linear');
+    setCss3Style(document.getElementsByClassName('svg_lock_path')[0], 'transition-timing-function', 'linear');
+
     if (currentSlide < nextSlide){
       i = currentSlide;
       i++;
