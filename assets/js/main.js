@@ -1207,12 +1207,21 @@ $(document).ready(function () {
     $(".antifraud__slider").slick("slickGoTo", antifraud);
   });
 
+  var vendors = ['-moz-','-webkit-','-o-','-ms-','-khtml-',''];
+  function toCamelCase(str){
+    return str.toLowerCase().replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');});
+  };
+  function setCss3Style(el,prop,val){
+    for(var i=0,l=vendors.length;i<l;i++)
+      el.style[toCamelCase(vendors[i] + prop)] = val;
+  };
+
+
   var coordArray = [
     '-228px, -4px',
     '-228px, -30px',
     '-213px, -72px',
     '-180px, -111px',
-    '-130px, -132px',
     '-130px, -132px',
     '-75px, -125px',
     '-33px, -100px',
@@ -1231,43 +1240,55 @@ $(document).ready(function () {
     '840px'
   ]
 
-  $(".antifraud__slider").on("afterChange", function (event,slick, currentSlide,nextSlide) {
-
-    console.log(currentSlide);
-    console.log(nextSlide);
-
+  $(".antifraud__slider").on("beforeChange", function (event,slick, currentSlide,nextSlide) {
     $(".antifraud__text").removeClass("active");
-    $('.antifraud__text[data-id="' + currentSlide + '"]').addClass("active");
+    $('.antifraud__text[data-id="' + nextSlide + '"]').addClass("active");
 
 
-    if (currentSlide == 1) {
-      $(".circl_lock").css({ transform: "translate(-228px, -30px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "480px");
-    } else if (currentSlide == 2) {
-      $(".circl_lock").css({ transform: "translate(-213px, -72px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "530px");
-    } else if (currentSlide == 3) {
-      $(".circl_lock").css({ transform: "translate(-180px, -111px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "580px");
-    } else if (currentSlide == 4) {
-      $(".circl_lock").css({ transform: "translate(-130px, -132px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "630px");
-    } else if (currentSlide == 5) {
-      $(".circl_lock").css({ transform: "translate(-75px, -125px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "690px");
-    } else if (currentSlide == 6) {
-      $(".circl_lock").css({ transform: "translate(-33px, -100px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "740px");
-    } else if (currentSlide == 7) {
-      $(".circl_lock").css({ transform: "translate(-4px, -56px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "790px");
-    } else if (currentSlide == 8) {
-      $(".circl_lock").css({ transform: "translate(2px, 0px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "840px");
-    } else if (currentSlide == 0) {
-      $(".circl_lock").css({ transform: "translate(-228px, -4px)" });
-      $(".svg_lock_path").css("stroke-dasharray", "440px");
+    //var countSteps =  Math.abs(nextSlide - currentSlide);
+    //transliteTime = 0.5/countSteps;
+    transliteTime = 0.0714286;
+    transliteTimeText = transliteTime + 's';
+    setCss3Style(document.getElementsByClassName('circl_lock')[0], 'transition-duration', transliteTimeText);
+    setCss3Style(document.getElementsByClassName('svg_lock_path')[0], 'transition-duration', transliteTimeText);
+
+
+    setCss3Style(document.getElementsByClassName('circl_lock')[0], 'transition-timing-function', 'linear');
+    setCss3Style(document.getElementsByClassName('svg_lock_path')[0], 'transition-timing-function', 'linear');
+
+    if (currentSlide < nextSlide){
+      i = currentSlide;
+      i++;
+      $(".circl_lock").css({ transform: "translate("+coordArray[i]+")" });
+      $(".svg_lock_path").css("stroke-dasharray", pathArray[i]);
+      i++;
+      var myVar = setInterval(function() {
+        if (i <= nextSlide){
+          $(".circl_lock").css({ transform: "translate("+coordArray[i]+")" });
+          $(".svg_lock_path").css("stroke-dasharray", pathArray[i]);
+        } else {
+          clearInterval(myVar);
+        }
+        i++;
+      }, 1000*transliteTime);
+    } else {
+      i = currentSlide;
+      i--;
+      $(".circl_lock").css({ transform: "translate("+coordArray[i]+")" });
+      $(".svg_lock_path").css("stroke-dasharray", pathArray[i]);
+      i--;
+      var myVar = setInterval(function() {
+        if (i >= nextSlide){
+          $(".circl_lock").css({ transform: "translate("+coordArray[i]+")" });
+          $(".svg_lock_path").css("stroke-dasharray", pathArray[i]);
+        } else {
+          clearInterval(myVar);
+        }
+        i--;
+      }, 1000*transliteTime);
     }
+
+
   });
 
   $(document).on("click", ".antifraud__text", function (e) {
