@@ -1245,8 +1245,9 @@ $(document).ready(function () {
     $('.antifraud__text[data-id="' + nextSlide + '"]').addClass("active");
 
 
-    var countSteps =  Math.abs(nextSlide - currentSlide);
-    transliteTime = 0.5/countSteps;
+    //var countSteps =  Math.abs(nextSlide - currentSlide);
+    //transliteTime = 0.5/countSteps;
+    transliteTime = 0.0714286;
     transliteTimeText = transliteTime + 's';
     setCss3Style(document.getElementsByClassName('circl_lock')[0], 'transition-duration', transliteTimeText);
     setCss3Style(document.getElementsByClassName('svg_lock_path')[0], 'transition-duration', transliteTimeText);
