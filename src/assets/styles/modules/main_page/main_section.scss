@@ -7,8 +7,8 @@
   background: left top / cover url(../images/main_section--banner.jpg) no-repeat;
   position: relative;
 
-  @media screen and (max-width: 580px) {
-    margin-top: 62px;
+  @media screen and (max-width: 900px) {
+    margin-top: 61px;
   }
 
   &:before {
@@ -40,7 +40,9 @@
     position: relative;
     z-index: 1;
     color: $white;
+    margin: 0 auto;
     margin-bottom: 172px;
+    width: 98%;
   }
 
   .container {
