@@ -1434,7 +1434,7 @@ $(document).ready(function () {
         $(".mobile_header__middle_list").slideUp();
         $(".mobile_header__big_list > li").removeClass("active");
         $(".mobile_header__middle_list > li").removeClass("active");
-        $(".big_header__bottom_row__right_row .row .menu").slideUp();
+        $(".menu__heading__mobile").siblings(".menu").slideUp();
       }, 500);
     }
     $(this).toggleClass("active");
@@ -1458,7 +1458,7 @@ $(document).ready(function () {
           $(".mobile_header__middle_list").slideUp();
           $(".mobile_header__big_list > li").removeClass("active");
           $(".mobile_header__middle_list > li").removeClass("active");
-          $(".big_header__bottom_row__right_row .row .menu").slideUp();
+          $(".menu__heading__mobile").siblings(".menu").slideUp();
         }, 500);
       }
       $(".mobile_header__burger").removeClass("active");
@@ -1481,7 +1481,7 @@ $(document).ready(function () {
       $(".mobile_header__middle_list").slideUp();
       $(".mobile_header__big_list > li").removeClass("active");
       $(".mobile_header__middle_list > li").removeClass("active");
-      $(".big_header__bottom_row__right_row .row .menu").slideUp();
+      $(".menu__heading__mobile").siblings(".menu").slideUp();
     }, 500);
   });
 
