@@ -633,6 +633,25 @@ body.hidden {
   overflow-y: hidden;
   height: 61px;
 
+  &__abs_click {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+  }
+
+  .mobile_header__about {
+    .social_block {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding-right: calc(100% - 146px);
+
+      a {
+      }
+    }
+  }
+
   &.active {
     height: 100vh;
     overflow-y: auto;
@@ -753,7 +772,7 @@ body.hidden {
   &__big_list {
     & > li {
       font-weight: $medium;
-      font-size: $base-font-size;
+      font-size: 17px;
       line-height: $tk-desc-line;
       /* identical to box height */
       text-align: left;
@@ -768,39 +787,49 @@ body.hidden {
           justify-content: flex-start;
           align-items: center;
 
-          &:after {
-            content: "";
-            display: block;
-            width: 7px;
-            height: 7px;
-            background: center / auto url(../images/green_mobile_header.svg)
-              no-repeat;
-            flex-shrink: 0;
-            margin-left: 3px;
-          }
+          // &:after {
+          //   content: "";
+          //   display: block;
+          //   width: 7px;
+          //   height: 7px;
+          //   background: center / auto url(../images/green_mobile_header.svg)
+          //     no-repeat;
+          //   flex-shrink: 0;
+          //   margin-left: 3px;
+          // }
         }
       }
 
       & + li {
-        margin-top: 30px;
+        margin-top: 32px;
       }
     }
   }
 
   &__middle_list {
-    padding-top: 17px;
-    padding-left: 42px;
+    padding-top: 15px;
+    padding-left: 27px;
     box-sizing: border-box;
     display: none;
     cursor: pointer;
 
     & > li {
       font-weight: normal;
-      font-size: $small-font;
+      font-size: 15px;
       line-height: $base-font-size;
       /* identical to box height */
       letter-spacing: 0.01em;
       color: #e3e3e3;
+
+      & > a {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: $base-font-size;
+        /* identical to box height */
+        letter-spacing: 0.01em;
+        color: #e3e3e3;
+        text-decoration: none;
+      }
 
       &.active {
         & > span {
@@ -808,25 +837,25 @@ body.hidden {
           justify-content: flex-start;
           align-items: center;
 
-          &:after {
-            content: "";
-            display: block;
-            width: 7px;
-            height: 7px;
-            background: center / auto url(../images/white_mobile_header.svg)
-              no-repeat;
-            flex-shrink: 0;
-            margin-left: 3px;
-          }
+          // &:after {
+          //   content: "";
+          //   display: block;
+          //   width: 7px;
+          //   height: 7px;
+          //   background: center / auto url(../images/white_mobile_header.svg)
+          //     no-repeat;
+          //   flex-shrink: 0;
+          //   margin-left: 3px;
+          // }
         }
 
         + li {
-          margin-top: 30px;
+          margin-top: 42px;
         }
       }
 
       & + li {
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
   }
@@ -841,7 +870,7 @@ body.hidden {
       a {
         position: relative;
         font-weight: normal;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 15px;
         color: #e3e3e3;
         text-decoration: none;
@@ -871,7 +900,7 @@ body.hidden {
           content: "";
           display: block;
           width: 10px;
-          height: 2px;
+          height: 1px;
           background-color: #e3e3e3;
           margin-right: 10px;
           flex-shrink: 0;
@@ -890,7 +919,7 @@ body.hidden {
       }
 
       & + li {
-        margin-top: 15px;
+        margin-top: 20px;
       }
     }
   }
@@ -1328,5 +1357,23 @@ body.hidden {
         background: transparent;
       }
     }
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .mobile_header__content {
+    width: 100%;
+  }
+
+  .mobile_header__content {
+    padding: 20px 20px;
+  }
+
+  .mobile_header__middle_list {
+    padding-left: 20px;
+  }
+
+  .mobile_header__small_list {
+    padding-left: 20px;
   }
 }
