@@ -1514,6 +1514,14 @@ $(document).ready(function () {
     }
   );
 
+  $(document).on("change", ".mobile__how_select select", function () {
+    if ($(this).val() === "How to") {
+      $(this).parent().removeClass("active");
+    } else {
+      $(this).parent().addClass("active");
+    }
+  });
+
   $(document).on("click", ".menu__heading__mobile", function () {
     $(this).siblings(".menu").slideToggle();
   });
