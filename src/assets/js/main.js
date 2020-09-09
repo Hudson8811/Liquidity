@@ -14,6 +14,22 @@ setTimeout(function () {
   $(".text_flicky--js").addClass("active");
 }, 0);
 
+function get_name_browser() {
+  // получаем данные userAgent
+  var ua = navigator.userAgent;
+  // с помощью регулярного выражения
+  // ищем упоминание названия браузера
+  if (ua.search(/Safari/) > 0) return true;
+  // Возвращем false если не нашли safari
+  return false;
+}
+
+if (get_name_browser()) {
+  $(".mobile__how_select").addClass("safari");
+} else {
+  console.log("Not safari");
+}
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);

@@ -476,6 +476,12 @@
     position: relative;
     width: auto !important;
 
+    &.safari {
+      select {
+        margin-left: -3px;
+      }
+    }
+
     select {
       display: block;
       background: transparent;
