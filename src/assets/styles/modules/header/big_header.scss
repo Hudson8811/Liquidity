@@ -1108,7 +1108,7 @@ body.hidden {
     display: block;
 
     .castom_select {
-      display: none;
+      display: none !important;
     }
 
     .mobile__how_select {
