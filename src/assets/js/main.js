@@ -14,6 +14,8 @@ setTimeout(function () {
   $(".text_flicky--js").addClass("active");
 }, 0);
 
+$(".events_sidebar").css({ opacity: "0" });
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -1528,6 +1530,10 @@ $(document).ready(function () {
     } else {
       $(".events_sidebar__ul").slick("destroy");
     }
+
+    setTimeout(() => {
+      $(".events_sidebar").attr("style", "");
+    }, 0);
   }
 
   mobileMediaSlider();
