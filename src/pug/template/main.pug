@@ -61,6 +61,8 @@ html(lang="ru-RU")
 				include ../modules/header/small_header
 			else if smallPageWeb
 				include ../modules/header/small_header2
+			else if page404
+				div
 			else
 				include ../modules/header/big_header
 			#content.site-content
@@ -70,6 +72,8 @@ html(lang="ru-RU")
 				include ../modules/footer/small_footer
 			else if smallPageWeb
 				include ../modules/footer/small_footer2
+			else if page404
+				div
 			else
 				include ../modules/footer/newFooter
 			include ../modules/main/_popup_form

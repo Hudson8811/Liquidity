@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>404</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="404">
+    <script>
+      let marketsConfig = {
+      	defaults: {
+      		market: "USD",
+      		// Market table field by which data will be sorted by default
+      		sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+      		tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+      		mode: "widget", // widget, page
+      		exchange: "https://www.b2bx.exchange/advanced/",
+      	},
+      	//table columns names, phrases and etc
+      	lang: {
+      		markets: "Markets",
+      		alts: "ALTS",
+      		stable: "USDⓈ",
+      		percent: "%",
+      		symbol: "$",
+      		item: "item",
+      		favorites: "Favorites",
+      		pair: "Pair",
+      		coin: "Coin",
+      		price: "Last price",
+      		spread: "Spread",
+      		change: "Change, 24h",
+      		high: "High, 24h",
+      		low: "Low, 24h",
+      		volume: "Volume, 24h",
+      		result: "No result",
+      		loading: "Loading...",
+      		search: "Search",// "Search",
+      		all: "All",// "All",
+      	},
+      	//SignalR link
+      	stagingUrl: "https://b2bx.cloud",
+      	infoUrl: "/marketdata/info/",
+      	frontOfficeUrl: "/frontoffice/api/info",
+      	frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+      };
+    </script>
+    <div class="wrapper">
+      <div></div>
+      <div class="site-content" id="content">
+        <div class="content">
+          <div class="fof__main_screen">
+            <div class="fof__container">
+              <div class="fof__title">404 </div>
+              <div class="fof__subtitle">Page not found</div>
+              <div class="fof__description">We can’t seem to find the page you’re looking for. <span class="db"></span> Explore more our products:</div>
+              <ul class="fof__nav">
+                <li class="fof__nav__item"><img class="fof__item_logo" src="images/fof1.svg" alt="icon"><span class="fof__item_desc">Back Office / CRM / Trader’s Room</span><a class="fof__item_link" href="#"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 5.25C3.08579 5.25 2.75 5.58579 2.75 6C2.75 6.41421 3.08579 6.75 3.5 6.75L3.5 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.6967C12.4645 0.403807 11.9896 0.403806 11.6967 0.6967C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM3.5 6.75L17 6.75L17 5.25L3.5 5.25L3.5 6.75Z" />
+<path d="M1.5 5.1C1.00294 5.1 0.6 5.50294 0.6 6C0.6 6.49706 1.00294 6.9 1.5 6.9L1.5 5.1ZM1.5 6.9L17 6.9L17 5.1L1.5 5.1L1.5 6.9Z" />
+</svg></a></li>
+                <li class="fof__nav__item"><img class="fof__item_logo" src="images/fof2.svg" alt="icon"><span class="fof__item_desc">For Spot Trading</span><a class="fof__item_link" href="#"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 5.25C3.08579 5.25 2.75 5.58579 2.75 6C2.75 6.41421 3.08579 6.75 3.5 6.75L3.5 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.6967C12.4645 0.403807 11.9896 0.403806 11.6967 0.6967C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM3.5 6.75L17 6.75L17 5.25L3.5 5.25L3.5 6.75Z" />
+<path d="M1.5 5.1C1.00294 5.1 0.6 5.50294 0.6 6C0.6 6.49706 1.00294 6.9 1.5 6.9L1.5 5.1ZM1.5 6.9L17 6.9L17 5.1L1.5 5.1L1.5 6.9Z" />
+</svg></a></li>
+                <li class="fof__nav__item"><img class="fof__item_logo" src="images/fof3.svg" alt="icon"><span class="fof__item_desc">For Margin Exchange</span><a class="fof__item_link" href="#"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 5.25C3.08579 5.25 2.75 5.58579 2.75 6C2.75 6.41421 3.08579 6.75 3.5 6.75L3.5 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.6967C12.4645 0.403807 11.9896 0.403806 11.6967 0.6967C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM3.5 6.75L17 6.75L17 5.25L3.5 5.25L3.5 6.75Z" />
+<path d="M1.5 5.1C1.00294 5.1 0.6 5.50294 0.6 6C0.6 6.49706 1.00294 6.9 1.5 6.9L1.5 5.1ZM1.5 6.9L17 6.9L17 5.1L1.5 5.1L1.5 6.9Z" />
+</svg></a></li>
+                <li class="fof__nav__item"><img class="fof__item_logo" src="images/fof4.svg" alt="icon"><span class="fof__item_desc">White Label Solution</span><a class="fof__item_link" href="#"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 5.25C3.08579 5.25 2.75 5.58579 2.75 6C2.75 6.41421 3.08579 6.75 3.5 6.75L3.5 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.6967C12.4645 0.403807 11.9896 0.403806 11.6967 0.6967C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM3.5 6.75L17 6.75L17 5.25L3.5 5.25L3.5 6.75Z" />
+<path d="M1.5 5.1C1.00294 5.1 0.6 5.50294 0.6 6C0.6 6.49706 1.00294 6.9 1.5 6.9L1.5 5.1ZM1.5 6.9L17 6.9L17 5.1L1.5 5.1L1.5 6.9Z" />
+</svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div class="modal-fancy modal-form-1" id="modal" style="display:none">
+        <form class="forex_liquidity__form">
+          <h3 class="forex_liquidity__form-title">Get access to our liquidity</h3>
+          <label class="form_label"><span>Your Name</span>
+            <input class="form__input" type="text">
+          </label>
+          <label class="form_label"><span>Your Email</span>
+            <input class="form__input" type="text">
+          </label>
+          <div class="form__phone">
+            <select class="form__phone__select form__input" name="number">
+              <option value="+7">+7</option>
+              <option value="8">8</option>
+            </select>
+            <label class="form_label"><span>Phone</span>
+              <input class="form__input" type="text">
+            </label>
+          </div>
+          <p class="forex_liquidity__form-description">Based on your IP, you are in Russian Federation. <a href="#">Change</a> Your data will be in US data center.</p>
+          <button class="btn btn--green btn--box_shadow" type="button">Get Started!</button>
+          <div class="capcha_block">
+            <div class="capcha">
+              <div class="g-recaptcha" data-sitekey="6LdXvegUAAAAADXupEv521Ow4pjwzI2wvmjFvPJX"></div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
+            <label class="consent_block"></label>
+            <p>B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-fancy modal-form-1 modal-form-2" id="modal2" style="display:none">
+        <button class="fancybox-button fancybox-close-small castom_close_btn" title="Close" data-fancybox-close type="button"></button>
+        <button class="fancybox-button fancybox-close-small" title="Close" data-fancybox-close type="button"></button>
+        <h3 class="forex_liquidity__form-title">Please fill the form and send request.<span class="db"></span> We will contact your shortly!</h3>
+        <div class="section__subtitle">We offer a large range of products and services to enhance your business <span class="db"></span>operations. Check them out here...</div>
+        <form class="new_form new_form__flex">
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Name</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__lang_select"><span class="new_form__placeholder">Preffered language</span>
+            <input class="new_form__input" type="text">
+            <div class="new_form__label__lang_select_wrapper"><img class="new_form__label__lang_select_icon" src="images/new_en.png">
+              <select class="new_form__select">
+                <option value="English">English</option>
+                <option value="English">English</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Email</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="email" required>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Comments</span>
+            <input class="new_form__input" type="text">
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__phone_select"><span class="new_form__placeholder">Phone</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+            <select class="new_form__select new_form__select_phone">
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+            </select>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label_capch"><span class="new_form__placeholder">Enter symbols</span><span class="new_form__star">*</span><img class="new_form__capch" src="images/capch_text.png">
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__web_select"><span class="new_form__placeholder">Nickname</span>
+            <input class="new_form__input" type="text">
+            <select class="new_form__select new_form__select_web">
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+            </select>
+          </label>
+          <button class="new_form__sabmit new_form__sabmit__50" type="submit">Request a Callback</button>
+          <label class="consent_block">
+            <p>B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+          </label>
+        </form>
+      </div>
+      <div class="modal-fancy modal-form-1 modal-form-2" id="modalFormNew" style="display:none">
+        <h3 class="forex_liquidity__form-title">Please fill the form and send request.<span class="db"></span> We will contact your shortly!</h3>
+        <div class="section__subtitle">We would be happy to see you in person.</div>
+        <form class="new_form new_form__flex">
+          <label class="new_form__label new_form__label__100"><span class="new_form__placeholder">Choose the event</span><span class="new_form__star">*</span>
+            <select class="new_form__select">
+              <option value="English">Blockshow Asia Exhibition 2020 Singapore</option>
+              <option value="English">Blockshow Asia Exhibition 2020 Singapore</option>
+              <option value="English">Blockshow Asia Exhibition 2020 Singapore</option>
+            </select>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Name</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__lang_select"><span class="new_form__placeholder">Preffered language</span>
+            <input class="new_form__input" type="text">
+            <div class="new_form__label__lang_select_wrapper"><img class="new_form__label__lang_select_icon" src="images/new_en.png">
+              <select class="new_form__select">
+                <option value="English">English</option>
+                <option value="English">English</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Email</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="email" required>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Comments</span>
+            <input class="new_form__input" type="text">
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__phone_select"><span class="new_form__placeholder">Phone</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+            <select class="new_form__select new_form__select_phone">
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+            </select>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label_capch"><span class="new_form__placeholder">Enter symbols</span><span class="new_form__star">*</span><img class="new_form__capch" src="images/capch_text.png">
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__web_select"><span class="new_form__placeholder">Nickname</span>
+            <input class="new_form__input" type="text">
+            <select class="new_form__select new_form__select_web">
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+            </select>
+          </label>
+          <button class="new_form__sabmit new_form__sabmit__50" type="submit">Schedule a meeting</button>
+          <label class="consent_block">
+            <p>B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+          </label>
+        </form>
+      </div>
+      <div class="modal-fancy modal-form-1 modal-form-2" id="modalFormNew2" style="display:none">
+        <h3 class="forex_liquidity__form-title">Join to our webinar</h3>
+        <div class="section__subtitle">We offer a large range of products and services to enhance your<span class="db"></span> business operations. Check them out here...</div>
+        <div class="jfs__form_wrapper">
+          <div class="jfs__form_left"><img src="images/jfs.png" alt="img">
+            <div class="jfs_banner">
+              <p>Alex Kukhtikov</p>
+              <p>Business Development Teamlead</p>
+              <p>Business Development for EU and CIS regions</p>
+            </div>
+          </div>
+          <div class="jfs__form_right">
+            <form class="new_form new_form__flex light_theme b2_form jfs__form">
+              <label class="new_form__label"><span class="new_form__placeholder">Your Name</span><span class="new_form__star">*</span>
+                <input class="new_form__input" type="text">
+              </label>
+              <label class="new_form__label"><span class="new_form__placeholder">Your Email</span><span class="new_form__star">*</span>
+                <input class="new_form__input" type="text">
+              </label>
+              <label class="new_form__label new_form__label__phone_select"><span class="new_form__placeholder">Phone</span><span class="new_form__star">*</span>
+                <input class="new_form__input" type="text">
+                <select class="new_form__select new_form__select_phone">
+                  <option value="+7">+7</option>
+                  <option value="+7">+7</option>
+                  <option value="+7">+7</option>
+                </select>
+              </label>
+              <label class="new_form__label new_form__label__50 new_form__label__web_select"><span class="new_form__placeholder">Nickname</span><span class="new_form__star">*</span>
+                <input class="new_form__input" type="text">
+                <select class="new_form__select new_form__select_web">
+                  <option value="Telegram">Telegram</option>
+                  <option value="Telegram">Telegram</option>
+                  <option value="Telegram">Telegram</option>
+                </select>
+              </label>
+              <label class="new_form__label new_form__label__lang_select">
+                <div class="new_form__label__lang_select_wrapper"><img class="new_form__label__lang_select_icon" src="images/new_en.png">
+                  <select class="new_form__select">
+                    <option value="English">English</option>
+                    <option value="English">English</option>
+                    <option value="English">English</option>
+                  </select>
+                </div>
+              </label>
+              <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Comment</span>
+                <input class="new_form__input" type="text">
+              </label>
+              <label class="new_form__label new_form__label_capch"><span class="new_form__placeholder">Enter symbols</span><span class="new_form__star">*</span><img class="new_form__capch new_form__capch--white" src="images/capch_text_white.png">
+                <input class="new_form__input" type="text">
+              </label>
+              <button class="new_form__sabmit">Join our webinar</button>
+              <label class="consent_block">
+                <p>B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-fancy" id="modal3" style="display:none">
+        <div>
+          <div class="packages_table__wrapper packages_table__wrapper-js-2">
+            <div class="packages_table">
+              <div class="packages_table__row packages_table__heading_row">
+                <div class="packages_table__col">Features</div>
+                <div class="packages_table__col">Basic</div>
+                <div class="packages_table__col">Advanced</div>
+                <div class="packages_table__col">Enterprise</div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Wallets Module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Default set of main Wallets</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Creation of Any Fiat/Crypto Wallet</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Creation of Any Custom Wallet/Token</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Funds Module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Deposit/Withdraw Without Conversion via B2BinPay</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Deposit/Withdraw With Conversion via<span class="db"></span> B2BinPay</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> 30+ Integrated Payment Systems | Plug and Use</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Transfers from Wallets to Trading Platforms<span class="db"></span> and Back</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Transfers between Trading Platforms</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Request for non-included PSP Integration</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Exchange Module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Fiat + Crypto Wallet Conversion</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Detailed Exchange History</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Rate Markups</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Min Size Volume Step</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Max/Min Pair Exchange Amount</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Hendging/Integration with B2BX</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Spot Trading Platforms Module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Fiat + Crypto Trading Account Wallets</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Integration with B2Trader and<span class="db"></span> DxTrade (Devexperts)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Trading Accounts Detailed Statistics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Advanced and User-Friendly UI<span class="db"></span> for the Supported Platforms</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Request for Custom Trading Platform<span class="db"></span> Integration</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Marginal Trading Platforms module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Fiat + Crypto Trading Account Nomination</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col">  Various Leverages</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Trading Accounts Detailed Statistics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Integration with MT4, MT5, PrimeXM,<span class="db"></span> OneZero, cTrader, DxTrade (Devexperts)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Advanced and User-Friendly UI for the<span class="db"></span> Supported Platforms</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Hedging/Netting Support</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Request for Custom Trading Platform<span class="db"></span> Integration</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">History/Analytics Module</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> History of deposits, withdrawals, exchanges,<span class="db"></span> transfers, IB rebates and spot trades</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col">  Trading Account Open Positions Analytics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Trading Account Pending Orders Analytics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Orders Volume, Open Price, Current Price,<span class="db"></span> Swap, Profit Metrics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Detailed Visualized View on Balance, Equity,<span class="db"></span> Free Funds and other metrics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Profile</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> General Account Information </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col">  Google Authenticator 2FA</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Phone Number 2FA</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Real-Time Translations</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Unlimited Languages</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Address Whitelist</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Notifications System</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Verification</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> KYC Constructor</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Request for Manual KYC with any number of<span class="db"></span> levels and documents</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Request for Automatic KYC Through<span class="db"></span> IdentityMind / SumSubstance</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Request for Custom KYC Provider<span class="db"></span> Integration</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">IB Room</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Calculations based on Lots, Markups,<span class="db"></span> Commissions and Markup Percentages (Brokers)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Commission Calculations for Exchangers<span class="db"></span> and Exchanges</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Monthly, Weekly, Daily, Hourly and Realtime<span class="db"></span> Calculation Periods</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> IB Analytics with Various Visualized Metrics</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> IB Nomination in Any Fiat / Crypto</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Multi-Level Configuration</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Bonuses</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Possibility to give tradable credits for<span class="db"></span> end-users</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Custom calculation of lot required for bonus<span class="db"></span> execution</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Bonuses in cryptocurrency</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">General Additions</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> PAMM Constructor</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col">Email Templates Source Code</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Online Translations (Weblate)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Registration Constructor</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Admin Reporting</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> SaaS Cloud Solution</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Powered by B2Broker Mention</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Staging Environment</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">per Request</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Mobile Application</div>
+                  <div class="packages_table__col">Coming Soon</div>
+                  <div class="packages_table__col">Coming Soon</div>
+                  <div class="packages_table__col">Coming Soon</div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Theme Colouring Change (Colors + Logo)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Hosting on Client's Side</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">Coming Soon</div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Front Source Code Pass to the Client</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">Coming Soon</div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Possibility to use B2Broker IT labor for<span class="db"></span> TR customizations</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">Coming Soon</div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">Assistance</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Technical Support 24/7</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Training Session on the Platform</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col packages_table__col_vip">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg><span>(VIP)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Account Manager Presence</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col packages_table__col_vip">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg><span>(VIP)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__row--shadow">
+                  <div class="packages_table__col"> Product Manager Presence</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row packages_table__subheading_row">
+                  <div class="packages_table__col">External Integrations</div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                  <div class="packages_table__col"> </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> Request for Ticket System Integration<span class="db"></span> (SupportPal)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col">Request for Mailing Services Integrations<span class="db"></span> (e.g. SendGrid)</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="packages_table__row_wrapper">
+                <div class="packages_table__row">
+                  <div class="packages_table__col"> CloudFlare/ClouDNS Coverage</div>
+                  <div class="packages_table__col"> 
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="images/svg/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                  <div class="packages_table__col">
+                    <svg class="svg-sprite-icon icon-bold_check">
+                      <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-fancy" id="modal4" style="display:none">
+        <div class="snx__container">
+          <div class="svg_container">
+            <svg class="svg-sprite-icon icon-bold_check">
+              <use xlink:href="images/svg/symbol/sprite.svg#bold_check"></use>
+            </svg>
+          </div>
+          <div class="snx__title">Thanks for request</div>
+          <div class="snx__subtitle">We will contact you shortly</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal-form-1 modal-form-2" id="modal5" style="display:none">
+        <h3 class="forex_liquidity__form-title">Please fill the form and send request.<span class="db"></span> We will contact your shortly!</h3>
+        <div class="section__subtitle">We are happy to work with new talents. Looking forward to your reply!</div>
+        <form class="new_form new_form__flex">
+          <label class="new_form__label new_form__label__100"><span class="new_form__placeholder">Vacancy</span>
+            <input class="new_form__input" type="text" value="Operations Manager, Minsk" disabled>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Name</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__lang_select"><span class="new_form__placeholder">Preffered language</span>
+            <input class="new_form__input" type="text">
+            <div class="new_form__label__lang_select_wrapper"><img class="new_form__label__lang_select_icon" src="images/new_en.png">
+              <select class="new_form__select">
+                <option value="English">English</option>
+                <option value="English">English</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Your Email</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="email" required>
+          </label>
+          <label class="new_form__label new_form__label__50"><span class="new_form__placeholder">Comments</span>
+            <input class="new_form__input" type="text">
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__phone_select"><span class="new_form__placeholder">Phone</span><span class="new_form__star">*</span>
+            <input class="new_form__input" type="text" required>
+            <select class="new_form__select new_form__select_phone">
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+              <option value="+7">+7</option>
+            </select>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label_capch"><span class="new_form__placeholder">Enter symbols</span><span class="new_form__star">*</span><img class="new_form__capch" src="images/capch_text.png">
+            <input class="new_form__input" type="text" required>
+          </label>
+          <label class="new_form__label new_form__label__50 new_form__label__web_select"><span class="new_form__placeholder">Nickname</span>
+            <input class="new_form__input" type="text">
+            <select class="new_form__select new_form__select_web">
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Telegram">Telegram</option>
+            </select>
+          </label>
+          <button class="new_form__sabmit new_form__sabmit__50" type="submit">Request a Callback</button>
+          <div class="new_form__label__50 ap__file_wrapper">
+            <div>
+              <div class="ap wrapper_more_file"><span class="ap__file">Attach files</span>
+                <div class="ap__input_wrapper" id="file_input_wrapper1">
+                  <input class="ap__input" id="file_input1" type="file" accept=".doc, .pdf">
+                  <label class="ap__dop_input" for="file_input1"></label>
+                </div>
+                <div class="ap__input_wrapper" id="file_input_wrapper2">
+                  <input class="ap__input" id="file_input2" type="file" accept=".doc, .pdf">
+                  <label class="ap__dop_input" for="file_input2"></label>
+                </div>
+              </div>
+              <div class="ap__text_wrapper"><span class="ap__discription">Doc or PDF up to 5 Mb </span><span class="ap__discription">Up to 2 files</span></div>
+            </div>
+            <div class="ap_images_wrapper" id="ap_images_wrapper2"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg"><img class="add_file" src="images/add_file.svg"></div>
+            <div class="ap_images_wrapper" id="ap_images_wrapper1"><img class="ap_images" src="images/file.svg"><img class="remove_file" src="images/remove_file.svg"><img class="add_file" src="images/add_file.svg"></div>
+          </div>
+          <label class="consent_block">
+            <p>B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+          </label>
+        </form>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_1" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item1.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">2:04</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">Blockchain Life 2019 – Евгения Микуляк | B2Broker - Провайдер ликвидности и технологий</div>
+          <div class="video_subdescription">How to start cryptocurrency exchange? - watch our video from another successful Blockchain Life expo, COO, Evgeniya Mykulyak steps out briefly to be interviewed by Pro Blockchain Media...</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_2" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item2.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">1:44</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">Official Opening of New B2Prime Office, Minsk</div>
+          <div class="video_subdescription">The company recently announced the set up operations in Minsk, Belarus after securing a license from...</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_3" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item3.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play" data-id="3">
+            <div class="video--time">4:07</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">Blockchain Life 2019 Afterparty – Arthur Azizov</div>
+          <div class="video_subdescription">Watch our Blockchain Life 2019 video presented by B2Broker CEO, Arthur Azizov, who introduces...</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_4" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item4.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">2:04</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">B2Broker - Liquidity & Technology Provider</div>
+          <div class="video_subdescription">B2Broker is a liquidity and technology provider for the Crypto and Forex industry. Our clients include brokers, crypto exchanges, crypto brokers, forex brokers, hedge and crypto funds and professional managers.</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_5" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item5.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">1:44</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">Barcelona Trading Conference Highlights</div>
+          <div class="video_subdescription">The company recently announced the set up operations in Minsk, Belarus after securing a license...</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_6" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/videos_page/item6.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">4:07</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">Opening of New B2Prime Office, Minsk</div>
+          <div class="video_subdescription">The company recently announced the set up operations in Minsk, Belarus after securing a license...</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_7" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/watch_man.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">4:07</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description"> White Label MT4/MT5 :: B2Broker 📈 Liquidity and Forex Tech Provider</div>
+          <div class="video_subdescription">A White Label is a great opportunity to start your own brokerage from scratch with minimal cost. There’s no need to invest in an expensive trading platform or spend time and money on maintenance and infrastructure - B2Broker takes care of it all!</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_video b2_frame" id="modal_video_20" style="display:none">
+        <div class="video_block">
+          <div class="video_block--preview"><img class="image_preview" src="images/tk_video_rev.png" alt="video_previw"><img class="video_block--youtube_btn" src="images/b2_core/utube_btn.png" alt="play">
+            <div class="video--time">4:07</div>
+          </div><iframe src="https://www.youtube.com/embed/sRwXMnLgcK4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video_bot_descr">
+          <div class="video_description">  Interested in a Turnkey Brokerage?</div>
+          <div class="video_subdescription">Watch the video and get in touch with our sales departament.</div>
+        </div>
+      </div>
+      <div class="modal-fancy modal_web_form" id="modal_web_form" style="display:none">
+        <div class="section small__title extra_form soft_webinars__section">
+          <div class="big_container">
+            <div class="extra_form__text">
+              <div class="section__title"><span class="section__title--bold">31 August</span> </div>
+              <div class="soft_webinars__time">17:00 –18:30</div>
+              <div class="section__subtitle">Leave your contacts and we will notify you <span class="db"></span> about webinar 2 hours in advance</div>
+            </div>
+            <form class="buty__form">
+              <label class="buty__label"><span class="buty__placeholder">Your name *</span>
+                <input class="buty__input" type="text">
+              </label>
+              <label class="buty__label"><span class="buty__placeholder">E-mail *</span>
+                <input class="buty__input" type="text">
+              </label>
+              <label class="buty__label buty__label__pich"><img src="images/buty_pich.png" alt="pic"><span class="buty__placeholder">Enter symbols</span>
+                <input class="buty__input" type="text">
+              </label>
+              <label class="buty__label buty__label__phone"><img src="images/buty_lang.png" alt="lang">
+                <select>
+                  <option value="+7">+7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+                <input class="buty__input" type="text" name="phone">
+              </label>
+              <p class="buty__police">B2Broker uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our <a href="#">Privacy Policy.</a></p>
+              <button class="buty__btn">Request a callback</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/flickity.js"></script>
+    <script src="js/flickity-fade.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

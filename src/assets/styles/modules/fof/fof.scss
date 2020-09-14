@@ -1,0 +1,137 @@
+.fof {
+  &__main_screen {
+    height: 100vh;
+
+    background: linear-gradient(
+      109.51deg,
+      #202830 -5.74%,
+      #1e2d3c 5.7%,
+      #0f1e2e 91.69%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 980px) {
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+
+  &__container {
+    max-width: 1031px;
+    width: 98%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 200;
+    font-size: 129.524px;
+    line-height: 136px;
+    /* identical to box height, or 105% */
+    text-align: center;
+    letter-spacing: -1.61905px;
+    color: $white;
+    margin-bottom: 50px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: $medium;
+    font-size: 30px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: $normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__nav__item {
+    width: 25%;
+    min-width: 238px;
+    margin: 100px auto 0;
+
+    @media screen and (max-width: 980px) {
+      margin-top: 30px;
+    }
+
+    &:last-child {
+      img {
+        height: 36px;
+        object-fit: none;
+        width: 100%;
+        object-position: 50% 42%;
+      }
+    }
+  }
+
+  &__item_logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__item_desc {
+    display: block;
+    font-weight: $normal;
+    font-size: 13px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: -0.370474px;
+    color: #89909c;
+  }
+
+  &__item_link {
+    display: block;
+    margin: 10px auto 0;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #939fab;
+    box-sizing: border-box;
+
+    svg {
+      display: block;
+      margin-left: -1px;
+
+      path {
+        fill: #939fab;
+      }
+    }
+
+    &:hover {
+      border-color: #939fab;
+      background-color: #939fab;
+
+      svg {
+        path {
+          fill: #182736;
+        }
+      }
+    }
+  }
+}
