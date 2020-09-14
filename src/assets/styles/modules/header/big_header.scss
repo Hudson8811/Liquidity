@@ -723,11 +723,16 @@ body.hidden {
   }
 
   &.active {
-    height: 100vh;
+    height: 80vh;
     overflow-y: auto;
   }
 
   &__heading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 102;
+    width: 100%;
     background: #151718;
     padding: 17px 0;
   }

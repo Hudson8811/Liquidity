@@ -383,6 +383,8 @@
     width: 23.5%;
   }
   .footer-text {
+    color: #656b70;
+
     p {
       font-family: Roboto;
       font-style: normal;
@@ -394,7 +396,8 @@
       text-align: justify;
       letter-spacing: 0px;
 
-      color: #656b70 !important;
+      color: inherit; /* Inherit text color of parent element. */
+      text-decoration: none;
     }
   }
   .social_block {
