@@ -1523,6 +1523,8 @@ $(document).ready(function () {
         dots: false,
         variableWidth: true,
       });
+    } else {
+      $(".events_sidebar__ul").slick("destroy");
     }
   }
 
@@ -1533,6 +1535,8 @@ $(document).ready(function () {
       $(".footer-menu-row--heading").siblings(".menu").show();
       $(".footer-menu-row--heading").removeClass("active");
     }
+
+    mobileMediaSlider();
   });
 
   $(document).on("click", ".mobile_header__big_list > li > span", function () {
