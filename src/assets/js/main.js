@@ -1522,6 +1522,8 @@ $(document).ready(function () {
         arrows: false,
         dots: false,
         variableWidth: true,
+        slidesToScroll: 3,
+        infinite: false,
       });
     } else {
       $(".events_sidebar__ul").slick("destroy");

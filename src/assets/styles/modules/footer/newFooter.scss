@@ -385,7 +385,8 @@
   .footer-text {
     color: #656b70;
 
-    p {
+    p,
+    p > a {
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
