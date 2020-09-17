@@ -1474,20 +1474,6 @@ $(document).ready(function () {
     }
   });
 
-  $(document).on(
-    "click",
-    ".mobile_header__heading .mobile_header__logo",
-    function (e) {
-      e.preventDefault();
-
-      if ($(".mobile_header").hasClass("active")) {
-        $(".mobile_header__content_menues").show();
-        $(".mobile_header__about").hide();
-        $(".mobile_header__language_content").hide();
-      }
-    }
-  );
-
   $(document).on("click", ".mobile_header__abs_click", function () {
     $(".mobile_header__burger").removeClass("active");
     $(".mobile_header__content").removeClass("active");
