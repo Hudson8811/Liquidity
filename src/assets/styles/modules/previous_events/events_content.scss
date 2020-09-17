@@ -57,23 +57,6 @@
     margin-right: 0;
     box-sizing: border-box;
 
-    &:after {
-      content: "";
-      position: absolute;
-      right: -20vw;
-      top: 0;
-      z-index: -1;
-      display: block;
-      height: 38px;
-      width: 40vw;
-      background: linear-gradient(
-        270deg,
-        #151718 45.09%,
-        rgba(21, 23, 24, 0) 93.66%
-      );
-      border-radius: 25px;
-    }
-
     .slick-list {
       padding: 0 22px;
     }

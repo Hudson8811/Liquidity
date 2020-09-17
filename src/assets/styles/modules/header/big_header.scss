@@ -625,7 +625,7 @@ body.hidden {
 
 .mobile_header {
   position: fixed;
-  z-index: 100;
+  z-index: 104;
   width: 100%;
   top: 0;
   left: 0;
@@ -643,10 +643,16 @@ body.hidden {
 
   .mobile_header__content {
     width: 100%;
+    position: relative;
+    z-index: 101;
   }
 
   .mobile_header__content {
     padding: 40px 50px 60px 50px;
+
+    &_menues {
+      padding-top: 35px;
+    }
   }
 
   .mobile_header__middle_list {
@@ -1068,6 +1074,7 @@ body.hidden {
 
   &__about {
     display: none;
+    padding-top: 35px;
 
     .big_header__bottom_row__left_row {
       max-width: none;
@@ -1138,6 +1145,7 @@ body.hidden {
 
   &__language_content {
     display: none;
+    padding-top: 35px;
 
     a {
       font-weight: $medium;
